@@ -1,0 +1,1145 @@
+segment_id: "MTG4"
+segment_dir: "04_LongBeachCC_11182014"
+meeting_id: "LongBeachCC_11182014"
+uid: "LongBeachCC_11182014_14-0970"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "qa_version": 31,
+    "meeting_order": "04",
+    "language": "en",
+    "source_files": {
+      "event_sheet": "event_sheet_04.md",
+      "qa_authoring_protocol": "qa_authoring.md",
+      "slot_semantics": "slot_semantics.json"
+    },
+    "slot_semantics_version": 29,
+    "authoring_protocol_version": 30,
+    "artifact_notes": [
+      "This QA artifact is authored from the completed event sheet and slot_semantics.json only.",
+      "Presence is controlled by Topic Gate and Quality Gate only; factual correctness is handled separately through fact_check_target.",
+      "Fact Check is a contradiction check, not a completeness check; omissions and partial but source-consistent summaries should not fail Fact Check.",
+      "Deprecated protected_roles and load_bearing_scope fields are intentionally not used.",
+      "Normalized to expose slot, label, topic_gate, quality_gate, answer_locality, and marker_presence at each slot for v31 preflight.",
+      "Gate wording was revised where needed so Presence checks for expressed facets rather than exact source-correct values."
+    ],
+    "slots": {
+      "T": {
+        "slot_name": "Topic / Framing",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "subject_identified": {
+              "match": [
+                "Names the substantive animal-policy subject, such as pet overpopulation, animal-control policy, spay/neuter policy, retail pet-sale policy, shelter/adoption pressure, puppy-mill or backyard-breeding concerns.",
+                "Mentions concrete animal-policy terms that make the substantive subject clear, rather than only a procedural item label."
+              ],
+              "not_match": [
+                "Only says the body discussed, approved, heard, or voted on an agenda item, motion, recommendation, or ordinance without naming the animal-policy subject.",
+                "Only names a procedural stage, vote, or sponsor office without identifying any substantive animal-control issue."
+              ]
+            }
+          },
+          "quality_gate": {
+            "policy_direction": {
+              "match": [
+                "States that the policy move was to prepare, draft, restrict, require, implement, or otherwise advance animal-control rules.",
+                "States a concrete rule direction such as mandatory spay/neuter drafting, retail pet-sale restriction drafting, implementation planning, or a shift toward proactive animal-control prevention."
+              ],
+              "not_match": [
+                "Only says the body approved, supported, or voted on the item without describing the substantive policy move.",
+                "Only says the discussion involved animal welfare or pet overpopulation without saying what rule, restriction, drafting direction, implementation planning, or proactive move was being pursued."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies a concrete animal-policy target such as an owner group, animal category, retail pet-sale channel, pet shop, breeder-related category, or exemption/scoping category.",
+                "Shows who or what the policy direction applies to rather than leaving the direction targetless."
+              ],
+              "not_match": [
+                "States a policy direction such as draft, restrict, or implement without identifying who or what the direction applies to.",
+                "Uses only an uninformative target such as people, animals, or businesses when the animal-policy target cannot be identified from the summary context."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject is Long Beach pet overpopulation and animal-control policy.",
+            "The policy direction was to prepare a draft mandatory spay/neuter ordinance for dog owners and implementation recommendations.",
+            "The policy direction also included preparing a pet-shop ordinance restricting sales of dogs, cats, and rabbits unless exempted.",
+            "The policy was framed as a proactive prevention move rather than reliance only on shelter intake, adoption, outreach, or euthanasia reduction.",
+            "The targets include Long Beach dog owners, pet shops or owners selling dogs/cats/rabbits, and exemption-related groups such as AKC show dogs and Long Beach breeding-permit holders."
+          ],
+          "fact_check_notes": [
+            "The mandatory spay/neuter and pet-shop-sale restrictions were proposed future policy effects, not final laws enacted in this segment.",
+            "Do not fail Fact Check for omitting one of the two policy directions if the stated direction is source-consistent.",
+            "Fail Fact Check if the summary says all breeding was banned, pet-shop rescue/adoption partnerships were banned, or the final mandatory dog ordinance was enacted during this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "subject": "Long Beach pet overpopulation and animal-control policy.",
+          "policy_direction": [
+            "Prepare a draft mandatory spay/neuter ordinance for dog owners.",
+            "Prepare implementation recommendations for that ordinance.",
+            "Prepare an ordinance restricting pet-shop sales of dogs, cats, and rabbits unless exempted.",
+            "Shift animal-control policy toward proactive prevention rather than relying only on shelter intake, adoption, outreach, and euthanasia reduction."
+          ],
+          "target": [
+            "Long Beach dog owners for the mandatory spay/neuter proposal.",
+            "Pet shops or owners selling dogs, cats, or rabbits for the retail-sale proposal.",
+            "Exemption-related groups discussed include AKC certified show dogs, breeders with Long Beach breeding permits, and possibly other competitive or registry-based dogs to be considered by staff."
+          ],
+          "not_supported": [
+            "The final mandatory dog spay/neuter ordinance was enacted during this meeting.",
+            "All breeding was banned.",
+            "Pet-shop adoption partnerships or rescue placements were banned."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed and voted on an agenda item.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The summary gives only procedure and does not identify the animal-policy subject."
+          },
+          {
+            "summary": "The discussion concerned Long Beach pet overpopulation.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "The subject is identified, but no policy direction or target is stated."
+          },
+          {
+            "summary": "The discussion framed Long Beach pet overpopulation as requiring draft mandatory spay/neuter rules for dog owners and restrictions on pet-shop sales of dogs, cats, and rabbits.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The subject, policy direction, and targets are all source-consistent."
+          },
+          {
+            "summary": "The discussion framed pet overpopulation as requiring an immediate ban on all dog breeding and on pet-shop rescue adoptions.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The summary is specific enough for Presence but contradicts the source-supported policy direction and target scope."
+          }
+        ],
+        "slot": "T",
+        "label": "T",
+        "topic_gate": {
+          "subject_identified": {
+            "match": [
+              "Names the substantive animal-policy subject, such as pet overpopulation, animal-control policy, spay/neuter policy, retail pet-sale policy, shelter/adoption pressure, puppy-mill or backyard-breeding concerns.",
+              "Mentions concrete animal-policy terms that make the substantive subject clear, rather than only a procedural item label."
+            ],
+            "not_match": [
+              "Only says the body discussed, approved, heard, or voted on an agenda item, motion, recommendation, or ordinance without naming the animal-policy subject.",
+              "Only names a procedural stage, vote, or sponsor office without identifying any substantive animal-control issue."
+            ]
+          }
+        },
+        "quality_gate": {
+          "policy_direction": {
+            "match": [
+              "States that the policy move was to prepare, draft, restrict, require, implement, or otherwise advance animal-control rules.",
+              "States a concrete rule direction such as mandatory spay/neuter drafting, retail pet-sale restriction drafting, implementation planning, or a shift toward proactive animal-control prevention."
+            ],
+            "not_match": [
+              "Only says the body approved, supported, or voted on the item without describing the substantive policy move.",
+              "Only says the discussion involved animal welfare or pet overpopulation without saying what rule, restriction, drafting direction, implementation planning, or proactive move was being pursued."
+            ]
+          },
+          "target": {
+            "match": [
+              "Identifies a concrete animal-policy target such as an owner group, animal category, retail pet-sale channel, pet shop, breeder-related category, or exemption/scoping category.",
+              "Shows who or what the policy direction applies to rather than leaving the direction targetless."
+            ],
+            "not_match": [
+              "States a policy direction such as draft, restrict, or implement without identifying who or what the direction applies to.",
+              "Uses only an uninformative target such as people, animals, or businesses when the animal-policy target cannot be identified from the summary context."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Opening item description and Vice Mayor Lowenthal's introductory framing.",
+          "supporting": "Public comment and Council deliberation on animal overpopulation, exemptions, enforcement, and implementation."
+        },
+        "marker_presence": {
+          "subject_identified": "explicit",
+          "policy_direction": "explicit",
+          "target": "explicit"
+        },
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "currently_existing",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The pet overpopulation condition is presented as currently existing.",
+            "The mandatory dog spay/neuter rule and retail pet-sale restriction are proposed future policy effects, not completed law in this segment.",
+            "The item directs preparation of draft ordinance language and implementation recommendations for later Council handling."
+          ]
+        }
+      },
+      "O": {
+        "slot_name": "Outcome / Position",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that a governing body approved, carried, passed, adopted, directed, or otherwise took a disposition on the animal-policy motion, recommendation, or acted-on item.",
+                "States that a motion or recommendation on the animal-policy item carried or was approved, without making vote-count correctness part of Presence."
+              ],
+              "not_match": [
+                "Only says speakers debated, commented on, supported, questioned, or raised concerns about the animal-policy item.",
+                "Only describes proposed ordinance content or future drafting path without saying a body took a disposition on an acted-on item."
+              ]
+            }
+          },
+          "quality_gate": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies the acted-on item as a specific animal-policy motion or recommendation rather than a bare generic item.",
+                "Identifies the item through a package of animal-policy drafting, implementation, retail-sale restriction, exemption, or scoping components.",
+                "Identifies the item as a motion or direction to return with draft ordinance language and recommendations."
+              ],
+              "not_match": [
+                "Only says a motion, item, ordinance, or recommendation was approved without enough substance to tell which item was acted on.",
+                "Only names animal welfare generally without tying the disposition to a particular motion, recommendation, or drafting direction."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Long Beach City Council.",
+            "The procedural stage was Council approval of a direction/request to draft ordinances and implementation recommendations, not final ordinance enactment.",
+            "The amended motion carried.",
+            "The acted-on item was the amended three-part animal-policy recommendation covering mandatory dog spay/neuter drafting, implementation planning, pet-shop sales restrictions, and exemption/scoping language.",
+            "The vote result was eight yes votes, attached to the Council motion on the amended three-part recommendation."
+          ],
+          "fact_check_notes": [
+            "Do not treat an omission of the vote count as a Fact Check failure.",
+            "Fail Fact Check if the summary attaches the eight-yes vote to final adoption of the future ordinance text.",
+            "Fail Fact Check if the summary says the final mandatory spay/neuter or pet-shop-sale law was passed or enacted in this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "actor": "Long Beach City Council.",
+          "procedural_stage": "Council approval of a direction/request to draft ordinances and implementation recommendations, not final ordinance enactment.",
+          "disposition_result": [
+            "The amended motion carried.",
+            "The action asked the City Manager, City Attorney, and staff to return with draft ordinance language and recommendations."
+          ],
+          "acted_on_item": [
+            "A three-part recommendation from Vice Mayor Susie Lowenthal, Councilwoman Susie Price, and Third District Councilwoman Stacy Mongeau.",
+            "Mandatory spay/neuter draft ordinance for dog owners.",
+            "Implementation planning and recommendations for that ordinance.",
+            "Draft ordinance restricting pet-shop sales of dogs, cats, or rabbits unless exempted.",
+            "Amendments concerning AKC certified show dogs and changing 'bred on the premises' to 'bred in Long Beach' with a breeding permit."
+          ],
+          "vote_result": {
+            "value": "8 yes votes",
+            "attached_to": "City Council motion on the amended three-part recommendation"
+          },
+          "not_supported": [
+            "A final law was passed or enacted at this meeting.",
+            "The eight-yes vote was the final adoption vote on the future ordinance text."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Speakers discussed animal overpopulation and enforcement concerns.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The summary reports discussion but no body disposition on an acted-on item."
+          },
+          {
+            "summary": "The Council approved a motion.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "A disposition is stated, but the acted-on item is not specific enough."
+          },
+          {
+            "summary": "The Long Beach City Council approved the amended three-part animal-policy motion by eight yes votes, directing staff and the City Attorney to return with draft ordinance language and recommendations rather than enacting the final ordinances.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The disposition, item, actor, stage, and vote attachment are source-consistent."
+          },
+          {
+            "summary": "The City Council finally enacted the mandatory dog spay/neuter ordinance and pet-shop sales ban by an eight-yes vote.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The summary identifies a disposition and item but states the wrong procedural stage and attaches the vote to final enactment."
+          }
+        ],
+        "slot": "O",
+        "label": "O",
+        "topic_gate": {
+          "disposition_verb_tied_to_acted_on_item": {
+            "match": [
+              "States that a governing body approved, carried, passed, adopted, directed, or otherwise took a disposition on the animal-policy motion, recommendation, or acted-on item.",
+              "States that a motion or recommendation on the animal-policy item carried or was approved, without making vote-count correctness part of Presence."
+            ],
+            "not_match": [
+              "Only says speakers debated, commented on, supported, questioned, or raised concerns about the animal-policy item.",
+              "Only describes proposed ordinance content or future drafting path without saying a body took a disposition on an acted-on item."
+            ]
+          }
+        },
+        "quality_gate": {
+          "acted_on_item_specific": {
+            "match": [
+              "Identifies the acted-on item as a specific animal-policy motion or recommendation rather than a bare generic item.",
+              "Identifies the item through a package of animal-policy drafting, implementation, retail-sale restriction, exemption, or scoping components.",
+              "Identifies the item as a motion or direction to return with draft ordinance language and recommendations."
+            ],
+            "not_match": [
+              "Only says a motion, item, ordinance, or recommendation was approved without enough substance to tell which item was acted on.",
+              "Only names animal welfare generally without tying the disposition to a particular motion, recommendation, or drafting direction."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Opening motion/second and closing vote.",
+          "supporting": "Mayor's closing clarification that the law would return to Council within about 90 days."
+        },
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": "explicit",
+          "acted_on_item_specific": "explicit"
+        },
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The motion on the agenda item was completed in-session and carried eight yes votes.",
+            "Final ordinance language, legal enactment, and later Council vote remained pending after the segment."
+          ]
+        }
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "precipitating_context_visible": {
+              "match": [
+                "States a prior or existing animal-care background condition, process, comparison, problem, or history that shaped the item.",
+                "States that background such as earlier animal-care efforts, continued overpopulation conditions, unaltered animals, breeding/sales practices, or comparison to existing animal rules provided context for the current discussion."
+              ],
+              "not_match": [
+                "Only states what the motion required, what ordinance language would be drafted, or how the body voted.",
+                "Only states a present policy direction without a prior event, existing condition, process, problem, comparison, or other background proposition."
+              ]
+            }
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Connects the background condition to the current request for stronger animal-control policy, implementation planning, or retail pet-sale restrictions.",
+                "Shows that prior progress, continued problems, enforcement conditions, breeding/sales practices, or comparison to existing animal rules shaped the proposal or discussion frame."
+              ],
+              "not_match": [
+                "Mentions an animal-care fact or historical detail without making visible that it shaped the current item, proposal form, or discussion frame.",
+                "States a generic background fact, such as that animals were discussed before, without connecting it to the current policy proposal."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Prior animal-care efforts in Long Beach had improved adoption and euthanasia outcomes but were described as insufficient.",
+            "Long Beach was described as still having a real pet overpopulation problem.",
+            "Unaltered dogs, backyard breeders, and puppy-mill-linked sales were presented as contributors or targets of the proposed policy.",
+            "Existing cat spay/neuter requirements and a high fixed-owned-cat rate were used as comparison/background.",
+            "These background conditions were used to justify stronger dog spay/neuter policy and retail pet-sale restrictions.",
+            "The proposal was framed as the next installment in a longer animal-care policy trajectory."
+          ],
+          "fact_check_notes": [
+            "The approximate seven-year duration and the over-80% owned-cat fixed rate may be checked if stated, but they are not required mentions.",
+            "Fail Fact Check if the summary says prior efforts failed completely; the event sheet credits them with improvements but calls them insufficient.",
+            "Fail Fact Check if the summary says Long Beach lacked cat spay/neuter rules; the source says cats in Long Beach must be spayed/neutered by law."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "trigger_condition": [
+            "Prior animal-care efforts in Long Beach had improved adoption and euthanasia outcomes but were described as insufficient.",
+            "Long Beach was described as still having a real pet overpopulation problem.",
+            "Unaltered dogs, backyard breeders, and puppy-mill-linked sales were presented as contributors or targets of the proposed policy.",
+            "Existing cat spay/neuter requirements and a high fixed-owned-cat rate were used as comparison/background."
+          ],
+          "agenda_connection": [
+            "These background conditions were used to justify asking for stronger dog spay/neuter policy and retail pet-sale restrictions.",
+            "The proposal was framed as the next installment in a longer animal-care policy trajectory, not as an isolated new issue."
+          ],
+          "numeric_values": [
+            {
+              "value": "seven years",
+              "meaning": "approximate duration of prior work with Animal Care Services staff and community partners"
+            },
+            {
+              "value": "over 80%",
+              "meaning": "share of owned cats described as fixed in Long Beach"
+            }
+          ],
+          "not_supported": [
+            "Prior animal-care efforts failed completely.",
+            "Cats lacked mandatory spay/neuter rules."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The motion directed staff to draft animal ordinances.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The summary states the action, not the background that shaped the item."
+          },
+          {
+            "summary": "Long Beach had dealt with animal-care problems before this meeting.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "A prior/background condition is visible, but the connection to the current item or proposal form is not specific."
+          },
+          {
+            "summary": "The item built on seven years of animal-care work that had improved adoption and euthanasia outcomes but had not solved pet overpopulation, prompting stronger dog spay/neuter and pet-shop sales proposals.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The background condition and its connection to the current item are clear and source-consistent."
+          },
+          {
+            "summary": "The item came forward because prior animal-care efforts had completely failed and Long Beach had no cat spay/neuter requirement.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The background is specific enough for Presence but contradicts the source on prior progress and existing cat rules."
+          }
+        ],
+        "slot": "B",
+        "label": "B",
+        "topic_gate": {
+          "precipitating_context_visible": {
+            "match": [
+              "States a prior or existing animal-care background condition, process, comparison, problem, or history that shaped the item.",
+              "States that background such as earlier animal-care efforts, continued overpopulation conditions, unaltered animals, breeding/sales practices, or comparison to existing animal rules provided context for the current discussion."
+            ],
+            "not_match": [
+              "Only states what the motion required, what ordinance language would be drafted, or how the body voted.",
+              "Only states a present policy direction without a prior event, existing condition, process, problem, comparison, or other background proposition."
+            ]
+          }
+        },
+        "quality_gate": {
+          "connected_to_current_item_or_form": {
+            "match": [
+              "Connects the background condition to the current request for stronger animal-control policy, implementation planning, or retail pet-sale restrictions.",
+              "Shows that prior progress, continued problems, enforcement conditions, breeding/sales practices, or comparison to existing animal rules shaped the proposal or discussion frame."
+            ],
+            "not_match": [
+              "Mentions an animal-care fact or historical detail without making visible that it shaped the current item, proposal form, or discussion frame.",
+              "States a generic background fact, such as that animals were discussed before, without connecting it to the current policy proposal."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Vice Mayor Lowenthal's opening explanation.",
+          "supporting": "Public testimony on existing ordinances, shelters, pet stores, and rescue work; Council questions on registration/enforcement data."
+        },
+        "marker_presence": {
+          "precipitating_context_visible": "explicit",
+          "connected_to_current_item_or_form": "explicit"
+        },
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing",
+            "recurring_concern"
+          ],
+          "notes": [
+            "Prior animal-care initiatives had already occurred before this agenda item.",
+            "Pet overpopulation and unaltered animals were presented as still-existing conditions.",
+            "The animal overpopulation concern recurred throughout the discussion and public testimony."
+          ]
+        }
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "payload_attached_to_action": {
+              "match": [
+                "States a requirement, restriction, condition, scope, duration, return obligation, recommendation, or exemption attached to the acted-on motion or recommendation.",
+                "States that the action required a return with draft ordinance language, implementation recommendations, or retail pet-sale restriction language.",
+                "States that the motion included exemption or scoping language for show, competitive, breeder, permit, or other covered categories."
+              ],
+              "not_match": [
+                "Only says the body approved, discussed, or voted on the animal-policy item without stating what the action required, restricted, scoped, exempted, or set.",
+                "States background concerns or policy rationale without attaching a concrete payload to the action or acted-on item."
+              ]
+            }
+          },
+          "quality_gate": {
+            "number": {
+              "match": [
+                "Includes a stated numeric quantity, duration, deadline-like period, count, amount, or measured value attached to the action payload.",
+                "Includes a numeric return period or other measured value as part of what the action required."
+              ],
+              "not_match": [
+                "Mentions that staff would return later without any numeric duration, count, amount, or measured value.",
+                "Mentions unrelated numbers from background or concern discussion without tying them to the operative payload."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "Names an identifiable draft ordinance, implementation recommendation, sales restriction, exemption, condition, or carve-out as part of the action payload.",
+                "Names a specific animal-policy requirement or restriction carried by the acted-on item."
+              ],
+              "not_match": [
+                "Only says animal rules, staff work, policy changes, or ordinance language without identifying a specific requirement, restriction, condition, or carve-out.",
+                "Only states that the item was approved without naming any operative requirement."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "Identifies a population, animal category, retail setting, jurisdictional boundary, or exemption/scoping boundary for the payload.",
+                "Shows what category of owners, animals, sales, businesses, or exemptions the payload applies to."
+              ],
+              "not_match": [
+                "States a requirement without indicating the population, animal categories, retail setting, or exemption/scoping boundary it applies to.",
+                "Uses only an unbounded phrase such as everything or everyone when the relevant scope cannot be recovered from the summary."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the amended Council motion on the three-part animal-policy recommendation.",
+            "The City Manager and City Attorney were to return within 90 days with a draft ordinance on mandatory spay/neuter for dog owners.",
+            "The City Manager was to plan and make recommendations for implementation of a mandatory spay/neuter ordinance.",
+            "The City Attorney was to draft an ordinance making it unlawful for owners to sell dogs, cats, or rabbits in any pet shop unless specifically exempted.",
+            "The third action item was amended to include an exemption for AKC certified show dogs.",
+            "The recommended action was amended from 'bred on the premises possessing a breeding permit' to 'bred in Long Beach possessing a breeding permit.'",
+            "Staff were asked to consider additional exemption/classification issues for herding dogs, competitive dogs, working dogs, other registries, and responsible breeders."
+          ],
+          "fact_check_notes": [
+            "The 90-day value is the return period for draft ordinance language, not the effective date of a final law.",
+            "Additional categories such as herding, competitive, working, other-registry, and responsible-breeder dogs were to be considered; do not treat every discussed category as already adopted in final ordinance language.",
+            "Fail Fact Check if the summary says the action immediately required every dog to be spayed/neutered with no exemptions.",
+            "Fail Fact Check if the summary says the pet-shop restriction covered all animals or banned rescue/adoption models."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "payload_carrier": "The amended Council motion on the three-part animal-policy recommendation.",
+          "payload_content": [
+            "City Manager and City Attorney to return within 90 days with a draft ordinance on mandatory spay/neuter for dog owners.",
+            "City Manager to plan and make recommendations for implementation of a mandatory spay/neuter ordinance.",
+            "City Attorney to draft an ordinance making it unlawful for owners to sell dogs, cats, or rabbits in any pet shop unless specifically exempted.",
+            "The third action item was amended to include an exemption for AKC certified show dogs.",
+            "The recommended action was amended from 'bred on the premises possessing a breeding permit' to 'bred in Long Beach possessing a breeding permit.'",
+            "Staff were asked to consider additional exemption or classification issues for herding dogs, competitive dogs, working dogs, other registries, and responsible breeders."
+          ],
+          "payload_scope": [
+            "Mandatory spay/neuter proposal: dog owners / dogs in Long Beach as later drafted.",
+            "Pet-shop sales proposal: dogs, cats, and rabbits sold in pet shops unless exempted.",
+            "Exemption-related scope: AKC certified show dogs and Long Beach breeding-permit language; other categories were raised for consideration rather than finalized in text."
+          ],
+          "numeric_values": [
+            {
+              "value": "90 days",
+              "meaning": "time for the City Manager / City Attorney to return with draft ordinance language"
+            }
+          ],
+          "not_supported": [
+            "The ordinance required immediate spay/neuter of every dog with no exemptions.",
+            "The pet-shop restriction covered all animals or all adoptions.",
+            "Every discussed exemption category was already adopted in final ordinance language."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved the animal-policy motion.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The action shell is stated, but no operative payload is attached."
+          },
+          {
+            "summary": "The approved motion required staff to do further work on animal-control rules.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "A payload is attached to the action, but no qualifying number, named requirement, or scope boundary is stated."
+          },
+          {
+            "summary": "The motion required staff and the City Attorney to return within 90 days with a draft mandatory dog spay/neuter ordinance, implementation recommendations, and a pet-shop ordinance restricting sales of dogs, cats, and rabbits unless exempted.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The action-attached payload includes a number, named requirements, and scope boundaries that match the event sheet."
+          },
+          {
+            "summary": "The motion immediately required every dog in Long Beach to be spayed or neutered without exemptions and banned all pet-shop adoptions of any animal.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The payload is specific enough for Presence but contradicts timing, exemptions, and scope."
+          }
+        ],
+        "slot": "N",
+        "label": "N",
+        "topic_gate": {
+          "payload_attached_to_action": {
+            "match": [
+              "States a requirement, restriction, condition, scope, duration, return obligation, recommendation, or exemption attached to the acted-on motion or recommendation.",
+              "States that the action required a return with draft ordinance language, implementation recommendations, or retail pet-sale restriction language.",
+              "States that the motion included exemption or scoping language for show, competitive, breeder, permit, or other covered categories."
+            ],
+            "not_match": [
+              "Only says the body approved, discussed, or voted on the animal-policy item without stating what the action required, restricted, scoped, exempted, or set.",
+              "States background concerns or policy rationale without attaching a concrete payload to the action or acted-on item."
+            ]
+          }
+        },
+        "quality_gate": {
+          "number": {
+            "match": [
+              "Includes a stated numeric quantity, duration, deadline-like period, count, amount, or measured value attached to the action payload.",
+              "Includes a numeric return period or other measured value as part of what the action required."
+            ],
+            "not_match": [
+              "Mentions that staff would return later without any numeric duration, count, amount, or measured value.",
+              "Mentions unrelated numbers from background or concern discussion without tying them to the operative payload."
+            ]
+          },
+          "named_requirement": {
+            "match": [
+              "Names an identifiable draft ordinance, implementation recommendation, sales restriction, exemption, condition, or carve-out as part of the action payload.",
+              "Names a specific animal-policy requirement or restriction carried by the acted-on item."
+            ],
+            "not_match": [
+              "Only says animal rules, staff work, policy changes, or ordinance language without identifying a specific requirement, restriction, condition, or carve-out.",
+              "Only states that the item was approved without naming any operative requirement."
+            ]
+          },
+          "scope_boundary": {
+            "match": [
+              "Identifies a population, animal category, retail setting, jurisdictional boundary, or exemption/scoping boundary for the payload.",
+              "Shows what category of owners, animals, sales, businesses, or exemptions the payload applies to."
+            ],
+            "not_match": [
+              "States a requirement without indicating the population, animal categories, retail setting, or exemption/scoping boundary it applies to.",
+              "Uses only an unbounded phrase such as everything or everyone when the relevant scope cannot be recovered from the summary."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Clerk's opening description of the three-part recommendation and Vice Mayor Lowenthal's amendments.",
+          "supporting": "Later Council deliberation on enforcement, fiscal impact, exemptions, breeding permits, pet stores, and the 90-day return."
+        },
+        "marker_presence": {
+          "payload_attached_to_action": "explicit",
+          "quality_gate_options": {
+            "number": "explicit",
+            "named_requirement": "explicit",
+            "scope_boundary": "explicit",
+            "date_cutoff": "not_primary"
+          }
+        },
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "completed_in_session",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The Council completed the action directing preparation of ordinances and recommendations.",
+            "The 90-day return, final ordinance text, and implementation details were future/pending.",
+            "Exemptions and scoping details were part of the drafting payload or were to be considered in staff's return."
+          ]
+        }
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "concrete_concern_language": {
+              "match": [
+                "States a concrete problem, harm, obstacle, risk, tradeoff, or deficiency such as pet overpopulation, euthanasia, shelter crowding, unaltered dogs, backyard breeding, puppy mills, dog bites, enforcement limits, affordability, penalties, or risk to responsible breeders/competitive-dog owners.",
+                "Uses problem-side language about animal suffering, public safety, implementation burden, cost, inequity, or unintended effects."
+              ],
+              "not_match": [
+                "Only describes the Council action, ordinance payload, or policy direction without stating a concern, harm, obstacle, difficulty, loss, risk, or tradeoff.",
+                "Mentions a solution such as spay/neuter, enforcement, vouchers, or education without stating the problem-side concern it addresses."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_concern_content": {
+              "match": [
+                "Specifies that pet overpopulation was linked to shelter burden, euthanasia, abandonment, unwanted litters, or inability to adopt out of the problem.",
+                "Specifies enforcement concerns such as low dog registration, limited canvassing capacity, fiscal impact, or implementation burden.",
+                "Specifies public-safety concern through dog-bite issues and unaltered dogs.",
+                "Specifies equity or affordability concerns for low-income or unhoused pet owners.",
+                "Specifies concerns about sweeping responsible breeders, AKC/show-dog owners, herding/working-dog owners, or other competitive-dog owners into the rule without appropriate exemptions."
+              ],
+              "not_match": [
+                "Only says concerns, issues, risks, or problems were raised without saying what the concern was about.",
+                "Only gives a generic label such as animal welfare concerns, budget concerns, or public concerns without identifiable concern content."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Long Beach was described as still facing pet overpopulation despite prior progress.",
+            "Shelter and rescue participants described euthanasia, abandonment, unwanted litters, and limited rescue capacity.",
+            "Council and staff discussed enforcement constraints, including an estimated dog population around 100,000, a little over 30,000 current licenses, about 10,000 expired licenses, and canvassing as the main enforcement method.",
+            "A public-safety concern was raised using dog-bite statistics: 196 bites over July through October, with 131 involving unaltered dogs.",
+            "Equity and affordability concerns were raised for residents who may not be able to afford penalties or procedures.",
+            "Responsible-breeder and competitive-dog concerns were raised for AKC show dogs, other registries, herding dogs, working dogs, and similar categories.",
+            "The local anchor is Long Beach citywide, with policy-adjacent groups including dog owners, pet shops, Animal Care Services, rescue organizations, AKC/show-dog participants, herding/working-dog owners, low-income residents, and unhoused pet owners."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence; check it only if explicitly stated.",
+            "Do not fail Fact Check because a summary mentions only one or two source-supported concerns rather than the full list.",
+            "Fail Fact Check if the summary says the motion resolved every concern.",
+            "Fail Fact Check if the summary says opposition or caution centered on denying pet overpopulation; the event sheet says caution focused on enforceability, cost, veterinary concerns, and exemption design."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "obstacle_content": [
+            "Long Beach was described as still facing pet overpopulation despite prior progress.",
+            "Shelter and rescue participants described euthanasia, abandonment, unwanted litters, and limited rescue capacity.",
+            "Council and staff discussed enforcement constraints, including an estimated dog population around 100,000, current licenses a little over 30,000 plus expired licenses, and canvassing as the main enforcement method.",
+            "Public-safety concern was raised using dog-bite statistics: 196 bites over July through October, with 131 involving unaltered dogs.",
+            "Equity/affordability concerns were raised for residents who may not be able to afford penalties or procedures.",
+            "Responsible-breeder and competitive-dog concerns were raised for AKC show dogs, other registries, herding dogs, working dogs, and similar categories."
+          ],
+          "local_anchor": [
+            "Long Beach citywide.",
+            "Specific policy-adjacent groups include Long Beach dog owners, pet shops, Animal Care Services, rescue organizations, AKC/show-dog participants, herding/working-dog owners, low-income residents, and unhoused pet owners."
+          ],
+          "numeric_values": [
+            {
+              "value": "196 dog bites",
+              "meaning": "total dog bites cited for July through October"
+            },
+            {
+              "value": "131 unaltered animals",
+              "meaning": "dog-bite cases involving unaltered dogs"
+            },
+            {
+              "value": "about 100,000 dogs",
+              "meaning": "staff estimate of the Long Beach dog population"
+            },
+            {
+              "value": "a little over 30,000 current licenses, plus about 10,000 expired licenses",
+              "meaning": "license/enforcement context discussed by staff"
+            }
+          ],
+          "not_supported": [
+            "Every concern was resolved by the motion.",
+            "Opposition centered on denying pet overpopulation."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The motion directed the City Attorney to draft ordinance language.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The summary describes an action payload, not a concrete concern."
+          },
+          {
+            "summary": "Participants raised concerns about the proposal.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "Concern language is present, but the content of the concern is not specific."
+          },
+          {
+            "summary": "Participants raised concerns about continuing pet overpopulation, shelter strain and euthanasia, unaltered dogs, enforcement capacity, affordability for lower-income or unhoused pet owners, and effects on responsible breeders and show-dog owners.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The summary states specific source-supported concern content."
+          },
+          {
+            "summary": "Participants' main concern was that Long Beach did not have a pet-overpopulation problem and that the motion had already resolved enforcement and affordability issues.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The concern content is specific enough for Presence but contradicts the event sheet."
+          }
+        ],
+        "slot": "L",
+        "label": "L",
+        "topic_gate": {
+          "concrete_concern_language": {
+            "match": [
+              "States a concrete problem, harm, obstacle, risk, tradeoff, or deficiency such as pet overpopulation, euthanasia, shelter crowding, unaltered dogs, backyard breeding, puppy mills, dog bites, enforcement limits, affordability, penalties, or risk to responsible breeders/competitive-dog owners.",
+              "Uses problem-side language about animal suffering, public safety, implementation burden, cost, inequity, or unintended effects."
+            ],
+            "not_match": [
+              "Only describes the Council action, ordinance payload, or policy direction without stating a concern, harm, obstacle, difficulty, loss, risk, or tradeoff.",
+              "Mentions a solution such as spay/neuter, enforcement, vouchers, or education without stating the problem-side concern it addresses."
+            ]
+          }
+        },
+        "quality_gate": {
+          "specific_concern_content": {
+            "match": [
+              "Specifies that pet overpopulation was linked to shelter burden, euthanasia, abandonment, unwanted litters, or inability to adopt out of the problem.",
+              "Specifies enforcement concerns such as low dog registration, limited canvassing capacity, fiscal impact, or implementation burden.",
+              "Specifies public-safety concern through dog-bite issues and unaltered dogs.",
+              "Specifies equity or affordability concerns for low-income or unhoused pet owners.",
+              "Specifies concerns about sweeping responsible breeders, AKC/show-dog owners, herding/working-dog owners, or other competitive-dog owners into the rule without appropriate exemptions."
+            ],
+            "not_match": [
+              "Only says concerns, issues, risks, or problems were raised without saying what the concern was about.",
+              "Only gives a generic label such as animal welfare concerns, budget concerns, or public concerns without identifiable concern content."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Vice Mayor Lowenthal's opening concern framing and public testimony.",
+          "supporting": "Councilmember Austin's enforcement and fiscal questions; Councilmember Andrews's affordability concern; animal-control and staff responses."
+        },
+        "marker_presence": {
+          "concrete_concern_language": "explicit",
+          "specific_concern_content": "explicit"
+        },
+        "temporal_status": {
+          "primary": "currently_existing",
+          "secondary": [
+            "hypothetical_or_risk",
+            "recurring_concern"
+          ],
+          "notes": [
+            "Pet overpopulation, shelter burden, unaltered animals, registration/enforcement issues, and affordability were described as existing concerns.",
+            "Some concerns were hypothetical or risk-oriented, such as pet owners going underground, dumping animals, enforcement burden, harassment of show-dog owners, or unintended effects on responsible breeders."
+          ]
+        }
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "problem_side_concern": {
+              "match": [
+                "Names a recurring problem-side concern theme such as pet overpopulation, shelter strain, euthanasia, abandonment, animal suffering, enforcement difficulty, affordability burden, unfair treatment of responsible owners/breeders, or implementation-risk concerns.",
+                "States a shared or recurring concern in problem language rather than only describing a policy solution."
+              ],
+              "not_match": [
+                "Only says the Council pursued, drafted, approved, supported, or implemented a policy solution without naming a problem-side concern theme.",
+                "Only says there was debate, public comment, or disagreement without identifying what recurring concern theme was at issue."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_content": {
+              "match": [
+                "Specifies the concern theme as pet overpopulation linked to unaltered animals, shelter burden, euthanasia, abandonment, puppy-mill/backyard-breeding practices, or animal suffering.",
+                "Specifies the implementation-risk theme as enforcement capacity, affordability, responsible-owner treatment, exemptions, or unintended consequences.",
+                "Synthesizes both sides of the recurring concern: animal-overpopulation harms and the need to avoid unfair or unenforceable burdens."
+              ],
+              "not_match": [
+                "Uses only a generic concern label such as animal concerns, public concerns, or policy concerns without identifiable content.",
+                "Mentions a solution such as mandatory spay/neuter or pet-shop restrictions without naming the recurring problem-side concern or tradeoff."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The primary recurring theme was pet overpopulation as a continuing problem linked to unaltered animals, shelter burden, euthanasia, abandonment, and puppy-mill/backyard-breeding practices.",
+            "A secondary recurring theme was implementation design risk, including enforcement capacity, affordability, responsible-owner treatment, exemptions, and unintended consequences.",
+            "Supporters argued that mandatory spay/neuter and pet-shop restrictions would provide stronger tools to reduce unwanted animals and shelter euthanasia.",
+            "Skeptical or cautionary speakers and councilmembers questioned enforceability, cost, age/medical implications, and exemption design without necessarily rejecting animal welfare goals.",
+            "Staff and Council discussed education, vouchers, canvassing, fix-it-style citation handling, and future staff analysis as implementation-management responses."
+          ],
+          "fact_check_notes": [
+            "The summary need not explicitly use the word recurring if it names the source-supported concern theme.",
+            "Do not reduce the shared concern to a single pro-enforcement view; the event sheet includes both overpopulation harms and implementation/equity risks.",
+            "Fail Fact Check if the summary says all participants agreed that mandatory spay/neuter was the best mechanism."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "concern_theme": [
+            "Primary recurring theme: pet overpopulation as a continuing problem linked to unaltered animals, shelter burden, euthanasia, abandonment, and puppy-mill/backyard-breeding practices.",
+            "Secondary recurring theme: implementation design risk, including enforcement capacity, affordability, responsible-owner treatment, exemptions, and unintended consequences."
+          ],
+          "concern_content": [
+            "Supporters argued mandatory spay/neuter and pet-shop restrictions would provide stronger tools to reduce unwanted animals and shelter euthanasia.",
+            "Skeptical or cautionary speakers and councilmembers did not necessarily reject animal welfare goals; they questioned enforceability, cost, age/medical implications, and exemption design.",
+            "Staff and Council discussed education, vouchers, canvassing, fix-it-style citation handling, and future staff analysis as ways to manage implementation concerns."
+          ],
+          "not_supported": [
+            "The shared concern was only a pro-enforcement view.",
+            "All participants agreed on mandatory spay/neuter as the best mechanism."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The City Council approved the amended motion after public comment.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The summary gives procedure and does not name a recurring problem-side concern theme."
+          },
+          {
+            "summary": "A broad animal-policy problem recurred throughout the discussion.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "The summary uses problem-side language but does not give identifiable concern content."
+          },
+          {
+            "summary": "The recurring concern was that Long Beach's pet overpopulation was producing shelter strain, euthanasia, abandonment, and public-safety costs, while implementation had to avoid unfair or unenforceable burdens on responsible owners, breeders, and lower-income pet owners.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The recurring concern theme and its content match the event sheet."
+          },
+          {
+            "summary": "The shared concern was that everyone agreed mandatory spay/neuter had no enforcement, affordability, or exemption risks.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The summary states a specific concern theme but contradicts the event sheet's implementation-risk theme and disagreement/caution."
+          }
+        ],
+        "slot": "S",
+        "label": "S",
+        "topic_gate": {
+          "problem_side_concern": {
+            "match": [
+              "Names a recurring problem-side concern theme such as pet overpopulation, shelter strain, euthanasia, abandonment, animal suffering, enforcement difficulty, affordability burden, unfair treatment of responsible owners/breeders, or implementation-risk concerns.",
+              "States a shared or recurring concern in problem language rather than only describing a policy solution."
+            ],
+            "not_match": [
+              "Only says the Council pursued, drafted, approved, supported, or implemented a policy solution without naming a problem-side concern theme.",
+              "Only says there was debate, public comment, or disagreement without identifying what recurring concern theme was at issue."
+            ]
+          }
+        },
+        "quality_gate": {
+          "specific_content": {
+            "match": [
+              "Specifies the concern theme as pet overpopulation linked to unaltered animals, shelter burden, euthanasia, abandonment, puppy-mill/backyard-breeding practices, or animal suffering.",
+              "Specifies the implementation-risk theme as enforcement capacity, affordability, responsible-owner treatment, exemptions, or unintended consequences.",
+              "Synthesizes both sides of the recurring concern: animal-overpopulation harms and the need to avoid unfair or unenforceable burdens."
+            ],
+            "not_match": [
+              "Uses only a generic concern label such as animal concerns, public concerns, or policy concerns without identifiable content.",
+              "Mentions a solution such as mandatory spay/neuter or pet-shop restrictions without naming the recurring problem-side concern or tradeoff."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Distributed across the entire discussion, especially repeated public testimony and Council deliberation.",
+          "supporting": "Opening sponsor framing and closing Council comments before the vote."
+        },
+        "marker_presence": {
+          "problem_side_concern": "explicit",
+          "specific_content": "explicit"
+        },
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "currently_existing",
+            "hypothetical_or_risk"
+          ],
+          "notes": [
+            "The animal-overpopulation concern recurred across sponsor statements, public testimony, staff responses, and Council comments.",
+            "The implementation-risk concern also recurred, especially around enforcement, cost, exemptions, affordability, and owner behavior."
+          ]
+        }
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "pendingness_marker": {
+              "match": [
+                "States that the final law, ordinance text, final enactment, implementation details, cost/enforcement analysis, exemption refinement, or later Council vote remained pending, unfinished, unresolved, or still to return.",
+                "States that the item would come back to the City Council later for written law, final action, or a later vote."
+              ],
+              "not_match": [
+                "Only says staff were directed to draft or return with language, without explicitly marking the final law, item, analysis, vote, or implementation details as pending or unfinished.",
+                "Only describes the completed in-session motion or vote without any remaining or future handling state."
+              ]
+            }
+          },
+          "quality_gate": {
+            "pending_item_identifiable": {
+              "match": [
+                "Identifies the pending item as final ordinance enactment, written ordinance language, the mandatory spay/neuter ordinance, the pet-shop sales ordinance, implementation recommendations, cost/savings analysis, enforcement analysis, or exemption refinement.",
+                "Identifies the pending workstream as the animal-policy proposal returning with draft law and recommendations."
+              ],
+              "not_match": [
+                "Only says something remained pending or would come back without indicating which item, ordinance, analysis, workstream, or vote was unfinished.",
+                "Uses a vague future reference such as more work later with no identifiable pending object."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "States that a manager, attorney, staff, or comparable institutional actor would draft, analyze, report back, or return the proposals to the governing body.",
+                "States that the item was expected to return to the governing body within a stated return timeframe.",
+                "States that the governing body would later consider or vote on the written law or similar follow-up item."
+              ],
+              "not_match": [
+                "Only states that final action remained pending without a future body, process, drafting/report-back path, or later vote path.",
+                "Gives a future path unrelated to the animal-policy item or not grounded in a staff/attorney/manager return to the governing body."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Final ordinance enactment remained pending after the motion carried.",
+            "Pending items included the mandatory spay/neuter ordinance for dog owners, implementation plan and recommendations, pet-shop sales ordinance covering dogs/cats/rabbits unless exempted, and cost, savings, outreach, enforcement, voucher, and exemption details.",
+            "The City Manager, City Attorney, and staff were to draft and analyze the proposals.",
+            "The item was expected to return to City Council within about 90 days.",
+            "Council would later vote on the written law or a similar law."
+          ],
+          "fact_check_notes": [
+            "The approved in-session direction is completed, but final legal enactment and later Council vote remained pending.",
+            "The about-90-days value is the expected return path, not proof that the law had already taken effect.",
+            "Fail Fact Check if the summary says no future Council action was required.",
+            "Fail Fact Check if the summary treats the unresolved tail as mere administrative cleanup after an already enacted ordinance."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "pending_status": "Final ordinance enactment remained pending after the motion carried.",
+          "pending_item": [
+            "Mandatory spay/neuter ordinance for dog owners.",
+            "Implementation plan and recommendations.",
+            "Pet-shop sales ordinance covering dogs, cats, and rabbits unless exempted.",
+            "Cost, savings, outreach, enforcement, voucher, and exemption details."
+          ],
+          "handling_path": [
+            "City Manager, City Attorney, and staff were to draft and analyze the proposals.",
+            "The item was expected to return to City Council within about 90 days.",
+            "Council would later vote on the written law or a similar law."
+          ],
+          "numeric_values": [
+            {
+              "value": "about 90 days",
+              "meaning": "expected return path for the draft ordinance / law to come back to Council"
+            }
+          ],
+          "not_supported": [
+            "The unresolved tail was merely administrative cleanup after an enacted ordinance.",
+            "No future Council action was required."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved the amended motion by eight yes votes.",
+            "presence": 0,
+            "fact_check": null,
+            "reason": "The completed in-session action is stated, but no pending or unfinished tail is marked."
+          },
+          {
+            "summary": "The final ordinance remained unfinished.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "reason": "Pendingness and a general pending item are visible, but no concrete handling path is stated."
+          },
+          {
+            "summary": "After the motion carried, final ordinance enactment remained pending: staff and the City Attorney were expected to return to the City Council within about 90 days with draft language, implementation recommendations, fiscal/enforcement analysis, and refined exemptions for a later vote.",
+            "presence": 1,
+            "fact_check": 1,
+            "reason": "The pending status, pending items, and handling path are source-consistent."
+          },
+          {
+            "summary": "The final ordinance remained pending and would return to the Planning Commission within 30 days for final approval.",
+            "presence": 1,
+            "fact_check": 0,
+            "reason": "The summary identifies pendingness and a path, but the body, timing, and final-approval path contradict the event sheet."
+          }
+        ],
+        "slot": "U",
+        "label": "U",
+        "topic_gate": {
+          "pendingness_marker": {
+            "match": [
+              "States that the final law, ordinance text, final enactment, implementation details, cost/enforcement analysis, exemption refinement, or later Council vote remained pending, unfinished, unresolved, or still to return.",
+              "States that the item would come back to the City Council later for written law, final action, or a later vote."
+            ],
+            "not_match": [
+              "Only says staff were directed to draft or return with language, without explicitly marking the final law, item, analysis, vote, or implementation details as pending or unfinished.",
+              "Only describes the completed in-session motion or vote without any remaining or future handling state."
+            ]
+          }
+        },
+        "quality_gate": {
+          "pending_item_identifiable": {
+            "match": [
+              "Identifies the pending item as final ordinance enactment, written ordinance language, the mandatory spay/neuter ordinance, the pet-shop sales ordinance, implementation recommendations, cost/savings analysis, enforcement analysis, or exemption refinement.",
+              "Identifies the pending workstream as the animal-policy proposal returning with draft law and recommendations."
+            ],
+            "not_match": [
+              "Only says something remained pending or would come back without indicating which item, ordinance, analysis, workstream, or vote was unfinished.",
+              "Uses a vague future reference such as more work later with no identifiable pending object."
+            ]
+          },
+          "handling_path_visible": {
+            "match": [
+              "States that a manager, attorney, staff, or comparable institutional actor would draft, analyze, report back, or return the proposals to the governing body.",
+              "States that the item was expected to return to the governing body within a stated return timeframe.",
+              "States that the governing body would later consider or vote on the written law or similar follow-up item."
+            ],
+            "not_match": [
+              "Only states that final action remained pending without a future body, process, drafting/report-back path, or later vote path.",
+              "Gives a future path unrelated to the animal-policy item or not grounded in a staff/attorney/manager return to the governing body."
+            ]
+          }
+        },
+        "answer_locality": {
+          "primary": "Opening three-part recommendation and Mayor's closing explanation after the vote.",
+          "supporting": "Council deliberation asking staff to return with cost/savings analysis and refined exemption recommendations."
+        },
+        "marker_presence": {
+          "pendingness_marker": "explicit",
+          "pending_item_identifiable": "explicit",
+          "handling_path_visible": "explicit"
+        },
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "secondary": [
+            "future_effect",
+            "completed_in_session"
+          ],
+          "notes": [
+            "The direction to return was approved in-session.",
+            "Drafting, implementation planning, cost/savings analysis, exemption refinement, and final Council voting remained pending.",
+            "The legal effect of any ordinance was future, not completed in this segment."
+          ]
+        }
+      }
+    },
+    "validation_protocol_version": 31
+  }

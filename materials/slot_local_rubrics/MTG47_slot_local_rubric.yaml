@@ -1,0 +1,695 @@
+segment_id: "MTG47"
+segment_dir: "47_SeattleCityCouncil_05022016"
+meeting_id: "SeattleCityCouncil_05022016"
+uid: "SeattleCityCouncil_05022016_CF 312905"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": 47,
+    "artifact": "qa_47.json",
+    "language": "en",
+    "qa_authoring_protocol_version": "v30",
+    "slot_semantics_version": 29,
+    "source_documents": [
+      "event_sheet_47.md",
+      "slot_semantics.json",
+      "qa_authoring.md"
+    ],
+    "authoring_notes": [
+      "Presence is determined only by the Topic Gate and Quality Gate labels. Factual value correctness is evaluated only through Fact Check when the explicit claim bears on the listed fact_check_fields.",
+      "Fact Check is a contradiction check against the completed event sheet, not a completeness check.",
+      "For this segment, the final Council motion to grant the Occidental Avenue South street-vacation petition failed 4-5, so the petition was not granted. Adopted amendments did not produce a granted street vacation in this segment.",
+      "For Slot U, the source-supported status is that the petition did not remain pending in this segment. A positive claim that the petition remained pending or had an adopted future return path may satisfy U Presence mechanically but should fail Fact Check. A source-correct no-pending-tail statement should not be treated as positive U Presence."
+    ],
+    "slots": {
+      "T": {
+        "label": "T",
+        "name": "Topic/Framing",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "The segment is framed around whether Seattle should grant a street vacation of Occidental Avenue South to support a proposed SODO arena project. The policy move under discussion is vacating or selling a public right-of-way under conditions; the target is the specified portion of Occidental Avenue South and the proposed arena project tied to it.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "future_effect",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "subject_identified": {
+              "match": [
+                "Identifies the subject as the Occidental Avenue South street vacation, street-vacation petition, public right-of-way disposition, or land-use decision for the proposed SODO arena.",
+                "Mentions the proposed arena project only when it is tied to the street vacation or public right-of-way disposition."
+              ],
+              "not_match": [
+                "Frames the segment only as a generic Council meeting, public hearing, or vote without naming the substantive street-vacation / right-of-way issue.",
+                "Frames the main subject as NBA expansion, Key Arena renovation, or sports fandom in the abstract without the Occidental Avenue South street vacation.",
+                "Names only Agenda Item 3431295 without any substantive subject matter."
+              ]
+            }
+          },
+          "quality_gate": {
+            "policy_direction": {
+              "match": [
+                "States that the policy move was to grant, vacate, sell, or conditionally dispose of the public right-of-way for the proposed arena project.",
+                "Shows that the Council was considering whether the street vacation should be granted under conditions."
+              ],
+              "not_match": [
+                "States only that the Council approved, rejected, debated, or voted without saying what substantive policy move was being pursued.",
+                "Says the policy move was to approve NBA expansion, renovate Key Arena, or regulate all sports facilities generally."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies the target as Occidental Avenue South, the specified public right-of-way between South Holgate Street and near South Massachusetts Street, or the right-of-way associated with the Arena Co. / Hansen SODO arena project.",
+                "A description such as 'one block of Occidental Avenue South for the proposed SODO arena' is sufficient."
+              ],
+              "not_match": [
+                "Targets all Seattle streets, the Port of Seattle, Key Arena, NBA franchise rights, or another location as the thing to be vacated or sold.",
+                "Mentions the arena without identifying the street/right-of-way target."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The substantive subject was the street vacation / land-use disposition of Occidental Avenue South for a proposed arena project.",
+            "The policy direction under consideration was to grant, vacate, or sell the right-of-way for the arena project subject to conditions.",
+            "The target was Occidental Avenue South between the north margin of South Holgate Street and a line 30 feet south of the centerline of South Massachusetts Street, or the associated right-of-way for the proposed Arena Co. / Hansen SODO arena project.",
+            "NBA, NHL, Sonics, Key Arena, port, and traffic issues were background arguments, objections, benefits, or alternatives, not the main policy target by themselves."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to reproduce the exact legal boundary if it identifies the Occidental Avenue South right-of-way or the arena-linked street-vacation target.",
+            "A claim that the Council was deciding whether to grant an NBA team, renovate Key Arena, or vacate a different street contradicts the source if stated as the T subject, direction, or target."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council held a lengthy discussion about sports in Seattle.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "Sports is too generic and does not identify the street-vacation / right-of-way subject."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council discussed the Occidental Avenue South street vacation.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the policy direction and target are not stated with enough specificity."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The segment centered on whether Seattle should grant a street vacation of Occidental Avenue South for the proposed SODO arena project.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The subject, direction, and target are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The segment centered on whether Seattle should vacate a Key Arena access street for an NBA expansion project.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The claim has a specific subject/direction/target structure, but the target and framing conflict with the event sheet."
+          }
+        ]
+      },
+      "O": {
+        "label": "O",
+        "name": "Outcome/Position",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "The Seattle City Council voted on the motion to grant the Occidental Avenue South street-vacation petition as conditioned. The final motion failed by a 4-5 vote, so the petition was not granted. Earlier, the Sustainability and Transportation Committee had recommended granting the petition as conditioned in a divided report.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "already_occurred"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that the full Council failed, rejected, denied, or did not grant the motion/petition to grant the Occidental Avenue South street vacation.",
+                "States that the Sustainability and Transportation Committee recommended granting the petition as conditioned, if the committee stage is clearly identified.",
+                "A final-vote statement such as 'the motion failed and the petition was not granted' satisfies this label."
+              ],
+              "not_match": [
+                "Only says Councilmembers debated, raised concerns, discussed public benefits, or considered amendments without stating a disposition on an acted-on item.",
+                "Only describes the subject matter or policy direction without a disposition verb such as recommended, moved, failed, granted, or not granted."
+              ]
+            }
+          },
+          "quality_gate": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies Agenda Item 3431295, the WSC Properties / Arena Co. petition, or the petition to vacate Occidental Avenue South for the proposed arena.",
+                "A substantive description such as 'the Occidental Avenue South street-vacation petition' is sufficiently specific."
+              ],
+              "not_match": [
+                "Refers only to 'the item', 'the proposal', 'the measure', or 'the vote' without enough context to distinguish which acted-on item was disposed of.",
+                "Identifies only the arena project or NBA issue without tying the disposition to the street-vacation petition or final motion."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The final acting body was the Seattle City Council; the earlier committee-stage actor was the Sustainability and Transportation Committee.",
+            "At the opening committee-report stage, the committee recommended that the petition be granted as conditioned in a divided report.",
+            "At the final Council stage, the motion to grant the petition as conditioned failed, and the petition was not granted.",
+            "The acted-on item was Agenda Item 3431295, the petition by WSC Properties / Arena Co. to vacate Occidental Avenue South for the proposed arena project.",
+            "The final Council vote was 4 in favor and 5 opposed, attached to the final motion to grant the petition as conditioned."
+          ],
+          "fact_check_notes": [
+            "Do not treat the committee recommendation as the final Council disposition.",
+            "Do not treat amendment votes as meaning the final petition passed.",
+            "A broad reference to 'the Council' is acceptable for the final vote if the surrounding disposition is the final 4-5 failure; it is not acceptable if it attributes the committee recommendation to the wrong stage."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Councilmembers debated traffic, port impacts, and the Sonics.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "No disposition on an acted-on item is stated."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council voted down the proposal.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is visible, but the acted-on item is not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The Seattle City Council's final motion to grant the Occidental Avenue South street-vacation petition as conditioned failed 4-5, so the petition was not granted.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The actor, stage, disposition, item, and vote result match the event sheet."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The full Council granted the Occidental Avenue South street-vacation petition by a 5-4 vote.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The item is specific, but the final result and vote direction are contradicted by the event sheet."
+          }
+        ]
+      },
+      "B": {
+        "label": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "The item came to the Council after committee review, public hearings, stakeholder discussions, and a longer arena/MOU history. Background shaping the debate included possible NBA/NHL teams, the absence of a secured NBA team, the 2012 MOU/public-financing framework, port and maritime job concerns, SODO traffic and freight impacts, Key Arena, and stakeholder scheduling negotiations.",
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk",
+              "recurring_concern"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "precipitating_context_visible": {
+              "match": [
+                "States a prior process or background condition such as committee meetings, an evening public hearing, stakeholder scheduling discussions, the 2012 MOU framework, NBA-team uncertainty, traffic/freight concerns, port/maritime job concerns, or Key Arena considerations.",
+                "States that the petition came forward after prior review, hearings, feedback, or negotiations."
+              ],
+              "not_match": [
+                "Only states the final vote, committee recommendation, or street-vacation subject without any prior/background context.",
+                "Only lists an amendment condition as an operative requirement without explaining the background that shaped it.",
+                "Mentions the Sonics, NBA, or arena history as general civic context with no connection to the current item or discussion."
+              ]
+            }
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Connects the background to the current street-vacation petition, the amendment package, or the final yes/no debate.",
+                "Examples include: scheduling-conflict talks leading to the scheduling amendment; NBA-team uncertainty leading to the proposed NBA-trigger amendment; port/traffic/job concerns shaping opposition; or the 2012 MOU framing the arena path."
+              ],
+              "not_match": [
+                "States a background fact without showing how it shaped the current item, the proposal's form, an amendment, or the discussion frame.",
+                "Describes unrelated Seattle sports history or general traffic conditions with no visible connection to this petition."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The petition reached the full Council after a Sustainability and Transportation Committee report, multiple committee meetings, an evening public hearing, and extensive feedback.",
+            "The proposed street vacation was tied to a broader arena effort and a 2012 MOU/public-financing framework.",
+            "A central background dispute was whether the street vacation should move forward before an NBA team was secured.",
+            "Traffic, freight, port, maritime/industrial jobs, Key Arena viability, and labor/public-benefit claims shaped the debate.",
+            "Scheduling-conflict background led to the scheduling amendment; NBA-team uncertainty led to Herbold's proposed NBA-ownership trigger amendment; port/traffic/job concerns shaped final vote explanations."
+          ],
+          "fact_check_notes": [
+            "Committee meetings, the public hearing, stakeholder scheduling talks, and the 2012 MOU are already-occurred background.",
+            "Traffic, port, and jobs were also invoked as current concerns; team acquisition and arena effects were treated as future or risk-based background.",
+            "A summary does not need to mention all background items to pass Fact Check. It fails only if it explicitly contradicts the source-supported background or its relation to the item."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council voted on whether to grant the Occidental Avenue South street vacation.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "This is T/O content, not prior or precipitating background."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "There had been public hearings and stakeholder discussions.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Background is visible, but the connection to the current street-vacation item or its form is not stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The street-vacation debate followed committee meetings, a public hearing, stakeholder scheduling talks, and the broader 2012 arena MOU, all of which shaped amendments and arguments over whether the petition was premature without an NBA team.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The background and its connection to the item are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The petition came forward because Arena Co. had already secured an NBA franchise and needed the street vacation to begin construction immediately.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The background relation is specific, but the source says no NBA team had been secured and team acquisition was uncertain."
+          }
+        ]
+      },
+      "N": {
+        "label": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "The segment contains multiple operative payloads proposed or adopted as conditions/amendments to the street-vacation package. Passed condition amendments included event-scheduling restrictions, 24/7 access-road availability and easement, a South Massachusetts Street non-closure condition, pedestrian staircase/alternative mitigation, public-plaza events, 24-hour public plaza/restroom access with limited exceptions, and equity language for public art. Herbold's NBA-franchise ownership trigger amendment failed. Because the final petition failed, the adopted amendments did not result in a granted street vacation in this segment.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "future_effect",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "payload_attached_to_action": {
+              "match": [
+                "States a condition, amendment, requirement, restriction, easement, access rule, plaza-use rule, art-equity requirement, or NBA-franchise trigger as attached to the street-vacation petition, motion, or amendment package.",
+                "Single-sentence attachment or anaphora-linked adjacent sentences are sufficient when the payload is clearly tied to the proposed street vacation or its amendments."
+              ],
+              "not_match": [
+                "States only the final vote result or committee recommendation without any operative condition or requirement.",
+                "States only concerns about traffic, port jobs, Key Arena, or NBA uncertainty without presenting them as an amendment/condition/payload.",
+                "Describes general arena benefits or harms without tying them to a condition, restriction, or amendment."
+              ]
+            }
+          },
+          "quality_gate": {
+            "number": {
+              "match": [
+                "Includes an identifiable numeric quantity attached to a condition, such as 4:00-7:00, 3 hours, 24/7 or 24 hours, or up to 12 public events.",
+                "A wrong number can still satisfy this Presence label if it is clearly functioning as a numeric payload; correctness is handled in Fact Check."
+              ],
+              "not_match": [
+                "Mentions a condition without any count, duration, threshold, amount, or time value."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "Names a specific requirement, restriction, or condition, such as no overlapping major events, weekday peak-hour event restrictions, 24/7 access-road availability, an easement, South Massachusetts Street non-closure, a pedestrian staircase or alternative mitigation, plaza availability for public events, 24-hour plaza/restroom access, arts equity language, or the failed NBA-franchise ownership trigger.",
+                "The named requirement can be one that passed or one that failed, as long as the disposition is not contradicted in Fact Check."
+              ],
+              "not_match": [
+                "Says only that amendments were discussed or conditions were added without naming any condition or restriction."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "Specifies what the payload applies to, such as the proposed arena, major arena events, the access road, South Massachusetts Street, the public plaza, public restrooms, nearby stadium facilities, or the art program.",
+                "Geographic or categorical boundaries tied to the payload satisfy this label."
+              ],
+              "not_match": [
+                "Names a condition but leaves its applicable object, location, or category unclear."
+              ]
+            },
+            "date_cutoff": {
+              "match": [
+                "Includes a time boundary or cutoff attached to the payload, such as the weekday 4:00-7:00 event restriction, 24-hour access, or the 3-hour separation between major events.",
+                "The label is satisfied by a time boundary even if no calendar date is stated."
+              ],
+              "not_match": [
+                "Mentions only a qualitative condition with no time boundary, deadline, access period, or cutoff."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the condition/amendment package attached to the Occidental Avenue South street-vacation petition / proposed arena project, not an independently enacted arena construction authorization.",
+            "The scheduling amendment restricted major arena events between 4:00 and 7:00 on weekdays with rare exceptions, barred overlap with major events at nearby facilities, and required at least 3 hours between same-day non-overlapping major events.",
+            "The access-road amendment required the east-side access road to be available basically 24/7 for access to CenturyLink Field, the CenturyLink Event Center, and Safeco Field sites, with an easement recorded or enforceable.",
+            "The South Massachusetts Street condition prevented that street from being completely closed during construction or operation of the proposed arena, if built.",
+            "Herbold's NBA-trigger amendment would have prevented the street from being closed to vehicles, pedestrians, and bicycles until Arena Co. or a contracted third party obtained NBA franchise ownership rights; that amendment failed.",
+            "Other passed conditions included pedestrian staircase or alternative mitigation, making the plaza available for up to 12 city-approved public events, 24-hour public plaza/restroom access with limited exceptions, and equity language for communities of color and tribal communities in the arts program.",
+            "Because the final petition failed, passed amendments did not produce a granted street vacation in this segment."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to list every amendment. Partial but source-consistent payload coverage can pass Fact Check.",
+            "Wrong values, such as a wrong hour window or wrong vote disposition of the NBA-trigger amendment, are Fact Check issues, not Presence issues, if they bear on the listed fields.",
+            "If a summary states that the final street vacation was granted with these conditions, that contradicts the event sheet."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Councilmembers worried that the arena could worsen port traffic and freight movement.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "This is concern content, not an operative payload attached to an action or amendment."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council considered several conditions for the street-vacation petition.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is attached to the petition, but no named requirement, number, scope boundary, or time cutoff is given."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Amendments attached to the street-vacation package included a ban on major arena events between 4:00 and 7:00 on weekdays, 24/7 access-road availability, a South Massachusetts Street non-closure condition, up to 12 public plaza events, and 24-hour plaza/restroom access; the NBA-franchise trigger amendment failed, and the final petition was not granted.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary states several source-consistent payloads and preserves the failed final disposition."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The Council adopted a condition allowing major arena events to overlap with Mariners and Seahawks games as long as there was a one-hour gap.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The payload is specific, but it reverses the overlap restriction and gives the wrong separation value."
+          }
+        ]
+      },
+      "L": {
+        "label": "L",
+        "name": "Concrete Concern",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "Councilmembers raised concrete concerns that the street vacation and arena project could weaken Council leverage, proceed without a secured NBA team, worsen traffic and freight conditions, harm port/maritime/industrial jobs, inadequately consider Key Arena, and create broader land-use or public-benefit problems. These concerns were tied to SODO, the Port of Seattle, West Seattle/South Park access, downtown traffic corridors, and the working waterfront.",
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "secondary": [
+              "currently_existing",
+              "recurring_concern"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "concrete_concern_language": {
+              "match": [
+                "States a concern, risk, harm, obstacle, tradeoff, loss of leverage, traffic/freight problem, port or maritime job risk, Key Arena concern, or public-benefit deficiency related to the street vacation or arena project.",
+                "Concern language can be hypothetical or risk-based, such as 'could harm', 'risked', 'might worsen', 'premature without an NBA team', or 'did not adequately address'."
+              ],
+              "not_match": [
+                "Only states the policy topic, final vote, committee recommendation, or amendment payload without problem-side concern language.",
+                "Only says concerns were raised without indicating any problem, harm, obstacle, risk, or tradeoff content.",
+                "Presents a benefit or solution-side condition without stating the underlying concern."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_concern_content": {
+              "match": [
+                "Specifies what the concern was about, such as no secured NBA team, loss of leverage, traffic/freight congestion, harm to port/maritime/industrial jobs, working-waterfront impacts, inadequate Key Arena review, public-benefit inadequacy, or civic gentrification / non-industrial pressure.",
+                "A named place, named group, or bounded area is not required for Presence, though it may support specificity."
+              ],
+              "not_match": [
+                "Uses generic phrasing such as 'there were concerns', 'the issue was controversial', or 'some members had objections' without saying what the concern was about."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Concrete concerns included the petition being premature without a secured NBA team and the Council losing leverage.",
+            "Concrete concerns included traffic and freight problems, especially around SODO and downtown access corridors.",
+            "Concrete concerns included risk to port, maritime, industrial, working-waterfront, family-wage, and unionized jobs.",
+            "Concrete concerns included inadequate consideration of Key Arena and the sufficiency of public-benefit/public-interest analysis.",
+            "Local anchors included Occidental Avenue South / SODO, the Port of Seattle / working waterfront / maritime-industrial district, downtown traffic corridors such as First and Fourth, West Seattle and South Park access to downtown, and Key Arena as an alternative site."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if a summary states a local anchor, compare it against the source-supported anchors.",
+            "The source supports concerns as current conditions and future/hypothetical risks; it does not establish actual completed job loss from this vote."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council considered the public benefits of the arena proposal.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "No problem-side concern, harm, obstacle, or risk is stated."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Several Councilmembers raised concerns about the proposal.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Opponents worried that granting the street vacation before an NBA team was secured would reduce Council leverage and risk worsening freight traffic and port or maritime jobs in SODO.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The specific concern content and local anchor are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "Councilmembers objected because the street vacation had already caused layoffs at Key Arena.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a concrete harm, but the source does not support completed layoffs caused by the street vacation or Key Arena as that local anchor for the harm."
+          }
+        ]
+      },
+      "S": {
+        "label": "S",
+        "name": "Shared Concern Synthesis",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "A recurring concern theme was the tension between pursuing future Sonics/NBA/NHL arena benefits and protecting existing port, maritime, industrial, freight, traffic, and labor interests. Multiple speakers framed the issue as sports versus jobs, jobs versus jobs, or a false dichotomy between loving the Sonics and protecting the port. The shared problem-side theme is the risk of trading uncertain future sports/arena benefits against existing industrial, transportation, and public-interest values.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "problem_side_concern": {
+              "match": [
+                "Names the recurring problem-side theme as a tension, tradeoff, risk, false dichotomy, or conflict between future arena/Sonics/NBA benefits and existing port, maritime, industrial, freight, traffic, labor, or public-interest values.",
+                "Phrases such as 'sports versus jobs', 'jobs versus jobs', 'future arena benefits versus existing industrial jobs', or 'uncertain team benefits versus current port/freight interests' satisfy the theme."
+              ],
+              "not_match": [
+                "Only says there was disagreement, debate, controversy, or competing views without naming the problem-side theme.",
+                "Only states one concrete concern, such as traffic alone, without synthesizing the recurring tradeoff/tension theme.",
+                "Only states that supporters wanted the Sonics back or that amendments were added, without problem-side concern language."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_content": {
+              "match": [
+                "Identifies both sides or the content of the tension: uncertain future sports/arena/team benefits on one side, and existing port/maritime/industrial/freight/traffic/labor/public-interest concerns on the other.",
+                "The summary need not mention every speaker or every downstream consequence if the recurring concern theme is identifiable."
+              ],
+              "not_match": [
+                "Uses a generic label such as 'shared concern', 'tradeoff', or 'controversy' without saying what the tradeoff was about.",
+                "Frames the shared concern as unanimous opposition to the arena without preserving that some speakers supported the vacation while acknowledging the tension."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was the tension between proposed arena/Sonics/NBA/NHL benefits and protection of existing port, maritime, industrial, freight, traffic, and labor interests.",
+            "Opponents emphasized uncertain or hypothetical NBA/team/arena benefits versus existing jobs and port infrastructure.",
+            "Some supporters argued the project could create additional family-wage jobs without harming existing jobs and that impacts could be mitigated.",
+            "The transcript includes sports-versus-jobs, jobs-versus-jobs, and false-dichotomy framing; the shared concern is the tradeoff/tension, not unanimous opposition to the arena."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to use the exact phrase 'sports against family wage jobs' if it captures the same source-supported recurring concern theme.",
+            "A summary that reduces the shared theme to traffic alone, labor alone, or universal anti-arena opposition contradicts the broader source-supported synthesis if stated as the S theme."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council debated the proposed arena and the street vacation.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "Generic debate language does not name a problem-side concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The discussion reflected a difficult tradeoff.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Problem-side tradeoff language is visible, but the content of the tradeoff is not identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "A recurring theme was the tension between uncertain future Sonics/NBA arena benefits and protecting existing port, maritime, freight, and family-wage industrial jobs.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The shared concern theme and its content match the event sheet."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The shared concern was that every Councilmember agreed the arena would destroy all union jobs.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a problem-side theme, but it falsely makes the concern unanimous and overstates the source-supported content."
+          }
+        ]
+      },
+      "U": {
+        "label": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_local_event_sheet_excerpt": {
+          "source_summary": "For the street-vacation petition itself, the segment does not leave a source-supported pending return path. The final Council motion failed and the petition was not granted. Speakers referenced possible future arena, Sonics/NBA, NHL, or Key Arena efforts, and O'Brien referred to the 'long saga' continuing, but the segment did not adopt a concrete future Council handling path for this petition.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "pendingness_marker": {
+              "match": [
+                "There is no source-supported positive pendingness match for this sample. A summary can mechanically pass this label only if it asserts that some identifiable item remained pending, unresolved, held over, or set for later handling; for this sample, such a positive pendingness claim should then be checked carefully for Fact Check and will usually be contradicted by the event sheet if attached to the petition.",
+                "Mentions of a general future 'long saga' of basketball or hockey do not by themselves establish a pending return path for the petition."
+              ],
+              "not_match": [
+                "States only that the final motion failed, the petition was not granted, or no source-supported future handling path remained for the petition.",
+                "States only broad future possibilities for NBA, NHL, Sonics, arena, or Key Arena efforts without a concrete pending item or adopted handling path.",
+                "States only completed in-session votes or amendment outcomes."
+              ]
+            }
+          },
+          "quality_gate": {
+            "pending_item_identifiable": {
+              "match": [
+                "If a summary asserts pendingness, it must identify what allegedly remained pending, such as the street-vacation petition, a future Council reconsideration, or a specific arena-related workstream.",
+                "For this source, any claim that the petition remained pending is factually suspect because the petition was resolved as not granted."
+              ],
+              "not_match": [
+                "Uses vague future language such as 'something may happen next' or 'the issue continued' without identifying the pending item."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "If a summary asserts pendingness, it must give a concrete handling path such as a later Council meeting, committee referral, scheduled reconsideration, report-back, review, or institutional custody path.",
+                "For this source, the event sheet supports no adopted handling path for the petition after the final failed vote."
+              ],
+              "not_match": [
+                "Mentions only general future interest in the Sonics, NBA, NHL, Key Arena, or a 'long saga' without an adopted process path for the petition."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "The petition was resolved in-session as not granted; the motion to grant failed.",
+            "No source-supported pending Council item remained for this petition within the sampled segment.",
+            "No scheduled later Council meeting, referral, remand, report-back, final action path, or reconsideration path for this petition was adopted after the vote.",
+            "Future arena/team/Key Arena possibilities were mentioned only as possibilities, advocacy paths, or broader political context, not as an adopted handling path for the petition."
+          ],
+          "fact_check_notes": [
+            "This slot is intentionally negative for this sample: there is no positive, source-supported unresolved tail for the petition.",
+            "A source-correct statement that the petition did not remain pending should not be counted as positive U Presence. It is useful source context for rejecting incorrect pendingness claims.",
+            "If a summary says the petition remained pending or would return to committee/Council later, that explicit pending_status, pending_item, or handling_path claim conflicts with the event sheet."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail_source_correct_absence",
+            "summary": "The final motion failed 4-5, the petition was not granted, and no return path for this petition was adopted in the segment.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "This is source-correct absence-of-U context, but it is not positive unfinishedness under the U Presence gate."
+          },
+          {
+            "case": "topic_fail_bare_future_orientation",
+            "summary": "Several speakers suggested the broader Sonics and arena saga could continue in the future.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "Bare future orientation is not a concrete pending item or handling path for the petition."
+          },
+          {
+            "case": "topic_pass_quality_fail_wrong_pendingness",
+            "summary": "The street-vacation petition remained unresolved.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 0,
+            "rationale": "The summary asserts pendingness, but it does not provide a handling path and contradicts the source-supported completed/not-granted status."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "After the vote, the Occidental Avenue South street-vacation petition was referred back to committee for later Council reconsideration.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The pending item and handling path are specific, but the event sheet says the motion failed and the petition was not granted with no adopted return path."
+          }
+        ]
+      }
+    }
+  }

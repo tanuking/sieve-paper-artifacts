@@ -1,0 +1,842 @@
+segment_id: "MTG32"
+segment_dir: "32_AlamedaCC_02212017"
+meeting_id: "AlamedaCC_02212017"
+uid: "AlamedaCC_02212017_2017-3935"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": 32,
+    "qa_protocol_version": 30,
+    "slot_semantics_version": 29,
+    "language": "en",
+    "source_files": {
+      "event_sheet": "event_sheet_32.md",
+      "qa_authoring_protocol": "qa_authoring.md",
+      "slot_semantics": "slot_semantics.json"
+    },
+    "notes": [
+      "Presence is determined only by the meeting-specific topic and quality gates.",
+      "Fact Check is a contradiction check against the event sheet and is limited to each slot's fact_check_fields.",
+      "Omissions, abstractions, and partial but source-consistent coverage are not Fact Check errors."
+    ],
+    "slots": {
+      "T": {
+        "slot_name": "Topic/Framing",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names the substantive subject as the City of Alameda's banking services, public funds, investments, or relationship with Wells Fargo / Wells Fargo Securities.",
+                  "Can satisfy the label with phrases such as Wells Fargo banking services, Wells Fargo Securities investments, city accounts, city investments, taxpayer money, or Alameda's banking relationship.",
+                  "A summary may use a broader phrase such as Alameda's financial relationship with Wells Fargo if the banking/investment subject is visible."
+                ],
+                "not_match": [
+                  "Only says the Council discussed a referral, item, motion, or vote without identifying Wells Fargo, banking services, city accounts, investments, or public funds.",
+                  "Frames the subject as an unrelated policy area, such as housing, zoning, policing, or environmental permitting.",
+                  "Mentions social responsibility in general without tying it to Alameda funds, banking, investments, or Wells Fargo."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States that the proposal would identify existing Wells Fargo accounts or Wells Fargo Securities investments.",
+                  "States that Alameda would prepare or draft an RFP for city banking services.",
+                  "States that Wells Fargo would be excluded from the banking-services RFP process.",
+                  "States that the City would refrain from making new Wells Fargo Securities investments until further Council direction.",
+                  "A summary can pass if it captures the policy move as reassessing, restricting, or moving away from Wells Fargo, provided the concrete direction is visible."
+                ],
+                "not_match": [
+                  "Only states that the Council approved, discussed, or heard the item without saying what policy move was pursued.",
+                  "Only says the City was concerned about Wells Fargo's conduct without describing a proposed banking or investment direction.",
+                  "States a direction unrelated to identifying accounts, drafting an RFP, excluding Wells Fargo, or restricting new Wells Fargo Securities investments."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the target as City of Alameda public funds, operating banking services, city accounts, investments, Wells Fargo Securities, or the City's relationship with Wells Fargo.",
+                  "Can identify the target through phrases such as taxpayer money, Alameda accounts, city banking services, or investments held through Wells Fargo Securities."
+                ],
+                "not_match": [
+                  "States a policy direction but gives no target or scope for the direction.",
+                  "Targets a different entity, jurisdiction, or program that is not Alameda's public funds, banking services, accounts, investments, or Wells Fargo relationship.",
+                  "Names Wells Fargo misconduct only as background without identifying the City's funds or financial relationship as the target."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was the City of Alameda's banking-services and investment relationship involving Wells Fargo and Wells Fargo Securities.",
+            "The policy direction included identifying current Wells Fargo accounts and Wells Fargo Securities investments.",
+            "The policy direction included drafting an RFP for City of Alameda banking services.",
+            "The policy direction included excluding Wells Fargo from that RFP process.",
+            "The policy direction included refraining from new Wells Fargo Securities investments until further Council direction.",
+            "The targets included City of Alameda public funds, operating banking services, city accounts, city investments, Wells Fargo, and Wells Fargo Securities."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to mention every policy direction if it states a source-consistent subset.",
+            "A claim that Alameda fully divested, immediately sold all Wells Fargo securities, or immediately transferred all operating accounts is source-inconsistent for this slot when stated as the policy direction or target outcome."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment framed a City of Alameda proposal to reassess and restrict the City's banking and investment relationship with Wells Fargo by identifying accounts and investments, preparing a banking-services RFP, excluding Wells Fargo from the RFP, and stopping new Wells Fargo Securities investments until further Council direction.",
+          "source_vocabulary": [
+            "Wells Fargo",
+            "Wells Fargo Securities",
+            "accounts",
+            "investments",
+            "banking services",
+            "RFP",
+            "exclude Wells Fargo",
+            "refrain from making new investments",
+            "taxpayer money",
+            "socially responsible"
+          ],
+          "temporal_status": {
+            "primary": "currently_existing",
+            "additional": [
+              "future_effect",
+              "pending_future_handling"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed a referral during the meeting.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "Topic fails because the substantive Wells Fargo banking/investment subject is not identified."
+          },
+          {
+            "summary": "The Council discussed Alameda's financial relationship with Wells Fargo.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is identified, but no policy direction and target are stated with enough specificity."
+          },
+          {
+            "summary": "The segment concerned Alameda's proposal to identify Wells Fargo accounts and investments, draft an RFP for city banking services, exclude Wells Fargo from that RFP, and stop new Wells Fargo Securities investments until further Council direction.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, policy direction, and target match the event sheet."
+          },
+          {
+            "summary": "The segment concerned Alameda's completed transfer of all city bank accounts from Wells Fargo to a new credit union.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary enters the topic and target, but it contradicts the source by claiming a completed account transfer."
+          }
+        ]
+      },
+      "O": {
+        "slot_name": "Outcome/Position",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the City Council moved, seconded, approved, passed, or unanimously passed the Wells Fargo referral or motion.",
+                  "States that the Council took action on the referral directing staff on Wells Fargo accounts, investments, the RFP, and new securities purchases.",
+                  "A recognizable disposition tied to the Wells Fargo referral can pass Presence even if a procedural-stage or vote detail is wrong; such errors belong to Fact Check."
+                ],
+                "not_match": [
+                  "Only says the Council discussed, debated, heard public comment on, or asked questions about Wells Fargo without stating a disposition.",
+                  "Only states the payload, such as drafting an RFP or identifying accounts, without saying the body acted on the referral or motion.",
+                  "States a disposition on a different item that is not the Wells Fargo referral."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as the Wells Fargo referral, the banking-services/investments referral, or the motion directing staff on Wells Fargo accounts, investments, the RFP, and new securities purchases.",
+                  "The item can be described substantively rather than by a formal agenda number if it is clear which item was acted on."
+                ],
+                "not_match": [
+                  "Only says a motion, item, proposal, or referral passed without identifying the Wells Fargo banking/investment item.",
+                  "Names only a generic financial item without enough detail to distinguish it from other possible city finance matters.",
+                  "Identifies a different acted-on item, such as a final divestment ordinance or replacement-bank contract."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the City Council / body conducting the segment.",
+            "The procedural stage was an in-session Council action on a referral or motion.",
+            "The referral was moved, seconded, and passed unanimously.",
+            "The acted-on item was the Wells Fargo banking-services and investments referral, including staff direction to identify exposure, draft an RFP, exclude Wells Fargo, and refrain from new Wells Fargo Securities investments.",
+            "The final motion amended the no-new-investment language from a fixed three-year period to 'until further Council direction.'",
+            "The vote result was unanimous passage of the final motion on the referral."
+          ],
+          "fact_check_notes": [
+            "Do not treat the Council's passage of the referral as completed final divestment, completed transfer of operating accounts, completed sale of securities, or completed selection of a replacement bank.",
+            "If a summary states a vote count or unanimity, check both the value and what disposition/stage it is attached to."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The City Council completed an in-session disposition by moving, seconding, and unanimously passing the Wells Fargo referral with amended language saying new Wells Fargo Securities investments would stop until further Council direction.",
+          "source_vocabulary": [
+            "referral",
+            "motion",
+            "second",
+            "passed unanimously",
+            "until further Council direction",
+            "identify accounts",
+            "draft RFP",
+            "exclude Wells Fargo",
+            "refrain from new investments"
+          ],
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "additional": [
+              "pending_future_handling",
+              "future_effect"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Councilmembers talked about Wells Fargo and heard public comments.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "Topic fails because discussion and public comment alone are not a disposition on an acted-on item."
+          },
+          {
+            "summary": "The Council passed the item.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is too generic."
+          },
+          {
+            "summary": "The City Council unanimously passed the Wells Fargo banking and investment referral after a motion and second.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition, actor, acted-on item, and vote result are source-consistent."
+          },
+          {
+            "summary": "The City Council unanimously completed final divestment from Wells Fargo and transferred all city accounts to a new bank.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a disposition on the relevant item but assigns an unsupported later procedural stage and result."
+          }
+        ]
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States that community concerns helped bring the Wells Fargo referral forward.",
+                  "States prior or ongoing Wells Fargo conduct as context, such as fraudulent accounts, Dakota Access Pipeline financing, foreclosure impacts, sanctions, student-loan issues, veterans' mortgage issues, private-prison financing, fossil-fuel financing, or large-bank risk.",
+                  "States that other cities or institutions, such as Davis, Seattle, or the University of California, had taken or considered related actions.",
+                  "States that City staff or the City Treasurer had already been reviewing Alameda's Wells Fargo exposure."
+                ],
+                "not_match": [
+                  "Only states the current proposal or final Council action without describing prior context, community concern, cited misconduct, other-city examples, or staff/treasurer review.",
+                  "Only says people were concerned without saying what prior condition, conduct, process, or background shaped the item.",
+                  "Describes a background for an unrelated item or a different institution."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the background to why the Wells Fargo referral came forward, why Alameda was reassessing its banking/investment relationship, or why the proposal was framed as an RFP/exclusion/no-new-investments referral.",
+                  "The connection can be explicit, such as 'because of' or 'after hearing from community members,' or visible through a sentence tying cited Wells Fargo conduct to the referral."
+                ],
+                "not_match": [
+                  "Lists Wells Fargo scandals or other-city actions without connecting them to the Alameda referral, proposal, discussion frame, or RFP/exclusion form.",
+                  "States only that Wells Fargo had accounts or investments with Alameda without showing how that context shaped the item.",
+                  "Connects the background to a different current action, such as an already completed account transfer."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The referral was shaped by community concern before the item came forward.",
+            "Cited background included Wells Fargo fraudulent accounts, Dakota Access Pipeline financing, foreclosure impacts, sanctions, student-loan issues, veterans' mortgage issues, private-prison financing, fossil-fuel financing, and large-bank risk.",
+            "Other-city or institutional examples, including Davis, Seattle, and the University of California, were invoked as context.",
+            "City staff and the City Treasurer had already been reviewing Alameda's Wells Fargo exposure.",
+            "The background concerns were used to justify identifying exposure, exploring replacement banking services, excluding Wells Fargo from the RFP, and stopping new Wells Fargo Securities investments."
+          ],
+          "fact_check_notes": [
+            "The source does not require one exclusive cause for the referral; multiple background concerns were cited.",
+            "The source does not establish that all alternative banks had already been vetted or selected."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The referral was shaped by community concerns, cited Wells Fargo conduct, other-city examples, and staff/treasurer review of the City's existing exposure.",
+          "source_vocabulary": [
+            "after hearing from members of the community",
+            "fraudulent accounts",
+            "Dakota pipeline",
+            "foreclosure shenanigans",
+            "sanctions",
+            "student loan issues",
+            "veterans mortgages",
+            "private prisons",
+            "Davis and Seattle",
+            "City Treasurer"
+          ],
+          "temporal_status": {
+            "primary": "already_occurred",
+            "additional": [
+              "currently_existing",
+              "recurring_concern"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council directed staff to draft an RFP for banking services.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states a current payload, not precipitating background."
+          },
+          {
+            "summary": "Speakers mentioned Wells Fargo's fraudulent accounts and pipeline financing.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Background is visible, but the connection to the current Alameda referral or discussion form is not stated."
+          },
+          {
+            "summary": "After community concerns and cited Wells Fargo conduct such as fraudulent accounts and Dakota Access Pipeline financing, Alameda brought forward the referral to reassess its banking and investment relationship with Wells Fargo.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The prior context and its connection to the current referral are source-consistent."
+          },
+          {
+            "summary": "The referral came forward because Alameda had already selected a new credit union to replace Wells Fargo.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a connected background, but it contradicts the source by claiming a replacement institution had already been selected."
+          }
+        ]
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that the passed referral, motion, or Council direction required staff to identify Wells Fargo accounts or Wells Fargo Securities investments.",
+                  "States that the action directed staff to draft an RFP for City of Alameda banking services.",
+                  "States that the action excluded Wells Fargo from the RFP process.",
+                  "States that the action directed the City to refrain from new Wells Fargo Securities investments until further Council direction.",
+                  "States that implementation was tied to staff report-back, treasurer/finance work, money-manager direction, or investment-policy review as part of the acted-on referral."
+                ],
+                "not_match": [
+                  "States only that Wells Fargo was controversial or socially irresponsible without attaching a requirement, restriction, or condition to the referral or motion.",
+                  "States only that the Council passed the referral without saying what the referral required or restricted.",
+                  "Describes future staff work without linking it to the action or acted-on referral."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Mentions a payload-related number or time quantity, such as the originally discussed three-year no-new-investment period, the about-six-weeks / April investment-policy review timing, or the three existing Wells Fargo securities.",
+                  "The number can pass Presence even if the value is wrong; value correctness belongs to Fact Check."
+                ],
+                "not_match": [
+                  "Includes no numeric quantity, duration, timing, count, or measured value attached to the payload.",
+                  "Mentions an unrelated number not attached to the Wells Fargo referral payload."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names a requirement or restriction such as identify all Wells Fargo accounts, identify Wells Fargo Securities investments, draft a banking-services RFP, exclude Wells Fargo from the RFP, or refrain from new Wells Fargo Securities investments.",
+                  "Can satisfy this label with one clear named requirement attached to the action."
+                ],
+                "not_match": [
+                  "Only says the Council took action or expressed values without naming a requirement or restriction.",
+                  "Names a broad goal such as social responsibility without any operative requirement or restriction."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies the payload scope as City of Alameda banking services, City accounts, City investments, Wells Fargo Securities, or Wells Fargo as the entity excluded or restricted.",
+                  "Can satisfy the label through a categorical boundary such as banking-services RFP or new Wells Fargo Securities investments."
+                ],
+                "not_match": [
+                  "States a requirement without identifying what accounts, investments, services, institution, or process it applies to.",
+                  "Gives a scope for a different city, institution, or financial process."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "States the time boundary 'until further Council direction' for refraining from new Wells Fargo Securities investments.",
+                  "States another identifiable cutoff or timing boundary attached to the payload, such as the originally discussed three-year period or investment-policy review timing, if the action-payload link is visible."
+                ],
+                "not_match": [
+                  "Uses generic future wording without an identifiable cutoff, deadline, sunset, or time boundary attached to the payload.",
+                  "Mentions a time period only as background and not as part of the referral payload or implementation path."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the Wells Fargo referral or motion passed by Council.",
+            "The payload directed staff to identify all City accounts with Wells Fargo and investments in Wells Fargo Securities.",
+            "The payload directed staff to draft an RFP for banking services for the City of Alameda.",
+            "The payload excluded Wells Fargo from the RFP process.",
+            "The payload directed the City to refrain from making new investments in Wells Fargo Securities until further Council direction.",
+            "The payload scope included City of Alameda accounts and operating banking services, City investments and Wells Fargo Securities, and Wells Fargo as the entity excluded or restricted.",
+            "The originally discussed three-year no-new-investment period was replaced in the final motion by 'until further Council direction.'",
+            "The about-six-weeks / April timing referred to the Treasurer's expected annual investment-policy review.",
+            "The three securities referred to current Wells Fargo securities held by the City and needing policy treatment."
+          ],
+          "fact_check_notes": [
+            "Do not require every payload item to be mentioned; a source-consistent subset can pass Fact Check.",
+            "Contradictions include saying the payload immediately sold existing Wells Fargo securities, immediately closed or transferred operating accounts, selected a replacement bank, or finally adopted a new investment policy in this segment.",
+            "Check numbers and timing only when the summary explicitly states them and attaches them to the payload or implementation role."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The operative payload directed staff to identify Wells Fargo accounts and investments, draft an RFP, exclude Wells Fargo from the RFP, and refrain from new Wells Fargo Securities investments until further Council direction, with implementation tied to staff reporting and investment-policy review.",
+          "source_vocabulary": [
+            "direct staff",
+            "identify all accounts",
+            "investments in Wells Fargo Securities",
+            "draft an RFP",
+            "banking services",
+            "exclude Wells Fargo",
+            "refrain from making new investments",
+            "until further Council direction",
+            "annual investment policy review",
+            "report back"
+          ],
+          "temporal_status": {
+            "primary": "future_effect",
+            "additional": [
+              "completed_in_session",
+              "pending_future_handling"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council unanimously passed the Wells Fargo referral.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is an O-style disposition and does not state an operative payload."
+          },
+          {
+            "summary": "The referral directed staff to take action on Wells Fargo.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the referral, but no named requirement, scope boundary, number, or time boundary is specific enough for the quality gate."
+          },
+          {
+            "summary": "The passed referral directed staff to identify Wells Fargo accounts and Wells Fargo Securities investments, draft an RFP for Alameda banking services, exclude Wells Fargo from the RFP, and refrain from new Wells Fargo Securities investments until further Council direction.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload carrier, requirements, scope, and time boundary match the event sheet."
+          },
+          {
+            "summary": "The passed referral required Alameda to sell all existing Wells Fargo securities within three years.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific attached payload, but it contradicts the source by treating the replaced three-year language as an existing-securities sale requirement."
+          }
+        ]
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concrete problem, harm, risk, obstacle, tradeoff, or difficulty related to Wells Fargo, large-bank relationships, or switching Alameda's accounts.",
+                  "Concern language can include bad behavior, fraudulent accounts, foreclosure impacts, sanctions, environmental or tribal risks, private-prison abuses, depositor or derivatives risk, operational issues, staff time, or financial detriment."
+                ],
+                "not_match": [
+                  "Only states that the City should be socially responsible without naming a concrete harm, risk, obstacle, or tradeoff.",
+                  "Only states the solution or payload, such as drafting an RFP, without problem-side concern language.",
+                  "Only says public comment occurred or concerns were raised without identifying a concern type."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Identifies a specific concern such as fraudulent accounts, Dakota Access Pipeline water/tribal/environmental risks, foreclosure impacts, student-loan or veterans' mortgage sanctions, private-prison financing and human-rights abuses, mass incarceration incentives, derivative/depositor risk, operational switching burden, staff time, or financial detriment.",
+                  "The summary does not need to name a local place or affected group for Presence if the concern content itself is specific."
+                ],
+                "not_match": [
+                  "Uses only generic words such as concerns, problems, risks, or bad conduct without saying what the concern was about.",
+                  "Names Wells Fargo as controversial without identifying any concrete concern content.",
+                  "Provides only a values-based concern theme better suited to S and no concrete harm, risk, obstacle, or tradeoff."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Wells Fargo was criticized for fraudulent accounts and other banking misconduct.",
+            "Speakers criticized Wells Fargo's involvement in Dakota Access Pipeline financing and associated environmental, water, and tribal-rights concerns.",
+            "Speakers cited foreclosure impacts, student-loan issues, and veterans' mortgage sanctions.",
+            "Speakers criticized financing of private-prison companies and associated violence, medical neglect, human-rights abuses, and mass-incarceration incentives.",
+            "A speaker raised large commercial bank risk through derivatives and depositor-fund exposure.",
+            "Councilmembers noted possible operational issues, staff time, and financial-detriment concerns in switching Alameda's accounts.",
+            "Local anchors included Alameda public funds and taxpayers, neighboring cities affected by foreclosure issues, Alameda veterans, the Standing Rock Sioux tribe / Missouri River / downstream water users, and the Idaho Correctional Center / CoreCivic example."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence, but if a summary explicitly names a place, group, or bounded area, compare it with the source-supported anchors.",
+            "The concern content included both already-occurred/prior harms and hypothetical or risk-based concerns, so temporal claims should be checked when explicitly stated."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Participants raised concrete concerns and harms tied to Wells Fargo and large-bank relationships, including fraudulent accounts, Dakota Access Pipeline risks, foreclosure impacts, sanctions, private-prison financing, derivative/depositor risk, and operational issues around switching accounts.",
+          "source_vocabulary": [
+            "fraudulent accounts",
+            "Dakota Access Pipeline",
+            "Standing Rock Sioux tribe",
+            "water supply",
+            "foreclosure shenanigans",
+            "student loan issues",
+            "veterans mortgages",
+            "private prisons",
+            "human rights abuses",
+            "derivative exposure",
+            "operational issues",
+            "staff time"
+          ],
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "additional": [
+              "already_occurred",
+              "currently_existing",
+              "hypothetical_or_risk",
+              "pending_future_handling"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council wanted to draft an RFP for banking services.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states a solution-side action, not a concrete concern."
+          },
+          {
+            "summary": "Speakers raised concerns about Wells Fargo.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "summary": "Speakers raised concrete concerns about Wells Fargo's fraudulent accounts, Dakota Access Pipeline financing, private-prison financing, and the operational burden of switching Alameda's accounts.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concern language and specific concern content are source-consistent."
+          },
+          {
+            "summary": "Speakers warned that Alameda's Wells Fargo accounts had already caused a pipeline rupture in Alameda.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a concrete concern but contradicts the source by stating an unsupported already-occurred local pipeline rupture."
+          }
+        ]
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names the recurring problem-side theme that Alameda's public money or banking relationships could passively support, legitimize, or make the City complicit in socially irresponsible or harmful financial practices.",
+                  "Can use problem-side wording such as passively condoning, socially irresponsible, misaligned with values, harmful practices, disregard for humanity or the environment, or bad practices by financial institutions."
+                ],
+                "not_match": [
+                  "Only states the policy solution, such as drafting an RFP or excluding Wells Fargo, without naming the concern theme.",
+                  "Only lists isolated concrete concerns without synthesizing the recurring theme around public money, complicity, values, or socially responsible banking.",
+                  "Only says public comments supported the referral without identifying the problem-side concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Specifies that the concern was about City funds, public money, taxpayer money, or banking relationships supporting Wells Fargo or financial institutions viewed as socially irresponsible.",
+                  "May identify the specific concern content as alignment with community values, environmental responsibility, racial/economic justice, humane treatment, Native/tribal rights, private-prison concerns, consumer-protection concerns, or movement toward local/socially responsible banking alternatives.",
+                  "The summary need not explicitly say the concern recurred if the theme is named with identifiable concern content."
+                ],
+                "not_match": [
+                  "Uses generic concern-theme wording such as values or social responsibility without saying what funds, relationship, institution, or practices are at issue.",
+                  "Names only a solution preference for credit unions or local banks without problem-side concern content.",
+                  "States an unrelated shared concern theme, such as budget timing or meeting procedure."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that Alameda's public money and banking relationships could make the City complicit in or supportive of harmful or socially irresponsible financial practices.",
+            "Public money was framed as needing to align with community values and social responsibility.",
+            "Wells Fargo was treated as an institution whose practices conflicted with those values.",
+            "Multiple speakers urged moving toward credit unions, local institutions, or banks with reliable social/environmental records.",
+            "Environmental, racial/economic justice, Native/tribal rights, private-prison, and consumer-protection concerns were recurring examples."
+          ],
+          "fact_check_notes": [
+            "The source shows repeated support among speakers in this segment, not unanimous support from all Alameda residents.",
+            "The source does not establish that a replacement bank, credit union, or other institution had already been selected."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The recurring concern theme was that Alameda's public money and banking relationships should not passively support or legitimize institutions viewed as socially irresponsible, and should instead align with community values and responsible alternatives.",
+          "source_vocabulary": [
+            "taxpayer money",
+            "business partners",
+            "passively condoning",
+            "socially responsible",
+            "values",
+            "put our money where our mouth is",
+            "economic and racial justice",
+            "environment",
+            "local credit union",
+            "social justice record",
+            "stakeholders, not shareholders"
+          ],
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "additional": [
+              "currently_existing",
+              "future_effect"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council directed staff to identify Wells Fargo accounts.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states an operative requirement, not a shared concern theme."
+          },
+          {
+            "summary": "Participants were worried about social responsibility.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the content is too generic to identify what the concern is about."
+          },
+          {
+            "summary": "A recurring concern was that Alameda's public money and banking relationships could passively support Wells Fargo practices viewed as socially irresponsible, so city funds should be aligned with community values and responsible alternatives.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concern theme and identifiable content match the event sheet."
+          },
+          {
+            "summary": "The shared concern was that all Alameda residents unanimously opposed every local credit union as socially irresponsible.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a concern theme, but it contradicts the source by reversing the direction of concern and overstating unanimity."
+          }
+        ]
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly says implementation, staff work, reporting back, the RFP, investment-policy handling, existing securities, account transfer, divestment decisions, or further Council direction remained pending, unfinished, unresolved, still to be done, or would come back later.",
+                  "Can satisfy the label with source phrases such as report back, when staff comes back, what would be involved, until further Council direction, or cannot move securities until criteria are available."
+                ],
+                "not_match": [
+                  "Only states the referral passed or the payload was adopted without saying anything remained pending or unresolved.",
+                  "Uses future-facing action language, such as staff will identify accounts, without an explicit pendingness or return-path marker.",
+                  "Says all implementation was completed during the meeting."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies what remained pending: current Wells Fargo accounts, Wells Fargo Securities investments, the banking-services RFP, exclusion implementation, existing securities, investment-policy criteria, account transition, divestment/transition choices, or further Council direction.",
+                  "The pending item can be a workstream or implementation issue rather than a formal agenda item."
+                ],
+                "not_match": [
+                  "Only says something remained pending without identifying the item, workstream, or issue.",
+                  "Identifies an unrelated pending item outside the Wells Fargo banking/investment referral."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "States a concrete future path such as staff identifying and reporting back, staff returning with feasibility/options, drafting the RFP, Treasurer/Finance Director work on exposure and investment-policy language, annual investment-policy review in about six weeks / April, money-manager direction, or further Council direction after criteria are available.",
+                  "The path can be a process path rather than a calendar date if it identifies the responsible body, workstream, review, report-back, or decision path."
+                ],
+                "not_match": [
+                  "Only states that a matter remained pending but gives no report-back, review, drafting, policy, staff, treasurer, finance, or Council-direction path.",
+                  "Gives a path for a different item or an unsupported completed implementation path."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Identification of current Wells Fargo accounts and investments remained to be done or reported back.",
+            "RFP drafting remained to be done.",
+            "Operational banking-account transition was not completed during the segment.",
+            "Existing Wells Fargo securities were not immediately resolved; policy handling and criteria remained pending.",
+            "Formal investment-policy treatment was expected through annual review in about six weeks / April.",
+            "Pending items included City accounts with Wells Fargo, investments in Wells Fargo Securities, the City of Alameda banking-services RFP, exclusion of Wells Fargo from the RFP process, existing Wells Fargo securities, and future Council direction on investment-policy and divestment/transition choices.",
+            "Handling paths included staff identification and report-back, treasurer and finance director work, annual investment-policy review, and further Council direction after information and criteria are available."
+          ],
+          "fact_check_notes": [
+            "The referral passed in session, but implementation and later policy decisions remained pending.",
+            "The no-new-Wells-Fargo-Securities direction had future effect until further Council direction.",
+            "Contradictions include saying all operating accounts were finally transferred, all existing Wells Fargo securities were finally sold, or a replacement institution was adopted during this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "After the referral passed, staff still needed to identify exposure, report back, draft the RFP, handle investment-policy review, address existing securities, and seek further Council direction; divestment and account transfer were not completed in the segment.",
+          "source_vocabulary": [
+            "report back",
+            "staff comes back",
+            "option to move forward",
+            "RFP",
+            "annual investment policy review",
+            "six weeks in April",
+            "further Council direction",
+            "existing securities",
+            "criteria",
+            "operating accounts",
+            "money managers"
+          ],
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "additional": [
+              "future_effect",
+              "completed_in_session"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council unanimously passed the Wells Fargo referral.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states the completed action but does not include an unresolved or pending marker."
+          },
+          {
+            "summary": "Some follow-up remained pending after the vote.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not identifiable."
+          },
+          {
+            "summary": "After the referral passed, staff still had to identify Wells Fargo accounts and investments, report back on options, draft the banking-services RFP, and address existing securities through the upcoming investment-policy review and further Council direction.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The pending status, pending items, and future handling path match the event sheet."
+          },
+          {
+            "summary": "After the vote, only a ceremonial announcement remained because all Wells Fargo accounts had already been transferred and all securities had already been sold.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary includes pending/remaining language but contradicts the source-supported pending status and items."
+          }
+        ]
+      }
+    }
+  }

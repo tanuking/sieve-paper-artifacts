@@ -1,0 +1,1119 @@
+segment_id: "MTG25"
+segment_dir: "25_AlamedaCC_12172019"
+meeting_id: "AlamedaCC_12172019"
+uid: "AlamedaCC_12172019_2019-7533"
+decision_type: "Resolution"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": 25,
+    "artifact_type": "qa",
+    "language": "en",
+    "source_files": {
+      "event_sheet": "event_sheet_25.md",
+      "qa_authoring_protocol": "qa_authoring.md",
+      "slot_semantics": "slot_semantics.json",
+      "qa_validation_protocol": "qa_validation.md"
+    },
+    "protocol_version": "QA Authoring Protocol v30; validated against QA Validation Protocol v31",
+    "slot_semantics_version": 29,
+    "source_transcript": "transcript_25.txt",
+    "sampled_segment_scope": "City Council discussion and action on the resolution establishing a privacy policy, a data management policy, and prohibiting the use of face recognition technology. The later Code of Conduct / Handbook item is outside this QA artifact's scope.",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "name": "Topic / Framing",
+        "event_sheet_summary": "The segment was framed around Alameda's privacy and data governance policies: privacy principles, data management for city-collected data, and restrictions on City use of face recognition technology.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "notes": [
+            "The policy package was discussed and approved during the segment.",
+            "The substantive policy effects concern ongoing and future city data practices and technology use.",
+            "Later ordinance drafting remained pending after the vote."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names a substantive policy area, issue, or matter as the subject, such as privacy/data governance, facial recognition, surveillance technology, resident data practices, or another identifiable substantive subject. Source correctness of the named subject is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only says the Council considered a resolution, agenda item, motion, hearing, or vote without naming any substantive policy area, issue, or matter.",
+                  "Only states that an item was discussed or approved without naming what the item was substantively about."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States a policy move or rule effect for the named subject, such as establishing, revising, restricting, prohibiting, governing, increasing transparency, limiting use, or moving toward a governance framework. Source correctness of the direction is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only says the item was approved, adopted, passed, or discussed without stating any substantive policy move or rule effect.",
+                  "Names a subject but gives no direction-bearing verb, rule effect, or policy change for that subject."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the entity, process, rule set, data practice, technology use, jurisdiction, group, or other scope to which the stated policy move applies. Source correctness of the target is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Gives a policy move with no identifiable target, such as 'the Council improved privacy.'",
+                  "Names a subject and direction but leaves unclear what entity, process, rule set, group, or scope the direction applies to."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was Alameda privacy policy, data management policy, and face recognition technology restrictions.",
+            "The policy direction included establishing privacy principles and a data management policy, protecting personal data, increasing transparency about collection/use, and prohibiting City staff from obtaining, retaining, accessing, or using facial recognition technology or information from it.",
+            "The target was City of Alameda handling of residents' privacy and city-collected data, City staff use of facial recognition technology, and future surveillance-technology acquisition/oversight processes.",
+            "The policy did not itself limit outside agencies' own systems; staff described public-safety/investigative data as covered by separate policies."
+          ],
+          "fact_check_notes": [
+            "Fact Check is not failed by omission of exceptions or ordinance follow-up unless the summary explicitly contradicts the source-supported subject, policy direction, or target.",
+            "Approving the item is not by itself policy direction for T; it belongs to O unless linked to a substantive policy move."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "subject": "Alameda privacy policy, data management policy, and face recognition technology restrictions.",
+          "policy_direction": [
+            "establish privacy principles and data management policy",
+            "protect personal data and increase transparency",
+            "prohibit City staff from obtaining, retaining, accessing, or using facial recognition technology or information from it",
+            "later convert or supplement the framework through ordinances"
+          ],
+          "target": [
+            "City handling of residents' privacy and city-collected data",
+            "City staff use of facial recognition technology",
+            "City surveillance-technology acquisition and oversight processes for future ordinance work"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed a resolution.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails because the substantive privacy/data/facial-recognition subject is not identified."
+          },
+          {
+            "summary": "The Council discussed Alameda's privacy and data policies.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "The subject is visible, but the summary does not state a policy direction and target with enough specificity."
+          },
+          {
+            "summary": "The segment centered on Alameda privacy and data governance policies to protect city-collected resident data and restrict City staff use of facial recognition technology.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "Subject, policy direction, and target are all present and source-consistent."
+          },
+          {
+            "summary": "The segment centered on Alameda privacy policy to authorize City staff to use facial recognition technology on residents.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because a specific subject, direction, and target are stated, but the stated direction contradicts the event sheet."
+          }
+        ],
+        "label": "T",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names a substantive policy area, issue, or matter as the subject, such as privacy/data governance, facial recognition, surveillance technology, resident data practices, or another identifiable substantive subject. Source correctness of the named subject is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only says the Council considered a resolution, agenda item, motion, hearing, or vote without naming any substantive policy area, issue, or matter.",
+                "Only states that an item was discussed or approved without naming what the item was substantively about."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "States a policy move or rule effect for the named subject, such as establishing, revising, restricting, prohibiting, governing, increasing transparency, limiting use, or moving toward a governance framework. Source correctness of the direction is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only says the item was approved, adopted, passed, or discussed without stating any substantive policy move or rule effect.",
+                "Names a subject but gives no direction-bearing verb, rule effect, or policy change for that subject."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies the entity, process, rule set, data practice, technology use, jurisdiction, group, or other scope to which the stated policy move applies. Source correctness of the target is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Gives a policy move with no identifiable target, such as 'the Council improved privacy.'",
+                "Names a subject and direction but leaves unclear what entity, process, rule set, group, or scope the direction applies to."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Opening agenda statement, staff presentation on the three exhibits, clarifying questions about facial recognition scope, and final motion language.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "agenda title names privacy policy, data management policy, and face recognition prohibition",
+            "staff presentation repeatedly uses \"privacy,\" \"data management,\" \"personal data,\" \"transparency,\" and \"prohibition\"",
+            "later Council discussion uses \"ordinance,\" \"surveillance ordinance,\" and \"facial recognition ban\""
+          ]
+        }
+      },
+      "O": {
+        "slot": "O",
+        "name": "Outcome / Position",
+        "event_sheet_summary": "The Alameda City Council approved/adopted the privacy principles and policies as written and directed staff to return with ordinance work. The final motion passed unanimously.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "notes": [
+            "The policy/principle approval and staff direction were completed during the segment.",
+            "Future ordinances were directed but not finally enacted in the segment."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that an acting body took a recognizable disposition, such as approving, adopting, passing, directing, referring, rejecting, deferring, or moving approval, and ties that disposition to a recognizable acted-on item. Source correctness of actor, stage, result, item, and vote is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only says members discussed, supported, questioned, debated, or heard comments on an item without saying any body took a disposition.",
+                  "Only describes future activity or a possible next step without tying any disposition verb to an acted-on item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item specifically enough to distinguish it, using a formal label, motion/resolution description, policy package description, ordinance/workstream description, or other substantive description. Source correctness of the item is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Says only 'the item,' 'the matter,' 'the policy,' or another generic referent without enough context to distinguish what was acted on.",
+                  "States a disposition but leaves the acted-on item unnamed or indistinguishable."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Alameda City Council.",
+            "The procedural stage was in-session Council action approving/adopting the policies/principles and directing staff to return with ordinance work; the future ordinances were not finally enacted in this segment.",
+            "The disposition result was approval/adoption of the privacy principles and policies as written for the interim, plus direction for staff to return with ordinance work.",
+            "The acted-on items included the privacy principles and privacy/data/facial-recognition policy package, and staff direction for facial recognition ban, data management/privacy oversight, and surveillance ordinance work.",
+            "The final motion approving the policies/principles and giving ordinance-related staff direction passed unanimously."
+          ],
+          "fact_check_notes": [
+            "Do not treat the unanimous vote as final enactment of the future ordinances.",
+            "A summary may omit the vote result and still pass Fact Check if it does not contradict any checked field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "actor": "Alameda City Council",
+          "procedural_stage": "In-session Council action on a resolution/policy package and direction to staff; not final enactment of future ordinances.",
+          "disposition_result": [
+            "privacy principles and policies approved/adopted as written for the interim",
+            "staff directed to return with ordinance work",
+            "motion passed unanimously"
+          ],
+          "acted_on_item": [
+            "privacy principles",
+            "privacy policy / data management policy / facial recognition policy package",
+            "future facial recognition ban ordinance",
+            "future data management / privacy oversight ordinance",
+            "future surveillance ordinance consideration"
+          ],
+          "vote_result": {
+            "value": "unanimous",
+            "attached_to": "final motion approving the policies/principles and giving ordinance-related direction to staff"
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Council members discussed facial recognition policy.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails because there is discussion but no disposition tied to an acted-on item."
+          },
+          {
+            "summary": "The Council approved the item.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "A disposition is visible, but the acted-on item is too generic to distinguish the privacy/data/facial-recognition package."
+          },
+          {
+            "summary": "The Alameda City Council unanimously approved the privacy principles and policies and directed staff to return with facial recognition, data/privacy, and surveillance ordinance work.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "Disposition, acted-on item, actor, vote, and procedural stage are source-consistent."
+          },
+          {
+            "summary": "The Alameda City Council unanimously enacted the facial recognition ban ordinance and surveillance ordinance.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because a specific disposition and item are stated, but the procedural stage and disposition result contradict the event sheet: ordinances were only directed for future return."
+          }
+        ],
+        "label": "O",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that an acting body took a recognizable disposition, such as approving, adopting, passing, directing, referring, rejecting, deferring, or moving approval, and ties that disposition to a recognizable acted-on item. Source correctness of actor, stage, result, item, and vote is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only says members discussed, supported, questioned, debated, or heard comments on an item without saying any body took a disposition.",
+                "Only describes future activity or a possible next step without tying any disposition verb to an acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item specifically enough to distinguish it, using a formal label, motion/resolution description, policy package description, ordinance/workstream description, or other substantive description. Source correctness of the item is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Says only 'the item,' 'the matter,' 'the policy,' or another generic referent without enough context to distinguish what was acted on.",
+                "States a disposition but leaves the acted-on item unnamed or indistinguishable."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "End-stage Council deliberation after public comment, beginning with Councilmember Vella's motion and ending with the unanimous vote.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "I move approval",
+            "direct staff to come back",
+            "include adopting the principles",
+            "strongly consider using San Francisco as a model",
+            "motion passes unanimously"
+          ]
+        }
+      },
+      "B": {
+        "slot": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "event_sheet_summary": "The item was shaped by a prior Council referral about data collection and management, interdepartmental staff work, advocacy for enforceable ordinances, and broader concerns about surveillance technology, smart-city data mining, data breaches, and government misuse of collected data.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "notes": [
+            "The referral and staff background research preceded the segment.",
+            "Prior city examples and privacy advocacy shaped the discussion.",
+            "Some broader risks were forward-looking background conditions."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States a prior event, prior referral, staff research, interdepartmental process, advocacy, model/example from another jurisdiction, broader condition, risk, problem, opposition, deadline, or similar background connected or potentially connected to the current item. Source correctness of the background is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only describes the adopted policies, operative requirements, staff direction, or final vote without stating any prior/background condition.",
+                  "Only states a policy solution or disposition without any background event, condition, process, problem, or model context."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Shows that the background is visibly connected to the current item, proposal form, revision, discussion frame, ordinance-vs-policy framing, model/reference choice, or how the item was handled. An explicit agenda-necessity or why-now statement is not required."
+                ],
+                "not_match": [
+                  "Mentions a background issue as a standalone general fact with no visible connection to the current item, proposal form, discussion frame, or handling path.",
+                  "Mentions another jurisdiction or model as a standalone fact without connecting it to the current item or model/reference discussion."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "A prior Council referral sought an ordinance for data collection and management.",
+            "City staff from the City Manager's Office, City Attorney's Office, Police Department, and IT Department prepared the privacy/data/facial-recognition package.",
+            "Public and advocate concern that policy alone was weaker than ordinance-level protection shaped the discussion.",
+            "Broader concerns about surveillance technology, data mining, data breaches, and historic misuse of government-collected data were background for the item.",
+            "Examples from San Francisco, Davis, Berkeley, Oakland, Santa Clara County, and ACLU model ordinances were invoked as models or precedents, not as Alameda actions taken in this segment."
+          ],
+          "fact_check_notes": [
+            "Final approval is O, not B; policy requirements are N unless framed as background.",
+            "B does not require an explicit 'why now' statement if the background is visibly connected to the item or proposal form."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "trigger_condition": [
+            "prior Council referral seeking a data collection and management ordinance",
+            "staff research and interdepartmental preparation",
+            "advocate concern that policy alone was weaker than ordinance protection",
+            "broader concern about surveillance technology, data mining, data breaches, and historic misuse"
+          ],
+          "agenda_connection": [
+            "staff presentation came forward as a resolution with three attachments/policy areas",
+            "public speakers and Council members used the background to argue for enforceable ordinances and surveillance-technology oversight",
+            "outside city and ACLU examples were invoked as models or precedent, not Alameda actions"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved privacy policies and directed staff to draft ordinances.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails for B because this is the action/disposition, not a prior or precipitating background condition."
+          },
+          {
+            "summary": "There had been concerns about data breaches and surveillance.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "The background concern is visible, but the connection to the current Alameda item or its proposal form is not explicit enough."
+          },
+          {
+            "summary": "The item was shaped by an earlier Council referral on data collection and management and by privacy advocates urging an enforceable ordinance rather than policy-only protections.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "A prior background condition is stated and connected to the current item's form."
+          },
+          {
+            "summary": "The item came forward because Alameda had already enacted a San Francisco-style surveillance ordinance that failed in court.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes as a specific background explanation, but the stated trigger and agenda connection contradict the event sheet."
+          }
+        ],
+        "label": "B",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States a prior event, prior referral, staff research, interdepartmental process, advocacy, model/example from another jurisdiction, broader condition, risk, problem, opposition, deadline, or similar background connected or potentially connected to the current item. Source correctness of the background is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only describes the adopted policies, operative requirements, staff direction, or final vote without stating any prior/background condition.",
+                "Only states a policy solution or disposition without any background event, condition, process, problem, or model context."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Shows that the background is visibly connected to the current item, proposal form, revision, discussion frame, ordinance-vs-policy framing, model/reference choice, or how the item was handled. An explicit agenda-necessity or why-now statement is not required."
+              ],
+              "not_match": [
+                "Mentions a background issue as a standalone general fact with no visible connection to the current item, proposal form, discussion frame, or handling path.",
+                "Mentions another jurisdiction or model as a standalone fact without connecting it to the current item or model/reference discussion."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff opening remarks, public-comment testimony from privacy advocates, and Councilmember Vella's explanation of the prior referral and ordinance preference.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "background research",
+            "collaborative effort",
+            "a couple of years ago ... referral",
+            "references to San Francisco / ACLU / Davis / Berkeley models",
+            "references to smart cities, data mining, and data breaches"
+          ]
+        }
+      },
+      "N": {
+        "slot": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "event_sheet_summary": "The policy package's operative payload included privacy principles, a data management policy, and a facial-recognition-technology prohibition, plus Council direction for future ordinance work.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "notes": [
+            "The policy package was approved in-session.",
+            "Its operating rules apply to ongoing/future city conduct.",
+            "Ordinance conversion or additional ordinance drafting remained pending future handling."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that an action or acted-on item carried an operative payload, such as a requirement, restriction, condition, exception, permission, scope boundary, number, date, threshold, deadline, or future directive. Source correctness of the carrier, content, scope, and scalar is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Describes background concerns, general policy goals, or discussion themes without linking any operative payload to an action or acted-on item.",
+                  "Only says a body approved, adopted, passed, or discussed an item without saying what the action carried, required, restricted, scoped, set, or directed."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "The attached payload includes an identifiable numeric quantity, count, amount, percentage, duration, threshold, deadline-like value, or other scalar facet. Correctness of the exact value is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Provides no identifiable numeric or scalar facet attached to the action or acted-on item."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names an identifiable requirement, restriction, condition, exception, permission, carve-out, or directive attached to the action. Correctness of the named requirement is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only uses generic payload language such as 'rules,' 'privacy improvements,' or 'changes' with no identifiable requirement, restriction, condition, exception, permission, or directive."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "States an identifiable applicable scope, category, population, geography, process, target, inclusion, exclusion, or other boundary defining what the payload applies to. Correctness of the scope boundary is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "States an action-carried payload without any identifiable scope, category, population, geography, process, target, inclusion, exclusion, or boundary."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the Council resolution / policy package with three attachments or topic areas and the final Council motion approving the policies/principles and directing future ordinance work.",
+            "The privacy principles included equitable privacy practices, limiting collection and retention, diligent personal-information management, third-party privacy protections, public-records privacy safeguards, transparency, and accountability to Alameda residents.",
+            "The data management policy addressed storing, managing, and using data collected through websites, application forms, paper or electronic forms, and phone messages, and excluded public-safety/emergency/investigative data covered by separate policies.",
+            "The facial recognition policy prohibited City staff from obtaining, retaining, accessing, or using facial recognition technology or information obtained from it, with exceptions described for public-safety/criminal-investigation contexts involving outside-agency use and ordinary device access uses.",
+            "The future direction was for staff to return with a facial recognition ban ordinance, a data management / privacy oversight ordinance, and consideration of a surveillance ordinance using San Francisco / ACLU-style models.",
+            "The staff report/policy package had three attachments/topic areas, and staff described seven privacy principles."
+          ],
+          "fact_check_notes": [
+            "Omissions of some principles, examples, or exceptions are not Fact Check errors unless the summary explicitly contradicts payload_content, payload_scope, payload_carrier, or payload_scalar_or_baseline.",
+            "A wrong number can still pass Presence for the number quality label, but it fails Fact Check if it contradicts the source-supported scalar role."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "payload_carrier": [
+            "Council resolution / policy package with three attachments or topic areas",
+            "final Council motion approving policies/principles and directing future ordinance work"
+          ],
+          "payload_content": {
+            "privacy_principles": [
+              "equitable privacy practices",
+              "limit collection and retention",
+              "diligent personal-information management",
+              "third-party privacy protections",
+              "public-records privacy safeguards",
+              "transparency",
+              "accountability"
+            ],
+            "data_management_policy": [
+              "storing, managing, and using data",
+              "collection channels including websites, forms, and phone messages",
+              "excludes public-safety, emergency-response, and investigative data covered by separate policies"
+            ],
+            "facial_recognition_policy": [
+              "prohibits City staff from obtaining, retaining, accessing, or using facial recognition technology or information obtained from it",
+              "exceptions for public-safety/criminal-investigation contexts involving outside-agency use and common device access uses"
+            ],
+            "future_direction": [
+              "return with facial recognition ban ordinance",
+              "return with data management / privacy oversight ordinance",
+              "consider surveillance ordinance and strongly consider San Francisco / ACLU-style models"
+            ]
+          },
+          "payload_scope": [
+            "City of Alameda staff and city operations",
+            "city-collected resident data and personal information",
+            "non-law-enforcement data management, with public-safety/investigation data excluded",
+            "not a direct limit on outside agencies' own systems or vehicles"
+          ],
+          "payload_scalar_or_baseline": [
+            {
+              "value": 3,
+              "meaning": "number of policy attachments/topic areas"
+            },
+            {
+              "value": 7,
+              "meaning": "number of privacy principles described"
+            }
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved the privacy policy package.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails for N because the action is stated but no operative payload is described."
+          },
+          {
+            "summary": "The approved package included privacy rules.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "A payload is attached to the action, but no sufficiently specific number, named requirement, or scope boundary is provided."
+          },
+          {
+            "summary": "The approved package included three policy areas: privacy principles, a data management policy, and a prohibition on City staff obtaining, retaining, accessing, or using facial recognition technology or information from it.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "The payload is attached to the action and includes source-consistent number and named restriction."
+          },
+          {
+            "summary": "The approved package included five privacy principles and required Alameda police to run city camera footage through facial recognition software.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because specific payload details are stated, but the scalar and payload content contradict the event sheet."
+          }
+        ],
+        "label": "N",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "States that an action or acted-on item carried an operative payload, such as a requirement, restriction, condition, exception, permission, scope boundary, number, date, threshold, deadline, or future directive. Source correctness of the carrier, content, scope, and scalar is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Describes background concerns, general policy goals, or discussion themes without linking any operative payload to an action or acted-on item.",
+                "Only says a body approved, adopted, passed, or discussed an item without saying what the action carried, required, restricted, scoped, set, or directed."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "The attached payload includes an identifiable numeric quantity, count, amount, percentage, duration, threshold, deadline-like value, or other scalar facet. Correctness of the exact value is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Provides no identifiable numeric or scalar facet attached to the action or acted-on item."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "Names an identifiable requirement, restriction, condition, exception, permission, carve-out, or directive attached to the action. Correctness of the named requirement is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only uses generic payload language such as 'rules,' 'privacy improvements,' or 'changes' with no identifiable requirement, restriction, condition, exception, permission, or directive."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "States an identifiable applicable scope, category, population, geography, process, target, inclusion, exclusion, or other boundary defining what the payload applies to. Correctness of the scope boundary is checked only in Fact Check."
+              ],
+              "not_match": [
+                "States an action-carried payload without any identifiable scope, category, population, geography, process, target, inclusion, exclusion, or boundary."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff presentation on exhibits A, B, and C; clarifying questions on facial-recognition scope and public-safety exclusions; Council motion adding ordinance direction.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "three attachments",
+            "seven privacy principles",
+            "data management policy",
+            "policy doesn't apply to data and information collected for public safety",
+            "no staff shall obtain, retain access or use facial recognition technology",
+            "direct staff to come back"
+          ]
+        }
+      },
+      "L": {
+        "slot": "L",
+        "name": "Concrete Concern",
+        "event_sheet_summary": "Speakers and Council members raised concrete concerns that facial recognition, surveillance technology, and weak data governance could harm privacy and equity, chill speech and protest, enable tracking or profiling, misidentify people, expose communities and activists to surveillance, allow vendor misuse, and let government-collected data be misused or retained against residents.",
+        "temporal_status": {
+          "primary": "hypothetical_or_risk",
+          "notes": [
+            "Many concerns described future or potential misuse.",
+            "Some speakers described existing or historical surveillance experiences and existing community fear.",
+            "Misidentification and data misuse were treated as concrete risks."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a problem-side concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, chilling effect, misuse, misidentification, profiling/tracking, data breach, privacy loss, equity harm, or lack of enforceability. Source correctness of the concern and any local anchor is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only describes a policy solution, disposition, requirement, or governance goal without asserting any problem-side concern, harm, risk, tradeoff, or obstacle.",
+                  "Only says the item was discussed, debated, supported, or approved without problem-side concern language."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Specifies what the concern is about, such as the object of harm, mechanism, affected activity, risk type, misuse pathway, threatened right, data practice, technology use, or enforceability gap. A named place, named group, or bounded area is not required for Presence."
+                ],
+                "not_match": [
+                  "Uses a generic phrase like 'concerns were raised,' 'privacy concerns,' or 'civil-rights issues' without identifiable concern content.",
+                  "Mentions privacy or accountability only as a policy goal, not as a risk, harm, or problem-side concern."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Source-supported concrete concerns included privacy loss from facial scanning without knowledge, profiling/tracking, chilling free speech and assembly, misidentification or targeting by race/gender/community, misuse of government-collected data, data-breach risk, vendor misuse/profit, and concern that policy without ordinance lacked enforceable protection.",
+            "Local anchors, when stated, included Alameda residents and City of Alameda data practices, Muslim community speakers and organizations, people of color, women, activists, protest participants, and Bay Area city examples as context rather than Alameda actions.",
+            "Many of the concerns were described as hypothetical or future risks, though some speakers referred to existing or historical surveillance experiences and fears."
+          ],
+          "fact_check_notes": [
+            "A local anchor is not required for Presence, but if a summary explicitly supplies one, compare it against the source-supported local anchor.",
+            "Do not lower Presence merely because a summary omits named places or affected groups."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "obstacle_content": [
+            "privacy loss from facial scanning without knowledge",
+            "profiling and tracking of activists or community members",
+            "chilling effect on free speech, assembly, protests, and public debate",
+            "racial, gender, or community-based misidentification or targeting",
+            "misuse of government-collected data and resident information",
+            "data-breach risk and vendor misuse/profit",
+            "policy without ordinance lacks enforceable protection"
+          ],
+          "local_anchor": [
+            "Alameda residents and City data practices",
+            "Muslim community speakers and organizations",
+            "people of color",
+            "women",
+            "activists and protest participants",
+            "Bay Area city examples as context, not Alameda actions"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed surveillance policy.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails because no concrete problem-side concern is stated."
+          },
+          {
+            "summary": "Speakers raised privacy concerns.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "A concern is visible, but the concern content is too generic."
+          },
+          {
+            "summary": "Speakers warned that facial recognition could chill protest, enable tracking, and misidentify people of color and women.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "Concrete and specific concern content is source-consistent."
+          },
+          {
+            "summary": "Speakers' main concern was that the facial-recognition ban would prevent residents from accessing city services.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because a specific concern is stated, but the concern content contradicts the event sheet."
+          }
+        ],
+        "label": "L",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States a problem-side concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, chilling effect, misuse, misidentification, profiling/tracking, data breach, privacy loss, equity harm, or lack of enforceability. Source correctness of the concern and any local anchor is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only describes a policy solution, disposition, requirement, or governance goal without asserting any problem-side concern, harm, risk, tradeoff, or obstacle.",
+                "Only says the item was discussed, debated, supported, or approved without problem-side concern language."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Specifies what the concern is about, such as the object of harm, mechanism, affected activity, risk type, misuse pathway, threatened right, data practice, technology use, or enforceability gap. A named place, named group, or bounded area is not required for Presence."
+              ],
+              "not_match": [
+                "Uses a generic phrase like 'concerns were raised,' 'privacy concerns,' or 'civil-rights issues' without identifiable concern content.",
+                "Mentions privacy or accountability only as a policy goal, not as a risk, harm, or problem-side concern."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff comments on privacy/equity risks, public-comment testimony, and Council discussion about ordinance protections and misuse risks.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "growing concern",
+            "privacy and equity",
+            "terrifying",
+            "chilling free speech",
+            "misused",
+            "data breach",
+            "misidentified"
+          ]
+        }
+      },
+      "S": {
+        "slot": "S",
+        "name": "Shared Concern Synthesis",
+        "event_sheet_summary": "A recurring concern theme was that facial recognition, surveillance acquisition, and weak data-governance controls could undermine privacy, civil rights, public trust, and equal participation unless governed by stronger, transparent, accountable, ordinance-backed oversight.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "notes": [
+            "The concern recurred across staff framing, public comments, and Council comments.",
+            "The action partly addressed the concern by adopting policies/principles, but ordinance-level protection remained pending."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names a recurring or shared problem-side concern theme, such as a concern that a technology, policy mechanism, governance approach, data practice, or oversight gap could undermine privacy, rights, trust, participation, transparency, accountability, or another protected interest. Source correctness of the theme is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only states that a body supported, adopted, or directed a solution without framing any problem-side concern theme.",
+                  "Only says the issue was discussed, debated, controversial, or important without naming what the concern theme was about."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Identifies the concern theme's object, mechanism, contrast, criticized approach, risk, tradeoff, affected interest, or problem content. The summary does not need to state recurrence explicitly."
+                ],
+                "not_match": [
+                  "Uses a generic phrase such as 'public concern,' 'shared worries,' or 'many concerns' without saying what the recurring concern was about.",
+                  "States only a solution-side theme, such as 'the City should draft ordinances,' without the problem-side reason."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that surveillance technology and city data practices require stronger, transparent, accountable, ordinance-backed governance to protect privacy, civil rights, and public trust.",
+            "Policy alone was repeatedly described as insufficient compared with ordinance-based protection.",
+            "Public oversight was requested for surveillance-technology acquisition and use.",
+            "Facial recognition was repeatedly linked to privacy, civil-rights, constitutional, equity, and misidentification concerns.",
+            "Data management was linked to limiting retention, transparency, breaches, and historical misuse of government-collected data.",
+            "Council members supported ordinance work while noting public-safety, staff, and legal considerations."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state recurrence explicitly if it names the source-supported concern theme in problem-side language.",
+            "Do not treat a bare policy recommendation as S unless it states the problem-side concern theme."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "concern_theme": "Recurring concern that surveillance technology and city data practices require stronger, transparent, accountable, ordinance-backed governance to protect privacy, civil rights, and public trust.",
+          "concern_content": [
+            "policy alone was repeatedly described as insufficient compared with ordinance-based protection",
+            "public oversight was requested for surveillance-technology acquisition and use",
+            "facial recognition was linked to privacy, civil-rights, constitutional, equity, and misidentification concerns",
+            "data management was linked to limiting retention, transparency, breaches, and historical misuse",
+            "Council support for ordinance work coexisted with public-safety, staff, and legal considerations"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council directed staff to consider a surveillance ordinance.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails for S because this is a solution/action without a problem-side recurring concern theme."
+          },
+          {
+            "summary": "There were concerns about surveillance.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "The concern theme is visible but lacks specific content about what the concern was."
+          },
+          {
+            "summary": "Across the discussion, speakers worried that policy-only governance of facial recognition and surveillance technology would not adequately protect privacy, civil rights, public trust, and public oversight.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "The recurring concern theme and its specific content are source-consistent."
+          },
+          {
+            "summary": "The shared concern was that Alameda's strict privacy rules would weaken public trust by hiding city data from residents.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because a specific concern theme is stated, but it contradicts the source-supported concern content."
+          }
+        ],
+        "label": "S",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names a recurring or shared problem-side concern theme, such as a concern that a technology, policy mechanism, governance approach, data practice, or oversight gap could undermine privacy, rights, trust, participation, transparency, accountability, or another protected interest. Source correctness of the theme is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only states that a body supported, adopted, or directed a solution without framing any problem-side concern theme.",
+                "Only says the issue was discussed, debated, controversial, or important without naming what the concern theme was about."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies the concern theme's object, mechanism, contrast, criticized approach, risk, tradeoff, affected interest, or problem content. The summary does not need to state recurrence explicitly."
+              ],
+              "not_match": [
+                "Uses a generic phrase such as 'public concern,' 'shared worries,' or 'many concerns' without saying what the recurring concern was about.",
+                "States only a solution-side theme, such as 'the City should draft ordinances,' without the problem-side reason."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Distributed across staff presentation, public-comment sequence, and Council deliberation; strongest recurrence appears in public comments and final Council discussion.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "repeated \"ordinance, not policy\" framing",
+            "repeated references to privacy, civil rights, surveillance, transparency, accountability, and public trust",
+            "multiple speakers and Council members independently make the same concern-policy connection"
+          ]
+        }
+      },
+      "U": {
+        "slot": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "event_sheet_summary": "After the policy/principle approval, ordinance-level work remained unfinished. Staff was directed to return with facial recognition ban and data management/privacy oversight ordinance work and to consider a surveillance ordinance using San Francisco / ACLU-style models, while final ordinance text/adoption and staff/legal/police concerns remained unresolved.",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "notes": [
+            "The policy/principle approval was completed in-session.",
+            "Drafting, review, and adoption of ordinances remained future work.",
+            "The segment did not enact final ordinances."
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly includes an unfinished, pending, unresolved, still-open, still-to-return, future final-action, future review, or future handling marker for an item or workstream. Source correctness of the pending status and item is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Only states a completed disposition or approval without any unfinished, pending, unresolved, still-open, or future-handling marker.",
+                  "Only states a bare directive or future-oriented action without making clear that something remains unfinished, pending, unresolved, or still to return."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies the unfinished item, workstream, issue, ordinance, motion, review, implementation step, report-back object, or follow-up object specifically enough to tell what remains pending. Source correctness of the pending item is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "Says only that 'more work,' 'follow-up,' or 'some future item' remained pending without identifying what remained unfinished."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "States a concrete future handling path, such as a return to a body, staff review, drafting path, model-review path, report-back, future meeting, committee custody, or final-action path. Source correctness of the handling path is checked only in Fact Check."
+                ],
+                "not_match": [
+                  "States only that an issue is future-oriented, without any body, staff path, model-review path, return path, report-back, custody path, or process path."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Completed: Council approved/adopted the policies and principles during the segment.",
+            "Pending: ordinance drafting/review and final ordinance adoption.",
+            "Pending items included the facial recognition ban ordinance, data management / privacy oversight ordinance, and surveillance ordinance or surveillance-technology acquisition ordinance consideration.",
+            "The handling path was for staff to return to Council with ordinance work, look at Davis and San Francisco examples and ACLU-style model ordinances, and identify staff/city attorney/city manager/police concerns for Council consideration.",
+            "The later City Council Code of Conduct / Handbook agenda item is outside this segment's scope."
+          ],
+          "fact_check_notes": [
+            "The policy package itself was not pending; it passed as part of the final motion.",
+            "A bare directive to staff is not enough for U Presence unless the summary also includes an explicit unfinished/pending marker."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "pending_status": {
+            "completed": "Council approved/adopted the policies and principles during the segment",
+            "pending": "ordinance drafting/review and final ordinance adoption"
+          },
+          "pending_item": [
+            "facial recognition ban ordinance",
+            "data management / privacy oversight ordinance",
+            "surveillance ordinance or surveillance-technology acquisition ordinance consideration"
+          ],
+          "handling_path": [
+            "staff to return to Council with ordinance work",
+            "staff to look at Davis and San Francisco examples and ACLU-style model ordinances",
+            "staff/city attorney/city manager/police concerns could be identified for Council consideration"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved the privacy principles and policies.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_applicable",
+            "reason": "Topic Gate fails for U because only the completed action is stated; no pendingness is visible."
+          },
+          {
+            "summary": "Staff was directed to return with ordinance work.",
+            "expected_presence": 0.5,
+            "expected_fact_check": "not_applicable",
+            "reason": "A future path is suggested, but the summary lacks an explicit unfinished or pending marker required by U."
+          },
+          {
+            "summary": "After the policies were approved, final ordinance drafting and adoption remained pending, with staff to return to Council on a facial recognition ban ordinance, a data/privacy oversight ordinance, and possible surveillance ordinance models.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "reason": "Pending status, pending items, and handling path are all source-consistent."
+          },
+          {
+            "summary": "After the vote, the privacy policy package itself remained pending because the Council postponed approval until staff drafted the ordinances.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "reason": "Presence passes because a pending item and status are stated, but pending_status contradicts the event sheet: the policy package was approved in-session."
+          }
+        ],
+        "label": "U",
+        "topic_gate": {
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "Explicitly includes an unfinished, pending, unresolved, still-open, still-to-return, future final-action, future review, or future handling marker for an item or workstream. Source correctness of the pending status and item is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Only states a completed disposition or approval without any unfinished, pending, unresolved, still-open, or future-handling marker.",
+                "Only states a bare directive or future-oriented action without making clear that something remains unfinished, pending, unresolved, or still to return."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies the unfinished item, workstream, issue, ordinance, motion, review, implementation step, report-back object, or follow-up object specifically enough to tell what remains pending. Source correctness of the pending item is checked only in Fact Check."
+              ],
+              "not_match": [
+                "Says only that 'more work,' 'follow-up,' or 'some future item' remained pending without identifying what remained unfinished."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "States a concrete future handling path, such as a return to a body, staff review, drafting path, model-review path, report-back, future meeting, committee custody, or final-action path. Source correctness of the handling path is checked only in Fact Check."
+              ],
+              "not_match": [
+                "States only that an issue is future-oriented, without any body, staff path, model-review path, return path, report-back, custody path, or process path."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Final Council motion and amendments/clarifications immediately before the unanimous vote.\n",
+        "marker_presence": {
+          "status": "explicit",
+          "markers": [
+            "direct staff to come back",
+            "bring back a surveillance ordinance",
+            "strongly consider using San Francisco as a model",
+            "hear back about any city concerns",
+            "contrast between policies adopted now and ordinances to return later"
+          ]
+        }
+      }
+    },
+    "validation_status": "updated_after_two_validation_passes"
+  }

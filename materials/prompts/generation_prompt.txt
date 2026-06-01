@@ -1,0 +1,17 @@
+You are summarizing one sampled public-meeting segment for a policy
+analyst. The analyst needs a concise, factual briefing on what happened
+in this segment, what shaped the discussion, and what remains open
+afterward.
+
+Write exactly {N} sentences. Each sentence must contain no more than
+25 words. Use plain prose only — no bullet points, numbered lists,
+or headings. Each sentence should express one main point.
+
+Prioritize the developments that materially changed, clarified, or
+constrained the item during this segment. Avoid trivial procedural
+detail such as roll call, adjournment times, and routine declarations,
+but retain procedural outcomes when they are substantively important.
+
+=== TRANSCRIPT START ===
+{transcript}
+=== TRANSCRIPT END ===

@@ -1,0 +1,555 @@
+segment_id: "MTG16"
+segment_dir: "16_KingCountyCC_06012022"
+meeting_id: "KingCountyCC_06012022"
+uid: "KingCountyCC_06012022_2022-0180"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # event_sheet_16
+  
+  ## Source metadata
+  
+  - transcript: `transcript_16.txt`
+  - slot semantics: `slot_semantics.json`, version 29
+  - protocol: `event_sheet_protocol.md`, Event Sheet Protocol v29
+  - sampled segment: King County Committee of the Whole discussion of a charter-amendment ordinance to move several county-office elections from odd-numbered years to even-numbered years.
+  
+  ---
+  
+  ## T — Topic/Framing
+  
+  label: T
+  
+  summary: >
+    The segment framed Proposed Ordinance 2022-0180 / transcript-rendered “2020 20180/201801”
+    as a proposed King County Charter amendment that would move elections for the County Executive,
+    County Assessor, County Director of Elections, and County Council members from odd-numbered
+    years to even-numbered years, aligning those county offices with federal and state election years
+    if voters later ratified the charter amendment.
+  
+  evidence:
+    - >
+      The chair introduced the item as a proposed ordinance to amend the King County Charter
+      “to move elections for state and county offices from odd numbers to even numbered years,”
+      and said passage would send it to county voters for ratification or rejection at the
+      November 8, 2022 general election.
+    - >
+      Central Staff described the item as placing a charter amendment on the November 2022 ballot
+      to move elections for County Executive, County Assessor, County Director of Elections,
+      and County Council members from odd-numbered to even-numbered years.
+    - >
+      Staff later framed one policy consideration as whether the Council wanted to align these
+      county-office elections with federal and state elections held in even-numbered years.
+  
+  source_vocabulary:
+    - “move elections ... from odd numbered to even numbered years”
+    - “charter amendment proposal”
+    - “County Executive, County Assessor, County Director of Elections and County Council members”
+    - “align ... with federal and state elections”
+    - “ratification or rejection”
+    - “November 8, 2022 general election”
+  
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - The policy change was only proposed during this segment.
+      - The election schedule change would occur only if the Council later placed the charter amendment on the ballot and voters approved it.
+  
+  source_context_for_fact_check:
+    subject: >
+      A King County Charter amendment proposal concerning the election years for specified county offices.
+    policy_direction: >
+      Move specified county-office elections from odd-numbered years to even-numbered years.
+    target:
+      offices:
+        - King County Executive
+        - King County Assessor
+        - King County Director of Elections
+        - King County Council members
+      excluded_or_distinct:
+        - The Prosecuting Attorney was described as already created by state law and elected in even-numbered years.
+    ballot_context:
+      - The proposed ordinance would send the charter amendment to county voters for the November 8, 2022 general election if adopted.
+    temporal_status:
+      - The policy change was proposed, not completed, during the segment.
+  
+  answer_locality: >
+    Opening chair introduction; Central Staff briefing; staff policy-considerations section on alignment with federal and state elections.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “proposed ordinance”
+      - “charter amendment”
+      - “move elections”
+      - “odd numbered”
+      - “even numbered”
+      - “align”
+  
+  ---
+  
+  ## O — Outcome/Position
+  
+  label: O
+  
+  summary: >
+    The committee did not take final action or vote on the ordinance during this segment.
+    Because the meeting was running late and members wanted additional information, the chair
+    deferred action on the proposed ordinance to the June 15 meeting, where it would be taken up again.
+  
+  evidence:
+    - >
+      Early in the item, the chair said they would like to take action that day if possible,
+      but otherwise would do so at the June 15 meeting.
+    - >
+      After questions, the chair told Councilmember Balducci that, given the lateness of the time,
+      action would be deferred to June 15 so members could receive material from the Elections Director.
+    - >
+      Near the end, the chair said the committee would take the item up at its next meeting,
+      and the closing announcement again listed action on the ordinance changing ballots to even-numbered years
+      for the June 15 Committee of the Whole meeting.
+  
+  source_vocabulary:
+    - “we would like to take action on this today”
+    - “if not, we will do so at our June 15th”
+    - “defer taking action on this to our June 15th meeting”
+    - “take this up at our next meeting”
+    - “we’ll also take up action on the ordinance”
+  
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - completed_in_session
+    notes:
+      - The completed in-session outcome was deferral/continuation, not adoption or passage.
+      - Action on the ordinance remained pending for June 15.
+  
+  source_context_for_fact_check:
+    actor: >
+      The Committee of the Whole / chair managing the committee segment.
+    procedural_stage: >
+      Committee-stage discussion and deferral; not final Council passage, not enactment, and not actual ballot placement.
+    disposition_result:
+      - The ordinance was discussed.
+      - No final vote on the ordinance occurred in this segment.
+      - Action was deferred to the June 15 meeting.
+    acted_on_item:
+      - Proposed ordinance / charter amendment measure to move specified county-office elections to even-numbered years.
+    vote_result:
+      value: none stated for this ordinance in the segment
+      attached_to: no ordinance vote occurred in the sampled segment
+    temporal_status:
+      - pending_future_handling for later committee action
+      - completed_in_session only for the decision to defer/continue the item
+  
+  answer_locality: >
+    Opening chair comments; transition after Councilmember Zahilay/Perry-style turnout-data questions; closing meeting preview.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “defer”
+      - “June 15th”
+      - “take this up”
+      - “next meeting”
+      - “take up action”
+  
+  ---
+  
+  ## B — Agenda-Setting Background / Precipitating Context
+  
+  label: B
+  
+  summary: >
+    The item was shaped by King County’s existing odd-year charter election schedule for several county offices,
+    the state-law default that county offices are generally elected in even-numbered years unless a home-rule charter
+    provides otherwise, and an access-to-elections rationale brought forward by community advocates.
+    Staff and sponsor remarks also treated lower odd-year turnout and representativeness concerns as background for
+    considering the charter amendment.
+  
+  evidence:
+    - >
+      Staff explained that every November the state holds a statewide general election; by default county officer elections
+      are held in even years, except where a charter county provides for odd-year elections.
+    - >
+      Staff stated that King County’s elections for executive, assessor, director of elections, and councilmembers
+      are outlined in Article VI of the King County Charter and are currently held in odd years.
+    - >
+      Director Wise said that, under RCW, county offices are up for election in even-numbered years unless a home-rule county
+      decides otherwise, and identified King, Snohomish, and Whatcom as home-rule counties holding county-official elections
+      in odd years.
+    - >
+      Councilmember Balducci said the proposal came from community advocates seeking to improve access to elections,
+      and connected it to prior Council efforts such as ballot boxes and prepaid ballot postage.
+  
+  source_vocabulary:
+    - “by default, county officer elections are held in even years”
+    - “exception for counties governed by a charter”
+    - “Article six of the King County Charter”
+    - “currently elected in odd years”
+    - “proposal came to me from some advocates”
+    - “improve access to elections”
+    - “fair and accessible”
+  
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - already_occurred
+      - recurring_concern
+    notes:
+      - The existing odd-year schedule was the current background condition.
+      - Prior access-to-election efforts and advocate involvement were already-occurring background for the item.
+      - Low-turnout and representativeness concerns recurred as policy background.
+  
+  source_context_for_fact_check:
+    trigger_condition:
+      - King County currently elects the executive, assessor, elections director, and councilmembers in odd-numbered years under its charter.
+      - State law was described as defaulting county-office elections to even-numbered years unless a home-rule charter provides otherwise.
+      - Community advocates brought the proposal forward as an elections-access measure.
+      - Staff reported materially higher average King County general-election turnout in even-numbered years than odd-numbered years.
+    agenda_connection:
+      - These conditions and access concerns formed the stated context for discussing whether to place a charter amendment before voters.
+    temporal_status:
+      - Existing charter election schedule: currently_existing.
+      - Prior advocacy and prior Council access measures: already_occurred.
+      - Turnout/access concerns: recurring_concern.
+  
+  answer_locality: >
+    Staff briefing background section; Director Wise’s response on state law; Councilmember Balducci’s sponsor remarks.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “a little bit of background”
+      - “by default”
+      - “currently elected in odd years”
+      - “proposal came ... from advocates”
+      - “access to elections”
+  
+  ---
+  
+  ## N — Outcome-Near Condition / Operative Payload
+  
+  label: N
+  
+  summary: >
+    The proposed ordinance’s operative payload was to place a charter amendment on the November 8, 2022 ballot;
+    if approved by voters, the amendment would shift specified King County offices to even-year elections by making
+    the next affected terms three-year transition terms and then returning later terms to four years.
+    The proposal also repealed charter sections that would no longer apply.
+  
+  evidence:
+    - >
+      The chair said passing the ordinance would send the charter amendment to voters for ratification or rejection
+      at the November 8, 2022 general election.
+    - >
+      Staff said the next term for the executive and Council districts 1, 3, 5, 7, and 9 would change only once
+      to a three-year term from 2025 to 2028, then return to four-year terms.
+    - >
+      Staff said the next term for the assessor, elections director, and Council districts 2, 4, 6, and 8 would change
+      to a three-year term from 2023 to 2026, then return to four-year terms.
+    - >
+      Staff said subsequent terms starting in either 2026 or 2028 would again be four-year terms,
+      and that the proposed ordinance also repealed sections that would no longer apply.
+  
+  source_vocabulary:
+    - “send this to the voters”
+    - “ratification or rejection”
+    - “November 8, 2022 general election”
+    - “three year term”
+    - “2023 through 2026”
+    - “2025 to 2028”
+    - “subsequent terms ... would again be four year terms”
+    - “repeals some sections that would no longer apply”
+  
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - pending_future_handling
+    notes:
+      - The payload would become operative only after later Council action and voter approval.
+      - The transition-term effects were future election-cycle effects.
+  
+  source_context_for_fact_check:
+    payload_carrier:
+      - Proposed ordinance / charter amendment concerning King County county-office election timing.
+    payload_content:
+      - Place a charter amendment before voters at the November 8, 2022 general election.
+      - Move specified county-office elections from odd-numbered years to even-numbered years.
+      - Use one-time three-year transition terms for affected offices.
+      - Resume four-year terms after the transition.
+      - Repeal charter sections that would no longer apply.
+    payload_scope:
+      offices_and_terms:
+        - offices: County Executive and Council districts 1, 3, 5, 7, and 9
+          current_cycle_source_description: most recently elected in 2021 for terms ending in 2025
+          transition_term: 2025 to 2028
+          later_terms: four-year terms starting in 2028
+        - offices: County Assessor, County Director of Elections, and Council districts 2, 4, 6, and 8
+          current_cycle_source_description: most recently elected in 2019 for terms ending in 2023
+          transition_term: 2023 to 2026
+          later_terms: four-year terms starting in 2026
+      distinct_office:
+        - Prosecuting Attorney was described as already elected in even-numbered years under state law.
+    payload_scalar_or_baseline:
+      dates:
+        - value: November 8, 2022
+          meaning: general election date for voter ratification or rejection if the ordinance is adopted
+        - value: 2023 to 2026
+          meaning: one-time three-year transition term for assessor, elections director, and Council districts 2/4/6/8
+        - value: 2025 to 2028
+          meaning: one-time three-year transition term for executive and Council districts 1/3/5/7/9
+        - value: 2026 or 2028
+          meaning: years after which affected offices return to four-year terms
+      numbers:
+        - value: three years
+          meaning: one-time transition-term length
+        - value: four years
+          meaning: normal term length after transition
+    temporal_status:
+      - future_effect for ballot placement and later election-cycle changes
+      - pending_future_handling because the ordinance was not acted on during the segment
+  
+  answer_locality: >
+    Opening chair introduction; Central Staff briefing on election-schedule mechanics and transition terms.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “send this to the voters”
+      - “three year term”
+      - “four year terms”
+      - “2023 to 2026”
+      - “2025 to 2028”
+      - “repeals”
+  
+  ---
+  
+  ## L — Concrete Concern
+  
+  label: L
+  
+  summary: >
+    Participants raised concrete concerns and tradeoffs about the proposal, including possible two-page ballots,
+    shifted election-cost allocations among the county, state, and local jurisdictions, down-ballot drop-off if county races
+    move below federal and state races, higher campaign costs without county public financing, and uncertainty about
+    comparable data showing how turnout would change after such a shift.
+  
+  evidence:
+    - >
+      Staff said a potential operational cost could arise if moving county elections to even years resulted in two-page ballots,
+      which would increase printing, storage, space, and staff sorting costs, although data did not show the move would necessarily
+      result in two-page ballots.
+    - >
+      Staff and Elections Department witnesses explained that election costs are divided proportionally across jurisdictions
+      appearing on a ballot, so moving county races could shift costs among King County, the state, and local jurisdictions.
+    - >
+      A City of Kent example was given: if King County had not appeared on the 2015 primary ballot, Kent’s election cost would
+      have gone from about $43,000 to about $62,000.
+    - >
+      Councilmember Dembowski raised concern about ballot drop-off because county races would appear after federal and state races,
+      and asked for analysis of drop-off in other counties.
+    - >
+      Councilmember Dembowski also raised concern that reaching more voters could increase campaign costs and create a barrier,
+      especially without public financing and with incumbent fundraising advantages.
+    - >
+      Councilmembers Perry and Zahilay asked for clearer data or examples showing whether moving local elections to even years
+      produced higher turnout; Elections staff said comparable examples were difficult to identify and that they would look further.
+  
+  source_vocabulary:
+    - “two page ballots”
+    - “additional costs for printing, storage, space and staff time”
+    - “cost shifting”
+    - “divided proportionally”
+    - “ballot drop off”
+    - “no longer have public financing”
+    - “barrier”
+    - “difficult to predict”
+    - “valid comparisons”
+    - “more data sleuthing”
+  
+  temporal_status:
+    primary: hypothetical_or_risk
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - Two-page ballots, cost shifts, turnout effects, and campaign-cost impacts were discussed as possible or analytical concerns.
+      - The absence of public financing was described as a currently existing condition.
+      - Additional analysis remained pending.
+  
+  source_context_for_fact_check:
+    obstacle_content:
+      - Potential two-page ballots could increase printing, storage, space, and sorting costs, but staff did not say two-page ballots were certain.
+      - Election-cost allocation could shift among King County, the state, and local jurisdictions depending on which jurisdictions appear on a ballot.
+      - Local jurisdictions could pay more in some odd-year elections if county races were removed from those ballots.
+      - King County could pay more in some even-year elections if county races were added where the county otherwise would not have appeared.
+      - County races would appear after federal and state races, raising a ballot drop-off concern.
+      - Campaigns might face higher costs to reach more voters, and the county no longer had public financing.
+      - Elections staff did not identify clear, directly comparable data proving the turnout effect of such shifts, though they mentioned looking further, including possible California data.
+    local_anchor:
+      - King County
+      - local jurisdictions
+      - City of Kent example for 2015 primary cost allocation
+      - South King County jurisdictions as an example of low odd-year turnout mentioned by Director Wise
+    temporal_status:
+      - hypothetical_or_risk for possible operational, cost, ballot-order, campaign-cost, and turnout-data concerns
+      - currently_existing for the lack of public financing
+      - pending_future_handling for requested follow-up analysis
+  
+  answer_locality: >
+    Staff cost and policy-considerations sections; Councilmember questions to Elections staff; Elections staff responses on cost allocation, ballot order, turnout prediction, and comparable data.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “potential operational change or cost”
+      - “two page ballots”
+      - “cost shifting”
+      - “ballot drop off”
+      - “public financing”
+      - “barrier”
+      - “difficult to predict”
+      - “valid comparisons”
+  
+  ---
+  
+  ## S — Shared Concern Synthesis
+  
+  label: S
+  
+  summary: >
+    A recurring concern theme was that odd-year county elections may produce lower and less representative voter participation,
+    while moving county races to even years might improve access and representation but still raised questions about ballot position,
+    voter drop-off, and whether comparable turnout data could validate the expected effect.
+  
+  evidence:
+    - >
+      Staff reported that since 2010 King County’s average general-election turnout was about 77% in even-numbered years
+      and 47% in odd-numbered years.
+    - >
+      Director Wise described even-year turnout as often reaching 70–80%, while some South King County jurisdictions in odd-year
+      elections saw turnout around 30%.
+    - >
+      Councilmember Balducci framed the proposal as making elections fair and accessible and said odd-year voters tend to be
+      older, whiter, and wealthier than the general electorate, while even-year alignment could bring in younger voters,
+      more people of color, and more renters.
+    - >
+      Multiple members asked about whether the higher even-year electorate would actually carry through to down-ballot county races,
+      including questions about ballot drop-off and examples from other jurisdictions.
+  
+  source_vocabulary:
+    - “low voter turnout”
+    - “higher voter turnout in even numbered years”
+    - “fair and accessible”
+    - “representative ... sample of the public”
+    - “older, whiter and wealthier”
+    - “younger people, more people of color, more renters”
+    - “ballot drop off”
+    - “higher percentage turnout”
+    - “valid comparisons”
+  
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - Low and less representative odd-year participation was treated as an existing and recurring concern.
+      - The precise turnout effect of moving the races was discussed as uncertain or requiring additional evidence.
+  
+  source_context_for_fact_check:
+    concern_theme: >
+      Low and potentially less representative participation in odd-year county elections, and uncertainty about whether moving county races to even years would solve that problem without down-ballot effects.
+    concern_content:
+      - Staff reported average King County general-election turnout since 2010 as about 77% in even-numbered years and 47% in odd-numbered years.
+      - Sponsor remarks connected odd-year participation to representativeness concerns involving age, race, wealth, renters, and broader electorate composition.
+      - Members repeatedly asked whether more voters would actually vote in county races if those races appeared on longer even-year ballots.
+      - Ballot drop-off and lack of clear comparable examples were part of the recurring concern theme.
+    temporal_status:
+      - recurring_concern for participation/representativeness
+      - hypothetical_or_risk for projected turnout effects and ballot-dropoff uncertainty
+  
+  answer_locality: >
+    Staff policy-considerations section on turnout; Councilmember Perry/Zahilay/Dembowski questions; Councilmember Balducci sponsor remarks.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “low voter turnout”
+      - “access to elections”
+      - “fair and accessible”
+      - “representative”
+      - “ballot drop off”
+      - “higher turnout”
+      - “valid comparisons”
+  
+  ---
+  
+  ## U — Unresolved Tail / Future Return Path
+  
+  label: U
+  
+  summary: >
+    Final handling of the ordinance remained unresolved. The item was set to return at the June 15 Committee of the Whole meeting
+    for further discussion and possible action, with requested follow-up materials expected from the Elections Department, including
+    a sample ballot and additional information responsive to members’ questions.
+  
+  evidence:
+    - >
+      The chair told Councilmember Balducci that action would be deferred to June 15 so members could receive answers and materials
+      from Director Wise.
+    - >
+      Members requested additional information, including a sample ballot, analysis of county-race drop-off in even-year jurisdictions,
+      possible assessment of campaign-cost impacts, and examples or data from places that shifted elections to even years.
+    - >
+      The chair later said the committee would take the item up at the next meeting and hoped to have materials or a sample ballot
+      from the Department of Elections.
+    - >
+      In the closing preview, the chair said the June 15 Committee of the Whole meeting would take up action on the ordinance placing
+      the ballot change to even-numbered years.
+  
+  source_vocabulary:
+    - “defer taking action”
+    - “June 15th meeting”
+    - “get the material from director wise”
+    - “sample ballot”
+    - “take this up at our next meeting”
+    - “we’ll also take up action on the ordinance”
+    - “follow up”
+    - “dig in deeper”
+  
+  temporal_status:
+    primary: pending_future_handling
+    notes:
+      - The ordinance itself remained pending.
+      - Requested analysis and materials also remained pending after the segment.
+  
+  source_context_for_fact_check:
+    pending_status: >
+      The ordinance was not finally acted on during the segment; later committee handling remained pending.
+    pending_item:
+      - Proposed ordinance / charter amendment to move specified King County county-office elections to even-numbered years.
+      - Requested Elections Department follow-up materials and analyses.
+    handling_path:
+      - Return to the Committee of the Whole on June 15.
+      - Expected materials from Director Wise / Department of Elections, including a sample ballot.
+      - Possible action on the ordinance at that later meeting.
+    temporal_status:
+      - pending_future_handling
+  
+  answer_locality: >
+    Post-question transition to Councilmember Balducci; final chair remarks; closing announcement of the next Committee of the Whole agenda.
+  
+  marker_presence:
+    present: true
+    markers:
+      - “defer”
+      - “June 15”
+      - “sample ballot”
+      - “take this up”
+      - “next meeting”
+      - “take up action”

@@ -1,0 +1,810 @@
+segment_id: "MTG14"
+segment_dir: "14_DenverCityCouncil_01092017"
+meeting_id: "DenverCityCouncil_01092017"
+uid: "DenverCityCouncil_01092017_16-1071"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "qa_version": 31,
+    "meeting_order": 14,
+    "language": "en",
+    "source_files": {
+      "event_sheet": "event_sheet_14.md",
+      "authoring_protocol": "qa_authoring.md",
+      "slot_semantics": "slot_semantics.json",
+      "validation_protocol": "qa_validation.md"
+    },
+    "notes": [
+      "Presence is determined only by the Topic Gate and Quality Gate labels.",
+      "Presence gates are written so exact source-correct values are not required for Presence; value correctness is handled by Fact Check.",
+      "Fact Check is a contradiction check against the event sheet, not a completeness check.",
+      "valid_items are representative source-consistent statements and are not mandatory checklists."
+    ],
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "Topic/Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "subject_identified": {
+              "match": [
+                "The summary names the substantive subject as Denver's dedicated mill levy for services and supports for people with intellectual and developmental disabilities.",
+                "The summary frames the discussion around administration, codification, or revision of that mill-levy program or its service-support funding.",
+                "A formal bill reference can appear, but the substantive mill-levy / intellectual-and-developmental-disability services subject must also be visible."
+              ],
+              "not_match": [
+                "The summary only says there was a hearing, vote, ordinance, or bill without naming the substantive mill-levy subject.",
+                "The summary frames the topic as general Medicaid reform, general city spending, or another unrelated policy area without tying it to the dedicated Denver mill levy.",
+                "The summary refers only to procedure or public testimony without identifying the policy area being discussed."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "policy_direction": {
+              "match": [
+                "The summary states a policy move such as codifying the voter-initiated levy, revising how the mill levy is administered, or setting rules for use and oversight of the proceeds.",
+                "The summary identifies at least one concrete policy move, such as defining permitted uses, limiting administrative expenses, aligning residency requirements, monitoring contracts, authorizing matching-fund transfers, or broadening potential contracting options.",
+                "A concrete rule effect can satisfy this label even if the summary does not list every ordinance element."
+              ],
+              "not_match": [
+                "The summary only says the item passed, was heard, or was discussed without saying what policy move was being pursued.",
+                "The summary states only a concern, debate, or background condition without a direction-bearing policy move.",
+                "The summary describes a solution-side value such as accountability but does not state an action or rule effect."
+              ]
+            },
+            "target": {
+              "match": [
+                "The summary identifies the target as the mill levy proceeds, the services and supports funded by those proceeds, the administering agency process, or the provider/contracting arrangement.",
+                "The summary makes clear what funds, services, administrative process, or service-provider arrangement the policy direction applies to."
+              ],
+              "not_match": [
+                "The summary gives a policy direction but leaves the target unclear.",
+                "The summary targets unrelated spending, unrelated services, or general Medicaid policy without tying the direction to the Denver mill levy for intellectual and developmental disability services."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was Denver's administration and codification of the 2003 Denver mill levy for services and supports for people with intellectual and developmental disabilities.",
+            "The ordinance was framed as codifying Initiative 100, defining permitted uses of mill levy proceeds, limiting administrative expenses, aligning residency requirements, providing monitoring and accountability, allowing service contracts through the CCB or other service entities, and permitting Medicaid matching-fund transfers.",
+            "The targets included mill levy proceeds, services and supports for people with intellectual and developmental disabilities, DHS administration and contracting, Rocky Mountain Human Services / Denver Options, and possible other service providers."
+          ],
+          "fact_check_notes": [
+            "A summary may mention only part of the policy direction and still pass Fact Check if it does not contradict the event sheet.",
+            "Do not treat omission of specific payload details as a Fact Check error for this slot."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council held a public hearing on Council Bill 1071.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The sentence gives only the procedural form and item number; it does not identify the substantive mill-levy subject."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "The item concerned Denver's dedicated mill levy for intellectual and developmental disability services.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the summary does not state a policy direction or target beyond the broad subject."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Council Bill 1071 was framed as codifying and revising Denver's administration of the 2003 Initiative 100 mill levy for services and supports for people with intellectual and developmental disabilities, including rules for permitted uses and contracting.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Council Bill 1071 was framed as ending Denver's mill levy and shifting all disability services to a general Medicaid reform program.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary is specific enough for Presence but contradicts the source-supported subject, direction, and target."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "distributed_but_staff_report_primary",
+          "notes": [
+            "The strongest topic framing appears in the staff report near the beginning of the public hearing.",
+            "Public testimony and council questions add detail about conflict-free case management, direct services, and public input."
+          ]
+        },
+        "marker_presence": {
+          "subject_identified": "explicit",
+          "policy_direction": "explicit",
+          "target": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "The segment framed the ordinance as codifying and revising Denver's administration of the voter-initiated mill levy for services and supports for people with intellectual and developmental disabilities.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "future_effect",
+              "completed_in_session"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "O": {
+        "slot": "O",
+        "label": "Outcome/Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "The summary states that an acting body took a recognizable disposition, such as passed, approved on final consideration, or moved to final consideration and do pass, tied to the acted-on bill or ordinance.",
+                "The summary connects the disposition verb to the mill-levy item or to a specifically identified formal item.",
+                "Discussion, testimony, and questioning may be mentioned, but a disposition on an acted-on item must be stated."
+              ],
+              "not_match": [
+                "The summary only says members heard testimony, asked questions, or discussed concerns without a disposition.",
+                "The summary only says speakers supported or opposed the item.",
+                "The summary states procedural activity without tying a recognizable disposition to an acted-on item."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "acted_on_item_specific": {
+              "match": [
+                "The acted-on item is identified by a formal bill or ordinance identifier, or by a distinguishing substantive description of the mill-levy ordinance.",
+                "The reader can tell which item was acted on, either from the formal item reference or from the substantive description.",
+                "A bare generic reference can satisfy this label only when the surrounding context distinguishes the item within the sampled segment."
+              ],
+              "not_match": [
+                "The summary says only that the body passed 'the bill,' 'the ordinance,' or 'the item' without enough surrounding context to distinguish it.",
+                "The summary identifies an unrelated item rather than the mill-levy ordinance.",
+                "The summary gives a disposition but no specific acted-on item."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "Denver City Council was the acting body.",
+            "The relevant stage was final consideration / final Council passage after a public hearing.",
+            "Council Bill 1071, series of 2016, was moved for final consideration and do pass and passed at the end of the segment.",
+            "The vote result was 12 ayes, attached to final Council passage of Council Bill 1071."
+          ],
+          "fact_check_notes": [
+            "The disposition happened during the sampled segment.",
+            "Do not attach the 12-aye vote only to a committee action or to a different bill."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council members and residents discussed the mill levy in detail.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The sentence describes discussion but no disposition on an acted-on item."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Council passed the bill after the hearing.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is present, but the acted-on item is not specific enough in isolation."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Denver City Council passed Council Bill 1071, series of 2016, on final consideration after the public hearing by a 12-aye vote.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The actor, stage, item, result, and vote attachment are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Denver City Council only recommended Council Bill 1071 out of committee by a 12-aye vote.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The acted-on item and disposition are specific, but the procedural stage is wrong and the vote is attached to the wrong stage."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "concentrated_at_opening_and_end",
+          "notes": [
+            "The motion occurs at the opening of the item.",
+            "The vote and passage announcement occur near the end of the segment."
+          ]
+        },
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": "explicit",
+          "acted_on_item_specific": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "Denver City Council placed the bill on final consideration and do-pass posture, held the public hearing, closed it, and passed the bill by a 12-aye vote.",
+          "temporal_status": {
+            "primary": "completed_in_session"
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "B": {
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "precipitating_context_visible": {
+              "match": [
+                "The summary states a prior voter-initiated mill levy as background for the current item.",
+                "The summary states that an auditor report, audit findings, or spending/accountability review formed background for the bill.",
+                "The summary states prior concerns about the contracted provider arrangement, case management, direct-service conflicts, public input, or prior committee discussion as background for the current hearing."
+              ],
+              "not_match": [
+                "The summary only describes what the ordinance would do, without any prior event, condition, report, process, problem, or background context.",
+                "The summary only states the Council disposition, vote, or procedural hearing activity.",
+                "The summary states a remedy or payload but no precipitating context that shaped the item or discussion."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "The summary visibly connects the prior levy, audit report, or related spending/accountability concerns to the current bill, ordinance form, or hearing frame.",
+                "The summary says the findings, recommendations, or background concerns shaped the bill's focus, such as codification, spending controls, administrative limits, residency handling, monitoring, contracting, or public input.",
+                "The summary connects public-comment background concerns to the discussion frame, accountability remedies, contracting choices, or direct-service access."
+              ],
+              "not_match": [
+                "The summary mentions a prior event or condition but does not connect it to the current item, proposal, discussion frame, or handling.",
+                "The summary states a generic history of disability services without showing how it shaped the bill or the hearing.",
+                "The summary says the prior report or background event itself enacted the ordinance."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The 2003 voter-initiated mill levy existed as the legal and funding background for the item.",
+            "The Denver City Auditor's report identified spending and accountability issues with mill levy funds passing through DHS and historically contracted to Rocky Mountain Human Services / Denver Options.",
+            "Auditor recommendations included codification, questionable-spending definition, administrative-cost limits, residency handling, and quarterly monitoring.",
+            "The ordinance was described as trying to address the auditor's recommendations.",
+            "Public testimony also used this background to argue for direct service access, competition, accountability, and clearer administrative expense treatment."
+          ],
+          "fact_check_notes": [
+            "The background predates the segment; the bill's in-session passage is not itself the B background.",
+            "The summary does not need an explicit 'why now' statement if the background is visibly connected to the current item or discussion frame."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council Bill 1071 set rules for permitted uses of mill levy proceeds.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states operative content but not any prior background or precipitating context."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "There had been a 2003 Denver mill levy for disability services.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A prior condition is visible, but the connection to the current item or its form is not stated."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Council Bill 1071 came forward against the background of the 2003 Initiative 100 mill levy and a Denver City Auditor report on DHS/RMHS mill levy spending, whose recommendations shaped the ordinance's codification, administrative-limit, residency, and monitoring provisions.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The prior context and its connection to the bill are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Council Bill 1071 came forward because a new state law had already abolished Denver's mill levy and forced the city to create a replacement fund.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a connected background, but it contradicts the event sheet's trigger condition and agenda connection."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "distributed",
+          "notes": [
+            "The formal background appears in the staff report.",
+            "Additional precipitating context appears in public testimony and council questions."
+          ]
+        },
+        "marker_presence": {
+          "precipitating_context_visible": "explicit",
+          "connected_to_current_item_or_form": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "The item came forward against the background of the voter-initiated mill levy and an auditor report on mill levy spending through DHS and the contracted provider arrangement.",
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "N": {
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "payload_attached_to_action": {
+              "match": [
+                "The summary states an operative requirement, permission, limit, carve-out, transfer authority, scope rule, or fund-deposit rule as something the bill, ordinance, or action carried.",
+                "The summary says the ordinance would define permitted uses, authorize contracting through certain provider channels, authorize matching-fund transfers, align residency requirements, set administrative-expense limits, or reserve an administration/enforcement carve-out.",
+                "The action-payload link is visible in the same sentence or in an anaphora-linked adjacent sentence."
+              ],
+              "not_match": [
+                "The summary only describes background spending concerns or testimony without saying what the bill or ordinance did.",
+                "The summary only states that the item passed without identifying any operative condition, requirement, permission, limit, number, or scope.",
+                "The summary states a free-standing policy fact and requires the reader to infer its connection to the action."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": {
+            "number": {
+              "match": [
+                "The attached payload includes an identifiable numeric facet, such as a percentage limit, percentage carve-out, dollar estimate, revenue baseline, count, amount, threshold, or other measured value."
+              ],
+              "not_match": [
+                "The attached payload contains no identifiable number, amount, percentage, threshold, baseline, or measured value."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "The attached payload includes an identifiable named requirement, permission, condition, transfer authority, fund-deposit rule, permitted-use definition, residency-alignment rule, administrative limit, or carve-out."
+              ],
+              "not_match": [
+                "The summary says only that the ordinance changed administration without naming any requirement, permission, condition, transfer authority, limit, rule, or carve-out."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "The attached payload states a scope boundary, such as the fund or proceeds it applies to, the funded services or population, the administering/enforcement function, the provider channel, or the service-providing entity category."
+              ],
+              "not_match": [
+                "The summary gives a payload but no identifiable category, population, process, fund, provider, or administrative scope boundary."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Council Bill 1071, series of 2016.",
+            "The ordinance directed mill levy proceeds to the Human Services Special Revenue Fund.",
+            "The ordinance defined permitted uses of proceeds for services and supports.",
+            "The ordinance permitted contracting through the Community Center Board and through other entities that provide such services.",
+            "The ordinance authorized transfers to the Colorado Department of Health Care Policy and Financing to receive matching federal funds for Medicaid-approved waiver services.",
+            "The ordinance aligned residency requirements with state rules and requirements.",
+            "The ordinance included a DHS administration/enforcement carve-out from mill levy revenues.",
+            "The administrative-expense limit was less than 15%.",
+            "The DHS administration/enforcement carve-out was not to exceed 0.75% of total collections, about $114,000 annually under roughly $14.5 million in current revenue assumptions."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to mention every payload element.",
+            "If a scalar is stated, check both the value and what it is attached to. The 15% administrative-expense limit is not the same as the 0.75% DHS administration/enforcement carve-out.",
+            "The 0.75% carve-out applies to DHS administration and enforcement, not to all administrative expenses by every contractor."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Residents criticized Rocky Mountain Human Services for spending too much money on administration.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is concern content, not an operative payload attached to the bill or action."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Council Bill 1071 changed how the mill levy would be administered.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is attached to the bill, but no number, named requirement, or scope boundary is identifiable."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Council Bill 1071 defined permitted uses of Denver mill levy proceeds, allowed contracts through the CCB or other service entities, authorized Medicaid matching-fund transfers, and set administrative expenses below 15%.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The payload is attached to the bill and includes source-consistent named requirements, scope, and a number."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Council Bill 1071 required all mill levy funds to remain exclusively with Rocky Mountain Human Services and set DHS's carve-out at 15% of total collections.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The payload is specific enough for Presence but contradicts the event sheet's payload content and scalar-role binding."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "concentrated_in_staff_report",
+          "notes": [
+            "The operative payload is stated most directly in the staff presentation before public testimony."
+          ]
+        },
+        "marker_presence": {
+          "payload_attached_to_action": "explicit",
+          "quality_labels_present": [
+            "number",
+            "named_requirement",
+            "scope_boundary"
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The ordinance payload included fund-deposit rules, permitted-use definitions, contracting authority, Medicaid matching-fund transfer authority, administrative-expense limits, residency alignment, and a DHS administration/enforcement carve-out.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "currently_existing",
+              "completed_in_session"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "L": {
+        "slot": "L",
+        "label": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "concrete_concern_language": {
+              "match": [
+                "The summary states a concern that mill levy funds were being used too heavily for case management, administration, agency operating costs, or billable operating expenses instead of direct programming or supports.",
+                "The summary states a concern that a provider's sole or dual role created conflicts, steering risks, limited competition, or limited choice.",
+                "The summary states a concern that reporting, substantive data, public input, administrative-overhead definitions, or conflict-free case management were insufficient or unresolved."
+              ],
+              "not_match": [
+                "The summary merely states that the ordinance created accountability provisions without asserting a concern, harm, obstacle, risk, deficiency, or tradeoff.",
+                "The summary says concerns were raised but does not identify what the concern was about.",
+                "The summary states only the Council outcome or operative payload."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_concern_content": {
+              "match": [
+                "The summary identifies the object of concern, such as case-management spending, administrative or agency overhead, conflict of interest from provider roles, lack of competition or provider choice, lack of substantive reporting, lack of public/customer input, or non-implementation of conflict-free case management.",
+                "The reader can tell what problem, risk, deficiency, or tradeoff the concern is about; exact speaker names, exact local anchors, and every allegation are not required."
+              ],
+              "not_match": [
+                "The summary uses only generic language such as 'there were concerns' or 'people objected' without saying what the problem was.",
+                "The summary names a policy area but not a specific concern, harm, obstacle, risk, tradeoff, or deficiency."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Speakers raised concerns that mill levy funds were being used for case management or agency operating costs instead of direct programming or supports.",
+            "Speakers raised concerns that RMHS's sole or dual role created conflict-of-interest or steering risks and limited competition or choice.",
+            "Speakers raised concerns that reporting lacked substantive detail and that public/customer input was insufficient.",
+            "Speakers and council members raised concerns that administrative overhead needed clearer definition and that conflict-free case management had not yet been implemented.",
+            "The local anchors included Denver mill levy funds, DHS, Rocky Mountain Human Services / Denver Options, and Denver residents or families receiving intellectual and developmental disability services."
+          ],
+          "fact_check_notes": [
+            "Speaker-side numeric claims are source-supported as statements made during public comment, not independently verified by this event sheet.",
+            "If the summary states a speaker-side number, check it as part of obstacle_content only when it is explicitly attached to the concern being summarized.",
+            "Local anchoring is not required for Presence, but if a summary states a local anchor, compare it with the event sheet."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council Bill 1071 allowed contracting through other service-providing entities.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is a policy payload, not a concrete concern."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Several people raised concerns about the bill.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the specific concern content is not stated."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Speakers were concerned that mill levy money was being spent on case management, administration, or agency operating costs rather than direct supports, and that RMHS's combined roles created conflicts and limited choice.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concern content is specific and source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Speakers were concerned that too much money was being spent on police services rather than Denver disability supports.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The sentence states a specific concern, but it is not the source-supported obstacle content."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "distributed_in_public_comment_and_council_questions",
+          "notes": [
+            "Concern content is distributed across public speakers and council questions."
+          ]
+        },
+        "marker_presence": {
+          "concrete_concern_language": "explicit",
+          "specific_concern_content": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "Speakers and council members raised concerns about money going to case management or administration rather than direct supports, conflicts in provider roles, limited competition, insufficient reporting, and lack of public/customer input.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "recurring_concern",
+              "hypothetical_or_risk",
+              "pending_future_handling"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "S": {
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "problem_side_concern": {
+              "match": [
+                "The summary names a recurring problem-side theme around accountability, transparency, competition, provider choice, direct benefit to individuals, conflict-free case management, or excessive administrative/case-management channels in the mill levy administration.",
+                "The summary frames the provider arrangement, sole discretion, dual role, limited choice, lack of public input, or overhead spending as a concern or problem theme."
+              ],
+              "not_match": [
+                "The summary only states a solution-side provision, such as the ordinance adding accountability, without naming the concern theme as a problem.",
+                "The summary only says there was debate or testimony without naming the concern theme.",
+                "The summary gives one isolated service anecdote without synthesizing or naming a broader concern theme."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_content": {
+              "match": [
+                "The summary identifies what the shared concern was about: accountability, transparency, provider choice, competitive access, conflict-free case management, provider role conflicts, direct benefit to individuals, or money staying in administrative/case-management channels.",
+                "The summary does not need to say 'recurring' or list every speaker, but the concern content must be identifiable."
+              ],
+              "not_match": [
+                "The summary uses only generic phrasing such as 'shared concerns existed' or 'there were worries' without naming the concern content.",
+                "The summary names a policy subject but not a problem-side theme or tension."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was accountability, transparency, provider choice, conflict-free case management, and ensuring mill levy funds directly benefit individuals with intellectual and developmental disabilities.",
+            "Concern content included RMHS's case-management and direct-service roles creating possible conflicts or steering risks.",
+            "Concern content included sole-contractor or sole-discretion arrangements limiting competition and choice.",
+            "Concern content included mill levy funds remaining in case management, administrative channels, or operating overhead instead of reaching programming, direct services, or individual supports.",
+            "Concern content included the need for a non-redundant public/customer feedback mechanism and DHS follow-through on the ordinance's intent."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to reproduce all downstream risks, evidence, speakers, or proposed remedies.",
+            "Do not treat the shared concern as opposition to serving people with intellectual and developmental disabilities."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council Bill 1071 passed after public testimony.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states outcome, not a recurring problem-side concern theme."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "The hearing reflected a shared concern about the program.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A problem-side concern is named, but its specific content is too generic."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Across the hearing, participants returned to concerns that Denver's mill levy administration lacked enough accountability, transparency, provider choice, and direct benefit to individuals because RMHS's role could create conflicts and keep money in administrative or case-management channels.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The recurring concern theme and identifiable content are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The shared concern was that Denver should stop funding services for people with intellectual and developmental disabilities altogether.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary names a specific problem-side theme, but it contradicts the source-supported concern theme."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "distributed_across_hearing",
+          "notes": [
+            "The shared theme is synthesized from repeated public testimony and council discussion rather than a single clause."
+          ]
+        },
+        "marker_presence": {
+          "problem_side_concern": "explicit",
+          "specific_content": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "A recurring theme was the need for more accountability, transparency, competition, provider choice, and direct individual benefit in mill levy administration.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      },
+      "U": {
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pendingness_marker": {
+              "match": [
+                "The summary explicitly says that implementation, oversight, public-input design, contracting choices, state compliance, or future contract review remained pending, unresolved, unfinished, still to be developed, or would return later.",
+                "The summary may note that the bill passed, but it must also mark a specific later workstream as pending or unresolved."
+              ],
+              "not_match": [
+                "The summary only says the bill passed, without any remaining or future handling.",
+                "The summary describes a future effect of the ordinance but not an unfinished or pending workstream.",
+                "The summary gives a bare directive or desire for follow-up without an explicit pendingness marker."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pending_item_identifiable": {
+              "match": [
+                "The summary identifies what remained pending, such as whether and when to contract beyond the existing provider channel, state conflict-free case-management compliance, a city-level public/customer input mechanism, or future contract terms and later institutional review.",
+                "The reader can tell which issue or workstream remained unfinished."
+              ],
+              "not_match": [
+                "The summary says only that 'some issues remained' or 'follow-up was needed' without identifying the pending item.",
+                "The summary points to an unrelated future item or post-adjournment matter."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "The summary identifies a concrete handling path, such as a return to committee with a public-input plan, state legislative/statutory action for conflict-free case management, or future contract negotiation and later institutional review.",
+                "The future body, process, review path, report-back, or institutional custody is visible."
+              ],
+              "not_match": [
+                "The summary says an item remained pending but gives no future body, meeting, report-back, state process, contract review, or other handling path.",
+                "The summary gives a vague future orientation not tied to any identifiable process or institutional path."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Council Bill 1071 itself passed during the segment.",
+            "Immediate bidding out to other providers was not planned by DHS, even though the ordinance allowed non-CCB contracting.",
+            "State-level conflict-free case management conformance remained unresolved and required legislative or statutory action.",
+            "A city mechanism for customer/public input into mill levy spending remained to be developed.",
+            "Future RMHS contract negotiation and review remained ahead before or by the end of 2017.",
+            "DHS was to return to committee in the next month or two with a way to effectuate public input into mill levy spending.",
+            "The state process was needed for conflict-free case management statutory conformance.",
+            "The end-of-2017 RMHS contract negotiation and later City Council review were part of the future handling path."
+          ],
+          "fact_check_notes": [
+            "Do not mark Council Bill 1071 itself as pending; the bill passed in-session. The pending tail concerns implementation, oversight, contracting, public input, state compliance, and later contract review.",
+            "Do not say competitive bidding began immediately, that the public-input mechanism had already been designed, that Colorado had already completed conflict-free case-management compliance, or that the RMHS contract had already been renegotiated during the hearing."
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Council Bill 1071 passed by a 12-aye vote.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is a completed outcome with no pendingness marker."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Even after passage, some issues remained unresolved.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not identifiable."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Although Council Bill 1071 passed, DHS still had to return to committee in the next month or two with a way to create public input into mill levy spending, while state action on conflict-free case management and future RMHS contract review also remained ahead.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The pending status, items, and handling paths are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "After Council Bill 1071 passed, competitive bidding began immediately and DHS had already completed the public-input mechanism before leaving the hearing.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary marks specific follow-up workstreams but contradicts the source-supported pending status and handling path."
+          }
+        ],
+        "answer_locality": {
+          "locality_type": "concentrated_in_council_questions_after_public_comment",
+          "notes": [
+            "Pending-path content appears mainly in council questions and DHS responses after public comment."
+          ]
+        },
+        "marker_presence": {
+          "pendingness_marker": "explicit",
+          "pending_item_identifiable": "explicit",
+          "handling_path_visible": "explicit"
+        },
+        "event_sheet_slot_context": {
+          "summary": "Although the bill passed, implementation and oversight issues remained pending, including public-input design, future contract review, possible non-CCB contracting choices, and state conflict-free case-management compliance.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "completed_in_session"
+            ]
+          },
+          "usage_note": "Reference source context for this slot; does not add gates or fact-check fields beyond fact_check_target."
+        }
+      }
+    }
+  }

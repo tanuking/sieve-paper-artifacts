@@ -1,0 +1,348 @@
+You are evaluating one segment summary for one slot.
+
+============================================================
+EVALUATION PURPOSE
+============================================================
+
+This evaluation measures whether a short summary of a local-government
+transcript preserves important information from the sampled segment.
+
+Each sampled segment is evaluated against seven slots:
+
+- T (Topic/Framing)
+- O (Outcome/Position)
+- B (Agenda-Setting Background / Precipitating Context)
+- N (Outcome-near Condition / Operative Payload)
+- L (Concrete Concern)
+- S (Shared Concern Synthesis)
+- U (Unresolved Tail)
+
+You evaluate exactly ONE slot for ONE summary.
+
+============================================================
+THIS EVALUATION
+============================================================
+
+Slot under evaluation: {slot_code} ({slot_label})
+
+Sampled segment scope:
+{segment_scope_note}
+
+Evaluate only content tied to the sampled segment scope and this slot's
+gate target.
+
+Do not fail the slot merely because the summary foregrounds another
+sub-issue. If a sentence, clause, or tightly linked adjacent sentence
+sequence satisfies this slot's gates and is tied to the sampled segment
+scope, use that content.
+
+Do not count content merely because it uses similar vocabulary. Content
+that is not tied to the sampled segment scope and this slot target
+cannot satisfy the gate.
+
+Judge task boundary:
+The slot under evaluation has already been selected by the bundle. Do not
+reclassify the summary content into a different slot. Cross-slot boundary
+rules are used during event-sheet authoring, QA authoring, and validation;
+they are not scoring criteria in this prompt. Apply only this slot's
+gate labels, meeting-specific match/not_match, fact_check_target,
+slot-local event-sheet excerpt, Fact Check roles, global Fact Check rules,
+and score examples.
+
+============================================================
+BASIC SCORE DEFINITIONS
+============================================================
+
+Presence = 0.0:
+The summary does not pass this slot's Topic Gate.
+
+Presence = 0.5:
+The summary passes Topic Gate but fails Quality Gate.
+
+Presence = 1.0:
+The summary passes both Topic Gate and Quality Gate.
+
+Presence is determined only by the Topic Gate and Quality Gate. Do not
+change Presence based on Fact Check.
+
+When deciding Topic Gate and Quality Gate, do not use source-correctness
+of stated values as a gate criterion. Wrong numbers, codes, vote counts,
+dates, baselines, stages, actors, or scalar values are not Presence-gate
+failures. They are handled only in Fact Check.
+
+Fact Check is evaluated only when Presence > 0.
+
+fact_check = 1:
+The summary content that passed Presence, plus any same-context explicit
+claims about this slot's fact-check fields, is consistent with the
+Fact Check target and the slot-local event-sheet excerpt.
+
+fact_check = 0:
+The summary explicitly states a source-incompatible claim about one of
+this slot's fact-check fields when compared with the Fact Check target,
+the slot-local event-sheet excerpt, and the role fail_conditions.
+
+fact_check = "N/A":
+Presence = 0.0.
+
+============================================================
+WHAT THIS SLOT CAPTURES
+============================================================
+
+{slot_purpose}
+
+============================================================
+PRESENCE STRUCTURE FOR THIS SLOT
+============================================================
+
+Topic Gate:
+- Presence effect: {topic_presence_effect}
+- Operator: {topic_operator}
+{topic_operator_explanation}
+
+Topic Gate labels:
+{topic_labels_block}
+
+Quality Gate:
+- Presence effect: {quality_presence_effect}
+- Operator: {quality_operator}
+{quality_operator_explanation}
+
+Quality Gate labels:
+{quality_labels_block}
+
+Operator meanings:
+- all_of: every label in the gate must be direct for the gate to pass.
+- any_of: at least one label in the gate must be direct for the gate to pass.
+
+============================================================
+MEETING-SPECIFIC SLOT CONTEXT
+orientation only
+============================================================
+
+Slot label:
+{slot_label}
+
+Event-sheet slot summary:
+{slot_summary}
+
+Do not use this context to add gate requirements or relax gate
+requirements. Presence is based on the gate labels, label meanings, match, and not_match.
+Do not perform cross-slot classification. The slot has already been selected
+by the bundle, and any relevant boundary has been materialized in the QA
+fields.
+
+============================================================
+TOPIC GATE
+============================================================
+
+{topic_gate_block}
+
+============================================================
+QUALITY GATE
+============================================================
+
+{quality_gate_block}
+
+{anchor_info}
+
+============================================================
+SUMMARY TO EVALUATE
+============================================================
+
+{summary}
+
+============================================================
+FACT-CHECK TARGET
+Step 3 only
+============================================================
+
+{fact_check_target}
+
+============================================================
+SLOT-LOCAL EVENT-SHEET EXCERPT
+reference source context for Step 3
+============================================================
+
+This is the event-sheet excerpt for the selected slot. It is reference
+source context for judging whether explicit claims about this slot's
+fact-check fields contradict the event sheet.
+
+This excerpt does not create additional Presence gates, additional
+Fact Check fields, or a summary-wide factual audit.
+
+{slot_source_context_block}
+
+============================================================
+FACT-CHECK STRUCTURE FOR THIS SLOT
+============================================================
+
+Fact Check roles:
+{fact_check_roles_block}
+
+Slot-specific Fact Check rules:
+{slot_fact_check_rules_block}
+
+Global Fact Check rules:
+{global_fact_check_rules_block}
+
+============================================================
+SCORE EXAMPLES
+Consistency check only
+============================================================
+
+Score examples are examples of criteria application. They are not a
+substitute for the primary evaluation and are not text-similarity rules.
+
+First apply Steps 1-3. Then use Step 4 to check whether your
+application of the criteria is consistent with the examples.
+
+{score_examples_block}
+
+============================================================
+STEP 0 — IDENTIFY RELEVANT SUMMARY CONTEXT
+============================================================
+
+Identify the sentence, clause, or tightly linked adjacent sentence
+sequence in the summary that is relevant to this slot.
+
+For Presence, use the strongest relevant content tied to the sampled
+segment and this slot target.
+
+For Fact Check, keep the same relevant summary context available. Do not
+look only at the clause that satisfied the gate if another clause in the
+same relevant context makes an explicit claim about this slot's
+fact-check fields.
+
+============================================================
+STEP 1 — TOPIC GATE
+============================================================
+
+For each topic gate item:
+
+1. Read the label meaning.
+2. Read the meeting-specific match.
+3. Read the meeting-specific not_match patterns.
+4. Classify the item as direct, inferential, or unrelated.
+
+direct:
+The relevant summary context explicitly states the match proposition
+and does not fall into a not_match pattern.
+
+inferential:
+The content is related, but reader inference is needed; or the content
+falls into a not_match pattern.
+
+unrelated:
+There is no relevant content.
+
+Only direct counts as a label match.
+
+Apply the Topic Gate operator.
+
+If Topic Gate fails:
+- presence = 0.0
+- quality_gate_passed = "N/A"
+- fact_check = "N/A"
+Then proceed to Step 4 only to check consistency with examples.
+
+============================================================
+STEP 2 — QUALITY GATE
+============================================================
+
+Run only if Topic Gate passes.
+
+For each quality gate item, classify it as direct, inferential, or
+unrelated using the same rules.
+
+Do not impose additional requirements beyond:
+- the label meaning;
+- the meeting-specific match;
+- not_match patterns.
+
+Do not fail a Quality Gate merely because the same summary clause could
+also satisfy a neighboring slot. Evaluate only this slot's authored gate
+criteria.
+
+Apply the Quality Gate operator.
+
+Topic Gate pass + Quality Gate fail:
+Presence = 0.5
+
+Topic Gate pass + Quality Gate pass:
+Presence = 1.0
+
+Do not revise Presence in Fact Check.
+
+============================================================
+STEP 3 — FACT CHECK
+============================================================
+
+Run only if Presence > 0.
+
+Apply the rendered Global Fact Check rules above. Do not use any
+unrendered rule, cross-slot boundary rule, or slot-specific assumption.
+
+Procedure:
+
+1. Identify explicit claims in the relevant summary context that bear on
+   this slot's fact-check fields.
+
+2. Compare those claims with the Fact Check target and the slot-local
+   event-sheet excerpt.
+
+3. Do not treat valid_items as a checklist. A correct partial statement
+   is enough unless the same relevant context also contains an explicit
+   contradiction about a fact-check field.
+
+4. If an explicit claim contradicts the event-sheet context for a
+   fact-check field, fact_check = 0.
+
+5. If no explicit contradiction is found, fact_check = 1.
+
+============================================================
+STEP 4 — SCORE EXAMPLE CONSISTENCY CHECK
+============================================================
+
+After Steps 1-3, review the score examples.
+
+If an example illustrates the same gate label, quality boundary, or
+fact-check role, compare your result with the example.
+
+If your result conflicts with a relevant example, re-check your
+criteria application. Revise only if the re-check shows that a Step 1,
+Step 2, or Step 3 decision was misread.
+
+If the evaluated summary differs from the example for a criteria-based
+reason, keep the criteria-based result and explain the difference.
+
+============================================================
+STEP 5 — FINAL OUTPUT
+============================================================
+
+Output exactly one JSON object. Do not output markdown fences or prose.
+
+{{
+  "topic_gate_checklist": [
+    {{
+      "label": "<label name from this slot's topic gate labels>",
+      "classification": "<direct|inferential|unrelated>",
+      "evidence": "<short quote from summary or 'no match'>",
+      "reason": "<why; cite match/not_match/example_id if needed>"
+    }}
+  ],
+  "topic_gate_passed": <true or false>,
+  "quality_gate_checklist": [
+    {{
+      "label": "<label name from this slot's quality gate labels>",
+      "classification": "<direct|inferential|unrelated>",
+      "evidence": "<short quote from summary or 'no match'>",
+      "reason": "<why; cite match/not_match/example_id if needed>"
+    }}
+  ],
+  "quality_gate_passed": <true or false or "N/A">,
+  "presence": <0.0 or 0.5 or 1.0>,
+  "presence_rationale": "<one sentence explaining topic/quality gate results and final Presence>",
+  "fact_check": <0 or 1 or "N/A">,
+  "fact_check_rationale": "<one sentence naming the matched fact or the field conflict>"
+}}

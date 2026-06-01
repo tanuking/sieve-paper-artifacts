@@ -1,0 +1,428 @@
+segment_id: "MTG8"
+segment_dir: "08_DenverCityCouncil_04132015"
+meeting_id: "DenverCityCouncil_04132015"
+uid: "DenverCityCouncil_04132015_15-0201"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # event_sheet_08
+  
+  ## Metadata
+  
+  ```yaml
+  meeting_order: "08"
+  source_transcript: "transcript_08.txt"
+  slot_semantics_source: "slot_semantics.json"
+  protocol_source: "event_sheet_protocol.md"
+  protocol_version: 29
+  segment_type: "Denver City Council proclamation segment"
+  primary_item: "Proclamation 201, Series of 2015 — In support of START by Believing Public Awareness Campaign"
+  ```
+  
+  ## Segment overview
+  
+  The sampled segment concerns Denver City Council's consideration and adoption of Proclamation 201, Series of 2015, supporting the START by Believing Public Awareness Campaign. The proclamation frames sexual violence as a serious community concern, cites reporting and service statistics, supports the campaign launch on Friday, April 17, and declares that day to be START by Believing Day throughout the City and County of Denver. Councilmembers then discuss underreporting, survivor support, victim services, community response, and the importance of believing victims. After roll call, the proclamation is announced as adopted and accepted by Manager of Safety Stephanie O'Malley on behalf of the public-safety team.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: "T — Topic/Framing"
+  summary: >
+    The segment frames Denver's support for the START by Believing Public Awareness Campaign as a public-awareness and community-response effort around sexual violence. The policy direction is to support and launch a campaign that encourages friends, family members, community professionals, and public-safety responders to begin from belief, compassion, and respect so victims can access supportive resources and engage the criminal justice system.
+  evidence:
+    - "In support of START by Believing Public Awareness Campaign Proclamation number 201 series of 2015."
+    - "the city and county of Denver shares a critical concern for victims of sexual violence and a desire to support their needs for justice and healing"
+    - "the START by Believing Public Awareness Campaign ... is designed to improve the responses of friends, family members and community professionals"
+    - "so that they can help victims to access supportive resources and engage the criminal justice system"
+  source_vocabulary:
+    - "START by Believing Public Awareness Campaign"
+    - "victims of sexual violence"
+    - "justice and healing"
+    - "friends, family members and community professionals"
+    - "supportive resources"
+    - "criminal justice system"
+    - "Department of Public Safety"
+    - "Denver Sex Assault Interagency Council"
+  temporal_status:
+    primary: "currently_existing"
+    secondary:
+      - "future_effect"
+      - "recurring_concern"
+    notes:
+      - "The underlying sexual-violence and survivor-support concerns are presented as current and recurring community issues."
+      - "The campaign launch is described as occurring this Friday, April 17."
+  source_context_for_fact_check:
+    subject: "START by Believing Public Awareness Campaign and Denver's response to sexual violence / sexual assault victim support."
+    policy_direction: "Support and launch a public-awareness campaign that improves first responses to victims by beginning from belief, compassion, and respect."
+    target:
+      - "victims / survivors of sexual violence"
+      - "friends and family members receiving disclosures"
+      - "community professionals and public-safety responders"
+      - "the City and County of Denver community"
+    scoped_item: "Proclamation 201, Series of 2015, not the later immigration/refugee resolution or airport-related bills read after the proclamation segment."
+  answer_locality:
+    segment_portion: "Opening proclamation reading and early Councilwoman Shepard comments."
+    supporting_portions:
+      - "Councilwoman Canete's comments on believing victims, including cases involving known perpetrators."
+      - "Councilman Lopez's comments on community responsibility and male behavior."
+      - "Manager of Safety Stephanie O'Malley's acceptance remarks on continuing the campaign."
+  marker_presence:
+    subject_identified: true
+    policy_direction: true
+    target: true
+    notes:
+      - "The subject is named directly as the START by Believing Public Awareness Campaign."
+      - "The policy move is support, launch, and improved community response."
+      - "The target is victims/survivors and the people or institutions responding to them."
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: "O — Outcome/Position"
+  summary: >
+    Denver City Council adopted Proclamation 201, Series of 2015, in support of the START by Believing Public Awareness Campaign. Councilwoman Shepard moved to adopt the proclamation, the motion was seconded, comments were taken, a roll call occurred, and the secretary announced that Proclamation 201 had been adopted.
+  evidence:
+    - "Councilwoman Shepard. Your motion to adopt."
+    - "I move that we adopt proclamation ... series of 2015."
+    - "It has been moved and seconded. Comments."
+    - "Roll call."
+    - "proclamation two oh one has been adopted"
+    - "I would like to invite manager of safety Stephanie O'Malley to the podium"
+  source_vocabulary:
+    - "motion to adopt"
+    - "moved and seconded"
+    - "Roll call"
+    - "has been adopted"
+    - "Proclamation 201"
+    - "Series of 2015"
+  temporal_status:
+    primary: "completed_in_session"
+    notes:
+      - "The proclamation was adopted during the sampled segment."
+      - "The transcript does not provide a reliable numeric vote count; it shows a roll call and an adoption announcement."
+  source_context_for_fact_check:
+    actor: "Denver City Council."
+    procedural_stage: "Council adoption of a proclamation during the meeting."
+    disposition_result: "Adopted."
+    acted_on_item:
+      - "Proclamation 201, Series of 2015."
+      - "Proclamation in support of the START by Believing Public Awareness Campaign."
+    vote_result:
+      value: "Roll call occurred and adoption was announced; no reliable numeric count is stated in the transcript."
+      attached_to: "Motion to adopt Proclamation 201."
+    not_supported:
+      - "A specific vote count is not supported by the transcript."
+      - "The action was not on the later immigration/refugee resolution or airport concession bills."
+  answer_locality:
+    segment_portion: "After the proclamation reading and councilmember comments, immediately before Manager of Safety Stephanie O'Malley's acceptance."
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: true
+    acted_on_item_specific: true
+    notes:
+      - "The disposition verb is adopt/adopted."
+      - "The acted-on item is Proclamation 201, Series of 2015."
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: "B — Agenda-Setting Background / Precipitating Context"
+  summary: >
+    The proclamation was shaped by background concerns about sexual violence, underreporting, survivor needs, and the consequences of disbelief or blame after disclosure. The segment cites Denver and Colorado statistics, notes that victims often disclose first to friends or family, and describes the START by Believing campaign as a response to those conditions.
+  evidence:
+    - "In 2014, the Denver Police Department received a total of 1251 sex crimes reports."
+    - "Denver Health Medical Center conducted 350 forensic exams in support of these reports."
+    - "one in four women in Colorado will experience a completed or attempted sexual assault during their lifetime"
+    - "one in 17 men in Colorado will experience a completed or attempted sexual assault during their lifetime"
+    - "sexual assault is the most underreported crime in the United States, with 54% of sexual assaults committed not being reported"
+    - "victims are far more likely to disclose their sexual assault to a friend or a family member"
+    - "when these loved ones respond with doubt, shame or blame, victims suffer additional negative effects"
+    - "in both of those places, once those billboards were out ... there were significant increases in the number of incidents that were reported to the police"
+  source_vocabulary:
+    - "1251 sex crimes reports"
+    - "350 forensic exams"
+    - "one in four women"
+    - "one in 17 men"
+    - "54% ... not being reported"
+    - "doubt, shame or blame"
+    - "The Blue Bench"
+    - "End Violence Against Women International"
+    - "billboard campaign"
+    - "Kansas City, Missouri"
+    - "San Luis Obispo"
+  temporal_status:
+    primary: "already_occurred"
+    secondary:
+      - "currently_existing"
+      - "recurring_concern"
+    notes:
+      - "The 2014 Denver Police Department report count and forensic exam count are prior-year statistics."
+      - "The underreporting and survivor-response problems are presented as current and recurring concerns."
+  source_context_for_fact_check:
+    trigger_condition:
+      - "Sexual violence is presented as a serious concern in Denver and Colorado."
+      - "Sexual assault is described as underreported."
+      - "Victims often disclose first to friends or family."
+      - "Doubt, shame, or blame from loved ones can cause additional negative effects."
+      - "Prior campaigns in other cities are described as increasing reports to police after public billboard visibility."
+    numeric_values:
+      - value: "1,251"
+        meaning: "sex crimes reports received by the Denver Police Department in 2014"
+      - value: "350"
+        meaning: "forensic exams conducted by Denver Health Medical Center in support of those reports"
+      - value: "one in four"
+        meaning: "women in Colorado who will experience completed or attempted sexual assault during their lifetime, as stated in the proclamation"
+      - value: "one in 17"
+        meaning: "men in Colorado who will experience completed or attempted sexual assault during their lifetime, as stated in the proclamation"
+      - value: "54%"
+        meaning: "sexual assaults not reported, according to the proclamation's CDC-referenced statement"
+    agenda_connection: "These conditions support the proclamation and the launch of the START by Believing campaign in Denver."
+  answer_locality:
+    segment_portion: "Whereas clauses in the proclamation reading and Councilwoman Shepard's explanatory comments."
+    supporting_portions:
+      - "Councilwoman Canete's comments on the difficulty of disclosure when the perpetrator is known to the victim."
+      - "Councilwoman Ortega's comments on victim services and the impact on children in domestic violence contexts."
+  marker_presence:
+    precipitating_context_visible: true
+    connected_to_current_item_or_form: true
+    notes:
+      - "The background statistics and disclosure-response problems are stated as the reason for supporting the campaign."
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: "N — Outcome-Near Condition / Operative Payload"
+  summary: >
+    The operative payload of Proclamation 201 is that Denver City Council, together with the Denver Department of Public Safety and the Denver Sex Assault Interagency Council, supports the launch of the START by Believing Public Awareness Campaign on Friday, April 17, declares that day START by Believing Day throughout the City and County of Denver, and directs the clerk to attest, affix the seal, and transmit copies to the Department of Safety and the Denver Sex Assault Interagency Council.
+  evidence:
+    - "the Denver City Council, in concert with the Denver Department of Public Safety and the Denver Sex Assault Interagency Council, supports the launch of the START by Believing Public Awareness Campaign this Friday, April 17th"
+    - "declares this day to be the START by Believing day throughout the city and county of Denver"
+    - "the clerk of the city and county of Denver shall attest and affix the seal ... and that copies be transmitted to the Department of Safety and the Denver Sex Assault Interagency Council"
+  source_vocabulary:
+    - "supports the launch"
+    - "this Friday, April 17th"
+    - "declares this day"
+    - "START by Believing Day"
+    - "throughout the City and County of Denver"
+    - "attest and affix the seal"
+    - "copies be transmitted"
+  temporal_status:
+    primary: "future_effect"
+    secondary:
+      - "completed_in_session"
+    notes:
+      - "The proclamation was adopted in-session."
+      - "The campaign launch and declared day are stated as Friday, April 17, after the meeting segment."
+  source_context_for_fact_check:
+    payload_carrier: "Proclamation 201, Series of 2015."
+    payload_content:
+      - "Council supports the launch of the START by Believing Public Awareness Campaign."
+      - "Council declares Friday, April 17 to be START by Believing Day throughout the City and County of Denver."
+      - "The clerk is to attest, affix the seal, and transmit copies to the Department of Safety and the Denver Sex Assault Interagency Council."
+    payload_scope:
+      - "City and County of Denver."
+      - "In concert with the Denver Department of Public Safety and the Denver Sex Assault Interagency Council."
+    payload_scalar_or_baseline:
+      - value: "Friday, April 17"
+        role: "campaign launch date and declared START by Believing Day"
+      - value: "Proclamation 201, Series of 2015"
+        role: "formal acted-on proclamation identifier"
+    not_payload_for_this_slot:
+      - "The 1,251 reports, 350 exams, one-in-four, one-in-17, and 54% figures are background statistics for the proclamation, not the proclamation's operative payload."
+  answer_locality:
+    segment_portion: "The 'Now, therefore' sections of the proclamation reading."
+  marker_presence:
+    payload_attached_to_action: true
+    number: true
+    named_requirement: true
+    scope_boundary: true
+    date_cutoff: true
+    notes:
+      - "The payload is explicitly attached to Proclamation 201."
+      - "The payload contains a date, a named declared day, a citywide scope, and clerk transmission/attestation requirements."
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: "L — Concrete Concern"
+  summary: >
+    The segment states several concrete concerns: sexual assault is underreported; victims may fear disbelief, blame, retaliation, or that nothing will come of reporting; disbelief can worsen victims' physical and psychological well-being; a failed response can enable further victimization; and victims may face especially difficult disclosure situations when the perpetrator is a family member, dating partner, coach, teacher, or other known person.
+  evidence:
+    - "sexual assault is the most underreported crime in the United States"
+    - "people feel scared, feel that they won't be believed, fear that they're going to be blamed ... or that they may be retaliated against"
+    - "when these loved ones respond with doubt, shame or blame, victims suffer additional negative effects on their physical and psychological well-being"
+    - "one failed response can lead to five more victims"
+    - "perpetrators are often people that victims know and sometimes their family members"
+    - "It might even be a boyfriend or a spouse who has perpetrated"
+    - "there's a culture out there that's ... very misogynistic"
+  source_vocabulary:
+    - "underreported"
+    - "scared"
+    - "won't be believed"
+    - "blamed"
+    - "retaliated against"
+    - "doubt, shame or blame"
+    - "negative effects"
+    - "perpetrators"
+    - "family members"
+    - "boyfriend or spouse"
+    - "misogynistic"
+  temporal_status:
+    primary: "recurring_concern"
+    secondary:
+      - "currently_existing"
+      - "hypothetical_or_risk"
+    notes:
+      - "The underreporting and disbelief concerns are presented as ongoing conditions."
+      - "The risk that a failed response can lead to additional victims is future-risk content."
+  source_context_for_fact_check:
+    obstacle_content:
+      - "Sexual assault is described as underreported."
+      - "Victims may be afraid they will not be believed, will be blamed, will face retaliation, or that nothing will come of reporting."
+      - "Doubt, shame, or blame after disclosure can harm victims physically and psychologically."
+      - "A failed response is described as potentially enabling further victimization because rapists attack multiple times."
+      - "Known-person perpetration is emphasized as especially difficult for victims and communities to confront."
+      - "Councilman Lopez raises concern about misogynistic or macho culture and the need for men to help reverse it."
+    local_anchor:
+      - "Denver / City and County of Denver for the proclamation context."
+      - "Colorado for the lifetime sexual assault prevalence figures stated in the proclamation."
+      - "Friends, family members, trusted teachers, coaches, dating partners, spouses, and other known people as disclosure/perpetrator contexts."
+  answer_locality:
+    segment_portion: "Proclamation whereas clauses and councilmember comments after the motion to adopt."
+    supporting_portions:
+      - "Councilwoman Shepard's comments on underreporting, fear, blame, and repeated offending."
+      - "Councilwoman Canete's comments on known perpetrators and the difficulty of disclosure."
+      - "Councilman Lopez's comments on misogynistic culture and male responsibility."
+      - "Councilwoman Ortega's comments on victim support, domestic violence, and children's exposure."
+  marker_presence:
+    concrete_concern_language: true
+    specific_concern_content: true
+    notes:
+      - "The concerns are named in problem-side language rather than merely as solution targets."
+      - "The content identifies concrete harms, obstacles, risks, and affected contexts."
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: "S — Shared Concern Synthesis"
+  summary: >
+    Across the proclamation reading, councilmember comments, and Manager of Safety O'Malley's acceptance remarks, a recurring concern theme is that victims of sexual assault need to be believed and supported because disbelief, blame, shame, and unsafe disclosure environments suppress reporting, harm victims, and can allow perpetrators to continue. Multiple speakers connect that concern to community responsibility, law enforcement access, victim services, and the broader need to make Denver a safer and more supportive place for survivors.
+  evidence:
+    - "when these loved ones respond with doubt, shame or blame, victims suffer additional negative effects"
+    - "friends and family members and emergency responders start from a place of belief"
+    - "perpetrators are often people that victims know"
+    - "we hope that folks report to law enforcement ... But even if they're not ready for that, having them start by getting the medical help they need and the support they need"
+    - "to publicly have the backs of victims of sexual assault and to be that rock and to be that support system"
+    - "the moment that you start believing somebody, you potentially have saved a life"
+  source_vocabulary:
+    - "start from a place of belief"
+    - "safe to report"
+    - "supportive services"
+    - "medical help"
+    - "support system"
+    - "safe space"
+    - "break the silence"
+    - "saved a life"
+    - "believe"
+    - "victims of sexual assault"
+  temporal_status:
+    primary: "recurring_concern"
+    secondary:
+      - "currently_existing"
+    notes:
+      - "The theme recurs across multiple speakers in the segment."
+      - "The concern is not limited to a single incident; it is treated as a community and system response problem."
+  source_context_for_fact_check:
+    concern_theme: "The shared concern is the need to believe and support sexual assault victims/survivors because disbelief, blame, shame, and unsafe reporting conditions harm victims and suppress reporting."
+    concern_content:
+      - "Victims often disclose to friends or family before institutions."
+      - "Negative first responses can worsen victims' physical and psychological well-being."
+      - "Believing victims is linked to supportive resources, medical help, law enforcement reporting, and prevention of future crimes."
+      - "The concern includes difficult known-perpetrator contexts such as family members, coaches, teachers, dating partners, boyfriends, spouses, or other respected people."
+      - "Several speakers frame community responsibility as part of the solution."
+    recurrence_basis:
+      - "Councilwoman Shepard discusses underreporting, fear, blame, and the need for belief."
+      - "Councilwoman Canete emphasizes believing victims even when alleged perpetrators are known or respected people."
+      - "Councilman Lopez emphasizes community and male responsibility to support victims and challenge misogynistic culture."
+      - "Manager of Safety O'Malley emphasizes the empowering and potentially life-saving effect of believing victims."
+  answer_locality:
+    segment_portion: "Distributed across the proclamation text, councilmember comments, and the acceptance remarks."
+  marker_presence:
+    problem_side_concern: true
+    specific_content: true
+    notes:
+      - "The concern theme is not merely generic debate; it is specific to disbelief, underreporting, survivor harm, and access to support."
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: "U — Unresolved Tail / Future Return Path"
+  summary: >
+    The proclamation itself was adopted in-session, so the proclamation's disposition did not remain pending. However, the segment contains future-facing implementation and follow-up material: the START by Believing campaign was to launch on Friday, April 17; the Department of Safety would continue public communication efforts around the campaign; and Councilwoman Ortega requested that the Safety Committee receive an update at some point on the Rose Interim Domestic Violence facility process.
+  evidence:
+    - "supports the launch of the START by Believing Public Awareness Campaign this Friday, April 17th"
+    - "We'll continue to put efforts into the campaign"
+    - "we'll continue to put the message out via all types of communication mechanisms"
+    - "One request that I have is that maybe at some point our safety committee can have an update on the Rose Interim Domestic Violence facility in terms of where they're at in the process"
+  source_vocabulary:
+    - "this Friday, April 17th"
+    - "continue to put efforts into the campaign"
+    - "continue to put the message out"
+    - "all types of communication mechanisms"
+    - "at some point"
+    - "Safety Committee"
+    - "update"
+    - "Rose Interim Domestic Violence facility"
+  temporal_status:
+    primary: "pending_future_handling"
+    secondary:
+      - "future_effect"
+      - "completed_in_session"
+    notes:
+      - "The proclamation adoption is completed in-session."
+      - "The campaign launch and continued outreach are future-facing after the adoption."
+      - "The Rose Interim Domestic Violence facility update is requested as a possible future committee update and is separate from the adopted proclamation's disposition."
+  source_context_for_fact_check:
+    pending_status:
+      proclamation: "Not pending; Proclamation 201 was adopted during the segment."
+      campaign_implementation: "Future-facing; the campaign launch and continued messaging remained to occur after the meeting segment."
+      rose_facility_update: "Requested as a possible future Safety Committee update; not resolved or scheduled in the transcript."
+    pending_item:
+      - "START by Believing campaign launch and continuing public communication efforts."
+      - "Potential Safety Committee update on the Rose Interim Domestic Violence facility process."
+    handling_path:
+      - "Department of Safety continuing campaign outreach through communication mechanisms including public boards."
+      - "Potential Safety Committee update requested by Councilwoman Ortega for the Rose Interim Domestic Violence facility."
+    not_supported:
+      - "The transcript does not show that final action on Proclamation 201 remained pending."
+      - "The transcript does not provide a scheduled date for the Rose facility update."
+  answer_locality:
+    segment_portion: "Future-facing language appears in the proclamation payload, Councilwoman Ortega's comment, and Manager of Safety O'Malley's acceptance remarks."
+  marker_presence:
+    pendingness_marker: true
+    pending_item_identifiable: true
+    handling_path_visible: true
+    notes:
+      - "The clearest U material is future implementation/follow-up, not unresolved disposition of the proclamation."
+      - "The campaign launch date and Department of Safety continuation path are visible."
+      - "The Rose facility update is identifiable but not scheduled."
+  ```

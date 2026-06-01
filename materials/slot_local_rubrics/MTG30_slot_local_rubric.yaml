@@ -1,0 +1,1431 @@
+segment_id: "MTG30"
+segment_dir: "30_DenverCityCouncil_09232019"
+meeting_id: "DenverCityCouncil_09232019"
+uid: "DenverCityCouncil_09232019_19-0776"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": 30,
+    "source_segment": "transcript_30.txt",
+    "source_event_sheet": "event_sheet_30.md",
+    "protocol": "QA Authoring Protocol v30; validation-updated against QA Validation Protocol v31",
+    "slot_semantics_source": "slot_semantics.json v29",
+    "qa_schema": "v31-compatible",
+    "last_updated_utc": "2026-05-16T15:36:30.377783+00:00",
+    "authoring_principles": {
+      "presence": "Presence is decided only by Topic Gate and Quality Gate. Wrong values do not lower Presence by themselves.",
+      "fact_check": "Fact Check is slot-local and contradiction-based. Omission, abstraction, and partial but correct coverage are allowed.",
+      "deprecated_fields": "This artifact avoids deprecated role/scope fields."
+    },
+    "validation_update_notes": [
+      "Each slot now exposes slot, label, topic_gate, quality_gate, fact_check_target, score_examples, answer_locality, and marker_presence directly.",
+      "meeting_specific_qa_gates is retained as a compatibility alias for renderers that expect that key.",
+      "Presence gates were rewritten to avoid making exact source-correct values a condition for Presence; exact values are preserved in fact_check_target, slot_local_event_sheet_excerpt, marker_presence, and score examples.",
+      "No deprecated role/scope fields are used."
+    ],
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T — Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "secondary": [
+            "pending_future_handling",
+            "future_effect"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "The summary identifies the substantive subject as a right-of-way vacation or relinquishment issue.",
+                "The summary identifies the matter as a public right-of-way / transportation-space use question rather than only a procedural vote.",
+                "The summary names a specific local right-of-way vacation matter, even if exact location, bill number, or area is wrong."
+              ],
+              "not_match": [
+                "The summary only says the body discussed a bill, vote, or agenda item without a substantive subject.",
+                "The summary frames the topic only as a generic hotel/development approval with no right-of-way or public-space subject.",
+                "The summary only mentions publication, passage, or procedural stage without the substantive right-of-way vacation subject."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "The summary states a policy move to vacate, relinquish, preserve, or decide the use of public right-of-way land.",
+                "The summary states that the bill or proposal would change whether the right-of-way remained available for transportation, public space, or future mobility use.",
+                "The summary ties procedural advancement to the underlying substantive move about right-of-way use; bare publication alone is not enough for this label."
+              ],
+              "not_match": [
+                "The summary only says the item passed, was published, or was discussed without a direction-bearing policy move.",
+                "The summary states only opposition, support, or debate with no substantive direction for right-of-way use.",
+                "The summary treats final approval, publication, or rejection as the only policy content and never says what would happen to the right-of-way or its use."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "The summary identifies the target as a particular right-of-way parcel, area, or public-space/transportation-use area.",
+                "The summary identifies the target as land/right-of-way that would be vacated or retained for transportation or public-space uses.",
+                "The summary gives a recognizable target for the policy direction, even if the exact address, bill identifier, or area value is wrong."
+              ],
+              "not_match": [
+                "The summary identifies only a generic bill, project, or parcel with no target of the policy direction.",
+                "The summary identifies only a hotel or private development as the target and omits the right-of-way land or public-space/transportation use.",
+                "The summary names transportation policy generally without tying the policy direction to a particular right-of-way target."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "The summary identifies the substantive subject as a right-of-way vacation or relinquishment issue.",
+                  "The summary identifies the matter as a public right-of-way / transportation-space use question rather than only a procedural vote.",
+                  "The summary names a specific local right-of-way vacation matter, even if exact location, bill number, or area is wrong."
+                ],
+                "not_match": [
+                  "The summary only says the body discussed a bill, vote, or agenda item without a substantive subject.",
+                  "The summary frames the topic only as a generic hotel/development approval with no right-of-way or public-space subject.",
+                  "The summary only mentions publication, passage, or procedural stage without the substantive right-of-way vacation subject."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "The summary states a policy move to vacate, relinquish, preserve, or decide the use of public right-of-way land.",
+                  "The summary states that the bill or proposal would change whether the right-of-way remained available for transportation, public space, or future mobility use.",
+                  "The summary ties procedural advancement to the underlying substantive move about right-of-way use; bare publication alone is not enough for this label."
+                ],
+                "not_match": [
+                  "The summary only says the item passed, was published, or was discussed without a direction-bearing policy move.",
+                  "The summary states only opposition, support, or debate with no substantive direction for right-of-way use.",
+                  "The summary treats final approval, publication, or rejection as the only policy content and never says what would happen to the right-of-way or its use."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "The summary identifies the target as a particular right-of-way parcel, area, or public-space/transportation-use area.",
+                  "The summary identifies the target as land/right-of-way that would be vacated or retained for transportation or public-space uses.",
+                  "The summary gives a recognizable target for the policy direction, even if the exact address, bill identifier, or area value is wrong."
+                ],
+                "not_match": [
+                  "The summary identifies only a generic bill, project, or parcel with no target of the policy direction.",
+                  "The summary identifies only a hotel or private development as the target and omits the right-of-way land or public-space/transportation use.",
+                  "The summary names transportation policy generally without tying the policy direction to a particular right-of-way target."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was the proposed right-of-way vacation for 2999 Chestnut / Chestnut and 29th.",
+            "Council Bill 19-0776 / 776 was advanced for publication on first introduction; the underlying vacation was not finally approved in the segment.",
+            "The proposed effect, if later approved, would be to vacate or relinquish roughly 6,000 square feet of right-of-way.",
+            "The targeted right-of-way was discussed in relation to transportation/public-space uses, including a bike docking station and possible bike/scooter or plaza treatment.",
+            "The hotel plan was contextual background, not the substantive topic as a generic hotel approval."
+          ],
+          "fact_check_notes": [
+            "Do not treat final vacation approval as source-supported for this segment.",
+            "Do not treat a generic hotel approval as the T subject.",
+            "If a summary states a wrong square footage or attaches the right-of-way vacation to the wrong location or target, evaluate that under the listed T fields when explicit."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "subject": "Right-of-way vacation for the 2999 Chestnut / Chestnut and 29th area.",
+            "policy_direction": [
+              "Advance/order publication of Council Bill 19-0776 / 776 on first introduction.",
+              "The underlying proposed effect, if the bill later succeeds, would be to vacate or relinquish right-of-way land."
+            ],
+            "target": [
+              "Approximately 6,000 square feet of right-of-way associated with 2999 Chestnut / Chestnut and 29th.",
+              "Transportation/public-space use of that right-of-way, including a bike docking station and possible bike/scooter parking or public plaza treatment."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "subject": "Right-of-way vacation for the 2999 Chestnut / Chestnut and 29th area.",
+          "policy_direction": [
+            "Advance/order publication of Council Bill 19-0776 / 776 on first introduction.",
+            "The underlying proposed effect, if the bill later succeeds, would be to vacate or relinquish right-of-way land."
+          ],
+          "target": [
+            "Approximately 6,000 square feet of right-of-way associated with 2999 Chestnut / Chestnut and 29th.",
+            "Transportation/public-space use of that right-of-way, including a bike docking station and possible bike/scooter parking or public plaza treatment."
+          ]
+        },
+        "answer_locality": [
+          "Opening motion and CdeBaca’s first statement establish the right-of-way vacation topic and policy frame.",
+          "Applicant and neighborhood discussion in the middle adds the local right-of-way / good-neighbor-agreement framing.",
+          "Final vote clarifies that the in-session action was publication, not final vacation approval."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "right-of-way vacation",
+            "local public right-of-way parcel",
+            "vacation / relinquishment subject"
+          ],
+          "quality_gate_markers": {
+            "policy_direction": [
+              "vacate / relinquish right-of-way",
+              "preserve for transportation or public-space use",
+              "advance bill toward later merits consideration"
+            ],
+            "target": [
+              "local right-of-way area",
+              "transportation/public-space use",
+              "bike/cycle dock or mobility use"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "The Council debated an item and then voted on it.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary gives only procedural activity and does not identify the substantive right-of-way vacation subject."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "The Council discussed the 2999 Chestnut right-of-way vacation.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The subject is identified, but the summary does not state the policy direction and target with enough specificity."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "The discussion framed Council Bill 19-0776 as a proposed right-of-way vacation at 2999 Chestnut, asking whether to advance a bill that could vacate about 6,000 square feet of land now used or reserved for transportation and public-space purposes.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary identifies the subject, policy direction, target, and does not contradict the event sheet."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "The Council finally approved a hotel project by vacating 6,000 square feet of public right-of-way at 2999 Chestnut.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The summary is specific enough for Presence, but it incorrectly states final approval and misframes the subject as a hotel approval/completed vacation."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "O — Outcome/Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "pending_future_handling"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "The summary states that the body took a procedural disposition on a bill, motion, or acted-on item.",
+                "The summary says the item was ordered published, advanced, passed as a motion, referred, rejected, deferred, or otherwise disposed of in session.",
+                "The summary ties a recognizable disposition verb to the acted-on right-of-way/vacation bill or item, even if the stage, actor, vote count, or identifier is wrong."
+              ],
+              "not_match": [
+                "The summary only says members debated, opposed, supported, or asked questions about the vacation.",
+                "The summary only describes a future meeting, hearing request, or agreement discussion with no completed in-session disposition.",
+                "The summary gives only the policy substance of the vacation without stating what the body did to an acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "The summary identifies the acted-on item by a formal bill/motion identifier or a substantive description that distinguishes the item.",
+                "The summary identifies the item as a specific right-of-way vacation bill or publication motion.",
+                "The summary is specific enough to tell which item received the disposition, even if the exact formal identifier is wrong."
+              ],
+              "not_match": [
+                "The summary says only that a bill, motion, item, or vacation was acted on without identifying which one.",
+                "The summary identifies only a generic hotel, development, or policy topic as the acted-on item.",
+                "The summary gives a vote count or result but does not tie it to any specific acted-on bill or item."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "The summary states that the body took a procedural disposition on a bill, motion, or acted-on item.",
+                  "The summary says the item was ordered published, advanced, passed as a motion, referred, rejected, deferred, or otherwise disposed of in session.",
+                  "The summary ties a recognizable disposition verb to the acted-on right-of-way/vacation bill or item, even if the stage, actor, vote count, or identifier is wrong."
+                ],
+                "not_match": [
+                  "The summary only says members debated, opposed, supported, or asked questions about the vacation.",
+                  "The summary only describes a future meeting, hearing request, or agreement discussion with no completed in-session disposition.",
+                  "The summary gives only the policy substance of the vacation without stating what the body did to an acted-on item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "The summary identifies the acted-on item by a formal bill/motion identifier or a substantive description that distinguishes the item.",
+                  "The summary identifies the item as a specific right-of-way vacation bill or publication motion.",
+                  "The summary is specific enough to tell which item received the disposition, even if the exact formal identifier is wrong."
+                ],
+                "not_match": [
+                  "The summary says only that a bill, motion, item, or vacation was acted on without identifying which one.",
+                  "The summary identifies only a generic hotel, development, or policy topic as the acted-on item.",
+                  "The summary gives a vote count or result but does not tie it to any specific acted-on bill or item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The Council ordered Council Bill 19-0776 / 776 published on first introduction.",
+            "The publication/advancement motion passed 11 ayes to 1 nay.",
+            "The acted-on item was the bill concerning the 2999 Chestnut right-of-way vacation.",
+            "The in-session action was not final approval, final passage, or legal completion of the right-of-way vacation.",
+            "The merits of the underlying vacation remained for later handling after publication."
+          ],
+          "fact_check_notes": [
+            "The 11-1 vote must be attached to the publication/order-published action, not to final approval of the vacation.",
+            "A broad label such as Council is acceptable for actor if the surrounding context preserves the first-introduction/publication stage.",
+            "A separate correct clause about later handling does not cancel an explicit wrong-stage claim that the Council finally vacated the land."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "actor": "Denver City Council / Council body in session.",
+            "procedural_stage": "First introduction / order-published stage, not final Council passage of the underlying vacation.",
+            "disposition_result": "Council Bill 19-0776 / 776 was ordered published / advanced for publication, and that motion passed.",
+            "acted_on_item": "Council Bill 19-0776 / Council Bill 776 concerning the 2999 Chestnut right-of-way vacation.",
+            "vote_result": "11 ayes, 1 nay, attached to the motion/order to publish the bill on first introduction."
+          }
+        },
+        "event_sheet_slot_context": {
+          "actor": "Denver City Council / Council body in session.",
+          "procedural_stage": "First introduction / order-published stage, not final Council passage of the underlying vacation.",
+          "disposition_result": "Council Bill 19-0776 / 776 was ordered published / advanced for publication, and that motion passed.",
+          "acted_on_item": "Council Bill 19-0776 / Council Bill 776 concerning the 2999 Chestnut right-of-way vacation.",
+          "vote_result": "11 ayes, 1 nay, attached to the motion/order to publish the bill on first introduction."
+        },
+        "answer_locality": [
+          "Opening motion introduces the acted-on item and requested publication disposition.",
+          "Herndon’s remarks distinguish publication from a merits vote.",
+          "Final roll call supplies the vote result and passed publication disposition."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "ordered published",
+            "advanced publication motion",
+            "motion passed"
+          ],
+          "quality_gate_markers": [
+            "specific bill identifier",
+            "substantive right-of-way vacation bill description",
+            "publication motion tied to that item"
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "Councilmembers raised concerns about the vacation and neighborhood process.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary describes discussion but no completed disposition on an acted-on item."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "The Council ordered the bill published.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "A disposition is present, but the acted-on item is not specific enough."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "The Council ordered Council Bill 19-0776 / 776 published on first introduction, and the publication motion passed 11 ayes to 1 nay.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states the correct disposition, item, stage, and vote attachment."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "The Council finally approved the 2999 Chestnut right-of-way vacation by an 11-1 vote.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The disposition and item are specific, but the summary attaches the vote to final approval rather than publication on first introduction."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "B — Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing",
+            "pending_future_handling"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "The summary states prior or ongoing background such as a delay, postponement, neighborhood opposition, outreach, meetings, legal/process constraint, or agreement discussion.",
+                "The summary states a background condition that existed before or around the current item and shaped how the item was discussed.",
+                "The summary gives background as its own proposition, not merely the action or payload itself."
+              ],
+              "not_match": [
+                "The summary only states the bill was acted on or debated, with no prior or ongoing background context.",
+                "The summary only states the proposed vacation payload, fee, or site effect without background shaping the current handling.",
+                "The summary only states future handling with no background condition that shaped the current item or discussion form."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "The summary connects the background to the current publication decision, later merits handling, proposal form, public-hearing discussion, or agreement path.",
+                "The summary shows how objections, outreach, postponement, meetings, or legal/process constraints shaped whether the item should proceed, be delayed, be heard publicly, or be revisited.",
+                "The connection is visible without requiring an explicit agenda-necessity or “why now” statement."
+              ],
+              "not_match": [
+                "The summary lists objections, meetings, or legal/process context as isolated facts with no visible relation to the current bill or handling path.",
+                "The summary turns background into an operative requirement of the bill without saying it shaped the current item or discussion form.",
+                "The summary describes only generalized right-of-way policy history without connecting it to the current item."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "The summary states prior or ongoing background such as a delay, postponement, neighborhood opposition, outreach, meetings, legal/process constraint, or agreement discussion.",
+                  "The summary states a background condition that existed before or around the current item and shaped how the item was discussed.",
+                  "The summary gives background as its own proposition, not merely the action or payload itself."
+                ],
+                "not_match": [
+                  "The summary only states the bill was acted on or debated, with no prior or ongoing background context.",
+                  "The summary only states the proposed vacation payload, fee, or site effect without background shaping the current handling.",
+                  "The summary only states future handling with no background condition that shaped the current item or discussion form."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "The summary connects the background to the current publication decision, later merits handling, proposal form, public-hearing discussion, or agreement path.",
+                  "The summary shows how objections, outreach, postponement, meetings, or legal/process constraints shaped whether the item should proceed, be delayed, be heard publicly, or be revisited.",
+                  "The connection is visible without requiring an explicit agenda-necessity or “why now” statement."
+                ],
+                "not_match": [
+                  "The summary lists objections, meetings, or legal/process context as isolated facts with no visible relation to the current bill or handling path.",
+                  "The summary turns background into an operative requirement of the bill without saying it shaped the current item or discussion form.",
+                  "The summary describes only generalized right-of-way policy history without connecting it to the current item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The item had previously been postponed for about four weeks / one month to allow applicant-neighborhood outreach.",
+            "Public Works polled 21 adjacent property owners; 71% were described as objecting, and 42 total neighborhood objections were described.",
+            "The applicant had met with neighbors three times since prior consideration, and further good-neighbor-agreement discussion remained possible.",
+            "State law and city process around dedications and vacations shaped the discussion.",
+            "These conditions shaped whether members wanted publication now, rejection, a public hearing, or later merits discussion."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to say explicitly that the item was on the agenda because of the background.",
+            "If a summary states numbers as part of the background trigger condition, compare the value and what it is attached to as part of trigger_condition.",
+            "Do not state that the good neighbor agreement had already been finalized, or that state law required approval of this specific vacation."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "trigger_condition": [
+              "Prior postponement / four-week delay to allow applicant-neighborhood discussions.",
+              "Neighborhood objections to the vacation request.",
+              "State-law and city-process constraints around dedications and vacations."
+            ],
+            "agenda_connection": [
+              "These background conditions shaped why members debated whether to publish the bill now, kill it, wait for an agreement, or hold a public hearing.",
+              "Applicant outreach and a possible good neighbor agreement were used by several members as reasons to allow publication and revisit merits later."
+            ],
+            "source_numeric_bindings": [
+              "21 adjacent property owners were polled by Public Works.",
+              "71% was the share of adjacent property owners described as objecting.",
+              "42 was the total neighborhood objections described in the transcript.",
+              "Three meetings were applicant-neighbor meetings since prior consideration.",
+              "Four weeks / about one month was the delay before renewed consideration."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "trigger_condition": [
+            "Prior postponement / four-week delay to allow applicant-neighborhood discussions.",
+            "Neighborhood objections to the vacation request.",
+            "State-law and city-process constraints around dedications and vacations."
+          ],
+          "agenda_connection": [
+            "These background conditions shaped why members debated whether to publish the bill now, kill it, wait for an agreement, or hold a public hearing.",
+            "Applicant outreach and a possible good neighbor agreement were used by several members as reasons to allow publication and revisit merits later."
+          ],
+          "source_numeric_bindings": [
+            "21 adjacent property owners were polled by Public Works.",
+            "71% was the share of adjacent property owners described as objecting.",
+            "42 was the total neighborhood objections described in the transcript.",
+            "Three meetings were applicant-neighbor meetings since prior consideration.",
+            "Four weeks / about one month was the delay before renewed consideration."
+          ]
+        },
+        "answer_locality": [
+          "Early CdeBaca remarks provide prior objections and factual background.",
+          "Herndon, Steve Ferris, and Mark Hall provide postponement and community-meeting context.",
+          "Sawyer, Public Works, Ortega, and the city attorney provide state-law and process context."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "prior postponement/delay",
+            "neighborhood objections",
+            "community outreach/meetings",
+            "good-neighbor-agreement discussion",
+            "state-law/process constraints"
+          ],
+          "quality_gate_markers": [
+            "background tied to whether the bill should be published, killed, heard publicly, or revisited later",
+            "background tied to current handling path or proposal form"
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "The Council voted 11-1 to publish Council Bill 776.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary states the outcome but no prior background or precipitating context."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "There had been neighborhood objections and meetings before the vote.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states background, but it does not visibly connect that background to the current item or its handling."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "The publication vote followed a prior four-week postponement for applicant-neighborhood outreach, substantial neighborhood objections, and ongoing good-neighbor-agreement discussions that shaped whether members wanted to publish, kill, or revisit the bill later.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states source-supported background and connects it to the current handling of the item."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "The bill returned after a four-week delay because a finalized good neighbor agreement had already resolved the neighborhood objections.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The summary gives background connected to the item, but falsely states that the agreement was finalized and that objections were resolved."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "N — Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "currently_existing",
+            "pending_future_handling",
+            "hypothetical_or_risk"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "The summary attaches a requirement, condition, scope, restriction, number, fee, site effect, relocation, improvement, agreement term, or other payload to the bill, action, or proposed vacation item.",
+                "The summary states what the acted-on or proposed item would require, allow, change, scope, charge, relocate, improve, or condition.",
+                "The action-payload link is visible in the same sentence or anaphora-linked adjacent context, even if exact values or status are wrong."
+              ],
+              "not_match": [
+                "The summary lists site facts, development facts, or bike-dock facts without connecting them to the bill, action, or proposed vacation.",
+                "The summary states only that the body ordered or advanced the bill, with no operative payload beyond the action shell.",
+                "The summary states only background objections or future pending meetings without a requirement, condition, number, scope, or other payload attached to the action or item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "The attached payload includes an identifiable numeric, scalar, amount, percentage, duration, height/story count, area, meeting-count, or timing facet.",
+                "The summary includes a recognizable numeric/scalar value as part of the bill’s proposed vacation, fee/process, site effect, or development context; exact correctness is not a Presence requirement."
+              ],
+              "not_match": [
+                "The summary says only that land would be vacated or the process would change without any identifiable numeric/scalar facet.",
+                "The summary includes a number unrelated to the attached payload or action."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "The attached payload includes a named fee, agreement, relocation, improvement, condition, commitment, restriction, or process requirement.",
+                "The summary names a concrete non-numeric payload term attached to the proposed vacation or bill; exact source-correct naming is checked separately in Fact Check."
+              ],
+              "not_match": [
+                "The summary gives only a generic effect with no identifiable requirement, condition, agreement, fee, relocation, or improvement term.",
+                "The summary names only a background concern or future meeting without attaching it as payload to the action or item."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "The attached payload includes an identifiable geographic, parcel, transportation-use, public-space, categorical, or process scope boundary.",
+                "The summary shows what place, land, use, process, or category the payload applies to, even if exact source-correct scope is wrong."
+              ],
+              "not_match": [
+                "The summary states a payload but gives no scope, target, place, use, process, or category for it.",
+                "The summary gives a broad policy preference with no boundary for what the payload applies to."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "The summary attaches a requirement, condition, scope, restriction, number, fee, site effect, relocation, improvement, agreement term, or other payload to the bill, action, or proposed vacation item.",
+                  "The summary states what the acted-on or proposed item would require, allow, change, scope, charge, relocate, improve, or condition.",
+                  "The action-payload link is visible in the same sentence or anaphora-linked adjacent context, even if exact values or status are wrong."
+                ],
+                "not_match": [
+                  "The summary lists site facts, development facts, or bike-dock facts without connecting them to the bill, action, or proposed vacation.",
+                  "The summary states only that the body ordered or advanced the bill, with no operative payload beyond the action shell.",
+                  "The summary states only background objections or future pending meetings without a requirement, condition, number, scope, or other payload attached to the action or item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "The attached payload includes an identifiable numeric, scalar, amount, percentage, duration, height/story count, area, meeting-count, or timing facet.",
+                  "The summary includes a recognizable numeric/scalar value as part of the bill’s proposed vacation, fee/process, site effect, or development context; exact correctness is not a Presence requirement."
+                ],
+                "not_match": [
+                  "The summary says only that land would be vacated or the process would change without any identifiable numeric/scalar facet.",
+                  "The summary includes a number unrelated to the attached payload or action."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "The attached payload includes a named fee, agreement, relocation, improvement, condition, commitment, restriction, or process requirement.",
+                  "The summary names a concrete non-numeric payload term attached to the proposed vacation or bill; exact source-correct naming is checked separately in Fact Check."
+                ],
+                "not_match": [
+                  "The summary gives only a generic effect with no identifiable requirement, condition, agreement, fee, relocation, or improvement term.",
+                  "The summary names only a background concern or future meeting without attaching it as payload to the action or item."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "The attached payload includes an identifiable geographic, parcel, transportation-use, public-space, categorical, or process scope boundary.",
+                  "The summary shows what place, land, use, process, or category the payload applies to, even if exact source-correct scope is wrong."
+                ],
+                "not_match": [
+                  "The summary states a payload but gives no scope, target, place, use, process, or category for it.",
+                  "The summary gives a broad policy preference with no boundary for what the payload applies to."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "Council Bill 19-0776 / 776 carried a proposed 2999 Chestnut right-of-way vacation payload.",
+            "The proposed vacation involved about 6,000 square feet of right-of-way.",
+            "$1,600 was described as a review/processing fee, not a sale price for the land.",
+            "The site was associated with an eight-story hotel plan and a disputed increase in developer land/buildable square footage.",
+            "The applicant proposal included relocating the bike/cycle dock and improving/opening public space near Chestnut and 29th.",
+            "The good neighbor agreement was possible or proposed, not executed or completed in the segment."
+          ],
+          "fact_check_notes": [
+            "Presence can pass even if a stated number is wrong; wrong value or wrong binding is handled under payload_scalar_or_baseline.",
+            "Do not state that the city sold the land for $1,600; the source frames $1,600 as a fee/processing fee.",
+            "Do not state that the bike/cycle dock had already been relocated or that the good neighbor agreement had already been executed."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "payload_carrier": "Council Bill 19-0776 / Council Bill 776 and the proposed 2999 Chestnut right-of-way vacation.",
+            "payload_content": [
+              "Proposed vacation/relinquishment of about 6,000 square feet of right-of-way.",
+              "$1,600 was described as a review/processing fee, not a market-value sale price.",
+              "Applicant proposal included relocating the bike/cycle dock and improving/opening public space near Chestnut and 29th.",
+              "A possible good neighbor agreement would commit to the plan, but it was not finalized in the segment."
+            ],
+            "payload_scope": "Right-of-way associated with 2999 Chestnut / Chestnut and 29th, including transportation/public-space treatment at that location.",
+            "source_numeric_bindings": [
+              "6,000 square feet: size of right-of-way vacation discussed.",
+              "$1,600: review/processing fee for the vacation process, not sale price.",
+              "Eight-story hotel: development plan mentioned for the location.",
+              "50%: increase in developer land described by CdeBaca.",
+              "12,144 to 18,094 square feet: buildable square footage change described by CdeBaca.",
+              "Three meetings: applicant-neighbor meetings since prior consideration.",
+              "Wednesday meeting / two more meetings: future community/agreement meetings described."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "payload_carrier": "Council Bill 19-0776 / Council Bill 776 and the proposed 2999 Chestnut right-of-way vacation.",
+          "payload_content": [
+            "Proposed vacation/relinquishment of about 6,000 square feet of right-of-way.",
+            "$1,600 was described as a review/processing fee, not a market-value sale price.",
+            "Applicant proposal included relocating the bike/cycle dock and improving/opening public space near Chestnut and 29th.",
+            "A possible good neighbor agreement would commit to the plan, but it was not finalized in the segment."
+          ],
+          "payload_scope": "Right-of-way associated with 2999 Chestnut / Chestnut and 29th, including transportation/public-space treatment at that location.",
+          "source_numeric_bindings": [
+            "6,000 square feet: size of right-of-way vacation discussed.",
+            "$1,600: review/processing fee for the vacation process, not sale price.",
+            "Eight-story hotel: development plan mentioned for the location.",
+            "50%: increase in developer land described by CdeBaca.",
+            "12,144 to 18,094 square feet: buildable square footage change described by CdeBaca.",
+            "Three meetings: applicant-neighbor meetings since prior consideration.",
+            "Wednesday meeting / two more meetings: future community/agreement meetings described."
+          ]
+        },
+        "answer_locality": [
+          "CdeBaca’s first remarks provide numeric payload, fee, site, transportation, and buildable-square-footage details.",
+          "Steve Ferris and Mark Hall provide proposed agreement and bike-dock relocation details.",
+          "Public Works / Flynn remarks clarify fee versus sale and dedication/vacation process."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "attached vacation/relinquishment payload",
+            "fee/process payload",
+            "bike/cycle-dock relocation or public-space improvement payload",
+            "possible agreement payload"
+          ],
+          "quality_gate_markers": {
+            "number": [
+              "scalar quantity, fee, percentage, area, height/story count, meeting count, or timing facet"
+            ],
+            "named_requirement": [
+              "processing fee",
+              "good neighbor agreement",
+              "relocation/improvement commitment"
+            ],
+            "scope_boundary": [
+              "local right-of-way scope",
+              "transportation/public-space treatment scope"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "Councilmembers raised concerns about state law and neighborhood opposition.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary gives concern/background content but no payload attached to the action or item."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "The bill included terms for the proposed vacation at 2999 Chestnut.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary attaches a payload to the bill, but it lacks a qualifying number, named requirement, scope boundary, or date cutoff."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "The bill's discussed payload was a proposed vacation of about 6,000 square feet of right-of-way at 2999 Chestnut, with a $1,600 processing fee rather than a sale price and possible bike-dock relocation/public-space improvements under a proposed good neighbor agreement.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states an attached payload, includes qualifying numeric/named/scope detail, and preserves the correct fee and pending-agreement status."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "The bill sold 6,000 square feet of city land at 2999 Chestnut to the developer for $1,600 and had already relocated the bike dock.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The summary is specific enough for Presence, but it contradicts the event sheet by treating the fee as a sale price and the relocation as completed."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "L — Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "secondary": [
+            "hypothetical_or_risk",
+            "recurring_concern",
+            "future_effect"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "The summary states a concern, harm, risk, obstacle, difficulty, loss, tradeoff, deficiency, frustration, or similar problem-side condition.",
+                "The summary frames right-of-way loss, transportation/public-space use, neighborhood opposition, persuasion, agreement enforceability, legal/process constraint, or access as a concrete concern.",
+                "The concern is asserted on the problem side rather than only appearing as the object of a solution-side plan."
+              ],
+              "not_match": [
+                "The summary only states the proposed vacation payload or procedural outcome without problem-side concern language.",
+                "The summary only says concerns were raised without identifying any concern content.",
+                "The summary states a solution-side plan, relocation, or improvement without asserting a concern, harm, obstacle, or risk."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "The summary specifies what the concern is about, such as loss of right-of-way for transportation/public use, access impact, developer benefit, opposition, persuasion tactics, legal/process limits, or agreement enforceability.",
+                "The reader can tell the object, tradeoff, mechanism, harm, risk, or process problem being raised.",
+                "A named place, named group, or bounded area is not required for Presence, although it may be checked if explicitly stated."
+              ],
+              "not_match": [
+                "The summary says only that there were concerns, controversy, disagreement, or opposition with no concern content.",
+                "The summary gives only an abstract fairness or process concern without enough content to tell what the concern is about.",
+                "The summary lowers Presence merely because the concern lacks a named place, named group, or bounded area."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "The summary states a concern, harm, risk, obstacle, difficulty, loss, tradeoff, deficiency, frustration, or similar problem-side condition.",
+                  "The summary frames right-of-way loss, transportation/public-space use, neighborhood opposition, persuasion, agreement enforceability, legal/process constraint, or access as a concrete concern.",
+                  "The concern is asserted on the problem side rather than only appearing as the object of a solution-side plan."
+                ],
+                "not_match": [
+                  "The summary only states the proposed vacation payload or procedural outcome without problem-side concern language.",
+                  "The summary only says concerns were raised without identifying any concern content.",
+                  "The summary states a solution-side plan, relocation, or improvement without asserting a concern, harm, obstacle, or risk."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "The summary specifies what the concern is about, such as loss of right-of-way for transportation/public use, access impact, developer benefit, opposition, persuasion tactics, legal/process limits, or agreement enforceability.",
+                  "The reader can tell the object, tradeoff, mechanism, harm, risk, or process problem being raised.",
+                  "A named place, named group, or bounded area is not required for Presence, although it may be checked if explicitly stated."
+                ],
+                "not_match": [
+                  "The summary says only that there were concerns, controversy, disagreement, or opposition with no concern content.",
+                  "The summary gives only an abstract fairness or process concern without enough content to tell what the concern is about.",
+                  "The summary lowers Presence merely because the concern lacks a named place, named group, or bounded area."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "CdeBaca argued the right-of-way was currently used for transportation because a bike docking station was located there.",
+            "Speakers raised concern about preserving public land for walking, biking, scooters, bike/scooter parking, and mobility-impaired access.",
+            "The proposed vacation was characterized by some as a 6,000-square-foot developer giveaway.",
+            "Speakers raised concerns about persuasion tactics, unsettled neighborhood opposition, state-law constraints, and good-neighbor-agreement enforceability.",
+            "The primary local anchor for these concerns was the 2999 Chestnut / Chestnut and 29th right-of-way."
+          ],
+          "fact_check_notes": [
+            "A local anchor is not required for L Presence, but if a summary states one, compare it under local_anchor.",
+            "Do not state that all councilmembers opposed publication; several supported publication while preserving concerns.",
+            "Do not state that the transportation concern had been legally accepted as technical merit; CdeBaca argued it had technical merit, while DPW was described as saying protests lacked technical merit.",
+            "Do not state that every neighbor opposed the vacation."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "obstacle_content": [
+              "Concern that the right-of-way had transportation use because a bike docking station was there.",
+              "Concern that the area could serve modern transportation uses, including walking, biking, scooters, and parking bikes/scooters without blocking mobility-impaired access.",
+              "Concern that the vacation was a 6,000-square-foot developer giveaway and conflicted with public land/climate/transportation goals.",
+              "Concern about persuasion tactics aimed at changing neighborhood opposition.",
+              "Concern/frustration with state-law constraints and need for more public input.",
+              "Concern that good neighbor agreements from past alley vacations were not enforceable by the city when the city was not a party."
+            ],
+            "local_anchor": [
+              "Primary local anchor: 2999 Chestnut / Chestnut and 29th right-of-way.",
+              "Neighborhood anchor mentioned: Union Station North.",
+              "Broader examples: northwest Denver alley vacations, Julian alley vacation, Jefferson Park carriage-lot example."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "obstacle_content": [
+            "Concern that the right-of-way had transportation use because a bike docking station was there.",
+            "Concern that the area could serve modern transportation uses, including walking, biking, scooters, and parking bikes/scooters without blocking mobility-impaired access.",
+            "Concern that the vacation was a 6,000-square-foot developer giveaway and conflicted with public land/climate/transportation goals.",
+            "Concern about persuasion tactics aimed at changing neighborhood opposition.",
+            "Concern/frustration with state-law constraints and need for more public input.",
+            "Concern that good neighbor agreements from past alley vacations were not enforceable by the city when the city was not a party."
+          ],
+          "local_anchor": [
+            "Primary local anchor: 2999 Chestnut / Chestnut and 29th right-of-way.",
+            "Neighborhood anchor mentioned: Union Station North.",
+            "Broader examples: northwest Denver alley vacations, Julian alley vacation, Jefferson Park carriage-lot example."
+          ]
+        },
+        "answer_locality": [
+          "CdeBaca’s early and later remarks provide transportation, public-space, opposition, and persuasion-tactic concerns.",
+          "Hines, Sawyer, Ortega, Flynn, Sandoval, and the presiding officer add state-law, process, agreement, and technical-merit concerns."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "concern/problem-side language",
+            "transportation/public-space loss concern",
+            "developer-giveaway concern",
+            "persuasion/enforceability/process concern"
+          ],
+          "quality_gate_markers": [
+            "specific concern is loss of right-of-way for transportation/public mobility use",
+            "specific concern is enforceability of good neighbor agreements",
+            "specific concern is state-law/process constraint on vacation decisions"
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "The bill would vacate land at 2999 Chestnut and was ordered published.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary gives topic/outcome content but no concern, harm, obstacle, risk, or tradeoff."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "Several councilmembers raised concerns about the bill.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary has concern language but not specific concern content."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "Speakers were concerned that vacating the 2999 Chestnut right-of-way could give away public land despite existing or future transportation uses, including a bike dock and bike/scooter parking that would not block mobility-impaired access.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states concrete concern content and does not contradict the event sheet."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "All councilmembers opposed publication because DPW had formally accepted the bike-dock argument as technical merit.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The concern content is specific, but it contradicts the event sheet on councilmember positions and technical-merit status."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "S — Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "currently_existing",
+            "pending_future_handling",
+            "hypothetical_or_risk"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "The summary names a recurring or shared problem-side concern theme rather than only a one-off factual detail.",
+                "The summary names a theme about public right-of-way vacation, transportation/public-space value, legal/process constraints, public process, or agreement enforceability in concern-side language.",
+                "The summary uses problem-side language such as concern, risk, constraint, difficulty, unresolved tension, or criticized mechanism."
+              ],
+              "not_match": [
+                "The summary only states that right-of-way policy was discussed generally without problem-side concern language.",
+                "The summary only states a single concrete complaint without presenting it as a theme of the discussion or a shared/recurring concern.",
+                "The summary uses generic debate language, such as disagreement or controversy, without naming a problem-side concern theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "The summary identifies the theme’s concern content, such as right-of-way vacation versus transportation/public-space value, future mobility use, public input, legal/process constraints, market-value limits, or agreement enforceability.",
+                "The reader can tell the object, contrast, criticized mechanism, tradeoff, or problem content of the shared concern.",
+                "The summary does not need to reproduce every downstream risk or evidentiary detail."
+              ],
+              "not_match": [
+                "The summary says only that there were recurring concerns, objections, or disagreement without saying what the concern was about.",
+                "The summary reduces the shared concern only to generic neighborhood opposition with no transportation, legal/process, public-input, or enforceability content.",
+                "The summary names only the proposed solution or action without stating a problem-side concern theme."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "The summary names a recurring or shared problem-side concern theme rather than only a one-off factual detail.",
+                  "The summary names a theme about public right-of-way vacation, transportation/public-space value, legal/process constraints, public process, or agreement enforceability in concern-side language.",
+                  "The summary uses problem-side language such as concern, risk, constraint, difficulty, unresolved tension, or criticized mechanism."
+                ],
+                "not_match": [
+                  "The summary only states that right-of-way policy was discussed generally without problem-side concern language.",
+                  "The summary only states a single concrete complaint without presenting it as a theme of the discussion or a shared/recurring concern.",
+                  "The summary uses generic debate language, such as disagreement or controversy, without naming a problem-side concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "The summary identifies the theme’s concern content, such as right-of-way vacation versus transportation/public-space value, future mobility use, public input, legal/process constraints, market-value limits, or agreement enforceability.",
+                  "The reader can tell the object, contrast, criticized mechanism, tradeoff, or problem content of the shared concern.",
+                  "The summary does not need to reproduce every downstream risk or evidentiary detail."
+                ],
+                "not_match": [
+                  "The summary says only that there were recurring concerns, objections, or disagreement without saying what the concern was about.",
+                  "The summary reduces the shared concern only to generic neighborhood opposition with no transportation, legal/process, public-input, or enforceability content.",
+                  "The summary names only the proposed solution or action without stating a problem-side concern theme."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "A recurring theme was whether Denver should keep advancing right-of-way vacations when the land may have transportation/public-space value or future mobility value.",
+            "Speakers returned to concerns about state-law constraints and whether Denver's vacation process needs policy or state-level review.",
+            "Speakers also treated good neighbor agreements as a recurring enforceability problem, not only a one-parcel issue.",
+            "The concern content included bike/cycle dock use, future transportation use, bike/scooter parking, mobility-impaired access, public hearing/public input, unsettled neighborhood support, and limitations on market-value extraction.",
+            "There was no consensus to reject the bill at this stage; the body voted to publish while preserving concerns."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to say the word recurring if it names the source-grounded shared concern theme.",
+            "Do not reduce the S concern to neighborhood opposition alone.",
+            "Do not state that there was a consensus to reject the bill at this stage."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "concern_theme": [
+              "Recurring concern over relinquishing/vacating public right-of-way when transportation/public-space use or future mobility value may exist.",
+              "Recurring concern over state-law constraints and whether Denver's right-of-way vacation process needs policy or state-level reform.",
+              "Recurring concern over whether good neighbor agreements provide reliable enforceable protection."
+            ],
+            "concern_content": [
+              "Transportation aspect: bike/cycle dock, future transportation use, bike/scooter parking, mobility-impaired access.",
+              "Process aspect: publication now versus merits later, public hearing, neighborhood opposition/support, agreement not yet finalized.",
+              "Legal/process aspect: state law limits sale/market-value extraction; dedications/vacations are part of city process; possible need for state legislative review."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "concern_theme": [
+            "Recurring concern over relinquishing/vacating public right-of-way when transportation/public-space use or future mobility value may exist.",
+            "Recurring concern over state-law constraints and whether Denver's right-of-way vacation process needs policy or state-level reform.",
+            "Recurring concern over whether good neighbor agreements provide reliable enforceable protection."
+          ],
+          "concern_content": [
+            "Transportation aspect: bike/cycle dock, future transportation use, bike/scooter parking, mobility-impaired access.",
+            "Process aspect: publication now versus merits later, public hearing, neighborhood opposition/support, agreement not yet finalized.",
+            "Legal/process aspect: state law limits sale/market-value extraction; dedications/vacations are part of city process; possible need for state legislative review."
+          ]
+        },
+        "answer_locality": [
+          "Distributed across the whole segment, especially from CdeBaca’s first objection through final comments before roll call."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "recurring concern about right-of-way vacation",
+            "state-law/process concern",
+            "agreement enforceability concern",
+            "future transportation value concern"
+          ],
+          "quality_gate_markers": [
+            "concern theme is about public right-of-way vacation, transportation value, state-law constraints, enforceability, or public process rather than generic disagreement"
+          ]
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "The Council ordered the bill published and planned to revisit it next week.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary states outcome/future handling but no problem-side concern theme."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "The discussion showed recurring concerns about the proposal.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary has problem-side concern language but no specific concern content."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "A recurring concern was whether Denver should advance right-of-way vacations when the land may have transportation or public-space value, while state-law limits and good-neighbor-agreement enforceability also remained broader process concerns.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary states a shared concern theme with specific source-supported content."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "The shared concern was only that every neighbor opposed the vacation, leading Council to reach consensus against publication.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The summary names a concern theme, but it contradicts the event sheet by reducing the concern to universal neighborhood opposition and asserting consensus against publication."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "U — Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "secondary": [
+            "future_effect",
+            "hypothetical_or_risk"
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "The summary says a final or substantive decision remained unresolved, pending, still open, carried over, or still to be considered after the in-session action.",
+                "The summary says the item would return to a later meeting, final consideration, merits discussion, public hearing, or further process.",
+                "The summary says an associated agreement or applicant-neighborhood discussion remained pending or subject to later handling."
+              ],
+              "not_match": [
+                "The summary states only that the body completed the in-session disposition, with no unfinished or pending state.",
+                "The summary states only that future meetings existed without tying them to an unresolved item.",
+                "The summary says the vacation, agreement, public hearing, or final merits decision was completed in the segment."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "The summary identifies the pending item as the bill/vacation merits decision, the associated agreement, the public hearing, or the applicant-neighborhood plan.",
+                "The reader can tell which item, workstream, agreement, hearing, or issue remains unfinished.",
+                "Exact formal identifier, date, or meeting count is not required for Presence and is checked separately if stated."
+              ],
+              "not_match": [
+                "The summary says only that something remained pending or would return, without identifying the item, agreement, hearing, or issue.",
+                "The summary identifies a future item unrelated to the right-of-way vacation bill or associated agreement path.",
+                "The summary identifies only a broad policy discussion and omits the pending bill/agreement/hearing path from this segment."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "The summary gives a concrete later handling path through governing-body return, further merits consideration, possible public hearing, applicant-neighborhood meetings, or agreement discussion.",
+                "The path includes an identifiable body, meeting, process, hearing, negotiation, or return route.",
+                "Exact date or count correctness is not a Presence requirement and is checked only as Fact Check when explicitly stated."
+              ],
+              "not_match": [
+                "The summary says only that the matter was future-facing, unresolved, or pending with no body, meeting, process, or return path.",
+                "The summary gives only an unrelated later policy discussion not tied to the pending bill, agreement, or hearing path.",
+                "The summary states a completed disposition but no later handling path."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "The summary says a final or substantive decision remained unresolved, pending, still open, carried over, or still to be considered after the in-session action.",
+                  "The summary says the item would return to a later meeting, final consideration, merits discussion, public hearing, or further process.",
+                  "The summary says an associated agreement or applicant-neighborhood discussion remained pending or subject to later handling."
+                ],
+                "not_match": [
+                  "The summary states only that the body completed the in-session disposition, with no unfinished or pending state.",
+                  "The summary states only that future meetings existed without tying them to an unresolved item.",
+                  "The summary says the vacation, agreement, public hearing, or final merits decision was completed in the segment."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "The summary identifies the pending item as the bill/vacation merits decision, the associated agreement, the public hearing, or the applicant-neighborhood plan.",
+                  "The reader can tell which item, workstream, agreement, hearing, or issue remains unfinished.",
+                  "Exact formal identifier, date, or meeting count is not required for Presence and is checked separately if stated."
+                ],
+                "not_match": [
+                  "The summary says only that something remained pending or would return, without identifying the item, agreement, hearing, or issue.",
+                  "The summary identifies a future item unrelated to the right-of-way vacation bill or associated agreement path.",
+                  "The summary identifies only a broad policy discussion and omits the pending bill/agreement/hearing path from this segment."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "The summary gives a concrete later handling path through governing-body return, further merits consideration, possible public hearing, applicant-neighborhood meetings, or agreement discussion.",
+                  "The path includes an identifiable body, meeting, process, hearing, negotiation, or return route.",
+                  "Exact date or count correctness is not a Presence requirement and is checked only as Fact Check when explicitly stated."
+                ],
+                "not_match": [
+                  "The summary says only that the matter was future-facing, unresolved, or pending with no body, meeting, process, or return path.",
+                  "The summary gives only an unrelated later policy discussion not tied to the pending bill, agreement, or hearing path.",
+                  "The summary states a completed disposition but no later handling path."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "After publication, the substantive 2999 Chestnut right-of-way vacation decision remained pending.",
+            "The bill was expected to return the following week / next Monday / on the 30th for merits discussion and possible public hearing.",
+            "The possible good neighbor agreement remained unresolved, with a Wednesday meeting and two additional meetings described.",
+            "The public hearing was requested for when the bill returned; it had not already occurred in the sampled segment.",
+            "The bill was not abandoned or killed in this segment."
+          ],
+          "fact_check_notes": [
+            "U should not be satisfied by the completed publication vote alone.",
+            "If a summary says the agreement was completed, the public hearing already occurred, or the vacation was abandoned/killed, evaluate that as a contradiction under the listed U fields.",
+            "The broader right-of-way discussion later in October may be mentioned, but the core pending item here is the bill/vacation and associated agreement/hearing path."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "label": "reference_source_context_for_selected_slot_only",
+          "context": {
+            "pending_status": [
+              "The final/substantive decision on the 2999 Chestnut right-of-way vacation remained pending after the publication vote.",
+              "The possible good neighbor agreement remained pending.",
+              "A public hearing was requested for when the bill returned."
+            ],
+            "pending_item": [
+              "Council Bill 19-0776 / 776 and the 2999 Chestnut right-of-way vacation.",
+              "Applicant-neighborhood good neighbor agreement / transportation-space plan."
+            ],
+            "handling_path": [
+              "Applicant-neighborhood meeting on Wednesday regarding possible good neighbor agreement.",
+              "Two additional meetings described as scheduled.",
+              "Bill expected back the following week / next Monday / the 30th for merits discussion and possible public hearing.",
+              "Broader right-of-way discussion expected later, around the last week in October."
+            ]
+          }
+        },
+        "event_sheet_slot_context": {
+          "pending_status": [
+            "The final/substantive decision on the 2999 Chestnut right-of-way vacation remained pending after the publication vote.",
+            "The possible good neighbor agreement remained pending.",
+            "A public hearing was requested for when the bill returned."
+          ],
+          "pending_item": [
+            "Council Bill 19-0776 / 776 and the 2999 Chestnut right-of-way vacation.",
+            "Applicant-neighborhood good neighbor agreement / transportation-space plan."
+          ],
+          "handling_path": [
+            "Applicant-neighborhood meeting on Wednesday regarding possible good neighbor agreement.",
+            "Two additional meetings described as scheduled.",
+            "Bill expected back the following week / next Monday / the 30th for merits discussion and possible public hearing.",
+            "Broader right-of-way discussion expected later, around the last week in October."
+          ]
+        },
+        "answer_locality": [
+          "Middle portion around Herndon/Ferris/Hall establishes pending agreement meetings.",
+          "Hines/Ortega remarks establish next-week and possible-public-hearing path.",
+          "Final presiding-officer remarks establish carry-over after publication."
+        ],
+        "marker_presence": {
+          "topic_gate_markers": [
+            "remained pending/unresolved",
+            "future return path",
+            "possible agreement still pending",
+            "public hearing requested for return"
+          ],
+          "quality_gate_markers": {
+            "pending_item_identifiable": [
+              "specific bill/vacation item",
+              "possible agreement",
+              "public hearing or merits discussion"
+            ],
+            "handling_path_visible": [
+              "later Council consideration",
+              "applicant-neighborhood meeting path",
+              "possible public hearing path"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "candidate_summary": "The Council ordered Council Bill 776 published by an 11-1 vote.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "rationale": "The summary states only a completed action and no unfinished/pending state."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "candidate_summary": "The matter remained pending after the vote.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary has a pendingness marker but does not identify the pending item or handling path."
+          },
+          {
+            "kind": "full_correct",
+            "candidate_summary": "After publication, the substantive 2999 Chestnut vacation remained pending and was expected to return the following week / on the 30th for merits discussion and a possible public hearing, while applicant-neighborhood good-neighbor-agreement meetings continued.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1.0,
+            "rationale": "The summary identifies the pending item, pending status, and concrete handling path."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_fail",
+            "candidate_summary": "After publication, the Council killed the vacation and completed the public hearing, leaving only paperwork for the finalized good neighbor agreement.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0.0,
+            "rationale": "The summary is specific and future/unfinished-facing, but it contradicts the event sheet by saying the item was killed, the hearing occurred, and the agreement was finalized."
+          }
+        ]
+      }
+    }
+  }

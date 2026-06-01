@@ -1,0 +1,499 @@
+segment_id: "MTG28"
+segment_dir: "28_BostonCC_06292022"
+meeting_id: "BostonCC_06292022"
+uid: "BostonCC_06292022_2022-0763"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # event_sheet_28
+  
+  ## Source files
+  
+  - `transcript_28.txt`
+  - `slot_semantics.json`
+  - `event_sheet_protocol.md`
+  
+  ## Segment-level source synopsis
+  
+  The segment covers Boston City Council consideration of Dockets 0762 and 0763, described in the transcript as the Mayor's return and modifications to the Council's amended FY23 annual appropriation and tax order. Councilor Fernandes Anderson, as Chair of Ways and Means, presented three partial-override recommendations. Partial override number one passed. A later revised version of partial override number three received 8 affirmative and 5 negative votes but did not pass because the override vote required a two-thirds threshold. The presiding officer then stated that Dockets 0762 and 0763 had been overridden in part and that this constituted approval of the FY23 city budget.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >
+    The discussion was framed around how the City Council should respond to the Mayor's
+    return and modifications to the Council's amended FY23 budget, especially whether
+    to partially override the Mayor's changes in order to restore or increase selected
+    budget lines for equity offices, returning citizens, youth programs, housing support,
+    codification work, tree maintenance, and youth employment.
+  evidence:
+    - "These dockets represent the mayor's return and modifications to the council's amended budget passed on June eight."
+    - "The committee has held one hearing and two work sessions to discuss whether to accept or override or override in part."
+    - "These recommendations are broken into three separate recommendations for partial overrides."
+    - "This constitutes approval of the FY23 city budget."
+  source_vocabulary:
+    - "annual appropriation and tax order for fiscal year 2023"
+    - "mayor's return and modifications"
+    - "council's amended budget"
+    - "accept or override or override in part"
+    - "partial override"
+    - "equitable city"
+    - "youth summer jobs"
+    - "city housing voucher program"
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - already_occurred
+      - pending_future_handling
+      - future_effect
+    notes:
+      - The Mayor had already returned and modified the Council's amended budget before this segment.
+      - The Council completed at least one partial override during the segment.
+      - Some proposed budget effects were future-facing program or staffing allocations.
+  source_context_for_fact_check:
+    subject: >
+      FY23 City of Boston budget / annual appropriation and tax order, after the Mayor's
+      return and modifications to the Council's amended budget.
+    policy_direction:
+      - Partially override the Mayor's returned budget modifications.
+      - Restore or increase selected budget lines for specified city offices, programs, and services.
+      - Reallocate funding from specified departmental lines to balance the proposed overrides.
+    target:
+      - Dockets 0762 and 0763.
+      - FY23 city budget appropriations and tax order.
+      - Specific program and departmental budget lines named in the partial overrides.
+    temporal_status:
+      - Mayor's return and modifications: already_occurred.
+      - Council override action: completed_in_session for partial override number one.
+      - Program funding effects: future_effect after budget approval.
+  answer_locality: >
+    Opening docket framing, Ways and Means Chair's introductory explanation, the partial
+    override recommendations, and final budget-approval statement.
+  marker_presence:
+    subject_identified: present
+    policy_direction: present
+    target: present
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >
+    The Council passed partial override number one and thereby overrode Dockets 0762
+    and 0763 in part. A later revised partial override number three, focused on youth
+    employment funding and offsets from police-related lines, received 8 affirmative
+    votes and 5 negative votes but failed because the override required a two-thirds
+    vote. The presiding officer then stated that the partial override constituted
+    approval of the FY23 city budget on Dockets 0762 and 0763.
+  evidence:
+    - "Partial override number one, roll call. Yes vote means in support of the override."
+    - "Partial override number one has been passed."
+    - "Revised partial override number three ... received only eight votes in the affirmative. It does not pass."
+    - "Dockets 0762/0763 have been overridden in part."
+    - "This constitutes approval of the FY23 city budget."
+  source_vocabulary:
+    - "roll call"
+    - "yes vote means in support of the override"
+    - "partial override number one"
+    - "motion pass eight in the affirmative and five in the negative"
+    - "two thirds"
+    - "does not pass"
+    - "overridden in part"
+    - "approval of the FY23 city budget"
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - already_occurred
+    notes:
+      - The Council's action on partial override number one was completed in the segment.
+      - The revised partial override number three was voted on but did not meet the required threshold.
+  source_context_for_fact_check:
+    actor: Boston City Council during the meeting segment.
+    procedural_stage: >
+      Full Council consideration of the Mayor's returned FY23 budget dockets and partial
+      override recommendations.
+    acted_on_item:
+      - Docket 0762: Mayor's message disapproving the annual appropriation and tax order for FY23, as rendered in the transcript.
+      - Docket 0763: amended annual appropriation and tax order for FY23, as rendered in the transcript.
+      - Partial override number one.
+      - Revised partial override number three, as amended, for the failed vote.
+    disposition_result:
+      - Partial override number one passed.
+      - Revised partial override number three did not pass because it received 8 affirmative votes and required two-thirds.
+      - Dockets 0762 and 0763 were overridden in part.
+      - The presiding officer stated that this constituted approval of the FY23 city budget.
+    vote_result:
+      partial_override_1:
+        value: unanimous yes in the roll-call as rendered; every named councilor vote in the transcript is "Yes"
+        attached_to: partial override number one
+      amendment_motion_on_overrides_2_and_3:
+        value: 8 affirmative, 5 negative
+        attached_to: Councilor Lara's motion to amend / strike partial override number two and revise partial override number three
+      revised_partial_override_3:
+        value: 8 affirmative, 5 negative
+        attached_to: revised partial override number three; failed because two-thirds was required
+    temporal_status:
+      - completed_in_session for partial override number one.
+      - completed_in_session for the failed revised partial override number three vote.
+      - completed_in_session for the stated partial override of Dockets 0762 and 0763 and budget approval.
+  answer_locality: >
+    Roll-call sections for partial override number one, Councilor Lara's amendment motion,
+    revised partial override number three, and final docket/budget approval statement.
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present
+    acted_on_item_specific: present
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >
+    The current budget item was shaped by the Mayor's return and modifications to the
+    Council's amended FY23 budget, a new participatory budget role for the Council,
+    and committee work after June 15, including one hearing and two work sessions.
+    Councilors also described limited departmental information and the absence of
+    standardized annual departmental reporting as background problems affecting the
+    budget process.
+  evidence:
+    - "These dockets represent the mayor's return and modifications to the council's amended budget passed on June eight."
+    - "Since June 15, the committee has held one hearing and two work sessions."
+    - "The City Council has engaged in a historically new role pertaining to its participatory involvement in the development of the FY23 budget."
+    - "Sometimes we're dealing with not all the information."
+    - "The practice of producing annual reports from different departments fell into abeyance in the 1980s."
+  source_vocabulary:
+    - "mayor's return and modifications"
+    - "passed on June eight"
+    - "Since June 15"
+    - "one hearing"
+    - "two work sessions"
+    - "historically new role"
+    - "participatory involvement"
+    - "not all the information"
+    - "annual reports"
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - The Mayor's return and committee hearings/work sessions occurred before or during the lead-up to the segment.
+      - Information gaps in the budget process were described as a recurring or ongoing process problem.
+  source_context_for_fact_check:
+    trigger_condition:
+      - The Mayor returned and modified the Council's amended FY23 budget.
+      - The Council had passed an amended budget on June 8.
+      - Since June 15, the Ways and Means process included one hearing and two work sessions about accepting or overriding the returned budget.
+      - Councilors described a new budget role and process-learning context.
+      - Councilors described incomplete information and the lack of annual departmental reports as budget-process context.
+    agenda_connection:
+      - These background conditions explain why the Council was considering partial overrides and debating source lines, offsets, and future budget-process improvements.
+    temporal_status:
+      - already_occurred for June 8 amended budget and June 15 onward committee process.
+      - currently_existing / recurring_concern for information-access and reporting concerns.
+  answer_locality: >
+    Opening Ways and Means framing and later councilor remarks about budget process,
+    departmental information, and annual reports.
+  marker_presence:
+    precipitating_context_visible: present
+    connected_to_current_item_or_form: present
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >
+    Partial override number one carried a detailed budget payload: increases to Black
+    Male Advancement, Returning Citizens, economic opportunity/life-insurance study,
+    City Clerk codification, BCYF youth workers, Boston Youth Development Network
+    salaries, housing voucher/homeownership or housing-stipend pilots, and Parks
+    tree-maintenance capacity, balanced by decreases to BFD, Law, OPM, and DoIT lines.
+    Later proposed youth-employment payloads included funding for 6,000 summer jobs,
+    1,500 year-round jobs, pay adjustments, experiential learning, and high-school /
+    college partnership programs; the revised partial override number three did not pass.
+  evidence:
+    - "Increase Black Male Advancement personnel services $600,000 to expand the office capacity."
+    - "Increase Office of Returning Citizens contractual services $800,000 to increase capacity."
+    - "Increase ... contractual services $100,000 to commission a citywide life insurance study."
+    - "Increase City Clerk contractual services $200,000 to procure codification services."
+    - "Increase BCYF Personnel Services $120,000 for youth workers."
+    - "Increase Boston Public Health Commission Special Appropriation $160,000 to provide salary increases of $20,000 for each full time employee at Boston Youth Development Network."
+    - "Increase ... special appropriation $400,000 ... for the city housing voucher program ... pilot for housing stipends for young people aged 19 to 24."
+    - "Increase parks and recreation department personnel services by $688,373 ... tree maintenance."
+    - "Revised partial override number three ... increase ... contractual services $4,606,667 to fully fund 6000 youth summer jobs ... and 1500 youth year round jobs."
+  source_vocabulary:
+    - "increase"
+    - "decrease overrides"
+    - "personnel services"
+    - "contractual services"
+    - "special appropriation"
+    - "to expand the office capacity"
+    - "to commission a citywide life insurance study"
+    - "codification services"
+    - "salary increases"
+    - "housing stipends"
+    - "fully fund 6000 youth summer jobs"
+    - "1500 youth year round jobs"
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - completed_in_session
+      - hypothetical_or_risk
+    notes:
+      - Partial override number one's payload became tied to a completed in-session override.
+      - Revised partial override number three's youth-employment payload remained only proposed because the final override vote failed.
+  source_context_for_fact_check:
+    payload_carrier:
+      passed_payload:
+        - Partial override number one.
+        - Dockets 0762 and 0763, overridden in part.
+      failed_or_unadopted_payload:
+        - Chair's proposed partial override number two.
+        - Chair's proposed partial override number three.
+        - Revised partial override number three as amended by Councilor Lara.
+    payload_content:
+      partial_override_1_increases:
+        - Black Male Advancement personnel services to $600,000; adds $400,000 to the tax-order line.
+        - Office of Human Services / Office of Returning Citizens contractual services to $800,000; adds $500,000.
+        - Office of Economic Opportunity contractual services to $100,000 for a citywide life-insurance study.
+        - City Clerk contractual services to $200,000 for codification/review/reconciliation of City of Boston Code Ordinances, Special Acts, and City Charter-related materials.
+        - BCYF personnel services to $120,000 for youth workers supporting youth residents of Commonwealth Apartments and Faneuil Gardens; transcript renders the housing authority acronym as "VHA/BHA"-like.
+        - Boston Public Health Commission special appropriation to $160,000 for $20,000 salary increases for each FTE at Boston Youth Development Network.
+        - Mayor's Office of Housing special appropriation to $400,000 for a housing voucher / project-basing / deeper-affordability / returning citizens / homeownership or housing-stipend pilot; transcript renders housing authority acronym as "VHA/BHA"-like.
+        - Parks and Recreation personnel services by $688,373 for tree-maintenance departmental capacity; adds $144,186 to the tax-order line.
+      partial_override_1_decrease_offsets:
+        - BFD equipment $400,000.
+        - BFD equipment $750,000.
+        - Law contractual $250,000.
+        - OPM personnel $130,000.
+        - DoIT personnel $160,000.
+        - BFD contractual $400,000.
+      proposed_partial_override_2:
+        - Would have decreased BPD personnel services line 51200 overtime.
+        - Would have increased Youth Engagement and Employment personnel services to $2,303,333.
+        - Would have funded 6,000 youth summer jobs, pay adjustment, 1,500 youth year-round jobs, and a $1,000,000 high-school / college partnership program.
+        - Councilor Lara's amendment later struck this partial override number two.
+      revised_partial_override_3:
+        - Would have increased Youth Engagement and Employment contractual services to $4,606,667.
+        - Would have funded 6,000 youth summer jobs and a $2,746,667 pay adjustment.
+        - Would have funded 1,500 youth year-round jobs at $1,860,000.
+        - Would have directed $500,000 to experiential learning opportunities and the rest to a high-school / college partnership for low-income college students and academic support/employment opportunities for high-school students.
+        - Would have added $2,410,000 to the tax-order line and restored the Council's $8,689,453.
+        - Would have offset the additional $2,410,000 with BPD contractual services $688,373, BPD contractual services $100,000, and BPD equipment $1,700,000.
+        - Did not pass as an override because it received 8 affirmative votes and required two-thirds.
+    payload_scope:
+      - City of Boston FY23 budget lines and tax order.
+      - Equity, returning citizens, youth, housing, public health, codification, parks/tree maintenance, and youth-employment program lines.
+      - BFD, Law, OPM, DoIT, and BPD source lines for proposed decreases, depending on the specific override.
+    payload_scalar_or_baseline:
+      - Numeric dollar amounts listed above are attached to specific budget lines and override proposals.
+      - 6,000 summer jobs and 1,500 year-round jobs are attached to proposed youth-employment funding; the revised final override did not pass.
+      - 8 affirmative / 5 negative vote count belongs to the amendment motion and revised partial override number three, not to partial override number one.
+  answer_locality: >
+    Clerk's readings of partial override number one, chair's descriptions of partial
+    overrides two and three, Councilor Lara's amendment language, and the revised
+    partial override three roll-call/result.
+  marker_presence:
+    payload_attached_to_action: present
+    number: present
+    named_requirement: present
+    scope_boundary: present
+    date_cutoff: absent_or_not_material
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >
+    Councilors raised concrete concerns about whether public-safety departments could
+    spare the proposed offset funds, whether the Council had enough reliable departmental
+    budget information, whether youth-employment funds could actually be used given
+    current vacancies, and whether delaying investment would continue to leave young
+    people and underserved communities waiting.
+  evidence:
+    - "How do we know that the fire department isn't going to need that money in equipment for this upcoming year?"
+    - "I question is this money really unspent?"
+    - "Sometimes we're dealing with not all the information."
+    - "Only 2800 have been filled ... less than half of the youth jobs through YEE are presently filled."
+    - "We continue to ask people to wait."
+    - "I do not believe it's reasonable to take money out of the Boston Police budget."
+  source_vocabulary:
+    - "question"
+    - "concern"
+    - "unspent"
+    - "equipment needs"
+    - "not all the information"
+    - "vacancies"
+    - "less than half"
+    - "public safety officers"
+    - "continue to ask people to wait"
+  temporal_status:
+    primary: hypothetical_or_risk
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - Some concerns were immediate existing process or vacancy concerns.
+      - Some concerns were hypothetical/risk-based, such as possible future BFD equipment needs or youth-job funds going unused.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Concern that BFD equipment and contractual funds identified as offsets might still be needed by the Fire Department.
+      - Concern that Councilors were receiving late or incomplete information about departmental budgets.
+      - Concern that annual departmental reporting had fallen away and left the Council with weaker information.
+      - Concern that Youth Engagement and Employment had not filled all existing summer jobs: one councilor stated 2,800 of 6,000 jobs had been filled and work had already started.
+      - Concern that expanding youth jobs through the proposed funding might be less viable than career entry-level positions.
+      - Countervailing concern that failing to invest in youth and communities would repeat past missed opportunities and leave people waiting.
+      - Concern that cutting Boston Police overtime/personnel/equipment/contractual lines was unreasonable or politically contested.
+    local_anchor:
+      - Boston Fire Department / BFD.
+      - Boston Police Department / BPD.
+      - Youth Engagement and Employment / YEE.
+      - City of Boston communities, young people, and underserved residents.
+    temporal_status:
+      - currently_existing for reported job-fill status and information limitations.
+      - hypothetical_or_risk for future equipment needs and potential unused youth-job funds.
+      - recurring_concern for repeated budget-process transparency concerns.
+  answer_locality: >
+    Debate around partial override number one offsets, Councilor Braden's process
+    remarks, Councilor Lara's youth-jobs amendment defense, Councilor Murphy's opposition,
+    and Councilor Mejia's support remarks.
+  marker_presence:
+    concrete_concern_language: present
+    specific_concern_content: present
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme was the tension between investing in underserved communities
+    and youth programs, on one hand, and protecting public-safety or departmental capacity
+    and preserving reliable budget information, on the other. Multiple councilors also
+    treated transparency and incomplete departmental information as a repeated budget-process
+    problem.
+  evidence:
+    - "This shows our commitment ... to departments in this city that have been underfunded and underinvested in."
+    - "How do we know that the fire department isn't going to need that money?"
+    - "Sometimes we're dealing with not all the information."
+    - "The financial information that they provide to the Council is information on which the council is going to act and depend."
+    - "There were a lot of concerns about us funding ... personnel services and our ability through our infrastructure."
+    - "We continue to ask people to wait."
+  source_vocabulary:
+    - "underfunded"
+    - "underinvested"
+    - "unspent"
+    - "not all the information"
+    - "accountability and transparency"
+    - "urgency"
+    - "public safety"
+    - "young people"
+    - "community need"
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - The concern theme recurs across several speakers rather than appearing as one isolated objection.
+      - The theme includes both immediate budget-process concerns and future risk concerns.
+  source_context_for_fact_check:
+    concern_theme:
+      - Recurring concern about whether reallocations from BFD/BPD or other departmental lines would harm public-safety or departmental capacity.
+      - Recurring concern about insufficient or late departmental budget information and the need for better transparency.
+      - Recurring concern about whether the City should urgently invest in youth, low-income residents, returning citizens, housing, and underserved communities.
+    concern_content:
+      - Some councilors supported overrides as investments in communities, youth, equity, housing, and underfunded departments.
+      - Some councilors questioned offsets from Fire and Police lines and whether those funds were truly unused or safe to redirect.
+      - Some councilors argued that more standardized departmental reporting and earlier information would improve future budget deliberations.
+      - Youth-employment supporters framed the issue as a missed-opportunity / waiting problem for young people; opponents questioned job-fill capacity and public-safety cuts.
+    temporal_status:
+      - recurring_concern for themes repeated by several councilors.
+      - hypothetical_or_risk for future harm to public-safety capacity or failure to spend youth-job funds.
+  answer_locality: >
+    Councilor debate before and after partial override number one, process remarks about
+    departmental information, and the debate over Councilor Lara's youth-employment amendment.
+  marker_presence:
+    problem_side_concern: present
+    specific_content: present
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >
+    Several issues remained open or future-facing after the segment: BFD equipment needs
+    could be addressed later through a supplemental process if necessary; Car 5 was
+    described as having been pulled out for later discussion; councilors called for a
+    better budget-information process next year; and the revised youth-employment
+    partial override did not pass despite receiving 8 affirmative votes.
+  evidence:
+    - "If there were any equipment needs in 2022, 2023, they'll be met then if necessary, through a supplemental process."
+    - "We pulled Car five out to talk about it later."
+    - "Going forward, next year ... departments ... [should provide] better information."
+    - "Revised partial override number three ... received only eight votes in the affirmative. It does not pass."
+  source_vocabulary:
+    - "later opportunity"
+    - "talk about it later"
+    - "supplemental process"
+    - "going forward"
+    - "next year"
+    - "does not pass"
+    - "future budget deliberations"
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - hypothetical_or_risk
+      - completed_in_session
+    notes:
+      - The Council completed the vote on revised partial override number three, but that proposal did not become an adopted override.
+      - Future supplemental handling for BFD equipment was conditional, not an action completed in the segment.
+      - Future budget-process improvements were urged but not completed in the segment.
+  source_context_for_fact_check:
+    pending_status:
+      - BFD equipment needs were not resolved inside the segment beyond a stated possibility of later supplemental handling if needs arose.
+      - Car 5 was described as pulled out of the discussion for later handling.
+      - Future budget-process improvements and annual-report modernization were proposed or urged, not completed.
+      - Revised partial override number three failed as an override; its youth-employment funding payload was not adopted in the segment.
+    pending_item:
+      - Potential BFD equipment needs during FY2022/FY2023.
+      - Car 5 / fire-service item discussed as pulled out.
+      - Departmental annual-report / budget-information process for future budget deliberations.
+      - Youth-employment funding expansion in revised partial override number three, after it failed to meet the two-thirds threshold.
+    handling_path:
+      - Supplemental appropriation/process for future BFD equipment needs, if necessary.
+      - Later discussion for Car 5.
+      - Next year's budget process for improved departmental information and reporting.
+      - No successful handling path for revised partial override number three within this segment after the failed vote.
+    temporal_status:
+      - pending_future_handling for future supplemental, Car 5, and budget-process reforms.
+      - completed_in_session for the failed vote itself.
+  answer_locality: >
+    Debate around Fire Department offsets, Councilor Braden's future process remarks,
+    Councilor Flaherty's supplemental-process note, and the final vote/result on revised
+    partial override number three.
+  marker_presence:
+    pendingness_marker: present
+    pending_item_identifiable: present
+    handling_path_visible: present
+  ```

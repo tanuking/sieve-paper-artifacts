@@ -1,0 +1,6 @@
+# Single responsibility: ignore local reproduction outputs and environment files.
+
+.venv/
+__pycache__/
+.DS_Store
+derived/

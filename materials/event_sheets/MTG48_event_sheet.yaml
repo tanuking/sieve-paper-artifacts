@@ -1,0 +1,834 @@
+segment_id: "MTG48"
+segment_dir: "48_BostonCC_06082022"
+meeting_id: "BostonCC_06082022"
+uid: "BostonCC_06082022_2022-0486"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # event_sheet_48.md
+  
+  ## Metadata
+  
+  ```yaml
+  event_sheet_protocol: v29
+  slot_semantics_version: 29
+  source_transcript: transcript_48.txt
+  meeting_order: 48
+  segment_scope: >
+    Boston City Council budget proceedings covering FY23 budget-related dockets,
+    including Dockets 0481-0486 and Docket 0480 as amended. The segment ends as
+    the Council moves on to Docket 0726, a Pride Month resolution.
+  transcription_note: >
+    The source transcript contains speech-recognition errors. Obvious references
+    such as BEPS/BPC/veeps are interpreted in context as Boston Public Schools/BPS,
+    while evidence quotations preserve source wording where useful.
+  ```
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  name: Topic/Framing
+  summary: >
+    The segment frames the FY23 Boston budget package as a set of public spending
+    decisions and Council amendments aimed at funding Boston Public Schools,
+    city operating priorities, capital infrastructure, retiree benefit liabilities,
+    transportation-related infrastructure, youth jobs, housing, environmental work,
+    public safety, and neighborhood equity.
+  evidence:
+    - >
+      "Docket 0481. Is one of the several dockets that comprise the city's total
+      operating budget and is a prop and appropriation order for BEPS for FY 23 in
+      the amount of 1.33 billion."
+    - >
+      "Now moving on to docket 048420486 capital. We come together as a collective
+      today to put forth a budget that will work for the masses of the residents
+      and citizens of our city."
+    - >
+      "Pursuant of the 2021 Charter amendment, the city council has worked as
+      budget season to put forward an amendment draft rather than our typical
+      rejection on the second Wednesday in June."
+    - >
+      "The Council's proposed amendments to Docket 0480 fall into two categories
+      intra departmental and inter departmental."
+    - >
+      "The amended draft being proposed is net neutral... reflects the Council's
+      priorities for FY 23 in working toward a better, safer, more equitable city
+      that takes care of its residents and employees."
+  source_vocabulary:
+    - FY 23 budget
+    - Docket 0480
+    - Docket 0481
+    - Docket 0482
+    - Docket 0483
+    - Docket 0484 / 0485 / 0486 capital
+    - amended draft
+    - appropriation order
+    - capital budget
+    - operating budget
+    - equity
+    - youth jobs
+    - city housing voucher program
+    - Green New Deal
+    - Boston Public Schools / BEPS / BPS
+    - public safety
+    - Mass and Cass
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - currently_existing
+      - future_effect
+      - pending_future_handling
+    notes:
+      - >
+        The Council completed several votes during the segment, including Docket
+        0480 as amended.
+      - >
+        Several budget appropriations and amendments are future-facing because
+        they fund FY23 services, positions, programs, or capital work.
+      - >
+        Some budget handling remained pending, especially capital dockets assigned
+        for further action and the later mayoral/final-budget process discussed by
+        councilors.
+  source_context_for_fact_check:
+    subject: >
+      FY23 Boston municipal budget proceedings, including public schools, capital
+      plan dockets, OPEB, transportation network company-related funds, and the
+      Council's amended operating budget.
+    policy_direction:
+      - allocate appropriations for FY23 public services and liabilities
+      - amend the mayor's proposed operating budget under the 2021 Charter amendment
+      - increase or redirect funding for youth jobs, housing, environmental, public safety, senior, immigrant, and neighborhood services
+      - frame capital investments around equity and historically underserved neighborhoods
+    target:
+      - Boston Public Schools / BPS
+      - City of Boston operating departments and public programs
+      - capital projects and infrastructure
+      - retiree health and life insurance liabilities / OPEB
+      - transportation network company-related municipal infrastructure impacts
+      - residents, employees, students, youth, seniors, immigrant businesses, returning citizens, and specific neighborhoods
+  answer_locality: >
+    Distributed across the segment: BPS budget framing appears near the beginning;
+    OPEB and TNC framing appears shortly after the BPS vote; capital-budget equity
+    framing appears in the middle; Docket 0480 operating-budget amendment framing
+    appears in the later portion before the final roll call.
+  marker_presence:
+    present: true
+    markers:
+      - "Docket 0481"
+      - "FY 23"
+      - "Docket 048420486 capital"
+      - "2021 Charter amendment"
+      - "amendment draft"
+      - "Council's proposed amendments"
+      - "better, safer, more equitable city"
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  name: Outcome/Position
+  summary: >
+    The Council took several in-session procedural actions on budget-related
+    dockets. Docket 0481 received a majority after roll call. Dockets 0482 and
+    0483 passed unanimously. Capital-related Dockets 0484, 0485, and 0486 received
+    first readings and were assigned for further action. Docket 0480, as amended,
+    received a unanimous vote and passed in an amended draft.
+  evidence:
+    - >
+      "Roll call on docket 0481... Docket zero 41 has received the majority."
+    - >
+      "Docket 0482 has received a unanimous vote. The docket has passed."
+    - >
+      "Docket number 0483 has received unanimous vote. The docket has passed."
+    - >
+      "Talking number zero 44 has received a unanimous vote. The docket has
+      received its first reading and will be assigned for further action."
+    - >
+      "Lucky number zero 45 has received a unanimous vote. The docket has received
+      its first reading and will be assigned for further action."
+    - >
+      "Talking numbers 0486 has received a unanimous vote. The docket has received
+      its first reading. Will be aside for further action."
+    - >
+      "Roll call on docket 0480 as amended... Dark in number. All 480, as amended,
+      has received a unanimous vote. Thank you. 0480 has passed and an amended draft."
+  source_vocabulary:
+    - roll call
+    - received the majority
+    - unanimous vote
+    - docket has passed
+    - first reading
+    - assigned for further action
+    - as amended
+    - amended draft
+    - acceptance of the committee report
+    - passage
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - pending_future_handling
+    notes:
+      - >
+        The roll calls and stated dispositions occurred during the segment.
+      - >
+        Dockets 0484, 0485, and 0486 were not finally passed in the quoted
+        disposition; they received first readings and were assigned for further action.
+  source_context_for_fact_check:
+    actor: Boston City Council
+    procedural_stage:
+      Docket_0481: roll-call action with majority received
+      Docket_0482: passed after unanimous vote
+      Docket_0483: passed after unanimous vote
+      Docket_0484: first reading and assigned for further action
+      Docket_0485: first reading and assigned for further action
+      Docket_0486: first reading and assigned for further action
+      Docket_0480: passed as an amended draft after unanimous vote
+    disposition_result:
+      - Docket 0481 received a majority.
+      - Docket 0482 passed unanimously.
+      - Docket 0483 passed unanimously.
+      - Dockets 0484, 0485, and 0486 received first readings and were assigned for further action.
+      - Docket 0480 passed in an amended draft after a unanimous vote.
+    acted_on_item:
+      - Docket 0481: FY23 Boston Public Schools appropriation order
+      - Docket 0482: OPEB-related operating budget allocation
+      - Docket 0483: $1.6 million Capital Grant Fund appropriation for TNC-related purposes
+      - Dockets 0484-0486: capital budget / capital-related appropriations
+      - Docket 0480: departmental operating budget as amended by the Council
+    vote_result:
+      Docket_0481:
+        value: majority received
+        attached_to: roll call on Docket 0481
+      Docket_0482:
+        value: unanimous vote
+        attached_to: passage of Docket 0482
+      Docket_0483:
+        value: unanimous vote
+        attached_to: passage of Docket 0483
+      Docket_0484:
+        value: unanimous vote
+        attached_to: first reading and assignment for further action
+      Docket_0485:
+        value: unanimous vote
+        attached_to: first reading and assignment for further action
+      Docket_0486:
+        value: unanimous vote
+        attached_to: first reading and assignment for further action
+      Docket_0480:
+        value: unanimous vote
+        attached_to: passage of Docket 0480 as amended
+  answer_locality: >
+    Each outcome appears immediately after the relevant docket's debate and roll
+    call. Docket 0480's outcome appears near the end of the budget portion.
+  marker_presence:
+    present: true
+    markers:
+      - "roll call"
+      - "received the majority"
+      - "received a unanimous vote"
+      - "has passed"
+      - "first reading"
+      - "assigned for further action"
+      - "0480 has passed and an amended draft"
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  name: Agenda-Setting Background / Precipitating Context
+  summary: >
+    The budget actions were shaped by several background conditions: the 2021
+    Charter amendment that gave the Council a new amendment process; an extensive
+    committee review process with hearings, testimony, and working sessions;
+    ongoing BPS instability and accountability concerns; and equity concerns about
+    historical disinvestment in Black, brown, immigrant, working-class, and
+    District 4 communities.
+  evidence:
+    - >
+      "Pursuant of the 2021 Charter amendment, the city council has worked as
+      budget season to put forward an amendment draft rather than our typical
+      rejection on the second Wednesday in June."
+    - >
+      "This process has included 30 public hearings on departmental budgets and
+      associated capital projects, including two sessions dedicated to public
+      participation and has received written testimony from all city departments
+      as well as written recorded testimony from the public."
+    - >
+      "The committee also held four working sessions for council deliberation to
+      put forward amendments to the mayor's proposal."
+    - >
+      "We're working towards creating a an elected school committee. We're
+      expecting a new superintendent. And of course, the issues of state
+      receivership still looms over our heads."
+    - >
+      "In the last five years District four has received the least in the capital
+      plan by dollar amount in percentage of any neighborhood... while other
+      districts have surpassed over $1 billion."
+  source_vocabulary:
+    - 2021 Charter amendment
+    - amendment draft
+    - public hearings
+    - public participation
+    - written testimony
+    - working sessions
+    - elected school committee
+    - new superintendent
+    - state receivership
+    - disinvestment
+    - District four
+    - black and brown neighborhoods
+    - capital plan
+  temporal_status:
+    primary: already_occurred
+    additional:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - >
+        The Charter amendment and committee hearings had already occurred before
+        the final Docket 0480 vote in the segment.
+      - >
+        BPS governance instability, school-system concerns, and capital-equity
+        concerns were described as current or ongoing background.
+  source_context_for_fact_check:
+    trigger_condition:
+      - >
+        The 2021 Charter amendment changed the Council's budget role, allowing an
+        amended draft rather than only the prior rejection process.
+      - >
+        The Ways and Means process included 30 public hearings, two public
+        participation sessions, written and recorded testimony, and four Council
+        working sessions.
+      - >
+        BPS discussion was shaped by pending/ongoing institutional changes,
+        including an elected school committee effort, a new superintendent, and
+        state receivership concerns.
+      - >
+        Capital-budget debate was shaped by claims of historical and geographic
+        inequity, including District 4 receiving the least capital-plan investment
+        over the prior five years by amount and percentage.
+    agenda_connection:
+      - >
+        These background conditions explain why councilors emphasized amendments,
+        public input, accountability, school supports, and equitable capital investment.
+  answer_locality: >
+    Charter-amendment and process background appears in the later Docket 0480
+    introduction. BPS background appears early during Docket 0481 debate. Capital
+    disinvestment background appears during the Docket 0484-0486 capital discussion.
+  marker_presence:
+    present: true
+    markers:
+      - "Pursuant of the 2021 Charter amendment"
+      - "30 public hearings"
+      - "two sessions dedicated to public participation"
+      - "four working sessions"
+      - "new superintendent"
+      - "state receivership"
+      - "District four has received the least"
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  name: Outcome-Near Condition / Operative Payload
+  summary: >
+    The actions carried specific appropriations, fund uses, staffing additions,
+    program expansions, and numerical commitments. Key payloads include the $1.33
+    billion FY23 BPS budget and its school-support allocations; Docket 0482's OPEB
+    liability funding context; Docket 0483's $1.6 million for transportation
+    network company-related infrastructure or sustainability purposes; and Docket
+    0480's net-neutral Council amendment package, including intra-departmental and
+    interdepartmental transfers for youth jobs, housing vouchers, environmental
+    work, public safety, neighborhood services, immigrant business support, and
+    other programs.
+  evidence:
+    - >
+      "Docket 0481... appropriation order for BEPS for FY 23 in the amount of
+      1.33 billion."
+    - >
+      "Investments in FY 23 operating budget include 6.6 million, four new social
+      workers, school psychologists and guidance counselors... 26.7 million
+      directly to schools... 5.5 million to expand access to libraries... 6.8
+      million and operations... 3.8 million to increase access to mass core... And.
+      2.6 million. To expand language access..."
+    - >
+      "Docket 0482 represents the operating budget allocation to funds... to fund
+      the city's liability for other post-employment benefits. OPEB... the city
+      has been contributing $40 million to this fund each year since f y 13."
+    - >
+      "Docket 043 involves an appropriation of $1,600,000 from the city's Capital
+      Grant Fund to address the impact of transportation network services on
+      municipal roads, bridges and other transportation infrastructure..."
+    - >
+      "For intra departmental amendments include additional environmental health
+      inspectors, for pest control, for other rodent abatement materials,
+      including traps, baiting and dry ice."
+    - >
+      "Interior Department to amendments totaling $8,832,000 or 0.53% of the
+      budget of the appropriation order."
+    - >
+      "Full funding for 6000 youths jobs and 1500 year round jobs."
+    - >
+      "Interdepartmental amendments total $17,006,618... which represents just
+      over 1% of the docket appropriation order. The amended draft being proposed
+      is net neutral."
+  source_vocabulary:
+    - appropriation order
+    - $1.33 billion
+    - social workers
+    - school psychologists
+    - guidance counselors
+    - libraries
+    - transportation
+    - food and nutrition services
+    - facilities maintenance repairs
+    - language access
+    - OPEB
+    - $40 million
+    - $1,600,000
+    - Capital Grant Fund
+    - TNC related purposes
+    - intra departmental amendments
+    - interdepartmental amendments
+    - $8,832,000
+    - $17,006,618
+    - net neutral
+    - 6000 youths jobs
+    - 1500 year round jobs
+    - city housing voucher program
+    - tree maintenance
+    - Boston Groundwater Trust
+    - graffiti busters
+    - car five
+    - Ladder 13
+    - immigrant owned small businesses
+  temporal_status:
+    primary: future_effect
+    additional:
+      - completed_in_session
+      - currently_existing
+    notes:
+      - >
+        The Council's votes and recommendations occurred in-session, while the
+        appropriations and amendments describe FY23 funding effects.
+      - >
+        OPEB liability and the annual trust contribution were described as ongoing
+        or existing budget obligations.
+  source_context_for_fact_check:
+    payload_carrier:
+      Docket_0481: FY23 Boston Public Schools appropriation order
+      Docket_0482: operating budget allocation for OPEB liability
+      Docket_0483: Capital Grant Fund appropriation for TNC-related municipal purposes
+      Docket_0480: Council-amended departmental operating budget
+    payload_content:
+      Docket_0481:
+        - FY23 BPS appropriation in the amount of $1.33 billion
+        - school-support investments including mental health/student support staff, direct-to-school funds, libraries, operations, MassCore/physical education/art/music/enrichment, and language access
+        - public education funding described as totaling $1.6 billion with charter-school funding included
+      Docket_0482:
+        - funding context for the city's OPEB liability
+        - annual allocation retained in an irrevocable trust fund
+        - source says the city has contributed $40 million each year since FY13
+      Docket_0483:
+        - $1.6 million from the Capital Grant Fund
+        - funds tied to mitigating impacts of transportation network services/companies on municipal roads, bridges, transportation infrastructure, or other public-purpose sustainability uses related to TNC operations
+      Docket_0480:
+        - intra-departmental amendments totaling $8,832,000 / 0.53% of the appropriation order
+        - interdepartmental amendments totaling $17,006,618 / just over 1% of the docket appropriation order
+        - amended draft described as net neutral
+        - examples include environmental health inspectors, rodent abatement materials, senior home repair, crossing guards, EMS supervisor, youth/senior programming, parking enforcement, homeownership vouchers, natural wild land acquisition, youth academic partnership, pedestrian safety, immigrant business support, Jackson Mann transition resources, early literacy specialist, housing stipends, 15 Hokies, waterfront planning, city housing vouchers, waste reduction staff, Mission Hill Link subsidy, tree maintenance staff, Boston Groundwater Trust increase, 6000 youth jobs and 1500 year-round jobs, Black Male Advancement capacity, Returning Citizens capacity, LGBTQ events, 311 upgrades, Main Street technical assistance, burial assistance, BFD Car 5, Ladder 13, citizenship day support, and Boston Youth Development Network salary increases
+    numeric_values:
+      - value: $1.33 billion
+        meaning: FY23 BPS appropriation amount stated for Docket 0481
+      - value: $6.6 million
+        meaning: new social workers, school psychologists, and guidance counselors / support systems
+      - value: $26.7 million
+        meaning: direct-to-school funds
+      - value: $5.5 million
+        meaning: library access and inclusive collections/materials
+      - value: $6.8 million
+        meaning: operations and expanded organizational capacity for transportation, food/nutrition, and facilities maintenance repairs
+      - value: $3.8 million
+        meaning: MassCore, physical education, art, music, academic enrichment, and curriculum/instruction access
+      - value: $2.6 million
+        meaning: language access / translation and interpretation for school meetings and materials
+      - value: $16 million
+        meaning: proposed increase for charter school students within FY23 public education funding discussion
+      - value: $1.6 billion
+        meaning: total public education funding described for FY23
+      - value: $27,100
+        meaning: per-pupil spending stated for BPS, with $3,600 increase over last year
+      - value: $40 million
+        meaning: annual OPEB trust contribution described as made each year since FY13
+      - value: $1,600,000
+        meaning: Docket 0483 Capital Grant Fund appropriation
+      - value: $8,832,000
+        meaning: intra-departmental amendments total
+      - value: 0.53%
+        meaning: intra-departmental amendments as share of the appropriation order
+      - value: $17,006,618
+        meaning: interdepartmental amendment fund transfers total
+      - value: just over 1%
+        meaning: interdepartmental amendments as share of the docket appropriation order
+      - value: 6000
+        meaning: youth jobs to be fully funded
+      - value: 1500
+        meaning: year-round jobs to be fully funded
+  answer_locality: >
+    Payload details appear in each docket introduction and in the Docket 0480
+    amendment list. BPS numerical details appear early; OPEB and TNC amounts appear
+    after the BPS vote; operating-budget amendment payloads appear in the later
+    Docket 0480 portion.
+  marker_presence:
+    present: true
+    markers:
+      - dollar amounts
+      - program names
+      - staffing additions
+      - "appropriation"
+      - "include"
+      - "totaling"
+      - "net neutral"
+      - "Full funding for 6000 youths jobs and 1500 year round jobs"
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  name: Concrete Concern
+  summary: >
+    Councilors raised concrete concerns about BPS performance, safety,
+    transportation, special education and English learner services, transparency,
+    athletics, mental health supports, capital planning, inequitable neighborhood
+    investment, Mass and Cass spillover, ARPA decision-making, and basic quality of
+    life services such as pest control and inspections.
+  evidence:
+    - >
+      "Our return on investment is low, with declining enrollment, poor reading
+      levels, an increase in violence, and the inability year after year to
+      properly service our most vulnerable students who are on IEPs and receive
+      ESL services."
+    - >
+      "We even struggle with the basic operations such as transportation and food
+      services."
+    - >
+      "I've asked questions time and time again... those questions are half
+      fancied or ignored entirely. Moving forward, there is a need for
+      accountability, transparency and oversight in our Boston public school system."
+    - >
+      "We have children who do not feel safe in school. We have children who are
+      not arriving to school on time and some not arriving at all."
+    - >
+      "When you walk on main streets and neighborhoods and see the legacy of
+      generations of investments vacant lots, unused buildings, broken sidewalks
+      and repair schools and playgrounds disproportionately in my district."
+    - >
+      "I'm not necessarily in agreement... in particular down at Mass and Cass...
+      I don't think it's going to get any better... my ass in cash now is leaking
+      into every neighborhood around it."
+    - >
+      "The quality of life issues that were mentioned already in this budget,
+      including pest control, including inspectors for licenses related issues,
+      whether it's Airbnb, whether it's after hours work, construction..."
+  source_vocabulary:
+    - declining enrollment
+    - poor reading levels
+    - increase in violence
+    - IEPs
+    - ESL services
+    - transportation
+    - food services
+    - athletics
+    - transparency
+    - accountability
+    - oversight
+    - safe in school
+    - arriving to school on time
+    - vacant lots
+    - unused buildings
+    - broken sidewalks
+    - repair schools and playgrounds
+    - Mass and Cass
+    - quality of life issues
+    - pest control
+    - inspectors
+    - licenses
+    - after hours work
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - recurring_concern
+      - hypothetical_or_risk
+    notes:
+      - >
+        Most concerns are described as existing or ongoing problems.
+      - >
+        Mass and Cass discussion includes future-risk language about problems
+        continuing or spreading.
+  source_context_for_fact_check:
+    obstacle_content:
+      - >
+        BPS concerns included low return on investment, declining enrollment, poor
+        reading levels, violence, inadequate service for students on IEPs and ESL
+        services, transportation and food-service problems, athletics funding, and
+        lack of transparency/accountability.
+      - >
+        School-safety and attendance/transportation concerns included children not
+        feeling safe and children arriving late or not being picked up.
+      - >
+        Capital-equity concerns included historical underinvestment, vacant lots,
+        unused buildings, broken sidewalks, and schools/playgrounds needing repair
+        in District 4 and Black/brown neighborhoods.
+      - >
+        Mass and Cass concerns included disagreement with the city's direction,
+        risk of long-term spending without improvement, and spillover into nearby
+        neighborhoods.
+      - >
+        Quality-of-life concerns included pest control, licensing inspections,
+        Airbnb, after-hours work, and construction issues.
+    local_anchor:
+      - Boston Public Schools / BPS
+      - District 4
+      - Black and brown neighborhoods in Boston
+      - Mass and Cass
+      - South End
+      - South Boston
+      - Chinatown
+      - Roxbury
+      - Dorchester
+  answer_locality: >
+    BPS concerns appear during the Docket 0481 debate. Capital-equity concerns
+    appear during the Docket 0484-0486 capital discussion. Mass and Cass, ARPA, and
+    quality-of-life concerns appear during the Docket 0480 amended operating-budget
+    discussion and closing remarks.
+  marker_presence:
+    present: true
+    markers:
+      - "concern"
+      - "low"
+      - "declining"
+      - "violence"
+      - "struggle"
+      - "not feel safe"
+      - "broken sidewalks"
+      - "repair schools and playgrounds"
+      - "not going to get any better"
+      - "quality of life issues"
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  name: Shared Concern Synthesis
+  summary: >
+    A recurring concern theme across the segment is that budget decisions must
+    correct persistent inequities and service failures rather than merely approve
+    large spending totals. Speakers repeatedly connect this theme to BPS
+    accountability and student supports, neighborhood disinvestment, transparent
+    Council participation in budget decisions, youth employment, housing, public
+    safety, and quality-of-life services.
+  evidence:
+    - >
+      "We need to continue to diversify our teachers workforce... all of our youth
+      need more mental health support, more addiction counselors, more librarians,
+      more teachers, more music teachers, more afterschool programs, and more
+      athletic opportunities."
+    - >
+      "There is a need for accountability, transparency and oversight in our
+      Boston public school system."
+    - >
+      "Business as usual was not working for too many people. The word equity we
+      use often came to the forefront... The practices that historically
+      contributed to disinvestment of black and brown neighborhoods was clearly out
+      of the question."
+    - >
+      "This isn't the mayor's budget, it is the people's budget... We are now in a
+      position to reflect the voices of the people in our budget process."
+    - >
+      "The amendment for a just under $7 million for youth jobs in the city of
+      Boston is representative of the largest line item amendment made to the city
+      of Boston budget."
+    - >
+      "It's about our... responsibility... to make amendments... to send back the
+      budget with the needs and wants of this council."
+  source_vocabulary:
+    - equity
+    - business as usual
+    - disinvestment
+    - accountability
+    - transparency
+    - oversight
+    - people's budget
+    - voices of the people
+    - youth jobs
+    - mental health support
+    - immigrant businesses
+    - housing vouchers
+    - quality of life
+    - public safety
+    - Council amendments
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - currently_existing
+      - future_effect
+    notes:
+      - >
+        The theme recurs across several councilors and multiple dockets.
+      - >
+        Speakers treat the budget amendments as future-facing responses to
+        recurring inequities and service gaps.
+  source_context_for_fact_check:
+    concern_theme: >
+      Recurring concern that FY23 budget action should address inequity,
+      disinvestment, accountability gaps, and unmet service needs rather than
+      simply maintain existing spending patterns.
+    concern_content:
+      - >
+        For BPS: teacher diversity, mental health supports, special education/ESL,
+        athletics, transportation, safety, literacy, data, accountability, and
+        transparency.
+      - >
+        For capital and neighborhoods: historically inequitable capital investment
+        and District 4/Black and brown neighborhood disinvestment.
+      - >
+        For operating amendments: Council authority, public participation, youth
+        jobs, housing supports, immigrant business supports, public safety, senior
+        programming, environmental services, and quality-of-life services.
+      - >
+        For process: councilors emphasized that the new budget amendment power
+        should reflect constituent needs and public voices.
+  answer_locality: >
+    The recurring theme appears throughout the BPS debate, capital-budget debate,
+    and Docket 0480 operating-budget amendment debate. It is synthesized from
+    repeated statements rather than a single isolated passage.
+  marker_presence:
+    present: true
+    markers:
+      - repeated "equity" language
+      - repeated BPS accountability/service concern language
+      - repeated references to public voices and Council amendment authority
+      - repeated references to disinvestment and neighborhood needs
+      - repeated youth jobs / housing / public safety / quality-of-life amendment examples
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  name: Unresolved Tail / Future Return Path
+  summary: >
+    Several matters remained future-facing or unresolved after the in-session
+    actions: Dockets 0484-0486 were assigned for further action after first
+    reading; Docket 0480's amended budget was expected to go to the mayor and
+    return or proceed through later final-budget handling; ARPA funding remained a
+    separate process not voted on in this segment; and councilors called for
+    continued work with the administration on Mass and Cass and other quality-of-life
+    issues over the next several weeks.
+  evidence:
+    - >
+      "Talking number zero 44 has received a unanimous vote. The docket has
+      received its first reading and will be assigned for further action."
+    - >
+      "Lucky number zero 45 has received a unanimous vote. The docket has received
+      its first reading and will be assigned for further action."
+    - >
+      "Talking numbers 0486 has received a unanimous vote. The docket has received
+      its first reading. Will be aside for further action."
+    - >
+      "I'm excited to send it to the mayor for her approval."
+    - >
+      "Anxiously looking at how it comes back, how much of what we did yesterday,
+      in the previous days, how much is actually going to come back to us?"
+    - >
+      "We are not having an ARPA vote today precisely because my committee is
+      focused on making sure that council is going to saying that."
+    - >
+      "Over the next several weeks, too, as we vote for the final budget, I would
+      like to see what services, what programs, what assistance we can provide the
+      area in and around mass and CAS."
+  source_vocabulary:
+    - first reading
+    - assigned for further action
+    - send it to the mayor for her approval
+    - how it comes back
+    - final budget
+    - ARPA vote
+    - next several weeks
+    - work with the mayor's administration
+    - Mass and Cass
+    - quality of life issues
+  temporal_status:
+    primary: pending_future_handling
+    additional:
+      - future_effect
+      - hypothetical_or_risk
+    notes:
+      - >
+        Dockets 0484-0486 were explicitly left for further action.
+      - >
+        Councilors discussed later mayoral/final-budget handling for Docket 0480.
+      - >
+        ARPA funding and Mass and Cass service responses were discussed as pending
+        or requiring continued work.
+  source_context_for_fact_check:
+    pending_status:
+      - >
+        Dockets 0484, 0485, and 0486 were not finally disposed of; they received
+        first readings and were assigned for further action.
+      - >
+        Docket 0480 passed as an amended draft in-session, but councilors discussed
+        future mayoral approval/return and final budget handling.
+      - >
+        ARPA funding was not voted on in this segment; it was described as a
+        separate process still needing Council involvement.
+      - >
+        Mass and Cass services and quality-of-life measures were described as
+        needing continued discussion with colleagues and the mayor's office over
+        the next several weeks.
+    pending_item:
+      - Dockets 0484-0486 capital-related dockets
+      - mayoral/final-budget handling of Docket 0480 as amended
+      - ARPA funding process
+      - Mass and Cass service response / quality-of-life response
+    handling_path:
+      - assignment for further action for Dockets 0484-0486
+      - mayoral approval/return and later final-budget vote for the amended operating budget
+      - COVID-19 Recovery Committee / working-session process for ARPA mentioned by Councilor Bach
+      - coordination with colleagues and the mayor's office for Mass and Cass and quality-of-life services
+  answer_locality: >
+    First-reading pendingness appears during the capital docket roll calls. Mayoral
+    return/final-budget pendingness appears during Docket 0480 debate. ARPA and
+    Mass and Cass unresolved handling appear in later Docket 0480 discussion and
+    closing remarks before the final vote.
+  marker_presence:
+    present: true
+    markers:
+      - "assigned for further action"
+      - "first reading"
+      - "send it to the mayor for her approval"
+      - "how it comes back"
+      - "not having an ARPA vote today"
+      - "over the next several weeks"
+      - "final budget"
+  ```

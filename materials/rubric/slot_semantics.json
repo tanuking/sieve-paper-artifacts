@@ -1,0 +1,677 @@
+{
+  "version": 29,
+  "derived_from": "slot_semantics_v28.json, with Presence gate separation clarified, B redefined as agenda-setting background / precipitating context, and L redefined as concrete concern without local-anchor-as-Presence requirement",
+  "purpose": "Operational requirements for evaluating whether a segment summary satisfies each slot. This file is the source of truth for slot purposes, Presence gate structures, Fact Check field definitions, global Fact Check rules, and authoring/validation-only cross-slot boundaries. Judge prompts render the selected slot semantics and QA criteria. Cross-slot boundaries are not rendered to the judge.",
+  "field_semantics": {
+    "slot_purpose": "A short definition of what the slot captures. slot_purpose is orientation only; it is not the place to encode Presence gates or Fact Check rules.",
+    "presence_structure": "The structure used to determine Presence. It contains topic_gate and quality_gate. Presence is determined only by topic_gate and quality_gate. There are no separate topic_requirement or quality_requirement fields; each gate label's meaning is the executable criterion.",
+    "topic_gate": "The gate for Presence >= 0.5. It checks whether the summary minimally enters this slot's information type. Topic Gate passes when the labels are direct under the operator.",
+    "quality_gate": "The gate for Presence = 1.0. It checks whether a summary that passed Topic Gate states the slot information with enough specificity. Quality Gate passes when the labels are direct under the operator.",
+    "gate_label": "A fixed check inside a gate. Each label has a name and a meaning. QA authors write sample-specific match and not_match for each label. The judge combines the label meaning, match, not_match, and summary text to classify the label as direct, inferential, or unrelated.",
+    "fact_check_structure": "Defines the candidate factual fields for Fact Check in each slot. These are field definitions, not required-mention checklists.",
+    "fact_check_role": "A part of the claim that this slot compares in Fact Check. Each role has check and fail_condition. check states what is compared. fail_condition states what kind of summary claim is source-incompatible for that role.",
+    "valid_items": "Representative source-consistent statements. valid_items are acceptable correct statements, not a mandatory checklist. A summary may state only a subset and still pass Fact Check if it does not contradict the event sheet.",
+    "load_bearing_scope": "Deprecated legacy field. Use fact_check_fields for comparison fields and fact_check_notes for optional notes. load_bearing_scope should not be used to add implicit Fact Check fields.",
+    "protected_factual_role": "Deprecated wording. Use fact_check_fields / fact_check_field.",
+    "relevant_summary_context": "The sentence, clause, or tightly linked adjacent sentence sequence used for Presence, plus surrounding clauses that supplement, modify, clarify, or contradict the same slot content. Fact Check examines not only the clause that passed Presence, but all explicit claims in this relevant summary context that bear on protected factual roles.",
+    "boundaries_with_other_slots": "Authoring and validation guidance only. These boundaries help event-sheet authors and QA authors decide how to instantiate slots and write match/not_match/protected roles. They are not scoring criteria and must not be rendered directly in the judge prompt.",
+    "boundary_other_slot": "The neighboring slot involved in this authoring/validation boundary. Not judge-rendered.",
+    "boundary": "A concise statement of the conceptual distinction between the two slots, used for authoring and validation. Not judge-rendered.",
+    "this_slot_when": "Authoring guidance for when content should be instantiated as this slot. Not judge-rendered.",
+    "other_slot_when": "Authoring guidance for when content should be instantiated as the neighboring slot. Not judge-rendered.",
+    "authoring_note": "Practical note for event-sheet or QA authors about how to materialize the boundary in QA fields when relevant. Not judge-rendered.",
+    "judge_render_policy": "Judge prompts render slot_purpose, presence_structure, fact_check_structure, global_fact_check_rules, meeting-specific QA gates, fact_check_target, and score_examples. They do not render cross-slot boundaries. The judge evaluates the slot already selected by the bundle; it does not reclassify summary content into a different slot.",
+    "source_facts_for_fact_check": "An event-sheet field, written per slot, containing source context for the selected slot. It is passed to the judge as a slot-local event-sheet excerpt. It helps interpret and verify the current slot's fact_check_target, but it does not create additional gates or additional Fact Check fields. It is not a full-event-sheet handoff and must not be used for a summary-wide factual audit.",
+    "fact_check_target": "The QA field that defines what Fact Check compares for this sample and slot. It contains fact_check_fields, valid_items, and optional fact_check_notes. It is not a required-mention checklist.",
+    "fact_check_fields": "The list of fields that are checked for this sample and slot. A summary claim can make this slot Fact Check = 0 only if it explicitly contradicts the event-sheet context for one of these fields. A claim outside these fields does not create Fact Check = 0 for this slot.",
+    "fact_check_field": "A factual item that may be compared during Fact Check for a slot, such as subject, policy_direction, actor, procedural_stage, vote_result, payload_content, pending_status. A summary only needs to be checked on a field when it explicitly states something about that field.",
+    "fact_check_notes": "Optional notes that clarify how to read the fact_check_fields or valid_items. fact_check_notes do not add new fields. If a comparison item matters, it must be listed in fact_check_fields.",
+    "event_sheet_slot_context": "The event-sheet excerpt for the selected slot. It is source context for checking whether explicit claims about fact_check_fields contradict the event sheet. It does not add gates, new fact_check_fields, or a summary-wide audit.",
+    "temporal_status": "A description in the event sheet and QA of whether the slot content is already occurred, currently existing, completed in-session, pending future handling, future effect, or hypothetical/risk. It is used when temporal status matters to a gate or fact_check_field."
+  },
+  "conventions": {
+    "single_label_uses_all_of": "When a gate has only one label, the operator is all_of by convention. all_of and any_of are equivalent for a single-label gate, but using all_of consistently keeps the structural reading uniform.",
+    "label_set_fixed": "For gates whose label_set is fixed, every QA artifact must include every label defined in this file. The author writes match and not_match for each label.",
+    "label_set_options": "For gates whose label_set is options, the QA artifact includes only the labels that apply to the sample, drawn from the fixed set defined in this file. The author may not create labels outside the fixed set.",
+    "presence_fact_check_separation": "Topic Gate and Quality Gate determine only Presence. Fact Check runs only when Presence > 0. Specific but wrong content can pass Presence and fail Fact Check.",
+    "role_entries_use_fail_condition": "Slot-specific fact_check roles do not restate Fact Check = 0 conditions as varied free text. Each role uses fail_condition. global_fact_check_rules treat any explicit claim matching a role's fail_condition as Fact Check = 0.",
+    "no_separate_topic_or_quality_requirement_fields": "There are no topic_requirement or quality_requirement fields. The executable Presence criteria are integrated into topic_gate.labels[].meaning and quality_gate.labels[].meaning.",
+    "slots_md_retired": "slots.md is not an independent source of truth. Slot definitions, Presence label meanings, Fact Check roles, and cross-slot boundaries live in this file. Any slots.md, if present, is generated documentation only.",
+    "boundaries_render_slot_local": "Cross-slot boundaries are stored inside each slot under boundaries_with_other_slots so that authors and judges see the boundaries most relevant to the slot they are working on.",
+    "presence_value_correctness_separation": "Topic Gate and Quality Gate determine only whether the required gate labels are expressed in the summary. They do not evaluate whether stated values are source-correct. Wrong numbers, codes, vote counts, dates, baselines, stages, actors, or scalar values must not lower Presence by themselves; they are handled only by Fact Check when they bear on fact_check_fields."
+  },
+  "global_fact_check_rules": [
+    {
+      "id": "fact_check_is_contradiction_check",
+      "title": "Fact Check checks contradiction, not completeness.",
+      "text": "Fact Check asks whether the summary explicitly states something that contradicts the event-sheet context for the selected slot. Fact Check is not a completeness check. Omission, partial but correct coverage, less-specific wording, and failure to reproduce every valid_item are not Fact Check errors. Fact Check = 0 only when the summary makes an explicit claim that conflicts with the event-sheet context for this slot."
+    },
+    {
+      "id": "fact_check_is_slot_local",
+      "title": "Fact Check is limited to the selected slot and its fact_check_fields.",
+      "text": "Fact Check only evaluates explicit summary claims that bear on the selected slot's fact_check_fields. The event-sheet excerpt is reference source context for those fields; it does not create additional fields, additional gates, or a summary-wide factual audit. If a summary claim does not bear on this slot's fact_check_fields, do not use it to set this slot's Fact Check = 0. Do not reclassify content into other slots."
+    },
+    {
+      "id": "fact_check_conflict_patterns",
+      "title": "Common ways an explicit claim can contradict the event sheet.",
+      "text": "Common contradiction patterns include: (1) wrong number, date, duration, amount, vote count, or threshold; (2) a correct value attached to the wrong meaning, object, condition, baseline, stage, or item; (3) wrong temporal status, such as completed vs pending, already occurred vs future effect, or existing condition vs hypothetical concern; (4) wrong decision, action, disposition, or procedural stage; (5) wrong actor, acted-on item, target, place, group, scope, jurisdiction, or legal instrument; (6) wrong condition, cause, causal direction, exception, or comparison baseline. These are conflict patterns, not required checklists. Apply them only to explicit claims that bear on this slot's fact_check_fields."
+    }
+  ],
+  "slots": {
+    "T": {
+      "name": "Topic/Framing",
+      "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "meaning": "The summary names the substantive subject as a noun or noun phrase identifying the policy area, issue, or matter being discussed. Procedural form, bare agenda labels, motion numbers, or bill identifiers without the substantive subject do not satisfy this label."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "meaning": "The summary shows what policy move was being pursued for the subject. This may be a direction-bearing verb such as update, revise, clarify, expand, restrict, launch, phase out, or consolidate. It may also be a concrete rule effect showing how the target would change, such as defaulting, extending, narrowing, broadening, adding, removing, changing a threshold, or changing a deadline. Procedural disposition, such as approved, adopted, recommended, or passed, is not policy direction."
+            },
+            {
+              "name": "target",
+              "meaning": "The summary identifies the target to which the policy direction applies: the entity, group, area, process, rule set, or scope the direction is aimed at. A bare direction without a target does not satisfy this label."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "subject",
+            "check": "Compare the substantive subject stated by the summary with the source-supported subject.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different policy area, issue, or matter as the subject."
+          },
+          {
+            "name": "policy_direction",
+            "check": "Compare the policy direction stated by the summary with the source-supported direction.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a direction that reverses or replaces the source-supported policy move."
+          },
+          {
+            "name": "target",
+            "check": "Compare the target stated by the summary with the source-supported target.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different entity, group, area, process, jurisdiction, or scope as the target."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "O",
+          "boundary": "T captures substantive framing: subject, policy direction, and target. O captures the body's procedural disposition on an acted-on item.",
+          "this_slot_when": "Use T when the content explains what policy matter was being discussed, what substantive policy move was being pursued, and what target the move applied to.",
+          "other_slot_when": "Use O when the content states what the body did to an item, such as approved, adopted, passed, rejected, referred, deferred, or recommended.",
+          "authoring_note": "For T, do not let procedural-only references such as hearing, vote, agenda item, motion number, bill number, approval, adoption, or recommendation satisfy subject or policy direction unless the substantive policy matter is also visible."
+        },
+        {
+          "other_slot": "N",
+          "boundary": "T captures substantive framing: subject, policy direction, and target. N captures operative payload attached to an action. These are not mutually exclusive: the same summary clause can satisfy T as a policy direction or rule effect and also satisfy N as an operative payload when the QA criteria for each slot support that use.",
+          "this_slot_when": "Use T when the content shows what policy move was being pursued for the subject and target, including a concrete rule effect that shows how the target would change.",
+          "other_slot_when": "Use N when the content states what an action, ordinance, amendment, motion, or recommendation specifically required, limited, set, included, scoped, or conditioned.",
+          "authoring_note": "Do not write T not_match or load_bearing_scope as if payload details are automatically excluded from T. If a concrete rule effect is used for T policy_direction, write the T match to allow it. Use N QA separately for the same clause when it is also action-carried payload."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "T captures what the discussion was about and what policy move was pursued. B captures agenda-setting background or precipitating context that shaped the current item or discussion.",
+          "this_slot_when": "Use T when the content identifies the substantive issue, policy direction, or target.",
+          "other_slot_when": "Use B when the content states prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.",
+          "authoring_note": "Do not treat background context as T policy direction unless the summary also states the policy move being pursued."
+        },
+        {
+          "other_slot": "S",
+          "boundary": "T captures substantive framing. S captures a recurring problem-side concern theme.",
+          "this_slot_when": "Use T when the content frames the policy subject, direction, and target.",
+          "other_slot_when": "Use S when the content names what participants were concerned about in problem-side terms, especially a recurring or shared concern theme.",
+          "authoring_note": "Do not use generic concern language as T policy direction. Conversely, do not require a T summary to preserve recurring concern content."
+        }
+      ]
+    },
+    "O": {
+      "name": "Outcome/Position",
+      "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "meaning": "The summary states that the body took a disposition on an acted-on item. Discussion, questioning, support, or hearing activity alone does not satisfy this label. This label does not decide whether the disposition is at the source-supported procedural stage. If a recognizable disposition is tied to an acted-on item, Presence may pass even when the stage is wrong. Stage accuracy is evaluated in Fact Check."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "meaning": "The acted-on item is identified specifically enough that the reader can tell which item was acted on. Formal numbers or labels are sufficient but not required. A substantive description also satisfies this label when it distinguishes the item within the sampled segment. A generic referent alone is not enough."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "actor",
+            "check": "If the summary explicitly states an acting body or actor, compare that actor with the source-supported actor. Actor is separate from procedural stage. A broad institutional label alone is not a stage replacement when surrounding context preserves the source-supported stage. Omitting the actor alone is not a Fact Check error.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly attributes the disposition to a different actor or body than the source supports."
+          },
+          {
+            "name": "procedural_stage",
+            "check": "If the summary states or clearly implies where the acted-on item stands in the institutional processing path, compare that procedural stage with the source-supported stage. Stage is separate from actor and disposition result. Examples of stages include committee recommendation, referral, first reading, final body passage, enactment, ballot placement, voter approval, and later scheduled handling.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states or clearly implies that the acted-on item reached a procedural stage different from the source-supported stage. This includes stating that a body completed a later legal, electoral, or administrative effect when the source supports only recommendation, referral, advancement, or another earlier-stage action."
+          },
+          {
+            "name": "disposition_result",
+            "check": "Compare the result the summary says occurred at the stated or implied stage with the source-supported result. Result is separate from procedural stage: recommended, adopted, referred, rejected, deferred, passed, enacted, and similar verbs can describe different results depending on stage.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a result different from the source-supported result for the same acted-on item and stage."
+          },
+          {
+            "name": "acted_on_item",
+            "check": "Compare the acted-on item stated by the summary with the source-supported acted-on item.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different ordinance, motion, amendment, appointment, resolution, agenda item, or other acted-on item than the source supports."
+          },
+          {
+            "name": "vote_result",
+            "check": "If the summary states a vote count, unanimity, passed/failed vote result, or attaches a vote result to a disposition, compare both the value and the disposition/stage it is attached to against the event-sheet source context.",
+            "fail_condition": "Fact Check = 0 if the summary states a different vote result, attaches a source-supported vote result to the wrong disposition or procedural stage, or states the vote result with materially ambiguous attachment to the acted-on action."
+          }
+        ],
+        "rules": [
+          {
+            "id": "broad_body_label_not_enough_for_stage_replacement",
+            "text": "A broad body label such as Council, Board, or Commission is not by itself a procedural-stage replacement. If the same relevant context states recommendation, referral, advancement, later handling, or pending final action, that context may clarify the broad label."
+          },
+          {
+            "id": "later_effect_claim_requires_supported_stage",
+            "text": "If a summary says the acted-on item itself completed a later legal, electoral, or administrative effect, treat that as a procedural_stage or disposition_result claim. If the source supports only recommendation, referral, advancement, or another earlier-stage action, the later-effect claim meets the procedural_stage or disposition_result fail_condition. This includes describing a body as having completed the legal effect of an item that was only recommended or advanced in the sampled segment."
+          },
+          {
+            "id": "correct_clause_does_not_cancel_wrong_stage_claim",
+            "text": "A source-consistent clause about recommendation, referral, advancement, or later handling does not cancel a separate explicit claim that the same acted-on item reached an unsupported later stage or completed an unsupported legal/electoral/administrative effect."
+          }
+        ]
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "T",
+          "boundary": "O captures the body's disposition on an acted-on item. T captures the substantive framing of the discussion.",
+          "this_slot_when": "Use O when the content states that a body approved, passed, adopted, rejected, deferred, referred, continued, authorized, directed, or recommended an item.",
+          "other_slot_when": "Use T when the content states the policy subject, direction, and target rather than the body's action on an item.",
+          "authoring_note": "O match/not_match should not require substantive policy direction; item specificity can come from a formal identifier or a substantive description, but the slot is still about the disposition."
+        },
+        {
+          "other_slot": "N",
+          "boundary": "O is the action shell. N is the operative payload attached to the action.",
+          "this_slot_when": "Use O when the content states the disposition itself and the item acted on.",
+          "other_slot_when": "Use N when the content states what the action required, limited, set, included, exempted, scoped, or conditioned.",
+          "authoring_note": "If an O summary includes payload details, keep O focused on the disposition and leave payload correctness to N or QA fact-check roles only when the payload is part of the O claim being protected."
+        },
+        {
+          "other_slot": "U",
+          "boundary": "O captures what the body did in-session. U captures what remained pending or unresolved after the action or discussion.",
+          "this_slot_when": "Use O for the completed in-session disposition, such as a vote, recommendation, referral, approval, passage, or adoption.",
+          "other_slot_when": "Use U for later handling, pending final action, future review, report-back, unresolved implementation, or an explicit return path.",
+          "authoring_note": "When a summary states both a disposition and later handling, write O and U boundaries so that a correct pending clause does not erase an explicit wrong-stage O claim."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "O captures what the body did. B captures the background context that shaped the item.",
+          "this_slot_when": "Use O when the content states the body's disposition.",
+          "other_slot_when": "Use B when the content states the prompting condition for the item.",
+          "authoring_note": "Do not let a remedy or disposition stand in for the underlying B problem. Conversely, do not require B material to satisfy O."
+        }
+      ]
+    },
+    "B": {
+      "name": "Agenda-Setting Background / Precipitating Context",
+      "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "meaning": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item. The context must be stated as its own proposition; it need not include an explicit agenda-necessity statement."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "meaning": "The prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background is visibly connected to the current item, the form of the proposal, a revision, the discussion frame, or how the item was handled. An explicit “why now” or agenda-necessity statement is not required."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "trigger_condition",
+            "check": "Compare the prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background stated by the summary with the source-supported background for the item.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, affected process, or triggering background than the source supports."
+          },
+          {
+            "name": "agenda_connection",
+            "check": "If the summary states the relation between the background context and the current item, compare that relation with the source-supported relation.",
+            "fail_condition": "Fact Check = 0 if the summary reverses the relation or explicitly states a different reason or background relation for why the current item took its form or came forward."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "T",
+          "boundary": "B captures agenda-setting background or precipitating context. T captures the substantive policy framing.",
+          "this_slot_when": "Use B when the content states prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.",
+          "other_slot_when": "Use T when the content identifies the substantive policy subject, direction, or target.",
+          "authoring_note": "Do not write B match language that merely repeats the T subject or policy direction. B should state background context as its own proposition, but it does not need to state explicit agenda necessity."
+        },
+        {
+          "other_slot": "N",
+          "boundary": "B captures background context that shaped the item. N captures the operative payload of the action.",
+          "this_slot_when": "Use B when the content states prior context, problem, deadline, barrier, mediation, revision, or other background that shaped the current item.",
+          "other_slot_when": "Use N when the content states what the action itself required, changed, limited, or set.",
+          "authoring_note": "Do not treat the remedy, requirement, or rule change as B unless the summary also states background context that shaped the item. Do not require an explicit agenda-necessity statement for B."
+        },
+        {
+          "other_slot": "L",
+          "boundary": "B captures background context for the item. L captures concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff content.",
+          "this_slot_when": "Use B when the content explains the prior context or formation path for the item, even if the background is a process defect or system-level issue.",
+          "other_slot_when": "Use L when the content states a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff.",
+          "authoring_note": "A general process defect can be B. It can also be L if the summary states it as a concrete concern or obstacle. Do not require local-anchor specificity for L Presence."
+        },
+        {
+          "other_slot": "S",
+          "boundary": "B captures agenda-setting background or precipitating context. S captures a recurring problem-side concern theme in the discussion.",
+          "this_slot_when": "Use B when the content states the prior context or condition that shaped the item or its form.",
+          "other_slot_when": "Use S when the content names a concern theme discussed or synthesized across the discussion, even if that concern was not the formal background for the item.",
+          "authoring_note": "A concern can be discussed repeatedly without being B. A background context can be stated once and still be B."
+        }
+      ]
+    },
+    "N": {
+      "name": "Outcome-Near Condition / Operative Payload",
+      "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "meaning": "The summary expresses a condition, requirement, scope, restriction, number, date, or other payload as attached to the action or acted-on item. Single-sentence attachment and anaphora-linked adjacent sentences count. A free-standing background description that requires the reader to reconstruct the action-payload link does not satisfy this label. A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "any_of",
+          "label_set": "options",
+          "labels": [
+            {
+              "name": "number",
+              "meaning": "The attached payload includes an identifiable numeric quantity, such as a count, amount, percentage, duration, height, vote threshold, or other measured value."
+            },
+            {
+              "name": "named_requirement",
+              "meaning": "The attached payload includes an identifiable named requirement, restriction, condition, or carve-out."
+            },
+            {
+              "name": "scope_boundary",
+              "meaning": "The attached payload includes an identifiable scope boundary, such as a geographic boundary, categorical boundary, population-specific boundary, or other boundary defining what the payload applies to."
+            },
+            {
+              "name": "date_cutoff",
+              "meaning": "The attached payload includes an identifiable date cutoff or time boundary, such as an effective date, expiration date, sunset clause, or deadline."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "payload_carrier",
+            "check": "Compare which action, ordinance, motion, amendment, resolution, or acted-on item the summary attaches the payload to with the source-supported carrier.",
+            "fail_condition": "Fact Check = 0 if the summary attaches the payload to a different action or item than the source supports."
+          },
+          {
+            "name": "payload_content",
+            "check": "Compare the requirement, condition, restriction, permission, rule, or operative content stated by the summary with the source-supported payload content.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states different operative payload content than the source supports."
+          },
+          {
+            "name": "payload_scope",
+            "check": "If the summary states the payload's applicable scope, category, population, geography, process, or target, compare it with the source-supported scope.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different scope or target for the payload than the source supports."
+          },
+          {
+            "name": "payload_scalar_or_baseline",
+            "check": "If the summary states a number, date, duration, threshold, amount, deadline, or baseline comparison attached to the payload, compare both value and role binding.",
+            "fail_condition": "Fact Check = 0 if the summary states a wrong value, attaches a correct value to the wrong payload role, states an unsupported baseline, or makes the scalar role binding materially ambiguous."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "O",
+          "boundary": "N captures payload attached to an action. O captures the action shell.",
+          "this_slot_when": "Use N when the content states conditions, requirements, restrictions, permissions, scope, numbers, dates, deadlines, thresholds, or other operative content carried by the action.",
+          "other_slot_when": "Use O when the content states that the body approved, passed, adopted, rejected, deferred, referred, recommended, or otherwise disposed of an item.",
+          "authoring_note": "Do not require O disposition language alone to satisfy N. N match language should make the payload-to-action link visible."
+        },
+        {
+          "other_slot": "T",
+          "boundary": "N captures operative payload attached to an action. T captures substantive framing. These are not mutually exclusive when a concrete rule effect both shows policy direction and is carried by the action.",
+          "this_slot_when": "Use N when the content is attached to an action or acted-on item as a requirement, condition, scope, number, date, threshold, or other operative term.",
+          "other_slot_when": "Use T when the same content functions as the policy direction or target of the discussion.",
+          "authoring_note": "Do not use this boundary to make the judge choose between T and N. Author each slot independently; if the same clause satisfies both QA criteria, both slots may pass."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "N captures what the action does. B captures background context that shaped the item or discussion.",
+          "this_slot_when": "Use N when the content states the rule, condition, requirement, or restriction adopted, proposed, or carried by the action.",
+          "other_slot_when": "Use B when the content states prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.",
+          "authoring_note": "Do not treat a stated background context as N unless the action turns that context into an operative requirement or condition."
+        },
+        {
+          "other_slot": "U",
+          "boundary": "N captures operative payload. U captures later pending work or unresolved handling.",
+          "this_slot_when": "Use N for requirements, conditions, deadlines, report obligations, or review steps that are part of the action's payload.",
+          "other_slot_when": "Use U when the content says that work, review, final action, implementation, or another item remains pending after the action or discussion.",
+          "authoring_note": "If a report-back or review is itself part of the action's terms, it can be N. If the focus is that later handling remains unfinished, it is U."
+        }
+      ]
+    },
+    "L": {
+      "name": "Concrete Concern",
+      "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "meaning": "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition. The concern must be asserted on the problem/concern side, not merely appear as the object of a solution-side verb. A named place, named group, or bounded area is not required for Presence."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "meaning": "The concern content is specific enough that the reader can tell what the concern, harm, obstacle, difficulty, loss, risk, or tradeoff is about. A generic statement that concerns were raised, without saying what the concern was, does not satisfy this label. A named place, named group, or bounded area is not required for Presence."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "obstacle_content",
+            "check": "Compare the concern, harm, obstacle, difficulty, loss, risk, tradeoff, constraint, or problem stated by the summary with the source-supported concern content.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern, harm, obstacle, difficulty, loss, risk, tradeoff, or constraint than the source supports."
+          },
+          {
+            "name": "local_anchor",
+            "check": "If the summary explicitly ties the concern to a named place, named group, bounded area, or other local anchor, compare that anchor with the source-supported local anchor. Local anchor is not required for Presence.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different named place, named group, bounded area, or local anchor for the concern than the source supports."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "S",
+          "boundary": "L captures concrete concern content. S captures a recurring problem-side concern theme.",
+          "this_slot_when": "Use L when the content states a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence.",
+          "other_slot_when": "Use S when the content is grounded as a recurring or shared concern theme across the discussion.",
+          "authoring_note": "For L, match/not_match should make the concrete concern content visible. Do not require a named place, named group, or bounded area for L Presence; local anchoring can be diagnostic when available."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "L captures concrete concern content. B captures background context that shaped the item.",
+          "this_slot_when": "Use L when the summary states a concrete concern, harm, obstacle, difficulty, loss, risk, tradeoff, exposure, or inability.",
+          "other_slot_when": "Use B when the summary states prior context, process, mediation, revision, deadline, or other background that shaped the item.",
+          "authoring_note": "Do not require local anchor specificity for L Presence. Do not treat background context alone as L unless it is stated as concern, harm, obstacle, difficulty, loss, risk, or tradeoff content."
+        },
+        {
+          "other_slot": "T",
+          "boundary": "L captures concrete concern content. T captures policy framing.",
+          "this_slot_when": "Use L when the content states a concrete problem-side concern, harm, obstacle, difficulty, loss, risk, or tradeoff.",
+          "other_slot_when": "Use T when the content states the substantive policy subject, direction, and target.",
+          "authoring_note": "Do not treat a policy target as a concrete concern unless the summary states concern, harm, obstacle, difficulty, loss, risk, or tradeoff content."
+        }
+      ]
+    },
+    "S": {
+      "name": "Shared Concern Synthesis",
+      "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "meaning": "The summary names the concern theme in problem-side language: problem, difficulty, deficiency, gap, fragmentation, dissatisfaction, negative state, or similar language. Problem vocabulary that appears only as the object or modifier of a solution-side verb does not satisfy this label. Generic debate language alone does not satisfy it."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "specific_content",
+              "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and QA match require."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "concern_theme",
+            "check": "Compare the recurring concern theme stated by the summary with the source-supported concern theme.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern theme than the source supports."
+          },
+          {
+            "name": "concern_content",
+            "check": "If the summary states the concern's object, contrast, mechanism, tension, tradeoff, risk, consequence, affected group, or scope, compare it with the source-supported concern content.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states different concern content, such as a different object, contrast, mechanism, risk, affected group, or scope, than the source supports."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "L",
+          "boundary": "S captures a recurring problem-side concern theme. L captures concrete concern content.",
+          "this_slot_when": "Use S when the content is grounded as a recurring or shared concern theme across the discussion.",
+          "other_slot_when": "Use L when the content states a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence.",
+          "authoring_note": "For S, match/not_match should focus on problem-side concern language and identifiable concern content. For L, do not require a local anchor as a Presence gate."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "S captures a concern theme. B captures the agenda-setting background or precipitating context.",
+          "this_slot_when": "Use S when the content names what participants were worried about, criticized, or treated as a recurring problem-side theme.",
+          "other_slot_when": "Use B when the content states the background context that shaped the item or discussion.",
+          "authoring_note": "Do not treat every concern as B background. B requires background context that shaped the item or discussion."
+        },
+        {
+          "other_slot": "T",
+          "boundary": "S captures concern-side content. T captures policy framing.",
+          "this_slot_when": "Use S when the content names the problem-side concern theme or tension.",
+          "other_slot_when": "Use T when the content names the policy subject, direction, and target.",
+          "authoring_note": "Do not treat generic debate or concern language as T policy direction. Do not require T-style policy move for S."
+        },
+        {
+          "other_slot": "N",
+          "boundary": "S captures concerns about policy effects or tradeoffs. N captures operative payload.",
+          "this_slot_when": "Use S when the content states a concern, risk, tension, tradeoff, or criticized mechanism.",
+          "other_slot_when": "Use N when the content states a requirement, condition, restriction, number, scope, or deadline carried by the action.",
+          "authoring_note": "Do not treat a criticized policy effect as N unless it is stated as an operative payload of the action."
+        }
+      ]
+    },
+    "U": {
+      "name": "Unresolved Tail / Future Return Path",
+      "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+      "presence_structure": {
+        "topic_gate": {
+          "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "meaning": "The summary explicitly includes an unfinished, pending, or still-open state marker, such as remained pending, still to be decided, unresolved, remained in committee, held over, or final action remained pending. If the item is identifiable and the summary says it will proceed to a later full-body meeting, final action, final passage, or final consideration, that can satisfy pendingness. A bare directive without an explicit pendingness marker does not satisfy this label."
+            }
+          ]
+        },
+        "quality_gate": {
+          "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+          "operator": "all_of",
+          "label_set": "fixed",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "meaning": "What specifically remains pending is identifiable. The reader can tell which item, workstream, or issue is unfinished, not merely that something is unfinished."
+            },
+            {
+              "name": "handling_path_visible",
+              "meaning": "A concrete handling path is visible. This can be a future event path, process path, or institutional custody path. A path to a later full-body meeting, final action, final passage, or final consideration can satisfy this label if the item is identifiable. Bare future orientation does not satisfy it unless tied to an identifiable body, item, custody, review, hearing, or process path. An unrelated future item, post-adjournment announcement, or future hearing for a different item does not satisfy U."
+            }
+          ]
+        }
+      },
+      "fact_check_structure": {
+        "roles": [
+          {
+            "name": "pending_status",
+            "check": "Compare the unfinished, pending, or resolved status stated by the summary with the source-supported status.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a resolved or completed status for a source-supported pending item, or a pending status for a source-supported completed item."
+          },
+          {
+            "name": "pending_item",
+            "check": "Compare what the summary says is pending with the source-supported pending item.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a different item, issue, workstream, ordinance, motion, or follow-up object as pending."
+          },
+          {
+            "name": "handling_path",
+            "check": "If the summary states a future meeting, body, committee, process, report-back, review, drafting, or custody path, compare it with the source-supported handling path.",
+            "fail_condition": "Fact Check = 0 if the summary explicitly states a handling path, body, process, date, destination, or custody path different from the source-supported path."
+          }
+        ],
+        "rules": []
+      },
+      "boundaries_with_other_slots": [
+        {
+          "other_slot": "O",
+          "boundary": "U captures unfinishedness after action or discussion. O captures the in-session disposition.",
+          "this_slot_when": "Use U when the content states that final action, review, report-back, implementation, drafting, further deliberation, or another workstream remains pending.",
+          "other_slot_when": "Use O when the content states what the body did in the meeting.",
+          "authoring_note": "Do not use a completed action alone as U. Do not let a later-handling path erase a conflicting completed-stage claim for O Fact Check."
+        },
+        {
+          "other_slot": "N",
+          "boundary": "U captures pending handling. N captures operative payload, including future-facing requirements when they are part of the action.",
+          "this_slot_when": "Use U when the focus is that something remains unfinished or must return later.",
+          "other_slot_when": "Use N when the future-facing item is a requirement, condition, deadline, or review step carried by the action.",
+          "authoring_note": "If a report-back is part of the action's terms, it can be N. If the summary emphasizes the remaining unresolved path, it can be U."
+        },
+        {
+          "other_slot": "B",
+          "boundary": "U captures what remains after action. B captures background context that shaped the item or discussion.",
+          "this_slot_when": "Use U for pending work, later handling, or unresolved tail after the action or discussion.",
+          "other_slot_when": "Use B for prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.",
+          "authoring_note": "Do not treat an unresolved tail as the agenda-setting background unless it is also the condition that shaped the item."
+        }
+      ]
+    }
+  },
+  "version_history": [
+    {
+      "version": 23,
+      "summary": "Removed topic_requirement and quality_requirement fields and integrated Presence criteria into topic_gate and quality_gate label meanings. Removed slot_specific_presence_rules and integrated necessary content into label meanings. Introduced Fact Check as a first-class structure with check and fail_condition for each role. Removed duplication between global rules and slot-specific roles. Moved scalar details into the global scalar rule. Limited Fact Check roles to factual components of claims that pass through Topic Gate and Quality Gate."
+    },
+    {
+      "version": 24,
+      "summary": "Retired slots.md as an independent source of truth. Added boundaries_with_other_slots inside each slot so cross-slot distinctions are available to event-sheet authoring, QA authoring, validation, and judge/Zetch-style prompts from the same source as slot definitions, Presence gates, and Fact Check roles."
+    },
+    {
+      "version": 25,
+      "summary": "Marked cross-slot boundaries as authoring/validation-only and removed them from judge-render policy. Clarified O procedural_stage as a factual role distinct from actor and disposition_result, including earlier-stage recommendation versus completed later legal/electoral/administrative effects. Added judge_render_policy and removed judge_note from boundaries."
+    },
+    {
+      "version": 26,
+      "summary": "Introduced slot-local source_facts_for_fact_check as the event-sheet source facts passed to judge bundles. QA is responsible for gates and protected-role routing; event_sheet source facts provide the source-side role values and attachments for Fact Check. Boundaries remain authoring/validation-only and are not rendered to the judge."
+    },
+    {
+      "version": 27,
+      "summary": "Renamed protected-role wording toward fact_check_fields/checked_fields, clarified that slot-local event-sheet excerpts are source context rather than additional Fact Check fields, limited scalar checking to values relevant to the selected slot fact_check_target, and added O vote_result as a slot-level Fact Check role so vote attachment is rendered from O semantics rather than hardcoded in the common judge prompt."
+    },
+    {
+      "version": 28,
+      "summary": "Simplified global Fact Check to three rules: contradiction-not-completeness, slot-local fact_check_fields, and common conflict patterns. Removed separate scalar relevance and temporal relevance rules; scalar and temporal issues are handled as conflict patterns only when they bear on fact_check_fields. Deprecated protected_roles/load_bearing_scope wording in favor of fact_check_fields/fact_check_notes."
+    },
+    {
+      "version": 29,
+      "summary": "Clarified Presence gate separation from factual value correctness. Redefined B from why-now trigger to agenda-setting background / precipitating context. Redefined L as concrete concern and removed local-anchor-as-Presence requirement; local anchoring remains diagnostic or Fact Check context when explicitly stated."
+    }
+  ],
+  "judge_render_policy": {
+    "render_to_judge": [
+      "slot_purpose",
+      "presence_structure",
+      "fact_check_structure",
+      "global_fact_check_rules",
+      "meeting_specific_qa_gates",
+      "fact_check_target",
+      "slot_local_event_sheet_excerpt",
+      "score_examples"
+    ],
+    "do_not_render_to_judge": [
+      "boundaries_with_other_slots",
+      "event_sheet_boundary_notes",
+      "validation_only_notes",
+      "raw_full_event_sheet",
+      "raw_transcript"
+    ],
+    "principle": "The judge evaluates the specified slot using QA gates plus the selected slot's event-sheet excerpt as source context. Cross-slot boundaries are authoring/validation tools and must not be used by the judge to reclassify content. The event-sheet excerpt does not create additional fact-check fields; Fact Check = 0 can be based only on explicit claims relevant to this slot's fact_check_fields."
+  }
+}

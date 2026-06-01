@@ -1,0 +1,625 @@
+segment_id: "MTG14"
+segment_dir: "14_DenverCityCouncil_01092017"
+meeting_id: "DenverCityCouncil_01092017"
+uid: "DenverCityCouncil_01092017_16-1071"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # event_sheet_14
+  
+  ```yaml
+  metadata:
+    event_sheet_version: 29
+    source_transcript: transcript_14.txt
+    slot_semantics_source: slot_semantics.json
+    protocol_source: event_sheet_protocol.md
+    sampled_segment_scope: >-
+      Denver City Council public hearing, final consideration, and vote on Council Bill 1071,
+      series of 2016, concerning the 2003 voter-initiated mill levy for services and supports
+      for people with intellectual and developmental disabilities.
+    transcript_notes:
+      - The transcript appears to contain automated-transcription artifacts. Terms such as "mill library" and "Malawi" are interpreted as "mill levy" where the context is the dedicated mill levy.
+      - "CCP" is interpreted as "CCB" where the context is community centered/community center boards.
+      - Speaker name spellings are preserved only when sufficiently clear from the transcript.
+  ```
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >-
+    The segment framed Council Bill 1071 as an ordinance to codify and revise Denver's
+    administration of the 2003 Initiative 100 mill levy for services and supports for people
+    with intellectual and developmental disabilities, including permitted uses of proceeds,
+    administrative-cost limits, residency alignment, monitoring, Medicaid matching-fund use,
+    and potential contracting beyond Rocky Mountain Human Services.
+  
+  evidence:
+    - >-
+      Staff described the bill as addressing a 2003 voter-initiated ordinance that established
+      a mill dedicated to the community center board for people with intellectual and
+      developmental disabilities.
+    - >-
+      Staff said the auditor's recommendations included codifying Initiative 100, determining
+      questionable spending of mill levy funds, limiting administrative costs to 15%, addressing
+      residency requirements, and monitoring the contract quarterly.
+    - >-
+      Staff described proposed ordinance elements: deposit proceeds in the Human Services
+      Special Revenue Fund, define permitted uses, allow contracts for services and supports
+      through the Community Center Board or another service entity, authorize transfers for
+      Medicaid waiver matching funds, and set administrative-expense limits.
+  
+  source_vocabulary:
+    - "Council Bill 1071 series of 2016"
+    - "voter initiated ordinance from 2003"
+    - "community center board for people with intellectual and developmental disabilities"
+    - "mill levy funds"
+    - "codify Initiative 100"
+    - "questionable spending"
+    - "administrative costs to 15%"
+    - "residency requirements"
+    - "monitor the contract on a quarterly basis"
+    - "contract for services and supports"
+    - "any other entity that provides such services"
+    - "matching federal funds"
+  
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - >-
+        The policy subject and administrative context already existed before the hearing.
+      - >-
+        The policy changes described in the ordinance would have future effect after passage.
+      - >-
+        The Council action on the bill was completed in this segment.
+  
+  source_context_for_fact_check:
+    subject: >-
+      Administration and codification of the 2003 Denver mill levy for services and supports
+      for people with intellectual and developmental disabilities.
+    policy_direction:
+      - Codify Initiative 100 in city ordinance.
+      - Define permitted uses of mill levy proceeds.
+      - Limit administrative expenses to less than 15%.
+      - Align residency requirements with state rules and requirements.
+      - Provide for contract monitoring and accountability.
+      - Permit contracting for services and supports through the Community Center Board or through other service-providing entities.
+      - Permit transfer of funds to the Colorado Department of Health Care Policy and Financing for Medicaid waiver matching funds.
+    target:
+      - Mill levy proceeds.
+      - Services and supports for people with intellectual and developmental disabilities.
+      - Department of Human Services administration and contracting.
+      - Rocky Mountain Human Services / Denver Options and possible other service providers.
+    not_supported_as_topic:
+      - A general Medicaid reform bill unrelated to Denver's mill levy.
+      - A bill about a different council item such as Council Bill 1125.
+  
+  answer_locality:
+    locality_type: distributed_but_staff_report_primary
+    notes:
+      - The strongest topic framing appears in the staff report near the beginning of the public hearing.
+      - Public testimony and council questions add detail about conflict-free case management, direct services, and public input.
+  
+  marker_presence:
+    subject_identified: explicit
+    policy_direction: explicit
+    target: explicit
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >-
+    Denver City Council placed Council Bill 1071 on final consideration and do-pass posture,
+    held the public hearing, closed the hearing, and passed Council Bill 1071 by a 12-aye vote.
+  
+  evidence:
+    - >-
+      Councilman Flynn moved that Council Bill 1071, series of 2016, be placed upon final
+      consideration and do pass.
+    - >-
+      The public hearing on Council Bill 1071 was opened, speakers testified, council members
+      asked questions and commented, and the hearing was closed.
+    - >-
+      The roll call concluded with "12 Eyes" / 12 ayes, and the president announced that
+      Council Bill 1071 had passed.
+  
+  source_vocabulary:
+    - "placed upon final consideration and do pass"
+    - "Public hearing of Council Bill 1071 is open"
+    - "public hearing ... is closed"
+    - "Roll Call"
+    - "12 Eyes"
+    - "Council built in 71 has passed"
+  
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The disposition happened during the sampled segment.
+      - The relevant procedural stage is final Council passage in this segment, not merely committee recommendation.
+  
+  source_context_for_fact_check:
+    actor: Denver City Council
+    procedural_stage: final consideration / final Council passage after a public hearing
+    disposition_result:
+      - Council Bill 1071 was moved for final consideration and do pass.
+      - Council Bill 1071 passed at the end of the segment.
+    acted_on_item:
+      - Council Bill 1071, series of 2016.
+    vote_result:
+      value: 12 ayes
+      attached_to: final Council passage of Council Bill 1071
+    temporal_status:
+      - completed_in_session for Council action on Council Bill 1071
+    not_supported:
+      - That Council Bill 1071 failed.
+      - That the segment's final vote was on Council Bill 1125.
+      - That the vote count was tied only to committee action.
+  
+  answer_locality:
+    locality_type: concentrated_at_opening_and_end
+    notes:
+      - The motion occurs at the opening of the item.
+      - The vote and passage announcement occur near the end of the segment.
+  
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: explicit
+    acted_on_item_specific: explicit
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >-
+    Council Bill 1071 came forward against the background of the 2003 voter-initiated
+    Initiative 100 mill levy and a Denver City Auditor report on mill levy spending through
+    the Department of Human Services and Rocky Mountain Human Services / Denver Options.
+    The auditor's findings and recommendations shaped the bill's focus on codification,
+    questionable spending, administrative limits, residency requirements, and quarterly
+    contract monitoring.
+  
+  evidence:
+    - >-
+      Staff explained that a 2003 voter-initiated ordinance established the dedicated mill
+      levy for the community center board serving people with intellectual and developmental
+      disabilities.
+    - >-
+      Staff said the Denver City Auditor had audited and released findings on spending of
+      the mill levy funds that passed through DHS and had historically been contracted to
+      Rocky Mountain Human Services / Denver Options.
+    - >-
+      Staff listed auditor recommendations that the proposed ordinance was trying to address.
+    - >-
+      Public speakers referred back to the December 14 committee meeting, the auditor's
+      findings, concerns about sole discretion over funds, and conflict-free case management.
+  
+  source_vocabulary:
+    - "short background"
+    - "voter initiated ordinance from 2003"
+    - "Denver City Auditor"
+    - "audited and released his report of findings"
+    - "spending of the mill levy funds"
+    - "contracted to the state designated community center board Rocky Mountain Human Services"
+    - "Denver options"
+    - "auditor made a series of recommendations"
+    - "December 14th meeting"
+    - "conflict free case management"
+  
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+    notes:
+      - The 2003 voter initiative and the auditor report predated the segment.
+      - The existing DHS/Rocky Mountain Human Services contracting arrangement and spending concerns were active background for the bill.
+  
+  source_context_for_fact_check:
+    trigger_condition:
+      - The 2003 voter-initiated mill levy existed as the starting legal/funding background.
+      - The Denver City Auditor's report identified spending/accountability issues with mill levy funds.
+      - Auditor recommendations included codification, questionable-spending definition, administrative-cost limits, residency handling, and quarterly monitoring.
+      - Public comment also framed the item against concerns about RMHS's sole role, case management/direct service conflict, and prior committee discussions.
+    agenda_connection:
+      - Staff explicitly said the ordinance tried to address the auditor's recommendations.
+      - The public hearing was required before passage of the ordinance.
+      - Public testimony used the background to argue for direct service access, competition, accountability, and clarity on administrative expenses.
+    not_supported:
+      - That the auditor report itself enacted the ordinance.
+      - That the background was unrelated to mill levy spending or RMHS/DHS administration.
+  
+  answer_locality:
+    locality_type: distributed
+    notes:
+      - The formal background appears in the staff report.
+      - Additional precipitating context appears in public testimony and council questions.
+  
+  marker_presence:
+    precipitating_context_visible: explicit
+    connected_to_current_item_or_form: explicit
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >-
+    The operative payload of Council Bill 1071 included depositing mill levy proceeds in the
+    Human Services Special Revenue Fund, defining permitted uses for services and supports,
+    allowing contracting through the Community Center Board or other service-providing entities,
+    authorizing transfer of funds to the Colorado Department of Health Care Policy and Financing
+    for federal Medicaid waiver matching funds, setting administrative expenses below 15%,
+    aligning residency requirements with state rules, and reserving no more than 0.75% of total
+    collections for DHS administration and enforcement.
+  
+  evidence:
+    - >-
+      Staff said the proposed ordinance directs mill levy proceeds to the Human Services
+      Special Revenue Fund and defines permitted uses, including contracts for services and
+      supports through the Community Center Board or any other entity that provides such services.
+    - >-
+      Staff said the ordinance authorizes transfer of funds to the Colorado Department of
+      Health Care Policy and Financing for matching federal funds to provide Medicaid-approved
+      waiver services.
+    - >-
+      Staff said the ordinance sets an administrative-expenses limit to less than 15%.
+    - >-
+      Staff said residency requirements were aligned with state rules and requirements.
+    - >-
+      Staff said the ordinance includes a carve-out of mill levy revenues not to exceed 0.75%
+      of total collections for DHS to administer and enforce, equating to about $114,000 annually
+      under current mill levy revenues of roughly $14.5 million.
+  
+  source_vocabulary:
+    - "proceeds from the mill levy"
+    - "Human Services Special Revenue Fund"
+    - "permitted use of the proceeds"
+    - "contract for services and supports"
+    - "Community Center Board"
+    - "any other entity that provides such services"
+    - "Colorado Department of Health Care Policy and financing"
+    - "matching federal funds"
+    - "Medicaid approved waiver services"
+    - "administrative expenses limit to less than 15%"
+    - "residency requirements"
+    - "carve out of mill levy revenues"
+    - "not to exceed 75/100 of a percent"
+    - "$114,000 annually"
+    - "$14.5 million"
+  
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - currently_existing
+      - completed_in_session
+    notes:
+      - The ordinance payload would govern future administration after passage.
+      - Some elements, such as deposit into the Human Services Special Revenue Fund, were described as matching existing practice.
+      - Council completed passage of the carrier bill during the segment.
+  
+  source_context_for_fact_check:
+    payload_carrier: Council Bill 1071, series of 2016
+    payload_content:
+      - Direct mill levy proceeds to the Human Services Special Revenue Fund.
+      - Define permitted uses of proceeds for services and supports.
+      - Permit contracting through the Community Center Board.
+      - Permit contracting through other entities that provide such services.
+      - Authorize transfer of funds to the Colorado Department of Health Care Policy and Financing to receive matching federal funds for Medicaid-approved waiver services.
+      - Align residency requirements with state rules and requirements.
+      - Include a DHS administration/enforcement carve-out from mill levy revenues.
+    payload_scope:
+      - Mill levy proceeds connected to services/supports for people with intellectual and developmental disabilities.
+      - DHS administration and enforcement of the mill levy program.
+      - Community Center Board and possible other service-providing entities.
+    numeric_values:
+      - value: less than 15%
+        meaning: administrative-expenses limit in the ordinance
+      - value: not to exceed 0.75% of total collections
+        meaning: DHS administration/enforcement carve-out from mill levy revenues
+      - value: about $114,000 annually
+        meaning: approximate dollar equivalent of the DHS carve-out under current revenue assumptions
+      - value: roughly $14.5 million
+        meaning: current mill levy revenue assumption used to estimate the DHS carve-out
+    not_supported:
+      - That the ordinance required all funds to remain exclusively with Rocky Mountain Human Services.
+      - That the ordinance eliminated Medicaid waiver services.
+      - That the 15% figure was the DHS 0.75% carve-out.
+      - That the 0.75% carve-out applied to all administrative expenses by every contractor.
+  
+  answer_locality:
+    locality_type: concentrated_in_staff_report
+    notes:
+      - The operative payload is stated most directly in the staff presentation before public testimony.
+  
+  marker_presence:
+    payload_attached_to_action: explicit
+    quality_labels_present:
+      - number
+      - named_requirement
+      - scope_boundary
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >-
+    Speakers and council members raised concrete concerns that mill levy money was being
+    spent too heavily on case management, administration, or agency operating costs rather
+    than direct supports; that Rocky Mountain Human Services' sole or dual role created
+    conflicts and limited competition; that reporting and public input were insufficient;
+    and that conflict-free case management had not yet been implemented.
+  
+  evidence:
+    - >-
+      Ann Peyton said she was concerned that about 56% of mill levy money across waivers was
+      spent on case management over and above Medicaid-billed case management, and argued that
+      mill levy dollars should go to programming rather than supplant billable operating expenses.
+    - >-
+      Don Caldwell said sole discretion over mill levy funds created conflict, said funds had
+      been discussed as being withheld without public comment or vote, and criticized insufficient
+      substantive reporting and alleged losses covered with mill levy funds.
+    - >-
+      Rob Hernandez described conflict-free case management as requiring separation between
+      case management and direct services, and said the current arrangement created potential
+      steering conflicts.
+    - >-
+      Maureen Welch argued that property taxes were supposed to benefit individuals directly,
+      not fund a large agency, and called for more choice, reduced conflict of interest, and
+      clearer administrative-overhead definition.
+    - >-
+      a councilwoman said the city lacked its own mechanism for ongoing input from the
+      contractor's customer base and asked DHS to investigate best practices for such input.
+  
+  source_vocabulary:
+    - "concern for me"
+    - "56% across all waivers"
+    - "over and above the case management amount"
+    - "mill levy dollars should be going to programing"
+    - "supplanting billable operating expenses"
+    - "sole discretion creates conflict"
+    - "no substantive data"
+    - "conflict free case management"
+    - "separate case management services from direct services"
+    - "robust competition"
+    - "more choice"
+    - "administrative overhead"
+    - "public input"
+    - "customer experiences"
+  
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - recurring_concern
+      - hypothetical_or_risk
+      - pending_future_handling
+    notes:
+      - The concerns were raised during public comment and council questioning as current or recurring issues.
+      - Some conflict statements were framed as potential conflicts or risks rather than proven misconduct in this segment.
+      - Some remedies, such as a city feedback mechanism and later contracting choices, remained pending.
+  
+  source_context_for_fact_check:
+    obstacle_content:
+      - Public-comment concern that mill levy funds were being used for case management or agency operating costs instead of direct programming/supports.
+      - Public-comment concern that Rocky Mountain Human Services' sole or dual role created conflict-of-interest or steering risks.
+      - Public-comment concern that reporting did not give enough substantive detail about how funds were used.
+      - Public-comment and council concern that administrative overhead needed clearer definition and public input.
+      - Council concern that the city needed its own mechanism to hear from the contractor's customer base before future contract decisions.
+    local_anchor:
+      - Denver mill levy funds.
+      - Department of Human Services.
+      - Rocky Mountain Human Services / Denver Options.
+      - Denver residents and individuals/families receiving intellectual and developmental disability services.
+    numeric_or_claim_values_as_speaker_claims:
+      - value: about 56%
+        attached_to: Ann Peyton's concern about mill levy money spent on case management across waivers
+      - value: several million dollars
+        attached_to: Don Caldwell's statement about funds being withheld that year
+      - value: 12% of billable contractor units
+        attached_to: Don Caldwell's claim about Rocky Mountain billing in the residential program
+      - value: 60 hours of case management per customer
+        attached_to: Don Caldwell's claim about case management in the residential program
+      - value: $800,000
+        attached_to: Don Caldwell's claim about losses covered with mill levy funds
+      - value: almost $9,000 per each of 92 customers
+        attached_to: Don Caldwell's claim about residential-program funding impact
+    evidentiary_status_notes:
+      - These concern-side claims are source-supported as statements made in the segment.
+      - The event sheet does not independently verify each public-comment allegation as true beyond its occurrence in the transcript.
+    not_supported:
+      - That every council member accepted each public-comment allegation as independently proven.
+      - That the transcript resolved all concerns about administrative overhead, reporting, or conflict-free case management.
+  
+  answer_locality:
+    locality_type: distributed_in_public_comment_and_council_questions
+    notes:
+      - Concern content is distributed across Ann Peyton, Don Caldwell, Rob Hernandez, Maureen Welch, a councilwoman, and Councilman Espinosa.
+  
+  marker_presence:
+    concrete_concern_language: explicit
+    specific_concern_content: explicit
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >-
+    A recurring concern theme across the hearing was that Denver's mill levy administration
+    needed more accountability, transparency, competition, and direct benefit to individuals,
+    because the existing or historical arrangement with Rocky Mountain Human Services was
+    perceived as creating conflicts, limiting choice, and allowing too much money to remain
+    in case management or administrative channels.
+  
+  evidence:
+    - >-
+      Multiple public speakers supported the bill while calling for direct access to funds,
+      competitive bidding, more provider choice, and clearer limits on administrative or case
+      management spending.
+    - >-
+      Rob Hernandez and Councilman Flynn discussed the federal conflict-free case management
+      rule and the separation of case management from direct services.
+    - >-
+      a councilwoman said financial monitoring was important but different from the city's
+      need to hear from the contractor's customer base about policy and future contract decisions.
+    - >-
+      Councilman Espinosa echoed the need for feedback and conflict-free case management, saying
+      DHS needed to follow through to meet the ordinance's intent.
+  
+  source_vocabulary:
+    - "competitive bidding"
+    - "robust marketplace of choices"
+    - "conflict free case management"
+    - "separate case management from direct services"
+    - "more choice"
+    - "reduce conflict of interest"
+    - "accountability"
+    - "transparency"
+    - "public input"
+    - "customer base"
+    - "follow through to meet the intent of this ordinance"
+  
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - The concern theme recurred across several speakers and council members.
+      - Several remedies remained implementation or oversight questions after passage.
+  
+  source_context_for_fact_check:
+    concern_theme: >-
+      Repeated concern over accountability, transparency, provider choice, conflict-free case
+      management, and ensuring mill levy funds directly benefit individuals with intellectual
+      and developmental disabilities.
+    concern_content:
+      - Concern that RMHS's case management and direct-service roles could create conflicts or steering risks.
+      - Concern that sole-contractor or sole-discretion arrangements limited competition and choice.
+      - Concern that mill levy funds should reach programming, direct services, or individual supports rather than operating overhead.
+      - Concern that the city needed a non-redundant public/customer feedback mechanism.
+      - Concern that DHS needed to follow through on the ordinance's latitude and intent.
+    not_supported:
+      - That the shared concern was opposition to serving people with intellectual and developmental disabilities.
+      - That the shared concern was only about one isolated speaker's personal service issue.
+      - That the segment concluded all accountability or conflict-free case management issues were fully resolved.
+  
+  answer_locality:
+    locality_type: distributed_across_hearing
+    notes:
+      - The shared theme is synthesized from repeated public testimony and council discussion rather than a single clause.
+  
+  marker_presence:
+    problem_side_concern: explicit
+    specific_content: explicit
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >-
+    Although Council Bill 1071 passed, several implementation and oversight questions remained
+    pending: DHS was not immediately planning to bid out services to other providers, Colorado's
+    conflict-free case management compliance required state action and could follow a long timeline,
+    DHS agreed to return to committee with a plan for city-level public input into mill levy spending,
+    and future contract negotiations with Rocky Mountain Human Services would address additional issues.
+  
+  evidence:
+    - >-
+      Jay Marine said DHS had built the ordinance to allow contracting with someone other than
+      the Community Center Board, but the department did not consider immediately bidding it out
+      because it saw efficiencies in one agency administering state, federal, and mill levy funds.
+    - >-
+      Jay Marine said the state legislature would need to act to bring Colorado statutes into
+      conformance with the federal conflict-free case management rule, and that Joint Budget
+      Committee options included timelines extending as far as 2022.
+    - >-
+      a councilwoman asked DHS to investigate best practices for ongoing city input from
+      the customer base before future contract decisions.
+    - >-
+      Jay Marine said he would come back to committee in the next month or two to share how DHS
+      would effectuate some type of public input into mill levy spending.
+    - >-
+      Councilman New noted that the Rocky Mountain Human Services contract expired at the end
+      of 2017 and that the new contract would provide an opportunity to address issues; Jay
+      Marine confirmed, and said City Council would see the contract.
+  
+  evidence_note: >-
+    The transcript says "Councilman now. Back" near the contract-expiration question; this appears
+    to refer to Councilman New based on the surrounding text, but the event sheet does not rely on
+    the exact speaker identity for the pending-status facts.
+  
+  source_vocabulary:
+    - "ability to contract with someone other than the community center board"
+    - "why ... not consider bidding it out"
+    - "not a quick fix"
+    - "as far as 2022"
+    - "best practices for that kind of input"
+    - "before key decisions are made about future contracts"
+    - "come back to committee"
+    - "next month or two"
+    - "some type of public input into mill levy spending"
+    - "contract ... ends at the conclusion of 2017"
+    - "new contract"
+    - "city council will see that contract"
+  
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - Final passage of the bill was completed in-session.
+      - Implementation, public-input design, contracting choices, state conflict-free case management compliance, and future contract review remained pending.
+  
+  source_context_for_fact_check:
+    pending_status:
+      - Council Bill 1071 itself passed during the segment.
+      - Immediate bidding out to other providers was not planned by DHS despite the ordinance allowing non-CCB contracting.
+      - State-level conflict-free case management conformance remained unresolved and required legislative/statutory action.
+      - A city mechanism for customer/public input into mill levy spending remained to be developed.
+      - Future RMHS contract negotiation/review remained ahead before or by the end of 2017.
+    pending_item:
+      - DHS implementation choice about whether and when to contract with providers beyond the CCB/RMHS.
+      - State conflict-free case management compliance.
+      - City-level customer/public input mechanism for mill levy spending and future contract decisions.
+      - Future Rocky Mountain Human Services contract terms and City Council review.
+    handling_path:
+      - DHS to return to committee in the next month or two with a way to effectuate public input into mill levy spending.
+      - State legislature / state process needed for conflict-free case management statutory conformance.
+      - End-of-2017 contract negotiation and later City Council review of the RMHS contract.
+    not_supported:
+      - That competitive bidding began immediately in the segment.
+      - That Colorado had already completed conflict-free case management compliance.
+      - That the public-input mechanism had already been designed or adopted during the hearing.
+      - That the RMHS contract had already been renegotiated during the hearing.
+  
+  answer_locality:
+    locality_type: concentrated_in_council_questions_after_public_comment
+    notes:
+      - Pending-path content appears mainly in the exchange among Councilman Flynn, Jay Marine, a councilwoman, Councilman Espinosa, and the final contract discussion.
+  
+  marker_presence:
+    pendingness_marker: explicit
+    pending_item_identifiable: explicit
+    handling_path_visible: explicit
+  ```

@@ -1,0 +1,826 @@
+segment_id: "MTG37"
+segment_dir: "37_AlamedaCC_03302021"
+meeting_id: "AlamedaCC_03302021"
+uid: "AlamedaCC_03302021_2021-8247"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "artifact": "qa_37.json",
+    "meeting_order": 37,
+    "language": "English",
+    "qa_authoring_protocol_version": 30,
+    "qa_validation_protocol_version": 31,
+    "slot_semantics_version": 29,
+    "source_event_sheet": "event_sheet_37.md",
+    "source_slot_semantics": "slot_semantics.json",
+    "source_qa_authoring_protocol": "qa_authoring.md",
+    "source_qa_validation_protocol": "qa_validation.md",
+    "authoring_notes": [
+      "Presence is determined only by Topic Gate and Quality Gate.",
+      "Fact Check is a contradiction check against the selected slot's fact_check_fields, not a completeness check.",
+      "Presence is not lowered merely because a stated value is source-incorrect; wrong values are handled by Fact Check when they bear on fact_check_fields.",
+      "Deprecated protected_roles and load_bearing_scope fields are not used.",
+      "Updated for QA Validation Protocol v31: slot-level topic_gate/quality_gate, label, answer_locality, and marker_presence are present.",
+      "Presence gate wording avoids making exact source-correct numbers, dates, vote counts, legal instruments, stages, or actors a condition for Presence."
+    ],
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T — Topic/Framing",
+        "name": "Topic/Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names Alameda Police Department's emergency response vehicle, armored vehicle, or ballistic armored tactical transport vehicle as the substantive matter under discussion.",
+                "Names the issue as whether Alameda should retain, sell, or govern the use of APD's emergency response vehicle."
+              ],
+              "not_match": [
+                "Mentions only a police agenda item, public comment, a vote, or a motion without naming the emergency response vehicle or armored vehicle.",
+                "Frames the subject as a generic police budget item, protest policy, or public safety discussion without identifying the APD vehicle."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "States that the pursued policy direction was to retain, sell, or otherwise decide the future of the vehicle.",
+                "States that the discussion sought to narrow, formalize, clarify, or limit the policy governing the vehicle's deployment.",
+                "States both parts of the policy framing: the vehicle-retention/sale question and more explicit deployment rules."
+              ],
+              "not_match": [
+                "States only that the Council discussed, heard, or voted on the vehicle, without saying what policy move was being pursued.",
+                "Uses only procedural language such as approved, failed, or carried without describing retention, sale, or policy limits.",
+                "Describes the vehicle's existence or history but not the policy move under consideration."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies APD's emergency response vehicle as the target of the retain-or-sell decision.",
+                "Identifies the rules, discretion, storage, deployment, mutual-aid use, or use policy for APD's vehicle as the target of policy clarification.",
+                "Identifies both the vehicle and its future deployment/use policy as the target."
+              ],
+              "not_match": [
+                "States a policy direction without saying what vehicle, rule set, department, or deployment process it applies to.",
+                "Targets general police reform, citywide budgeting, or all police equipment without tying the direction to APD's emergency response vehicle or its use policy."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was APD's emergency response vehicle / armored tactical transport vehicle.",
+            "The source-supported policy direction included retaining the vehicle as a safety/rescue tool.",
+            "The discussion also pursued narrower or clearer policy rules for future deployment/use.",
+            "The target was APD's vehicle and the rules/discretion governing its use, storage, deployment, and mutual-aid use."
+          ],
+          "fact_check_notes": [
+            "The vehicle was framed as armored but not armed; the event sheet does not support describing it as an offensive armed weapon or tank with its own weapon system.",
+            "The segment did not decide to use the vehicle for peaceful protests or ordinary crowd control.",
+            "Omission of either retention or policy clarification is not a Fact Check error unless the summary states a conflicting direction or target."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment framed a policy decision about whether Alameda should retain or sell APD's emergency response vehicle and whether deployment should be governed by a more explicit policy.",
+          "source_context_for_fact_check": {
+            "subject": "Alameda Police Department's emergency response vehicle / armored tactical transport vehicle.",
+            "policy_direction": [
+              "Staff and the final council majority pursued retention of the vehicle.",
+              "The discussion also pursued policy limits or clarification for future deployment."
+            ],
+            "target": [
+              "APD's emergency response vehicle.",
+              "Rules and discretion governing APD's use, storage, deployment, and mutual-aid use of the vehicle."
+            ],
+            "temporal_status": "The vehicle already existed; the segment addressed future retention and future-use governance."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council held public comment on a police matter.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because the substantive subject is not identified as APD's emergency response vehicle or armored vehicle."
+          },
+          {
+            "summary": "The Council discussed APD's emergency response vehicle.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is identified, but the summary does not state a policy direction or target beyond the bare subject."
+          },
+          {
+            "summary": "The Council considered retaining APD's emergency response vehicle while formalizing limits on when APD could deploy it.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary identifies the subject, policy direction, and target, and it is source-consistent."
+          },
+          {
+            "summary": "The Council framed the item as keeping APD's armed tank so it could be used for peaceful protests and routine crowd control.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because the summary gives a subject, direction, and target, but Fact Check fails because the event sheet does not support an armed tank or deployment for peaceful protests/routine crowd control."
+          }
+        ],
+        "answer_locality": "The T content is distributed across the agenda introduction, the interim police chief's staff presentation, and the council deliberation on whether to retain the vehicle and adopt a Berkeley-style use policy.",
+        "marker_presence": [
+          "agenda item introduced as options for APD's emergency response vehicle",
+          "chief's framing of the vehicle's purpose",
+          "council motions using \"retain,\" \"sell,\" and \"policy\" language"
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "O — Outcome/Position",
+        "name": "Outcome/Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that the body or Council voted on, carried, failed, approved, adopted, retained, rejected, or otherwise disposed of an item concerning the emergency response vehicle.",
+                "States that a motion failed and/or a later motion carried on the armored vehicle or a vehicle-retention/use-policy package.",
+                "States a recognizable disposition tied to the emergency response vehicle, a prior sale-direction reversal, or a retention package with policy conditions."
+              ],
+              "not_match": [
+                "Mentions only discussion, public comment, staff presentation, or debate without any vote, motion, decision, or disposition.",
+                "States support or opposition to the vehicle without saying the body acted on an item.",
+                "Mentions a vote or motion without connecting it to any acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item as APD's emergency response vehicle or armored vehicle.",
+                "Identifies the acted-on item as a vehicle-retention motion/package with a use-policy baseline and later policy review.",
+                "Distinguishes an earlier failed sale-reversal motion from a later successful retention/use-policy motion, without requiring exact vote counts for Presence."
+              ],
+              "not_match": [
+                "Says only that the Council voted on 'the item,' 'the issue,' or 'the motion' without enough substantive description to tell which item was acted on.",
+                "States only that a vote occurred, without identifying the vehicle, sale-reversal issue, retention package, or policy-baseline component."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Alameda City Council.",
+            "The procedural stage was an in-session council direction/action on a regular agenda item, not a completed sale transaction or later administrative implementation.",
+            "The first motion to simply reverse the June 2020 sale direction failed 2-3.",
+            "The later final motion to retain the vehicle, use/adopt the Berkeley Policy 706 baseline, and return for later policy review carried 3-2.",
+            "The acted-on item was APD's emergency response vehicle / armored vehicle and the related emergency response vehicle use policy."
+          ],
+          "fact_check_notes": [
+            "Vote counts must be attached to the correct motion and stage: 2-3 failed for the first bare reversal motion; 3-2 carried for the final retention/policy-baseline package.",
+            "A broad reference to the Council is not a Fact Check error if the context preserves the in-session action stage.",
+            "Do not treat the later pending policy return as contradicting the completed in-session retention vote; the two statuses apply to different aspects."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Council completed an in-session disposition: an initial motion to reverse the prior sale direction failed 2-3, and a later motion carried 3-2 to retain the vehicle, use Berkeley Policy 706 as the policy baseline, and return later for review.",
+          "source_context_for_fact_check": {
+            "actor": "Alameda City Council",
+            "procedural_stage": "In-session council direction/action on a regular agenda item.",
+            "disposition_result": [
+              "First bare reversal motion failed 2-3.",
+              "Final retention/Berkeley-policy/later-return motion carried 3-2."
+            ],
+            "acted_on_item": [
+              "APD emergency response vehicle / armored vehicle.",
+              "Emergency response vehicle use policy involving Berkeley Policy 706 as a policy baseline."
+            ],
+            "temporal_status": "Council vote completed in-session; later policy refinement remained pending."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Participants debated whether the vehicle was useful or harmful.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because debate alone is not a body disposition on an acted-on item."
+          },
+          {
+            "summary": "The Council voted on the item.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is too generic to identify the emergency response vehicle or policy package."
+          },
+          {
+            "summary": "The Council's first motion to reverse the prior sale direction failed 2-3, and the later motion to retain the vehicle with the Berkeley Policy 706 baseline carried 3-2.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition, item, vote results, and stage are specific and source-consistent."
+          },
+          {
+            "summary": "The Council voted 3-2 to sell the emergency response vehicle immediately and complete the sale.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a disposition on the vehicle is specific, but Fact Check fails because the source-supported final result was retention with policy review, not immediate sale completion."
+          }
+        ],
+        "answer_locality": "The O content appears near the end of the segment, after public comment and council debate, where multiple motions are made, amended, voted on, and announced.",
+        "marker_presence": [
+          "\"motion\"",
+          "\"second\"",
+          "\"roll call vote\"",
+          "\"fails 2 to 3\"",
+          "\"carries 3 to 2\""
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "B — Agenda-Setting Background / Precipitating Context",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States that the item came back after a prior Council direction to sell the vehicle.",
+                "States that the prior direction arose in a budget, police-reform, protest, or police-budget-reduction context.",
+                "States that APD or staff wanted to revisit the matter because the vehicle's safety rationale, operational role, or use history had not been fully considered.",
+                "States background such as prior purchase/delivery history, replacement of an older vehicle, limited local use, frequent mutual-aid use, or public concern over militarized policing/racial justice."
+              ],
+              "not_match": [
+                "States only the current retention decision, final vote, or policy payload without any prior event, condition, process, problem, opposition, use history, or other background.",
+                "States only generic public concern or debate without identifying background that shaped why the item returned or how it was discussed.",
+                "Treats the final remedy or policy condition itself as the background without stating prior context."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Connects the prior sale direction to the current reconsideration of whether to sell or retain the emergency response vehicle.",
+                "Connects staff's safety/use-history rationale to why the vehicle item returned for Council consideration.",
+                "Connects militarized-policing/racial-justice concern, low local use, or mutual-aid use history to the current debate, opposition, or policy-limit discussion.",
+                "Connects prior acquisition, delivery, or replacement history to the background for the vehicle under current review."
+              ],
+              "not_match": [
+                "Lists an earlier fact about policing or the vehicle without making its connection to the current item, reconsideration, proposal form, or discussion frame visible.",
+                "Mentions the current agenda item but does not show how the prior event, condition, process, opposition, or use history shaped it.",
+                "Requires an explicit agenda-necessity or why-now statement even though the summary otherwise expresses connected background; that is not required."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The prior June 2020 Council direction to sell the vehicle occurred during a budget/police-reform context.",
+            "APD/staff asked to revisit the matter because they believed the safety rationale and operational role had not been fully considered.",
+            "Public concern over militarized policing and racial justice shaped opposition to retention.",
+            "Past use history, including few Alameda uses and many mutual-aid deployments, shaped the debate over necessity.",
+            "The current item was a reconsideration of whether to sell or retain the emergency response vehicle, with policy discussion emerging to address discretion, protests, crowd-control, and appropriate deployment concerns."
+          ],
+          "fact_check_notes": [
+            "The source background is already occurred for the prior sale direction, budget context, purchase/delivery, and past uses.",
+            "The summary does not need to mention every background fact; partial but correct background is sufficient.",
+            "Do not require an explicit 'why now' formulation if the prior context is visibly connected to the current item or proposal form."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The item returned after a prior June 2020 sale direction during budget and police-reform discussions, with staff seeking to present the vehicle's safety rationale and operational history and with public concern over militarized policing shaping the debate.",
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "Prior June 2020 Council direction to sell the vehicle during a budget/police-reform context.",
+              "APD/staff request to revisit because safety rationale and operational role had not been fully considered.",
+              "Public concern over militarized policing and racial justice.",
+              "Past use history, including few Alameda uses and many mutual-aid deployments."
+            ],
+            "agenda_connection": [
+              "Current item reconsidered whether to sell or retain the vehicle.",
+              "Policy discussion emerged to address discretion, protests, crowd control, and appropriate deployment."
+            ],
+            "temporal_status": "Background facts were already occurred, while the vehicle currently existed at the time of the segment."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council voted to retain the emergency response vehicle.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because the summary gives the current disposition but no precipitating or background context."
+          },
+          {
+            "summary": "The armored vehicle had been discussed by the Council before.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A prior context is visible, but its connection to the current reconsideration or proposal form is too thin for Quality Gate."
+          },
+          {
+            "summary": "The item returned because the Council had previously directed sale of the vehicle during June 2020 budget and police-reform discussions, and staff wanted the safety rationale and use history considered before deciding whether to sell or retain it.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The prior background and its connection to the current item are explicit and source-consistent."
+          },
+          {
+            "summary": "The item came back because APD had already sold the vehicle in 2013 and needed Council permission to buy it back.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a connected precipitating context is stated, but Fact Check fails because the event sheet says the vehicle was delivered in 2013 and still existed, not sold and repurchased."
+          }
+        ],
+        "answer_locality": "The B content is dispersed across the staff presentation, public comment, and council clarification questions about why the matter returned after the June 2020 direction.",
+        "marker_presence": [
+          "\"continued twice\"",
+          "\"June 2020\"",
+          "\"budget\"",
+          "\"present the other side\"",
+          "\"approved the purchase\"",
+          "\"took delivery\"",
+          "use-count discussion"
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "N — Outcome-Near Condition / Operative Payload",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "States that the final Council action retained the vehicle with a policy condition or policy baseline attached.",
+                "States that a named or source-identifiable use-policy baseline was adopted, used, or accepted as the immediate policy baseline for APD's emergency response vehicle.",
+                "States that the action directed staff to return with policy review, policy recommendations, narrowed incident-category language, or further public/council review.",
+                "Uses anaphora or adjacent sentences to attach the policy baseline or future policy return to the final retention motion."
+              ],
+              "not_match": [
+                "States only that the Council voted, approved, carried, or retained the vehicle without identifying any condition, requirement, policy baseline, scope, or later review term attached to the action.",
+                "States background about other cities, high-risk incident scenarios, or protests without linking it to the final Council action or acted-on item.",
+                "States only a vote count or disposition result without a payload term."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "named_requirement",
+              "match": [
+                "Names or clearly identifies the use-policy baseline as part of the action.",
+                "Names or clearly identifies a staff-return requirement for further policy recommendations, policy review, narrowed incident-category language, or public/council input as part of the action."
+              ],
+              "not_match": [
+                "Says only that there was a policy condition or future review without identifying any policy baseline, staff return, incident-category language, or other named/source-identifiable requirement."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "States that the payload applies to APD's emergency response vehicle or to the policy governing that vehicle's deployment/use.",
+                "States that the future policy review concerns the emergency-response-vehicle policy, not all police operations or all police equipment."
+              ],
+              "not_match": [
+                "Describes a policy payload but leaves unclear whether it applies to the emergency response vehicle, all police equipment, protests generally, or another scope."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the final Council motion on retaining APD's emergency response vehicle.",
+            "The final motion retained the emergency response vehicle.",
+            "The final motion used/adopted Berkeley Police Department Policy 706 as the immediate policy baseline, with Alameda-specific adjustments such as storage-location references as needed.",
+            "The final motion directed staff to return for further policy consideration and to include consideration of active-shooter-focused language.",
+            "The payload applied to APD's emergency response vehicle and the policy governing its deployment/use, not to all police equipment generally.",
+            "No numeric operational threshold was adopted as payload; the 3-2 vote count belongs to O, not to the operative payload."
+          ],
+          "fact_check_notes": [
+            "Further policy review remained pending, while retention and use/adoption of the Berkeley policy baseline were accepted in-session as part of the retention package.",
+            "A summary may mention only one source-consistent payload component and still pass Fact Check if it does not contradict the event sheet.",
+            "If a summary states a number, threshold, or baseline as payload, check both the value and what role it is attached to."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The final Council action retained the vehicle and attached a policy payload: use Berkeley Police Department Policy 706 as the immediate baseline and have staff return for focused policy review, including possible active-shooter language and public/council input.",
+          "source_context_for_fact_check": {
+            "payload_carrier": "Final Council motion on retaining APD's emergency response vehicle.",
+            "payload_content": [
+              "Retain the emergency response vehicle.",
+              "Use/adopt Berkeley Police Department Policy 706 as the immediate policy baseline.",
+              "Direct staff to return for further policy consideration.",
+              "Include consideration of active-shooter-focused language.",
+              "Allow later public and Council review of other possible policy language."
+            ],
+            "payload_scope": "Applies to APD's emergency response vehicle and the policy governing its deployment/use; does not create a general policy for all police equipment.",
+            "payload_scalar_or_baseline": "No numeric operational threshold was adopted as payload; 3-2 is an O vote result, not a payload term.",
+            "temporal_status": "Retention and Berkeley baseline were completed in-session; later policy refinement remained pending."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council's final motion carried 3-2.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because a vote count alone is an O disposition detail, not an operative payload attached to the action."
+          },
+          {
+            "summary": "The final motion included a policy condition for the vehicle.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the action, but the named requirement or scope boundary is not specific enough for Quality Gate."
+          },
+          {
+            "summary": "The final motion retained APD's emergency response vehicle, used Berkeley Police Department Policy 706 as the immediate policy baseline, and directed staff to return with possible active-shooter-focused revisions.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the final action, includes a named requirement and scope, and is source-consistent."
+          },
+          {
+            "summary": "The final motion required APD to meet a ten-use annual threshold before keeping the vehicle and applied that threshold to all police equipment.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a specific payload and scope are stated, but Fact Check fails because the event sheet says no numeric operational threshold was adopted and the scope was the emergency response vehicle, not all police equipment."
+          }
+        ],
+        "answer_locality": "The N content is concentrated in the final council-motion negotiation, where the motion is modified to include Berkeley Policy 706, later staff return, and possible active-shooter language.",
+        "marker_presence": [
+          "\"retain the vehicle\"",
+          "\"adopting the Berkeley policy\"",
+          "\"come back\"",
+          "\"active shooter\"",
+          "\"policy 706\"",
+          "\"friendly amendment\""
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "L — Concrete Concern",
+        "name": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States a concern, risk, harm, obstacle, delay, intimidation, racial-justice harm, militarization concern, protest/crowd-control risk, low-use concern, or discretion problem involving the vehicle.",
+                "States support-side risk that officers, civilians, workers, or visitors could face armed suspects, active shooters, terrorism, or mass-casualty violence without immediate armored rescue capability.",
+                "States concern that borrowing a vehicle from another city could create dangerous delay.",
+                "States opposition-side concern about militarized policing, racial inequity, intimidating appearance, inappropriate protest/crowd-control presence, or overbroad police discretion."
+              ],
+              "not_match": [
+                "States only that people supported, opposed, debated, or commented on the vehicle without saying what concern, harm, obstacle, risk, or tradeoff was raised.",
+                "Mentions a solution-side policy limit or retention decision without asserting the underlying concern side.",
+                "Names a policy target, vote, or background context but not a concrete problem-side condition."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Specifies the concern content as delay in armored rescue or response if Alameda must borrow another vehicle.",
+                "Specifies active-shooter, armed-suspect, terrorism, mass-casualty, bleeding-victim, officer/civilian rescue, or life-safety risk.",
+                "Specifies militarized-policing symbolism, racial-justice harm, intimidating appearance, protest/crowd-control use, low local use, mutual-aid overuse, or overbroad police discretion.",
+                "States a concrete tradeoff between retaining a rare-use safety tool and avoiding community harm or intimidating policing."
+              ],
+              "not_match": [
+                "Says only that concerns, risks, or objections existed without identifying what the concern was about.",
+                "Uses generic phrases such as 'public safety concerns' or 'community concerns' without concrete content.",
+                "Requires or withholds Presence based only on whether a named place, named group, or bounded area is stated; local anchoring is not required for Presence."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Supporters raised concern that without a locally available armored vehicle, APD could face delay in rescuing civilians or officers or approaching armed-danger scenes.",
+            "The chief estimated that borrowing another city's vehicle would take at least about 20 minutes under ideal circumstances and could take longer depending on availability, operators, and Bay Area traffic.",
+            "Opponents raised concern that the vehicle could symbolize or contribute to militarized policing, racial inequity, intimidation, inappropriate protest/crowd-control presence, or excessive discretionary deployment.",
+            "Use-justification concern included that the vehicle had been used only a few times in Alameda while often loaned through mutual aid.",
+            "Local anchors included APD and Alameda residents/workers/visitors; other Bay Area cities and mutual-aid deployments were comparison or operational context."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence, but if the summary explicitly states a place, group, or bounded area, compare it against the event sheet.",
+            "The concern set includes both support-side safety delay concerns and opposition-side militarization/discretion concerns; a summary may correctly state either side or both.",
+            "Temporal status varies by concern: future violent incidents and mutual-aid delay are hypothetical/risk; militarization, racial justice, intimidation, protest-use, and discretion are recurring concerns; use-count history is already occurred."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Concrete concerns included support-side risk of dangerous delay without a locally available armored rescue vehicle and opposition-side concern about militarized policing, racial justice, intimidation, protest/crowd-control use, low Alameda use, and overbroad discretion.",
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Delay in rescuing civilians/officers or approaching armed-danger scenes without a local armored vehicle.",
+              "Militarized policing, racial inequity, intimidation, protest/crowd-control presence, excessive discretionary deployment.",
+              "Few Alameda uses and frequent mutual-aid deployments questioned local necessity."
+            ],
+            "local_anchor": [
+              "Alameda Police Department and Alameda residents/workers/visitors.",
+              "Other Bay Area cities and mutual-aid deployments as comparison or operational context.",
+              "Public commenters referenced neighborhoods, demonstrations, Oakland, Berkeley, and the MLK Day incident as examples or comparison points."
+            ],
+            "temporal_status": "Future violent incidents/delay are hypothetical or risk; militarization and discretion are recurring concerns; past use history already occurred."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Speakers had different views about the emergency response vehicle.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because the summary does not state a concrete concern, harm, obstacle, risk, or tradeoff."
+          },
+          {
+            "summary": "Some speakers said the vehicle was a problem.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side language is present, but the concern content is too generic to tell what the problem was about."
+          },
+          {
+            "summary": "Supporters warned that borrowing an armored vehicle could delay rescues during active-shooter or armed-suspect incidents, while opponents worried the vehicle symbolized militarized policing and could intimidate residents or be used too broadly.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary states specific concern content from both sides and does not contradict the event sheet."
+          },
+          {
+            "summary": "Opponents' main concern was that the vehicle had been used every week in Alameda protests and had already injured demonstrators.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a concrete concern is stated, but Fact Check fails because the event sheet supports low Alameda use and concern about possible protest/crowd-control use, not weekly protest use or actual injuries."
+          }
+        ],
+        "answer_locality": "The L content appears throughout staff answers, public comment, and council deliberation, especially in discussion of mutual-aid delay, active-shooter scenarios, racial justice, militarization, and policy limits.",
+        "marker_presence": [
+          "risk language around armed persons and active shooters",
+          "public comment using \"racial justice,\" \"militarized,\" and \"symbol\"",
+          "council concern about intimidation, discretion, and protest/crowd-control use"
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "S — Shared Concern Synthesis",
+        "name": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names the recurring concern theme in problem-side terms, such as tension, concern, harm, risk, militarization, intimidation, racial justice, low local use, overbroad discretion, or public-safety readiness for rare severe violence.",
+                "Frames the recurring theme as a tradeoff or tension between life-safety readiness and community harm from militarized/intimidating policing.",
+                "States that participants repeatedly worried whether the vehicle was a necessary rescue tool or an unnecessary/symbolically harmful piece of militarized equipment."
+              ],
+              "not_match": [
+                "States only the final policy compromise, vote, or retention decision without naming a recurring problem-side concern theme.",
+                "Mentions generic debate, disagreement, or controversy without problem-side concern language.",
+                "Uses only solution-side terms such as retain, adopt, narrow, or review without stating the concern or tension those proposals addressed."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies one side of the recurring theme as rare but severe public-safety scenarios involving armed suspects, active shooters, terrorism, mass casualties, or immediate armored rescue.",
+                "Identifies the other side as militarized policing, racial justice/community harm, intimidation, low local use, protest/crowd-control fears, or overbroad discretion.",
+                "States the synthesized contrast between safety readiness and community harm/militarization concerns."
+              ],
+              "not_match": [
+                "Says only that safety concerns, community concerns, or policy concerns recurred without specifying the object, contrast, risk, or criticized mechanism.",
+                "Mentions only one generic concern label without enough content to tell what the shared theme was about.",
+                "Requires evidence details or every downstream risk beyond the identifiable concern theme; those are not required for Quality Gate."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring theme was public-safety readiness versus militarized-policing/community-harm concerns around retaining APD's emergency response vehicle.",
+            "One side emphasized rare but severe armed-violence scenarios where immediate armored rescue could protect civilians and officers.",
+            "The other side emphasized racial justice, militarization, intimidation, low Alameda use, protest/crowd-control fears, and overbroad discretion.",
+            "The policy compromise attempted to retain the vehicle while limiting or clarifying deployment through Berkeley-policy-based rules and later review."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to explicitly state recurrence if it names the source-supported recurring concern theme in problem-side language.",
+            "The concern theme recurred across staff presentation, public comment, and council discussion.",
+            "Do not reclassify solution-side policy payload as S unless the summary states the concern-side theme or tension."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring theme was the tension between readiness for rare high-risk violence and community harm from militarized or intimidating policing.",
+          "source_context_for_fact_check": {
+            "concern_theme": "Public-safety readiness versus militarized-policing/community-harm concerns around retaining APD's emergency response vehicle.",
+            "concern_content": [
+              "Rare but severe armed-violence scenarios where immediate armored rescue could protect civilians and officers.",
+              "Racial justice, militarization, intimidation, low Alameda use, protest/crowd-control fears, and overbroad discretion.",
+              "Policy compromise to retain the vehicle while limiting or clarifying deployment through Berkeley-policy-based rules and later review."
+            ],
+            "temporal_status": "Recurring concern across the segment; future active-shooter/armed-suspect risks are hypothetical, while community concerns about militarized policing and discretion are currently existing."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council adopted a Berkeley-style policy for the emergency response vehicle.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because the summary states a policy payload, not a recurring problem-side concern theme."
+          },
+          {
+            "summary": "Participants repeatedly had concerns about the vehicle.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the concern content is too generic to identify the theme."
+          },
+          {
+            "summary": "The recurring theme was the tension between keeping an armored rescue tool for rare active-shooter or armed-suspect emergencies and avoiding community harm from militarized, intimidating, or racially harmful policing.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary names the recurring problem-side theme and its specific content, and it is source-consistent."
+          },
+          {
+            "summary": "The recurring concern theme was the cost of buying a new police vehicle versus the lack of parking at City Hall.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a specific concern theme is stated, but Fact Check fails because that theme is not supported by the event sheet."
+          }
+        ],
+        "answer_locality": "The S content is not confined to one exchange; it is synthesized from repeated statements by staff, public commenters, and councilmembers across the entire agenda item.",
+        "marker_presence": [
+          "repeated contrast between \"safety tool\" and \"militarization\"",
+          "repeated references to rare emergency use versus symbolic/community impact",
+          "repeated proposals to narrow or clarify policy"
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "U — Unresolved Tail / Future Return Path",
+        "name": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "States that after the final vote, detailed emergency-response-vehicle policy review, refinement, recommendations, or language remained pending or unfinished.",
+                "States that staff would come back or return to Council with policy recommendations, proposed language, incident-category-focused language, or further review.",
+                "States that the vehicle-retention question was resolved in-session but the detailed policy remained open for later handling."
+              ],
+              "not_match": [
+                "States only that the Council retained the vehicle or adopted a policy baseline, without saying anything remained pending or would return later.",
+                "States only a bare directive or future-oriented desire without an explicit pending, unfinished, return, or later-handling marker.",
+                "Mentions a future hearing, announcement, or unrelated future item not tied to the emergency-response-vehicle policy."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies the pending item as the emergency response vehicle use policy for APD.",
+                "Identifies the pending item as policy recommendations, policy revisions, incident-category-focused language, comparison with an outside or existing policy baseline, or other emergency-response-vehicle policy language.",
+                "Distinguishes the completed vehicle-retention vote from the still-pending detailed policy refinement."
+              ],
+              "not_match": [
+                "Says only that something would come back, further work remained, or staff had follow-up without identifying the policy, vehicle, language, recommendations, or workstream.",
+                "Makes it unclear whether the pending item is the vehicle-retention decision, the use policy, another police issue, or an unrelated agenda item."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "States that staff would return to the Council or body with policy recommendations or language for further discussion.",
+                "States that future review would compare outside policy models, existing internal policy, or proposed incident-category language.",
+                "States that the public and Council would have a later opportunity to consider other policy language or refinements."
+              ],
+              "not_match": [
+                "Mentions unresolved policy without a concrete path such as staff return, Council discussion, recommendations, proposed language, review, or public input.",
+                "Provides only bare future orientation, such as 'later' or 'in the future,' without an institutional custody or process path.",
+                "Gives a handling path for a different item."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Vehicle retention was decided in-session by the final 3-2 motion.",
+            "Further policy review/refinement remained pending after the vote.",
+            "The pending item was the emergency response vehicle use policy for APD, including possible active-shooter-focused language and comparison or revision using Berkeley Policy 706, Alameda's existing policy, and other policy suggestions.",
+            "The handling path was staff returning to the Alameda City Council with policy recommendations or language for further discussion.",
+            "Public and Council input on other policy models or changes was contemplated for the later return."
+          ],
+          "fact_check_notes": [
+            "Do not describe vehicle retention itself as still pending after the final vote; the retention question was resolved in-session.",
+            "Do not describe the detailed policy as fully resolved or finally completed if the summary is making a U claim; further review/refinement remained pending.",
+            "A summary may correctly state the unresolved policy return without repeating the 3-2 vote count."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "After the final vote, vehicle retention was resolved for the session, but detailed emergency-response-vehicle policy review remained pending and staff was expected to return to Council with recommendations or language.",
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "Vehicle retention was decided in-session by the final 3-2 motion.",
+              "Further policy review/refinement remained pending."
+            ],
+            "pending_item": [
+              "Emergency response vehicle use policy for APD.",
+              "Possible active-shooter-focused policy language.",
+              "Potential comparison or revision using Berkeley Policy 706, Alameda's existing policy, and other policy suggestions."
+            ],
+            "handling_path": [
+              "Staff would return to Alameda City Council with policy recommendations or language for further discussion.",
+              "Public and Council input on other policy models or changes was contemplated."
+            ],
+            "temporal_status": "Retention vote completed in-session; policy return/refinement pending future handling."
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council retained the emergency response vehicle by a final vote.",
+            "presence": 0,
+            "fact_check": "N/A",
+            "rationale": "Topic Gate fails because it states only the completed action and no pending or unfinished tail."
+          },
+          {
+            "summary": "Something about the vehicle would come back later.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is visible, but the pending item and handling path are too underspecified for Quality Gate."
+          },
+          {
+            "summary": "After the 3-2 retention vote, detailed policy refinement remained pending, with staff to return to the Alameda City Council with recommendations and possible active-shooter-focused language based on Berkeley Policy 706 and Alameda's existing policy.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The pending item and handling path are specific and source-consistent."
+          },
+          {
+            "summary": "After the vote, the vehicle sale itself remained pending before the Planning Commission, while the use policy was finally complete.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "Presence passes because a pending item and path are stated, but Fact Check fails because retention was resolved by Council and policy refinement—not vehicle sale before the Planning Commission—remained pending."
+          }
+        ],
+        "answer_locality": "The U content appears in the final motion-shaping discussion immediately before the successful roll-call vote.",
+        "marker_presence": [
+          "\"come back\"",
+          "\"staff comes back\"",
+          "\"proposed language\"",
+          "\"give the public an opportunity\"",
+          "\"further modification\""
+        ]
+      }
+    }
+  }

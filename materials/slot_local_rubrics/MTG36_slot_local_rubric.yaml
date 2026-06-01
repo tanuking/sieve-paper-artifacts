@@ -1,0 +1,1587 @@
+segment_id: "MTG36"
+segment_dir: "36_LongBeachCC_11012016"
+meeting_id: "LongBeachCC_11012016"
+uid: "LongBeachCC_11012016_16-0988"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "qa_protocol_version": 30,
+    "event_sheet_protocol_version": 29,
+    "slot_semantics_version": 29,
+    "language": "en",
+    "source_files": {
+      "event_sheet": "event_sheet_36.md",
+      "qa_authoring_protocol": "qa_authoring.md",
+      "slot_semantics": "slot_semantics.json",
+      "qa_validation_protocol": "qa_validation.md"
+    },
+    "meeting_order": 36,
+    "source_transcript": "transcript_36.txt",
+    "segment_item": "Item 18 — Queen Mary property / Urban Commons lease terms and financing",
+    "artifact_type": "qa_criteria_validated",
+    "slots": {
+      "T": {
+        "label": "T",
+        "name": "Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names the Queen Mary property, the Queen Mary lease, or the Queen Mary/Urban Commons arrangement as the substantive subject.",
+                  "Identifies the Queen Mary ship/property together with lease, repair funding, cruise operations, or surrounding commercial development."
+                ],
+                "not_match": [
+                  "Mentions only an agenda item, a council vote, a motion, or approval without naming the Queen Mary-related subject.",
+                  "Frames the segment as a generic procedural, budget, or redevelopment item with no Queen Mary / Urban Commons subject."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States a substantive move to revise, transition, or amend Queen Mary lease and financing terms with Urban Commons.",
+                  "States a substantive move to fund or front-fund urgent Queen Mary repairs, support cruise operations, or enable development around the ship."
+                ],
+                "not_match": [
+                  "Only says the Council approved or discussed something without explaining the substantive lease, financing, repair, cruise, or development move.",
+                  "Treats procedural passage itself as the policy direction."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the target as the Queen Mary ship/property, the lease relationship, passenger-facility arrangements, repair funding, or commercial development around the ship.",
+                  "Makes clear that the policy move applies to the Queen Mary lease/repair/development package rather than an unrelated city program."
+                ],
+                "not_match": [
+                  "States a policy move without saying what property, lease relationship, facility, development area, or repair program it applies to.",
+                  "Identifies only the Council or the vote as the target."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was the Queen Mary property lease, repair funding, and related Carnival/Urban Commons arrangements.",
+            "The policy direction included approval of revised or new lease terms with Urban Commons.",
+            "The direction included creating or front-funding a repair fund for urgent Queen Mary repairs.",
+            "The direction included supporting Carnival's expanded cruise operations and an eventual replacement passenger facility.",
+            "The target included the Queen Mary ship and surrounding land, Urban Commons lease obligations and revenue-sharing terms, and Carnival passenger-facility arrangements."
+          ],
+          "fact_check_notes": [
+            "Do not treat the bare fact of Council approval as sufficient policy direction for T.",
+            "A summary may omit some parts of the package without failing Fact Check, as long as it does not contradict the stated subject, direction, or target."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The discussion framed the policy matter as approval of revised Queen Mary lease and financing terms with Urban Commons so the city could preserve and repair the Queen Mary, support Carnival cruise operations, and enable commercial development around the ship.\n",
+          "evidence": [
+            "Tonight is a real epic evening regarding the Queen Mary property.",
+            "This basically transitions the lease to Urban Commons...",
+            "The lease terms are ... concerning the physical condition of the Queen Mary and the need for urgent repairs.",
+            "The city believes that these changes to the new lease ... are consistent with the city's priorities...",
+            "Commercial development of the land surrounding the Queen Mary ... is integral to the long term viability of the city's historic asset."
+          ],
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "future_effect",
+              "pending_future_handling",
+              "completed_in_session"
+            ],
+            "notes": [
+              "The Queen Mary property and lease relationship were existing conditions during the segment.",
+              "The proposed lease terms and financing would have future effects for repairs, Carnival facilities, and development.",
+              "The Council completed in-session action by carrying the motion at the end of the segment."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "subject": "Queen Mary property lease, repair funding, and related Carnival/Urban Commons arrangements.",
+            "policy_direction": [
+              "approve revised/new lease terms with Urban Commons",
+              "create/front-fund a repair fund for urgent Queen Mary repairs",
+              "support Carnival's expanded cruise operations and eventual replacement passenger facility",
+              "preserve the ship and enable visitor-serving commercial development around it"
+            ],
+            "target": [
+              "Queen Mary ship and surrounding land",
+              "Urban Commons lease obligations and revenue-sharing terms",
+              "Carnival passenger facility and passenger-fee revenue stream"
+            ],
+            "exclusions_or_cautions": [
+              "The topic was not a general redevelopment item unrelated to the Queen Mary.",
+              "Procedural approval alone belongs to O; the substantive framing here is the lease/repair/development package."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council held a vote on Item 18.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "Procedural-only wording does not identify the substantive Queen Mary subject."
+          },
+          {
+            "summary": "The discussion concerned the Queen Mary property.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "The subject is visible, but the policy direction and target-specific move are not stated."
+          },
+          {
+            "summary": "The discussion concerned approving revised Queen Mary lease and financing terms with Urban Commons to preserve and repair the ship, support Carnival cruise operations, and enable surrounding commercial development.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The subject, policy direction, and targets match the event-sheet framing."
+          },
+          {
+            "summary": "The discussion concerned selling the Queen Mary to Carnival and ending Urban Commons' lease rights.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary is specific enough for Presence but contradicts the supported direction and target relationship."
+          }
+        ],
+        "slot": "T",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names the Queen Mary property, the Queen Mary lease, or the Queen Mary/Urban Commons arrangement as the substantive subject.",
+                "Identifies the Queen Mary ship/property together with lease, repair funding, cruise operations, or surrounding commercial development."
+              ],
+              "not_match": [
+                "Mentions only an agenda item, a council vote, a motion, or approval without naming the Queen Mary-related subject.",
+                "Frames the segment as a generic procedural, budget, or redevelopment item with no Queen Mary / Urban Commons subject."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "States a substantive move to revise, transition, or amend Queen Mary lease and financing terms with Urban Commons.",
+                "States a substantive move to fund or front-fund urgent Queen Mary repairs, support cruise operations, or enable development around the ship."
+              ],
+              "not_match": [
+                "Only says the Council approved or discussed something without explaining the substantive lease, financing, repair, cruise, or development move.",
+                "Treats procedural passage itself as the policy direction."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies the target as the Queen Mary ship/property, the lease relationship, passenger-facility arrangements, repair funding, or commercial development around the ship.",
+                "Makes clear that the policy move applies to the Queen Mary lease/repair/development package rather than an unrelated city program."
+              ],
+              "not_match": [
+                "States a policy move without saying what property, lease relationship, facility, development area, or repair program it applies to.",
+                "Identifies only the Council or the vote as the target."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "multi-part within one agenda item",
+          "transcript_area": [
+            "opening framing by Mr. West",
+            "staff presentation by Catherine McDermott",
+            "council discussion about policy purpose and financing",
+            "final vote call"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "subject_identified": "present",
+            "markers": [
+              "Queen Mary property",
+              "existing amended and restated lease",
+              "physical condition of the Queen Mary"
+            ]
+          },
+          "quality_gate": {
+            "policy_direction": "present",
+            "target": "present",
+            "markers": [
+              "transitions the lease to Urban Commons",
+              "create a fund of approximately $23 million",
+              "construct a passenger terminal facility for Carnival",
+              "commercial development of the land surrounding the Queen Mary"
+            ]
+          }
+        }
+      },
+      "O": {
+        "label": "O",
+        "name": "Outcome/Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the governing body acted on, approved, voted on, or carried the motion for the Queen Mary / Urban Commons item.",
+                  "States that a motion on the Queen Mary / Urban Commons item carried."
+                ],
+                "not_match": [
+                  "Only describes discussion, questions, staff presentation, public comment, or auditor concerns without saying the body disposed of an item.",
+                  "Mentions support or opposition but no completed action or motion result."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item with a formal agenda identifier or a substantive description.",
+                  "Identifies the acted-on item substantively as the Queen Mary / Urban Commons lease and financing package."
+                ],
+                "not_match": [
+                  "Says only that the body approved 'the item,' 'the proposal,' or 'the motion' without an item number or substantive identifier.",
+                  "Uses a generic agenda reference that could apply to another item in the meeting."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was the Long Beach City Council.",
+            "The procedural stage was Council action on the agenda item during the meeting segment.",
+            "The disposition result was that the motion carried.",
+            "The acted-on item was Item 18, the Queen Mary / Urban Commons lease and related financing terms.",
+            "The transcript excerpt does not state a numeric vote count."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to include a numeric vote count.",
+            "A claim that the item was postponed for 14 or 30 days, or that the auditor's requested delay was adopted, contradicts the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The City Council acted on Item 18 and the motion carried, approving the Queen Mary / Urban Commons lease and financing package before the Council rather than postponing it for additional audit review.\n",
+          "evidence": [
+            "We're pleased to bring this item to the council tonight for approval.",
+            "There is a motion on the floor by Councilmember Pearce and Councilmember Andrews.",
+            "Questions been called.",
+            "Please go and cast your vote.",
+            "Motion carries.",
+            "We just heard 18."
+          ],
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The Council's in-session disposition was completed when the motion carried.",
+              "Implementation of the lease terms, bond issue, repairs, and related construction remained future-facing after the vote."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "actor": "Long Beach City Council.",
+            "procedural_stage": "Council action on the agenda item during the meeting segment.",
+            "disposition_result": [
+              "A motion was on the floor by Councilmember Pearce and Councilmember Andrews.",
+              "The vote was called.",
+              "The motion carried."
+            ],
+            "acted_on_item": [
+              "Item 18.",
+              "Queen Mary / Urban Commons new lease terms and related financing terms presented in the segment."
+            ],
+            "vote_result": {
+              "value": "motion carries",
+              "attached_to": "Council action on Item 18",
+              "numeric_count": "not stated in the transcript excerpt"
+            },
+            "not_supported": [
+              "A claim that the item was postponed for 14 or 30 days is not supported.",
+              "A claim that the City Auditor's requested delay was adopted is not supported.",
+              "A specific vote count is not supported by the transcript excerpt unless sourced elsewhere."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Council members debated financial risk and audit review time.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This describes discussion but no disposition on an acted-on item."
+          },
+          {
+            "summary": "The Council approved the item.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "A disposition is visible, but the acted-on item is not specific."
+          },
+          {
+            "summary": "The Long Beach City Council voted on Item 18, and the motion carried for the Queen Mary / Urban Commons lease and financing package.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The disposition result and acted-on item match the event sheet."
+          },
+          {
+            "summary": "The Council postponed Item 18 for 30 days so the City Auditor could review the financing plan.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The acted-on item is specific, but the stated disposition contradicts the source-supported motion-carried result."
+          }
+        ],
+        "slot": "O",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that the governing body acted on, approved, voted on, or carried the motion for the Queen Mary / Urban Commons item.",
+                "States that a motion on the Queen Mary / Urban Commons item carried."
+              ],
+              "not_match": [
+                "Only describes discussion, questions, staff presentation, public comment, or auditor concerns without saying the body disposed of an item.",
+                "Mentions support or opposition but no completed action or motion result."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item with a formal agenda identifier or a substantive description.",
+                "Identifies the acted-on item substantively as the Queen Mary / Urban Commons lease and financing package."
+              ],
+              "not_match": [
+                "Says only that the body approved 'the item,' 'the proposal,' or 'the motion' without an item number or substantive identifier.",
+                "Uses a generic agenda reference that could apply to another item in the meeting."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "concentrated near segment ending, with setup in earlier council discussion",
+          "transcript_area": [
+            "Councilmember Pearce urged the Council to take a vote.",
+            "Councilmember Price and the City Auditor requested more review time.",
+            "The chair called the vote and announced that the motion carried."
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": "present",
+            "markers": [
+              "motion on the floor",
+              "cast your vote",
+              "Motion carries"
+            ]
+          },
+          "quality_gate": {
+            "acted_on_item_specific": "present",
+            "markers": [
+              "Item number 18",
+              "Queen Mary / Urban Commons lease and financing item"
+            ]
+          }
+        }
+      },
+      "B": {
+        "label": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States prior or existing background such as prior lease-operator history, the lease transition process, prior Council handling, delayed negotiations, a marine survey identifying major repair needs, urgent repairs exceeding ordinary annual revenue, or cruise-facility needs.",
+                  "States a prior condition or process that shaped why the revised Queen Mary lease and financing terms were before the Council."
+                ],
+                "not_match": [
+                  "Only states the current Council action or the proposed terms without any prior event, condition, process, problem, deadline, or other background.",
+                  "Only praises Urban Commons or the Queen Mary without a precipitating context."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the background to the current revised lease, repair-funding package, passenger-facility arrangements, labor-neutrality language, or the need for Council action.",
+                  "Makes visible that the background shaped the form of the proposed lease and financing terms."
+                ],
+                "not_match": [
+                  "Lists an old Queen Mary fact with no visible relationship to the current item or proposal form.",
+                  "States a prior event but leaves the reader unable to tell how it relates to the lease, repair, financing, or passenger-facility terms under discussion."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Save the Queen's bankruptcy and Garrison's position preceded the Urban Commons transition.",
+            "The Council had previously approved assignment of the existing lease to Urban Commons on November 17, 2015.",
+            "The new lease had been expected by May 2016, but negotiations extended past May because of new issues.",
+            "A marine survey identified more than $200 million in Queen Mary repair needs.",
+            "Urgent repairs exceeded the expected annual pass-through amount, prompting a more robust repair fund.",
+            "Carnival-related passenger facility needs were among the issues shaping the revised terms."
+          ],
+          "fact_check_notes": [
+            "The background does not need to be framed with an explicit 'why now' statement.",
+            "The repair survey and urgent-repair issue are background context, not the Council's final disposition."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The current item was shaped by the Queen Mary lease transition from Garrison to Urban Commons, earlier Council approval in November 2015, delayed lease negotiations, a marine survey identifying over $200 million in repair needs, urgent repair issues that exceeded annual pass-through revenue, and Carnival-related facility needs.\n",
+          "evidence": [
+            "It was picked up by a company called Garrison ... when Save the Queen went bankrupt.",
+            "We've been working for the past several years to attract a new company, to take the lease from Garrison...",
+            "On November 17, 2015, the City Council approved the assignment...",
+            "The new lease was expected to be signed ... by May of 2016.",
+            "The negotiations were extended past May due to several new issues.",
+            "The survey concluded that there is over 200 million in repairs required...",
+            "There are urgent repairs that require immediate attention that exceed the expected annual pass through amount."
+          ],
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The Garrison/Urban Commons lease assignment and prior Council approval had already occurred.",
+              "The repair needs and lease-negotiation issues existed at the time of the segment.",
+              "Some background was discussed as risk if the agreement were delayed or if Urban Commons walked away."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "Save the Queen bankruptcy and Garrison's position preceded the Urban Commons transition.",
+              "The Council had previously approved assignment of the existing lease to Urban Commons on November 17, 2015.",
+              "The new lease was expected by May 2016 but negotiations extended beyond May.",
+              "New issues included Queen Mary physical condition and urgent repairs, Carnival replacement passenger facility / Dome use, and card-check neutrality language.",
+              "A marine survey identified more than $200 million in repair needs.",
+              "Urgent repairs exceeded the expected annual pass-through amount, prompting the proposed front-funded repair structure."
+            ],
+            "agenda_connection": [
+              "These background conditions explain why revised lease terms, repair financing, Carnival facility arrangements, and labor-neutrality language were before Council."
+            ],
+            "numeric_values": [
+              {
+                "value": "over $200 million",
+                "meaning": "repair needs identified by the marine survey"
+              },
+              {
+                "value": "May 2016",
+                "meaning": "expected signing timing for the new lease before negotiations were extended"
+              },
+              {
+                "value": "November 17, 2015",
+                "meaning": "date of prior Council approval of lease assignment"
+              }
+            ],
+            "not_supported": [
+              "The background was not merely general praise for Urban Commons.",
+              "The repair-survey issue was a precipitating context, not itself the final Council disposition."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved revised Queen Mary lease terms.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This states the current action, not a precipitating context."
+          },
+          {
+            "summary": "Garrison became involved after Save the Queen went bankrupt.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "A prior background condition is visible, but its connection to the current item or proposal form is not stated."
+          },
+          {
+            "summary": "The revised item followed the Garrison-to-Urban Commons lease transition, prior Council approval in November 2015, delayed negotiations, a marine survey finding over $200 million in repair needs, urgent repairs exceeding annual pass-through revenue, and Carnival facility needs.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The background conditions are connected to the current revised lease and repair-financing item."
+          },
+          {
+            "summary": "The item was prompted by a completed Carnival hotel project and a survey showing the Queen Mary no longer needed major repairs.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary gives a specific background connection, but it contradicts the supported repair-need and facility context."
+          }
+        ],
+        "slot": "B",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States prior or existing background such as prior lease-operator history, the lease transition process, prior Council handling, delayed negotiations, a marine survey identifying major repair needs, urgent repairs exceeding ordinary annual revenue, or cruise-facility needs.",
+                "States a prior condition or process that shaped why the revised Queen Mary lease and financing terms were before the Council."
+              ],
+              "not_match": [
+                "Only states the current Council action or the proposed terms without any prior event, condition, process, problem, deadline, or other background.",
+                "Only praises Urban Commons or the Queen Mary without a precipitating context."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Connects the background to the current revised lease, repair-funding package, passenger-facility arrangements, labor-neutrality language, or the need for Council action.",
+                "Makes visible that the background shaped the form of the proposed lease and financing terms."
+              ],
+              "not_match": [
+                "Lists an old Queen Mary fact with no visible relationship to the current item or proposal form.",
+                "States a prior event but leaves the reader unable to tell how it relates to the lease, repair, financing, or passenger-facility terms under discussion."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "primarily in staff presentation, reinforced by council and auditor discussion",
+          "transcript_area": [
+            "Mr. West's opening background",
+            "Catherine McDermott's staff presentation",
+            "auditor/council discussion about infrastructure needs and risk"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "precipitating_context_visible": "present",
+            "markers": [
+              "Save the Queen went bankrupt",
+              "negotiations were extended past May",
+              "marine survey",
+              "over $200 million in repairs"
+            ]
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": "present",
+            "markers": [
+              "lease terms are in front of you tonight concerning...",
+              "urgent repairs exceed annual pass-through",
+              "Urban Commons asked the city to create a more robust fund"
+            ]
+          }
+        }
+      },
+      "N": {
+        "label": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States an operative term of the approved Queen Mary / Urban Commons package, such as a repair fund, bond issue, public-revenue backing, repayment source, passenger-fee sharing, replacement passenger facility, Dome arrangement, or hotel labor-neutrality language.",
+                  "Attaches a condition, requirement, funding amount, revenue stream, repayment structure, construction obligation, or timing condition to the acted-on item or the new lease package."
+                ],
+                "not_match": [
+                  "Only states that the motion carried or that the Council approved the item with no operative term.",
+                  "Only states background repair needs or concerns without tying any term to the approved package or lease."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Includes an attached numeric facet, such as a funding amount, bond amount, annual contribution, revenue-impact amount, year range, or timing requirement tied to the package."
+                ],
+                "not_match": [
+                  "Mentions financing, funds, revenue, or repairs with no identifiable amount, duration, period, or measured value."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names an identifiable requirement or condition, such as a pledged revenue stream, repayment-source condition, replacement facility obligation, facility-use condition, or labor-neutrality condition."
+                ],
+                "not_match": [
+                  "Mentions that terms existed but does not identify any requirement, restriction, condition, or obligation."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "States a boundary for the payload, such as a specified facility, operator, construction condition, revenue stream, or category to which the term applies."
+                ],
+                "not_match": [
+                  "States a payload without indicating what facility, revenue stream, operator, construction condition, or category it applies to."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "Includes a time boundary, such as an implementation deadline after a lease milestone or a timing condition after site-plan review."
+                ],
+                "not_match": [
+                  "Describes future implementation generally without a deadline, cutoff, or time boundary."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the new amended and restated Queen Mary lease terms with Urban Commons and the Item 18 repair financing/revenue-sharing package.",
+            "The city and Urban Commons would divert future and current Carnival-related revenues to create an approximately $23 million repair fund.",
+            "Staff stated that no new funds were being used to accomplish the ship repairs.",
+            "The city intended to issue bonds sized around $19 million to provide about $17.2 million in construction proceeds.",
+            "The bond issue would be backed by a pledge of Tidelands revenue, while passenger fees and Urban Commons base rent were anticipated as the actual debt-payment source.",
+            "Urban Commons would contribute passenger-fee revenue in later years, with the transcript containing timing references around years 5-10 and years 6-10.",
+            "Urban Commons would need to construct a replacement passenger terminal facility for Carnival if it wanted to use the Dome for events.",
+            "If Urban Commons constructs a new hotel, the hotel operator or management company must participate in a card-check neutrality agreement within three months of site plan review."
+          ],
+          "fact_check_notes": [
+            "Omissions of individual payload terms are not Fact Check errors.",
+            "A claim that unrelated new General Fund money was used for the ship repairs contradicts the staff presentation.",
+            "A claim that Tidelands revenues were not pledged at all contradicts the event sheet; they were described as the bond pledge/backstop.",
+            "The card-check term is conditional on construction of a new hotel and applies to the hotel operator or management company, not unconditionally to all Urban Commons operations."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The package carried multiple operative terms: a roughly $23 million repair fund using diverted Carnival-related revenues and reserves; a bond issue expected to provide about $17.2 million in construction proceeds; Tidelands revenues pledged as bond backing with passenger fees and base rent expected as the repayment source; Urban Commons passenger-fee contributions in later years; Carnival Dome/passenger-terminal arrangements; and hotel card-check neutrality language.\n",
+          "evidence": [
+            "The city and Urban Commons have each agreed to divert future and current revenues from Carnival to create a fund of approximately $23 million.",
+            "There are no new funds being used to accomplish the ship repairs.",
+            "The city intends to issue bonds for 17.2 million to be repaid by these revenues...",
+            "The bond issue is expected to be sized at $19 million to provide about 17.2 million in ... construction proceeds...",
+            "The bond issue would be backed by a pledge of tidelands revenue.",
+            "The actual source of the debt payment is anticipated to be passenger fees and base rent from Urban Commons.",
+            "Urban Commons is pledging year six through ten ... about ... $815,000 a year.",
+            "They will be required to construct a passenger terminal facility for Carnival.",
+            "If Urban Commons constructs a hotel ... they will require the hotel operator or management company to participate in a card check neutrality agreement within three months..."
+          ],
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "completed_in_session",
+              "pending_future_handling",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The Council action was completed in-session, but the payload terms governed future financing, repairs, construction, revenue allocation, and hotel labor-neutrality obligations.",
+              "The Tidelands pledge was discussed as a risk/backstop if anticipated revenue streams were insufficient.",
+              "The card-check term applies only if Urban Commons constructs a new hotel on the property."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "payload_carrier": [
+              "new amended and restated Queen Mary lease terms with Urban Commons",
+              "Item 18 Council action",
+              "repair financing and revenue-sharing package tied to the lease"
+            ],
+            "payload_content": [
+              "City and Urban Commons would divert future and current Carnival-related revenues to create an approximately $23 million repair fund.",
+              "Staff stated no new funds were being used to accomplish the ship repairs.",
+              "The city intended to issue bonds for $17.2 million in proceeds, with the bond issue sized around $19 million.",
+              "The bond issue would be backed by a pledge of Tidelands revenue.",
+              "Staff anticipated passenger fees and base rent from Urban Commons as the actual debt-payment source.",
+              "Urban Commons would contribute its share of passenger fees in later years.",
+              "The Dome was to be turned over to Carnival for expanded cruise operations, and Urban Commons would need to construct a replacement passenger terminal facility if it wanted to use the Dome for events.",
+              "Revenue-sharing provisions would be amended to increase passenger fees paid to Urban Commons to help defray replacement terminal costs.",
+              "If Urban Commons constructs a new hotel, the hotel operator or management company must participate in a card-check neutrality agreement within three months of site plan review."
+            ],
+            "payload_scope": [
+              "Queen Mary ship repairs and renovation",
+              "Carnival cruise/passenger facility operations",
+              "Urban Commons lease and development obligations",
+              "hotel operator or management company only if a new hotel is constructed"
+            ],
+            "numeric_values": [
+              {
+                "value": "approximately $23 million",
+                "meaning": "repair fund created from city and Urban Commons diverted revenues/reserves"
+              },
+              {
+                "value": "$17.2 million",
+                "meaning": "intended bond-funded construction proceeds / bonds to be repaid by revenues"
+              },
+              {
+                "value": "$19 million",
+                "meaning": "expected bond issue size"
+              },
+              {
+                "value": "over first seven years / years 1-7",
+                "meaning": "city revenue pledge period discussed for repayment, with lower amount in years 6-7"
+              },
+              {
+                "value": "years 5-10 or years 6-10",
+                "meaning": "transcript contains both staff references around Urban Commons passenger-fee contribution timing; later clarification states Urban Commons money starts in year 5 under the current agreement and is put in from years 5 to 10, while one clarification also says \"year six through ten\""
+              },
+              {
+                "value": "approximately $815,000 per year",
+                "meaning": "estimated Urban Commons later-year passenger-fee contribution"
+              },
+              {
+                "value": "approximately $5.375 million",
+                "meaning": "estimated reduction in city revenue in first ten years due to amended passenger-fee sharing"
+              },
+              {
+                "value": "$15 million",
+                "meaning": "Urban Commons funds for visible/revenue-generating ship areas as described by city staff"
+              },
+              {
+                "value": "three months",
+                "meaning": "card-check neutrality timing after receipt of site plan review if a new hotel is constructed"
+              }
+            ],
+            "not_supported": [
+              "A claim that the city was using unrelated new General Fund money for the ship repairs is not supported by the staff presentation.",
+              "A claim that Tidelands revenues were not pledged at all is not supported; they were described as the bond pledge/backstop.",
+              "A claim that the card-check agreement applied unconditionally to all Urban Commons operations is not supported; it was tied to construction of a new hotel and the hotel operator/management company."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The motion carried.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This is only the action shell and includes no operative payload."
+          },
+          {
+            "summary": "The approved package included financial arrangements for the Queen Mary.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "A payload is attached to the action, but no number, named requirement, scope boundary, or time boundary is identifiable."
+          },
+          {
+            "summary": "The package created an approximately $23 million repair fund from Carnival-related revenues and reserves, contemplated about $17.2 million in bond-funded construction proceeds backed by Tidelands revenues, used passenger fees and Urban Commons base rent as the anticipated repayment source, required a replacement Carnival passenger terminal for Dome event use, and added conditional hotel card-check neutrality language.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The attached operative terms, amounts, scope, and conditions match the event sheet."
+          },
+          {
+            "summary": "The package used new General Fund money for the repairs, avoided any Tidelands pledge, and required card-check neutrality for all Urban Commons operations immediately.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary is specific enough for Presence but contradicts the source-supported funding, pledge, and card-check scope."
+          }
+        ],
+        "slot": "N",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "States an operative term of the approved Queen Mary / Urban Commons package, such as a repair fund, bond issue, public-revenue backing, repayment source, passenger-fee sharing, replacement passenger facility, Dome arrangement, or hotel labor-neutrality language.",
+                "Attaches a condition, requirement, funding amount, revenue stream, repayment structure, construction obligation, or timing condition to the acted-on item or the new lease package."
+              ],
+              "not_match": [
+                "Only states that the motion carried or that the Council approved the item with no operative term.",
+                "Only states background repair needs or concerns without tying any term to the approved package or lease."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "Includes an attached numeric facet, such as a funding amount, bond amount, annual contribution, revenue-impact amount, year range, or timing requirement tied to the package."
+              ],
+              "not_match": [
+                "Mentions financing, funds, revenue, or repairs with no identifiable amount, duration, period, or measured value."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "Names an identifiable requirement or condition, such as a pledged revenue stream, repayment-source condition, replacement facility obligation, facility-use condition, or labor-neutrality condition."
+              ],
+              "not_match": [
+                "Mentions that terms existed but does not identify any requirement, restriction, condition, or obligation."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "States a boundary for the payload, such as a specified facility, operator, construction condition, revenue stream, or category to which the term applies."
+              ],
+              "not_match": [
+                "States a payload without indicating what facility, revenue stream, operator, construction condition, or category it applies to."
+              ]
+            },
+            {
+              "name": "date_cutoff",
+              "match": [
+                "Includes a time boundary, such as an implementation deadline after a lease milestone or a timing condition after site-plan review."
+              ],
+              "not_match": [
+                "Describes future implementation generally without a deadline, cutoff, or time boundary."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "distributed through staff presentation and fiscal clarification",
+          "transcript_area": [
+            "staff presentation on repair fund, bond issue, Dome, Carnival, and card-check terms",
+            "Councilmember Price questioning on Tidelands pledge and risk",
+            "year-by-year clarification later in the discussion",
+            "Financial Management explanation by Mr. Gross"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "payload_attached_to_action": "present",
+            "markers": [
+              "new lease would include",
+              "agreed to divert revenues",
+              "city intends to issue bonds",
+              "bond issue would be backed",
+              "required to construct",
+              "add language to the new lease"
+            ]
+          },
+          "quality_gate": {
+            "number": "present",
+            "named_requirement": "present",
+            "scope_boundary": "present",
+            "date_cutoff": "present",
+            "markers": [
+              "$23 million",
+              "$17.2 million",
+              "$19 million",
+              "card check neutrality agreement",
+              "replacement passenger terminal facility for Carnival",
+              "within three months of receipt of the site plan review"
+            ]
+          }
+        }
+      },
+      "L": {
+        "label": "L",
+        "name": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States concern, risk, discomfort, due-diligence difficulty, public-fund exposure, financial exposure, late-document review problem, project/reserve risk, or the unresolved magnitude of Queen Mary repair needs.",
+                  "Frames the issue on the problem side, such as the city assuming risk or the auditor lacking time to review the financing plan."
+                ],
+                "not_match": [
+                  "Only states the repair-funding solution, lease terms, or staff's low-risk characterization without a concern-side proposition.",
+                  "Only says people discussed or asked questions without naming a concern, harm, obstacle, risk, or tradeoff."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Specifies the concern as a bond-backed revenue pledge, city/public-fund exposure, late financing documents, insufficient auditor review time, possible impact on committed projects or reserves, or a large infrastructure need exceeding the urgent repair package.",
+                  "Makes clear what risk, obstacle, or tradeoff was concerning, not merely that concerns existed."
+                ],
+                "not_match": [
+                  "Only says 'concerns were raised' or 'there was discomfort' without identifying what the concern was about.",
+                  "Uses a generic phrase such as 'financial issues' with no identifiable risk, review problem, public-fund exposure, or repair-need content."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Concerns included the city assuming risk through the Tidelands-backed bond structure.",
+            "Concerns included the auditor receiving financing documents too late to complete adequate review.",
+            "Concerns included potential risk to committed Tidelands projects or reserves if expected revenues failed.",
+            "Concerns included the $23 million urgent-repair package not resolving the full over-$200-million Queen Mary infrastructure need.",
+            "The local anchors included the City of Long Beach, the Queen Mary, Tidelands-funded projects, affected constituents, and the City Auditor/Council financial oversight process."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence, but if the summary explicitly states one, compare it to the event sheet.",
+            "The transcript does not support that committed Tidelands projects had already been cancelled or redirected.",
+            "The auditor did not endorse immediate approval; she requested more time."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "Concrete concerns centered on the city's financial exposure and due-diligence risk: the City Auditor and Councilmember Price questioned the late availability of financing documents, the pledge of Tidelands revenues, potential risk to already committed Tidelands projects, and the larger unresolved problem of more than $200 million in Queen Mary infrastructure needs.\n",
+          "evidence": [
+            "This is a pretty significant action by the city to take.",
+            "I would always prefer time to review the details of the financing plan...",
+            "The Queen Mary has over $200 million worth of infrastructure needs.",
+            "It appears the city is the only one assuming risk at this time...",
+            "I feel incredibly uncomfortable pledging revenues that could potentially have been already committed to constituents...",
+            "I think if we can have some sort of a commitment that those projects won't get impacted...",
+            "We need to do some due diligence with $23 million..."
+          ],
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "secondary": [
+              "currently_existing"
+            ],
+            "notes": [
+              "The repair needs and financing documents were current concerns during the segment.",
+              "The effect on committed Tidelands projects was discussed as potential risk/backstop exposure, not as an already-realized diversion.",
+              "The auditor's inability to complete review was a current procedural concern."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "concern that the city was assuming risk through the Tidelands-backed bond structure",
+              "concern that the auditor received documents too late to complete adequate review",
+              "concern that committed Tidelands projects or reserves could be implicated if expected revenues failed",
+              "concern that a $23 million urgent-repair package did not address the full over-$200-million infrastructure need",
+              "concern that Council was being asked to act immediately despite late awareness of the Tidelands pledge"
+            ],
+            "local_anchor": [
+              "City of Long Beach",
+              "Queen Mary",
+              "Tidelands-funded projects and affected constituents",
+              "City Auditor / Council financial oversight process"
+            ],
+            "risk_status": [
+              "Staff and Financial Management characterized the risk as low.",
+              "Auditor and Councilmember Price still requested more time to review the financing and long-term plan."
+            ],
+            "not_supported": [
+              "The transcript does not support that committed Tidelands projects had already been cancelled or redirected.",
+              "The transcript does not support that the auditor endorsed immediate approval; she requested more time."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The package created a Queen Mary repair fund.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This describes a solution-side term, not a concern, harm, obstacle, or risk."
+          },
+          {
+            "summary": "Several speakers had concerns about the proposal.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "summary": "The concrete concerns were the city's financial exposure under a Tidelands-backed bond structure, late financing documents that limited auditor review, possible risk to already committed Tidelands projects, and the larger over-$200-million Queen Mary infrastructure problem.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The concern language and specific concern content match the event sheet."
+          },
+          {
+            "summary": "The main concern was that committed Tidelands projects had already been cancelled to pay for Queen Mary repairs.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary states a specific concern but turns a potential risk into an unsupported completed harm."
+          }
+        ],
+        "slot": "L",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States concern, risk, discomfort, due-diligence difficulty, public-fund exposure, financial exposure, late-document review problem, project/reserve risk, or the unresolved magnitude of Queen Mary repair needs.",
+                "Frames the issue on the problem side, such as the city assuming risk or the auditor lacking time to review the financing plan."
+              ],
+              "not_match": [
+                "Only states the repair-funding solution, lease terms, or staff's low-risk characterization without a concern-side proposition.",
+                "Only says people discussed or asked questions without naming a concern, harm, obstacle, risk, or tradeoff."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Specifies the concern as a bond-backed revenue pledge, city/public-fund exposure, late financing documents, insufficient auditor review time, possible impact on committed projects or reserves, or a large infrastructure need exceeding the urgent repair package.",
+                "Makes clear what risk, obstacle, or tradeoff was concerning, not merely that concerns existed."
+              ],
+              "not_match": [
+                "Only says 'concerns were raised' or 'there was discomfort' without identifying what the concern was about.",
+                "Uses a generic phrase such as 'financial issues' with no identifiable risk, review problem, public-fund exposure, or repair-need content."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "recurring council/auditor/public-comment concern",
+          "transcript_area": [
+            "Councilmember Price questioning",
+            "City Auditor comments",
+            "public comment on lease, fund, and due diligence",
+            "Mr. Gross risk explanation",
+            "final Councilmember Price remarks"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "concrete_concern_language": "present",
+            "markers": [
+              "significant action",
+              "risk",
+              "uncomfortable",
+              "due diligence",
+              "infrastructure needs"
+            ]
+          },
+          "quality_gate": {
+            "specific_concern_content": "present",
+            "markers": [
+              "pledging Tidelands revenues",
+              "$23 million",
+              "over $200 million infrastructure needs",
+              "committed projects",
+              "documents provided today / insufficient review time"
+            ]
+          }
+        }
+      },
+      "S": {
+        "label": "S",
+        "name": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names a recurring concern theme in problem-side language, such as financial risk, public-fund exposure, insufficient review time, due-diligence concerns, or unresolved long-term Queen Mary repair obligations.",
+                  "Frames the theme as a concern over approving a significant Queen Mary lease/repair financing package immediately."
+                ],
+                "not_match": [
+                  "Only states staff's solution, repayment plan, or low-risk response without naming a problem-side concern theme.",
+                  "Only says there was debate, discussion, or disagreement without naming the concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Identifies the concern content as the bond-backed revenue structure, public-fund exposure, auditor review time, financing package, long-term repair needs, committed projects/reserves, or whether immediate approval was prudent.",
+                  "Makes clear what the recurring concern theme was about, even if not every participant or detail is named."
+                ],
+                "not_match": [
+                  "Only says the discussion had a recurring concern or a shared worry without saying what the worry was about.",
+                  "Names a vague theme such as 'process' or 'money' without identifiable risk, review, revenue pledge, financing, or repair-obligation content."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was financial risk, Tidelands/public-fund exposure, and insufficient review time before approving the Queen Mary lease/repair financing package.",
+            "Concern content included whether the city should pledge Tidelands revenues as bond backing.",
+            "Concern content included whether committed Tidelands projects or reserves could be at risk.",
+            "Concern content included whether the auditor had enough time and documents to review the financing plan.",
+            "Concern content included whether the $23 million repair plan fit a long-term strategy for more than $200 million in infrastructure needs.",
+            "Staff and Financial Management characterized the risk as low, while the concern about reviewing and accepting that risk remained active."
+          ],
+          "fact_check_notes": [
+            "The recurring concern was not simply opposition to preserving the Queen Mary.",
+            "The concern was not limited to one speaker; it appeared across Councilmember Price, the City Auditor, and public commenters.",
+            "Staff did not agree that the risk was high; they characterized it as low."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "A recurring concern theme was whether the Council should approve a financially significant Queen Mary repair-and-lease package immediately when the Tidelands-backed bond structure, public-fund exposure, and long-term ship repair obligations had not been fully reviewed by the auditor or fully resolved in the public discussion.\n",
+          "evidence": [
+            "Councilmember Price repeatedly questioned why the city was taking on the expenditure and Tidelands pledge at this time.",
+            "The City Auditor twice stated that more time was needed to review the financing, risk, and long-term plan.",
+            "Public commenters questioned the lease, the prior Queen Mary Fund, the $23 million repair package, and due diligence.",
+            "Financial Management and city staff responded repeatedly that the risk was low and the expected repayment source was Carnival-related revenue."
+          ],
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "hypothetical_or_risk",
+              "currently_existing"
+            ],
+            "notes": [
+              "The concern recurred across Councilmember Price, the City Auditor, and public commenters.",
+              "The risk itself was described as potential or low by staff, but the concern about reviewing and accepting that risk was active during the meeting."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "concern_theme": "recurring concern over financial risk, Tidelands/public-fund exposure, and insufficient review time before approving the Queen Mary lease/repair financing package.\n",
+            "concern_content": [
+              "whether the city should pledge Tidelands revenues as bond backing",
+              "whether committed Tidelands projects or reserves could be at risk",
+              "whether the auditor had enough time and documents to review the financing plan",
+              "whether the $23 million repair plan fit into a long-term strategy for more than $200 million in infrastructure needs",
+              "whether delay would create deal risk, interest-rate risk, Garrison reversion risk, or Urban Commons risk"
+            ],
+            "participants_or_sources": [
+              "Councilmember Price",
+              "City Auditor",
+              "public commenters",
+              "city staff / Financial Management in response"
+            ],
+            "not_supported": [
+              "The recurring concern was not simply opposition to preserving the Queen Mary.",
+              "The concern was not limited to one speaker; multiple speakers raised related risk or review issues.",
+              "Staff did not agree that the risk was high; staff and Financial Management characterized it as low."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "Staff explained that the expected repayment source was Carnival-related revenue.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This is a response or payload detail, not a problem-side recurring concern theme."
+          },
+          {
+            "summary": "A recurring concern was raised about the proposal.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Problem-side concern language is visible, but the concern content is not identifiable."
+          },
+          {
+            "summary": "The recurring concern was whether the Council should approve the Queen Mary repair-and-lease package immediately despite the Tidelands-backed bond structure, public-fund exposure, limited auditor review time, and unresolved long-term ship repair obligations.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The recurring theme and its specific content match the event sheet."
+          },
+          {
+            "summary": "The recurring concern was that speakers opposed preserving the Queen Mary and wanted Carnival removed from the site.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary names a concern theme, but it contradicts the source-supported financial-risk/review-time theme."
+          }
+        ],
+        "slot": "S",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names a recurring concern theme in problem-side language, such as financial risk, public-fund exposure, insufficient review time, due-diligence concerns, or unresolved long-term Queen Mary repair obligations.",
+                "Frames the theme as a concern over approving a significant Queen Mary lease/repair financing package immediately."
+              ],
+              "not_match": [
+                "Only states staff's solution, repayment plan, or low-risk response without naming a problem-side concern theme.",
+                "Only says there was debate, discussion, or disagreement without naming the concern theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies the concern content as the bond-backed revenue structure, public-fund exposure, auditor review time, financing package, long-term repair needs, committed projects/reserves, or whether immediate approval was prudent.",
+                "Makes clear what the recurring concern theme was about, even if not every participant or detail is named."
+              ],
+              "not_match": [
+                "Only says the discussion had a recurring concern or a shared worry without saying what the worry was about.",
+                "Names a vague theme such as 'process' or 'money' without identifiable risk, review, revenue pledge, financing, or repair-obligation content."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "distributed recurring theme",
+          "transcript_area": [
+            "middle and late council debate",
+            "City Auditor statements",
+            "public comments",
+            "financial-management response"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "problem_side_concern": "present",
+            "markers": [
+              "risk",
+              "uncomfortable",
+              "need more time",
+              "significant problem",
+              "due diligence"
+            ]
+          },
+          "quality_gate": {
+            "specific_content": "present",
+            "markers": [
+              "Tidelands pledge",
+              "auditor review time",
+              "$23 million financing",
+              "over $200 million infrastructure needs",
+              "committed constituent projects"
+            ]
+          }
+        }
+      },
+      "U": {
+        "label": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly states that implementation steps remained pending, future-facing, contingent, still to be completed, or unresolved after the Council action.",
+                  "States that lease effectiveness, bond issuance, repairs, replacement passenger-terminal work, Dome/event-use path, hotel labor-neutrality timing, or long-term repair handling remained for later implementation."
+                ],
+                "not_match": [
+                  "Only states that the motion carried or the Council approved the item with no unfinished state.",
+                  "Only states a future-facing requirement as payload without marking that implementation or handling remained pending or unfinished."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies what remained pending, such as lease effectiveness, bond issuance/debt-service implementation, urgent repairs, passenger-facility or Dome-use construction path, conditional hotel labor-neutrality steps, or long-term repair handling.",
+                  "Distinguishes the pending implementation work from the completed Council vote."
+                ],
+                "not_match": [
+                  "Says only that 'more work' or 'implementation' remained without identifying the item, workstream, or issue.",
+                  "Leaves unclear whether the pending matter is the vote itself, the financing, repairs, construction, or another item."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "Shows a concrete path such as bond issuance after lease effectiveness, urgent repairs funded through the package, replacement passenger-terminal construction for Dome use, hotel labor-neutrality timing after site-plan review if a hotel is built, or the requested audit-delay alternative not being adopted because the motion carried.",
+                  "States a future process, condition, timing, or implementation route for the identified pending item."
+                ],
+                "not_match": [
+                  "States that something remained pending but gives no body, process, timeline, construction path, review path, or implementation route.",
+                  "Names a future hearing or later item unrelated to the Queen Mary implementation."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Council disposition on Item 18 was completed when the motion carried.",
+            "Implementation details remained future-facing or contingent after the vote.",
+            "Pending items included bond issuance and debt-service implementation, urgent Queen Mary repair work, the Carnival passenger facility/Dome-use construction path, conditional hotel card-check neutrality obligations, and long-term repair handling beyond the urgent package.",
+            "The bond issue was expected to be completed within six months after the lease effective date.",
+            "A replacement passenger terminal was required for Urban Commons to use the Dome as an event facility.",
+            "Hotel card-check neutrality participation was required within three months of site plan review if a new hotel was constructed.",
+            "The requested 14- or 30-day audit delay was not adopted."
+          ],
+          "fact_check_notes": [
+            "Do not describe the Council vote itself as pending; the motion carried during the session.",
+            "Do not say all Queen Mary repair needs were completed by the vote.",
+            "Do not say the bond issue had already been completed during the meeting."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "After the Council action, several implementation steps remained future-facing: the lease would need to become effective, the bond issue was expected within six months after the effective date, urgent repairs would be carried out using the repair funding, Urban Commons would have to construct a replacement passenger terminal to retake the Dome for event use, and any new hotel would trigger card-check neutrality timing. The requested 14- or 30-day audit delay was not adopted.\n",
+          "evidence": [
+            "The new lease was expected to be signed in the following six months or by May of 2016.",
+            "The bond issue ... is to be completed within six months after the effective date of the lease.",
+            "They will be required to construct a passenger terminal facility for Carnival.",
+            "If Urban Commons constructs a hotel ... within three months of receipt of the site plan review.",
+            "If the council would feel more comfortable with 14 days rather than 30...",
+            "Motion carries."
+          ],
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "completed_in_session",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "Council action was completed in-session.",
+              "Bond issuance, repair execution, terminal construction, and conditional hotel labor-neutrality steps remained future or contingent.",
+              "A proposed delay for audit review was discussed but not adopted because the motion carried."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "Council disposition on Item 18 was completed when the motion carried.",
+              "Implementation details remained future-facing or contingent after the vote.",
+              "The auditor's requested 14/30-day review delay remained unadopted in the transcript."
+            ],
+            "pending_item": [
+              "bond issuance and debt-service implementation",
+              "urgent Queen Mary repair work",
+              "Carnival passenger facility / Dome-use construction path",
+              "conditional card-check neutrality obligation if a new hotel is constructed",
+              "long-term handling of Queen Mary repair needs beyond the urgent-repair package"
+            ],
+            "handling_path": [
+              "bond issue expected to be completed within six months after lease effective date",
+              "replacement passenger terminal required for Urban Commons to use the Dome as an event facility",
+              "hotel card-check neutrality participation required within three months of site plan review if a new hotel is constructed",
+              "long-term repair responsibility and investment remain under the lease relationship with Urban Commons, with city/staff discussion of ongoing risk and reserves"
+            ],
+            "not_supported": [
+              "The transcript does not support that the Council postponed the item for 14 or 30 days.",
+              "The transcript does not support that all Queen Mary repair needs were completed by the vote.",
+              "The transcript does not support that the bond issue had already been completed during the meeting."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "summary": "The motion carried on Item 18.",
+            "expected": {
+              "presence": 0.0,
+              "fact_check": "not_evaluated"
+            },
+            "rationale": "This states the completed action but no unfinished or pending tail."
+          },
+          {
+            "summary": "Implementation remained pending after the vote.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not identifiable."
+          },
+          {
+            "summary": "After the motion carried, implementation remained future-facing: the lease had to become effective, the bond issue was expected within six months after that effective date, urgent repairs would proceed through the repair funding, Urban Commons would need a replacement Carnival passenger terminal to retake the Dome for events, and any new hotel would trigger card-check neutrality timing within three months of site plan review.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 1
+            },
+            "rationale": "The pending items and handling paths match the event sheet while preserving that the Council action was completed."
+          },
+          {
+            "summary": "Final Council action on Item 18 remained pending because the Council postponed the item for 30 days for audit review.",
+            "expected": {
+              "presence": 1.0,
+              "fact_check": 0
+            },
+            "rationale": "The summary provides a pending item and path, but contradicts the event sheet because the motion carried and the 30-day delay was not adopted."
+          }
+        ],
+        "slot": "U",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "Explicitly states that implementation steps remained pending, future-facing, contingent, still to be completed, or unresolved after the Council action.",
+                "States that lease effectiveness, bond issuance, repairs, replacement passenger-terminal work, Dome/event-use path, hotel labor-neutrality timing, or long-term repair handling remained for later implementation."
+              ],
+              "not_match": [
+                "Only states that the motion carried or the Council approved the item with no unfinished state.",
+                "Only states a future-facing requirement as payload without marking that implementation or handling remained pending or unfinished."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies what remained pending, such as lease effectiveness, bond issuance/debt-service implementation, urgent repairs, passenger-facility or Dome-use construction path, conditional hotel labor-neutrality steps, or long-term repair handling.",
+                "Distinguishes the pending implementation work from the completed Council vote."
+              ],
+              "not_match": [
+                "Says only that 'more work' or 'implementation' remained without identifying the item, workstream, or issue.",
+                "Leaves unclear whether the pending matter is the vote itself, the financing, repairs, construction, or another item."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "Shows a concrete path such as bond issuance after lease effectiveness, urgent repairs funded through the package, replacement passenger-terminal construction for Dome use, hotel labor-neutrality timing after site-plan review if a hotel is built, or the requested audit-delay alternative not being adopted because the motion carried.",
+                "States a future process, condition, timing, or implementation route for the identified pending item."
+              ],
+              "not_match": [
+                "States that something remained pending but gives no body, process, timeline, construction path, review path, or implementation route.",
+                "Names a future hearing or later item unrelated to the Queen Mary implementation."
+              ]
+            }
+          ]
+        },
+        "answer_locality": {
+          "locality_type": "future-facing terms in staff presentation plus final action at segment end",
+          "transcript_area": [
+            "staff explanation of lease timing, bond issue, terminal construction, and card-check timing",
+            "auditor/council discussion of desired review delay",
+            "final motion-carries announcement"
+          ]
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "pendingness_marker": "present",
+            "markers": [
+              "expected to be completed within six months",
+              "will be required to construct",
+              "if Urban Commons constructs a hotel",
+              "requested 14/30-day review delay not adopted"
+            ]
+          },
+          "quality_gate": {
+            "pending_item_identifiable": "present",
+            "handling_path_visible": "present",
+            "markers": [
+              "bond issue after effective date of lease",
+              "replacement passenger terminal for Carnival",
+              "card-check neutrality after site plan review",
+              "urgent repair work funded through lease/bond package"
+            ]
+          }
+        }
+      }
+    },
+    "validation_protocol_version": 31,
+    "validation_summary": {
+      "validation_rounds_completed": 2,
+      "validation_protocol": "QA Validation Protocol v31",
+      "notes": [
+        "Round 1 identified schema gaps and presence-leakage risks in gate wording.",
+        "Round 2 validated the updated artifact after adding required slot-level fields and removing exact source-correct values from Presence gates."
+      ]
+    }
+  }

@@ -1,0 +1,853 @@
+segment_id: "MTG6"
+segment_dir: "06_DenverCityCouncil_09252017"
+meeting_id: "DenverCityCouncil_09252017"
+uid: "DenverCityCouncil_09252017_17-1060"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "qa_version": 31,
+    "language": "en",
+    "meeting_order": "06",
+    "sampled_segment": "transcript_06",
+    "segment_title": "Denver City Council Proclamation 17-1060 / 1060 honoring David Broadwell",
+    "source_basis": {
+      "event_sheet": "event_sheet_06.md",
+      "slot_semantics": "slot_semantics.json version 29",
+      "authoring_protocol": "QA Authoring Protocol v30",
+      "validation_protocol": "QA Validation Protocol v31"
+    },
+    "authoring_notes": [
+      "Presence is evaluated only through Topic Gate and Quality Gate labels.",
+      "Fact Check is a slot-local contradiction check against the fact_check_fields listed for that slot.",
+      "Wrong numeric values, names, stages, actors, instruments, or temporal status do not lower Presence by themselves; they are evaluated only as Fact Check issues when they bear on listed fields.",
+      "Gate match/not_match text is intentionally facet-based to avoid Presence leakage; source-correct values are preserved in valid_items, fact_check_notes, event_sheet_slot_context, marker_presence, and score examples.",
+      "For this segment, Slot U has no source-supported positive unresolved tail for Proclamation 1060. A correct source-faithful absence statement is Fact Check-correct but does not satisfy U's positive pendingness gate."
+    ],
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "Topic / Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": "The summary names a substantive ceremonial-recognition or tribute subject rather than only a procedural form, motion, vote, agenda label, or bare identifier. The subject may be a person, service record, retirement, contribution, or equivalent matter being discussed; exact source-correct identity is checked only in Fact Check.",
+              "not_match": "The summary gives only a procedure, vote, motion, meeting item, bare identifier, or generic proclamation/reference with no substantive subject, honoree, issue, service record, retirement, or contribution content."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": "The summary states a substantive or ceremonial direction being pursued for the subject, such as honoring, recognizing, thanking, celebrating, criticizing, appointing, disciplining, or otherwise characterizing what is being done to or for the subject. Procedural disposition alone is not enough; exact source-correct direction is checked only in Fact Check.",
+              "not_match": "The summary states only that the item was adopted, voted on, moved, seconded, introduced, read, or discussed, without any substantive or ceremonial direction for the subject."
+            },
+            {
+              "name": "target",
+              "match": "The summary identifies a target to which the direction applies, such as a person, office, group, department, process, policy area, or other scope. Exact source-correct target identity is checked only in Fact Check.",
+              "not_match": "The direction has no identifiable target, or the target is so generic that the reader cannot tell what person, entity, process, or scope the direction applies to."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The segment frames Proclamation 17-1060 / 1060 as a Council recognition of David Broadwell.",
+            "The proclamation celebrates, thanks, recognizes, and wishes Broadwell a wonderful retirement.",
+            "The source-supported target is David Broadwell, assistant city attorney / City Council liaison.",
+            "The service record may be described as 18 years with the City and County of Denver, 14 years specifically with City Council, and more than 35 years of broader public service."
+          ],
+          "fact_check_notes": [
+            "This is a ceremonial recognition, not a regulatory policy change.",
+            "Do not treat an isolated transcript rendering such as 'David Bravo' as overriding the repeated source identification of David Broadwell.",
+            "Wrong-but-specific subject, direction, or target wording should not lower Presence by itself; compare it through the listed Fact Check fields."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The segment frames Proclamation 17-1060 / 1060 as a Council recognition honoring and thanking David Broadwell for long municipal legal service, especially his 18 years with the City and County of Denver and 14 years as City Council liaison, upon his retirement.",
+          "temporal_status": [
+            "currently_existing",
+            "already_occurred"
+          ],
+          "source_context_for_fact_check": {
+            "subject": "Recognition of David Broadwell's municipal legal service and retirement.",
+            "policy_direction_or_proclamation_direction": "The Council is celebrating, thanking, recognizing, and wishing Broadwell a wonderful retirement.",
+            "target": "David Broadwell, assistant city attorney / City Council liaison."
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Opening introduction and proclamation reading, especially the formal proclamation text and Section One.",
+          "locality_type": "single-segment, proclamation-framing content"
+        },
+        "marker_presence": {
+          "subject_identified": {
+            "present": true,
+            "markers": [
+              "David Broadwell",
+              "outstanding legal service",
+              "City Council liaison"
+            ]
+          },
+          "policy_direction": {
+            "present": true,
+            "markers": [
+              "celebrating and thanking",
+              "recognizes and thanks",
+              "wishes him a wonderful retirement"
+            ]
+          },
+          "target": {
+            "present": true,
+            "markers": [
+              "David Broadwell",
+              "City and County of Denver",
+              "City Council"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "Council members voted on a meeting item.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "The sentence is procedural and does not identify a substantive ceremonial-recognition subject."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "The segment discussed a longtime municipal lawyer's retirement.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It identifies a substantive subject but does not state the direction of honoring, thanking, recognizing, or another substantive treatment."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "The segment framed Proclamation 1060 as Council recognition thanking David Broadwell for his long Denver legal service and City Council liaison work upon his retirement.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It states the subject, ceremonial direction, and target without contradiction."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The segment framed Proclamation 1060 as Council criticism of David Broadwell for mishandling Denver legal service.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary enters the slot and is specific, but reverses the source-supported ceremonial direction."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "Outcome / Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": "The summary states that a body or actor took a recognizable disposition on an acted-on item, such as adopting, approving, rejecting, referring, deferring, moving, seconding, passing, or voting on an item. Exact source-correct actor, stage, result, and item are checked only in Fact Check.",
+              "not_match": "The summary only reports discussion, praise, questions, testimony, remarks, background, or the existence of an item, without any disposition verb tied to an acted-on item."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": "The acted-on item is identified specifically enough that the reader can distinguish which item was acted on, either by formal label/number or by a substantive description. Exact source-correct item identity is checked only in Fact Check.",
+              "not_match": "The acted-on item is only a vague generic referent such as 'it,' 'the matter,' 'an item,' or 'a proclamation/resolution/bill' with no formal or substantive detail distinguishing the item."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "Denver City Council / participating Council members acted on the item.",
+            "The procedural stage was Council proclamation adoption during the meeting segment.",
+            "Proclamation 1060 was adopted.",
+            "The acted-on item was Proclamation 17-1060 / Proclamation 1060 honoring David Broadwell.",
+            "The transcript records affirmative roll-call votes and then announces adoption; no no votes are recorded in the segment."
+          ],
+          "fact_check_notes": [
+            "Do not treat the adoption as pending, referred, rejected, deferred, or awaiting a later Council vote.",
+            "If a vote count, unanimity, or no-vote claim is made, compare it only when the summary explicitly states the value or attaches a vote result to the disposition."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The Council moved, seconded, took comments on, voted on, and adopted Proclamation 1060 honoring David Broadwell.",
+          "temporal_status": [
+            "completed_in_session"
+          ],
+          "source_context_for_fact_check": {
+            "actor": "Denver City Council / Council members participating in the segment.",
+            "procedural_stage": "Council proclamation adoption during the meeting segment.",
+            "disposition_result": "Proclamation 1060 was adopted.",
+            "acted_on_item": "Proclamation 17-1060 / Proclamation 1060 honoring David Broadwell.",
+            "vote_result": "The transcript records affirmative roll-call votes and then announces adoption; no no votes are recorded in the segment."
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "After the proclamation reading and member comments, beginning with the motion to adopt and ending with the announcement that Proclamation 1060 was adopted.",
+          "locality_type": "procedural disposition"
+        },
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": {
+            "present": true,
+            "markers": [
+              "proclamation 1060 be adopted",
+              "Proclamation 1060 has been adopted"
+            ]
+          },
+          "acted_on_item_specific": {
+            "present": true,
+            "markers": [
+              "Proclamation 1060",
+              "Proclamation 17-1060",
+              "David Broadwell"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "Council members praised a retiring public servant.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It gives tribute content but no disposition tied to an acted-on item."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "The body adopted a proclamation.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It states a disposition but does not identify the acted-on item specifically enough."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "The Council adopted Proclamation 1060 honoring David Broadwell after the motion, second, comments, and vote.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It states the in-session disposition and the specific acted-on item accurately."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The Council referred Proclamation 1060 honoring David Broadwell to committee for later action.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It names a disposition and item, but the stated procedural result and temporal status contradict adoption completed in-session."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, retirement, service record, or similar background context as its own proposition. Exact source-correct background is checked only in Fact Check.",
+              "not_match": "The summary states only the current action, recognition, disposition, operative payload, or general topic, without a distinct prior/background proposition connected to the item or discussion."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": "The background context is visibly connected to the current item, discussion frame, proposal form, recognition, revision, or handling. An explicit agenda-necessity or 'why today' statement is not required; exact source-correct relation is checked only in Fact Check.",
+              "not_match": "The summary gives a free-standing biographical, historical, or contextual detail without connecting it to the current item, recognition, proposal form, discussion frame, or handling."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The proclamation was prompted by Broadwell's retirement and accumulated service record.",
+            "Supported background includes more than 35 years of public service.",
+            "Supported background includes 18 years of legal service to the City and County of Denver.",
+            "Supported background includes 14 years of service specifically to City Council as liaison.",
+            "Supported background includes municipal-law work involving home-rule powers, public finance, legislative drafting, and major Denver ordinances."
+          ],
+          "fact_check_notes": [
+            "Do not state that a controversy, legal claim, disciplinary matter, appointment dispute, or policy dispute involving Broadwell prompted the proclamation.",
+            "Omission of some parts of the service record is not a Fact Check error.",
+            "B must not require an explicit agenda-necessity or 'why this came today' statement for Presence."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The proclamation was prompted by Broadwell's retirement after a long record of public and municipal legal service, including his 18 years with Denver, 14 years as City Council liaison, and earlier municipal-law work.",
+          "temporal_status": [
+            "already_occurred",
+            "currently_existing"
+          ],
+          "source_context_for_fact_check": {
+            "trigger_condition": "Broadwell's retirement and accumulated service record, especially his Denver legal service and Council liaison role.",
+            "agenda_connection": "Those service contributions and the retirement occasion shaped why the Council took up Proclamation 1060."
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Formal proclamation recitals and Council members' tribute comments before the adoption vote.",
+          "locality_type": "retrospective background for current ceremonial item"
+        },
+        "marker_presence": {
+          "precipitating_context_visible": {
+            "present": true,
+            "markers": [
+              "upon his retirement",
+              "18 years of outstanding legal service",
+              "more than 35 years",
+              "14 years of service as our City Council liaison"
+            ]
+          },
+          "connected_to_current_item_or_form": {
+            "present": true,
+            "markers": [
+              "now, therefore be proclaimed",
+              "recognizes and thanks",
+              "wishes him a wonderful retirement"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "The Council recognized and thanked David Broadwell through Proclamation 1060.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It states the recognition but not the background context that shaped the item."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "David Broadwell had a long record of municipal legal service.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It states background context but does not visibly connect it to the current proclamation or recognition."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "The proclamation came forward because Broadwell was retiring after decades of public service, including 18 years with Denver and 14 years as City Council liaison.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It states the precipitating background and connects it to the current item."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The proclamation came forward because Broadwell was facing a pending legal controversy over his Council liaison work.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It gives a connected background explanation, but the trigger condition contradicts the event sheet."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": "The summary expresses a condition, requirement, scope, restriction, number, date, directive, recognition act, document-handling instruction, or other payload as attached to an action or acted-on item. Exact source-correct carrier and content are checked only in Fact Check.",
+              "not_match": "The summary gives only the action shell, discussion, background, praise, or disposition result, without any attached condition, requirement, scope, restriction, number, date, directive, recognition act, or other payload."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": "The attached payload includes an identifiable numeric quantity, duration, count, threshold, amount, or other measured value. The correctness of the exact value and what it attaches to are checked only in Fact Check.",
+              "not_match": "No identifiable numeric quantity, duration, count, threshold, amount, or measured value is attached to the payload."
+            },
+            {
+              "name": "named_requirement",
+              "match": "The attached payload includes an identifiable named requirement, directive, restriction, condition, recognition act, delivery instruction, or document-handling instruction. The exact source-correct requirement is checked only in Fact Check.",
+              "not_match": "The payload is described only generically and lacks any identifiable requirement, directive, restriction, condition, recognition act, delivery instruction, or document-handling instruction."
+            },
+            {
+              "name": "scope_boundary",
+              "match": "The attached payload includes an identifiable scope boundary, target boundary, categorical boundary, recipient, affected entity, or process scope. The exact source-correct boundary is checked only in Fact Check.",
+              "not_match": "The payload lacks an identifiable scope boundary, target boundary, category, recipient, affected entity, or process scope."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier is Proclamation 17-1060 / Proclamation 1060.",
+            "The proclamation recognizes and thanks David Broadwell.",
+            "The proclamation recognizes 18 years of service to the City and County of Denver.",
+            "The proclamation recognizes 14 years of service specifically to City Council.",
+            "The proclamation wishes Broadwell a wonderful retirement.",
+            "The clerk shall attest and affix the city/county seal to the proclamation.",
+            "A copy shall be delivered to David Broadwell.",
+            "The payload is ceremonial recognition and administrative document handling; it does not create a regulatory rule, funding condition, ordinance amendment, or external legal obligation."
+          ],
+          "fact_check_notes": [
+            "The 18-year value attaches to service to the City and County of Denver.",
+            "The 14-year value attaches to service specifically to City Council.",
+            "The clerk delivery / document handling component is future-effect follow-through attached to the adopted proclamation.",
+            "N's numeric Quality Gate checks the presence of a numeric facet, not the correctness of the exact number."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The proclamation's operative payload was to recognize and thank David Broadwell for his service, wish him a wonderful retirement, and direct the clerk to attest, seal, and deliver a copy of the proclamation to him.",
+          "temporal_status": [
+            "completed_in_session",
+            "future_effect"
+          ],
+          "source_context_for_fact_check": {
+            "payload_carrier": "Proclamation 17-1060 / Proclamation 1060.",
+            "payload_content": [
+              "Recognize and thank David Broadwell.",
+              "Recognize 18 years of service to the City and County of Denver.",
+              "Recognize 14 years of service specifically to City Council.",
+              "Wish him a wonderful retirement.",
+              "Clerk shall attest and affix the city/county seal to the proclamation.",
+              "A copy shall be delivered to David Broadwell."
+            ],
+            "payload_scope": "Ceremonial recognition and administrative delivery of the proclamation; no regulatory rule, funding condition, ordinance amendment, or external legal obligation is created in this segment."
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Formal proclamation sections immediately before the motion to adopt.",
+          "locality_type": "operative proclamation text"
+        },
+        "marker_presence": {
+          "payload_attached_to_action": {
+            "present": true,
+            "markers": [
+              "Section one",
+              "Section two",
+              "the Council hereby recognizes and thanks",
+              "the clerk ... shall attest",
+              "a copy be delivered"
+            ]
+          },
+          "quality_gate_options": {
+            "number": {
+              "present": true,
+              "markers": [
+                "18 years",
+                "14 years"
+              ]
+            },
+            "named_requirement": {
+              "present": true,
+              "markers": [
+                "clerk ... shall attest",
+                "seal",
+                "copy be delivered"
+              ]
+            },
+            "scope_boundary": {
+              "present": true,
+              "markers": [
+                "to the city",
+                "specifically to the City Council"
+              ]
+            },
+            "date_cutoff": {
+              "present": false,
+              "markers": []
+            }
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "The Council adopted Proclamation 1060 honoring David Broadwell.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It states the action shell but does not state the operative payload."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "Proclamation 1060 included recognition language for Broadwell.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It attaches a payload to the proclamation but lacks a qualifying number, named requirement, scope boundary, or date cutoff with enough specificity."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "Proclamation 1060 recognized and thanked Broadwell for 18 years of Denver service and 14 years of City Council service, wished him a wonderful retirement, and directed clerk attestation, sealing, and delivery of a copy to him.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It states payload content attached to the action with numeric, named-requirement, and scope details."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Proclamation 1060 required Broadwell to continue serving as City Council liaison for another 14 years.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It states a specific action-carried payload, but the operative content and temporal role of 14 years contradict the source."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": "The summary states a concrete problem-side concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, exposure, or similar condition. It does not need a named place, named group, or bounded area for Presence; exact source-correct concern and local anchor are checked only in Fact Check.",
+              "not_match": "The summary gives only praise, gratitude, biography, expertise, helpfulness, solution-side action, or general discussion without asserting a concrete problem-side concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, or exposure."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": "The concern content is specific enough that the reader can tell what the risk, obstacle, difficulty, harm, loss, or tradeoff is about. A named local anchor is not required; exact source-correct content is checked only in Fact Check.",
+              "not_match": "The summary merely says concerns, issues, problems, challenges, or risks existed, without identifying what the concern or risk was about."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Council members described a recurring practical risk that they could misunderstand legal constraints or enter legally risky territory.",
+            "Supported concern content includes the need to protect the city and Council as institutions.",
+            "Supported concern content includes avoiding legal jeopardy or legally unsupported action.",
+            "Supported concern content includes defending Denver's home-rule status against outside challenges.",
+            "Supported concern content includes handling rights, due process, and complex policy questions lawfully.",
+            "The local anchor, if stated, is Denver City Council and the City and County of Denver."
+          ],
+          "fact_check_notes": [
+            "The risk is recurring / hypothetical-or-risk oriented, not a specific adjudicated lawsuit in this segment.",
+            "Do not claim Broadwell caused legal violations or that Proclamation 1060 itself resolved a legal dispute.",
+            "L must not require a named place, named group, or bounded area as a Presence gate."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "Speakers described concrete concerns and risks that Broadwell's guidance helped Council manage: legal jeopardy, misunderstanding legal limits, difficulty translating policy intent into lawful ordinances, and challenges to Denver's home-rule position.",
+          "temporal_status": [
+            "recurring_concern",
+            "hypothetical_or_risk"
+          ],
+          "source_context_for_fact_check": {
+            "obstacle_content": "Council members described a recurring practical risk that they could misunderstand legal constraints, move into legally risky territory, or need help converting policy intent into lawful ordinance language.",
+            "local_anchor": "Denver City Council and the City and County of Denver."
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Formal proclamation recitals about protecting the institution and member comments from Lopez, Flynn, Gilmore, Kashmann, New, Ortega, and others.",
+          "locality_type": "problem-side concern content in tribute comments"
+        },
+        "marker_presence": {
+          "concrete_concern_language": {
+            "present": true,
+            "markers": [
+              "protection",
+              "save us from ourselves",
+              "gone off the deep end",
+              "legal jeopardy",
+              "assaults and challenges",
+              "get us out of trouble"
+            ]
+          },
+          "specific_concern_content": {
+            "present": true,
+            "markers": [
+              "protection of the city and the city council as an institution",
+              "defense of our home rule status",
+              "wandering into areas of legal jeopardy"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "Speakers thanked Broadwell for his intelligence and humility.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It is praise, but it does not state a concrete concern, risk, obstacle, or difficulty."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "Speakers said Broadwell helped with difficult risks.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It uses problem-side risk language but does not identify what the risk or concern was about."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "Speakers credited Broadwell with helping Council avoid legal jeopardy, protect Denver's home-rule status, and turn policy ideas into lawful ordinances.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It states concrete source-supported concerns with specific concern content."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Speakers said Broadwell created legal jeopardy for Council and caused violations that Proclamation 1060 resolved.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It names legal jeopardy as a concern but reverses Broadwell's role and invents a dispute-resolution function for the proclamation."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": "The summary names a recurring or shared problem-side concern theme, such as difficulty, risk, deficiency, gap, negative state, vulnerability, tension, tradeoff, or dependence on guidance to avoid problems. Exact source-correct theme is checked only in Fact Check.",
+              "not_match": "The summary gives only generic tribute language, appreciation, biography, praise, helpfulness, or debate language without naming a problem-side concern theme."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": "The named concern theme has identifiable content: the reader can tell the object of concern, mechanism, tension, tradeoff, affected work, risk, or problem content. Exact source-correct content is checked only in Fact Check.",
+              "not_match": "The summary merely says there were concerns, issues, challenges, reliance, or debate, without identifying what the concern theme was about."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring theme was Council members' dependence on Broadwell's legal and institutional guidance to handle difficult Council work responsibly.",
+            "Supported concern content includes translating policy intent into lawful ordinance language.",
+            "Supported concern content includes avoiding legal trouble or unsupported action.",
+            "Supported concern content includes defending Denver's home-rule authority.",
+            "Supported concern content includes supporting Council members, aides, staff, city attorneys, CPD staff, and journalists through complex city processes.",
+            "Supported concern content includes Broadwell's humble, non-self-promoting institutional judgment."
+          ],
+          "fact_check_notes": [
+            "The recurring theme is about Council and city institutional/legal work, not about a separate policy item on the meeting agenda.",
+            "The summary does not need to state recurrence explicitly if the concern theme is expressed in problem-side language."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "A recurring concern theme across the discussion was that Council work carried legal and institutional risks, and Broadwell's expertise, judgment, humility, and availability helped Council avoid errors, protect the city, and make difficult policy decisions responsibly.",
+          "temporal_status": [
+            "recurring_concern"
+          ],
+          "source_context_for_fact_check": {
+            "concern_theme": "Council members repeatedly emphasized their dependence on Broadwell's legal and institutional guidance to handle difficult Council work responsibly.",
+            "concern_content": [
+              "Translating policy intent into lawful ordinance language.",
+              "Avoiding legal trouble or unsupported action.",
+              "Defending Denver's home-rule authority.",
+              "Supporting Council members, aides, staff, city attorneys, CPD staff, and journalists through complex city processes.",
+              "Providing humble, non-self-promoting institutional judgment."
+            ]
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Member comments after the motion is seconded and David Broadwell's own remarks after adoption.",
+          "locality_type": "recurring concern and tribute synthesis across speakers"
+        },
+        "marker_presence": {
+          "problem_side_concern": {
+            "present": true,
+            "markers": [
+              "get us out of trouble",
+              "legal issues",
+              "home rule status",
+              "areas of legal jeopardy",
+              "hard job"
+            ]
+          },
+          "specific_content": {
+            "present": true,
+            "markers": [
+              "turn into any kind of legal arguments",
+              "defense of our home rule status",
+              "mold and shape and guide us",
+              "lifting up the law, the council"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail",
+            "candidate_summary": "The discussion featured many warm tributes to Broadwell.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It is tribute language without a problem-side concern theme."
+          },
+          {
+            "name": "topic_pass_quality_fail",
+            "candidate_summary": "Speakers shared concerns about Council work.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "It names concern language but does not identify the concern's object, mechanism, or specific content."
+          },
+          {
+            "name": "full_correct",
+            "candidate_summary": "Across the tributes, speakers emphasized that Council work carried legal and institutional risks and that Broadwell's guidance helped them avoid mistakes and protect Denver's home-rule authority.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "It names the recurring concern theme and gives source-supported concern content."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "A recurring theme was that Broadwell's advice made Council's legal and institutional risks worse.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It states the concern theme but reverses the source-supported role of Broadwell's guidance."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "source_supported_positive_instance": false,
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": "The summary explicitly includes an unfinished, pending, unresolved, still-open, held-over, awaiting-final-action, later-return, or similar state marker for an item, workstream, or handling path. Exact source-correct pending status is checked only in Fact Check.",
+              "not_match": "The summary states only completed action, general future orientation, informal future contact, retirement plans, transition to another item, or an absence of pendingness, without asserting a positive unfinished or pending state."
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": "The summary identifies what item, issue, workstream, action, implementation step, or follow-up object remains pending. Exact source-correct pending item is checked only in Fact Check.",
+              "not_match": "The summary says only that something remained open or pending, without identifying the item, issue, workstream, action, implementation step, or follow-up object."
+            },
+            {
+              "name": "handling_path_visible",
+              "match": "The summary states a concrete future handling path, process path, institutional custody path, later meeting, later vote, review, report-back, drafting step, or final action path. Exact source-correct path is checked only in Fact Check.",
+              "not_match": "The summary includes only vague future orientation or informal future contact, with no concrete handling path, process path, institutional custody path, later meeting, later vote, review, report-back, drafting step, or final action path."
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "No source-supported pending Council action remains for Proclamation 1060 after adoption.",
+            "Proclamation 1060 was completed in-session.",
+            "Future-facing comments concern Broadwell's retirement or possible informal return, not unresolved Council handling of Proclamation 1060.",
+            "The segment moves on to a different item, Proclamation 1061."
+          ],
+          "fact_check_notes": [
+            "A source-faithful summary should not assert that Proclamation 1060 remained pending, awaited final action, or had to return to Council.",
+            "Because there is no positive U instance, a correct absence statement may receive Fact Check = 1 but should not be treated as Presence = 1 for U's positive pendingness gate."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "No unresolved Council handling remained for Proclamation 1060 after the adoption announcement. The transcript contains future-facing retirement and informal availability comments, but not a pending institutional return path for the adopted proclamation.",
+          "temporal_status": [
+            "completed_in_session"
+          ],
+          "source_context_for_fact_check": {
+            "pending_status": "No source-supported pending Council action remains for Proclamation 1060 after adoption.",
+            "pending_item": null,
+            "handling_path": null,
+            "future_mentions": [
+              "Broadwell may return informally or remain connected after retirement.",
+              "Council proceeds to a different item, Proclamation 1061."
+            ]
+          }
+        },
+        "answer_locality": {
+          "transcript_span": "Adoption announcement, Broadwell's remarks, applause, and transition to Proclamation 1061.",
+          "locality_type": "absence of qualifying pendingness for the selected proclamation"
+        },
+        "marker_presence": {
+          "pendingness_marker": {
+            "present": false,
+            "markers": []
+          },
+          "pending_item_identifiable": {
+            "present": false,
+            "markers": []
+          },
+          "handling_path_visible": {
+            "present": false,
+            "markers": []
+          },
+          "boundary_note": "'I will not be a stranger' and 'you'll be back' are future-facing, but they do not identify an unfinished item, Council custody path, later vote, or pending final action for Proclamation 1060."
+        },
+        "score_examples": [
+          {
+            "name": "topic_fail_correct_absence",
+            "candidate_summary": "After Proclamation 1060 was adopted, Broadwell gave remarks and the meeting moved on to Proclamation 1061.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "It does not assert unfinished Council handling and is consistent with the source-supported completed status."
+          },
+          {
+            "name": "topic_pass_quality_fail_fact_check_failure",
+            "candidate_summary": "Some follow-up on the proclamation remained pending.",
+            "presence": 0.5,
+            "fact_check": 0,
+            "rationale": "It includes a pendingness marker but does not identify a specific pending item or path, and any pendingness claim for Proclamation 1060 contradicts the source."
+          },
+          {
+            "name": "no_positive_full_correct_instance",
+            "candidate_summary": "No unresolved Council handling remained for Proclamation 1060 after adoption.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "This is the source-correct absence statement. It is not Presence = 1 for U because the U gate requires a positive unfinished / pending state marker."
+          },
+          {
+            "name": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Proclamation 1060 remained pending and was set to return to Council for a later final vote.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "It names pendingness, a pending item, and a handling path, but all are contradicted by the completed in-session adoption."
+          }
+        ]
+      }
+    }
+  }

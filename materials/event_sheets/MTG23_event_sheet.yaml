@@ -1,0 +1,522 @@
+segment_id: "MTG23"
+segment_dir: "23_AlamedaCC_11032015"
+meeting_id: "AlamedaCC_11032015"
+uid: "AlamedaCC_11032015_2015-2060"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # event_sheet_23.md
+  
+  ## Source and build notes
+  
+  - Source transcript: `transcript_23.txt`
+  - Slot source of truth: `slot_semantics.json` version 29
+  - Protocol: `event_sheet_protocol.md` version 29
+  - Language: English
+  - Scope: one sampled segment concerning an ordinance for a lease and option to purchase for Building 23 at Alameda Point.
+  - Naming note: the transcript appears to contain ASR variants for the company name, including `Nortel`, `Mattel`, and `natal`. This event sheet uses `Natel Energy` as the normalized name while preserving source vocabulary variants where relevant.
+  - Address note: the transcript renders the location as `24 one Monarch Street in Alameda Point`; this event sheet avoids normalizing the street number beyond the source wording.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >
+    The segment was substantively framed around authorizing a lease and option to purchase for Alameda Point Building 23 with Natel Energy, supporting adaptive reuse of a city-controlled building for clean-energy manufacturing, R&D, headquarters, and initial production uses.
+  evidence:
+    - "Introduction of ordinance approving a lease and an option to purchase and authorizing the city manager to execute documents necessary to implement the terms of a ten year lease and option to purchase with Nortel Energy or Building 23..."
+    - "We're talking about a 65,000 square foot building, building 23..."
+    - "So we are a water and energy innovation company based here in Alameda at Alameda Point. And what we do is distributed utility scale hydropower."
+    - "Where we're headed is that we envision this space becoming our corporate headquarters, our engineering, R&D, primary location and our location for initial production."
+  source_vocabulary:
+    subject_terms:
+      - lease and option to purchase
+      - Building 23
+      - Alameda Point
+      - water and energy innovation company
+      - distributed utility scale hydropower
+      - clean tech
+      - advanced manufacturing
+    policy_direction_terms:
+      - approving a lease and an option to purchase
+      - authorizing the city manager to execute documents
+      - adaptive reuse
+      - repurposing
+      - grow here
+      - initial production facility
+    target_terms:
+      - Building 23
+      - Alameda Point
+      - city-controlled and city-owned property
+      - Natel Energy
+      - manufacturing jobs
+  
+  temporal_status:
+    primary: currently_existing
+    notes:
+      - The building and Alameda Point property conditions existed at the time of the meeting.
+      - The lease/option authorization was under consideration during the segment.
+      - The company's planned use and growth were future-facing effects of the proposed lease and option.
+  
+  source_context_for_fact_check:
+    subject: >
+      Ordinance and discussion concerning a lease and option to purchase for Building 23 at Alameda Point with Natel Energy.
+    policy_direction: >
+      Authorize and introduce an ordinance for a lease and option to purchase, enabling reuse and investment in Building 23 for clean-energy manufacturing, R&D, headquarters, and initial production.
+    target:
+      entity_or_tenant: Natel Energy, rendered with ASR variants in the transcript.
+      property: Building 23 at Alameda Point, described as a 65,000-square-foot building on hangar row / western edge of city-controlled property.
+      use_target: adaptive reuse for clean-energy, hydropower-related manufacturing and related company operations.
+    temporal_status:
+      - currently_existing for the building, tenant presence, and city ownership/control at the time of discussion
+      - pending_future_handling for the ordinance because later council action remained pending
+      - future_effect for company growth, investment, production facility build-out, and jobs
+  
+  answer_locality: >
+    The T content is distributed across the item introduction, staff lease-and-option summary, staff rationale for sale/adaptive reuse, Natel Energy's presentation, and council comments supporting clean-energy manufacturing and job replacement.
+  marker_presence:
+    topic_gate:
+      subject_identified: present
+    quality_gate:
+      policy_direction: present
+      target: present
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >
+    The City Council voted unanimously to introduce the ordinance, with additions requested by the Mayor to make the lease-and-option-to-purchase language explicit in the heading, whereas clause, and authorization section. The action was an introduction/first-reading step, not final adoption, because the item was stated to be coming back.
+  evidence:
+    - "So I make the motion to introduce the ordinance with the additions as outlined by the Mayor."
+    - "And I would like to hasten to second the Vice Mayor's motion..."
+    - "So that being said, all those in favor. I. Motion carries unanimously."
+    - "Madam Chair, this is coming back. Yes. Yes."
+    - "...when it comes back, then I'm thinking we will have more information provided."
+  source_vocabulary:
+    disposition_terms:
+      - make the motion
+      - introduce the ordinance
+      - second the motion
+      - all those in favor
+      - Motion carries unanimously
+      - coming back
+    acted_on_item_terms:
+      - ordinance
+      - lease and option to purchase
+      - option to buy
+      - additions as outlined by the Mayor
+      - heading
+      - whereas
+      - section one
+  
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The motion to introduce the ordinance with additions was completed during the segment.
+      - The vote carried unanimously during the segment.
+      - Final handling was not completed because the item was stated to be coming back.
+  
+  source_context_for_fact_check:
+    actor: City Council / council body conducting the segment.
+    procedural_stage: >
+      Ordinance introduction / first-reading type action with later return pending, not final passage or final enactment.
+    disposition_result:
+      - The Vice Mayor moved to introduce the ordinance with the Mayor's requested additions.
+      - Another councilmember seconded the motion.
+      - The motion carried unanimously.
+    acted_on_item:
+      - Ordinance approving a lease and option to purchase for Building 23 with Natel Energy.
+      - Additions requested by the Mayor to include option-to-purchase / option-to-buy language in the ordinance heading, a whereas clause, and Section 1 authorization language.
+    vote_result:
+      value: unanimous / all in favor
+      attached_to: motion to introduce the ordinance with additions
+    temporal_status:
+      - completed_in_session for the introduction vote
+      - pending_future_handling for the ordinance's later return/final action
+  
+  answer_locality: >
+    The O content is concentrated in the council deliberation after staff and tenant presentations, especially the Mayor's requested ordinance language, the Vice Mayor's motion, the second, the vote, and the post-vote statement that the item would come back.
+  marker_presence:
+    topic_gate:
+      disposition_verb_tied_to_acted_on_item: present
+    quality_gate:
+      acted_on_item_specific: present
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >
+    The item came forward against a background of Alameda Point adaptive reuse needs: the city lacked capital to significantly improve former base buildings and infrastructure, sale/option terms were presented as a way to attract private investment, offset infrastructure burdens, preserve historic buildings, and support the base-reuse job-replacement purpose.
+  evidence:
+    - "...why would we recommend sale of property?"
+    - "...we do not invest significant dollars in both the asset. We don't provide tenant improvement allowances..."
+    - "...that kind of investment capital requires an ownership stake in the property..."
+    - "...if we don't sell the land to attract this capital, we aren't going to then invest in the buildings, $10 million in the building."
+    - "...leveraging the value of the building to pay for infrastructure for manufacturing and uses an adaptive reuse area."
+    - "...our main purpose is not to hold this land. Our main purpose is to replace the jobs that went when the Navy closed."
+  source_vocabulary:
+    background_terms:
+      - why staff would recommend selling
+      - city doesn't invest significant dollars
+      - tenant improvement allowances
+      - attract significant investment capital
+      - ownership stake
+      - save these buildings
+      - pay for infrastructure
+      - adaptive reuse area
+      - Base Reuse and Base Realignment and Closure Act
+      - replace the jobs that went when the Navy closed
+  
+  temporal_status:
+    primary: already_occurred
+    notes:
+      - The closure of the Navy base and job-loss/reuse context predated the segment.
+      - The city's ongoing inability or unwillingness to make major capital investments in the buildings and infrastructure existed at the time of the segment.
+      - The proposed lease/option was presented as the current mechanism responding to that background.
+  
+  source_context_for_fact_check:
+    trigger_condition:
+      - The city controlled and owned aging Alameda Point buildings but did not provide major building-asset investment or tenant improvement allowances.
+      - Staff described a need to attract private investment capital and said such capital typically required an ownership stake.
+      - Infrastructure deficiencies and large infrastructure costs at Alameda Point were presented as long-term liabilities and as a reason to leverage building value.
+      - Base reuse and job replacement after Navy closure were invoked as part of the policy background.
+    agenda_connection:
+      - The lease and option-to-purchase structure was presented as a way to attract Natel Energy's planned investment, support adaptive reuse, address infrastructure burden, and grow manufacturing jobs.
+      - The item's form included a potential sale/option because staff believed lease-only holding would not generate the same building investment or infrastructure funding.
+    temporal_status:
+      - already_occurred for Navy closure/base-reuse history
+      - currently_existing for building/infrastructure deficiencies and city capital constraints
+      - future_effect for projected jobs, private investment, and infrastructure funding impacts
+  
+  answer_locality: >
+    The B content appears mainly in staff's rationale for recommending sale/option terms and in council comments connecting the item to base reuse, historic-building adaptive reuse, infrastructure, and job replacement.
+  marker_presence:
+    topic_gate:
+      precipitating_context_visible: present
+    quality_gate:
+      connected_to_current_item_or_form: present
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >
+    The action carried detailed lease, option, investment, infrastructure, tax, ordinance-language, and container-storage payloads: a 10-year lease with one 5-year renewal option, $0.54 per square foot monthly rent with annual escalation, about $440,000 annually / $4.8 million over ten years, an $8 million option price, planned $10 million building investment, municipal services and property-tax impacts, development-impact/infrastructure burden calculations, ordinance text additions, and up to 20 single-stacked containers subject to condition and placement limits.
+  evidence:
+    - "...a ten year lease with one five year renewal option at $0.54 per square foot of monthly rent with an annual escalator... about $440,000 annually, or for 4.8 million over the ten years."
+    - "There's a $8 million option price..."
+    - "...they're planning a $10 million investment in the actual building asset."
+    - "...all new development and property owners will pay a fair share of their municipal services special tax..."
+    - "...generating about $67,000 per year in property tax."
+    - "Building 23 is 5.3 acres. That equals about a $5.3 million infrastructure burden with an $8 million purchase price."
+    - "...they're allowed under the lease to have up to 20 containers. They have to be single stacked. They have to be in good condition, esthetically similar."
+    - "...the heading then... include the option to purchase... Whereas... has an option to purchase... Section one... for ten years and an option to purchase."
+  source_vocabulary:
+    carrier_terms:
+      - lease
+      - option to purchase
+      - ordinance
+      - Section one
+      - heading
+      - whereas
+    numeric_terms:
+      - 65,000 square foot building
+      - ten year lease
+      - one five year renewal option
+      - $0.54 per square foot
+      - about $440,000 annually
+      - 4.8 million over the ten years
+      - $8 million option price
+      - $91 per square foot building value
+      - 25 per square foot excess land value
+      - $10 million investment
+      - $67,000 per year in property tax
+      - $430,000 a year in debt service
+      - $5.2 million infrastructure burden
+      - $1,000,000 per acre
+      - 5.3 acres
+      - $5.3 million infrastructure burden
+      - up to 20 containers
+      - 4,800 square feet of land
+      - about 3% of outdoor land area
+    requirement_terms:
+      - municipal services special tax
+      - development impact fee
+      - single stacked
+      - good condition
+      - esthetically similar
+      - pushed back
+      - include the option to purchase
+  
+  temporal_status:
+    primary: future_effect
+    notes:
+      - Lease, option, rent, purchase, investment, tax, and container provisions were payload terms for a proposed/introduced ordinance and lease.
+      - Some numbers described currently proposed contract terms; their effects would occur if implemented after later handling.
+      - Ordinance-language additions were directed in-session as part of the introduction motion.
+  
+  source_context_for_fact_check:
+    payload_carrier:
+      - Ordinance approving and authorizing documents for a lease and option to purchase for Building 23 with Natel Energy.
+      - Lease terms and lease exhibits, including container allowance and placement constraints.
+      - Mayor-requested ordinance text additions included in the motion to introduce.
+    payload_content:
+      lease_and_option:
+        - 10-year lease.
+        - One 5-year renewal option.
+        - Option to purchase included in the lease/ordinance package.
+        - $0.54 per square foot monthly rent with annual escalator.
+        - About $440,000 annually / $4.8 million over ten years.
+        - $8 million option price.
+      investment_and_use:
+        - Natel Energy planned a $10 million investment in the building asset.
+        - Planned use included headquarters, engineering, R&D, and initial production.
+        - Forecast of 150 to 200+ jobs over the next five years was stated by the company.
+      fiscal_and_infrastructure:
+        - Property would pay fair share of municipal services special tax.
+        - Staff estimated about $67,000 per year in property tax.
+        - Staff discussed an infrastructure burden / development impact fee framework of about $1,000,000 per acre for commercial uses.
+        - Building 23 was described as 5.3 acres, yielding about a $5.3 million infrastructure burden, with the $8 million purchase price exceeding that burden by about $2.7 million.
+      ordinance_text_additions:
+        - Add option-to-purchase / option-to-buy language to the ordinance heading.
+        - Add a whereas clause addressing the option to purchase.
+        - Add Section 1 authorization language for a 10-year lease and option to purchase.
+      container_terms:
+        - Up to 20 containers allowed under the lease.
+        - Containers must be single-stacked, in good condition, and aesthetically similar.
+        - Container storage was to be located in the exhibit-defined area, pushed back from Monarch/street-facing areas to minimize views.
+    payload_scope:
+      property: Building 23 and its associated land premises at Alameda Point.
+      tenant: Natel Energy.
+      outdoor_area: container storage limited to a small percentage of outdoor land area as described by staff.
+    payload_scalar_or_baseline:
+      - value: 65,000 square feet
+        meaning: approximate building size for Building 23.
+      - value: 10 years
+        meaning: base lease term.
+      - value: 5 years
+        meaning: renewal option term.
+      - value: $0.54 per square foot per month
+        meaning: stated monthly rent rate.
+      - value: about $440,000 annually / $4.8 million over ten years
+        meaning: stated lease revenue result from rent terms.
+      - value: $8 million
+        meaning: option/purchase price stated in staff lease-and-option summary.
+      - value: $10 million
+        meaning: planned investment in the building asset by Natel Energy.
+      - value: about $67,000 per year
+        meaning: estimated property tax.
+      - value: about $1,000,000 per acre
+        meaning: commercial development impact fee / infrastructure burden framework.
+      - value: 5.3 acres and about $5.3 million
+        meaning: Building 23 land area and resulting infrastructure burden estimate.
+      - value: up to 20 containers
+        meaning: maximum container allowance under the lease.
+      - value: about 4,800 square feet / about 3% outdoor land area
+        meaning: staff's estimate of land area used if all containers are used; transcript also contains a noisy conflicting `1400 square feet` rendering, so the clearest stated maximum is 4,800 square feet.
+    temporal_status:
+      - future_effect for lease implementation, purchase option exercise, investment, jobs, taxes, and container use
+      - completed_in_session for incorporation of ordinance-language additions into the motion
+    notes:
+      - A later council comment contains ASR-noisy references to `$4.9 million` and `55,000 square feet`; the clear staff lease-and-option summary supports 65,000 square feet and an $8 million option price for this event-sheet payload context.
+  
+  answer_locality: >
+    The N content is spread through the staff lease-and-option summary, fiscal/infrastructure discussion, Natel Energy presentation, container-disclosure exchange, Mayor's requested ordinance revisions, and the motion incorporating those revisions.
+  marker_presence:
+    topic_gate:
+      payload_attached_to_action: present
+    quality_gate:
+      number: present
+      named_requirement: present
+      scope_boundary: present
+      date_cutoff: absent_or_not_primary
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >
+    The segment raised concrete concerns about why the city should sell or option city property, whether the city would lose control after private ownership, how to protect against future development problems, how to fund infrastructure and avoid long-term liabilities, and whether visible storage containers would affect aesthetics.
+  evidence:
+    - "...there are some questions and, you know, very valid questions about, well, why would we recommend sale of property?"
+    - "...we do not invest significant dollars in both the asset. We don't provide tenant improvement allowances..."
+    - "...if you don't invest in infrastructure you kind of have to take into consideration if you're going to be a long term holder of property..."
+    - "...I know there's some questions about what, you know, losing control. And it's something honestly, like, I wake up in the middle of night..."
+    - "So once we lose control... they could sell the property, things could happen, they could get developed in certain ways..."
+    - "Obviously, we don't we really I don't think we really want to see containers out there. If they can be painted in a manner that has them blend into the background..."
+  source_vocabulary:
+    concern_terms:
+      - valid questions
+      - recommend sale of property
+      - inability to invest
+      - infrastructure deficiencies
+      - major annual long term liabilities
+      - losing control
+      - wake up in the middle of night
+      - they could sell the property
+      - things could happen
+      - developed in certain ways
+      - containers
+      - esthetics
+      - blend into the background
+  
+  temporal_status:
+    primary: recurring_concern
+    notes:
+      - Concerns about sale rationale, control, infrastructure, and container visibility were current during the segment.
+      - Loss-of-control and development/aesthetic issues were future-oriented risks if the property became private.
+      - Infrastructure liabilities were described as currently existing and potentially worsening long-term.
+  
+  source_context_for_fact_check:
+    obstacle_content:
+      - The city did not make significant capital investments in Alameda Point buildings or tenant improvements.
+      - Holding property long term without infrastructure investment was presented as creating infrastructure liabilities and debt-service implications.
+      - Selling or optioning land raised concern that the city would lose direct ownership control and that a future owner might sell or develop the property in undesirable ways.
+      - Container storage raised an aesthetic concern about visibility from surrounding areas.
+    local_anchor:
+      property: Building 23 / associated Alameda Point land premises.
+      place_context: Alameda Point, including Monarch-facing visibility and container placement on the property.
+    temporal_status:
+      - currently_existing for city capital/infrastructure constraints
+      - hypothetical_or_risk for loss of control, later sale, later development, and container aesthetic impacts
+      - recurring_concern for multiple council/staff references to control, value, infrastructure, and aesthetics
+  
+  answer_locality: >
+    The L content appears in staff's explanation of sale rationale and infrastructure liabilities, the loss-of-control discussion, the container-disclosure discussion, and Mayor/council comments about container aesthetics and second-hearing information needs.
+  marker_presence:
+    topic_gate:
+      concrete_concern_language: present
+    quality_gate:
+      specific_concern_content: present
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme in the discussion was whether transferring or optioning city-owned Alameda Point property would protect public value and public-control interests: council and staff repeatedly returned to infrastructure-burden coverage, fair market value, regulatory safeguards, lease/purchase conditions, and transparency for the second hearing.
+  evidence:
+    - "...why would we recommend sale of property?"
+    - "...losing control... once we lose control... they could sell the property, things could happen..."
+    - "...we've worked very hard to create a really robust policy framework for moving forward so that once these become private properties, that the city's vision is will continue to be complied with."
+    - "...this one exceeds the impact fee... which is the public's insurance policy, that the value the true value of those properties is translated into the infrastructure we need."
+    - "...I just want for the second hearing to capture that information so that we don't have anybody coming up at the second time and wondering what we did the first time."
+  source_vocabulary:
+    concern_theme_terms:
+      - recommend sale of property
+      - losing control
+      - regulatory restrictions
+      - robust policy framework
+      - public's insurance policy
+      - true value
+      - translated into the infrastructure we need
+      - full disclosure
+      - second hearing
+      - capture that information
+  
+  temporal_status:
+    primary: recurring_concern
+    notes:
+      - The theme recurred across staff explanation, council deliberation, and post-vote comments.
+      - The public-value/control concern was current during the segment.
+      - Some risk components were future-oriented because they concerned what could happen after property transfer or private ownership.
+  
+  source_context_for_fact_check:
+    concern_theme: >
+      Whether the lease/option/sale structure adequately protected public value, infrastructure funding, regulatory control, and transparency when city property at Alameda Point could become privately owned.
+    concern_content:
+      value_and_infrastructure:
+        - Staff used market comparisons, option-price analysis, municipal services tax, property tax, and infrastructure-burden calculations to justify the transaction.
+        - A councilmember framed the impact-fee/infrastructure coverage as the public's insurance policy.
+      control_and_regulation:
+        - Staff acknowledged loss-of-control concerns after transfer and cited zoning, CEQA, biological restrictions, design review, historic preservation, sewer lateral rules, parcel map conditions, and transportation-demand management as safeguards.
+      transparency_and_future_hearing:
+        - Council requested that information be repeated or captured for the second hearing so the public would understand the rationale and conditions.
+      container_visibility:
+        - Container storage was disclosed and discussed as part of the control/aesthetic concern cluster.
+    temporal_status:
+      - recurring_concern for repeated value/control/infrastructure references
+      - hypothetical_or_risk for post-transfer development, resale, and control issues
+      - pending_future_handling for second-hearing transparency and final action
+  
+  answer_locality: >
+    The S content is synthesized from repeated references throughout the segment: staff's sale rationale, control-regulation framework, fiscal/infrastructure discussion, container disclosure, council economic-value comments, and post-vote request for second-hearing information.
+  marker_presence:
+    topic_gate:
+      problem_side_concern: present
+    quality_gate:
+      specific_content: present
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >
+    After the unanimous introduction vote, the ordinance still had to return for later handling / a second hearing, and staff was expected to provide or repeat additional information and capture ordinance changes before that return.
+  evidence:
+    - "Motion carries unanimously."
+    - "Madam Chair, this is coming back. Yes. Yes."
+    - "...when it comes back, then I'm thinking we will have more information provided."
+    - "...I just want for the second hearing to capture that information..."
+    - "...if the council has any other comments on that, they can share them with staff before it comes back to us."
+  source_vocabulary:
+    pending_terms:
+      - coming back
+      - when it comes back
+      - more information provided
+      - second hearing
+      - capture that information
+      - before it comes back to us
+  
+  temporal_status:
+    primary: pending_future_handling
+    notes:
+      - The in-session introduction vote was completed.
+      - Later ordinance handling remained pending.
+      - Additional information and ordinance-change capture were expected before or at the later return.
+  
+  source_context_for_fact_check:
+    pending_status: >
+      The ordinance was not finally completed in this segment; it was introduced unanimously and remained scheduled to come back for later handling / second hearing.
+    pending_item:
+      - Ordinance approving the lease and option to purchase for Building 23 with Natel Energy.
+      - Mayor-requested option-to-purchase language additions and supporting information for the second hearing.
+    handling_path:
+      - Return to the council / second hearing.
+      - Staff to provide or repeat information about value, infrastructure impact-fee comparison, and transaction rationale.
+      - Councilmembers could share additional comments with staff before the item came back.
+    temporal_status:
+      - completed_in_session for the introduction vote
+      - pending_future_handling for second hearing / later council handling
+  
+  answer_locality: >
+    The U content is located immediately after the unanimous vote and in the following exchange about the item coming back, second-hearing information, and council comments to staff before return.
+  marker_presence:
+    topic_gate:
+      pendingness_marker: present
+    quality_gate:
+      pending_item_identifiable: present
+      handling_path_visible: present
+  ```

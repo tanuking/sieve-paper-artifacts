@@ -1,0 +1,1336 @@
+segment_id: "MTG40"
+segment_dir: "40_DenverCityCouncil_05312016"
+meeting_id: "DenverCityCouncil_05312016"
+uid: "DenverCityCouncil_05312016_16-0341"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "metadata": {
+      "meeting_order": 40,
+      "artifact_type": "qa",
+      "language": "en",
+      "qa_authoring_protocol": "QA Authoring Protocol v30",
+      "slot_semantics_version": 29,
+      "event_sheet_protocol": "Event Sheet Protocol v29",
+      "source_event_sheet": "event_sheet_40.md",
+      "source_slot_semantics": "slot_semantics.json",
+      "segment_source": "transcript_40.txt",
+      "meeting_segment_focus": "Denver City Council consideration of Council Bill 341, the creation ordinance for the Five Points Business Improvement District.",
+      "authoring_principles": [
+        "Presence is determined only by the Topic Gate and Quality Gate.",
+        "Presence gates check whether the relevant labels are expressed, not whether values are source-correct.",
+        "Fact Check is a contradiction check against the event sheet, not a completeness check.",
+        "Omissions, abstractions, and partial but source-consistent coverage do not create Fact Check failure.",
+        "Fact Check = 0 only when the summary explicitly contradicts the event-sheet context for the selected slot's fact_check_fields."
+      ]
+    },
+    "global_fact_check_rules": [
+      {
+        "id": "fact_check_is_contradiction_check",
+        "title": "Fact Check checks contradiction, not completeness.",
+        "text": "Fact Check asks whether the summary explicitly states something that contradicts the event-sheet context for the selected slot. Fact Check is not a completeness check. Omission, partial but correct coverage, less-specific wording, and failure to reproduce every valid_item are not Fact Check errors. Fact Check = 0 only when the summary makes an explicit claim that conflicts with the event-sheet context for this slot."
+      },
+      {
+        "id": "fact_check_is_slot_local",
+        "title": "Fact Check is limited to the selected slot and its fact_check_fields.",
+        "text": "Fact Check only evaluates explicit summary claims that bear on the selected slot's fact_check_fields. The event-sheet excerpt is reference source context for those fields; it does not create additional fields, additional gates, or a summary-wide factual audit. If a summary claim does not bear on this slot's fact_check_fields, do not use it to set this slot's Fact Check = 0. Do not reclassify content into other slots."
+      },
+      {
+        "id": "fact_check_conflict_patterns",
+        "title": "Common ways an explicit claim can contradict the event sheet.",
+        "text": "Common contradiction patterns include: (1) wrong number, date, duration, amount, vote count, or threshold; (2) a correct value attached to the wrong meaning, object, condition, baseline, stage, or item; (3) wrong temporal status, such as completed vs pending, already occurred vs future effect, or existing condition vs hypothetical concern; (4) wrong decision, action, disposition, or procedural stage; (5) wrong actor, acted-on item, target, place, group, scope, jurisdiction, or legal instrument; (6) wrong condition, cause, causal direction, exception, or comparison baseline. These are conflict patterns, not required checklists. Apply them only to explicit claims that bear on this slot's fact_check_fields."
+      }
+    ],
+    "slots": {
+      "T": {
+        "name": "Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "meaning": "The summary names the substantive subject as a noun or noun phrase identifying the policy area, issue, or matter being discussed. Procedural form, bare agenda labels, motion numbers, or bill identifiers without the substantive subject do not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "meaning": "The summary shows what policy move was being pursued for the subject. This may be a direction-bearing verb such as update, revise, clarify, expand, restrict, launch, phase out, or consolidate. It may also be a concrete rule effect showing how the target would change, such as defaulting, extending, narrowing, broadening, adding, removing, changing a threshold, or changing a deadline. Procedural disposition, such as approved, adopted, recommended, or passed, is not policy direction."
+              },
+              {
+                "name": "target",
+                "meaning": "The summary identifies the target to which the policy direction applies: the entity, group, area, process, rule set, or scope the direction is aimed at. A bare direction without a target does not satisfy this label."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "subject",
+              "check": "Compare the substantive subject stated by the summary with the source-supported subject.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different policy area, issue, or matter as the subject."
+            },
+            {
+              "name": "policy_direction",
+              "check": "Compare the policy direction stated by the summary with the source-supported direction.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a direction that reverses or replaces the source-supported policy move."
+            },
+            {
+              "name": "target",
+              "check": "Compare the target stated by the summary with the source-supported target.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different entity, group, area, process, jurisdiction, or scope as the target."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "subject_identified": {
+                "match": [
+                  "Names the Five Points Business Improvement District, the proposed Five Points BID, or the BID creation ordinance as the substantive subject.",
+                  "Identifies the substantive subject as the proposed BID for the Welton/Five Points corridor, even if Council Bill 341 is also mentioned."
+                ],
+                "not_match": [
+                  "Only says Council Bill 341, a hearing, a vote, or an agenda item without naming the BID or substantive subject.",
+                  "Frames the subject as a zoning change, a specific development plan, or a residential tax district rather than the Five Points BID creation."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "policy_direction": {
+                "match": [
+                  "States that the policy move was to create or authorize the Five Points BID.",
+                  "States that the BID was intended to improve economic vitality or commercial appeal or to provide enhanced services and improvements."
+                ],
+                "not_match": [
+                  "Only states that the bill passed, was heard, or went to a vote without describing the substantive policy move.",
+                  "Only discusses a future election or tax question without saying the BID structure was being created or authorized."
+                ]
+              },
+              "target": {
+                "match": [
+                  "Identifies the target as commercial or business properties within the proposed district boundaries.",
+                  "Identifies the target as the Welton/Five Points corridor or the targeted commercial area around Welton Avenue."
+                ],
+                "not_match": [
+                  "Gives no target for the BID creation or improvement effort.",
+                  "Identifies the target as all Denver residents, all residential property, or an unrelated area."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The substantive subject was creation of the Five Points Business Improvement District.",
+            "The policy direction was to create or authorize a BID structure to provide enhanced services and improvements.",
+            "The target was commercial/business properties in the proposed Welton/Five Points district boundaries or corridor.",
+            "The proposal was not a zoning change, specific development-plan approval, or residential tax district."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to mention every service category; partial but source-consistent service descriptions are allowed.",
+            "If a summary states that Council approval itself completed voter approval of the tax levy, that is not a T-field error unless it changes the T subject, policy direction, or target."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The segment framed Council Bill 341 as creating the Five Points Business Improvement District to improve economic vitality and the commercial appeal of properties in the proposed Welton/Five Points corridor through enhanced services and improvements.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "future_effect",
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The proposal and Council consideration existed during the segment.",
+              "The district's services and improvements were future-facing effects of creation and implementation.",
+              "Revenue authority through the tax levy depended on a later November 2016 election."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "subject": "creation of the Five Points Business Improvement District",
+            "policy_direction": "create or authorize a BID structure to provide enhanced services and improvements for the targeted Five Points/Welton commercial corridor",
+            "target": [
+              "commercial and business properties in the proposed district boundaries",
+              "the Welton/Five Points corridor described in the staff report and presentation"
+            ],
+            "not_supported_as_T": [
+              "a zoning change",
+              "approval of a specific development plan",
+              "a residential tax district as the operative proposal"
+            ],
+            "important_distinction": "Council approval of the BID creation ordinance allowed the district-election process to proceed; it did not itself approve a specific development plan or zoning change."
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "The Council held a public hearing and voted on Council Bill 341.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary gives only procedural activity and a bill number; it does not identify the substantive BID subject."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "The segment concerned the Five Points Business Improvement District.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The BID subject is present, but the policy direction and target are not stated."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "The segment framed Council Bill 341 as creating the Five Points BID to improve economic vitality and commercial appeal for business and commercial properties in the Welton/Five Points corridor.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary names the subject, policy direction, and target without contradicting the event sheet."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "The segment framed Council Bill 341 as a zoning change approving a residential development district for all Five Points residents.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a substantive subject, direction, and target, but they conflict with the BID creation and commercial-property target."
+          }
+        ]
+      },
+      "O": {
+        "name": "Outcome/Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "meaning": "The summary states that the body took a disposition on an acted-on item. Discussion, questioning, support, or hearing activity alone does not satisfy this label. This label does not decide whether the disposition is at the source-supported procedural stage. If a recognizable disposition is tied to an acted-on item, Presence may pass even when the stage is wrong. Stage accuracy is evaluated in Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "meaning": "The acted-on item is identified specifically enough that the reader can tell which item was acted on. Formal numbers or labels are sufficient but not required. A substantive description also satisfies this label when it distinguishes the item within the sampled segment. A generic referent alone is not enough."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "actor",
+              "check": "If the summary explicitly states an acting body or actor, compare that actor with the source-supported actor. Actor is separate from procedural stage. A broad institutional label alone is not a stage replacement when surrounding context preserves the source-supported stage. Omitting the actor alone is not a Fact Check error.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly attributes the disposition to a different actor or body than the source supports."
+            },
+            {
+              "name": "procedural_stage",
+              "check": "If the summary states or clearly implies where the acted-on item stands in the institutional processing path, compare that procedural stage with the source-supported stage. Stage is separate from actor and disposition result. Examples of stages include committee recommendation, referral, first reading, final body passage, enactment, ballot placement, voter approval, and later scheduled handling.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states or clearly implies that the acted-on item reached a procedural stage different from the source-supported stage. This includes stating that a body completed a later legal, electoral, or administrative effect when the source supports only recommendation, referral, advancement, or another earlier-stage action."
+            },
+            {
+              "name": "disposition_result",
+              "check": "Compare the result the summary says occurred at the stated or implied stage with the source-supported result. Result is separate from procedural stage: recommended, adopted, referred, rejected, deferred, passed, enacted, and similar verbs can describe different results depending on stage.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a result different from the source-supported result for the same acted-on item and stage."
+            },
+            {
+              "name": "acted_on_item",
+              "check": "Compare the acted-on item stated by the summary with the source-supported acted-on item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different ordinance, motion, amendment, appointment, resolution, agenda item, or other acted-on item than the source supports."
+            },
+            {
+              "name": "vote_result",
+              "check": "If the summary states a vote count, unanimity, passed/failed vote result, or attaches a vote result to a disposition, compare both the value and the disposition/stage it is attached to against the event-sheet source context.",
+              "fail_condition": "Fact Check = 0 if the summary states a different vote result, attaches a source-supported vote result to the wrong disposition or procedural stage, or states the vote result with materially ambiguous attachment to the acted-on action."
+            }
+          ],
+          "rules": [
+            {
+              "id": "broad_body_label_not_enough_for_stage_replacement",
+              "text": "A broad body label such as Council, Board, or Commission is not by itself a procedural-stage replacement. If the same relevant context states recommendation, referral, advancement, later handling, or pending final action, that context may clarify the broad label."
+            },
+            {
+              "id": "later_effect_claim_requires_supported_stage",
+              "text": "If a summary says the acted-on item itself completed a later legal, electoral, or administrative effect, treat that as a procedural_stage or disposition_result claim. If the source supports only recommendation, referral, advancement, or another earlier-stage action, the later-effect claim meets the procedural_stage or disposition_result fail_condition. This includes describing a body as having completed the legal effect of an item that was only recommended or advanced in the sampled segment."
+            },
+            {
+              "id": "correct_clause_does_not_cancel_wrong_stage_claim",
+              "text": "A source-consistent clause about recommendation, referral, advancement, or later handling does not cancel a separate explicit claim that the same acted-on item reached an unsupported later stage or completed an unsupported legal/electoral/administrative effect."
+            }
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "disposition_verb_tied_to_acted_on_item": {
+                "match": [
+                  "States that Council placed Council Bill 341 on final consideration and passed it.",
+                  "States that the Council passed or gave final approval to the Five Points BID creation ordinance."
+                ],
+                "not_match": [
+                  "Only states that a hearing, testimony, or discussion occurred.",
+                  "Only states that the tax levy would later go to voters, without saying what Council did to the bill."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "acted_on_item_specific": {
+                "match": [
+                  "Identifies the acted-on item as Council Bill 341.",
+                  "Identifies the acted-on item as the creation ordinance for the Five Points Business Improvement District."
+                ],
+                "not_match": [
+                  "Uses only a generic referent such as 'the item,' 'the proposal,' or 'the matter' with no way to tell which item was acted on.",
+                  "Identifies a different bill, ordinance, election question, or development plan as the acted-on item."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "Denver City Council was the acting body for the in-session disposition.",
+            "Council Bill 341 was placed on final consideration and passed.",
+            "The acted-on item was Council Bill 341, the creation ordinance for the Five Points BID.",
+            "The vote result was 12 ayes and no no votes recorded, attached to final consideration and passage of Council Bill 341."
+          ],
+          "fact_check_notes": [
+            "Do not conflate Council passage of the creation ordinance with voter approval of the later tax levy.",
+            "A vote count is checked only if the summary states one or attaches a vote result to the disposition."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The Council completed the in-session disposition on Council Bill 341: the bill was placed on final consideration and passed by roll-call vote, with 12 ayes and no no votes recorded.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The Council action on the creation ordinance was completed in the segment.",
+              "Tax/revenue authority and later implementation remained tied to later election and budget handling."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "actor": "Denver City Council / Council body conducting the hearing and final consideration",
+            "procedural_stage": "final Council consideration and passage of Council Bill 341",
+            "disposition_result": [
+              "Council Bill 341 was placed on final consideration.",
+              "Council Bill 341 passed."
+            ],
+            "acted_on_item": [
+              "Council Bill 341",
+              "creation ordinance for the Five Points Business Improvement District"
+            ],
+            "vote_result": {
+              "value": "12 ayes, 0 no votes recorded in the transcript result",
+              "attached_to": "final consideration / passage of Council Bill 341"
+            },
+            "important_distinction": "The passage of the creation ordinance should not be conflated with voter approval of the tax levy, which was a later November 2016 election item."
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "Residents and business owners spoke about the proposed BID.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary describes testimony but no disposition by the body."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "The Council passed the proposal.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is not specific enough."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "Denver City Council placed Council Bill 341, the Five Points BID creation ordinance, on final consideration and passed it by a 12-0 recorded result.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The disposition, acted-on item, procedural stage, actor, and vote attachment are source-consistent."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "Voters approved the BID tax levy 12-0 when Council Bill 341 was placed on final consideration.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The acted-on item and disposition context are recognizable, but the summary falsely converts Council passage into voter approval of the tax levy."
+          }
+        ]
+      },
+      "B": {
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "meaning": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item. The context must be stated as its own proposition; it need not include an explicit agenda-necessity statement."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "meaning": "The prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background is visibly connected to the current item, the form of the proposal, a revision, the discussion frame, or how the item was handled. An explicit “why now” or agenda-necessity statement is not required."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "trigger_condition",
+              "check": "Compare the prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background stated by the summary with the source-supported background for the item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, affected process, or triggering background than the source supports."
+            },
+            {
+              "name": "agenda_connection",
+              "check": "If the summary states the relation between the background context and the current item, compare that relation with the source-supported relation.",
+              "fail_condition": "Fact Check = 0 if the summary reverses the relation or explicitly states a different reason or background relation for why the current item took its form or came forward."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "precipitating_context_visible": {
+                "match": [
+                  "States that commercial property owners petitioned to create the Five Points BID.",
+                  "States that OED-supported feasibility work, outreach, community meetings, surveys, or petition certification preceded the item.",
+                  "States that the existing Welton Corridor Pedestrian Mall / local maintenance district or prior Five Points/Welton corridor planning formed background for the proposal."
+                ],
+                "not_match": [
+                  "Only states the Council created or passed the BID without any prior context.",
+                  "Only states future implementation steps after passage, without identifying prior background that shaped the item."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "connected_to_current_item_or_form": {
+                "match": [
+                  "Connects the petition, feasibility/outreach process, or met support thresholds to why the BID creation ordinance was before Council.",
+                  "Connects the existing two-block maintenance district or prior corridor planning to the proposed BID structure, transfer, or dissolution path."
+                ],
+                "not_match": [
+                  "Mentions prior Five Points history or neighborhood conditions without connecting them to the current BID item, proposal form, or Council discussion.",
+                  "States an unrelated historical fact about Denver that does not shape the Council Bill 341 item."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Commercial property owners petitioned to create the Five Points BID.",
+            "OED-supported feasibility work and outreach preceded the item.",
+            "Petition support was reported at 56.68% of the land/acreage and 62.3% of total assessed value.",
+            "The existing two-block Welton maintenance district and prior corridor planning formed background for the proposed BID.",
+            "These background facts explain why the creation ordinance was before Council and why the BID structure was proposed."
+          ],
+          "fact_check_notes": [
+            "Numeric values are checked only when explicitly stated as part of the trigger_condition or agenda_connection.",
+            "Do not require an explicit 'why now' phrase; a visible connection between the background and the current item is enough for Presence."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The item came forward after commercial property owners petitioned to create the BID, after OED-supported feasibility and outreach work, after petition thresholds were reported as met, and against the background of prior Welton/Five Points corridor planning and the existing two-block Welton maintenance district.",
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "future_effect"
+            ],
+            "notes": [
+              "The petition, feasibility work, outreach, and threshold certification were described as prior completed background.",
+              "The existing Welton maintenance district was described as a current background condition.",
+              "Dissolution or transfer into the BID was future-facing and conditional on the BID moving forward."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "trigger_condition": [
+              "commercial property-owner petition for BID creation",
+              "OED-supported feasibility and outreach process",
+              "reported statutory support thresholds met by land/acreage and assessed value",
+              "existing two-block Welton maintenance district and prior corridor planning context"
+            ],
+            "agenda_connection": [
+              "These background facts explain why the creation ordinance was before Council and why the BID structure was proposed.",
+              "The existing maintenance district background connects to the proposed transfer or dissolution if the BID moved forward."
+            ],
+            "numeric_values_for_context": [
+              {
+                "value": "56.68% / about 56.7%",
+                "meaning": "land or acreage represented by petition support"
+              },
+              {
+                "value": "62.3%",
+                "meaning": "total assessed value represented by petition support"
+              },
+              {
+                "value": "2015",
+                "meaning": "year OED grant was approved for feasibility work"
+              },
+              {
+                "value": "May 6",
+                "meaning": "date described for sending petition records to the city and county clerk"
+              }
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "Council Bill 341 would create a new BID for Five Points.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states the policy subject but no prior background or precipitating context."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "There had been earlier work in Five Points before the bill was discussed.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Prior context is visible, but it is too generic and not clearly connected to the current BID item or form."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "The item came forward after commercial property owners petitioned for the Five Points BID, following OED-supported feasibility and outreach work and reported petition support thresholds.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The prior petition/outreach context is stated and connected to why the creation ordinance was before Council."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "The BID ordinance came forward because residential tenants petitioned for a citywide tax district after the existing Welton maintenance district had already been dissolved.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a connected precipitating context, but the petitioner group, scope, and maintenance-district status contradict the event sheet."
+          }
+        ]
+      },
+      "N": {
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "meaning": "The summary expresses a condition, requirement, scope, restriction, number, date, or other payload as attached to the action or acted-on item. Single-sentence attachment and anaphora-linked adjacent sentences count. A free-standing background description that requires the reader to reconstruct the action-payload link does not satisfy this label. A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "any_of",
+            "label_set": "options",
+            "labels": [
+              {
+                "name": "number",
+                "meaning": "The attached payload includes an identifiable numeric quantity, such as a count, amount, percentage, duration, height, vote threshold, or other measured value."
+              },
+              {
+                "name": "named_requirement",
+                "meaning": "The attached payload includes an identifiable named requirement, restriction, condition, or carve-out."
+              },
+              {
+                "name": "scope_boundary",
+                "meaning": "The attached payload includes an identifiable scope boundary, such as a geographic boundary, categorical boundary, population-specific boundary, or other boundary defining what the payload applies to."
+              },
+              {
+                "name": "date_cutoff",
+                "meaning": "The attached payload includes an identifiable date cutoff or time boundary, such as an effective date, expiration date, sunset clause, or deadline."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "payload_carrier",
+              "check": "Compare which action, ordinance, motion, amendment, resolution, or acted-on item the summary attaches the payload to with the source-supported carrier.",
+              "fail_condition": "Fact Check = 0 if the summary attaches the payload to a different action or item than the source supports."
+            },
+            {
+              "name": "payload_content",
+              "check": "Compare the requirement, condition, restriction, permission, rule, or operative content stated by the summary with the source-supported payload content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states different operative payload content than the source supports."
+            },
+            {
+              "name": "payload_scope",
+              "check": "If the summary states the payload's applicable scope, category, population, geography, process, or target, compare it with the source-supported scope.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different scope or target for the payload than the source supports."
+            },
+            {
+              "name": "payload_scalar_or_baseline",
+              "check": "If the summary states a number, date, duration, threshold, amount, deadline, or baseline comparison attached to the payload, compare both value and role binding.",
+              "fail_condition": "Fact Check = 0 if the summary states a wrong value, attaches a correct value to the wrong payload role, states an unsupported baseline, or makes the scalar role binding materially ambiguous."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "payload_attached_to_action": {
+                "match": [
+                  "Attaches district terms, services, boundaries, revenue, assessment limits, budget, term, board structure, or election condition to Council Bill 341, the creation ordinance, or the BID operating plan.",
+                  "States what the proposed Five Points BID would include, impose, exclude, cover, fund, or require as part of the acted-on item."
+                ],
+                "not_match": [
+                  "Only states that Council passed the bill, without any operative term or payload.",
+                  "Only gives background about the petition or outreach process, without attaching a condition, scope, requirement, or number to the bill or BID plan.",
+                  "Only states generic hopes for improvement without connecting them to the ordinance or BID operating plan."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": {
+              "number": {
+                "match": [
+                  "Includes an attached numeric value such as 11 blocks, 219 properties, 42 acres, ten mills, $162,000, about $157,000 annually, ten years, five board members, 88 commercial parcels, or 42 commercial owners."
+                ],
+                "not_match": [
+                  "Uses only vague scalar language such as 'many properties,' 'a large area,' or 'some funding' without an identifiable number."
+                ]
+              },
+              "named_requirement": {
+                "match": [
+                  "Names a requirement, condition, or carve-out such as commercial-real-property assessment, no personal-property mills, residential exclusion unless converted to commercial use, voter approval before tax revenue, board appointment/confirmation, or renewal by Council resolution."
+                ],
+                "not_match": [
+                  "Only says the BID would provide benefits without a named condition, requirement, restriction, or carve-out."
+                ]
+              },
+              "scope_boundary": {
+                "match": [
+                  "States a geographic boundary such as both sides of Welton Avenue from 20th Street to Downing or the 11-block Welton/Five Points corridor.",
+                  "States a property-category boundary such as commercial and business properties only, mixed-use commercial/retail portions only, or residential property excluded unless changed to commercial use."
+                ],
+                "not_match": [
+                  "States only that the BID applies in Denver or Five Points without a boundary or property category that defines the payload scope."
+                ]
+              },
+              "date_cutoff": {
+                "match": [
+                  "Identifies November 2016 as the election timing for tax/revenue authority.",
+                  "Identifies the ten-year initial term or a later fall budget return as a time boundary attached to the BID plan."
+                ],
+                "not_match": [
+                  "Uses only vague future language such as 'later' or 'eventually' without a date, term, deadline, or time boundary."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload was carried by Council Bill 341, the Five Points BID creation ordinance, and the BID operating plan.",
+            "The BID payload included enhanced maintenance, physical improvements, economic development, safety/security, marketing/promotion, public events, business support, planning/development consulting, and advocacy.",
+            "Revenue would come from commercial real property tax revenue and transfer of remaining Welton Corridor Pedestrian Mall Local Maintenance District funds; personal property was not subject to mills and residential property was excluded unless changed to commercial use.",
+            "The district covered an 11-block Welton/Five Points corridor along both sides of Welton Avenue from 20th Street to Downing, with additional specified parcels, entirely within Denver.",
+            "The proposed district encompassed 219 properties and about 42 acres, with an expected initial budget of $162,000, a levy up to ten mills on commercial real property if approved, and an initial ten-year term.",
+            "Tax revenue authority depended on voter approval in the November 2016 election."
+          ],
+          "fact_check_notes": [
+            "Do not require all payload details or every numeric value to be mentioned.",
+            "If a number, amount, duration, date, threshold, or baseline is stated, check both the value and what it is attached to.",
+            "Council approval allowed the election process to proceed; it did not itself authorize tax collection without the later election."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "The operative payload attached to Council Bill 341 and the BID operating plan included boundaries, services, revenue mechanism, assessment categories, initial budget, board and term structure, and a later election requirement.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The ordinance and operating plan payload were under current Council consideration.",
+              "Services, levy, revenue, and district operations were future-facing effects.",
+              "Authority to raise revenue through taxes remained pending until a November 2016 election."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "payload_carrier": [
+              "Council Bill 341",
+              "Five Points Business Improvement District creation ordinance",
+              "BID operating plan"
+            ],
+            "payload_content": {
+              "services_and_improvements": [
+                "economic development",
+                "physical improvements",
+                "enhanced maintenance",
+                "safety/security",
+                "marketing/promotion",
+                "public events",
+                "business recruitment/management/development support",
+                "consulting for planning/managing development activities",
+                "advocacy for the Five Points area"
+              ],
+              "revenue_and_assessment": [
+                "property tax revenue on commercial real property",
+                "transfer of remaining funds from the Welton Corridor Pedestrian Mall Local Maintenance District",
+                "no mills on personal property",
+                "residential property not subject unless use changes to commercial"
+              ],
+              "governance_and_duration": [
+                "initial board of five district electors appointed by the mayor and confirmed by Council resolution",
+                "initial ten-year term",
+                "renewal would require later board determination/request and Council resolution"
+              ],
+              "election_condition": [
+                "Council approval allowed a proposed district election and assessment question to go to the November 2016 ballot",
+                "tax revenue authority was not available until voter approval in that election"
+              ]
+            },
+            "payload_scope": {
+              "geographic_scope": [
+                "11 blocks along both sides of Welton Avenue from 20th Street to Downing",
+                "includes parcels adjacent to Welton at the southeast corner of 26th and Washington",
+                "includes parcels on the southeast side of California between 26th and 27th",
+                "entirely within the City and County of Denver"
+              ],
+              "property_scope": [
+                "commercial and business properties within proposed boundaries",
+                "mixed-use buildings assessed only on the commercial/retail portion, as clarified in Q&A",
+                "residential property excluded unless changed to commercial use"
+              ]
+            },
+            "numeric_values": [
+              {
+                "value": "11 blocks",
+                "meaning": "main corridor length of the proposed district"
+              },
+              {
+                "value": "219 properties/parcels",
+                "meaning": "proposed district parcel/property count"
+              },
+              {
+                "value": "42 acres",
+                "meaning": "approximate area of the district"
+              },
+              {
+                "value": "88 commercial parcels",
+                "meaning": "commercial parcels referenced in the presentation"
+              },
+              {
+                "value": "42 commercial property owners",
+                "meaning": "commercial owner count referenced in the presentation"
+              },
+              {
+                "value": "over 700,000 square feet",
+                "meaning": "commercial property square footage referenced in the presentation"
+              },
+              {
+                "value": "over $15 million",
+                "meaning": "assessed total value referenced in the presentation"
+              },
+              {
+                "value": "$162,000",
+                "meaning": "expected initial budget in the staff report"
+              },
+              {
+                "value": "about $157,000 annually plus about $5,000 transferred",
+                "meaning": "annual levy estimate and Welton Maintenance District transfer estimate described in the presentation"
+              },
+              {
+                "value": "ten mills",
+                "meaning": "levy amount on commercial real property if approved"
+              },
+              {
+                "value": "ten years",
+                "meaning": "initial district term"
+              },
+              {
+                "value": "November 2016",
+                "meaning": "election timing for tax/revenue authority"
+              }
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "The Council passed Council Bill 341 after public testimony.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary states the action shell but no payload attached to the bill or BID plan."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "Council Bill 341 set out terms for the Five Points BID.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is attached to the action, but no number, named requirement, scope boundary, or date/time boundary is stated."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "The BID plan attached to Council Bill 341 covered an 11-block Welton corridor, imposed up to a ten-mill levy only on commercial real property if approved in the November 2016 election, and excluded residential property unless its use changed to commercial.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary states action-attached payload with numeric, named requirement, scope, and date content consistent with the event sheet."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "Council Bill 341 immediately imposed a ten-mill levy on both commercial and residential property across a citywide district.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary has specific payload, number, requirement, and scope, but contradicts the commercial-only, district-specific, election-conditioned payload."
+          }
+        ]
+      },
+      "L": {
+        "name": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "meaning": "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition. The concern must be asserted on the problem/concern side, not merely appear as the object of a solution-side verb. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "meaning": "The concern content is specific enough that the reader can tell what the concern, harm, obstacle, difficulty, loss, risk, or tradeoff is about. A generic statement that concerns were raised, without saying what the concern was, does not satisfy this label. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "obstacle_content",
+              "check": "Compare the concern, harm, obstacle, difficulty, loss, risk, tradeoff, constraint, or problem stated by the summary with the source-supported concern content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern, harm, obstacle, difficulty, loss, risk, tradeoff, or constraint than the source supports."
+            },
+            {
+              "name": "local_anchor",
+              "check": "If the summary explicitly ties the concern to a named place, named group, bounded area, or other local anchor, compare that anchor with the source-supported local anchor. Local anchor is not required for Presence.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different named place, named group, bounded area, or local anchor for the concern than the source supports."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "concrete_concern_language": {
+                "match": [
+                  "States a concern, objection, burden, unfairness, problem, failure, risk, or lack of notice related to the proposed BID.",
+                  "Uses problem-side language about the levy, noncontributing or residential beneficiaries, prior underperformance, maintenance problems, or inadequate owner representation."
+                ],
+                "not_match": [
+                  "Only states that speakers testified for or against the BID without saying what the concern was.",
+                  "Only describes staff's proposed services or supporters' benefits without asserting a problem-side concern."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_concern_content": {
+                "match": [
+                  "Specifies that the concern was about commercial owners bearing the levy burden.",
+                  "Specifies concern that residents, city buildings, vacant lots, parking lots, or other noncontributing properties would benefit without comparable assessment.",
+                  "Specifies concern about prior Welton/Five Points improvement failures, existing lighting or watering problems, or insufficient notification/representation."
+                ],
+                "not_match": [
+                  "States only that there were concerns, objections, or controversy, without identifying what they were about.",
+                  "Gives a generic concern such as 'costs' or 'fairness' without enough detail to identify the concrete issue in the segment."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Opponents raised concern that the BID levy would unfairly burden commercial owners.",
+            "Opponents raised concern that residential areas, city buildings, vacant lots, parking lots, or other noncontributing properties would benefit without comparable assessment.",
+            "Opponents raised concern that prior Welton/Five Points improvement efforts had underperformed and that lighting or watering problems remained.",
+            "Some affected owners said they were not adequately notified or included.",
+            "Relevant anchors included the Welton corridor / Five Points area, Wallace's 20th-to-23rd area reference, and Melnick's 3000 block of Welton reference."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if a summary explicitly states a place, group, or bounded area for the concern, compare it with the event sheet.",
+            "These were concerns raised by speakers, not staff findings that the BID would fail."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "Several speakers raised concrete concerns: levy burden on commercial owners, residents or noncontributing properties benefiting without comparable assessment, prior improvement efforts failing to deliver, existing lighting and watering problems, and insufficient notice or representation.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "hypothetical_or_risk",
+              "recurring_concern"
+            ],
+            "notes": [
+              "Some concerns described existing corridor conditions and prior experiences.",
+              "Some concerns were risk-oriented predictions about unfair burden, lack of improvements, or residents benefiting from commercial assessments.",
+              "Similar fairness/accountability concerns recurred across multiple speakers."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "obstacle_content": [
+              "concern that the BID levy would unfairly burden commercial owners",
+              "concern that residential areas, city buildings, vacant lots, or noncontributing parcels would benefit without comparable assessment",
+              "concern that prior corridor improvement programs had underperformed",
+              "concern about existing lighting and watering maintenance problems",
+              "concern that some owners were not adequately notified or included"
+            ],
+            "local_anchor": [
+              "Welton corridor / Five Points area",
+              "20th to 23rd area mentioned by Wallace as lacking visible business prospects",
+              "3000 block of Welton mentioned by Melnick as having only his commercial building"
+            ],
+            "important_distinction": "These were opposition or concern claims by speakers, not staff findings that the BID would fail."
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "Several speakers discussed the proposed Five Points BID.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary mentions discussion but no concrete concern or problem-side condition."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "Several speakers raised concerns about the BID.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the content of the concern is not specific."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "Opponents worried that commercial owners would bear the BID levy while residents, vacant lots, city buildings, or other noncontributing properties benefited, and some also cited prior failed improvements and lack of notice.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary states concrete concern content that matches the public testimony."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "Speakers objected because the BID would tax only residents while exempting commercial owners from services and assessments.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives specific concern content, but reverses the source-supported commercial-owner levy concern and residential exclusion."
+          }
+        ]
+      },
+      "S": {
+        "name": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "meaning": "The summary names the concern theme in problem-side language: problem, difficulty, deficiency, gap, fragmentation, dissatisfaction, negative state, or similar language. Problem vocabulary that appears only as the object or modifier of a solution-side verb does not satisfy this label. Generic debate language alone does not satisfy it."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_content",
+                "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and QA match require."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "concern_theme",
+              "check": "Compare the recurring concern theme stated by the summary with the source-supported concern theme.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern theme than the source supports."
+            },
+            {
+              "name": "concern_content",
+              "check": "If the summary states the concern's object, contrast, mechanism, tension, tradeoff, risk, consequence, affected group, or scope, compare it with the source-supported concern content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states different concern content, such as a different object, contrast, mechanism, risk, affected group, or scope, than the source supports."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "problem_side_concern": {
+                "match": [
+                  "Names the recurring concern theme in problem-side terms such as fairness, accountability, representation, effectiveness, tax burden, or prior underperformance of improvement efforts.",
+                  "Frames the shared issue as whether the BID tax and governance structure would be fair, representative, or effective."
+                ],
+                "not_match": [
+                  "Only says there was debate, testimony, or disagreement without naming a concern theme.",
+                  "Only states the solution-side BID services without problem-side concern language."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_content": {
+                "match": [
+                  "Identifies the concern content as commercial owners potentially paying for benefits received by residents or noncontributing properties.",
+                  "Identifies the concern content as prior Five Points/Welton improvement efforts failing to deliver or being poorly governed.",
+                  "Identifies the concern content as affected owners needing adequate representation, notice, or a clearer seat at the table."
+                ],
+                "not_match": [
+                  "Names only a generic theme such as 'fairness concerns' without indicating what was considered unfair or problematic.",
+                  "Names only generic 'community concerns' without an object, mechanism, tradeoff, or affected group."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was fairness/accountability of the BID tax and governance structure.",
+            "The recurring concern theme also included whether the BID would be effective given prior Welton/Five Points improvement history.",
+            "Concern content included commercial properties potentially paying while residents or noncontributing properties received benefits.",
+            "Concern content included prior improvement programs perceived as ineffective or poorly governed.",
+            "Concern content included affected owners needing stronger representation, notice, or a clearer seat at the table."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to say 'recurring' explicitly, but it must name the concern theme in problem-side language.",
+            "Support-side responses may be mentioned if source-consistent, but the slot checks the problem-side concern theme and content."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "A recurring concern theme was whether the BID's taxation and governance structure would be fair, representative, and effective given the corridor's history.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The fairness, representation, and effectiveness concerns were raised by more than one speaker and taken up in Council questioning.",
+              "Some content described existing governance/history concerns; some was risk-oriented about future BID performance."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "concern_theme": [
+              "fairness/accountability of the BID tax and governance structure",
+              "effectiveness of the BID given prior Welton/Five Points improvement history"
+            ],
+            "concern_content": [
+              "commercial properties may bear costs while residents or noncontributing properties receive benefits",
+              "historical improvement programs were perceived by some speakers as ineffective or poorly governed",
+              "affected property owners may need stronger representation or a clearer seat at the table",
+              "support-side responses emphasized outreach, business-focused services, economies of scale, and a later election as safeguards"
+            ],
+            "affected_groups_or_scope": [
+              "commercial property owners in the proposed district",
+              "residents and mixed-use/residential properties discussed in relation to whether they would be taxed",
+              "Welton/Five Points corridor stakeholders"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "The hearing included multiple comments from the public.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary gives participation but no problem-side concern theme."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "A recurring theme was concern about fairness.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the summary does not say what was considered unfair."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "A recurring concern was whether the BID's tax and governance structure would be fair and effective, since commercial owners might pay for benefits to residents or noncontributing properties after earlier corridor improvement efforts had disappointed speakers.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary names the concern theme and specific concern content source-consistently."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "The shared concern was that the BID gave residents too much voting power because residents would be the only taxed group.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a specific concern theme and content, but contradicts the source-supported commercial-tax and resident-exclusion discussion."
+          }
+        ]
+      },
+      "U": {
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "meaning": "The summary explicitly includes an unfinished, pending, or still-open state marker, such as remained pending, still to be decided, unresolved, remained in committee, held over, or final action remained pending. If the item is identifiable and the summary says it will proceed to a later full-body meeting, final action, final passage, or final consideration, that can satisfy pendingness. A bare directive without an explicit pendingness marker does not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "meaning": "What specifically remains pending is identifiable. The reader can tell which item, workstream, or issue is unfinished, not merely that something is unfinished."
+              },
+              {
+                "name": "handling_path_visible",
+                "meaning": "A concrete handling path is visible. This can be a future event path, process path, or institutional custody path. A path to a later full-body meeting, final action, final passage, or final consideration can satisfy this label if the item is identifiable. Bare future orientation does not satisfy it unless tied to an identifiable body, item, custody, review, hearing, or process path. An unrelated future item, post-adjournment announcement, or future hearing for a different item does not satisfy U."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "pending_status",
+              "check": "Compare the unfinished, pending, or resolved status stated by the summary with the source-supported status.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a resolved or completed status for a source-supported pending item, or a pending status for a source-supported completed item."
+            },
+            {
+              "name": "pending_item",
+              "check": "Compare what the summary says is pending with the source-supported pending item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different item, issue, workstream, ordinance, motion, or follow-up object as pending."
+            },
+            {
+              "name": "handling_path",
+              "check": "If the summary states a future meeting, body, committee, process, report-back, review, drafting, or custody path, compare it with the source-supported handling path.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a handling path, body, process, date, destination, or custody path different from the source-supported path."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pendingness_marker": {
+                "match": [
+                  "Explicitly states that revenue authority, tax approval, an updated budget, or long-term renewal remained pending after the creation ordinance.",
+                  "States that the BID could not raise revenue until the November 2016 election or that the budget would return in the fall."
+                ],
+                "not_match": [
+                  "Only states that Council passed the creation ordinance, without any unfinished or later-handling marker.",
+                  "States only a future-facing BID effect without saying that a particular item remained pending, unresolved, or still to return."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pending_item_identifiable": {
+                "match": [
+                  "Identifies the pending item as the tax levy or revenue-raising authority, the updated BID budget, or renewal after the initial ten-year term.",
+                  "Identifies the unresolved item as voter approval by eligible commercial district electors for taxes up to ten mills."
+                ],
+                "not_match": [
+                  "Only says something remained pending without identifying what item, workstream, or issue was unfinished.",
+                  "Identifies an unrelated future item rather than the tax authority, budget, or renewal/dissolution path."
+                ]
+              },
+              "handling_path_visible": {
+                "match": [
+                  "States the handling path as a November 2016 election by eligible electors for taxes up to ten mills.",
+                  "States the handling path as a fall return to Council with a newer budget or better cost details.",
+                  "States the long-term path as possible board request and Council resolution for renewal after the initial ten-year term."
+                ],
+                "not_match": [
+                  "Gives only vague future language such as 'later' or 'next steps' without an election, budget-return, Council-renewal, or other concrete process path.",
+                  "Describes a different body, date, or process path not supported by the event sheet."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Revenue authority through the tax levy remained pending after passage of the creation ordinance.",
+            "The updated BID budget remained pending for fall handling.",
+            "Long-term continuation after the initial ten-year term remained conditional on later board and Council action.",
+            "The tax levy handling path was a November 2016 election by eligible electors in the commercial district for taxes up to ten mills.",
+            "The budget handling path was a fall return to Council with newer budget or cost details.",
+            "The renewal path was a possible later board request and Council resolution after the initial ten-year term."
+          ],
+          "fact_check_notes": [
+            "The Council disposition on Council Bill 341 was completed in-session; U is about what remained pending after that action.",
+            "Do not treat the later tax levy, updated budget, or renewal path as already completed solely because the creation ordinance passed."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "event_sheet_summary": "After passage of the creation ordinance, revenue authority through the tax levy, updated budget details, and long-term renewal or dissolution remained pending through later election, fall budget return, and possible future Council renewal handling.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "completed_in_session"
+            ],
+            "notes": [
+              "The Council disposition on Council Bill 341 was completed in-session.",
+              "Revenue authority, final operating budget details, and later renewal/dissolution questions remained future handling."
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "pending_status": [
+              "revenue authority through the tax levy remained pending after the creation ordinance",
+              "updated budget details remained pending for fall handling",
+              "long-term continuation after ten years remained conditional on later board and Council action"
+            ],
+            "pending_item": [
+              "tax levy / revenue-raising authority for the BID",
+              "updated BID budget",
+              "potential renewal after the initial ten-year term"
+            ],
+            "handling_path": [
+              "November 2016 election by eligible electors in the commercial district for taxes up to ten mills",
+              "fall return to Council with a newer budget / better cost details",
+              "possible later board request and City Council resolution for renewal after the initial ten-year term"
+            ],
+            "important_distinction": "The creation ordinance passed in the segment; the later tax levy and full implementation path were not completed solely by that passage."
+          }
+        },
+        "score_examples": [
+          {
+            "example_type": "topic_fail",
+            "summary": "Council passed the Five Points BID creation ordinance.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary states the completed in-session action but no pending or unfinished item."
+          },
+          {
+            "example_type": "topic_pass_quality_fail",
+            "summary": "Some BID issues remained pending after Council's vote.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is stated, but neither the pending item nor handling path is identifiable."
+          },
+          {
+            "example_type": "full_correct",
+            "summary": "After Council passed the creation ordinance, revenue authority remained pending until eligible commercial district electors voted in the November 2016 election, and an updated budget was expected to return in the fall.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary identifies pending items and concrete handling paths without contradicting the event sheet."
+          },
+          {
+            "example_type": "wrong_but_specific_fact_check_fail",
+            "summary": "After passage, the tax levy was already approved and only a routine staff memo remained pending for the Planning Board in December 2016.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states pendingness and a path, but contradicts the source-supported unresolved tax-election, fall budget, and renewal paths."
+          }
+        ]
+      }
+    }
+  }

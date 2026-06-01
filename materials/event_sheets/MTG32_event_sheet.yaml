@@ -1,0 +1,579 @@
+segment_id: "MTG32"
+segment_dir: "32_AlamedaCC_02212017"
+meeting_id: "AlamedaCC_02212017"
+uid: "AlamedaCC_02212017_2017-3935"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # event_sheet_32
+  
+  ## Source metadata
+  
+  - `meeting_order`: 32
+  - `sampled_segment_transcript`: `transcript_32.txt`
+  - `slot_semantics`: `slot_semantics.json`, version 29
+  - `protocol`: `event_sheet_protocol.md`, Event Sheet Protocol v29
+  - `segment_topic`: City of Alameda referral concerning Wells Fargo banking services, Wells Fargo Securities investments, and socially responsible handling of city funds.
+  
+  ## Authoring note
+  
+  This event sheet records source-grounded slot content for the sampled segment. It does not define scoring rules and does not write judge instructions. Evidence snippets preserve the transcript wording where practical; summaries normalize obvious speech/transcription disfluencies.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >-
+    The segment frames a City of Alameda proposal to reassess and restrict the City's
+    banking and investment relationship with Wells Fargo. The policy direction is to
+    identify existing Wells Fargo accounts and investments, prepare an RFP for city
+    banking services, exclude Wells Fargo from that RFP process, and stop new Wells
+    Fargo Securities investments until further Council direction. The target is the
+    City's public funds, operating banking services, investments, and relationship
+    with Wells Fargo / Wells Fargo Securities.
+  evidence:
+    - "identify all accounts with Wells Fargo and investments in Wells Fargo Securities"
+    - "draft a request for proposal RFP for banking services for the city of Alameda"
+    - "exclude Wells Fargo from the RFP process and refrain from making new investments in Wells Fargo securities until further counsel direction"
+    - "we should we should be socially responsible with... millions of dollars of of our citizens"
+    - "if we're going to be using banking services or having direct investments in a... banking institution... if there's bad behavior and we do nothing, then we're passively condoning it"
+  source_vocabulary:
+    - Wells Fargo
+    - Wells Fargo Securities
+    - accounts
+    - investments
+    - banking services
+    - request for proposals / RFP
+    - exclude Wells Fargo
+    - refrain from making new investments
+    - taxpayer money
+    - socially responsible
+    - local banking institutions
+    - credit unions
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - future_effect
+      - pending_future_handling
+    notes:
+      - The City's existing Wells Fargo accounts/investments were treated as current exposure to be identified.
+      - The RFP, exclusion from the RFP, and no-new-investments direction were future-facing effects of the referral.
+      - The source does not support that all Wells Fargo relationships were fully terminated during the segment.
+  source_context_for_fact_check:
+    subject: City of Alameda banking services and investment relationship involving Wells Fargo and Wells Fargo Securities.
+    policy_direction:
+      - identify current Wells Fargo accounts and Wells Fargo Securities investments
+      - draft an RFP for City of Alameda banking services
+      - exclude Wells Fargo from the RFP process
+      - refrain from making new Wells Fargo Securities investments until further Council direction
+    target:
+      - City of Alameda public funds
+      - City operating banking services
+      - City investments / securities holdings
+      - Wells Fargo and Wells Fargo Securities as the institution at issue
+    unsupported_or_not_completed_in_source:
+      - final divestment of all existing funds
+      - immediate sale of all existing Wells Fargo securities
+      - immediate transfer of operating accounts to a replacement bank or credit union
+  answer_locality:
+    - opening agenda/referral framing
+    - council clarification over the referral's three asks
+    - treasurer and council discussion of investment-policy implementation
+    - final motion language
+  marker_presence:
+    subject_identified:
+      - "Wells Fargo"
+      - "banking services"
+      - "investments in Wells Fargo Securities"
+    policy_direction:
+      - "identify"
+      - "draft a request for proposal"
+      - "exclude Wells Fargo"
+      - "refrain from making new investments"
+    target:
+      - "city of Alameda"
+      - "accounts"
+      - "investments"
+      - "banking services"
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >-
+    The City Council completed an in-session disposition by moving, seconding, and
+    unanimously passing the referral, with amended language changing the no-new-
+    investment period from a fixed three-year period to "until further Council
+    direction." The acted-on item was the Wells Fargo referral, not a final completed
+    divestment of all City funds.
+  evidence:
+    - "I'll make that motion."
+    - "I'm going to second"
+    - "So the referral is here. Consider directing staff to one identify all accounts with Wells Fargo and investments in Wells Fargo Securities to draft a request for proposal RFP for banking services for the city of Alameda. Three Exclude Wells Fargo from the RFP process and refrain from making new investments in Wells Fargo securities until further counsel direction."
+    - "all those in favor. I, I. I. I passed this unanimously."
+  source_vocabulary:
+    - referral
+    - motion
+    - second
+    - all those in favor
+    - passed unanimously
+    - until further Council direction
+    - identify accounts
+    - draft RFP
+    - exclude Wells Fargo
+    - refrain from new investments
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - pending_future_handling
+      - future_effect
+    notes:
+      - The Council action on the referral was completed during the segment.
+      - Staff work, RFP drafting, policy review, and any later divestment or account-transfer decisions remained pending.
+  source_context_for_fact_check:
+    actor: City Council / body conducting the segment.
+    procedural_stage: in-session Council action on a referral/motion; not completed final divestment or completed operational account transfer.
+    disposition_result:
+      - The referral was moved and seconded.
+      - The referral passed unanimously.
+      - The adopted/referral language included an amendment to refrain from new Wells Fargo Securities investments until further Council direction.
+    acted_on_item:
+      - the Wells Fargo banking services / investments referral
+      - staff direction to identify accounts/investments, draft an RFP, exclude Wells Fargo from the RFP, and refrain from new Wells Fargo Securities investments
+    vote_result:
+      value: unanimous passage
+      attached_to: final motion on the referral
+    temporal_status:
+      - completed_in_session for the Council's passage of the referral
+      - pending_future_handling for implementation, staff reporting, RFP work, and investment-policy revisions
+  answer_locality:
+    - final motion and vote near the end of the segment
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item:
+      - "make that motion"
+      - "second"
+      - "passed this unanimously"
+    acted_on_item_specific:
+      - "the referral"
+      - "identify all accounts with Wells Fargo and investments in Wells Fargo Securities"
+      - "draft a request for proposal RFP"
+      - "exclude Wells Fargo"
+      - "refrain from making new investments in Wells Fargo securities"
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >-
+    The referral was shaped by community concerns, prior scrutiny of Wells Fargo's
+    conduct, comparisons to other cities' actions, and staff/treasurer review of the
+    City's existing exposure. Speakers and councilmembers cited Wells Fargo's
+    fraudulent accounts, Dakota Access Pipeline financing, foreclosure impacts,
+    sanctions involving student loans and veterans' mortgages, private-prison
+    financing, and broader concerns about socially irresponsible banking as context
+    for why the item came forward.
+  evidence:
+    - "the vice mayor and I, after hearing from members of the community, brought this referral"
+    - "a series of bad behaviors on the behalf of large banks, including Wells Fargo, including the fraudulent accounts"
+    - "investing in the Dakota pipeline"
+    - "The foreclosure shenanigans that went on that really impacted our neighboring cities"
+    - "those exhibits include... sanctions against Wells Fargo for things like the fraudulent accounts... student loan issues as well as for veterans mortgages"
+    - "Our staff has been looking at this for some time and our City Treasurer has been looking at this for some time"
+    - "we want to stand with the citizens of Davis and Seattle"
+    - "Wells Fargo was part of a syndicate of banks that had loaned... Core Civic and Geo Group... $1.3 billion"
+  source_vocabulary:
+    - after hearing from members of the community
+    - bad behaviors
+    - fraudulent accounts
+    - Dakota pipeline / Dakota Access Pipeline
+    - foreclosure shenanigans
+    - sanctions
+    - student loan issues
+    - veterans mortgages
+    - private prisons
+    - Davis and Seattle
+    - staff has been looking
+    - City Treasurer
+  temporal_status:
+    primary: already_occurred
+    additional:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - The alleged conduct and other-city examples were described as prior or ongoing background that shaped the referral.
+      - Existing Alameda accounts/investments were current exposure that staff and the treasurer had been examining.
+  source_context_for_fact_check:
+    trigger_condition:
+      - community concern before the referral
+      - cited Wells Fargo conduct, including fraudulent accounts, Dakota Access Pipeline financing, foreclosure impacts, and sanctions related to student loans and veterans' mortgages
+      - public-comment concerns about private-prison financing, fossil-fuel financing, and large-bank risk
+      - prior or parallel actions by other institutions/cities, including Davis, Seattle, and the University of California, were invoked as context
+      - City staff and the City Treasurer had already been reviewing Alameda's Wells Fargo exposure
+    agenda_connection:
+      - the background concerns were used to justify identifying exposure, exploring replacement banking services, excluding Wells Fargo from the RFP, and stopping new Wells Fargo Securities investments
+    unsupported_or_not_required:
+      - The source does not require a single exclusive cause for the referral; multiple background concerns were cited.
+      - The source does not establish that all alternative banks were already vetted or selected.
+  answer_locality:
+    - councilmember and vice mayor opening explanation
+    - public comments by multiple speakers
+    - treasurer's remarks on staff reconnaissance
+  marker_presence:
+    precipitating_context_visible:
+      - "after hearing from members of the community"
+      - "fraudulent accounts"
+      - "Dakota Access Pipeline"
+      - "sanctions"
+      - "private prisons"
+      - "staff has been looking at this"
+    connected_to_current_item_or_form:
+      - "brought this referral"
+      - "why we wanted to keep it open as a request for proposals"
+      - "what the process would actually involve"
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >-
+    The operative payload of the passed referral directed staff to identify all City
+    accounts with Wells Fargo and investments in Wells Fargo Securities, draft an RFP
+    for City of Alameda banking services, exclude Wells Fargo from that RFP process,
+    and refrain from making new Wells Fargo Securities investments until further
+    Council direction. The discussion also tied implementation to staff reporting and
+    investment-policy review, especially for existing securities and formal direction
+    to money managers.
+  evidence:
+    - "Consider directing staff to one identify all accounts with Wells Fargo and investments in Wells Fargo Securities"
+    - "to draft a request for proposal RFP for banking services for the city of Alameda"
+    - "Exclude Wells Fargo from the RFP process and refrain from making new investments in Wells Fargo securities until further counsel direction"
+    - "the first asked direct staff to identify all accounts with Wells Fargo and Investments"
+    - "they identify what's current because it could change quarter to quarter and then report back about what would be involved"
+    - "Our plan is to do the annual investment policy review in about six weeks in April"
+    - "the way to do it is through the investment policy, which addresses not only what we do going forward, but also what we have currently"
+  source_vocabulary:
+    - direct staff
+    - identify all accounts
+    - investments in Wells Fargo Securities
+    - draft an RFP
+    - banking services
+    - exclude Wells Fargo
+    - refrain from making new investments
+    - until further Council direction
+    - annual investment policy review
+    - money managers
+    - report back
+  temporal_status:
+    primary: future_effect
+    additional:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - The referral carrying this payload was passed during the meeting.
+      - The payload's work products and implementation were future-facing and pending after the vote.
+  source_context_for_fact_check:
+    payload_carrier: the Wells Fargo referral/motion passed by Council.
+    payload_content:
+      - identify all City accounts with Wells Fargo
+      - identify investments in Wells Fargo Securities
+      - draft a request for proposal for banking services for the City of Alameda
+      - exclude Wells Fargo from the RFP process
+      - refrain from making new investments in Wells Fargo Securities until further Council direction
+      - have staff/treasurer/finance return with information needed for later decisions and investment-policy treatment
+    payload_scope:
+      - City of Alameda accounts and operating banking services
+      - City investments and Wells Fargo Securities
+      - Wells Fargo as the entity excluded from the RFP and restricted for new securities purchases
+    numeric_values_or_time_boundaries:
+      - value: three years
+        meaning: original/referral wording discussed for the no-new-investment period, later replaced in the final motion by "until further Council direction"
+      - value: about six weeks / April
+        meaning: treasurer's expected timing for annual investment-policy review where formal policy treatment could be incorporated
+      - value: three securities
+        meaning: current Wells Fargo securities mentioned by the treasurer as existing holdings to address through policy direction
+    unsupported_or_not_completed_in_source:
+      - immediate sale of existing Wells Fargo securities
+      - immediate closure or transfer of operational banking accounts
+      - completed selection of a new bank or credit union
+      - final adoption of a new investment policy during this segment
+  answer_locality:
+    - opening agenda item wording
+    - council clarification about the three asks
+    - treasurer discussion of implementation and investment policy
+    - final motion wording
+  marker_presence:
+    payload_attached_to_action:
+      - "directing staff to"
+      - "the referral is here"
+      - "motion"
+    number:
+      - "three years" as replaced draft wording
+      - "six weeks in April" for policy review timing
+      - "three securities" as current holdings
+    named_requirement:
+      - "identify all accounts"
+      - "draft a request for proposal"
+      - "exclude Wells Fargo"
+      - "refrain from making new investments"
+    scope_boundary:
+      - "banking services for the city of Alameda"
+      - "Wells Fargo Securities"
+    date_cutoff:
+      - "until further Council direction" functions as the final temporal boundary for no new Wells Fargo Securities investments
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >-
+    Participants raised concrete concerns and harms tied to Wells Fargo and large-bank
+    relationships: fraudulent accounts, Dakota Access Pipeline financing and water/
+    tribal/environmental risks, foreclosure impacts, sanctions involving student loans
+    and veterans' mortgages, private-prison financing and human-rights abuses,
+    derivative/depositor risk at major banks, and practical operational concerns
+    around switching Alameda's accounts.
+  evidence:
+    - "fraudulent accounts"
+    - "investing in the Dakota pipeline"
+    - "foreclosure shenanigans that went on that really impacted our neighboring cities"
+    - "student loan issues as well as for veterans mortgages"
+    - "if there's bad behavior and we do nothing, then we're passively condoning it"
+    - "for profit prisons are plagued with violence... neglect the medical needs of prisoners and their rife with other human rights abuses"
+    - "there's also the potential ruptures of the pipeline... under the Missouri River... the sole water supply for the Standing Rock Sioux tribe"
+    - "some operational issues involved in terms of switching over our accounts and that that would involve some staff time"
+  source_vocabulary:
+    - fraudulent accounts
+    - bad behavior
+    - Dakota Access Pipeline
+    - Standing Rock Sioux tribe
+    - water supply
+    - foreclosure shenanigans
+    - student loan issues
+    - veterans mortgages
+    - private prisons
+    - violence
+    - human rights abuses
+    - mass incarceration
+    - derivative exposure
+    - depositor funds
+    - operational issues
+    - staff time
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - already_occurred
+      - currently_existing
+      - hypothetical_or_risk
+      - pending_future_handling
+    notes:
+      - Fraudulent accounts, sanctions, foreclosure impacts, and cited prison abuses were discussed as prior or existing harms.
+      - Pipeline spills, bank failure/depositor exposure, and operational switching burdens were discussed as risks or practical concerns.
+      - Switching accounts and evaluating alternatives remained pending.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Wells Fargo was criticized for fraudulent accounts and other banking misconduct.
+      - Speakers criticized Wells Fargo's involvement in Dakota Access Pipeline financing and associated environmental, water, and tribal-rights concerns.
+      - Speakers cited foreclosure impacts, student-loan issues, and veterans' mortgage sanctions.
+      - Speakers criticized financing of private-prison companies and associated violence, medical neglect, human-rights abuses, and mass-incarceration incentives.
+      - A speaker raised large commercial bank risk through derivatives and depositor-fund exposure.
+      - Councilmembers noted possible operational issues, staff time, and financial-detriment concerns in switching accounts.
+    local_anchor:
+      - Alameda / City of Alameda public funds and taxpayers
+      - neighboring cities affected by foreclosure issues
+      - Alameda veterans mentioned by the vice mayor
+      - Standing Rock Sioux tribe, Missouri River, and downstream water users in pipeline-risk comments
+      - Idaho Correctional Center / CoreCivic example in private-prison comments
+    temporal_status:
+      - already_occurred for cited scandals, sanctions, and prior impacts
+      - hypothetical_or_risk for future pipeline spill, depositor risk, and operational switching burdens
+      - pending_future_handling for assessing account transitions and alternatives
+  answer_locality:
+    - opening council remarks
+    - vice mayor explanation
+    - public comments by multiple speakers
+    - council/treasurer discussion of implementation risk
+  marker_presence:
+    concrete_concern_language:
+      - "bad behavior"
+      - "adversely affected"
+      - "human rights abuses"
+      - "risk"
+      - "operational issues"
+      - "financial detriment"
+    specific_concern_content:
+      - fraudulent accounts
+      - Dakota Access Pipeline / water and tribal impacts
+      - private prisons / violence and mass incarceration
+      - derivatives / depositor funds
+      - staff time and operational switching burden
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >-
+    A recurring concern theme across council and public comment was that Alameda's
+    public money and banking relationships should not passively support or legitimize
+    institutions viewed as socially irresponsible. Participants repeatedly framed the
+    issue as aligning city funds with community values, environmental responsibility,
+    racial/economic justice, humane treatment, and local or socially responsible
+    banking alternatives.
+  evidence:
+    - "if there's bad behavior and we do nothing, then we're passively condoning it"
+    - "We can send a message with where we put our money"
+    - "Our choice in business partners is a reflection of who we are as a city"
+    - "Our last defense and a crucial bargaining chip is our money"
+    - "we need to put. Our money where our mouth are"
+    - "make sure that our financial investments are aligned with the values we aspire to hold"
+    - "choosing to place our money in the hands of financial institutions... demonstrating... socially responsible actions"
+  source_vocabulary:
+    - taxpayer money
+    - business partners
+    - passively condoning
+    - socially responsible
+    - values
+    - put our money where our mouth is
+    - economic and racial justice
+    - environment
+    - local credit union
+    - social justice record
+    - stakeholders, not shareholders
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - currently_existing
+      - future_effect
+    notes:
+      - The concern theme recurred across multiple speakers and council comments.
+      - The theme was tied to current city banking/investment relationships and future selection of financial institutions.
+  source_context_for_fact_check:
+    concern_theme: City funds and banking relationships may make Alameda complicit in or supportive of harmful or socially irresponsible financial practices.
+    concern_content:
+      - public money should be aligned with community values and social responsibility
+      - Wells Fargo was treated as an institution whose practices conflicted with those values
+      - multiple speakers urged moving toward credit unions, local institutions, or banks with reliable social/environmental records
+      - environmental, racial/economic justice, Native/tribal rights, private-prison, and consumer-protection concerns were used as recurring examples
+    unsupported_or_not_required:
+      - The source does not show unanimous public support from all possible Alameda residents; it shows repeated support among the speakers in this segment.
+      - The source does not establish that a replacement institution had already been selected.
+  answer_locality:
+    - council opening rationale
+    - public comments throughout the segment
+    - final council discussion on needing standards for where money should go
+  marker_presence:
+    problem_side_concern:
+      - "passively condoning"
+      - "socially irresponsible"
+      - "disregard humanity and the environment"
+      - "bad practices"
+    specific_content:
+      - city funds/business relationships with Wells Fargo
+      - financial institutions' financing of harmful projects or industries
+      - alignment of public money with values and socially responsible alternatives
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >-
+    After the referral passed, several implementation matters remained unfinished:
+    staff still needed to identify current Wells Fargo accounts and investments,
+    report back on feasibility and options, draft the banking-services RFP, handle
+    the investment-policy process, address existing Wells Fargo securities, and seek
+    further Council direction. The final motion stopped new Wells Fargo Securities
+    purchases until further Council direction, but it did not complete divestment or
+    account transfer during the segment.
+  evidence:
+    - "they identify what's current because it could change quarter to quarter and then report back about what would be involved to give us the option to move forward with an RFP"
+    - "Between now and when staff comes back to us... then we'll look at the whole picture and make our decisions about what to do moving forward"
+    - "where in this priority do you want it to come back"
+    - "Our plan is to do the annual investment policy review in about six weeks in April"
+    - "we can give formal notice not only on additional purchases, but also how to address the three securities that we own today"
+    - "Until we have criteria, we can't move the securities that we have someplace else until we know how to measure the someplace else"
+    - "until further counsel direction"
+  source_vocabulary:
+    - report back
+    - staff comes back
+    - option to move forward
+    - RFP
+    - annual investment policy review
+    - six weeks in April
+    - further Council direction
+    - existing securities
+    - criteria
+    - operating accounts
+    - money managers
+  temporal_status:
+    primary: pending_future_handling
+    additional:
+      - future_effect
+      - completed_in_session
+    notes:
+      - The referral passed in session, but its implementation and later policy decisions remained pending.
+      - The no-new-Wells-Fargo-Securities direction had future effect until further Council direction.
+  source_context_for_fact_check:
+    pending_status:
+      - identification of current Wells Fargo accounts and investments remained to be done or reported back
+      - RFP drafting remained to be done
+      - operational banking-account transition was not completed
+      - existing Wells Fargo securities were not immediately resolved; policy handling and criteria remained pending
+      - formal investment-policy treatment was expected through annual review in about six weeks / April
+    pending_item:
+      - City accounts with Wells Fargo
+      - investments in Wells Fargo Securities
+      - City of Alameda banking-services RFP
+      - exclusion of Wells Fargo from the RFP process
+      - existing Wells Fargo securities
+      - future Council direction on investment policy and divestment/transition choices
+    handling_path:
+      - staff identification and report-back
+      - treasurer and finance director work on exposure and investment-policy language
+      - annual investment-policy review in about six weeks / April
+      - further Council direction after information and criteria are available
+    unsupported_or_not_completed_in_source:
+      - no final transfer of all operating accounts
+      - no final sale of existing Wells Fargo securities
+      - no completed adoption of a replacement bank or credit union
+  answer_locality:
+    - council clarification before public comment
+    - treasurer implementation discussion
+    - final amendment and motion language
+  marker_presence:
+    pendingness_marker:
+      - "report back"
+      - "when staff comes back"
+      - "until further Council direction"
+      - "what would be involved"
+      - "can't move the securities... until we know"
+    pending_item_identifiable:
+      - Wells Fargo accounts
+      - Wells Fargo Securities investments
+      - RFP for banking services
+      - existing securities
+      - investment policy
+    handling_path_visible:
+      - staff report-back
+      - annual investment policy review
+      - treasurer / finance director / money managers
+      - further Council direction
+  ```

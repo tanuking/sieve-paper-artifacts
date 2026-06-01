@@ -1,0 +1,664 @@
+segment_id: "MTG35"
+segment_dir: "35_AlamedaCC_12062016"
+meeting_id: "AlamedaCC_12062016"
+uid: "AlamedaCC_12062016_2016-3632"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # event_sheet_35.md
+  
+  ## 0. Metadata
+  
+  - `meeting_order`: 35
+  - `source_transcript`: `transcript_35.txt`
+  - `event_sheet_protocol`: v29
+  - `slot_semantics`: v29
+  - `language`: English
+  
+  ## 1. Segment scope
+  
+  ### 1.1 Dominant event
+  
+  The sampled segment centers on an Alameda City Council referral asking whether the Council should authorize or direct a complaint to the Fair Political Practices Commission (FPPC) about November 8, 2016 election mailers that allegedly lacked legally required identifying information. After public comments, legal clarification, and Council discussion, the Council approved a motion for the City Council to file a complaint and follow up on the investigation. The motion carried 3-1, with one abstention.
+  
+  ### 1.2 Source-side caution
+  
+  The transcript repeatedly renders the state agency inconsistently as `FEC`, `FPC`, `SPC`, or similar variants. In context, the relevant agency is the California Fair Political Practices Commission (FPPC). The event sheet uses `FPPC` as the normalized agency name while preserving the transcript's source vocabulary where useful.
+  
+  ---
+  
+  ## 2. Slot entries
+  
+  ## T — Topic / Framing
+  
+  ### label
+  
+  `T`
+  
+  ### summary
+  
+  The segment was framed around using a formal FPPC complaint to address allegedly unidentified November 8, 2016 election mailers and to reinforce compliance with campaign disclosure / identification rules. The substantive policy direction was not merely to condemn negative campaigning, but to pursue state-level complaint handling for mailers alleged to lack required sender identification. The target was the unidentified campaign mailers and the disclosure-compliance expectations governing campaign communications in Alameda elections.
+  
+  ### evidence
+  
+  - The agenda item was introduced as authorizing the City Council to direct staff to submit a complaint to the Fair Political Practices Commission regarding November 8, 2016 election mailers.
+  - Mayor Spencer said two mailers from the last campaign season did not include identifiable information required by California law.
+  - She distinguished the referral from a general objection to negative campaigning, saying the issue was the unidentified nature of the mailers and the resulting circumvention of campaign-finance reporting rules.
+  - Council discussion repeatedly contrasted a broader resolution against negative campaigning with the specific complaint over allegedly unidentified campaign material.
+  
+  ### source_vocabulary
+  
+  - `Fair Political Practices Commission`
+  - `FPPC` / transcript variants: `FEC`, `FPC`, `SPC`
+  - `November eight, 2016 election mailers`
+  - `unidentifiable election mailers`
+  - `identifiable information`
+  - `California state law`
+  - `campaign finance`
+  - `report expenditures`
+  - `negative campaigning`
+  - `complaint`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: currently_existing
+  secondary:
+    - completed_in_session
+    - pending_future_handling
+  notes:
+    - The alleged mailers already existed from the prior campaign season.
+    - The policy discussion occurred in session.
+    - Complaint handling and investigation results remained future/pending after the Council action.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  subject: alleged unidentified election campaign mailers from the November 8, 2016 election
+  policy_direction:
+    - pursue or add the Council's voice to an FPPC complaint process
+    - reinforce compliance with campaign-mailer identification and disclosure rules
+  target:
+    - unidentified campaign mailers
+    - campaign-disclosure / identification compliance for Alameda election communications
+  not_the_primary_framing:
+    - not a general campaign-finance reform item
+    - not only a generic condemnation of negative campaigning
+    - not a city-run investigation or city enforcement action
+  agency:
+    normalized: California Fair Political Practices Commission / FPPC
+    transcript_variants:
+      - FEC
+      - FPC
+      - SPC
+  temporal_status:
+    - currently_existing for the alleged mailers and prior complaints
+    - completed_in_session for Council discussion and vote
+    - pending_future_handling for FPPC investigation / follow-up
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: distributed
+  notes:
+    - The topic appears in the agenda framing and Mayor Spencer's opening explanation.
+    - It is sharpened during the exchange with Councilmember Oddie and the City Attorney.
+    - The final framing is confirmed by the motion and vote.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - complaint to the Fair Political Practices Commission
+    - November 8, 2016 election mailers
+    - unidentifiable / not identifying who sent them
+    - required by California law
+    - not content-based / not just negative campaigning
+  implicit_markers:
+    - campaign-disclosure compliance
+    - election transparency
+  ```
+  
+  ---
+  
+  ## O — Outcome / Position
+  
+  ### label
+  
+  `O`
+  
+  ### summary
+  
+  The City Council approved a motion for the City Council to file a complaint and follow up to see the results of the investigation. The motion was seconded and carried 3-1, with one abstention.
+  
+  ### evidence
+  
+  - After discussion, a councilmember moved that the City Council file a complaint and follow up on the investigation results.
+  - Another councilmember seconded the motion.
+  - The chair called for the vote.
+  - The result was announced as: the motion carried 3 to 1, with one abstention.
+  
+  ### source_vocabulary
+  
+  - `I'll move`
+  - `I'll second that`
+  - `complaint`
+  - `follows up`
+  - `results of the investigation`
+  - `motion carries 3 to 1`
+  - `one abstention`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: completed_in_session
+  secondary:
+    - pending_future_handling
+  notes:
+    - The Council's disposition on the motion was completed in the sampled segment.
+    - The complaint submission and follow-up were downstream actions after the vote.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  actor: Alameda City Council
+  procedural_stage: in-session Council motion and vote, not an FPPC finding
+  disposition_result:
+    - motion approved / carried
+  acted_on_item:
+    - motion for the City Council to file a complaint and follow up on investigation results regarding the allegedly unidentified election mailers
+  vote_result:
+    value: 3-1 with one abstention
+    attached_to: Council motion to file the complaint and follow up
+  not_supported:
+    - unanimous approval
+    - rejection of the complaint
+    - a completed FPPC determination
+    - a criminal finding or penalty imposed during the meeting
+  temporal_status:
+    - completed_in_session for the Council vote
+    - pending_future_handling for complaint follow-up and FPPC investigation
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: late_segment
+  notes:
+    - The outcome is located near the end of the item, after public comment, legal explanation, and Council discussion.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - motion
+    - second
+    - all those in favor
+    - abstain
+    - motion carries
+  ```
+  
+  ---
+  
+  ## B — Agenda-Setting Background / Precipitating Context
+  
+  ### label
+  
+  `B`
+  
+  ### summary
+  
+  The referral was prompted by two election mailers from the most recent campaign season that allegedly lacked legally required identifying information. Mayor Spencer said she could not submit a complaint in her mayoral capacity without Council approval, and the City Attorney explained that FPPC complaints had already been filed and that the FPPC had notified a complainant it would investigate. This background shaped why the Council considered adding its institutional voice to the complaint process.
+  
+  ### evidence
+  
+  - Mayor Spencer said there were two election mailers from the last campaign season that did not include identifying information required by California law.
+  - She said she contacted the relevant agency about making a complaint and was informed that prior mayors and councilmembers had made complaints, but that given Alameda's form of leadership she could not make the complaint as mayor without Council approval.
+  - The City Attorney stated that the City and City Attorney's office had no jurisdiction over the issue and that the FPPC was the state body responsible for election issues like this.
+  - The City Attorney said complaints, including sworn complaints, had already been received and that the FPPC had notified one complainant as of November 30 that it would investigate.
+  
+  ### source_vocabulary
+  
+  - `two election mailers`
+  - `last campaign season`
+  - `did not include any identifiable information`
+  - `required by the state of California`
+  - `I can't make a complaint as mayor without council voting`
+  - `state body`
+  - `Political Reform Act`
+  - `sworn complaint`
+  - `November 30th`
+  - `going to be investigating`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: already_occurred
+  secondary:
+    - currently_existing
+    - pending_future_handling
+  notes:
+    - The mailers and prior complaint submissions occurred before the meeting.
+    - Existing FPPC jurisdiction and complaint procedures were described during the meeting.
+    - FPPC investigation and Council follow-up remained pending.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  trigger_condition:
+    - two campaign-season mailers allegedly lacked legally required identifying information
+    - the alleged issue concerned disclosure / attribution requirements, not only the negativity of the message content
+    - Mayor Spencer sought Council authorization because she said she could not submit the complaint as mayor without Council approval
+    - FPPC complaints had already been filed by others, and at least one complainant had been told the FPPC would investigate
+  agenda_connection:
+    - the alleged unidentified mailers and the mayoral authorization issue brought the referral before the Council
+    - the existing FPPC process shaped the discussion into whether the Council should add its voice / file a complaint and follow up
+  not_supported:
+    - the City itself had local enforcement jurisdiction over the alleged violation
+    - the item was triggered only by ordinary negative campaigning
+    - the Council was starting the first and only complaint
+  temporal_status:
+    - already_occurred for the mailers and prior complaints
+    - currently_existing for FPPC jurisdiction and complaint process
+    - pending_future_handling for investigation outcome
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: early_to_middle_segment
+  notes:
+    - The precipitating background is explained in the agenda introduction and Mayor Spencer's opening comments.
+    - The City Attorney's later explanation adds procedural background about existing complaints and FPPC jurisdiction.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - two election mailers
+    - last campaign season
+    - did not include identifiable information
+    - contacted the FPPC / FEC
+    - cannot make a complaint as mayor without Council approval
+    - sworn complaints already received
+    - investigating
+  ```
+  
+  ---
+  
+  ## N — Outcome-Near Condition / Operative Payload
+  
+  ### label
+  
+  `N`
+  
+  ### summary
+  
+  The action's operative payload was to have the City Council file a complaint about the allegedly unidentified November 8, 2016 election mailers and to follow up on the FPPC investigation results. The complaint process was described as a state FPPC process involving submission of copies of the mailers, not as a city investigation or city enforcement proceeding.
+  
+  ### evidence
+  
+  - Mayor Spencer described the complaint as simple: using a website dropdown for unidentified mailers, sending copies, and allowing the FPPC to look into it.
+  - She said the complaint would not require staff to conduct an independent investigation.
+  - The City Attorney said the Council could decide whether the mayor, attorney, staff, or Council would take action, but the City itself had no enforcement jurisdiction.
+  - The final motion was for the City Council to file a complaint and follow up to see what the investigation results were.
+  
+  ### source_vocabulary
+  
+  - `submit a complaint`
+  - `dropdown menu`
+  - `identifiable mailers`
+  - `send them copies`
+  - `look into it`
+  - `doesn't require any staff time`
+  - `independent investigation`
+  - `city council filing a complaint`
+  - `follow up`
+  - `results of the investigation`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: future_effect
+  secondary:
+    - completed_in_session
+    - pending_future_handling
+  notes:
+    - The Council approved the motion in session.
+    - The payload required subsequent complaint filing and follow-up.
+    - The FPPC investigation outcome remained pending.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  payload_carrier:
+    - Council-approved motion regarding the allegedly unidentified November 8, 2016 election mailers
+  payload_content:
+    - file or submit a complaint to the FPPC
+    - follow up to see the results of the FPPC investigation
+    - provide the relevant mailer material as part of the complaint process
+  payload_scope:
+    - allegedly unidentified election mailers from the November 8, 2016 / recent campaign season
+    - campaign-mailer identification / attribution compliance
+  payload_scalar_or_baseline:
+    - value: two
+      meaning: number of mailers Mayor Spencer identified as lacking required identifying information
+    - value: November 8, 2016
+      meaning: election date associated with the mailers in the agenda item
+    - value: November 30
+      meaning: date by which FPPC had notified a complainant it would investigate, according to the City Attorney
+    - value: 14 days
+      meaning: City Attorney's description of the FPPC response window for sworn complaints
+  not_payload:
+    - a city staff independent investigation
+    - city enforcement or adjudication of the alleged violation
+    - a broad campaign-finance reform ordinance
+    - a generic civility resolution
+  temporal_status:
+    - completed_in_session for authorizing the action
+    - future_effect / pending_future_handling for filing and follow-up
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: distributed
+  notes:
+    - The intended complaint mechanics are in Mayor Spencer's opening explanation.
+    - The City Attorney clarifies the FPPC process and City jurisdiction in the middle.
+    - The final motion fixes the operative payload near the end.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - complaint
+    - send copies
+    - no independent investigation
+    - follow up
+    - results of investigation
+    - two mailers
+    - November 8, 2016
+  ```
+  
+  ---
+  
+  ## L — Concrete Concern
+  
+  ### label
+  
+  `L`
+  
+  ### summary
+  
+  A concrete concern in the segment was that unidentified campaign mailers hide who is behind campaign communications and can circumvent campaign-finance disclosure rules, undermining fair election processes and civic trust. Speakers and councilmembers also raised concerns about negative or personal campaigning, but the most item-specific concern was the lack of attribution and disclosure on the mailers.
+  
+  ### evidence
+  
+  - Mayor Spencer said mailers sent with stamps and no identification of who sent them circumvented the purpose of campaign requirements for reporting donations and expenditures.
+  - Public speakers described the mailers as false, misleading, dirty, harmful, and insulting to voters and candidates.
+  - One speaker said timely examination and penalties were critical for any transgressions.
+  - Councilmembers discussed the increasingly ugly campaign environment and the need to take a stand against law-evading or unidentified campaign material.
+  
+  ### source_vocabulary
+  
+  - `circumvents`
+  - `campaign requirements`
+  - `report all donations`
+  - `report expenditures`
+  - `not identifying who is sending them`
+  - `dirty politics`
+  - `false and misleading`
+  - `harmful tactic`
+  - `negative campaigning`
+  - `ugly environment`
+  - `went around the law`
+  - `fair election`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: hypothetical_or_risk
+  secondary:
+    - already_occurred
+    - recurring_concern
+  notes:
+    - The alleged unidentified mailers had already been sent.
+    - The concern was about their effect on disclosure, campaign fairness, and future campaign norms.
+    - Negative / uncivil campaign practices were discussed as a broader recurring concern.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  obstacle_content:
+    - unidentified mailers may hide the source of campaign communications
+    - lack of identification can circumvent campaign-finance reporting and disclosure purposes
+    - such practices were described as harmful to fair elections, civic trust, and local campaign norms
+  local_anchor:
+    - Alameda local election / Alameda City Council campaign context
+    - specific mailers from the November 8, 2016 / recent campaign season
+  not_supported:
+    - the concern was only about ordinary criticism or negative tone
+    - the concern was only about federal campaign law
+    - the City had already proven the violation or imposed penalties
+  temporal_status:
+    - already_occurred for the mailers
+    - hypothetical_or_risk for the undermining of disclosure / election integrity
+    - recurring_concern for broader negative campaigning and civic climate
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: distributed
+  notes:
+    - The concrete concern is stated by Mayor Spencer early in the item.
+    - It is reinforced by public speakers.
+    - It is reframed by Council discussion as both unidentified-mailer compliance and broader campaign civility.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - circumvents
+    - no identifiable information
+    - hide its source
+    - fair election
+    - negative campaigning
+    - ugly environment
+    - went around the law
+  ```
+  
+  ---
+  
+  ## S — Shared Concern Synthesis
+  
+  ### label
+  
+  `S`
+  
+  ### summary
+  
+  The recurring concern theme was that undisclosed or unattributed campaign mailers, together with increasingly negative campaign tactics, were damaging election transparency, fairness, and Alameda's civic norms. The discussion repeatedly returned to the problem of hidden sponsorship and the broader deterioration of local campaign conduct.
+  
+  ### evidence
+  
+  - Mayor Spencer emphasized that unidentified mailers defeat the purpose of campaign-finance disclosure rules.
+  - Several public speakers supported a complaint and described the mailers as dirty, harmful, misleading, or insulting.
+  - Councilmember DeSaulnier / De Saag thanked residents and said Alameda should make a statement against this level of negative mailers, especially those that did not follow notice requirements.
+  - Councilmember Oddie broadened the discussion to multiple forms of negative campaigning and suggested a broader resolution condemning such conduct.
+  - The Vice Mayor supported filing the complaint and described a broader need to chip away at an ugly environment of personalized political attacks.
+  
+  ### source_vocabulary
+  
+  - `losing confidence`
+  - `dirty trick`
+  - `lawless activity`
+  - `no place in our election process`
+  - `negative campaigning`
+  - `unidentifiable election mailers`
+  - `not identifying who is sending them`
+  - `ugly environment`
+  - `campaign reform`
+  - `civility`
+  - `stick to issue`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: recurring_concern
+  secondary:
+    - already_occurred
+    - hypothetical_or_risk
+  notes:
+    - Multiple speakers and councilmembers returned to the concern.
+    - The recurring theme includes both the specific undisclosed-mailer issue and the broader local campaign climate.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  concern_theme:
+    - hidden or unattributed campaign communications and negative campaign tactics undermining election transparency and civic norms
+  concern_content:
+    - source concealment / lack of sender identification
+    - possible circumvention of campaign-finance disclosure requirements
+    - negative or personal campaign attacks becoming more common in Alameda politics
+    - desire for the Council to send a public signal against the conduct
+  not_supported:
+    - the shared concern was only about one candidate's personal grievance
+    - the shared concern was only about national politics
+    - all councilmembers fully agreed on the same framing
+  temporal_status:
+    - recurring_concern for repeated discussion across speakers and councilmembers
+    - already_occurred for the election mailers and prior campaigning
+    - hypothetical_or_risk for future deterioration of local election norms
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: distributed
+  notes:
+    - The shared concern emerges from the public comment sequence and Council deliberation, not from a single sentence.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - many rules regarding finances in any campaign
+    - dirty politics
+    - no place in our election process
+    - negative campaigning
+    - ugly environment
+    - make a stand
+    - stick to issue
+  ```
+  
+  ---
+  
+  ## U — Unresolved Tail / Future Return Path
+  
+  ### label
+  
+  `U`
+  
+  ### summary
+  
+  After the Council vote, the unresolved tail was the subsequent filing and follow-up path: the Council complaint would be added to an FPPC process that was already investigating related complaints, and the Council would follow up to see the investigation results. Any FPPC determination, fines, referral, or other enforcement outcome remained pending after the meeting.
+  
+  ### evidence
+  
+  - The City Attorney said the FPPC had already received complaints and sworn complaints and had notified a complainant that it would investigate.
+  - The City Attorney explained that the FPPC could assess fines or, in egregious cases, refer matters to a district attorney, depending on what the investigation found.
+  - The Vice Mayor supported filing the complaint and following up, possibly assigning a councilmember to ask where the complaint stood and report out later.
+  - The adopted motion included filing the complaint and following up to see the results of the investigation.
+  
+  ### source_vocabulary
+  
+  - `already being investigated`
+  - `going to be investigating`
+  - `follow up`
+  - `where is the complaint`
+  - `what is your investigation`
+  - `report out`
+  - `results of the investigation`
+  - `assess fines`
+  - `district attorney`
+  
+  ### temporal_status
+  
+  ```yaml
+  primary: pending_future_handling
+  secondary:
+    - completed_in_session
+  notes:
+    - The Council vote was completed in session.
+    - FPPC investigation, complaint handling, any sanctions, and Council follow-up remained future/pending.
+  ```
+  
+  ### source_context_for_fact_check
+  
+  ```yaml
+  pending_status:
+    - FPPC investigation / complaint resolution remained pending after the Council vote
+    - Council follow-up to learn investigation results remained pending
+  pending_item:
+    - FPPC complaint / investigation concerning the allegedly unidentified election mailers
+  handling_path:
+    - complaint to be handled through the FPPC process
+    - potential follow-up by Council or an assigned councilmember to obtain investigation status/results
+    - possible FPPC fines or DA referral only if violations were found
+  not_supported:
+    - FPPC had already completed the investigation during the meeting
+    - the Council itself would determine guilt, impose penalties, or conduct the investigation
+    - the matter was fully resolved by the Council vote
+  temporal_status:
+    - completed_in_session for Council approval
+    - pending_future_handling for FPPC investigation and Council follow-up
+  ```
+  
+  ### answer_locality
+  
+  ```yaml
+  locality: middle_to_late_segment
+  notes:
+    - The City Attorney describes the pending FPPC process in the middle of deliberation.
+    - The final pending path is fixed by the motion and vote near the end.
+  ```
+  
+  ### marker_presence
+  
+  ```yaml
+  explicit_markers:
+    - investigate
+    - still going to be investigated
+    - follow up
+    - results of the investigation
+    - report out
+    - pending consequences such as fines or DA referral
+  ```
+  
+  ---
+  
+  ## 3. Cross-slot notes for downstream QA authoring
+  
+  - `T` should preserve the difference between the substantive framing — unidentified election mailers and disclosure compliance — and a generic statement about negative campaigning.
+  - `O` should focus on the Council's completed in-session vote: motion carried 3-1 with one abstention.
+  - `B` should capture the prior mailers, the mayoral authorization issue, and the pre-existing FPPC complaint/investigation context.
+  - `N` should capture the action payload: file the FPPC complaint and follow up, without converting it into city enforcement or an independent staff investigation.
+  - `L` should capture concrete concern content: source concealment, disclosure circumvention, election fairness, and civic harm.
+  - `S` should capture the recurring theme across speakers and councilmembers: hidden sponsorship and negative campaign tactics damaging transparency and civic norms.
+  - `U` should capture unfinishedness: FPPC investigation, possible enforcement consequences, and Council follow-up remained pending.

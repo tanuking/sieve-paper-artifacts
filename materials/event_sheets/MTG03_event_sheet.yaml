@@ -1,0 +1,403 @@
+segment_id: "MTG3"
+segment_dir: "03_DenverCityCouncil_03142022"
+meeting_id: "DenverCityCouncil_03142022"
+uid: "DenverCityCouncil_03142022_22-0125"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet 03 — Council Bill 22-0125 Rezoning at 8101 and 8351 East Belleview Avenue
+  
+  ## Source Segment
+  
+  Denver City Council public hearing and final passage discussion for Council Bill 22-0125, concerning an official map amendment / rezoning application for 8101 and 8351 East Belleview Avenue in Council District 4, in the Hampden South / Denver Tech Center area.
+  
+  ## T — Topic / Framing
+  
+  label: T
+  
+  summary: The segment concerned a rezoning application for 8101 and 8351 East Belleview Avenue from former Chapter 59 B-8 zoning with adult-use and billboard overlays to S-MX-8, allowing mixed-use redevelopment with a wider range of building forms and up to eight stories / 110 feet.
+  
+  evidence:
+  - "presenting an official map and application at 8101 and 8351 East Bellevue Avenue ... requested to ... zone to S-MX-8"
+  - "the proposal here is to rezone to allow for a variety of building forms at a maximum building height of eight storeys or 110 feet"
+  - "both of these sites are currently mapped with the use overlays. However, these are not wanting to be retained by the applicant"
+  - "This request is in Council District four ... in the Hampden South neighborhood"
+  
+  source_vocabulary:
+  - official map amendment
+  - rezoning application
+  - S-MX-8
+  - variety of building forms
+  - maximum height of eight stories or 110 feet
+  - adult use overlay
+  - billboard use overlay
+  - mixed use redevelopment
+  
+  temporal_status:
+    primary: future_effect
+    notes:
+      - The rezoning would authorize future redevelopment capacity and standards.
+      - The Council action on the bill was completed in this segment, but the land-use effects concern future development.
+  
+  source_context_for_fact_check:
+    subject: Rezoning / official map amendment for 8101 and 8351 East Belleview Avenue.
+    policy_direction: Rezone the properties to S-MX-8 to enable higher-density mixed-use redevelopment, with adult-use and billboard overlays not retained.
+    target:
+      - 8101 East Belleview Avenue
+      - 8351 East Belleview Avenue
+      - approximately 13.8 / just under 14 acres in the Hampden South / Denver Tech Center area
+    scalar_values:
+      - value: eight stories / 110 feet
+        meaning: maximum height allowed under the proposed zoning
+      - value: just under 14 acres / 13.8 acres
+        meaning: approximate site size
+    temporal_status:
+      - future_effect for redevelopment capacity
+  
+  answer_locality:
+    primary_location: Staff presentation at the opening of the public hearing.
+    supporting_locations:
+      - Applicant testimony describing the redevelopment vision.
+      - Council questions discussing the site scale and intended development program.
+  
+  marker_presence:
+    topic_gate:
+      subject_identified: present
+    quality_gate:
+      policy_direction: present
+      target: present
+  
+  ---
+  
+  ## O — Outcome / Position
+  
+  label: O
+  
+  summary: City Council closed the public hearing and passed Council Bill 22-0125 on final passage by an 11-0 vote.
+  
+  evidence:
+  - "The public hearing has closed"
+  - "Madam Secretary, roll call on Council Bill 22-125, please"
+  - "11 ayes"
+  - "Council Bill 22-125 has passed"
+  
+  source_vocabulary:
+  - public hearing
+  - final passage
+  - roll call
+  - 11 ayes
+  - has passed
+  
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The Council vote and final passage occurred during the segment.
+  
+  source_context_for_fact_check:
+    actor: Denver City Council.
+    procedural_stage: Final Council passage after the required public hearing.
+    disposition_result: Council Bill 22-0125 passed.
+    acted_on_item: Council Bill 22-0125.
+    vote_result:
+      value: 11 ayes / 11-0
+      attached_to: final passage of Council Bill 22-0125
+    temporal_status:
+      - completed_in_session
+  
+  answer_locality:
+    primary_location: End of the segment after council comments and roll call.
+    supporting_locations:
+      - Opening motion placed the bill on final consideration and do pass.
+  
+  marker_presence:
+    topic_gate:
+      disposition_verb_tied_to_acted_on_item: present
+    quality_gate:
+      acted_on_item_specific: present
+  
+  ---
+  
+  ## B — Agenda-Setting Background / Precipitating Context
+  
+  label: B
+  
+  summary: The rezoning came forward because the site remained under former Chapter 59 zoning even after Denver adopted the Denver Zoning Code in 2010, and the existing retail center was described as outdated and ready for mixed-use redevelopment.
+  
+  evidence:
+  - "The justifying circumstance of this rezoning is that the city adopted the Denver zoning code in 2010, but the property remained in former Chapter 59"
+  - "Marina Square is on the south edge of Denver. It was developed in 1979 ... Now ... it’s past its sell by date and we’re looking for a new energy for that part of the Denver Tech Center"
+  - "it is one story. There is no density surrounded by parking. It's very car oriented"
+  
+  source_vocabulary:
+  - former Chapter 59
+  - Denver zoning code in 2010
+  - justifying circumstance
+  - developed in 1979
+  - past its sell-by date
+  - new energy
+  - one story
+  - surrounded by parking
+  - car oriented
+  
+  temporal_status:
+    primary: already_occurred
+    notes:
+      - The Denver Zoning Code adoption occurred in 2010.
+      - The retail center was built in 1979 and existed as a low-density commercial-retail site before the rezoning.
+  
+  source_context_for_fact_check:
+    trigger_condition:
+      - The property remained in former Chapter 59 after Denver adopted the Denver Zoning Code in 2010.
+      - The existing site was a low-density, car-oriented commercial retail center developed in 1979.
+    agenda_connection:
+      - These conditions supported the rezoning request and the redevelopment rationale.
+    temporal_status:
+      - already_occurred for 2010 zoning-code adoption
+      - currently_existing for the pre-rezoning site condition discussed in the hearing
+  
+  answer_locality:
+    primary_location: Staff review-criteria discussion and applicant / council comments.
+    supporting_locations:
+      - Applicant testimony about Marina Square and redevelopment intent.
+      - Councilmember Black’s closing comments on the character of the site.
+  
+  marker_presence:
+    topic_gate:
+      precipitating_context_visible: present
+    quality_gate:
+      connected_to_current_item_or_form: present
+  
+  ---
+  
+  ## N — Outcome-Near Condition / Operative Payload
+  
+  label: N
+  
+  summary: The rezoning and associated agreement would allow S-MX-8 mixed-use development with up to eight stories / 110 feet, while the affordable-housing agreement provided three compliance options, including on-site affordability or a larger off-site affordable-housing project within specified Denver neighborhoods, with fallback obligations if the off-site path failed.
+  
+  evidence:
+  - "The proposed zoning again would allow for a maximum height of eight storeys or 110 feet, would allow a variety of building forms and also introduces build-to and transparency requirements"
+  - "There is also a proposed affordable housing agreement ... contemplates three options for the developer to choose from"
+  - "Options B and C would result in more units ... for affordability"
+  - "for the off site satisfaction, the location has to be within either Hampden South or Southmoor Park neighborhoods"
+  - "if they are unsuccessful ... within three years ... then it reverts back to onsite integrated option one"
+  - "construct and market all of the income restricted units within three years of the issuance of the first certificate of occupancy for a residential building on this property"
+  
+  source_vocabulary:
+  - maximum height
+  - eight stories or 110 feet
+  - build-to and transparency requirements
+  - affordable housing agreement
+  - three options
+  - on-site integrated option
+  - off-site satisfaction
+  - Hampden South or Southmoor Park
+  - three years
+  - certificate of occupancy
+  - income restricted units
+  
+  temporal_status:
+    primary: future_effect
+    notes:
+      - The zoning standards and affordable-housing obligations would apply to future development.
+      - The fallback mechanism would apply if the off-site affordable-housing path was not timely delivered.
+  
+  source_context_for_fact_check:
+    payload_carrier:
+      - Council Bill 22-0125 rezoning
+      - associated affordable housing agreement discussed during the hearing
+    payload_content:
+      - S-MX-8 zoning allows a variety of building forms and introduces build-to and transparency requirements.
+      - Proposed zoning allows maximum height of eight stories / 110 feet.
+      - Affordable-housing agreement has three options.
+      - Off-site option must be in Denver, specifically Hampden South or Southmoor Park.
+      - If the developer does not timely deliver the off-site path, the agreement reverts to the on-site integrated option.
+    payload_scope:
+      - Subject redevelopment site: 8101 and 8351 East Belleview Avenue.
+      - Off-site affordable-housing location: Hampden South or Southmoor Park neighborhoods, within Denver.
+    payload_scalar_or_baseline:
+      - value: eight stories / 110 feet
+        meaning: proposed maximum building height
+      - value: three options
+        meaning: affordable-housing agreement structure
+      - value: three years
+        meaning: timing discussed for affordable-unit delivery / fallback mechanism
+      - value: first certificate of occupancy for a residential building
+        meaning: trigger for the off-site delivery timeline as described by HOST
+    temporal_status:
+      - future_effect
+  
+  answer_locality:
+    primary_location: Staff presentation and council questioning of HOST and the developer.
+    supporting_locations:
+      - Councilmember Ortega’s questions about off-site affordable housing timing.
+      - Councilmember CdeBaca / Kniech discussion of subsidy, land contribution, and tax-credit concerns.
+  
+  marker_presence:
+    topic_gate:
+      payload_attached_to_action: present
+    quality_gate:
+      number: present
+      named_requirement: present
+      scope_boundary: present
+      date_cutoff: present
+  
+  ---
+  
+  ## L — Concrete Concern
+  
+  label: L
+  
+  summary: Councilmembers raised concrete concerns about whether the affordable-housing agreement could be satisfied largely through public subsidy rather than a direct developer contribution, and whether affordable units might lag behind or fail to materialize after the market-rate development proceeded.
+  
+  evidence:
+  - "That's problematic for me ... this is about the development participating"
+  - "It concerns me that we didn't negotiate that level of protection from the entire project being publicly subsidized"
+  - "if it gets all leased up and it gets built before the affordable is done ... I’m wanting to make sure we have some clear understanding of when this affordability of housing comes online"
+  - "so that it's not something that never happens"
+  
+  source_vocabulary:
+  - problematic
+  - development participating
+  - publicly subsidized
+  - clear understanding
+  - when this affordability comes online
+  - never happens
+  
+  temporal_status:
+    primary: hypothetical_or_risk
+    notes:
+      - The concerns were about possible future implementation and financing outcomes.
+  
+  source_context_for_fact_check:
+    obstacle_content:
+      - Concern that options B or C might rely on public subsidies without enough direct developer contribution.
+      - Concern that affordable units could be delayed relative to market-rate development.
+      - Concern that the agreement did not directly require free land or a cash contribution from the developer for the off-site affordable project.
+    local_anchor:
+      - The concern was tied to the Council Bill 22-0125 redevelopment and affordable-housing agreement.
+    temporal_status:
+      - hypothetical_or_risk
+  
+  answer_locality:
+    primary_location: Councilmember questions to HOST and the developer.
+    supporting_locations:
+      - Councilmember Ortega’s timing questions.
+      - Later council comments about monitoring the agreement.
+  
+  marker_presence:
+    topic_gate:
+      concrete_concern_language: present
+    quality_gate:
+      specific_concern_content: present
+  
+  ---
+  
+  ## S — Shared Concern Synthesis
+  
+  label: S
+  
+  summary: A recurring concern theme was the scarcity and delivery risk of affordable housing in this part of Denver: councilmembers and HOST emphasized that the area had very little restricted affordable housing, while also questioning how to ensure the agreement produced real additional units.
+  
+  evidence:
+  - "that's an area where we don't have hardly any affordable housing to speak of"
+  - "there's a dearth of truly restricted affordable housing"
+  - "The city of Denver gets something like maybe 3 to 5 tax credit allocations a year period ... I'm not actually getting more units"
+  - "I'm constantly asking ... why do we get all of the affordable housing in D11 ... and we don't see it around the city"
+  - "we need to keep close eyes on this and make sure we get everything that has been proposed"
+  
+  source_vocabulary:
+  - hardly any affordable housing
+  - dearth of truly restricted affordable housing
+  - tax credit allocations
+  - not actually getting more units
+  - keep close eyes on this
+  - get everything that has been proposed
+  
+  temporal_status:
+    primary: recurring_concern
+    notes:
+      - The scarcity and delivery of affordable housing was raised repeatedly by HOST and multiple councilmembers.
+  
+  source_context_for_fact_check:
+    concern_theme: Affordable-housing scarcity and delivery assurance in the Hampden South / Denver Tech Center area.
+    concern_content:
+      - HOST said the area had very little restricted affordable housing.
+      - Councilmember discussion focused on whether off-site tax-credit projects would create net additional affordable units or merely shift public subsidy.
+      - Councilmembers wanted safeguards so promised affordable housing would be delivered.
+    temporal_status:
+      - recurring_concern
+      - hypothetical_or_risk for delivery concerns
+  
+  answer_locality:
+    primary_location: HOST explanation and council questioning around the affordable-housing agreement.
+    supporting_locations:
+      - Councilmember comments before final vote.
+  
+  marker_presence:
+    topic_gate:
+      problem_side_concern: present
+    quality_gate:
+      specific_content: present
+  
+  ---
+  
+  ## U — Unresolved Tail / Future Return Path
+  
+  label: U
+  
+  summary: Although Council passed the rezoning, affordable-housing implementation remained subject to future execution: the developer still had to identify and secure an off-site property if choosing that path, obtain tax credits or bond financing, meet timing requirements, or revert to the on-site integrated option if delivery failed.
+  
+  evidence:
+  - "We have some options. We have not kind of gone forward with them pending..."
+  - "They have to show evidence that they own a parcel that is sufficient to meet the needs and record a covenant against it before they're able to pull permit"
+  - "if within three years [they] are unsuccessful, one, they have to integrate back to the onsite integrated option"
+  - "it is bond allocation, it's tax credits, and it's also securing the right piece of ground to do it on with the right approvals. So there's a bunch of moving parts"
+  - "I feel like what we have is a backstop"
+  
+  source_vocabulary:
+  - pending
+  - evidence that they own a parcel
+  - record a covenant
+  - before pull permit
+  - within three years
+  - unsuccessful
+  - integrate back
+  - bond allocation
+  - tax credits
+  - right piece of ground
+  - approvals
+  - backstop
+  
+  temporal_status:
+    primary: pending_future_handling
+    notes:
+      - Council’s rezoning vote was completed, but the affordable-housing delivery path remained future-facing and conditional.
+  
+  source_context_for_fact_check:
+    pending_status:
+      - Rezoning passed in-session.
+      - Affordable-housing implementation and off-site project delivery remained future-facing and conditional.
+    pending_item:
+      - Selection and execution of the affordable-housing agreement option.
+      - Potential off-site affordable-housing parcel and financing path.
+      - Fallback to on-site integrated affordability if off-site delivery failed.
+    handling_path:
+      - Developer must show ownership of a sufficient off-site parcel and record a covenant before proceeding under the off-site path.
+      - Off-site delivery depends on tax credits / bonds, land, approvals, and timing requirements.
+      - If unsuccessful within the required timeline, obligations revert to the on-site integrated option.
+    temporal_status:
+      - pending_future_handling
+      - future_effect
+  
+  answer_locality:
+    primary_location: Council questions to HOST and the developer about timing, off-site option, and fallback.
+    supporting_locations:
+      - Councilmember closing comments about future council oversight and monitoring.
+  
+  marker_presence:
+    topic_gate:
+      pendingness_marker: present
+    quality_gate:
+      pending_item_identifiable: present
+      handling_path_visible: present

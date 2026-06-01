@@ -1,0 +1,581 @@
+segment_id: "MTG18"
+segment_dir: "18_SeattleCityCouncil_08152016"
+meeting_id: "SeattleCityCouncil_08152016"
+uid: "SeattleCityCouncil_08152016_Res 31698"
+decision_type: "Resolution"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # event_sheet_18.md
+  
+  ## Source segment
+  
+  - Transcript: `transcript_18.txt`
+  - Slot semantics: `slot_semantics.json`
+  - Protocol: `event_sheet_protocol.md`
+  
+  ## Segment overview
+  
+  The sampled segment concerns Seattle City Council agenda item 14, Resolution 31698, relating to Council direction on budget and other matters for the North Precinct Capital Project. Councilmembers discussed whether the resolution should proceed immediately or be held for more community review, debated the cost and design of the proposed North Precinct facility, described the resolution's required cost review and racial equity work, rejected a motion to hold the resolution until September 12, and then adopted Resolution 31698.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >
+    The segment framed Resolution 31698 as Council direction for the North Precinct
+    Capital Project: a proposed North Seattle police precinct / facility project whose
+    budget, design, cost-control process, racial equity analysis, community engagement,
+    training component, and future budget treatment were under discussion.
+  
+  evidence:
+    - "Agenda item 14 Resolution 316 98 relating to council direction on budget and other matters related to the North Precinct Capital Project."
+    - "This is a resolution related to the existing proposal to construct a north precinct in north Seattle."
+    - "[It] would require that the Finance and Administrative Services Department hire an independent third party cost estimator... with an eye towards finding additional cost savings."
+    - "[It] would direct the Finance and Administrative Services Department ... to engage in a full racial equity toolkit analysis of the facility's design and operations."
+    - "[The RET results] will help to inform the Council's decision on what is the appropriate total project cost of the North Precinct project."
+  
+  source_vocabulary:
+    - Resolution 31698
+    - North Precinct Capital Project
+    - existing proposal to construct a north precinct in north Seattle
+    - Department of Finance and Administrative Services / FAS
+    - independent third party cost estimator
+    - cost savings
+    - racial equity toolkit / RET
+    - facility's design and operations
+    - community engagement
+    - appropriate total project cost
+    - ordinary budgeting process / capital improvement programs
+    - training facilities / training center
+  
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - future_effect
+      - pending_future_handling
+    notes:
+      - The project proposal already existed at the time of the segment.
+      - The resolution, if approved, would direct future cost-estimate, racial-equity, reporting, and budget-informing work.
+      - The appropriate final project cost remained to be decided through the later budget process.
+  
+  source_context_for_fact_check:
+    subject: North Precinct Capital Project / proposed North Precinct facility in north Seattle
+    policy_direction:
+      - Direct FAS to perform independent cost review and seek cost savings.
+      - Direct FAS and partner departments to conduct racial equity analysis and community engagement.
+      - Use the analysis and cost information to inform later Council decisions about total project cost.
+      - Frame the resolution as direction and process-setting, not as an endorsement of a specific final project cost.
+    target:
+      - North Precinct project budget, design, community engagement, and training-facility aspects
+      - Department of Finance and Administrative Services as the primary directed department
+      - Seattle Office for Civil Rights, Department of Neighborhoods, and Seattle Police Department as assisting departments for the RET work
+    explicitly_not_finalized:
+      - The appropriate total project cost was not finalized in the segment.
+      - Speakers stated that the resolution did not endorse the $149 million or $160 million figure.
+    temporal_status:
+      - currently_existing for the North Precinct proposal and existing cost/design concerns
+      - future_effect for the directives created by the resolution
+      - pending_future_handling for the later budget decision
+  
+  answer_locality:
+    - Opening explanation by Councilmember González of agenda item 14 and Resolution 31698.
+    - Later clarifications by Council President Harrell, Councilmember González, Councilmember Herbold, and Councilmember Johnson that the resolution did not endorse a specific budget number and would inform later budget decisions.
+  
+  marker_presence:
+    subject_identified: present
+    policy_direction: present
+    target: present
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >
+    The Council first considered a motion to hold Resolution 31698 until September 12;
+    that hold motion failed. The Council then voted on Resolution 31698 itself, and the
+    resolution was adopted. The transcript does not provide a reliable numeric vote count
+    for either vote.
+  
+  evidence:
+    - "I move for the adoption of resolution 31698."
+    - "I would like to make a motion to hold this resolution until September 12th."
+    - "So right now, we have ... a motion to hold till September 12th. It's been moved to second."
+    - "The motion fails to hold."
+    - "Those in favor of adopting resolution vote aye... Those opposed vote no... The motion carries the resolution's adopted."
+  
+  source_vocabulary:
+    - motion to hold
+    - September 12th
+    - motion fails to hold
+    - adopting Resolution 31698
+    - motion carries
+    - resolution adopted
+    - ayes / noes
+    - chair was silent
+  
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The hold motion was completed in-session and failed.
+      - The final vote on Resolution 31698 was completed in-session and the resolution was adopted.
+      - Later implementation, reporting, RET work, and budget decisions remained future or pending matters.
+  
+  source_context_for_fact_check:
+    actor: Seattle City Council / Council body conducting the meeting
+    procedural_stage: full Council action on a resolution during the sampled segment
+    disposition_result:
+      - Motion to hold Resolution 31698 until September 12 failed.
+      - Resolution 31698 was adopted after the hold motion failed.
+    acted_on_item:
+      - Resolution 31698, agenda item 14, relating to Council direction on budget and other matters for the North Precinct Capital Project
+      - Separate procedural motion to hold Resolution 31698 until September 12
+    vote_result:
+      value: not numerically specified in the transcript
+      attached_to:
+        - hold motion: failed
+        - Resolution 31698: adopted
+      notes:
+        - Do not infer a vote count from the transcript.
+        - The transcript includes audible ayes/noes but no stable numeric tally.
+    temporal_status:
+      - completed_in_session for the failed hold motion
+      - completed_in_session for adoption of Resolution 31698
+  
+  answer_locality:
+    - Adoption motion occurs after Councilmember González's overview of the resolution.
+    - Hold motion discussion occurs during Councilmember O'Brien's comments and subsequent Council discussion.
+    - Final adoption occurs near the end of the segment after additional Councilmember comments.
+  
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present
+    acted_on_item_specific: present
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >
+    The current resolution was shaped by several background conditions: an existing North
+    Precinct construction proposal, controversy over the project cost and design, prior
+    budget authorization or capital planning around a $160 million police precinct figure,
+    public concern about policing and racial justice, and stated facility needs such as
+    overcrowding, population growth in north Seattle, and training requirements tied to
+    police reform and the federal consent decree.
+  
+  evidence:
+    - "This is a resolution related to the existing proposal to construct a north precinct in north Seattle."
+    - "I do not support the north precinct in its current design... I do not support the current budget for this."
+    - "The community has not had time to see those, to digest those, to talk to us about that, to give us input on it."
+    - "Many of us were not here when this was passed for $160 million on August 17th, 2015."
+    - "40% of the population lives north of the ship canal."
+    - "The new facility ... includes an urgently needed new training center, which is a key component of the city's continuing path toward compliance with the federal court consent decree."
+    - "Our police officers ... deserve a building that is not 65% overcrowded."
+  
+  source_vocabulary:
+    - existing proposal
+    - current design
+    - current budget
+    - $160 million
+    - August 17th, 2015
+    - community concerns
+    - Black Lives Matter
+    - federal court consent decree
+    - police reform
+    - training center
+    - 65% overcrowded
+    - population growth
+    - north of the ship canal
+    - light rail coming in 2021
+    - 50 year life expectancy
+  
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - Prior budget or capital planning around a $160 million figure was described as already having happened in 2015.
+      - Cost, design, community-trust, policing, training, and facility-capacity concerns were current during the segment.
+      - Several speakers treated cost, public engagement, and racial equity concerns as recurring or shared concerns.
+  
+  source_context_for_fact_check:
+    trigger_condition:
+      - Existing proposal to construct or replace the North Precinct in north Seattle.
+      - Concerns over the current project design and budget.
+      - Public/community concern that amendments and the resolution had not had enough time for review.
+      - Prior 2015 Council action or budget line item described by Councilmember Juarez and Councilmember O'Brien as including a $160 million police precinct figure.
+      - Police reform and training needs tied by some speakers to the federal consent decree.
+      - Facility-capacity and north Seattle service-growth arguments, including an existing building described as 65% overcrowded and a large population north of the ship canal.
+    agenda_connection:
+      - These background conditions shaped why the resolution emphasized independent cost review, racial equity analysis, community engagement, progress reporting, and later budget decision-making.
+      - The background did not mean the segment finalized a new project budget amount.
+    numeric_values:
+      - value: $160 million
+        meaning: prior budget/capital-line figure discussed as background, not newly endorsed by this resolution
+      - value: $149 million
+        meaning: project-cost figure discussed as not endorsed by the resolution after changes; not a final approved cost in this segment
+      - value: 65%
+        meaning: Burgess's description of overcrowding in the existing building
+      - value: 40%
+        meaning: Juarez's statement about the share of Seattle's population north of the ship canal
+      - value: 2021
+        meaning: Juarez's statement about light rail coming in 2021
+    temporal_status:
+      - already_occurred for the 2015 background budget/capital action
+      - currently_existing for the project proposal and current cost/design concerns
+      - recurring_concern for cost, racial equity, public engagement, police accountability, and facility/training needs
+  
+  answer_locality:
+    - Background appears throughout Councilmember O'Brien's comments, Council President Harrell's discussion of public concern, Councilmember Juarez's comments on prior authorization and north Seattle service needs, Councilmember Burgess's comments on training and overcrowding, and Councilmember Herbold's comments on cost and police accountability.
+  
+  marker_presence:
+    precipitating_context_visible: present
+    connected_to_current_item_or_form: present
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >
+    Resolution 31698's operative payload directed FAS to obtain independent third-party
+    cost estimates at the 60% and 90% construction-document stages, conduct a full racial
+    equity toolkit analysis of the North Precinct facility's design, operations, programmatic
+    assets, and cost with specified partner departments and community engagement, report
+    to the relevant committee, provide regular progress and cost-risk reports, complete
+    the RET analysis around October 3, 2016, use the RET results to inform later budget
+    decisions on total project cost, and allocate proceeds from any sale of the existing
+    North Precinct property or building to affordable housing needs.
+  
+  evidence:
+    - "[It] would require that the Finance and Administrative Services Department hire an independent third party cost estimator... with an eye towards finding additional cost savings."
+    - "[Cost estimate analysis] at the 60% construction documents submittal phase, and then again at the 90% construction documents submittal phase."
+    - "[It] would direct ... a full racial equity toolkit analysis of the facility's design and operations, including the interior and exterior building design for all planned programmatic assets [and] cost."
+    - "FAS will be required to solicit community perspectives from historically underrepresented populations, vulnerable populations... historically and disproportionately impacted by police action..."
+    - "[The RET analysis must] be completed by October 3rd of 2016."
+    - "The results ... will help to inform the Council's decision on what is the appropriate total project cost... in the course of the City Council's ordinary budgeting process."
+    - "The resolution also directs FAS to provide ... regular progress reports... [including] current project status... life to date expenditures... most recent total project cost estimate... budget risk issues."
+    - "All the proceeds from the sale of either the property or the building where the current north precinct is sited would be wholly allocated to ... affordable housing needs."
+  
+  source_vocabulary:
+    - hire an independent third party cost estimator
+    - estimated project costs are accurate and reasonable
+    - additional cost savings
+    - 60% construction documents submittal phase
+    - 90% construction documents submittal phase
+    - full racial equity toolkit analysis
+    - facility's design and operations
+    - interior and exterior building design
+    - planned programmatic assets
+    - historically underrepresented populations
+    - vulnerable populations
+    - disproportionately impacted by police action
+    - victims of crime
+    - intended community engagement plan
+    - October 3rd of 2016
+    - 4 to 6 weeks before budget decisions
+    - approximately eight weeks
+    - regular progress reports
+    - life to date expenditures
+    - budget risk issues
+    - proceeds from the sale
+    - affordable housing needs
+  
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - pending_future_handling
+      - completed_in_session
+    notes:
+      - The resolution was adopted in-session, but most payload requirements were future-facing directives.
+      - The RET analysis, cost estimates, progress reports, community engagement, property-sale allocation, and budget use were to occur after adoption.
+      - The October 3, 2016 RET date was a future deadline discussed with possible wiggle room.
+  
+  source_context_for_fact_check:
+    payload_carrier: Resolution 31698
+    payload_content:
+      - FAS must hire an independent third-party cost estimator to assess whether estimated project costs are accurate and reasonable and to look for additional cost savings.
+      - Independent cost-estimate analysis must occur at two construction-document submittal phases: 60% and 90%.
+      - FAS, with assistance from the Seattle Office for Civil Rights, Department of Neighborhoods, and Seattle Police Department, must conduct a full racial equity toolkit analysis.
+      - The RET analysis covers the facility's design and operations, including interior and exterior building design, planned programmatic assets, and cost.
+      - FAS must solicit community perspectives from historically underrepresented populations, vulnerable populations, people most likely to interact with police, people historically and disproportionately impacted by police action, and people most likely to be victims of crime.
+      - FAS must report its intended community engagement plan to the Gender Equity, Safe Communities and New Americans Committee.
+      - RET results must be provided to that committee and are intended to inform the later Council decision on the appropriate total project cost during the budget process.
+      - FAS must provide regular written progress reports to the full Council and progress reports to the committee.
+      - Progress reports include current project status, design and community engagement efforts, outcomes of community engagement, life-to-date expenditures, most recent total project cost estimate with explanation of changes, and budget risk issues.
+      - Proceeds from a sale of the existing North Precinct property or building would be wholly allocated to meeting the city's affordable housing needs.
+    payload_scope:
+      - North Precinct Capital Project / proposed North Precinct facility
+      - Project cost, design, operations, community engagement, training-facility and community aspects
+      - Existing North Precinct property or building if sold
+    numeric_values:
+      - value: 60%
+        meaning: first construction-document submittal phase for independent cost-estimate analysis
+      - value: 90%
+        meaning: second construction-document submittal phase for independent cost-estimate analysis
+      - value: October 3, 2016
+        meaning: stated completion date for the RET analysis, with discussion that OCR might need some flexibility
+      - value: approximately eight weeks
+        meaning: time OCR said it needed to complete the RET analysis well
+      - value: approximately 4 to 6 weeks
+        meaning: expected time between RET results and late-November budget decisions
+      - value: end of November
+        meaning: stated timing for Council budget vote
+      - value: several millions of dollars
+        meaning: rough City Budget Office indication of possible value from the existing property/building, without a completed evaluation
+    temporal_status:
+      - completed_in_session for adoption of the resolution carrying these terms
+      - future_effect for the directives and deadlines
+      - pending_future_handling for implementation and budget use
+  
+  answer_locality:
+    - Primarily in Councilmember González's opening explanation of the resolution.
+    - Reinforced by later comments from Harrell, Herbold, O'Brien, and Johnson about cost savings, RET work, and later budget decisions.
+  
+  marker_presence:
+    payload_attached_to_action: present
+    number: present
+    named_requirement: present
+    scope_boundary: present
+    date_cutoff: present
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >
+    Speakers raised concrete concerns about the North Precinct project, including excessive
+    or unsupported cost, the current design and budget, insufficient time for community
+    review, racial equity and police-accountability implications, the facility being viewed
+    by community members as a symbol of police brutality, the need to spend resources on
+    other critical projects, and facility/training constraints such as overcrowding and
+    consent-decree-related training needs.
+  
+  evidence:
+    - "I do not support the north precinct in its current design... I do not support the current budget for this."
+    - "The community has not had time to see those, to digest those, to talk to us about that, to give us input on it."
+    - "I have serious concerns about the proposed price of this precinct building."
+    - "The community is telling us [the building] is a symbol of police brutality."
+    - "I want us to be able to spend these resources on other critical projects in the community that I think are desperately needed in the North End."
+    - "Our police officers ... deserve a building that is not 65% overcrowded."
+  
+  source_vocabulary:
+    - serious concerns
+    - current design
+    - current budget
+    - proposed price
+    - too high
+    - community has not had time
+    - build that trust
+    - Black Lives Matter
+    - crisis in policing
+    - symbol of police brutality
+    - police accountability
+    - other critical projects
+    - 65% overcrowded
+    - consent decree
+    - training is essential
+  
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - Cost, design, community process, racial equity, and police-accountability concerns were raised by multiple speakers and attributed partly to community sentiment.
+      - Some concerns were current objections; others were risks or tradeoffs about future spending, trust, and project outcomes.
+      - Facility overcrowding and training needs were stated as current constraints used to justify the project.
+  
+  source_context_for_fact_check:
+    obstacle_content:
+      - O'Brien stated opposition to the current North Precinct design and current budget.
+      - O'Brien said the community had not had enough time to review amendments and give input.
+      - Herbold said she had serious concerns about the proposed price and would not have supported the resolution if it endorsed the $149 million cost.
+      - Herbold said the community described the building as a symbol of police brutality and hoped it could become a symbol of police accountability.
+      - Johnson said constituents across the political spectrum thought the $149 million figure was too high and wanted cost savings for other North End needs.
+      - Burgess and Herbold framed the training center as tied to police reform, DOJ/federal consent decree obligations, and training for all SPD officers.
+      - Burgess described the existing building as 65% overcrowded.
+    local_anchor:
+      - North Precinct / North Seattle / North End
+      - communities of color and communities disproportionately impacted by policing, when racial equity and police accountability are discussed
+      - north of the ship canal for population and service-growth background
+    temporal_status:
+      - currently_existing for current budget/design/community-process/facility concerns
+      - recurring_concern for cost, racial equity, police accountability, and community trust themes
+      - hypothetical_or_risk for concerns about proceeding without further community review or committing resources before better cost analysis
+  
+  answer_locality:
+    - O'Brien's comments on current design, current budget, community review, and lack of urgency.
+    - Herbold's comments on price, racial equity, police accountability, and community description of the building.
+    - Johnson's comments on high cost and competing North End projects.
+    - Burgess's comments on overcrowding and training obligations.
+  
+  marker_presence:
+    concrete_concern_language: present
+    specific_concern_content: present
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >
+    The recurring concern theme across the discussion was that the North Precinct project
+    could not responsibly move forward on cost, design, and legitimacy without stronger
+    cost controls, racial equity analysis, community engagement, and later budget scrutiny;
+    a parallel recurring theme was that the project also had to respond to facility-capacity
+    and police-training needs.
+  
+  evidence:
+    - "There's a lot of work to do going forward."
+    - "The community has serious concerns, and I would like to give the community more time to see that."
+    - "I don't know how anyone could support the precinct in its current state... we have a lot of challenges with this capital project."
+    - "[The resolution] does not endorse the 149... [it] creates a framework by which we direct the department to look for additional cost savings."
+    - "I'm voting for this resolution because it does not endorse a budget cost and commits the city to using the racial equity toolkit and working with communities of color disproportionately impacted by policing."
+    - "There are two ways that we can really save money on the cost of this precinct. One is through the racial equity toolkit work, and the second is through independent cost evaluation."
+    - "The new facility ... includes an urgently needed new training center... [and] over a third of the new building will be used for police training."
+  
+  source_vocabulary:
+    - serious concerns
+    - challenges with this capital project
+    - current state
+    - not endorse the 149
+    - not endorse a budget cost
+    - additional cost savings
+    - racial equity toolkit
+    - communities of color disproportionately impacted by policing
+    - independent cost evaluation
+    - community engagement
+    - budget process
+    - training center
+    - compliance with the federal court consent decree
+    - police reform
+  
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - Multiple speakers returned to cost, community engagement, racial equity, and budget scrutiny.
+      - Multiple speakers also connected the facility to future police training and reform needs.
+      - The concern theme was used to justify both immediate adoption of a process-setting resolution and opposition to same-day adoption.
+  
+  source_context_for_fact_check:
+    concern_theme:
+      - Recurring cost/design/community-legitimacy concern around the North Precinct Capital Project.
+      - Recurring need to use RET work and independent cost evaluation to reduce or justify costs before the later budget decision.
+      - Recurring police-reform/training/facility-capacity rationale for the project.
+    concern_content:
+      - Cost figures such as $149 million and $160 million were discussed as problematic or not endorsed, not as final approved costs in this segment.
+      - The racial equity toolkit was framed as a meaningful community process intended to influence outcomes, not merely a box-checking exercise.
+      - Community engagement and trust were treated as necessary, especially for communities of color and people disproportionately impacted by policing.
+      - The final budget decision was repeatedly described as future work during the budget process, not completed by this resolution.
+      - The training center was described as a component of police reform and consent-decree compliance, with training for all SPD officers, not only North Precinct officers.
+    temporal_status:
+      - recurring_concern for the shared cost/equity/community-process theme
+      - currently_existing for facility/training and community concern arguments
+      - pending_future_handling for budget scrutiny and project-cost decisions
+  
+  answer_locality:
+    - Repeated across O'Brien, Harrell, González, Juarez, Burgess, Herbold, and Johnson comments.
+    - The theme is visible both before and after the failed hold motion.
+  
+  marker_presence:
+    problem_side_concern: present
+    specific_content: present
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >
+    Even after Resolution 31698 was adopted, key work remained pending: FAS had to carry
+    out independent cost reviews, conduct and report a racial equity toolkit analysis,
+    perform community engagement, provide progress and cost-risk reports, and return the
+    resulting information to Council and committee processes so the Council could later
+    decide the appropriate total project cost during the budget process.
+  
+  evidence:
+    - "The results of the Racial Equity Toolkit analysis will help to inform the Council's decision on what is the appropriate total project cost ... in the course of the City Council's ordinary budgeting process."
+    - "City Council doesn't vote on the budget until the end of November."
+    - "[The community should have] the results of the racial equity toolkit analysis approximately 4 to 6 weeks before any decisions have to be made."
+    - "We may need to provide the Office for Civil Rights a little wiggle room around that October 3rd deadline."
+    - "The resolution also directs FAS to provide ... regular progress reports."
+    - "The real work to be done is over the course of the budget, in the coming months."
+    - "The real discussion here is as we move forward into the budgeting process."
+  
+  source_vocabulary:
+    - will help to inform
+    - appropriate total project cost
+    - ordinary budgeting process
+    - budget until the end of November
+    - 4 to 6 weeks before decisions
+    - October 3rd deadline
+    - wiggle room
+    - regular progress reports
+    - current project status
+    - outcomes of community engagement
+    - life to date expenditures
+    - budget risk issues
+    - real work ... over the course of the budget
+    - moving forward into the budgeting process
+  
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - Adoption of the resolution was completed in-session.
+      - Implementation of the resolution's directives remained future work.
+      - The appropriate total project cost and budget endorsement remained pending until the later budget process.
+  
+  source_context_for_fact_check:
+    pending_status:
+      - Resolution 31698 was adopted, but final project-cost decision-making was not complete.
+      - RET work, cost estimates, progress reporting, and budget deliberation remained future or ongoing tasks.
+    pending_item:
+      - Appropriate total project cost for the North Precinct project.
+      - RET analysis and community engagement for the facility's design, operations, and cost.
+      - Independent third-party cost estimates at 60% and 90% construction-document stages.
+      - Regular progress reports and cost-risk reporting.
+      - Potential allocation of proceeds from any sale of the existing North Precinct property/building to affordable housing needs.
+    handling_path:
+      - RET analysis to be completed around October 3, 2016 and provided to the Gender Equity, Safe Communities and New Americans Committee.
+      - Council budget vote expected at the end of November.
+      - RET results expected approximately 4 to 6 weeks before budget decisions.
+      - Progress reports to the full Council and committee.
+      - Budget process to determine or endorse the later project-cost amount.
+    temporal_status:
+      - completed_in_session for adoption of Resolution 31698
+      - pending_future_handling for implementation and later budget decision
+      - future_effect for deadlines, reports, cost reviews, and sale-proceeds allocation
+  
+  answer_locality:
+    - González's opening description of RET timing, progress reporting, and budget use.
+    - O'Brien, Herbold, and Johnson's later comments that the real work or real discussion remained in the future budget process.
+  
+  marker_presence:
+    pendingness_marker: present
+    pending_item_identifiable: present
+    handling_path_visible: present
+  ```

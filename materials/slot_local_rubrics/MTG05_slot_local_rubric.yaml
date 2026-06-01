@@ -1,0 +1,1221 @@
+segment_id: "MTG5"
+segment_dir: "05_LongBeachCC_01192021"
+meeting_id: "LongBeachCC_01192021"
+uid: "LongBeachCC_01192021_21-0056"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "qa_version": "v31-preflight-corrected",
+    "meeting_order": "05",
+    "language": "en",
+    "source_event_sheet": "event_sheet_05.md",
+    "slot_semantics_source": "slot_semantics.json",
+    "authoring_protocol_source": "qa_authoring.md",
+    "notes": [
+      "Authored from the completed event sheet and slot_semantics.json only.",
+      "Presence is determined by Topic Gate and Quality Gate. Fact Check is a contradiction check against the event sheet, not a completeness check.",
+      "Presence gate labels evaluate whether the required information type is expressed; factual value correctness is evaluated only under fact_check_target fields.",
+      "Corrected after preflight pass 1: promoted required schema keys to each slot and rewrote Presence gates to avoid source-correctness leakage."
+    ],
+    "slots": [
+      {
+        "slot": "T",
+        "slot_name": "Topic / Framing",
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "completed_in_session",
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "The summary names a substantive policy area, issue, or matter as the subject of discussion.",
+                  "A source-inconsistent but substantive subject still satisfies this Presence label; source accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary gives only procedural wording such as an item, vote, hearing, ordinance, or motion without naming any substantive subject.",
+                  "The summary is too vague to identify any policy area, issue, or matter."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "The summary states a policy move or rule effect for the subject, such as creating, amending, implementing, expanding, restricting, preserving, setting, or otherwise changing a policy or requirement.",
+                  "A wrong-but-specific policy direction still satisfies this Presence label; contradiction is handled in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only states discussion, consideration, support, recommendation, approval, or passage without saying what policy move or rule effect was being pursued.",
+                  "The summary names a subject but gives no direction-bearing policy move or rule effect."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "The summary identifies a target, scope, affected rule set, group, area, process, obligation, or payment/use category to which the policy direction applies.",
+                  "A wrong-but-specific target still satisfies this Presence label; target accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary gives a policy direction with no target, scope, affected rule set, affected group, or affected process.",
+                  "The summary leaves the reader unable to tell what the policy move applies to."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The segment concerns Long Beach affordable-housing land-use policy, centered on inclusionary housing, no net loss, and inclusionary-housing in-lieu fees.",
+            "The inclusionary housing ordinance would amend the Long Beach Municipal Code and apply to downtown and Midtown.",
+            "The no net loss ordinance would implement SB 330 and apply citywide.",
+            "The fee resolution would establish inclusionary-housing in-lieu fees payable by developers instead of providing affordable units on site.",
+            "The first vote on the inclusionary zoning / inclusionary housing ordinance carried in-session; the rest of the package remained pending in the transcript."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to mention all three instruments to pass Fact Check if it does not contradict the event sheet.",
+            "Procedural disposition alone belongs to O and does not satisfy T policy_direction unless the substantive policy move is also visible."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment was about a Long Beach affordable-housing policy package involving inclusionary housing, a citywide no net loss ordinance, and in-lieu fees.",
+          "policy_direction": "Create, preserve, and strengthen affordable-housing requirements by amending the Municipal Code, implementing SB 330, and establishing in-lieu fees.",
+          "target": "Inclusionary housing applied to downtown and Midtown; no net loss applied citywide; the fee resolution governed developer payments tied to the inclusionary ordinance.",
+          "temporal_status": "Policy package under Council consideration; first inclusionary-housing vote completed, other votes and later handling pending at transcript end."
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed Item 26 and then voted.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "Procedural-only wording does not identify the substantive subject."
+          },
+          {
+            "summary": "The Council discussed inclusionary housing.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "The subject is visible, but policy direction and target are not."
+          },
+          {
+            "summary": "The item proposed amending Long Beach affordable-housing rules by applying inclusionary housing downtown and in Midtown, adding citywide no-net-loss protections, and setting developer in-lieu fees.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "The subject, policy direction, and targets are all source-consistent."
+          },
+          {
+            "summary": "The item repealed Long Beach inclusionary housing requirements citywide.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "The summary is specific enough for Presence but contradicts the source-supported policy direction and target."
+          }
+        ],
+        "label": "Topic / Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "The summary names a substantive policy area, issue, or matter as the subject of discussion.",
+                "A source-inconsistent but substantive subject still satisfies this Presence label; source accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary gives only procedural wording such as an item, vote, hearing, ordinance, or motion without naming any substantive subject.",
+                "The summary is too vague to identify any policy area, issue, or matter."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "The summary states a policy move or rule effect for the subject, such as creating, amending, implementing, expanding, restricting, preserving, setting, or otherwise changing a policy or requirement.",
+                "A wrong-but-specific policy direction still satisfies this Presence label; contradiction is handled in Fact Check."
+              ],
+              "not_match": [
+                "The summary only states discussion, consideration, support, recommendation, approval, or passage without saying what policy move or rule effect was being pursued.",
+                "The summary names a subject but gives no direction-bearing policy move or rule effect."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "The summary identifies a target, scope, affected rule set, group, area, process, obligation, or payment/use category to which the policy direction applies.",
+                "A wrong-but-specific target still satisfies this Presence label; target accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary gives a policy direction with no target, scope, affected rule set, affected group, or affected process.",
+                "The summary leaves the reader unable to tell what the policy move applies to."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "agenda introduction at the beginning of Item 26",
+          "Deputy City Attorney Rich Anthony's staff explanation",
+          "Councilwoman Zendejas's motion and Council comments"
+        ],
+        "marker_presence": {
+          "subject_identified": "explicit",
+          "policy_direction": "explicit",
+          "target": "explicit",
+          "markers": [
+            "inclusionary housing",
+            "no net loss",
+            "in lieu fee",
+            "downtown and the Midtown",
+            "citywide"
+          ]
+        }
+      },
+      {
+        "slot": "O",
+        "slot_name": "Outcome / Position",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "The summary states that the body took a disposition, such as approving, passing, adopting, rejecting, deferring, referring, carrying, or voting on an acted-on item.",
+                  "A disposition attached to the wrong item or stage can pass Presence; actor, stage, item, and result accuracy are evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only describes discussion, questioning, public comment, support, or opposition with no disposition on an acted-on item.",
+                  "The summary only describes policy substance or background without saying that any body acted on an item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "The acted-on item is identified specifically enough that the reader can distinguish which ordinance, resolution, motion, vote, amendment, or agenda item received the disposition.",
+                  "A source-inconsistent but specific acted-on item still satisfies this Presence label; item accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary says only that an item, measure, or motion passed or failed without enough detail to tell which item was acted on.",
+                  "The disposition is stated, but the acted-on object remains generic or unidentified."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was the Long Beach City Council.",
+            "Staff warned that three separate votes were required: inclusionary housing, no net loss, and the in-lieu-fee resolution.",
+            "Councilwoman Zendejas moved to accept staff's recommendation with amendments and report-back requests.",
+            "After roll call, the mayor stated that the motion carried.",
+            "The City Attorney clarified that the first vote was for the inclusionary zoning / inclusionary housing ordinance.",
+            "The no net loss ordinance vote and the in-lieu-fee resolution vote were still pending when the transcript ended.",
+            "The event sheet does not support a reliable numeric vote count."
+          ],
+          "fact_check_notes": [
+            "If the summary gives a broad Council actor and preserves the first-vote / pending-two-votes distinction, do not treat the broad actor wording as a stage error.",
+            "A claim that all three items passed, that final adoption occurred, or that the resolution was completed before the transcript endpoint is a Fact Check contradiction."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Council completed only the first of three required votes.",
+          "completed_action": "The first roll-call vote / motion carried.",
+          "acted_on_item": "The completed vote was identified by the City Attorney as the inclusionary zoning / inclusionary housing ordinance.",
+          "pending_after_action": "The no net loss ordinance vote and the in-lieu-fee resolution vote were still needed at the transcript endpoint."
+        },
+        "score_examples": [
+          {
+            "summary": "Councilmembers discussed the housing ordinances and heard public comment.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "No disposition on an acted-on item is stated."
+          },
+          {
+            "summary": "The Council passed a motion.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "A disposition is visible, but the acted-on item is not specific."
+          },
+          {
+            "summary": "After roll call, the Council's first vote carried on the inclusionary zoning ordinance, while the no net loss ordinance and fee resolution still required separate votes.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "The completed disposition and acted-on item are specific and source-consistent."
+          },
+          {
+            "summary": "The Council approved all three affordable-housing measures, including the no net loss ordinance and fee resolution, in the final vote.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "The summary states an unsupported completed stage and attaches passage to pending items."
+          }
+        ],
+        "label": "Outcome / Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "The summary states that the body took a disposition, such as approving, passing, adopting, rejecting, deferring, referring, carrying, or voting on an acted-on item.",
+                "A disposition attached to the wrong item or stage can pass Presence; actor, stage, item, and result accuracy are evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary only describes discussion, questioning, public comment, support, or opposition with no disposition on an acted-on item.",
+                "The summary only describes policy substance or background without saying that any body acted on an item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "The acted-on item is identified specifically enough that the reader can distinguish which ordinance, resolution, motion, vote, amendment, or agenda item received the disposition.",
+                "A source-inconsistent but specific acted-on item still satisfies this Presence label; item accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary says only that an item, measure, or motion passed or failed without enough detail to tell which item was acted on.",
+                "The disposition is stated, but the acted-on object remains generic or unidentified."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "staff procedural note before public comment",
+          "Councilwoman Zendejas's motion",
+          "roll-call sequence near the end",
+          "City Attorney clarification after the first vote"
+        ],
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": "explicit",
+          "acted_on_item_specific": "explicit",
+          "markers": [
+            "motion carries",
+            "first vote",
+            "inclusionary zoning ordinance",
+            "next vote",
+            "final vote"
+          ]
+        }
+      },
+      {
+        "slot": "B",
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing",
+            "hypothetical_or_risk"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item.",
+                  "A source-inconsistent but specific background claim can pass Presence; background accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only states the current action, current ordinance terms, or current policy subject with no prior event, condition, deadline, process, problem, or background.",
+                  "The summary gives no background proposition separate from the current item itself."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "The summary visibly connects the background to the current item, the proposal form, a revision, an amendment discussion, timing, or how the item was handled.",
+                  "The connection does not need to be an explicit agenda-necessity or “why now” statement."
+                ],
+                "not_match": [
+                  "The summary lists a background fact but does not connect it to the current item, proposal form, revision, discussion frame, timing, or handling path.",
+                  "The summary provides general context with no visible relation to the item being discussed."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "On July 14, the Council directed the City Attorney's office to bring back three related items.",
+            "The agenda tied the ordinance to implementing California Senate Bill 330.",
+            "Staff said they had hoped the item would be effective January 1 but were a couple of months late.",
+            "Public comment framed the need for stronger policy through COVID-19 impacts, racial inequity, eviction/displacement risk, RHNA need, and affordable-housing shortage.",
+            "The formal staff-side trigger was prior Council direction and SB 330 implementation; public crisis comments were background for strengthening the policy but not the formal legal trigger by themselves."
+          ],
+          "fact_check_notes": [
+            "B does not require the summary to use a phrase like 'why now.' It only needs a background proposition visibly connected to the current item or discussion form.",
+            "Do not treat the current remedy or vote itself as B unless the summary also states prior or contextual background."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The item was shaped by prior Council direction, SB 330 implementation, timing delay, and public-facing affordable-housing crisis concerns.",
+          "trigger_condition": "July 14 Council direction caused the City Attorney's office to return with the inclusionary housing ordinance, no net loss ordinance, and fee resolution.",
+          "agenda_connection": "Those background conditions explain why the package came forward and why amendments and report-backs were discussed."
+        },
+        "score_examples": [
+          {
+            "summary": "The Council voted on inclusionary housing, no net loss, and in-lieu fees.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "This states the current item but no precipitating context."
+          },
+          {
+            "summary": "Staff mentioned SB 330 and a January 1 timing issue.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "Background is visible, but the connection to the current item or form is not fully stated."
+          },
+          {
+            "summary": "The package came back because the Council had directed the City Attorney on July 14 to return with three related items tied to inclusionary housing, no net loss, and in-lieu fees, with SB 330 implementation also framing the agenda.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "Background and connection to the current item are both source-consistent."
+          },
+          {
+            "summary": "The agenda item was triggered by a newly enacted local eviction moratorium that required inclusionary zoning revisions.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "It gives a specific trigger, but that trigger contradicts the event sheet."
+          }
+        ],
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item.",
+                "A source-inconsistent but specific background claim can pass Presence; background accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary only states the current action, current ordinance terms, or current policy subject with no prior event, condition, deadline, process, problem, or background.",
+                "The summary gives no background proposition separate from the current item itself."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "The summary visibly connects the background to the current item, the proposal form, a revision, an amendment discussion, timing, or how the item was handled.",
+                "The connection does not need to be an explicit agenda-necessity or “why now” statement."
+              ],
+              "not_match": [
+                "The summary lists a background fact but does not connect it to the current item, proposal form, revision, discussion frame, timing, or handling path.",
+                "The summary provides general context with no visible relation to the item being discussed."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "agenda introduction",
+          "Deputy City Attorney's opening explanation",
+          "public comment sequence",
+          "City Attorney explanation of SB 330 sunset / no net loss expiration"
+        ],
+        "marker_presence": {
+          "precipitating_context_visible": "explicit",
+          "connected_to_current_item_or_form": "explicit",
+          "markers": [
+            "back on July 14th",
+            "directed our office to bring back",
+            "implementing California Senate Bill 330",
+            "hoped to have this effective as of January one",
+            "COVID pandemic",
+            "regional housing needs assessment"
+          ]
+        }
+      },
+      {
+        "slot": "N",
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "completed_in_session",
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "The summary attaches an operative condition, requirement, restriction, scope, number, date, deadline, review step, or other payload to an action or acted-on item.",
+                  "A wrong-but-specific payload attached to an action can pass Presence; carrier, content, scope, and scalar accuracy are evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary states only the action shell, such as approval, passage, adoption, or discussion, with no operative payload.",
+                  "The summary gives a free-standing background or concern description that is not attached to an action or acted-on item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "The attached payload includes an identifiable numeric quantity, duration, amount, percentage, count, threshold, or measured value.",
+                  "Presence checks that a numeric facet is expressed, not whether the exact value is source-correct."
+                ],
+                "not_match": [
+                  "No numeric quantity, duration, amount, percentage, count, threshold, or measured value is expressed as part of the attached payload."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "The attached payload includes an identifiable named requirement, restriction, condition, permission, review step, or carve-out.",
+                  "Presence checks that a named requirement-type facet is expressed, not whether the exact requirement is source-correct."
+                ],
+                "not_match": [
+                  "The summary says only that changes, amendments, or terms were included, without identifying any requirement, restriction, condition, permission, review step, or carve-out."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "The attached payload includes an identifiable geographic, categorical, population-specific, project-type, payment/use, or other scope boundary.",
+                  "Presence checks that a scope-boundary facet is expressed, not whether the exact boundary is source-correct."
+                ],
+                "not_match": [
+                  "The summary gives an attached payload but no applicable scope, category, affected group, geography, process, or target boundary."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "The attached payload includes an identifiable deadline, effective date, expiration date, sunset, return period, or other time boundary.",
+                  "Presence checks that a time-boundary facet is expressed, not whether the exact date or duration is source-correct."
+                ],
+                "not_match": [
+                  "The attached payload has no deadline, effective date, expiration date, sunset, return period, or time boundary."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The staff package included an inclusionary housing ordinance for downtown and Midtown, a citywide no net loss ordinance, and a fee resolution for developers paying in lieu of providing affordable units on site.",
+            "Zendejas requested staff to report back in 120 days on extending affordability covenants from 55 years to perpetuity / life of project.",
+            "Zendejas requested a 120-day recommendation on dedicating rental-project in-lieu fees to production of very low income units.",
+            "Zendejas requested amending the fee resolution so fees create new affordable units and are not used for rehabilitation or rent subsidies for existing market-rate units.",
+            "Zendejas requested a 120-day resolution tying in-lieu fees to an annual index based on construction costs and land costs, using the Engineering News-Record Construction Cost Index and median condominium sale prices.",
+            "After counsel explained that directly requiring onsite replacement units that night would require a new first reading, Zendejas requested a 120-day staff report on onsite replacement units.",
+            "Zendejas requested eliminating the no net loss January 2025 expiration; counsel said that change could be made without a new first reading."
+          ],
+          "fact_check_notes": [
+            "The transcript does not support saying that every 120-day item had already been completed.",
+            "The transcript does not support saying that onsite replacement units were directly required that night; the supported payload was a 120-day staff recommendation/report-back on onsite replacement units.",
+            "Specific but wrong values, baselines, scopes, or carriers pass Presence when payload structure is visible but fail Fact Check when they contradict the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The action package and Zendejas motion carried specific operative terms and follow-up requests.",
+          "payload_carrier": "Staff package, Zendejas motion, amendments, and requested staff return items.",
+          "payload_content": "Inclusionary housing, no net loss, in-lieu fees, covenant duration review, very-low-income fee dedication, fee-use restriction, fee indexing, no net loss sunset elimination, and onsite replacement-unit report-back.",
+          "payload_scope": "Downtown/Midtown for inclusionary housing; citywide for no net loss; rental projects and developer in-lieu fees for fee-related items; replacement units for onsite-location review.",
+          "payload_scalar_or_baseline": "120 days, 55 years, perpetuity/life of project, January 2025, two-mile current replacement allowance, Engineering News-Record Construction Cost Index, and median condominium sale prices."
+        },
+        "score_examples": [
+          {
+            "summary": "The Council approved the first vote.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "This is only the action shell, with no operative payload."
+          },
+          {
+            "summary": "The motion included report-backs on affordable-housing rules.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "A payload is attached to the action, but no qualifying number, named requirement, scope boundary, or date cutoff is specific enough."
+          },
+          {
+            "summary": "The motion asked staff to return in 120 days on extending 55-year affordability covenants to perpetuity, dedicating rental in-lieu fees to very low income units, indexing fees to construction and land costs, and reviewing onsite replacement units.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "The payload is attached and includes numbers, named requirements, scope, and time boundaries."
+          },
+          {
+            "summary": "The Council directly required all replacement units to be built on site that night.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "The summary states a specific operative payload, but the event sheet supports only a 120-day report-back because direct amendment would require a new first reading."
+          }
+        ],
+        "label": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "The summary attaches an operative condition, requirement, restriction, scope, number, date, deadline, review step, or other payload to an action or acted-on item.",
+                "A wrong-but-specific payload attached to an action can pass Presence; carrier, content, scope, and scalar accuracy are evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary states only the action shell, such as approval, passage, adoption, or discussion, with no operative payload.",
+                "The summary gives a free-standing background or concern description that is not attached to an action or acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "The attached payload includes an identifiable numeric quantity, duration, amount, percentage, count, threshold, or measured value.",
+                "Presence checks that a numeric facet is expressed, not whether the exact value is source-correct."
+              ],
+              "not_match": [
+                "No numeric quantity, duration, amount, percentage, count, threshold, or measured value is expressed as part of the attached payload."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "The attached payload includes an identifiable named requirement, restriction, condition, permission, review step, or carve-out.",
+                "Presence checks that a named requirement-type facet is expressed, not whether the exact requirement is source-correct."
+              ],
+              "not_match": [
+                "The summary says only that changes, amendments, or terms were included, without identifying any requirement, restriction, condition, permission, review step, or carve-out."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "The attached payload includes an identifiable geographic, categorical, population-specific, project-type, payment/use, or other scope boundary.",
+                "Presence checks that a scope-boundary facet is expressed, not whether the exact boundary is source-correct."
+              ],
+              "not_match": [
+                "The summary gives an attached payload but no applicable scope, category, affected group, geography, process, or target boundary."
+              ]
+            },
+            {
+              "name": "date_cutoff",
+              "match": [
+                "The attached payload includes an identifiable deadline, effective date, expiration date, sunset, return period, or other time boundary.",
+                "Presence checks that a time-boundary facet is expressed, not whether the exact date or duration is source-correct."
+              ],
+              "not_match": [
+                "The attached payload has no deadline, effective date, expiration date, sunset, return period, or time boundary."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "Deputy City Attorney's staff description of the three items",
+          "Councilwoman Zendejas's motion",
+          "City Attorney Mayes's answers on no net loss expiration and onsite replacement units",
+          "City Attorney clarification after first vote"
+        ],
+        "marker_presence": {
+          "payload_attached_to_action": "explicit",
+          "quality_gate_options_present": {
+            "number": "explicit",
+            "named_requirement": "explicit",
+            "scope_boundary": "explicit",
+            "date_cutoff": "explicit"
+          },
+          "markers": [
+            "120 days",
+            "55 years",
+            "life of the project",
+            "very low income units",
+            "new, affordable units",
+            "annual index",
+            "January 2025",
+            "within two mile",
+            "on site"
+          ]
+        }
+      },
+      {
+        "slot": "L",
+        "slot_name": "Concrete Concern",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "secondary": [
+            "hypothetical_or_risk",
+            "recurring_concern"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition.",
+                  "A source-inconsistent but concrete concern can pass Presence; concern accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary merely states support, opposition, a proposed solution, or a policy change without problem-side concern language.",
+                  "The summary names an object of policy action but does not assert any concern, harm, risk, obstacle, deficiency, or tradeoff."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "The concern content is specific enough that the reader can tell what problem, harm, risk, obstacle, deficiency, or tradeoff is being asserted.",
+                  "No named place, named group, or bounded area is required for Presence."
+                ],
+                "not_match": [
+                  "The summary says only that concerns, issues, or problems were raised without identifying what the concern was about.",
+                  "The concern is generic and gives no object, mechanism, risk, harm, deficiency, obstacle, or tradeoff."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Public commenters described an affordable-housing crisis and COVID-era eviction and displacement risks.",
+            "Commenters raised racial inequity and rent-burden concerns, including impacts on Black renters and other renters of color.",
+            "Commenters cited a need for 11,160 low and very low income units and criticized waiting three years for the 11% affordability requirement.",
+            "Commenters warned that broad or unindexed in-lieu fees might fail to produce enough very low income or net new affordable units.",
+            "Commenters criticized the no net loss 2025 expiration, limited-duration covenants such as 55 or 50 years, and replacement units located away from the development site.",
+            "One speaker cited 11 buildings with 60-day notices; Councilwoman Allen described an acute housing shortage.",
+            "Local anchors in the source include Long Beach generally, downtown / District 1 references, renters, low-income communities of color, Black renters, and Black women."
+          ],
+          "fact_check_notes": [
+            "The source supports these as concerns and speaker claims in the segment; the QA does not independently verify external empirical claims made during public comment.",
+            "A named place or group is not required for Presence, but if the summary explicitly states one, it must be source-consistent under local_anchor."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The discussion included concrete concerns about affordable-housing shortage, displacement, eviction risk, delayed implementation, insufficient fee targeting, expiring protections, and offsite replacement units.",
+          "obstacle_content": "Problem-side risks included current crisis conditions and future risks if the policy remained too weak or slow.",
+          "local_anchor": "Long Beach renters, low-income communities of color, Black renters and Black women, downtown / District 1 references, and buildings with 60-day notices."
+        },
+        "score_examples": [
+          {
+            "summary": "Several speakers proposed changes to the ordinances.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "Solution-side proposals alone do not state a concrete concern."
+          },
+          {
+            "summary": "Speakers raised housing concerns.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "Concern language is visible, but the content is too generic."
+          },
+          {
+            "summary": "Speakers warned that a three-year phase-in could frontload development and leave fewer affordable units on the ground, while eviction and displacement risks were already acute during COVID-19.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "The concern language and concrete concern content are source-consistent."
+          },
+          {
+            "summary": "Speakers' main concern was that the ordinance would eliminate all market-rate housing in Long Beach.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "It states a concrete concern, but that concern contradicts the source-supported concern content."
+          }
+        ],
+        "label": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition.",
+                "A source-inconsistent but concrete concern can pass Presence; concern accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary merely states support, opposition, a proposed solution, or a policy change without problem-side concern language.",
+                "The summary names an object of policy action but does not assert any concern, harm, risk, obstacle, deficiency, or tradeoff."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "The concern content is specific enough that the reader can tell what problem, harm, risk, obstacle, deficiency, or tradeoff is being asserted.",
+                "No named place, named group, or bounded area is required for Presence."
+              ],
+              "not_match": [
+                "The summary says only that concerns, issues, or problems were raised without identifying what the concern was about.",
+                "The concern is generic and gives no object, mechanism, risk, harm, deficiency, obstacle, or tradeoff."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "public comment by Elissa Tung",
+          "public comment by Jordan Wynn",
+          "public comment by Victor Sanchez",
+          "public comment by Suzanne Brown",
+          "public comment by Norberto Lopez",
+          "public comment by Liane Noble",
+          "public comment by Angela / Andrew O'Connor as transcribed",
+          "Councilwoman Allen's support comments"
+        ],
+        "marker_presence": {
+          "concrete_concern_language": "explicit",
+          "specific_concern_content": "explicit",
+          "markers": [
+            "evictions",
+            "affordable housing crisis",
+            "cannot afford",
+            "falls short",
+            "frontloading",
+            "displacement",
+            "60 day notices",
+            "not wait three more years"
+          ]
+        }
+      },
+      {
+        "slot": "S",
+        "slot_name": "Shared Concern Synthesis",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "currently_existing",
+            "hypothetical_or_risk",
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "The summary names a recurring or shared concern theme in problem-side language, such as a problem, deficiency, gap, negative state, tradeoff, or risk.",
+                  "A source-inconsistent but specific recurring-concern theme can pass Presence; theme accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only says participants discussed, debated, supported, opposed, or amended a policy without naming any problem-side concern theme.",
+                  "Problem vocabulary appears only as the object or modifier of a solution-side action and is not asserted as a concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "The named concern theme has identifiable content, such as an object of concern, criticized mechanism, contrast, risk, affected scope, tension, or tradeoff.",
+                  "The summary does not need to reproduce every downstream risk or evidentiary detail to satisfy this label."
+                ],
+                "not_match": [
+                  "The summary uses only a generic phrase such as shared concerns or broad concern without saying what the recurring concern was about.",
+                  "The summary names a concern theme but gives no object, mechanism, contrast, risk, affected scope, tension, or tradeoff."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring theme was that Long Beach's affordable-housing and displacement crisis required stronger, faster, and more durable inclusionary housing and no net loss protections.",
+            "Recurring concern content included the three-year phase-in, insufficient very low income production, broad or unindexed in-lieu fees, the 2025 no net loss expiration, limited covenant duration, offsite replacement units, and displacement risk.",
+            "Zendejas's motion reflected several recurring concerns through report-backs or amendments on covenants, fee dedication, fee indexing, no net loss sunset, and onsite replacement.",
+            "Councilwoman Allen described a housing crisis requiring action, while Vice Mayor Richardson described the recommendations as strengthening the policy while keeping development feasible."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state that every speaker raised every concern; S may synthesize a recurring theme across the discussion.",
+            "The theme must be problem-side. A pure list of adopted payload items belongs to N unless the concern theme is also named."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The shared concern was that the city's affordable-housing and displacement crisis required a stronger, faster, and more durable policy package.",
+          "concern_theme": "Urgent affordable-housing and displacement crisis, with concern that the draft policy needed stronger protections.",
+          "concern_content": "Delayed phase-in, weak or misdirected fees, insufficient very low income production, expiring protections, offsite replacement units, and displacement risk."
+        },
+        "score_examples": [
+          {
+            "summary": "The speakers and councilmembers discussed amendments to the policy.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "This does not name a recurring problem-side concern theme."
+          },
+          {
+            "summary": "There was broad concern about housing.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "Problem-side concern language is visible, but the content is generic."
+          },
+          {
+            "summary": "A recurring concern was that Long Beach's affordable-housing and displacement crisis required stronger, faster, and more durable inclusionary housing and no-net-loss protections, especially around phase-in, fee use, covenant duration, and replacement-unit location.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "The shared concern theme and specific content are source-consistent."
+          },
+          {
+            "summary": "The shared concern was that affordable-housing requirements would make Long Beach unable to build any new housing at all.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "It states a specific concern theme, but the event sheet does not support that as the recurring concern theme."
+          }
+        ],
+        "label": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "The summary names a recurring or shared concern theme in problem-side language, such as a problem, deficiency, gap, negative state, tradeoff, or risk.",
+                "A source-inconsistent but specific recurring-concern theme can pass Presence; theme accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary only says participants discussed, debated, supported, opposed, or amended a policy without naming any problem-side concern theme.",
+                "Problem vocabulary appears only as the object or modifier of a solution-side action and is not asserted as a concern theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "The named concern theme has identifiable content, such as an object of concern, criticized mechanism, contrast, risk, affected scope, tension, or tradeoff.",
+                "The summary does not need to reproduce every downstream risk or evidentiary detail to satisfy this label."
+              ],
+              "not_match": [
+                "The summary uses only a generic phrase such as shared concerns or broad concern without saying what the recurring concern was about.",
+                "The summary names a concern theme but gives no object, mechanism, contrast, risk, affected scope, tension, or tradeoff."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "public comment sequence as a whole",
+          "Zendejas motion",
+          "Allen, Richardson, and Price support comments"
+        ],
+        "marker_presence": {
+          "problem_side_concern": "explicit",
+          "specific_content": "explicit",
+          "markers": [
+            "critical affordable housing policies",
+            "cannot afford to wait",
+            "falls short",
+            "acute housing shortage",
+            "make the policy stronger",
+            "doesn't delay the implementation tonight"
+          ]
+        }
+      },
+      {
+        "slot": "U",
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "secondary": [
+            "future_effect",
+            "completed_in_session"
+          ]
+        },
+        "meeting_specific_qa_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "The summary explicitly includes an unfinished, pending, still-open, later-handling, future-return, held-over, or still-to-be-decided marker.",
+                  "A source-inconsistent but explicit pendingness claim can pass Presence; pending-status accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only states a completed action or operative payload with no unfinished, pending, future-return, or later-handling marker.",
+                  "The summary gives a bare directive or future-oriented term without indicating that something remains unfinished, pending, or due to return."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "The summary identifies which item, issue, workstream, vote, reading, review, recommendation, report-back, or implementation step remains pending.",
+                  "A wrong-but-specific pending item still satisfies this Presence label; pending-item accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary only says more work or future handling remained, without identifying what item, issue, or workstream was pending."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "The summary gives a concrete handling path, such as a future vote, meeting, reading, report-back, recommendation, review, drafting step, institutional custody path, or process route.",
+                  "A wrong-but-specific handling path still satisfies this Presence label; path accuracy is evaluated in Fact Check."
+                ],
+                "not_match": [
+                  "The summary identifies a pending item but gives no process path, future event, body, custody, review, vote, reading, report-back, recommendation, or handling route."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "After the first in-session vote, the no net loss ordinance vote remained pending.",
+            "After the first in-session vote, the in-lieu-fee resolution vote remained pending.",
+            "The agenda contemplated later final reading at the next regular Council meeting.",
+            "Zendejas's motion created 120-day staff return paths on covenant duration, rental in-lieu fee dedication, annual fee indexing, and onsite replacement units.",
+            "No net loss would return for second reading with the January 2025 sunset removed if adopted as discussed.",
+            "Counsel stated that directly requiring onsite replacement units that night would require a new first reading, so the handling path was a 120-day staff recommendation instead.",
+            "The first vote / motion on the inclusionary zoning ordinance was completed in-session; it should not be described as pending."
+          ],
+          "fact_check_notes": [
+            "U is focused on unfinishedness after action or discussion. Do not use a completed action alone as U.",
+            "A claim that the no net loss ordinance vote or fee-resolution vote had already been completed contradicts pending_status.",
+            "A summary may mention only one pending workstream and still pass Fact Check if it does not contradict the source."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Several issues remained unfinished after the first vote.",
+          "pending_status": "The first inclusionary-zoning vote was complete, but two more votes and later readings/report-backs remained pending.",
+          "pending_item": "No net loss ordinance vote, in-lieu-fee resolution vote, final reading, second reading if applicable, and 120-day report-back items.",
+          "handling_path": "Separate next/final votes, later/final reading at the next regular meeting, second reading for no net loss with sunset removed, and staff returns in 120 days."
+        },
+        "score_examples": [
+          {
+            "summary": "The motion carried on the inclusionary zoning ordinance.",
+            "expected": {
+              "Presence": 0,
+              "Fact Check": "not_evaluated"
+            },
+            "rationale": "This states a completed action, not an unresolved tail."
+          },
+          {
+            "summary": "Additional housing issues remained pending.",
+            "expected": {
+              "Presence": 0.5,
+              "Fact Check": 1
+            },
+            "rationale": "Pendingness is stated, but the pending item and handling path are not identifiable."
+          },
+          {
+            "summary": "After the first vote carried, the no net loss ordinance and in-lieu-fee resolution still needed separate votes, and several amendment issues were set for 120-day staff return paths.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 1
+            },
+            "rationale": "Pendingness, pending items, and handling paths are all visible and source-consistent."
+          },
+          {
+            "summary": "After the first vote, only the mayor's signature remained because the no net loss ordinance and fee resolution had already passed.",
+            "expected": {
+              "Presence": 1,
+              "Fact Check": 0
+            },
+            "rationale": "The summary states a future/pending path but contradicts the source-supported pending status and pending items."
+          }
+        ],
+        "label": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "The summary explicitly includes an unfinished, pending, still-open, later-handling, future-return, held-over, or still-to-be-decided marker.",
+                "A source-inconsistent but explicit pendingness claim can pass Presence; pending-status accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary only states a completed action or operative payload with no unfinished, pending, future-return, or later-handling marker.",
+                "The summary gives a bare directive or future-oriented term without indicating that something remains unfinished, pending, or due to return."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "The summary identifies which item, issue, workstream, vote, reading, review, recommendation, report-back, or implementation step remains pending.",
+                "A wrong-but-specific pending item still satisfies this Presence label; pending-item accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary only says more work or future handling remained, without identifying what item, issue, or workstream was pending."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "The summary gives a concrete handling path, such as a future vote, meeting, reading, report-back, recommendation, review, drafting step, institutional custody path, or process route.",
+                "A wrong-but-specific handling path still satisfies this Presence label; path accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "The summary identifies a pending item but gives no process path, future event, body, custody, review, vote, reading, report-back, recommendation, or handling route."
+              ]
+            }
+          ]
+        },
+        "answer_locality": [
+          "agenda introduction",
+          "Deputy City Attorney's explanation of three votes",
+          "Zendejas motion and questions",
+          "City Attorney Mayes's explanations",
+          "City Attorney clarification after first vote"
+        ],
+        "marker_presence": {
+          "pendingness_marker": "explicit",
+          "pending_item_identifiable": "explicit",
+          "handling_path_visible": "explicit",
+          "markers": [
+            "lead over to the next regular meeting",
+            "Final Reading",
+            "three different votes required",
+            "next vote",
+            "final vote",
+            "return in 120 days",
+            "new first reading"
+          ]
+        }
+      }
+    ],
+    "validation_source": "qa_validation.md"
+  }

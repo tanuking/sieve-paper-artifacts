@@ -1,0 +1,578 @@
+segment_id: "MTG44"
+segment_dir: "44_SeattleCityCouncil_11232020"
+meeting_id: "SeattleCityCouncil_11232020"
+uid: "SeattleCityCouncil_11232020_CF 314464"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # event_sheet_44
+  
+  ## Metadata
+  
+  ```yaml
+  meeting_order: 44
+  source_transcript: transcript_44.txt
+  protocol: Event Sheet Protocol v29
+  slot_semantics_version: 29
+  language: English
+  notes:
+    - The source transcript appears to be ASR output and contains name/word variants, for example "Mesquita/Macheda/Mosquera/Mosquito" for Councilmember Mosqueda and "So what/Sergeant/Sargeant" for Councilmember Sawant.
+    - Evidence quotations preserve source-side wording where useful. Normalized names are used only to keep the event sheet readable.
+    - The event sheet records source context. It does not define scoring rules or judge instructions.
+  ```
+  
+  ## Segment-level source note
+  
+  This sampled segment covers Seattle City Council agenda items 35 and 36, the major 2021 budget actions following the Select Budget Committee process. The substantive subject is the City of Seattle's 2021 budget and 2021-2026 capital improvement program. The policy direction discussed by members is an amended budget package intended to fund COVID relief and equitable recovery, housing and homelessness responses, community-safety alternatives and police-budget changes, transportation and climate investments, and other city services.
+  
+  ---
+  
+  ## Slot T — Topic / Framing
+  
+  ```yaml
+  label: T — Topic / Framing
+  summary: >
+    The sampled segment is framed around Seattle City Council agenda items 35 and 36,
+    the major 2021 budget actions after the Select Budget Committee process. The
+    substantive subject is the City of Seattle's 2021 budget and 2021–2026 capital
+    improvement program. The policy direction discussed by members is an amended
+    budget package intended to fund COVID relief and equitable recovery, housing and
+    homelessness responses, community-safety alternatives and police-budget changes,
+    transportation and climate investments, and other city services.
+  evidence:
+    - "We have arrived now at agenda items 35 and 36... the major budget actions related to the full city council budget as amended during our Select Budget Committee process."
+    - "Clerk file 314464. City Council changes to the 2021 Proposed Budget and the 2021... 2026 proposed capital improvement program."
+    - "Council Bill 119938 adopting a budget including capital improvement program and position modifications for the City of Seattle for 2021..."
+    - "In this budget, you'll see the ways in which we have worked together to identify investments in not just recovery, but. A more equitable recovery..."
+    - "The budget includes unprecedented investments in alternatives to policing and reductions in the police department budget."
+  source_vocabulary:
+    - agenda items 35 and 36
+    - full city council budget as amended
+    - Select Budget Committee process
+    - Clerk File 314464
+    - Council Bill 119938
+    - 2021 Proposed Budget
+    - 2021–2026 proposed capital improvement program
+    - JumpStart progressive payroll tax
+    - equitable recovery
+    - alternatives to policing
+    - Green New Deal
+    - housing and homelessness
+    - COVID relief
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The discussion began with the budget items pending before the full Council.
+      - By the end of the segment, the clerk file was approved and placed on file, and the budget bill passed.
+      - Many budget effects were framed as 2021 or later implementation effects.
+  source_context_for_fact_check:
+    subject:
+      - Seattle City Council's 2021 budget actions.
+      - Changes to the 2021 Proposed Budget and the 2021–2026 proposed capital improvement program.
+      - Council Bill 119938 adopting the 2021 budget, including capital improvement program and position modifications.
+    policy_direction:
+      - Advance and adopt the amended 2021 budget package.
+      - Invest in COVID/economic recovery, small business and worker support, rental assistance, eviction prevention, food assistance, childcare, homelessness services, housing, public safety alternatives, climate/transportation investments, and other city services.
+      - Reduce and transfer some Seattle Police Department functions and funding while scaling up community-based safety alternatives.
+    target:
+      - City of Seattle 2021 budget, capital improvement program, city departments, city-funded services, and affected residents/communities.
+    temporal_status:
+      - completed_in_session for the full Council votes on agenda items 35 and 36.
+      - future_effect for funded programs and implementation in 2021 and later.
+  answer_locality:
+    locality: spread_across_segment
+    notes:
+      - The procedural framing appears at the start of the segment.
+      - Substantive policy framing is distributed across councilmember comments before the votes.
+  marker_presence:
+    explicit_markers:
+      - "agenda items 35 and 36"
+      - "major budget actions"
+      - "2021 Proposed Budget"
+      - "Council Bill 119938"
+      - "adopting a budget"
+    implicit_markers: []
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome / Position
+  
+  ```yaml
+  label: O — Outcome / Position
+  summary: >
+    The full Council completed action on both budget items in the segment. Clerk File
+    314464, concerning City Council changes to the 2021 Proposed Budget and the
+    2021–2026 proposed capital improvement program, was approved and placed on file.
+    Council Bill 119938, adopting the 2021 City of Seattle budget including the
+    capital improvement program and position modifications, passed with eight in
+    favor and one opposed. The chair stated that the bill passed and that she would
+    sign it.
+  evidence:
+    - "The first item on the agenda is clerk file 314464. Will the clerk please call the roll on approving and placing the clerk file on file?"
+    - "Morales. Yes. Mosquera Hi. Petersen Yes. So what? Yes. Strauss Yes. Herbold Yes. R.S. Yes. Lewis Yes. President Gonzalez. Yes."
+    - "The motion carries and the Kirk file is approved and placed on file."
+    - "Item 36. This is Council Bill 119938... will the clerk please call the roll on the passage of the bill?"
+    - "Morales... Yes. Peterson? Yes. Sergeant? No. Strauss. Yes. HERBOLD. Yes. Suarez. Yes. Lewis. Yes. President Gonzalez. Yes. Eight in favor. One opposed."
+    - "The bill passes and the chair will sign it."
+  source_vocabulary:
+    - clerk file 314464
+    - approved and placed on file
+    - Council Bill 119938
+    - passage of the bill
+    - eight in favor, one opposed
+    - bill passes
+    - chair will sign
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The Select Budget Committee recommendation was already available at the start of the segment.
+      - The full Council votes occurred and were completed within this segment.
+  source_context_for_fact_check:
+    actor:
+      - Seattle City Council / full Council during agenda items 35 and 36.
+      - Council President González presided over the votes and stated the post-vote signing step.
+    procedural_stage:
+      - Full Council action on the clerk file and bill occurred in this segment.
+      - Earlier Select Budget Committee recommendations were read into the record before final Council action.
+    disposition_result:
+      - Clerk File 314464 was approved and placed on file.
+      - Council Bill 119938 passed, and the chair stated she would sign it.
+    acted_on_item:
+      - Clerk File 314464: City Council changes to the 2021 Proposed Budget and 2021–2026 proposed capital improvement program.
+      - Council Bill 119938: adopting the 2021 City of Seattle budget, including capital improvement program and position modifications, and creating positions exempt from civil service law by two-thirds vote.
+    vote_result:
+      clerk_file_314464:
+        source_supported_value:
+          - All individually called councilmembers in the transcript answered yes/aye.
+          - The motion carried.
+        caution:
+          - The ASR transcript contains the phrase "Nine in favor, nine opposed," which conflicts with the individual yes votes and the chair's statement that the motion carried. The safest source-supported claim is that the roll call recorded nine affirmative votes and the motion carried; the transcript should not be used to support nine opposing votes.
+      council_bill_119938:
+        value: 8 in favor, 1 opposed
+        no_vote: Councilmember Sawant, transcribed in places as "Sergeant/Sargeant/So what"
+        attached_to: final Council passage of Council Bill 119938
+    temporal_status:
+      - completed_in_session for both final votes.
+      - already_occurred for the prior committee recommendation.
+  answer_locality:
+    locality: end_of_segment
+    notes:
+      - The votes and final dispositions appear after the councilmember comment period.
+  marker_presence:
+    explicit_markers:
+      - "call the roll"
+      - "motion carries"
+      - "approved and placed on file"
+      - "passage of the bill"
+      - "Eight in favor. One opposed."
+      - "The bill passes"
+    implicit_markers: []
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B — Agenda-Setting Background / Precipitating Context
+  summary: >
+    The segment presents several background conditions that shaped the budget items:
+    the Select Budget Committee amendment process, the fact that updated budget
+    documents were not preloaded into the published agenda but later became available
+    online, the COVID pandemic and economic downturn, racial justice protests and
+    civil-rights advocacy, community testimony and organizing, the JumpStart
+    progressive payroll tax, homelessness and housing pressures, and debates over
+    policing and public safety.
+  evidence:
+    - "the full city council budget as amended during our Select Budget Committee process"
+    - "the budget documents that were approved at the Select Budget Committee weren't able to be updated and pre-loaded into today's City Council agenda... but are now available online"
+    - "This was no easy task when it came to COVID and economic downturn, civil rights uprising and working remote back to back meetings and passing the jump start progressive tax revenue."
+    - "In response to widespread community advocacy in Seattle and throughout the country, in response to the murder of George Floyd last summer and generations of activism prior to that..."
+    - "thanks to our work this summer to pass the Jumpstart legislation, we've added... additional revenue for COVID relief"
+  source_vocabulary:
+    - Select Budget Committee
+    - documents were not uploaded within the agenda
+    - now available online
+    - COVID
+    - economic downturn
+    - civil rights uprising
+    - public testimony
+    - community advocacy
+    - murder of George Floyd
+    - JumpStart legislation
+    - racial justice lens
+    - homelessness crisis
+  temporal_status:
+    primary: already_occurred
+    notes:
+      - Select Budget Committee amendments and public organizing preceded the full Council segment.
+      - COVID, economic downturn, homelessness, and public-safety concerns were currently existing background conditions during the discussion.
+      - Some concerns were recurring concerns referenced across multiple speakers.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Prior Select Budget Committee action produced the amended budget package before the full Council segment.
+      - Updated budget documents were not in the published agenda but were later available online for Council and public viewing.
+      - COVID and economic downturn shaped the budget's relief and reserve discussions.
+      - Racial justice advocacy and public safety protests shaped the discussion of SPD reductions and community-based alternatives.
+      - JumpStart revenue was described as enabling COVID relief and helping avoid a more austerity-oriented budget.
+    agenda_connection:
+      - These background conditions explain why the Council discussed the budget as a crisis-response and equitable-recovery package rather than as a routine budget vote only.
+      - The missing/preloaded document issue explains the chair's introductory procedural note before the clerk read items 35 and 36.
+  answer_locality:
+    locality: start_and_mid_segment
+    notes:
+      - Procedural background appears at the beginning.
+      - Social, fiscal, and public-safety background appears throughout member comments.
+  marker_presence:
+    explicit_markers:
+      - "as amended during our Select Budget Committee process"
+      - "weren't able to be updated and pre-loaded"
+      - "COVID and economic downturn"
+      - "civil rights uprising"
+      - "public testimony"
+      - "Jumpstart legislation"
+    implicit_markers: []
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N — Outcome-Near Condition / Operative Payload
+  summary: >
+    The budget action carried a broad set of operative payloads. Source-supported
+    payloads include adoption of the 2021 budget with the capital improvement program
+    and position modifications; reserves of about $40 million; references to rebuilding
+    or refunding up to $89 million in COVID relief; funding for small-business support,
+    rental assistance, eviction prevention, food assistance, childcare, hygiene and
+    trash services, homelessness shelter options, and housing; Green New Deal and
+    transportation investments; public-safety restructuring including reductions and
+    transfers from SPD, creation of the Community Safety and Communication Center,
+    movement of 911 dispatch out of SPD, victim advocate transfers, Health One
+    expansion, participatory budgeting, and community-safety investments.
+  evidence:
+    - "Council Bill 119938 adopting a budget including capital improvement program and position modifications for the City of Seattle for 2021..."
+    - "we have $40 million in reserves..."
+    - "rebuild that original spend plan that was planning to invest up to $89 million in assistance for COVID relief"
+    - "small business support, rental assistance, eviction prevention, food assistance, childcare"
+    - "handwashing facilities and garbage clean up... fresh Xbox program... ethnically diverse food"
+    - "We've invested in tiny homes. We've invested in hotel sheltering. We've invested in non congregate shelter options."
+    - "The budget includes unprecedented investments in alternatives to policing and reductions in the police department budget. It creates the Community Safety and Communication Center."
+    - "Shifting nine one dispatch out of SPD... It adds crisis responders and adds a new health one unit... transfer victim advocates to the Human Services Department."
+    - "This will result in $12 million for the Human Services Department... expects to make awards by quarter one 2021."
+    - "It restores the $30 million to the Strategic Investment Fund... And it provides $30 million for a participatory budgeting process..."
+  source_vocabulary:
+    - capital improvement program
+    - position modifications
+    - $40 million in reserves
+    - $89 million in assistance for COVID relief
+    - small business support
+    - rental assistance
+    - eviction prevention
+    - food assistance
+    - childcare
+    - handwashing facilities
+    - garbage clean up
+    - Fresh Bucks / "fresh Xbox" in ASR
+    - tiny homes
+    - hotel sheltering
+    - non-congregate shelter
+    - Community Safety and Communication Center
+    - 911 dispatch out of SPD
+    - parking enforcement officers
+    - crisis responders
+    - Health One / Health Two
+    - victim advocates to Human Services Department
+    - $12 million for HSD community safety
+    - Strategic Investment Fund
+    - participatory budgeting
+  temporal_status:
+    primary: future_effect
+    notes:
+      - The bill and clerk file actions were completed in-session.
+      - Most payloads concern funding, transfers, services, reporting, and implementation during 2021 or later.
+  source_context_for_fact_check:
+    payload_carrier:
+      - Clerk File 314464 carried City Council changes to the 2021 Proposed Budget and 2021–2026 proposed capital improvement program.
+      - Council Bill 119938 carried adoption of the 2021 budget, including the capital improvement program and position modifications.
+      - Councilmember comments describe budget payloads inside the amended budget package.
+    payload_content:
+      - Budget adoption for the City of Seattle for 2021.
+      - Capital improvement program and position modifications.
+      - COVID and economic relief, including small-business support, rental assistance, eviction prevention, food assistance, and childcare.
+      - Public health and homelessness supports, including handwashing facilities, garbage cleanup, shelter/hotel/non-congregate options, tiny homes, and housing investments.
+      - Climate and transportation investments, including sidewalks, pedestrian ways, protected bikeways, Green New Deal ramp-up, and energy efficiency.
+      - Public safety changes, including SPD budget reductions/transfers, creation of the Community Safety and Communication Center, transfer of 911 dispatch out of SPD, exploration of parking enforcement officers' expanded role, crisis responders, Health One expansion, transfer of victim advocates to HSD, participatory budgeting, and community safety investments.
+    payload_scope:
+      - City of Seattle budget, city departments, city-funded services, residents, communities of color, unhoused residents, workers, small businesses, renters, and transportation/climate infrastructure.
+    numeric_values:
+      - value: $40 million
+        meaning: reserves described as available for future COVID/economic downturn needs.
+      - value: up to $89 million
+        meaning: original COVID-relief spend plan amount that speakers discussed refunding or rebuilding.
+      - value: 63
+        meaning: new public sinks referenced by Councilmember Morales.
+      - value: 13
+        meaning: additional encampments referenced for regular trash pickup.
+      - value: $30 million
+        meaning: participatory budgeting process for alternative public safety models and programs.
+      - value: $30 million
+        meaning: Strategic Investment Fund / anti-displacement-related investment discussed by members.
+      - value: $12 million
+        meaning: community safety investments through HSD after an additional $2 million was added to a prior $10 million.
+      - value: Q1 2021
+        meaning: expected timing for HSD awards following community engagement and request-for-proposals process.
+      - value: $37 million
+        meaning: Herbold's stated SPD-budget reduction from 911/PEO transfer and victim advocate transfer to HSD.
+      - value: up to $42 million
+        meaning: Herbold's stated SPD staffing and related cuts directly to SPD, including provisos.
+      - value: nearly $80 million
+        meaning: Herbold's combined characterization of SPD transfers and cuts, including provisos.
+      - value: 545
+        meaning: additional transitional shelter spaces referenced by Councilmember Lewis.
+    temporal_status:
+      - completed_in_session for budget action passage.
+      - future_effect for funded programs, transfers, awards, and implementation.
+  answer_locality:
+    locality: distributed_member_comments
+    notes:
+      - Formal budget payload appears when the clerk reads item 36.
+      - Detailed payloads are distributed through Mosqueda, Morales, Herbold, Sawant, Strauss, Lewis, Peterson, and González comments.
+  marker_presence:
+    explicit_markers:
+      - "adopting a budget"
+      - "including capital improvement program and position modifications"
+      - "$40 million in reserves"
+      - "$30 million"
+      - "participatory budgeting"
+      - "Community Safety and Communication Center"
+      - "Shifting nine one dispatch out of SPD"
+      - "quarter one 2021"
+    implicit_markers: []
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L — Concrete Concern
+  summary: >
+    The segment contains multiple concrete concern statements. Speakers cite the COVID
+    pandemic and economic downturn, chronic poverty and rent/property-payment stress,
+    lack of shelter and housing, unsheltered residents living in tents/RVs/doorways,
+    inadequate past investments in affordable housing and shelter services, police
+    violence and racial inequity, risks of austerity or budget cuts, infrastructure
+    shortfalls, public-safety planning concerns, homelessness accountability concerns,
+    and tradeoffs about city pay increases versus investments in marginalized communities.
+  evidence:
+    - "the urgent need to act to make sure that people have the services and the housing and the health services that they need in order to sustain the crisis of this pandemic"
+    - "chronic poverty or generational poverty or we're on the cusp of not being able to pay our rent... that chronic stress also hurts your physical health"
+    - "far too many people in our city don't have a place to call home... our shelters are at capacity"
+    - "more people living in tents and RVs, more people sleeping in the doorways"
+    - "generations of activism prior to that in the face of injustice and harm at the hands of police officers"
+    - "I'm concerned this budget shortchanges... infrastructure... [and] public safety... I don't feel like we have enough accountability for our response to homelessness."
+    - "still... almost $200 million being cut" / "brutal austerity" in Councilmember Sawant's opposition comments
+  source_vocabulary:
+    - pandemic
+    - economic downturn
+    - chronic poverty
+    - not being able to pay our rent
+    - shelters are at capacity
+    - tents and RVs
+    - sleeping in the doorways
+    - injustice and harm at the hands of police officers
+    - austerity budget
+    - infrastructure
+    - accountability
+    - homelessness response
+  temporal_status:
+    primary: recurring_concern
+    notes:
+      - Some concerns were current conditions during the budget debate.
+      - Sawant and Peterson also framed some concerns as future or ongoing risks from the adopted budget.
+  source_context_for_fact_check:
+    obstacle_content:
+      - COVID and economic downturn were described as active crises requiring budget response.
+      - Housing and shelter shortages were described as producing visible unsheltered homelessness.
+      - Police violence and racial inequity were described as reasons for public-safety restructuring.
+      - Sawant criticized the budget as austerity and cited major cuts; Peterson supported the budget but cited concerns about infrastructure, public safety planning, homelessness accountability, and city pay increases.
+    local_anchor:
+      - City of Seattle generally.
+      - Specific references include District 2, South End, West Seattle Bridge, South Park, Beacon Hill, Rainier Beach, Central District, and communities of color, depending on the speaker and issue.
+    temporal_status:
+      - currently_existing for pandemic, economic downturn, homelessness, and public-safety concerns.
+      - hypothetical_or_risk for concerns about future budget effects and implementation risks.
+      - recurring_concern for repeated references across member comments.
+  answer_locality:
+    locality: distributed_member_comments
+    notes:
+      - Concern content appears especially in Mosqueda, Morales, Herbold, Sawant, Peterson, and González comments.
+  marker_presence:
+    explicit_markers:
+      - "urgent need"
+      - "crisis"
+      - "chronic poverty"
+      - "shelters are at capacity"
+      - "concerned"
+      - "austerity"
+      - "injustice and harm"
+    implicit_markers: []
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S — Shared Concern Synthesis
+  summary: >
+    The recurring concern themes synthesized across the discussion are: how to respond
+    to COVID and economic harm without deep austerity; how to pursue racial equity and
+    equitable recovery; how to address homelessness, housing, food access, and basic
+    health needs; how to restructure public safety and reduce reliance on SPD while
+    scaling alternatives; and how to balance infrastructure, climate, transportation,
+    and district-specific investments within the 2021 budget.
+  evidence:
+    - "COVID and economic downturn, civil rights uprising... and passing the jump start progressive tax revenue"
+    - "a more equitable recovery"
+    - "people have the services and the housing and the health services that they need"
+    - "the old ways of congregate shelters are just not working"
+    - "an approach that does not assume that more officers means more safety"
+    - "The budget includes unprecedented investments in alternatives to policing and reductions in the police department budget."
+    - "No budget is perfect. Our constituents have diverse and conflicting views."
+  source_vocabulary:
+    - COVID relief
+    - economic downturn
+    - equitable recovery
+    - racial justice lens
+    - homelessness
+    - housing
+    - alternatives to policing
+    - more officers means more safety
+    - no austerity / austerity
+    - climate crisis
+    - transportation
+    - district priorities
+  temporal_status:
+    primary: recurring_concern
+    notes:
+      - These themes recur across multiple councilmember comments.
+      - Some themes are framed as current crises; others are future implementation concerns.
+  source_context_for_fact_check:
+    concern_theme:
+      - COVID/economic crisis and the budget's relief role.
+      - Racial equity and equitable recovery.
+      - Homelessness, shelter, housing, hygiene, and food access.
+      - Public safety restructuring, SPD reductions/transfers, and investment in alternatives.
+      - Infrastructure, transportation, climate, and district-level investments.
+      - Tension between anti-austerity framing and Sawant's criticism that the budget remained austerity.
+    concern_content:
+      - Multiple speakers praised the budget for avoiding deeper austerity and funding relief; Sawant explicitly rejected that framing and opposed the full budget.
+      - Multiple speakers tied public safety to community alternatives rather than simply increasing police staffing.
+      - Homelessness and housing were treated as health and equity concerns as well as budget priorities.
+    temporal_status:
+      - recurring_concern for themes repeated across the discussion.
+      - currently_existing for crisis conditions.
+      - future_effect for implementation-oriented themes.
+  answer_locality:
+    locality: spread_across_segment
+    notes:
+      - The slot is synthetic: no single sentence contains all themes, but each theme is supported by repeated member comments.
+  marker_presence:
+    explicit_markers:
+      - "equitable recovery"
+      - "no austerity budget"
+      - "austerity budget"
+      - "homelessness crisis"
+      - "alternatives to policing"
+      - "climate crisis"
+    implicit_markers:
+      - Repetition of COVID, public safety, homelessness, housing, and equity language across speakers.
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U — Unresolved Tail / Future Return Path
+  summary: >
+    Final Council action on agenda items 35 and 36 was completed in this segment, but
+    members identified several future return paths and implementation tails. These
+    included using or reviewing the roughly $40 million in reserves for a third COVID
+    wave and economic downturn, potentially rebuilding the up-to-$89-million COVID
+    relief spend plan, HSD community-safety awards expected in Q1 2021 after a
+    community-engagement/RFP process, Green New Deal ramp-up for 2022, monthly SPD
+    staffing/overtime and traffic-stop reporting, continued state/federal partnership
+    work, future bargaining over the police contract, and the meeting's movement to
+    later agenda items and a Parks District meeting after the budget votes.
+  evidence:
+    - "we have $40 million in reserves that we know we will immediately need to begin looking at as we help those who are dealing with a third wave of COVID..."
+    - "identify ways that we can refund or rebuild that original spend plan that was planning to invest up to $89 million in assistance for COVID relief"
+    - "expects to make awards by quarter one 2021"
+    - "Green New Deal investments... has an onramp for 2022"
+    - "Council has expressed a. Clear desire for up to date information with monthly updates on speedy staffing and use of overtime, as well as reporting on traffic stops..."
+    - "we still have a Parks District meeting immediately following full council"
+    - "items 37 and 38. Will the clerk please read the short title of items 37 and 38 into the record."
+  source_vocabulary:
+    - immediately need to begin looking at
+    - third wave of COVID
+    - refund or rebuild
+    - up to $89 million
+    - quarter one 2021
+    - onramp for 2022
+    - monthly updates
+    - reporting on traffic stops
+    - new federal administration
+    - legislative session
+    - new contract
+    - Parks District meeting
+    - items 37 and 38
+  temporal_status:
+    primary: pending_future_handling
+    notes:
+      - The budget votes themselves were completed in-session.
+      - Implementation, reporting, and future funding decisions remained pending or future-facing.
+      - Later agenda items and the Parks District meeting were procedural future handling for the same overall meeting, not unresolved disposition of items 35 and 36.
+  source_context_for_fact_check:
+    pending_status:
+      - No final vote remained pending for Clerk File 314464 or Council Bill 119938 after the votes.
+      - Budget implementation and follow-up reporting remained future-facing.
+      - Additional unrelated agenda business remained after the budget items.
+    pending_item:
+      - Use/review of $40 million reserves for COVID and economic downturn.
+      - Potential refunding/rebuilding of up-to-$89-million COVID relief spend plan.
+      - HSD community-safety RFP/awards process.
+      - Green New Deal ramp-up for 2022.
+      - Monthly SPD staffing/overtime and traffic-stop reporting.
+      - State/federal partnership work and future police-contract negotiations referenced by speakers.
+      - Agenda items 37 and 38 and the Parks District meeting after full Council.
+    handling_path:
+      - Community partners and Council process for COVID relief reserve/spend-plan decisions.
+      - HSD community engagement and request-for-proposals process, with awards expected in Q1 2021.
+      - Departmental ramp-up through Office of Sustainability and Environment / Green New Deal-related staffing.
+      - Monthly reporting to Council on SPD staffing, overtime, and traffic stops.
+      - Later agenda handling by the clerk for items 37 and 38, followed by Parks District meeting.
+    temporal_status:
+      - completed_in_session for final budget votes.
+      - pending_future_handling for follow-up decisions, awards, reporting, and later meeting business.
+      - future_effect for funded programs and implementation.
+  answer_locality:
+    locality: spread_across_segment_and_end
+    notes:
+      - Future implementation paths appear throughout member comments.
+      - Procedural later-meeting business appears at the end after the budget votes.
+  marker_presence:
+    explicit_markers:
+      - "immediately need to begin looking at"
+      - "refund or rebuild"
+      - "expects to make awards by quarter one 2021"
+      - "onramp for 2022"
+      - "monthly updates"
+      - "still have a Parks District meeting"
+      - "items 37 and 38"
+    implicit_markers: []
+  ```

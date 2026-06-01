@@ -1,0 +1,385 @@
+segment_id: "MTG21"
+segment_dir: "21_SeattleCityCouncil_03192020"
+meeting_id: "SeattleCityCouncil_03192020"
+uid: "SeattleCityCouncil_03192020_CB 119758"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet 21
+  
+  Source transcript: `transcript_21.txt`  
+  Protocol: `event_sheet_protocol.md` v29  
+  Slot semantics: `slot_semantics.json` v29
+  
+  ## Segment-level orientation
+  
+  The segment concerns Seattle City Council agenda item 2, Council Bill 119758, relating to Seattle City Light and Seattle Public Utilities. The bill temporarily removes or waives interest and late-fee charges on delinquent utility consumption and utilization accounts during the COVID-19 emergency. During the segment, the Council considered and passed a substitute, considered and passed Amendment 1 covering nonprofit organizations, and then passed the bill as amended by a 9-0 vote.
+  
+  ---
+  
+  ## Slot T — Topic/Framing
+  
+  ```yaml
+  label: T
+  summary: >
+    The substantive topic was COVID-19 utility-bill relief: temporarily waiving or removing late fees and interest charges on delinquent utility accounts handled by Seattle City Light and Seattle Public Utilities. The policy direction was to provide immediate financial relief by suspending those charges for affected utility customers, including households, small businesses, and nonprofits.
+  evidence:
+    - "Relating to the City Light and Seattle Public Utilities Departments temporarily removing the charge of interest on delinquent utility consumption and utilization accounts..."
+    - "this legislation I'm sponsoring, council bill 119758 will waive all late fees for utility bills to provide additional relief for hundreds of thousands throughout Seattle during this crisis."
+    - "This ordinance would waive late fees and interest charges from both Seattle City Light and Seattle Public Utilities until the mayor's emergency declaration is terminated, or August one, whichever comes first."
+  source_vocabulary:
+    - "City Light"
+    - "Seattle Public Utilities"
+    - "temporarily removing the charge of interest"
+    - "delinquent utility consumption and utilization accounts"
+    - "waive all late fees"
+    - "utility bills"
+    - "households, small businesses and nonprofits"
+  temporal_status:
+    primary: future_effect
+    notes:
+      - The policy effect is a temporary waiver/removal of charges during the emergency period.
+      - The Council completed action on the bill during the segment, but the substantive relief describes an operative effect for customer accounts during the emergency period.
+  source_context_for_fact_check:
+    subject: utility-bill late fees and interest on delinquent utility consumption/utilization accounts
+    policy_direction:
+      - temporarily remove or waive interest charges on delinquent utility accounts
+      - waive late fees for utility bills
+      - provide immediate financial relief during the COVID-19 emergency
+    target:
+      entities:
+        - Seattle City Light
+        - Seattle Public Utilities
+      accounts: delinquent utility consumption and utilization accounts
+      beneficiaries:
+        - households
+        - small businesses
+        - nonprofits, including 501(c)(3) nonprofit organizations after Amendment 1
+    temporal_status:
+      - future_effect for the waiver/removal of charges during the emergency period
+      - completed_in_session for Council passage of the bill as amended
+  answer_locality:
+    transcript_region: opening agenda reading and Councilmember Peterson's sponsor explanation
+    locality_type: concentrated near the beginning of the segment, with nonprofit scope clarified later during Amendment 1
+  marker_presence:
+    subject_identified: present
+    policy_direction: present
+    target: present
+  ```
+  
+  ---
+  
+  ## Slot O — Outcome/Position
+  
+  ```yaml
+  label: O
+  summary: >
+    The Council passed Council Bill 119758 as amended. Before final passage, the Council adopted substitute version 2 by a 9-0 vote and adopted Amendment 1 by a 9-0 vote. The final bill as amended also passed 9-0, and the chair said the legislation would be signed on her behalf.
+  evidence:
+    - "I move to amend council bill 119758 by substituting version two."
+    - "Nine in favor, nine opposed. Thank you. The motion carries and the bill is amended."
+    - "I move to amend Council Bill 119758 Section two as presented on Amendment one on the agenda."
+    - "Nine in favor, nine opposed. Thank you so much. The motion carries and the bill is amended."
+    - "The bill passes as amended and the chair will sign it."
+  source_vocabulary:
+    - "move to pass Council Bill 119758"
+    - "substituting version two"
+    - "Amendment one"
+    - "motion carries"
+    - "bill is amended"
+    - "bill passes as amended"
+    - "Nine in favor"
+    - "nine opposed" # transcript wording appears to mean zero opposed in context
+  source_context_for_fact_check:
+    actor: Seattle City Council / Council members voting in the segment
+    procedural_stage: final Council passage during the segment, after adoption of substitute version 2 and Amendment 1
+    disposition_result:
+      - substitute version 2 was adopted, amending the bill
+      - Amendment 1 was adopted, further amending the bill
+      - Council Bill 119758 passed as amended
+    acted_on_item:
+      - Council Bill 119758
+      - substitute version 2 to Council Bill 119758
+      - Amendment 1 to section 2 of Council Bill 119758
+    vote_results:
+      - value: 9-0
+        attached_to: adoption of substitute version 2
+        note: The transcript says "Nine in favor, nine opposed," but context indicates the standard roll-call result was nine in favor and no opposition.
+      - value: 9-0
+        attached_to: adoption of Amendment 1
+        note: The transcript says "Nine in favor, nine opposed," but context indicates the standard roll-call result was nine in favor and no opposition.
+      - value: 9-0
+        attached_to: final passage of Council Bill 119758 as amended
+        note: The transcript says "nine in favor and then opposed," which appears to be an ASR error for no opposition.
+    temporal_status:
+      - completed_in_session for substitute adoption
+      - completed_in_session for Amendment 1 adoption
+      - completed_in_session for final passage of Council Bill 119758 as amended
+  answer_locality:
+    transcript_region: procedural motions and roll-call results in the middle and end of the segment
+    locality_type: distributed across the substitution vote, amendment vote, and final passage vote
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present
+    acted_on_item_specific: present
+  ```
+  
+  ---
+  
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+  
+  ```yaml
+  label: B
+  summary: >
+    The bill was framed as part of Seattle's COVID-19 emergency response. Speakers described the public-health emergency as an economic crisis causing closures, reduced paychecks, layoffs, pressure on households, small businesses, nonprofits, and arts organizations, and difficulty paying essential utility bills. The relief also fit within a broader utility-relief package that included no shutoffs, flexible payment plans, and broader access to the utility discount program.
+  evidence:
+    - "this public health emergency becoming an economic crisis to all levels of government need to provide immediate financial relief."
+    - "necessary public health protocols resulting in restaurants, cafes, other social establishments closing. Many of our neighbors are seeing reduced paychecks or layoffs..."
+    - "the last thing they need to worry about are bills for essentials like electricity, water and garbage removal."
+    - "this bill is a part of a package utility relief that the city is offering. Under the emergency, the utilities will not be shut off. Folks can apply for flexible payment plans and the utility discount program has been opened up more broadly..."
+    - "The arts are really, really reeling from the response from COVID 19, given that so many of our artistic events involve gatherings of large numbers of people."
+  source_vocabulary:
+    - "COVID 19 emergency"
+    - "public health emergency"
+    - "economic crisis"
+    - "immediate financial relief"
+    - "restaurants, cafes, other social establishments closing"
+    - "reduced paychecks or layoffs"
+    - "no shutoffs"
+    - "flexible payment plans"
+    - "utility discount program"
+    - "arts organizations"
+  source_context_for_fact_check:
+    trigger_condition:
+      - COVID-19 public health emergency was presented as producing an economic crisis.
+      - Public-health protocols were said to be closing restaurants, cafes, and other social establishments.
+      - Neighbors were described as facing reduced paychecks or layoffs.
+      - Utility bills for electricity, water, and garbage removal were described as essential bills that residents should not have to worry about during the crisis.
+      - Arts organizations were described as hit hard because artistic events involve gatherings of large numbers of people.
+    agenda_connection:
+      - These COVID-related economic and operational pressures were used to justify immediate utility-bill relief.
+      - The bill was described as part of a broader city utility-relief package that included no shutoffs, flexible payment plans, and broader utility discount program access.
+      - Amendment 1 was connected to ensuring nonprofit organizations, including arts organizations and service providers, could benefit from the relief.
+    temporal_status:
+      - currently_existing for the COVID emergency and economic pressures during the meeting
+      - already_occurred/currently_existing for closures and reduced income conditions described as motivating the bill
+  answer_locality:
+    transcript_region: sponsor framing near the beginning; central staff context; Councilmember Lewis and Mosqueda comments later
+    locality_type: distributed but repeatedly tied to why the bill and nonprofit amendment were needed
+  marker_presence:
+    precipitating_context_visible: present
+    connected_to_current_item_or_form: present
+  ```
+  
+  ---
+  
+  ## Slot N — Outcome-Near Condition / Operative Payload
+  
+  ```yaml
+  label: N
+  summary: >
+    The operative payload of Council Bill 119758 was to waive or remove late fees and interest charges on delinquent utility accounts for Seattle City Light and Seattle Public Utilities customers during the emergency period. The waiver would last until the mayor's emergency declaration ends or August 1, whichever comes first. Substitute version 2 clarified that small-business income is based on 2019 annual receipts. Amendment 1 added nonprofit organizations defined under Seattle Municipal Code 5.30.040.C, described as 501(c)(3) organizations, to make clear that nonprofits would receive the waiver.
+  evidence:
+    - "temporarily removing the charge of interest on delinquent utility consumption and utilization accounts..."
+    - "This ordinance would waive late fees and interest charges from both Seattle City Light and Seattle Public Utilities until the mayor's emergency declaration is terminated, or August one, whichever comes first."
+    - "version two, the substitute makes it easier to administer this ordinance by clarifying that the income for small businesses is based on the annual receipts from 2019."
+    - "Amendment number one... will clarify, make it crystal clear that nonprofits are also getting the waiver of the late fees."
+    - "customers that are nonprofit organizations as defined under Seattle Municipal Code Section 5.30.040. C and basically saying that's 501c3 organization."
+  source_vocabulary:
+    - "waive late fees and interest charges"
+    - "mayor's emergency declaration"
+    - "August one"
+    - "whichever comes first"
+    - "annual receipts from 2019"
+    - "nonprofit organizations"
+    - "Seattle Municipal Code Section 5.30.040.C"
+    - "501c3"
+  source_context_for_fact_check:
+    payload_carrier:
+      - Council Bill 119758 as amended
+      - substitute version 2 for the 2019 annual-receipts clarification
+      - Amendment 1 for the nonprofit/501(c)(3) clarification
+    payload_content:
+      - temporarily remove the charge of interest on delinquent utility consumption and utilization accounts
+      - waive late fees and interest charges from Seattle City Light and Seattle Public Utilities
+      - clarify small-business income measurement using annual receipts from 2019
+      - add/clarify nonprofit organizations under SMC 5.30.040.C / 501(c)(3) as covered customers receiving the waiver
+    payload_scope:
+      utility_departments:
+        - Seattle City Light
+        - Seattle Public Utilities
+      customer_categories:
+        - households
+        - small businesses
+        - nonprofits / 501(c)(3) nonprofit organizations
+      account_scope: delinquent utility consumption and utilization accounts
+    payload_scalar_or_baseline:
+      - value: August 1
+        meaning: outside end date for waiver if the mayor's emergency declaration has not ended earlier
+      - value: mayor's emergency declaration termination
+        meaning: alternative end condition for the waiver, whichever comes first with August 1
+      - value: 2019 annual receipts
+        meaning: basis for determining small-business income under substitute version 2
+      - value: immediate effective date by 3/1 vote of the City Council
+        meaning: emergency/immediate effective-date mechanism stated in the agenda reading
+    temporal_status:
+      - future_effect for the waiver operating during the emergency period
+      - completed_in_session for adoption of substitute version 2 and Amendment 1
+  answer_locality:
+    transcript_region: opening agenda reading, sponsor explanation, substitution explanation, Amendment 1 discussion
+    locality_type: distributed across the bill description and amendment handling
+  marker_presence:
+    payload_attached_to_action: present
+    number: present
+    named_requirement: present
+    scope_boundary: present
+    date_cutoff: present
+  ```
+  
+  ---
+  
+  ## Slot L — Concrete Concern
+  
+  ```yaml
+  label: L
+  summary: >
+    Speakers identified concrete concerns about economic hardship during COVID-19: residents facing reduced paychecks or layoffs, businesses and nonprofits struggling with essential utility bills, arts organizations being hit hard by gathering restrictions, utility notices being scary or intimidating, and fiscal uncertainty over reduced utility and general-fund revenue.
+  evidence:
+    - "Many of our neighbors are seeing reduced paychecks or layoffs, and the last thing they need to worry about are bills for essentials like electricity, water and garbage removal."
+    - "the arts are really, really reeling from the response from COVID 19... They have just been absolutely slammed as an industry..."
+    - "One thing that has come up in talking to arts organizations in my district is that utilities are an ongoing concern for them."
+    - "the impact of the bill, both to the utilities in the reduced revenue in interest payments, as well as the reduction to the general fund..."
+    - "notifications are less scary and intimidating, especially in times like these."
+  source_vocabulary:
+    - "reduced paychecks or layoffs"
+    - "bills for essentials"
+    - "arts organizations"
+    - "reeling"
+    - "slammed as an industry"
+    - "utilities are an ongoing concern"
+    - "reduced revenue"
+    - "reduction to the general fund"
+    - "less scary and intimidating"
+  source_context_for_fact_check:
+    obstacle_content:
+      - residents/neighbors were described as facing reduced paychecks or layoffs
+      - utility bills for electricity, water, and garbage removal were described as essential bills creating worry during the crisis
+      - arts organizations were described as hit hard by COVID restrictions on large gatherings
+      - arts workers were described as vulnerable and not receiving the remuneration they should
+      - utility costs were described as an ongoing concern for arts organizations
+      - Councilmembers raised concern about reduced utility-interest revenue and general-fund impacts
+      - utility communications were described as potentially scary or intimidating, with interest in simplifying language
+    local_anchor:
+      - Seattle generally for the utility-bill relief
+      - District 7 for Councilmember Lewis's arts-organization comments
+      - Seattle City Light communications for Councilmember Mosqueda's comments
+    temporal_status:
+      - currently_existing for COVID-related hardship and utility-bill burdens at the time of the meeting
+      - hypothetical_or_risk for federal reimbursement uncertainty and future fiscal impacts
+      - recurring_concern for utility costs affecting arts organizations and service providers
+  answer_locality:
+    transcript_region: sponsor explanation, Councilmember Herbold question, Councilmember Mosqueda comments, Councilmember Lewis amendment comments
+    locality_type: distributed concern statements across discussion
+  marker_presence:
+    concrete_concern_language: present
+    specific_concern_content: present
+  ```
+  
+  ---
+  
+  ## Slot S — Shared Concern Synthesis
+  
+  ```yaml
+  label: S
+  summary: >
+    The recurring concern theme was that COVID-19 created financial strain that made utility bills, late fees, and related debt especially burdensome for residents, families, small businesses, nonprofits, arts organizations, and service providers. A secondary recurring concern was how the City should manage the fiscal and recovery implications of the relief, including reimbursement, future recovery planning, and possible later debt forgiveness.
+  evidence:
+    - "this public health emergency becoming an economic crisis... need to provide immediate financial relief."
+    - "relief from the utility bills that all households, small businesses and nonprofits face each month..."
+    - "I'm sure CBO is doing that, but the recovery plan is also on my mind..."
+    - "families and to businesses... Given the financial impact that this public health crisis could have."
+    - "utilities are an ongoing concern" for arts organizations.
+    - "A lot of our service providers are really trying to stretch their dollars right now as they respond to the COVID crisis as well."
+  source_vocabulary:
+    - "financial relief"
+    - "utility bills"
+    - "families"
+    - "businesses"
+    - "nonprofits"
+    - "arts organizations"
+    - "service providers"
+    - "recovery plan"
+    - "federal reimbursement"
+    - "debt forgiveness"
+  source_context_for_fact_check:
+    concern_theme:
+      primary: COVID-related utility-bill burden and financial strain across households, small businesses, nonprofits, arts organizations, and service providers
+      secondary: fiscal/recovery implications of utility relief, including revenue impacts, federal reimbursement, recovery planning, and future debt forgiveness discussion
+    concern_content:
+      - utility bills and late fees were framed as burdensome during reduced income, layoffs, and closures
+      - nonprofits and arts organizations were singled out as needing access to relief
+      - service providers were said to be stretching dollars while responding to the COVID crisis
+      - Councilmembers asked to track whether revenue impacts could be reimbursed and how future recovery would be budgeted
+      - Councilmember Mosqueda described waiving late fees as a first step and pointed to possible future discussions on debt forgiveness and less intimidating communications
+    temporal_status:
+      - recurring_concern for the repeated financial-hardship theme
+      - currently_existing for economic hardship during the emergency
+      - pending_future_handling for recovery planning, reimbursement follow-up, and possible debt-forgiveness discussion
+  answer_locality:
+    transcript_region: sponsor framing plus comments from Herbold, Morales, Mosqueda, Lewis, and later Mosqueda nonprofit-service-provider clarification
+    locality_type: distributed recurring theme across several speakers
+  marker_presence:
+    problem_side_concern: present
+    specific_content: present
+  ```
+  
+  ---
+  
+  ## Slot U — Unresolved Tail / Future Return Path
+  
+  ```yaml
+  label: U
+  summary: >
+    Although the bill passed as amended during the segment, several future or unresolved items remained: the Council could take additional action to extend the waiver if the COVID-19 emergency lasted beyond August 1; staff would need to follow up on whether revenue impacts were eligible for federal reimbursement; and later committee or recovery-planning conversations were anticipated about City Light communications, future recovery budgeting, and possible debt forgiveness.
+  evidence:
+    - "If the COVID 19 emergency lasts beyond August one, the Council can take additional action to extend this waiver."
+    - "Can you let us know whether or not these impacts are eligible for Federal Reimbursement?" / "we would have to check with the department about that. That's not information that we have at this time."
+    - "We will follow up with you on that."
+    - "the recovery plan is also on my mind..."
+    - "I look forward to a future conversation in your committee..."
+    - "I'm looking forward to a future conversation about basically debt forgiveness at some point..."
+  source_vocabulary:
+    - "If the COVID 19 emergency lasts beyond August one"
+    - "additional action to extend this waiver"
+    - "Federal Reimbursement"
+    - "not information that we have at this time"
+    - "follow up"
+    - "recovery plan"
+    - "future conversation"
+    - "debt forgiveness"
+  source_context_for_fact_check:
+    pending_status:
+      - final passage of Council Bill 119758 as amended was completed in the segment
+      - extension beyond August 1 was not decided; it was a possible future action if the emergency continued
+      - eligibility of revenue impacts for federal reimbursement was unknown during the segment and left for follow-up
+      - future conversations were anticipated about utility communications, recovery budgeting, and debt forgiveness
+    pending_item:
+      - possible extension of the waiver beyond August 1
+      - federal reimbursement eligibility for reduced utility/general-fund revenue impacts
+      - future committee conversation on utility department provisions and communications
+      - possible future debt-forgiveness discussion
+      - broader recovery-plan budgeting
+    handling_path:
+      - Council could take additional action if the emergency lasted beyond August 1
+      - Council Central Staff / departments / CBO follow-up was requested for reimbursement eligibility
+      - Councilmember Peterson's committee was identified as a future venue for utility-related provisions
+    temporal_status:
+      - completed_in_session for bill passage
+      - pending_future_handling for waiver extension, reimbursement follow-up, recovery planning, communications review, and debt-forgiveness discussion
+  answer_locality:
+    transcript_region: sponsor explanation and later councilmember questions/comments
+    locality_type: distributed future-facing statements, not the final disposition itself
+  marker_presence:
+    pendingness_marker: present
+    pending_item_identifiable: present
+    handling_path_visible: present
+  ```
