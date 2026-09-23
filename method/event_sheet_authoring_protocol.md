@@ -1,10 +1,10 @@
-# Event Sheet Protocol v29 — Temporal Status and Slot-Local Source Context
+# Event Sheet Authoring Protocol
 
 ## Scope
 
-This document defines how to build `event_sheet_<meeting_order>.md` from one sampled segment transcript.
+This document defines how to build a per-meeting event sheet (published as `MTG<nn>_event_sheet.yaml` under `../experiment/event_sheets/`) from one sampled segment transcript.
 
-The event sheet records source-grounded slot content. It is used by QA authoring and by judge-bundle construction as the source context for the selected slot.
+The event sheet records source-grounded slot content. It is used by slot-local rubric authoring and by judge-bundle construction as the source context for the selected slot.
 
 The event sheet does not define scoring rules. It does not write judge instructions.
 
@@ -12,8 +12,6 @@ The event sheet does not define scoring rules. It does not write judge instructi
 
 - sampled segment transcript
 - `slot_semantics.json`
-
-`slots.md` is retired as a source document.
 
 ## Required output per slot
 
@@ -41,7 +39,7 @@ Use one or more of:
 - `hypothetical_or_risk`
 - `recurring_concern`
 
-This is not a scoring field by itself. It is source context. QA authors decide whether temporal status matters for Presence, Fact Check, or neither.
+This is not a scoring field by itself. It is source context. Rubric authors decide whether temporal status matters for Presence, Fact Check, or neither.
 
 Example:
 

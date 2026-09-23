@@ -1,11 +1,13 @@
-# Conflict Patterns and Slot Boundaries
+# Slot Boundaries
 
-These boundaries are used for rubric authoring and interpretation.
+Pairwise boundary rules between slots. These boundaries are used for
+rubric authoring and interpretation; the judge does not use them to
+reclassify content across slots.
 
 ## T: Topic/Framing
 
 - vs `O`: T captures substantive framing: subject, policy direction, and target. O captures the body's procedural disposition on an acted-on item. This slot when: Use T when the content explains what policy matter was being discussed, what substantive policy move was being pursued, and what target the move applied to. Other slot when: Use O when the content states what the body did to an item, such as approved, adopted, passed, rejected, referred, deferred, or recommended.
-- vs `N`: T captures substantive framing: subject, policy direction, and target. N captures operative payload attached to an action. These are not mutually exclusive: the same summary clause can satisfy T as a policy direction or rule effect and also satisfy N as an operative payload when the QA criteria for each slot support that use. This slot when: Use T when the content shows what policy move was being pursued for the subject and target, including a concrete rule effect that shows how the target would change. Other slot when: Use N when the content states what an action, ordinance, amendment, motion, or recommendation specifically required, limited, set, included, scoped, or conditioned.
+- vs `N`: T captures substantive framing: subject, policy direction, and target. N captures operative payload attached to an action. These are not mutually exclusive: the same summary clause can satisfy T as a policy direction or rule effect and also satisfy N as an operative payload when the rubric criteria for each slot support that use. This slot when: Use T when the content shows what policy move was being pursued for the subject and target, including a concrete rule effect that shows how the target would change. Other slot when: Use N when the content states what an action, ordinance, amendment, motion, or recommendation specifically required, limited, set, included, scoped, or conditioned.
 - vs `B`: T captures what the discussion was about and what policy move was pursued. B captures agenda-setting background or precipitating context that shaped the current item or discussion. This slot when: Use T when the content identifies the substantive issue, policy direction, or target. Other slot when: Use B when the content states prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.
 - vs `S`: T captures substantive framing. S captures a recurring problem-side concern theme. This slot when: Use T when the content frames the policy subject, direction, and target. Other slot when: Use S when the content names what participants were concerned about in problem-side terms, especially a recurring or shared concern theme.
 

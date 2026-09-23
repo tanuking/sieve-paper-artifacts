@@ -43,7 +43,7 @@ cannot satisfy the gate.
 Judge task boundary:
 The slot under evaluation has already been selected by the bundle. Do not
 reclassify the summary content into a different slot. Cross-slot boundary
-rules are used during event-sheet authoring, QA authoring, and validation;
+rules are used during event-sheet authoring, rubric authoring, and validation;
 they are not scoring criteria in this prompt. Apply only this slot's
 gate labels, meeting-specific match/not_match, fact_check_target,
 slot-local event-sheet excerpt, Fact Check roles, global Fact Check rules,
@@ -129,7 +129,7 @@ Event-sheet slot summary:
 Do not use this context to add gate requirements or relax gate
 requirements. Presence is based on the gate labels, label meanings, match, and not_match.
 Do not perform cross-slot classification. The slot has already been selected
-by the bundle, and any relevant boundary has been materialized in the QA
+by the bundle, and any relevant boundary has been materialized in the rubric
 fields.
 
 ============================================================

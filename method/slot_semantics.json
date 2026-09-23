@@ -1,42 +1,38 @@
 {
-  "version": 29,
-  "derived_from": "slot_semantics_v28.json, with Presence gate separation clarified, B redefined as agenda-setting background / precipitating context, and L redefined as concrete concern without local-anchor-as-Presence requirement",
-  "purpose": "Operational requirements for evaluating whether a segment summary satisfies each slot. This file is the source of truth for slot purposes, Presence gate structures, Fact Check field definitions, global Fact Check rules, and authoring/validation-only cross-slot boundaries. Judge prompts render the selected slot semantics and QA criteria. Cross-slot boundaries are not rendered to the judge.",
+  "purpose": "Operational requirements for evaluating whether a segment summary satisfies each slot. This file is the source of truth for slot purposes, Presence gate structures, Fact Check field definitions, global Fact Check rules, and authoring/validation-only cross-slot boundaries. Judge prompts render the selected slot semantics and the meeting-specific rubric criteria. Cross-slot boundaries are not rendered to the judge.",
   "field_semantics": {
     "slot_purpose": "A short definition of what the slot captures. slot_purpose is orientation only; it is not the place to encode Presence gates or Fact Check rules.",
     "presence_structure": "The structure used to determine Presence. It contains topic_gate and quality_gate. Presence is determined only by topic_gate and quality_gate. There are no separate topic_requirement or quality_requirement fields; each gate label's meaning is the executable criterion.",
     "topic_gate": "The gate for Presence >= 0.5. It checks whether the summary minimally enters this slot's information type. Topic Gate passes when the labels are direct under the operator.",
     "quality_gate": "The gate for Presence = 1.0. It checks whether a summary that passed Topic Gate states the slot information with enough specificity. Quality Gate passes when the labels are direct under the operator.",
-    "gate_label": "A fixed check inside a gate. Each label has a name and a meaning. QA authors write sample-specific match and not_match for each label. The judge combines the label meaning, match, not_match, and summary text to classify the label as direct, inferential, or unrelated.",
+    "gate_label": "A fixed check inside a gate. Each label has a name and a meaning. Slot-local rubric authors write sample-specific match and not_match for each label. The judge combines the label meaning, match, not_match, and summary text to classify the label as direct, inferential, or unrelated.",
     "fact_check_structure": "Defines the candidate factual fields for Fact Check in each slot. These are field definitions, not required-mention checklists.",
     "fact_check_role": "A part of the claim that this slot compares in Fact Check. Each role has check and fail_condition. check states what is compared. fail_condition states what kind of summary claim is source-incompatible for that role.",
     "valid_items": "Representative source-consistent statements. valid_items are acceptable correct statements, not a mandatory checklist. A summary may state only a subset and still pass Fact Check if it does not contradict the event sheet.",
     "load_bearing_scope": "Deprecated legacy field. Use fact_check_fields for comparison fields and fact_check_notes for optional notes. load_bearing_scope should not be used to add implicit Fact Check fields.",
-    "protected_factual_role": "Deprecated wording. Use fact_check_fields / fact_check_field.",
-    "relevant_summary_context": "The sentence, clause, or tightly linked adjacent sentence sequence used for Presence, plus surrounding clauses that supplement, modify, clarify, or contradict the same slot content. Fact Check examines not only the clause that passed Presence, but all explicit claims in this relevant summary context that bear on protected factual roles.",
-    "boundaries_with_other_slots": "Authoring and validation guidance only. These boundaries help event-sheet authors and QA authors decide how to instantiate slots and write match/not_match/protected roles. They are not scoring criteria and must not be rendered directly in the judge prompt.",
+    "relevant_summary_context": "The sentence, clause, or tightly linked adjacent sentence sequence used for Presence, plus surrounding clauses that supplement, modify, clarify, or contradict the same slot content. Fact Check examines not only the clause that passed Presence, but all explicit claims in this relevant summary context that bear on this slot's fact_check_fields.",
+    "boundaries_with_other_slots": "Authoring and validation guidance only. These boundaries help event-sheet authors and rubric authors decide how to instantiate slots and write match/not_match/fact-check fields. They are not scoring criteria and must not be rendered directly in the judge prompt.",
     "boundary_other_slot": "The neighboring slot involved in this authoring/validation boundary. Not judge-rendered.",
     "boundary": "A concise statement of the conceptual distinction between the two slots, used for authoring and validation. Not judge-rendered.",
     "this_slot_when": "Authoring guidance for when content should be instantiated as this slot. Not judge-rendered.",
     "other_slot_when": "Authoring guidance for when content should be instantiated as the neighboring slot. Not judge-rendered.",
-    "authoring_note": "Practical note for event-sheet or QA authors about how to materialize the boundary in QA fields when relevant. Not judge-rendered.",
-    "judge_render_policy": "Judge prompts render slot_purpose, presence_structure, fact_check_structure, global_fact_check_rules, meeting-specific QA gates, fact_check_target, and score_examples. They do not render cross-slot boundaries. The judge evaluates the slot already selected by the bundle; it does not reclassify summary content into a different slot.",
+    "authoring_note": "Practical note for event-sheet or rubric authors about how to materialize the boundary in rubric fields when relevant. Not judge-rendered.",
+    "judge_render_policy": "Judge prompts render slot_purpose, presence_structure, fact_check_structure, global_fact_check_rules, meeting-specific rubric gates, fact_check_target, the slot-local event-sheet excerpt, and score_examples. They do not render cross-slot boundaries. The judge evaluates the slot already selected by the bundle; it does not reclassify summary content into a different slot.",
     "source_facts_for_fact_check": "An event-sheet field, written per slot, containing source context for the selected slot. It is passed to the judge as a slot-local event-sheet excerpt. It helps interpret and verify the current slot's fact_check_target, but it does not create additional gates or additional Fact Check fields. It is not a full-event-sheet handoff and must not be used for a summary-wide factual audit.",
-    "fact_check_target": "The QA field that defines what Fact Check compares for this sample and slot. It contains fact_check_fields, valid_items, and optional fact_check_notes. It is not a required-mention checklist.",
+    "fact_check_target": "The rubric field that defines what Fact Check compares for this sample and slot. It contains fact_check_fields, valid_items, and optional fact_check_notes. It is not a required-mention checklist.",
     "fact_check_fields": "The list of fields that are checked for this sample and slot. A summary claim can make this slot Fact Check = 0 only if it explicitly contradicts the event-sheet context for one of these fields. A claim outside these fields does not create Fact Check = 0 for this slot.",
     "fact_check_field": "A factual item that may be compared during Fact Check for a slot, such as subject, policy_direction, actor, procedural_stage, vote_result, payload_content, pending_status. A summary only needs to be checked on a field when it explicitly states something about that field.",
     "fact_check_notes": "Optional notes that clarify how to read the fact_check_fields or valid_items. fact_check_notes do not add new fields. If a comparison item matters, it must be listed in fact_check_fields.",
     "event_sheet_slot_context": "The event-sheet excerpt for the selected slot. It is source context for checking whether explicit claims about fact_check_fields contradict the event sheet. It does not add gates, new fact_check_fields, or a summary-wide audit.",
-    "temporal_status": "A description in the event sheet and QA of whether the slot content is already occurred, currently existing, completed in-session, pending future handling, future effect, or hypothetical/risk. It is used when temporal status matters to a gate or fact_check_field."
+    "temporal_status": "A description in the event sheet and the slot-local rubric of whether the slot content is already occurred, currently existing, completed in-session, pending future handling, future effect, or hypothetical/risk. It is used when temporal status matters to a gate or fact_check_field."
   },
   "conventions": {
     "single_label_uses_all_of": "When a gate has only one label, the operator is all_of by convention. all_of and any_of are equivalent for a single-label gate, but using all_of consistently keeps the structural reading uniform.",
-    "label_set_fixed": "For gates whose label_set is fixed, every QA artifact must include every label defined in this file. The author writes match and not_match for each label.",
-    "label_set_options": "For gates whose label_set is options, the QA artifact includes only the labels that apply to the sample, drawn from the fixed set defined in this file. The author may not create labels outside the fixed set.",
+    "label_set_fixed": "For gates whose label_set is fixed, every slot-local rubric must include every label defined in this file. The author writes match and not_match for each label.",
+    "label_set_options": "For gates whose label_set is options, the slot-local rubric includes only the labels that apply to the sample, drawn from the fixed set defined in this file. The author may not create labels outside the fixed set.",
     "presence_fact_check_separation": "Topic Gate and Quality Gate determine only Presence. Fact Check runs only when Presence > 0. Specific but wrong content can pass Presence and fail Fact Check.",
     "role_entries_use_fail_condition": "Slot-specific fact_check roles do not restate Fact Check = 0 conditions as varied free text. Each role uses fail_condition. global_fact_check_rules treat any explicit claim matching a role's fail_condition as Fact Check = 0.",
     "no_separate_topic_or_quality_requirement_fields": "There are no topic_requirement or quality_requirement fields. The executable Presence criteria are integrated into topic_gate.labels[].meaning and quality_gate.labels[].meaning.",
-    "slots_md_retired": "slots.md is not an independent source of truth. Slot definitions, Presence label meanings, Fact Check roles, and cross-slot boundaries live in this file. Any slots.md, if present, is generated documentation only.",
     "boundaries_render_slot_local": "Cross-slot boundaries are stored inside each slot under boundaries_with_other_slots so that authors and judges see the boundaries most relevant to the slot they are working on.",
     "presence_value_correctness_separation": "Topic Gate and Quality Gate determine only whether the required gate labels are expressed in the summary. They do not evaluate whether stated values are source-correct. Wrong numbers, codes, vote counts, dates, baselines, stages, actors, or scalar values must not lower Presence by themselves; they are handled only by Fact Check when they bear on fact_check_fields."
   },
@@ -119,10 +115,10 @@
         },
         {
           "other_slot": "N",
-          "boundary": "T captures substantive framing: subject, policy direction, and target. N captures operative payload attached to an action. These are not mutually exclusive: the same summary clause can satisfy T as a policy direction or rule effect and also satisfy N as an operative payload when the QA criteria for each slot support that use.",
+          "boundary": "T captures substantive framing: subject, policy direction, and target. N captures operative payload attached to an action. These are not mutually exclusive: the same summary clause can satisfy T as a policy direction or rule effect and also satisfy N as an operative payload when the rubric criteria for each slot support that use.",
           "this_slot_when": "Use T when the content shows what policy move was being pursued for the subject and target, including a concrete rule effect that shows how the target would change.",
           "other_slot_when": "Use N when the content states what an action, ordinance, amendment, motion, or recommendation specifically required, limited, set, included, scoped, or conditioned.",
-          "authoring_note": "Do not write T not_match or load_bearing_scope as if payload details are automatically excluded from T. If a concrete rule effect is used for T policy_direction, write the T match to allow it. Use N QA separately for the same clause when it is also action-carried payload."
+          "authoring_note": "Do not write T not_match or load_bearing_scope as if payload details are automatically excluded from T. If a concrete rule effect is used for T policy_direction, write the T match to allow it. Use the N rubric separately for the same clause when it is also action-carried payload."
         },
         {
           "other_slot": "B",
@@ -223,7 +219,7 @@
           "boundary": "O is the action shell. N is the operative payload attached to the action.",
           "this_slot_when": "Use O when the content states the disposition itself and the item acted on.",
           "other_slot_when": "Use N when the content states what the action required, limited, set, included, exempted, scoped, or conditioned.",
-          "authoring_note": "If an O summary includes payload details, keep O focused on the disposition and leave payload correctness to N or QA fact-check roles only when the payload is part of the O claim being protected."
+          "authoring_note": "If an O summary includes payload details, keep O focused on the disposition and leave payload correctness to N or to rubric fact-check roles only when the payload is part of the O claim being fact-checked."
         },
         {
           "other_slot": "U",
@@ -391,7 +387,7 @@
           "boundary": "N captures operative payload attached to an action. T captures substantive framing. These are not mutually exclusive when a concrete rule effect both shows policy direction and is carried by the action.",
           "this_slot_when": "Use N when the content is attached to an action or acted-on item as a requirement, condition, scope, number, date, threshold, or other operative term.",
           "other_slot_when": "Use T when the same content functions as the policy direction or target of the discussion.",
-          "authoring_note": "Do not use this boundary to make the judge choose between T and N. Author each slot independently; if the same clause satisfies both QA criteria, both slots may pass."
+          "authoring_note": "Do not use this boundary to make the judge choose between T and N. Author each slot independently; if the same clause satisfies both slots' rubric criteria, both slots may pass."
         },
         {
           "other_slot": "B",
@@ -497,7 +493,7 @@
           "labels": [
             {
               "name": "specific_content",
-              "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and QA match require."
+              "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and rubric match require."
             }
           ]
         }
@@ -624,43 +620,13 @@
       ]
     }
   },
-  "version_history": [
-    {
-      "version": 23,
-      "summary": "Removed topic_requirement and quality_requirement fields and integrated Presence criteria into topic_gate and quality_gate label meanings. Removed slot_specific_presence_rules and integrated necessary content into label meanings. Introduced Fact Check as a first-class structure with check and fail_condition for each role. Removed duplication between global rules and slot-specific roles. Moved scalar details into the global scalar rule. Limited Fact Check roles to factual components of claims that pass through Topic Gate and Quality Gate."
-    },
-    {
-      "version": 24,
-      "summary": "Retired slots.md as an independent source of truth. Added boundaries_with_other_slots inside each slot so cross-slot distinctions are available to event-sheet authoring, QA authoring, validation, and judge/Zetch-style prompts from the same source as slot definitions, Presence gates, and Fact Check roles."
-    },
-    {
-      "version": 25,
-      "summary": "Marked cross-slot boundaries as authoring/validation-only and removed them from judge-render policy. Clarified O procedural_stage as a factual role distinct from actor and disposition_result, including earlier-stage recommendation versus completed later legal/electoral/administrative effects. Added judge_render_policy and removed judge_note from boundaries."
-    },
-    {
-      "version": 26,
-      "summary": "Introduced slot-local source_facts_for_fact_check as the event-sheet source facts passed to judge bundles. QA is responsible for gates and protected-role routing; event_sheet source facts provide the source-side role values and attachments for Fact Check. Boundaries remain authoring/validation-only and are not rendered to the judge."
-    },
-    {
-      "version": 27,
-      "summary": "Renamed protected-role wording toward fact_check_fields/checked_fields, clarified that slot-local event-sheet excerpts are source context rather than additional Fact Check fields, limited scalar checking to values relevant to the selected slot fact_check_target, and added O vote_result as a slot-level Fact Check role so vote attachment is rendered from O semantics rather than hardcoded in the common judge prompt."
-    },
-    {
-      "version": 28,
-      "summary": "Simplified global Fact Check to three rules: contradiction-not-completeness, slot-local fact_check_fields, and common conflict patterns. Removed separate scalar relevance and temporal relevance rules; scalar and temporal issues are handled as conflict patterns only when they bear on fact_check_fields. Deprecated protected_roles/load_bearing_scope wording in favor of fact_check_fields/fact_check_notes."
-    },
-    {
-      "version": 29,
-      "summary": "Clarified Presence gate separation from factual value correctness. Redefined B from why-now trigger to agenda-setting background / precipitating context. Redefined L as concrete concern and removed local-anchor-as-Presence requirement; local anchoring remains diagnostic or Fact Check context when explicitly stated."
-    }
-  ],
   "judge_render_policy": {
     "render_to_judge": [
       "slot_purpose",
       "presence_structure",
       "fact_check_structure",
       "global_fact_check_rules",
-      "meeting_specific_qa_gates",
+      "meeting_specific_rubric_gates",
       "fact_check_target",
       "slot_local_event_sheet_excerpt",
       "score_examples"
@@ -672,6 +638,6 @@
       "raw_full_event_sheet",
       "raw_transcript"
     ],
-    "principle": "The judge evaluates the specified slot using QA gates plus the selected slot's event-sheet excerpt as source context. Cross-slot boundaries are authoring/validation tools and must not be used by the judge to reclassify content. The event-sheet excerpt does not create additional fact-check fields; Fact Check = 0 can be based only on explicit claims relevant to this slot's fact_check_fields."
+    "principle": "The judge evaluates the specified slot using the rubric gates plus the selected slot's event-sheet excerpt as source context. Cross-slot boundaries are authoring/validation tools and must not be used by the judge to reclassify content. The event-sheet excerpt does not create additional fact-check fields; Fact Check = 0 can be based only on explicit claims relevant to this slot's fact_check_fields."
   }
 }
