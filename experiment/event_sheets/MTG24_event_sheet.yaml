@@ -1,0 +1,376 @@
+segment_id: "MTG24"
+segment_dir: "24_BostonCC_06152022"
+meeting_id: "BostonCC_06152022"
+uid: "BostonCC_06152022_2022-0770"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet — MTG24
+
+  ## Source metadata
+
+  ```yaml
+  segment_item:
+    docket: "0770"
+    item_type: "resolution"
+    item_description: "Resolution to acknowledge, condemn, and apologize for the role played by the City of Boston in the transatlantic slave trade and the ongoing detrimental impacts experienced by Black people of Boston."
+  ```
+
+  ## Segment-level source summary
+
+  Boston City Council considered Docket 0770, introduced by Councilor Fernandes Anderson, with additional original co-sponsors added without objection. The resolution was framed as an acknowledgment, condemnation, and apology for Boston's role in the transatlantic slave trade and for continuing harms experienced by Black Bostonians. Councilors discussed Boston's historical involvement in slavery, later racial harms and disparities, the need for truth before reconciliation, and the role of apology as a step toward healing and repair. After debate, the Council moved for suspension of the rules and adoption of Docket 0770. A roll-call vote was taken, the docket received a unanimous vote, and the resolution was adopted.
+
+  ---
+
+  ## T — Topic/Framing
+
+  ```yaml
+  label: T
+  summary: >
+    The substantive topic was Boston's municipal acknowledgment of its role in the transatlantic slave trade and the continuing harms to Black Bostonians, with the policy move of formally acknowledging, condemning, and apologizing for that role and its ongoing impacts.
+  evidence:
+    - "Docket 0770" was read as a resolution "to acknowledge, condemn and apologize for the role played by the city of Boston in the transatlantic slave trade and the ongoing detrimental impacts experienced by the black people of Boston."
+    - Councilor Fernandes Anderson said the first step after harm is "to acknowledge the harm and to apologize for it," and asked colleagues to vote to suspend and pass the resolution.
+    - Speakers repeatedly framed the resolution as part of truth, reconciliation, healing, and repair for historical and ongoing racial harms.
+  source_vocabulary:
+    - "acknowledge, condemn and apologize"
+    - "role played by the city of Boston"
+    - "transatlantic slave trade"
+    - "ongoing detrimental impacts"
+    - "Black people of Boston"
+    - "truth"
+    - "reconciliation"
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - already_occurred
+      - future_effect
+    notes:
+      - The historical role in slavery was discussed as already occurred.
+      - Ongoing detrimental impacts were discussed as currently existing.
+      - The resolution's acknowledgment and apology were framed as a step toward future reconciliation and repair.
+  source_context_for_fact_check:
+    subject: >
+      Boston's role in the transatlantic slave trade and the ongoing detrimental impacts experienced by Black people of Boston.
+    policy_direction: >
+      Formally acknowledge, condemn, and apologize for that historical role and ongoing harms.
+    target:
+      - City of Boston / Boston municipal government as the actor taking responsibility.
+      - Black people of Boston as the group described as experiencing ongoing detrimental impacts.
+    not_supported_as_T:
+      - A resolution only about generic racial equity without the slavery/transatlantic slave trade and Boston responsibility frame.
+      - A procedural-only description that says only that Docket 0770 was adopted, without naming the substantive subject.
+  answer_locality:
+    primary: opening item reading and sponsor's opening remarks
+    secondary: councilor debate throughout the segment
+  marker_presence:
+    subject_identified: explicit
+    policy_direction: explicit
+    target: explicit
+  ```
+
+  ---
+
+  ## O — Outcome/Position
+
+  ```yaml
+  label: O
+  summary: >
+    Boston City Council adopted Docket 0770, the resolution acknowledging, condemning, and apologizing for Boston's role in the transatlantic slave trade and ongoing impacts on Black Bostonians, after a roll-call vote that was announced as unanimous.
+  evidence:
+    - The chair called for "suspension of the rules and adoption of docket 0770."
+    - A roll-call vote was conducted on Docket 0770.
+    - The clerk/chair announced that Docket 0770 "has received a unanimous vote" and that "the resolution has been adopted."
+  source_vocabulary:
+    - "suspension of the rules"
+    - "adoption of docket 0770"
+    - "roll call vote"
+    - "unanimous vote"
+    - "the resolution has been adopted"
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - The Council's disposition on Docket 0770 was completed during the segment.
+      - No later Council vote on Docket 0770 was described after adoption in this segment.
+  source_context_for_fact_check:
+    actor: Boston City Council
+    procedural_stage: full Council in-session adoption of a resolution
+    disposition_result:
+      - Docket 0770 was adopted.
+      - The rules were suspended for adoption.
+    acted_on_item:
+      docket: "0770"
+      type: resolution
+      description: >
+        Resolution to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and ongoing detrimental impacts experienced by Black people of Boston.
+    vote_result:
+      value: unanimous vote
+      attached_to: roll-call vote on suspension/adoption of Docket 0770
+      numeric_count: not stated cleanly enough in the transcript to rely on as a source-side count
+  answer_locality:
+    primary: closing procedural sequence after debate
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: explicit
+    acted_on_item_specific: explicit
+  ```
+
+  ---
+
+  ## B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >
+    The resolution was shaped by Boston's historical participation in slavery and the slave trade, the absence of a prior municipal apology or accountability, and continuing racial disparities and institutional harms that speakers linked to that history.
+  evidence:
+    - Councilor Fernandes Anderson stated that Boston had not yet taken responsibility or apologized at the municipal level.
+    - She cited historical facts: slavery likely began in Boston in 1638, was legalized in Massachusetts in 1641, and the Massachusetts Bay Colony slave codes were authored by John Winthrop.
+    - She said Boston's local economy grew on unpaid enslaved labor, named Peter Faneuil as profiting from enslaved Africans, and cited estate inventories suggesting many white Bostonians possessed enslaved Africans.
+    - She connected that history to present conditions, including generational trauma, economic and political disparities, city contracting disparities, systemic racism, and city departments not reflecting Boston's demographics.
+    - Other speakers emphasized that Boston often highlights its abolitionist history while ignoring its active role in the slave trade and later racist structures.
+  source_vocabulary:
+    - "heinous historical criminality of slavery"
+    - "modern day manifestations"
+    - "hasn't been done ... at the municipal level"
+    - "Slavery likely began in Boston in 1638"
+    - "legalized in Massachusetts in 1641"
+    - "Massachusetts Bay Colony slave codes"
+    - "local economy grew ... on the backs of unpaid enslaved laborers"
+    - "generational trauma"
+    - "disparities"
+    - "systemic racism"
+  temporal_status:
+    primary: already_occurred
+    additional:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - The slavery and slave-trade history was discussed as past background.
+      - The disparities and institutional harms were discussed as ongoing present conditions.
+      - The lack of apology/accountability was presented as a background condition shaping why the item was brought forward.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Boston's historic role in slavery and the transatlantic slave trade.
+      - Boston's lack of prior municipal acknowledgment, condemnation, and apology for that role.
+      - Continuing racial disparities and institutional harms experienced by Black Bostonians.
+    agenda_connection: >
+      These background facts were used to justify bringing forward Docket 0770 as a formal municipal acknowledgment, condemnation, and apology.
+    source_supported_historical_details:
+      - Slavery was stated to have likely begun in Boston in 1638.
+      - Slavery was stated to have been legalized in Massachusetts in 1641.
+      - John Winthrop was described as authoring Massachusetts Bay Colony slave codes.
+      - Peter Faneuil was described as profiting from the buying and selling of enslaved Africans and owning five human beings when he died.
+      - Estate inventories from 1717 to 1775 were described as showing that around 25% of white Bostonians possessed enslaved Africans.
+    source_supported_present_day_details:
+      - Generational trauma and disparities in political, economic, and social indicators were described as modern manifestations.
+      - Black-owned businesses were described as receiving 0.4% of city contracts between 2014 and 2019.
+      - City departments were criticized as not reflecting Boston's demographics.
+  answer_locality:
+    primary: sponsor's opening remarks
+    secondary: supporting councilor remarks on abolitionism, institutions, reparations, and continuing structures
+  marker_presence:
+    precipitating_context_visible: explicit
+    connected_to_current_item_or_form: explicit
+  ```
+
+  ---
+
+  ## N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >
+    The operative payload of Docket 0770 was that Boston would acknowledge, condemn, and apologize for the City's role in the transatlantic slave trade and the ongoing detrimental impacts on Black people of Boston. The transcript does not show the resolution creating a detailed reparations program, funding mechanism, deadline, or implementation schedule in this segment.
+  evidence:
+    - The item was introduced as a resolution "to acknowledge, condemn and apologize" for Boston's role in the transatlantic slave trade and ongoing detrimental impacts on Black people of Boston.
+    - Councilor Fernandes Anderson described the action as acknowledging harm, apologizing for it, and beginning discussions about what it means to undo that harm.
+    - Other speakers treated the resolution as an act of admission, accountability, and apology that precedes healing and repair.
+  source_vocabulary:
+    - "acknowledge"
+    - "condemn"
+    - "apologize"
+    - "role played by the city of Boston"
+    - "ongoing detrimental impacts"
+    - "admitting that the harm was done"
+    - "taking accountability"
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - future_effect
+    notes:
+      - The resolution carrying this payload was adopted in-session.
+      - Speakers described the acknowledgment/apology as a beginning point for later conversations and healing.
+  source_context_for_fact_check:
+    payload_carrier:
+      docket: "0770"
+      type: resolution
+      disposition: adopted by Boston City Council in this segment
+    payload_content:
+      - Acknowledge the role played by the City of Boston in the transatlantic slave trade.
+      - Condemn that role.
+      - Apologize for that role.
+      - Acknowledge ongoing detrimental impacts experienced by Black people of Boston.
+    payload_scope:
+      actor_scope: City of Boston / Boston municipal government
+      subject_scope: transatlantic slave trade and ongoing racial harms connected to that history
+      affected_group: Black people of Boston
+    payload_scalar_or_baseline:
+      - No operative numeric threshold, funding amount, deadline, or implementation schedule is stated for the resolution in this segment.
+      - Historical and disparity numbers appear as background evidence, not as operative terms of the adopted resolution.
+  answer_locality:
+    primary: item reading and sponsor's explanation
+    secondary: councilor remarks interpreting the resolution as apology/accountability
+  marker_presence:
+    payload_attached_to_action: explicit
+    named_requirement: explicit
+    scope_boundary: explicit
+    number: absent_as_operative_payload
+    date_cutoff: absent_as_operative_payload
+  ```
+
+  ---
+
+  ## L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >
+    Speakers raised concrete concerns about the continuing harms of slavery and racism in Boston, including generational trauma, racial wealth and contracting disparities, systemic racism in city departments, lack of demographic representation in hiring, backlash against racial justice measures, and the difficulty of reconciliation without truth and acknowledgment.
+  evidence:
+    - Councilor Fernandes Anderson described "generational trauma" and disparities in political, economic, and social indicators.
+    - She cited city contracting disparities for Black-owned businesses and criticized systemic racism and demographic mismatch in city departments.
+    - Speakers discussed racialized backlash to reparations and racial justice efforts.
+    - Councilors described the need to admit harm before healing, restoration, and reconciliation can occur.
+  source_vocabulary:
+    - "generational trauma"
+    - "disparities"
+    - "0.4% ... Black owned"
+    - "systemically racist"
+    - "do not hire according to the demographics"
+    - "vitriol"
+    - "harm"
+    - "healing"
+    - "reconciliation"
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - recurring_concern
+      - hypothetical_or_risk
+    notes:
+      - The concerns were discussed as ongoing conditions or recurring barriers.
+      - Some future-facing concern was that healing and reconciliation cannot proceed without truth, acknowledgment, and accountability.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Continuing detrimental impacts from Boston's role in slavery and racial exclusion.
+      - Generational trauma and disparities in political, economic, and social indicators.
+      - Racial wealth disparity and low Black-owned business share of city contracts, as stated in the transcript.
+      - Systemic racism and demographic underrepresentation in city departments.
+      - Backlash and vitriol directed at racial justice and reparations efforts.
+      - Reconciliation and healing being blocked or incomplete without acknowledgment of harm.
+    local_anchor:
+      - City of Boston
+      - Black people of Boston / Black Bostonians
+      - Boston city departments and city contracting were mentioned for some concerns.
+  answer_locality:
+    primary: sponsor's opening and middle remarks
+    secondary: supporting remarks by councilors discussing racial justice, institutions, backlash, and healing
+  marker_presence:
+    concrete_concern_language: explicit
+    specific_concern_content: explicit
+  ```
+
+  ---
+
+  ## S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme was that Boston cannot move toward racial healing, reconciliation, or repair unless it first tells the truth, acknowledges its role in slavery and racial harm, and accepts accountability for continuing impacts.
+  evidence:
+    - Councilor Fernandes Anderson said that before reconciliation, "we must speak the truth," and that without truth there is no reconciliation.
+    - Councilor Louijeune connected equity to corrective action and acknowledgment of past policy harms.
+    - Councilor Lara used the "knife" metaphor to argue that healing cannot begin without first admitting the wound exists.
+    - Councilor Arroyo said admitting harm and taking accountability must come before healing and restoration.
+    - Councilor Baker expressed discomfort with apology but supported it if his words could help the community heal.
+    - Council President Flynn described the resolution as putting Boston on a path to address past mistakes and improve race relations.
+  source_vocabulary:
+    - "without truth, there is no reconciliation"
+    - "corrective action"
+    - "acknowledgment of our history"
+    - "admitting that the knife is there"
+    - "admitting that the harm was done"
+    - "taking accountability"
+    - "healing"
+    - "restoration"
+    - "repair"
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - currently_existing
+      - future_effect
+    notes:
+      - The concern appeared across multiple speakers.
+      - The concern was stated as a present barrier and as a necessary precondition for future healing and repair.
+  source_context_for_fact_check:
+    concern_theme: >
+      Truth, acknowledgment, apology, and accountability are necessary before Boston can pursue racial reconciliation, healing, restoration, or repair.
+    concern_content:
+      - The concern is not merely that Boston had racial inequity, but that avoiding acknowledgment of Boston's role in slavery and ongoing harm prevents meaningful repair.
+      - Multiple speakers linked apology/admission to later healing or reconciliation.
+      - The theme included both historical truth-telling and present-day accountability.
+  answer_locality:
+    primary: distributed across sponsor and supporting councilor remarks
+  marker_presence:
+    problem_side_concern: explicit
+    specific_content: explicit
+  ```
+
+  ---
+
+  ## U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >
+    After adoption, the resolution was framed as a beginning point for future conversations about undoing harm, healing, restoration, and racial reconciliation. The segment did not specify a formal pending Council action, scheduled return date, assigned committee path, or implementation process for Docket 0770 after its adoption.
+  evidence:
+    - Councilor Fernandes Anderson said passage would "begin discussions" about what it means to undo harm to African-American people in Boston.
+    - Councilor Arroyo hoped the passage would begin "real conversations" about healing and addressing harms borne by neighborhoods.
+    - Council President Flynn said the declaration put Boston "on a path" to address past mistakes, come together, and improve race relations.
+    - After the unanimous vote, the chair stated that the resolution had been adopted and then moved on to a brief recess and the next docket.
+  source_vocabulary:
+    - "begin discussions"
+    - "begins us on a track"
+    - "real conversations"
+    - "on a path"
+    - "healing"
+    - "restoration"
+    - "improve race relations"
+    - "the resolution has been adopted"
+  temporal_status:
+    primary: future_effect
+    additional:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - Adoption of Docket 0770 was completed in-session.
+      - Future conversations and repair were described as expected or hoped-for effects.
+      - A formal pending handling path for Docket 0770 was not specified in the transcript.
+  source_context_for_fact_check:
+    pending_status: >
+      Docket 0770 itself was not left pending in this segment; it was adopted. Future healing, repair, and conversations were described as downstream work or hoped-for effects rather than as a scheduled or assigned Council return path.
+    pending_item:
+      - Future conversations about undoing harm, healing, restoration, and improving race relations.
+      - No specific follow-up docket, committee assignment, date, report-back, or implementation mandate was stated for Docket 0770 in this segment.
+    handling_path:
+      - Informal/aspirational path: begin discussions, begin real conversations, put Boston on a path toward repair and improved race relations.
+      - Formal path: none stated after adoption of Docket 0770.
+  answer_locality:
+    primary: sponsor's closing request and supporting remarks by Arroyo and Flynn
+    secondary: post-vote procedural close showing adoption and transition to the next item
+  marker_presence:
+    pendingness_marker: partial_for_future_effect_only
+    pending_item_identifiable: partial
+    handling_path_visible: informal_only_no_formal_path
+  ```

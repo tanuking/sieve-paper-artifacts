@@ -1,0 +1,912 @@
+segment_id: "MTG35"
+segment_dir: "35_AlamedaCC_12062016"
+meeting_id: "AlamedaCC_12062016"
+uid: "AlamedaCC_12062016_2016-3632"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "35",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_name": "Topic / Framing",
+        "slot_purpose": "Captures the substantive framing of the segment: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies.",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "secondary": [
+            "completed_in_session",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The alleged mailers already existed from the prior campaign season.",
+            "The Council discussion and vote occurred in session.",
+            "FPPC complaint handling and investigation follow-up remained pending after the action."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names allegedly unidentified, unattributed, or sender-undisclosed November 8, 2016 election campaign mailers as the substantive subject.",
+                  "Names campaign-mailer identification, attribution, or disclosure compliance as the substantive matter.",
+                  "May use FPPC/Fair Political Practices Commission complaint language when tied to the alleged unidentified election mailers or disclosure compliance."
+                ],
+                "not_match": [
+                  "Only says the Council discussed an agenda item, referral, complaint, or election matter without naming the unidentified mailers or disclosure/identification issue.",
+                  "Frames the subject only as generic negative campaigning, civility, or campaign finance reform without the unidentified-mailer/disclosure-compliance matter.",
+                  "Names only a procedural motion or vote with no substantive policy issue."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "Shows that the policy move was to pursue, authorize, file, add the Council's voice to, or otherwise use the FPPC complaint process.",
+                  "Shows a compliance-reinforcing direction around campaign-mailer identification or disclosure rules.",
+                  "May state that the Council was seeking state-level complaint handling rather than city enforcement."
+                ],
+                "not_match": [
+                  "Only says the Council approved, discussed, condemned, or criticized something without a substantive direction.",
+                  "States only a broad desire to stop negative campaigning or promote civility without tying it to FPPC complaint handling or disclosure/identification compliance.",
+                  "Describes a city-run investigation or local enforcement action as the policy direction."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the target as the unidentified campaign mailers, the November 8, 2016 mailers, or campaign-mailer sender-identification/disclosure compliance in Alameda elections.",
+                  "May identify the target as allegedly unattributed campaign communications governed by California campaign-disclosure rules."
+                ],
+                "not_match": [
+                  "Names only the FPPC, the City Council, a referral, or a motion without the campaign-mailer/disclosure target.",
+                  "Targets all negative campaigning, all campaign finance activity, or all local elections without preserving the unidentified-mailer or disclosure-compliance target."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was alleged unidentified election campaign mailers from the November 8, 2016 election or recent campaign season.",
+            "The policy direction was to pursue or add the Council's institutional voice to an FPPC complaint process.",
+            "The policy direction also reinforced compliance with campaign-mailer identification and disclosure requirements.",
+            "The target was the unidentified campaign mailers and campaign-disclosure / sender-identification compliance for Alameda election communications."
+          ],
+          "fact_check_notes": [
+            "Do not require every detail about the FPPC process or the vote to be mentioned for T.",
+            "Treat claims that the item was only a generic anti-negative-campaigning resolution, a broad campaign-finance reform item, or a city-run enforcement action as contradictions when they replace the source-supported subject, direction, or target.",
+            "Agency naming may use FPPC or Fair Political Practices Commission; transcript-like variants such as FEC/FPC/SPC are acceptable only if the context clearly refers to the California FPPC."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "subject": "Alleged unidentified election campaign mailers from the November 8, 2016 election.",
+          "policy_direction": [
+            "pursue or add the Council's voice to an FPPC complaint process",
+            "reinforce compliance with campaign-mailer identification and disclosure rules"
+          ],
+          "target": [
+            "unidentified campaign mailers",
+            "campaign-disclosure / identification compliance for Alameda election communications"
+          ],
+          "not_supported": [
+            "general campaign-finance reform as the primary framing",
+            "only generic condemnation of negative campaigning",
+            "city-run investigation or city enforcement action"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council discussed a referral and voted on a motion.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "No substantive subject is identified; procedural terms alone do not enter T."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council discussed unidentified election mailers.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the policy direction and target are not stated with enough specificity."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Council considered using an FPPC complaint to address allegedly unidentified November 8, 2016 campaign mailers and reinforce disclosure-compliance rules for Alameda election communications.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "Subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council considered launching a city-run investigation into all negative campaign ads in Alameda.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary is specific enough for Presence but contradicts the source by replacing the FPPC complaint / unidentified-mailer framing with a city-run investigation into all negative ads."
+          }
+        ]
+      },
+      "O": {
+        "slot_name": "Outcome / Position",
+        "slot_purpose": "Captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The Council's motion and vote were completed during the sampled segment.",
+            "Complaint filing, investigation, and follow-up were downstream after the vote."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the Alameda City Council approved, passed, carried, or adopted a motion tied to filing an FPPC complaint and follow-up.",
+                  "States that a motion concerning the Council complaint over unidentified election mailers carried or was approved.",
+                  "A recognizable disposition on the complaint/follow-up motion passes Presence even if the vote count or stage is factually wrong; such errors belong to Fact Check."
+                ],
+                "not_match": [
+                  "Only states that public commenters, councilmembers, or staff discussed or supported filing a complaint without any disposition by the body.",
+                  "Only describes FPPC investigation activity, legal explanation, or campaign concerns without a Council disposition.",
+                  "Mentions a complaint or investigation but no acted-on item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as the motion for the City Council to file a complaint and follow up on investigation results regarding the allegedly unidentified election mailers.",
+                  "Identifies the acted-on item as the Council FPPC complaint/follow-up motion over the November 8, 2016 unidentified mailers.",
+                  "A substantive description of the complaint/follow-up motion is sufficient; a formal agenda number is not required."
+                ],
+                "not_match": [
+                  "Only says 'the motion,' 'the item,' or 'the referral' without enough context to know what was acted on.",
+                  "Only identifies the FPPC investigation or the mailers without indicating the Council motion or acted-on complaint/follow-up item.",
+                  "Identifies a different acted-on item, such as a civility resolution or enforcement penalty."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was the Alameda City Council.",
+            "The procedural stage was an in-session Council motion and vote, not an FPPC finding, criminal finding, penalty, or final enforcement result.",
+            "The motion was approved / carried.",
+            "The acted-on item was the motion for the City Council to file a complaint and follow up on investigation results regarding the allegedly unidentified election mailers.",
+            "The vote result was 3-1 with one abstention, attached to the Council motion to file the complaint and follow up."
+          ],
+          "fact_check_notes": [
+            "O checks the disposition shell, not the full operative payload unless the payload is part of the acted-on item being identified.",
+            "A later FPPC investigation or follow-up path does not turn the Council vote into an FPPC determination.",
+            "Unanimity, rejection, completed FPPC penalties, or criminal findings are source-inconsistent if stated as the outcome of this segment."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "actor": "Alameda City Council",
+          "procedural_stage": "in-session Council motion and vote, not an FPPC finding",
+          "disposition_result": "motion approved / carried",
+          "acted_on_item": "motion for the City Council to file a complaint and follow up on investigation results regarding the allegedly unidentified election mailers",
+          "vote_result": {
+            "value": "3-1 with one abstention",
+            "attached_to": "Council motion to file the complaint and follow up"
+          },
+          "not_supported": [
+            "unanimous approval",
+            "rejection of the complaint",
+            "completed FPPC determination",
+            "criminal finding or penalty imposed during the meeting"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "Speakers criticized unidentified campaign mailers and discussed the FPPC process.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "There is discussion but no body disposition tied to an acted-on item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council approved the motion.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Alameda City Council approved a motion for the Council to file an FPPC complaint about the allegedly unidentified mailers and follow up on the investigation results; the motion carried 3-1 with one abstention.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The actor, disposition, acted-on item, stage, and vote result are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council unanimously approved penalties after the FPPC found a violation in the mailer case.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The disposition is specific, but the vote, procedural stage, and result contradict the event sheet."
+          }
+        ]
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "Captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or its form.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The mailers and prior complaint submissions occurred before the meeting.",
+            "FPPC jurisdiction and complaint procedures were existing context described during the meeting.",
+            "FPPC investigation and Council follow-up remained pending."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States that two recent campaign-season mailers allegedly lacked legally required identifying information.",
+                  "States that Mayor Spencer needed Council authorization because she said she could not submit the complaint as mayor without Council approval.",
+                  "States that complaints or sworn complaints had already been filed with the FPPC and at least one complainant had been told the agency would investigate.",
+                  "States FPPC jurisdiction or the City's lack of local enforcement jurisdiction as background shaping why the complaint route was discussed."
+                ],
+                "not_match": [
+                  "Only states the Council voted to file a complaint, without any prior condition or background.",
+                  "Only describes the operative payload of filing the complaint and following up.",
+                  "Only says there was negative campaigning or campaign ugliness without a prior event, condition, process, or authorization background tied to the current item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the prior unidentified mailers to why the Council considered filing or adding its voice to an FPPC complaint.",
+                  "Connects the mayoral authorization issue to why the item came before the Council.",
+                  "Connects pre-existing FPPC complaints / investigation context to the Council's decision whether to file a complaint and follow up.",
+                  "Does not need to say 'why now' explicitly if the background is visibly tied to the current item or form."
+                ],
+                "not_match": [
+                  "Mentions mailers, complaints, jurisdiction, or campaign negativity as free-standing facts with no visible connection to the current Council item or form.",
+                  "Connects the item only to ordinary negative campaigning, without the attribution/disclosure or mayoral-authorization background.",
+                  "Says the Council itself had enforcement jurisdiction or was starting the first and only complaint."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Two campaign-season mailers allegedly lacked legally required identifying information.",
+            "The issue concerned disclosure / attribution requirements, not only the negativity of campaign message content.",
+            "Mayor Spencer sought Council authorization because she said she could not submit the complaint as mayor without Council approval.",
+            "FPPC complaints had already been filed by others, and at least one complainant had been told the FPPC would investigate.",
+            "The alleged unidentified mailers, mayoral authorization issue, and existing FPPC process shaped whether the Council should add its voice / file a complaint and follow up."
+          ],
+          "fact_check_notes": [
+            "B does not require an explicit agenda-necessity statement; the background-to-current-item connection may be visible through the stated facts.",
+            "Do not use B to require all background facts. A partial but correct background statement can pass Fact Check.",
+            "Treat claims that the City had local enforcement jurisdiction, that the item was triggered only by ordinary negative campaigning, or that the Council was starting the first and only complaint as contradictions if they bear on trigger_condition or agenda_connection."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "trigger_condition": [
+            "two campaign-season mailers allegedly lacked legally required identifying information",
+            "the issue concerned disclosure / attribution requirements, not only negative message content",
+            "Mayor Spencer sought Council authorization because she said she could not submit the complaint as mayor without Council approval",
+            "FPPC complaints had already been filed by others, and at least one complainant had been told the FPPC would investigate"
+          ],
+          "agenda_connection": [
+            "the alleged unidentified mailers and mayoral authorization issue brought the referral before the Council",
+            "the existing FPPC process shaped the discussion into whether the Council should add its voice / file a complaint and follow up"
+          ],
+          "not_supported": [
+            "City local enforcement jurisdiction over the alleged violation",
+            "triggered only by ordinary negative campaigning",
+            "Council starting the first and only complaint"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council approved a complaint and follow-up motion.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is the action, not background that shaped the current item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "There had been unidentified mailers in the campaign.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A prior condition is stated, but its connection to the Council item or complaint form is not visible."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The referral came after two recent campaign mailers allegedly lacked required identifying information, and Mayor Spencer said Council approval was needed for her to add the Council's voice to the FPPC complaint process that was already underway.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The precipitating facts and their connection to the current item are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The item came forward because the City had exclusive local enforcement authority and no one had yet filed any FPPC complaint.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The background is specific, but it contradicts the event sheet on jurisdiction and pre-existing FPPC complaints."
+          }
+        ]
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "Captures the operative payload carried by the body's action: requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "completed_in_session",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "The Council approved the motion in session.",
+            "The payload required subsequent complaint filing and follow-up.",
+            "The FPPC investigation outcome remained pending."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that the approved motion/action required or authorized the City Council to file or submit an FPPC complaint.",
+                  "States that the action included following up to see the results of the FPPC investigation.",
+                  "States complaint-process mechanics, such as sending copies of the mailers to the FPPC, when tied to the Council complaint action.",
+                  "A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check."
+                ],
+                "not_match": [
+                  "Only states that the Council approved a motion, with no payload beyond the bare disposition.",
+                  "Only describes background mailers or concerns without linking any requirement, action term, or follow-up to the Council action.",
+                  "Only says the FPPC would investigate, with no Council action-carried payload."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Includes an identifiable number, date, duration, or scalar attached to the payload context, such as two mailers, November 8, 2016 as the election/mailers date, November 30 as the FPPC notification date, or the 14-day FPPC response window.",
+                  "The numeric/scalar value itself may be wrong and still satisfy Presence; correctness is handled in Fact Check."
+                ],
+                "not_match": [
+                  "No identifiable number, date, duration, amount, threshold, or scalar is attached to the payload context."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names the requirement or operative action as filing/submitting an FPPC complaint.",
+                  "Names the follow-up requirement to see the investigation results.",
+                  "Names the complaint-process step of providing or sending copies of the mailers to the FPPC."
+                ],
+                "not_match": [
+                  "Only says the action was approved or supported without naming what the action required or carried.",
+                  "Only states a general goal such as improving campaigns or stopping negativity without a named requirement."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies the payload scope as the allegedly unidentified November 8, 2016 / recent campaign-season election mailers.",
+                  "Identifies the payload scope as campaign-mailer identification / attribution compliance, rather than citywide campaign reform or all negative campaigning."
+                ],
+                "not_match": [
+                  "Gives no scope for the complaint or follow-up payload.",
+                  "States only a broad or different scope, such as all campaign finance activity, all negative mailers, or city enforcement generally."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the Council-approved motion regarding the allegedly unidentified November 8, 2016 election mailers.",
+            "The payload content was to file or submit a complaint to the FPPC.",
+            "The payload content also included following up to see the results of the FPPC investigation.",
+            "Providing relevant mailer material was part of the complaint process.",
+            "The payload scope was allegedly unidentified election mailers from the November 8, 2016 / recent campaign season and campaign-mailer identification / attribution compliance.",
+            "Two was the number of mailers Mayor Spencer identified as lacking required identifying information.",
+            "November 8, 2016 was the election date associated with the mailers in the agenda item.",
+            "November 30 was the date by which the FPPC had notified a complainant it would investigate, according to the City Attorney.",
+            "Fourteen days was the City Attorney's description of the FPPC response window for sworn complaints."
+          ],
+          "fact_check_notes": [
+            "The action did not create a city staff independent investigation, city enforcement/adjudication, broad campaign-finance reform ordinance, or generic civility resolution.",
+            "Omission of a number or date is not a Fact Check failure; only explicit contradictory scalar claims relevant to the listed fields fail.",
+            "The filing and follow-up were future-effect / pending downstream steps after the in-session authorization."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "payload_carrier": "Council-approved motion regarding the allegedly unidentified November 8, 2016 election mailers",
+          "payload_content": [
+            "file or submit a complaint to the FPPC",
+            "follow up to see the results of the FPPC investigation",
+            "provide the relevant mailer material as part of the complaint process"
+          ],
+          "payload_scope": [
+            "allegedly unidentified election mailers from the November 8, 2016 / recent campaign season",
+            "campaign-mailer identification / attribution compliance"
+          ],
+          "payload_scalar_or_baseline": [
+            {
+              "value": "two",
+              "meaning": "number of mailers Mayor Spencer identified as lacking required identifying information"
+            },
+            {
+              "value": "November 8, 2016",
+              "meaning": "election date associated with the mailers in the agenda item"
+            },
+            {
+              "value": "November 30",
+              "meaning": "date by which FPPC had notified a complainant it would investigate, according to the City Attorney"
+            },
+            {
+              "value": "14 days",
+              "meaning": "City Attorney's description of the FPPC response window for sworn complaints"
+            }
+          ],
+          "not_payload": [
+            "city staff independent investigation",
+            "city enforcement or adjudication of the alleged violation",
+            "broad campaign-finance reform ordinance",
+            "generic civility resolution"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The motion carried 3-1 with one abstention.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states the disposition shell only and no operative payload."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council action included doing something about the complaint later.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is vaguely attached to the action, but no number, named requirement, or scope boundary is identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The approved motion required the City Council to file an FPPC complaint about the two allegedly unidentified November 8, 2016 election mailers and follow up on the FPPC investigation results.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The carrier, payload content, scope, and scalar role are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The approved motion required city staff to independently investigate four mailers and impose local penalties.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The payload is specific enough for Presence but contradicts the event sheet on content, scope, scalar, and city enforcement."
+          }
+        ]
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "slot_purpose": "Captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff; local anchoring is not required for Presence.",
+        "temporal_status": {
+          "primary": "hypothetical_or_risk",
+          "secondary": [
+            "already_occurred",
+            "recurring_concern"
+          ],
+          "notes": [
+            "The alleged unidentified mailers had already been sent.",
+            "The concern was about effects on disclosure, campaign fairness, and future campaign norms.",
+            "Negative and uncivil campaign practices were discussed as a broader recurring concern."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concern, harm, risk, obstacle, or tradeoff involving unidentified mailers hiding who is behind campaign communications.",
+                  "States that lack of identification can circumvent campaign-finance disclosure or reporting requirements.",
+                  "States harm to fair elections, civic trust, voters, candidates, or local campaign norms from the mailers or campaign conduct.",
+                  "May include concerns about negative or personal campaigning when stated as problem-side concern content."
+                ],
+                "not_match": [
+                  "Only describes the Council's complaint, vote, or FPPC process without problem-side concern language.",
+                  "Only states a solution-side action, such as filing a complaint or sending copies, without saying what harm, concern, risk, or obstacle is at issue.",
+                  "Only mentions campaign rules or negative campaigning as neutral topics without concern/harm/risk language."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Specifies that the concern is source concealment, lack of attribution, or hidden sponsorship of campaign communications.",
+                  "Specifies circumvention of campaign-finance reporting/disclosure purposes.",
+                  "Specifies harm to election fairness, transparency, civic trust, voters, candidates, or local campaign norms.",
+                  "A named place or group is not required for Presence, though Alameda context may be used when stated."
+                ],
+                "not_match": [
+                  "Only says concerns were raised without saying what the concern was about.",
+                  "Only says the campaign was negative, ugly, or bad without identifying a concrete concern such as source concealment, disclosure circumvention, fairness, or civic harm.",
+                  "Only names a mailer or complaint with no specific concern content."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Unidentified mailers may hide the source of campaign communications.",
+            "Lack of identification can circumvent campaign-finance reporting and disclosure purposes.",
+            "Such practices were described as harmful to fair elections, civic trust, and local campaign norms.",
+            "The local anchor, when stated, is the Alameda local election / Alameda City Council campaign context and the specific November 8, 2016 / recent campaign-season mailers."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if a summary explicitly states a place, group, bounded area, or local anchor, check it.",
+            "Do not require the summary to reproduce every public comment about false, misleading, dirty, harmful, or insulting mailers.",
+            "Treat claims that the concern was only ordinary criticism or negative tone, only federal campaign law, or already-proven violations / imposed penalties as contradictions if stated as the concern context."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "obstacle_content": [
+            "unidentified mailers may hide the source of campaign communications",
+            "lack of identification can circumvent campaign-finance reporting and disclosure purposes",
+            "such practices were described as harmful to fair elections, civic trust, and local campaign norms"
+          ],
+          "local_anchor": [
+            "Alameda local election / Alameda City Council campaign context",
+            "specific mailers from the November 8, 2016 / recent campaign season"
+          ],
+          "not_supported": [
+            "the concern was only ordinary criticism or negative tone",
+            "the concern was only federal campaign law",
+            "the City had already proven the violation or imposed penalties"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council voted to file a complaint with the FPPC.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states an action, not a concrete concern or harm."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Residents had concerns about the campaign.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The concrete concern was that unidentified campaign mailers hid their source and could circumvent disclosure rules, undermining fair elections and civic trust.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concern content is specific and source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The concern was that federally regulated television ads had already been proven illegal and fined by the City.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The concern is concrete enough for Presence, but it contradicts the source on medium, law/jurisdiction, temporal status, and penalties."
+          }
+        ]
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "slot_purpose": "Captures a recurring problem-side concern theme in the discussion; the summary need not state recurrence explicitly but must name the concern theme in problem-side language.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "already_occurred",
+            "hypothetical_or_risk"
+          ],
+          "notes": [
+            "Multiple speakers and councilmembers returned to the concern.",
+            "The theme includes both the specific undisclosed-mailer issue and the broader local campaign climate."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names a problem-side theme of hidden, undisclosed, unattributed, or unidentifiable campaign communications.",
+                  "Names a problem-side theme of negative or personal campaign tactics damaging election transparency, fairness, or civic norms.",
+                  "Uses concern/problem language such as undermining transparency, damaging civic norms, losing confidence, dirty politics, lawless activity, ugly environment, or similar framing."
+                ],
+                "not_match": [
+                  "Only states the Council filed an FPPC complaint or approved a motion, without problem-side concern language.",
+                  "Only names campaign reform, civility, or complaint process as neutral solution-side topics.",
+                  "Only states one speaker supported the complaint without synthesizing a concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Specifies source concealment or lack of sender identification as part of the concern theme.",
+                  "Specifies possible circumvention of campaign-finance disclosure requirements.",
+                  "Specifies negative or personal campaign attacks becoming more common in Alameda politics.",
+                  "Specifies damage to election transparency, fairness, civic norms, or public confidence."
+                ],
+                "not_match": [
+                  "Only says there was a recurring concern or public concern without identifying what the concern was about.",
+                  "Only says campaigns were negative without identifying the hidden-sponsorship/disclosure or civic-norm content.",
+                  "Only gives downstream process details such as investigation or follow-up, not the concern theme."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The concern theme was hidden or unattributed campaign communications and negative campaign tactics undermining election transparency and civic norms.",
+            "Concern content included source concealment / lack of sender identification.",
+            "Concern content included possible circumvention of campaign-finance disclosure requirements.",
+            "Concern content included negative or personal campaign attacks becoming more common in Alameda politics.",
+            "Concern content included a desire for the Council to send a public signal against the conduct."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state recurrence explicitly if it names the problem-side concern theme.",
+            "Do not require every downstream risk, speaker quote, or evidentiary detail.",
+            "Treat claims that the shared concern was only one candidate's personal grievance, only national politics, or fully agreed by all councilmembers as contradictions if explicitly stated."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "concern_theme": "hidden or unattributed campaign communications and negative campaign tactics undermining election transparency and civic norms",
+          "concern_content": [
+            "source concealment / lack of sender identification",
+            "possible circumvention of campaign-finance disclosure requirements",
+            "negative or personal campaign attacks becoming more common in Alameda politics",
+            "desire for the Council to send a public signal against the conduct"
+          ],
+          "not_supported": [
+            "shared concern only about one candidate's personal grievance",
+            "shared concern only about national politics",
+            "all councilmembers fully agreed on the same framing"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The City Attorney explained that the FPPC could investigate complaints.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is procedural explanation, not a problem-side concern theme."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "There was a broader concern about local campaigns.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the specific theme/content is not identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The recurring concern was that hidden or unattributed campaign mailers and increasingly negative tactics were damaging election transparency, fairness, and Alameda's civic norms.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The problem-side theme and its specific content are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The shared concern was solely a national-politics dispute that every councilmember fully endorsed as unrelated to local disclosure rules.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The concern theme is specific enough for Presence, but the content contradicts the event sheet."
+          }
+        ]
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "Captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path.",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "secondary": [
+            "completed_in_session"
+          ],
+          "notes": [
+            "The Council vote was completed in session.",
+            "FPPC investigation, complaint handling, any sanctions, and Council follow-up remained future/pending."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly states that FPPC investigation, complaint resolution, enforcement consequences, or Council follow-up remained pending, future, unresolved, still to occur, or to be reported back.",
+                  "States that the Council would follow up to see investigation results after the vote.",
+                  "States that possible FPPC fines or DA referral depended on what the investigation found, rather than having already occurred."
+                ],
+                "not_match": [
+                  "Only says the Council approved the motion or filed a complaint, with no pending/future/unresolved marker.",
+                  "Only describes a completed Council vote or general FPPC authority.",
+                  "States a future-oriented action as a bare directive without indicating that an item or process remained pending."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies the pending item as the FPPC complaint / investigation concerning the allegedly unidentified election mailers.",
+                  "Identifies the pending item as Council follow-up to learn the status or results of that FPPC investigation.",
+                  "May identify possible enforcement consequences as pending only if tied to the FPPC investigation outcome."
+                ],
+                "not_match": [
+                  "Only says something remained pending or would be followed up without identifying what item or process was unfinished.",
+                  "Identifies a different pending item, such as a new city investigation, a civility resolution, or unrelated campaign reform."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "Shows the handling path through the FPPC process.",
+                  "Shows potential Council or assigned-councilmember follow-up to obtain investigation status/results or report out later.",
+                  "Shows possible FPPC fines or district attorney referral as conditional downstream paths if violations were found."
+                ],
+                "not_match": [
+                  "Only says the matter was pending, with no visible process, body, custody, review, report-back, or follow-up path.",
+                  "Shows a city-run adjudication, city-imposed penalty path, or completed FPPC resolution instead of the FPPC/Council follow-up path.",
+                  "Mentions a future hearing or process for a different item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "FPPC investigation / complaint resolution remained pending after the Council vote.",
+            "Council follow-up to learn investigation results remained pending.",
+            "The pending item was the FPPC complaint / investigation concerning the allegedly unidentified election mailers.",
+            "The handling path was through the FPPC process, with potential follow-up by Council or an assigned councilmember to obtain investigation status/results.",
+            "Possible FPPC fines or district attorney referral were conditional on what the investigation found."
+          ],
+          "fact_check_notes": [
+            "The Council vote itself was completed in session; the unresolved tail is the later FPPC and follow-up process.",
+            "Do not treat the existence of a completed vote as contradicting U unless the summary says the FPPC/complaint matter was fully resolved.",
+            "Treat claims that the FPPC had already completed the investigation during the meeting, that Council would determine guilt/impose penalties/conduct the investigation, or that the matter was fully resolved by the vote as contradictions."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "pending_status": [
+            "FPPC investigation / complaint resolution remained pending after the Council vote",
+            "Council follow-up to learn investigation results remained pending"
+          ],
+          "pending_item": "FPPC complaint / investigation concerning the allegedly unidentified election mailers",
+          "handling_path": [
+            "complaint to be handled through the FPPC process",
+            "potential follow-up by Council or an assigned councilmember to obtain investigation status/results",
+            "possible FPPC fines or DA referral only if violations were found"
+          ],
+          "not_supported": [
+            "FPPC had already completed the investigation during the meeting",
+            "Council itself would determine guilt, impose penalties, or conduct the investigation",
+            "the matter was fully resolved by the Council vote"
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The motion carried 3-1 with one abstention.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states the completed vote, not unfinishedness or a future return path."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Some follow-up remained pending after the vote.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is marked, but the pending item and handling path are not identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "After the Council vote, the FPPC complaint and investigation over the allegedly unidentified mailers remained pending, and the Council would follow up through the FPPC process to learn the investigation results.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The pending status, item, and handling path are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "After the vote, the matter was fully resolved because the Council would conduct the investigation itself and impose penalties immediately.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The handling path is specific enough for Presence but contradicts the pending FPPC process and unresolved status."
+          }
+        ]
+      }
+    }
+  }

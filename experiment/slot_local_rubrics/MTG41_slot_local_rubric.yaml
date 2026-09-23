@@ -1,0 +1,659 @@
+segment_id: "MTG41"
+segment_dir: "41_SeattleCityCouncil_11212016"
+meeting_id: "SeattleCityCouncil_11212016"
+uid: "SeattleCityCouncil_11212016_CF 314362"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "41",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_name": "Topic/Framing",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "subject_identified": {
+              "match": [
+                "Names Seattle's 2017-2018 city budget package as the substantive subject.",
+                "Names the budget package together with the capital improvement program, position modifications, or 2018 budget endorsement.",
+                "Identifies the discussion as city budget resources or budget investments, not merely as an agenda vote."
+              ],
+              "not_match": [
+                "Mentions only a bill number, agenda item, filing action, vote, or resolution without naming the substantive budget subject.",
+                "Frames the segment only as a parks proceeding or a later parks district meeting.",
+                "Frames the segment only as committee-stage recommendations without identifying the full Council budget package discussion."
+              ]
+            }
+          },
+          "quality_gate": {
+            "policy_direction": {
+              "match": [
+                "States that the policy move was to allocate, fund, adopt, authorize, or endorse city budget resources, capital investments, or position changes.",
+                "Shows that the budget directed resources toward multiple priorities such as early learning, homelessness and housing, public safety, immigrant and refugee support, survivors' services, district infrastructure, transportation safety, labor standards, or equitable development."
+              ],
+              "not_match": [
+                "States only that the Council approved, discussed, or voted on the budget without describing any substantive allocation, funding, authorization, or endorsement direction.",
+                "States a policy direction limited to one unrelated service area when the segment concerns the broader city budget package."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies the target as City of Seattle budget operations, capital investments, departments, programs, positions, or affected communities.",
+                "Identifies citywide municipal priorities or programs affected by the adopted budget package."
+              ],
+              "not_match": [
+                "Gives no target for the budget action.",
+                "Treats the target as only the parks district meeting that began after this full Council segment adjourned.",
+                "Treats the target as only a committee recommendation rather than the full Council budget package and affected city programs."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject is Seattle's 2017-2018 budget package, including the capital improvement program, position modifications, and the 2018 budget endorsement.",
+            "The policy direction is to allocate, fund, and authorize city budget resources and position changes across multiple municipal priorities.",
+            "The target is City of Seattle budget operations, capital investments, departments, programs, and communities affected by the adopted budget."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to list every program or priority in the event sheet.",
+            "A summary conflicts with this slot if it recasts the segment as only a parks proceeding or only a committee-stage recommendation."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment is framed around Seattle's 2017-2018 city budget package, including the capital improvement program and position modifications, and the allocation of city resources across many budget priorities.",
+          "temporal_status": "completed_in_session, with currently existing concerns and future budget effects.",
+          "source_context_for_fact_check": {
+            "subject": "Seattle's 2017-2018 budget package, related capital improvement program, position modifications, and 2018 budget endorsement.",
+            "policy_direction": "Allocate, fund, and authorize city budget resources and position changes across multiple municipal priorities.",
+            "target": "City of Seattle budget operations, capital investments, departments, programs, and affected communities."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The Council handled several agenda items and then moved to another meeting.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No substantive budget subject is identified."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "The Council discussed Seattle's 2017-2018 budget package.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The budget subject is present, but the summary does not state the policy direction or target."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "The Council discussed Seattle's 2017-2018 budget package as a vehicle for allocating and authorizing city resources and position changes across city programs and affected communities.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, policy direction, and target are all present and source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The segment was about a parks district budget that redirected resources only to parks maintenance after the full Council budget vote was deferred.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a substantive subject, direction, and target, but they contradict the event sheet."
+          }
+        ]
+      },
+      "O": {
+        "slot_name": "Outcome/Position",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that the Council placed Clerk File 314362 on file.",
+                "States that the Council passed Council Bill 118849, the budget bill.",
+                "States that the Council adopted Resolution 31719.",
+                "States another recognizable disposition, such as passed, adopted, placed on file, or motion carried, tied to a budget-related item from this segment."
+              ],
+              "not_match": [
+                "Describes only councilmember comments, support, opposition, priorities, or debate without any disposition on an acted-on item.",
+                "Mentions the budget or resolution without saying what the Council did to it."
+              ]
+            }
+          },
+          "quality_gate": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies Clerk File 314362, Council Bill 118849, Resolution 31719, or a substantively distinguishing description of one of those items.",
+                "Identifies the budget bill, the clerk file containing City Council changes to the proposed budget/CIP, or the resolution endorsing the 2018 budget and position modifications."
+              ],
+              "not_match": [
+                "Says only that an item, measure, bill, or resolution passed without enough detail to distinguish which acted-on item is meant.",
+                "Uses a generic phrase such as 'the proposal' when the sampled segment contains multiple acted-on budget documents."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was the Seattle City Council in the full Council segment.",
+            "Clerk File 314362 was placed on file by voice vote; no numeric count is stated.",
+            "Council Bill 118849 passed as the budget bill at full Council by an 8-1 roll-call vote, with Councilmember Sawant opposed.",
+            "Resolution 31719 was adopted by voice vote; at least one audible no vote appears in the transcript and no numeric count is stated.",
+            "Earlier committee recommendations are source context, but the in-segment outcomes are full Council actions."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to mention all three dispositions to pass Fact Check; omissions are allowed.",
+            "If a vote count is stated, check both the value and the disposition to which the value is attached."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Council placed Clerk File 314362 on file, passed Council Bill 118849 adopting the budget as amended, and adopted Resolution 31719 endorsing the 2018 budget and position modifications.",
+          "temporal_status": "completed_in_session.",
+          "source_context_for_fact_check": {
+            "actor": "Seattle City Council / full Council segment.",
+            "procedural_stage": "Full Council disposition for Clerk File 314362, full Council passage of Council Bill 118849, and full Council adoption of Resolution 31719.",
+            "vote_result": "Council Bill 118849 passed 8-1 with Sawant opposed; the clerk file and resolution were voice-vote dispositions with no numeric count stated."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "Councilmembers described their budget priorities and concerns.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No disposition on an acted-on item is stated."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "The Council passed the measure.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is too generic."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "The full Council passed Council Bill 118849, the budget bill, by an 8-1 vote with Councilmember Sawant voting no.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition, acted-on item, procedural stage, and vote result are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The full Council passed Council Bill 118849 unanimously, 9-0.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The disposition and item are specific, but the stated vote result contradicts the 8-1 vote with Sawant opposed."
+          }
+        ]
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "precipitating_context_visible": {
+              "match": [
+                "States that a months-long budget process, prior committee recommendations, the Mayor's proposed budget, council amendments, or public advocacy preceded the final votes.",
+                "States that ongoing problems such as homelessness, housing affordability, public safety, education readiness gaps, district infrastructure needs, or equity concerns provided context for the budget choices.",
+                "States that community advocacy, the People's Budget movement, or the Coalition to Build 1000 Homes shaped the $29 million housing bond discussion."
+              ],
+              "not_match": [
+                "Only says the Council passed or adopted the budget documents, without any prior process, condition, problem, advocacy, or other background.",
+                "Only lists budget payloads without stating any background context that shaped the item or discussion."
+              ]
+            }
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Connects the prior process, recommendation, mayoral proposal, amendment, advocacy, or ongoing city problem to the budget package, budget priorities, councilmember comments, or final full Council votes.",
+                "Connects district or program needs to budget additions or budget discussion themes."
+              ],
+              "not_match": [
+                "Mentions a social problem or advocacy movement as a free-standing fact without connecting it to the budget package, budget choices, or discussion frame.",
+                "Describes background for a different later meeting rather than the full Council budget package segment."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "A prior budget process and committee recommendation stage preceded the full Council votes.",
+            "Councilmembers cited homelessness, housing affordability, education readiness, public safety, district needs, and equity concerns as context for budget choices.",
+            "Community advocacy and movements were cited as background for the $29 million housing bond.",
+            "The background shaped the budget package and councilmember comments but did not replace the in-session full Council votes."
+          ],
+          "fact_check_notes": [
+            "An explicit 'why now' statement is not required for Presence.",
+            "Do not require a summary to include every background source or every problem named in the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The budget votes were shaped by a months-long process, prior committee recommendations, the Mayor's proposed budget, council amendments, public advocacy, and ongoing city problems.",
+          "temporal_status": "already_occurred background, with currently existing and recurring concerns.",
+          "source_context_for_fact_check": {
+            "trigger_condition": "Prior budget process and committee recommendations; mayoral proposal; council amendments; community advocacy; ongoing housing, homelessness, education, public safety, district, and equity concerns.",
+            "agenda_connection": "These processes and needs shaped the budget package, councilmember priorities, and comments before the full Council votes."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The Council adopted the budget and discussed several investments.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No prior context, problem, process, advocacy, or other background is stated."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "There had been public advocacy and city problems before the vote.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Background is visible, but it is not connected to the budget package, priorities, or form of discussion."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "The final budget votes followed a months-long budget process and councilmember comments tied the package to prior recommendations, community advocacy, and ongoing housing and homelessness concerns.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The background is stated and visibly connected to the current budget votes and discussion frame."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The budget came forward because voters had already approved the $29 million housing bond and required the Council to ratify it.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a connected background explanation, but it contradicts the event sheet's advocacy/process background."
+          }
+        ]
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "payload_attached_to_action": {
+              "match": [
+                "States a funding amount, program investment, staffing change, bond proposal, grant, study, report, or other budget payload as part of the adopted budget package, Council Bill 118849, Resolution 31719, or related budget amendments.",
+                "Links a named program or funding item to the budget action or budget package, including by adjacent-sentence anaphora such as 'the budget included...'"
+              ],
+              "not_match": [
+                "Only states that the Council passed or adopted the budget without saying what the budget carried or included.",
+                "Mentions homelessness, housing, public safety, or education as general discussion topics without attaching any payload to the budget action or acted-on item.",
+                "States background needs or concerns without stating any budget-carried funding, program, requirement, or scope."
+              ]
+            }
+          },
+          "quality_gate": {
+            "number": {
+              "match": [
+                "Includes an attached numeric amount, duration, unit count, or other measured value, such as $500,000, $1 million, $400,000 over two years, 1,500 units, $300,000 over two years, $1.134 million over two years, $29 million, $1.5 million, or $6.5 million."
+              ],
+              "not_match": [
+                "Mentions only generic investments, support, or programs without any identifiable numeric quantity."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "Names an attached program, instrument, staffing change, study, report, bond proposal, or other requirement-like payload, such as Parent Child Home, Home and Hope, citizenship workshops, mobile advocates, a legal navigator, the housing bond proposal, 13th Year Promise Scholarship, equitable development implementation, community service officers, pre-filing diversion, paid family leave coordinator, public safety coordinator, or a statement of legislative intent."
+              ],
+              "not_match": [
+                "Mentions only a general policy area such as housing or public safety without identifying a payload, program, instrument, staffing item, study, or requirement-like component."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "Identifies a scope boundary for a budget payload, such as Seattle children and families, low-income residents, unsheltered people, immigrant and refugee communities, LGBTQ seniors, domestic and sexual violence survivors, South Park, Chinatown International District, Northgate, Lake City, or other named neighborhoods or affected groups."
+              ],
+              "not_match": [
+                "States a payload without any identifiable affected program, population, geography, or category."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier is Council Bill 118849 / the adopted budget package, Resolution 31719 / the 2018 budget endorsement, or budget amendments and program allocations discussed by councilmembers.",
+            "Parent Child Home Program expansion is tied to $500,000 in the Mayor's budget and additional outside funding including $1 million from King County Best Starts for Kids.",
+            "Home and Hope receives $400,000 over two years to help transform vacant or underutilized tax-exempt public or nonprofit sites into affordable housing and mixed-use public-benefit projects.",
+            "Citizenship workshops receive $300,000 over two years through increased funding for the Office of Immigrant and Refugee Affairs.",
+            "Survivors of domestic and sexual violence receive $1.134 million over two years for mobile advocates and a legal navigator for the King County Courthouse.",
+            "The budget includes a $29 million long-term housing bond proposal for affordable housing; exact projects were not yet settled in the discussion.",
+            "Harrell describes $1.5 million for the 13th Year Promise Scholarship program and $6.5 million for equitable development implementation.",
+            "Payloads apply across city programs and communities, including children and families, low-income residents, unsheltered people, immigrant and refugee communities, LGBTQ seniors, domestic and sexual violence survivors, South Park, Chinatown International District, Northgate, Lake City, and other named districts or neighborhoods."
+          ],
+          "fact_check_notes": [
+            "The summary may mention any representative payload; it does not need to reproduce all payloads or all numbers.",
+            "If a numeric value is stated, check the value and what it is attached to. A correct number attached to the wrong program is a Fact Check error.",
+            "The budget payloads are future-facing authorizations, appropriations, studies, staffing, grants, services, or implementation steps, even though the Council action occurred in-session."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The budget package carried funding and program payloads including early-childhood programs, homelessness and shelter investments, a $29 million housing bond, public safety and legal services, immigrant and refugee citizenship assistance, district infrastructure, equitable development, education programs, and staffing or position changes.",
+          "temporal_status": "future_effect payloads attached to a completed in-session action.",
+          "source_context_for_fact_check": {
+            "payload_carrier": "Council Bill 118849 / adopted budget package; Resolution 31719 / 2018 budget endorsement; budget amendments and program allocations discussed by councilmembers.",
+            "payload_content": "Multiple budget-funded programs, bonds, staffing changes, studies, and implementation steps.",
+            "payload_scope": "City programs and specific communities named in the discussion.",
+            "payload_scalar_or_baseline": "Check numeric values and their role binding, such as $29 million for the housing bond proposal or $1.5 million for 13th Year Promise Scholarship."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The Council passed the budget after a lengthy discussion.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No budget-carried payload is stated."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "The budget included several investments in city priorities.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the budget, but there is no numeric quantity, named requirement, or scope boundary."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "The budget package included a $29 million long-term housing bond proposal for affordable housing, although the exact project or projects were not yet settled.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the budget package and includes a correct number and scope."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The budget attached the $29 million amount to the 13th Year Promise Scholarship program.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary has an action-attached numeric payload, but it attaches the $29 million value to the wrong program."
+          }
+        ]
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "concrete_concern_language": {
+              "match": [
+                "States a concrete problem-side condition such as homelessness, unsheltered living, mental illness and drug addiction, housing affordability, low-income children not being ready for kindergarten, survivors of domestic and sexual violence needing help, neighborhood public safety concerns, trailer park residents needing relocation assistance, or concern that the budget did not go far enough for working people.",
+                "Uses concern-side language such as crisis, gap, harm, obstacle, difficulty, need, burden, shortage, risk, failure, or inability tied to a city problem named in the event sheet."
+              ],
+              "not_match": [
+                "Mentions a solution-side investment, funding item, or program without stating the underlying concern, harm, obstacle, risk, or problem.",
+                "Says only that concerns were raised without saying what the concern was about."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_concern_content": {
+              "match": [
+                "Identifies what the concern is about, such as unsheltered people needing housing, children not being kindergarten-ready, survivors navigating burdensome legal and social-service systems, residents needing relocation assistance, public safety needs, housing affordability, or the budget being insufficient for working people.",
+                "Specific concern content may include but does not require a named place, named group, or bounded area."
+              ],
+              "not_match": [
+                "Uses only generic concern language such as 'there were issues' or 'people were worried' without identifying the concern content.",
+                "Names only a place or group without stating the problem, harm, obstacle, risk, or tradeoff affecting it."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Homelessness and unsheltered living are presented as immediate problems requiring urgent action.",
+            "Housing affordability is presented by multiple speakers as a major crisis or need.",
+            "Low-income kindergarten readiness is presented as a child-development and equity concern.",
+            "Domestic and sexual violence survivors are described as needing legal and social-service support.",
+            "South Park and Chinatown International District are named in connection with public safety improvements.",
+            "University Trailer Park residents are named in connection with relocation assistance.",
+            "Relevant local anchors include Seattle, South Park, Chinatown International District, University Trailer Park, Northgate, Lake City, and Aurora / Aurora Commons."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if a summary explicitly gives a local anchor, check it against the event sheet.",
+            "Most concerns are existing conditions at the time of the budget vote; some are future or implementation risks."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment contains concrete concerns including homelessness, unsheltered living, mental illness and drug addiction, housing affordability, low-income kindergarten readiness gaps, survivor support needs, public safety concerns, trailer park relocation needs, and criticism that the budget did not go far enough for working people.",
+          "temporal_status": "currently_existing concerns, with recurring concern and hypothetical/risk elements.",
+          "source_context_for_fact_check": {
+            "obstacle_content": "Ongoing housing, homelessness, child-development, survivor-support, public-safety, relocation, and budget-sufficiency concerns.",
+            "local_anchor": "Seattle, South Park, Chinatown International District, University Trailer Park, Northgate, Lake City, Aurora / Aurora Commons."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The budget funded housing, education, public safety, and services.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary lists solution-side funding areas but does not assert a concern or problem-side condition."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Councilmembers raised several concerns during the budget discussion.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language appears, but the concern content is generic."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "Councilmembers raised concrete concerns about homelessness and people living unsheltered, including the need to get families and individuals inside housing more quickly.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concern language and specific concern content are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Councilmembers' concrete concern was that domestic and sexual violence survivors were receiving too much legal help and should lose access to services.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific concern, but it reverses the source-supported concern that survivors needed legal and social-service support."
+          }
+        ]
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "problem_side_concern": {
+              "match": [
+                "Names the recurring problem-side theme that the budget needed to respond to vulnerable or under-resourced communities, especially through homelessness and affordable housing responses.",
+                "States a recurring concern about homelessness, housing affordability, shelter capacity, affordable housing production, displacement, low-income residents, unsheltered people, or underserved communities."
+              ],
+              "not_match": [
+                "Mentions housing, homelessness, or vulnerable communities only as funded programs or solution-side investments without problem-side concern language.",
+                "States only that many topics were discussed or that councilmembers had different priorities, without naming a recurring concern theme."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_content": {
+              "match": [
+                "Specifies the concern content, such as faster housing responses, shelter capacity, affordable housing production, resources for homeless or low-income residents, displacement, public land for housing, housing-related legal services, or the $29 million housing bond as a crisis-driven response.",
+                "Identifies the affected groups or issue objects, such as unsheltered people, low-income residents, displaced residents, or otherwise underserved communities."
+              ],
+              "not_match": [
+                "Uses only generic wording such as 'shared concerns' or 'community issues' without identifiable concern content.",
+                "Lists budget priorities without stating the underlying recurring problem-side theme."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme is that Seattle's budget should respond to homelessness, housing affordability, and the needs of vulnerable or under-resourced residents.",
+            "Speakers discussed immediate shelter and service needs for unsheltered people, longer-term affordable housing production, housing-related legal services, public land for housing, and a $29 million housing bond.",
+            "Sawant supported some housing victories but opposed the overall budget as insufficient and too business-as-usual.",
+            "Other councilmembers described the adopted budget as a strong or unprecedented investment package."
+          ],
+          "fact_check_notes": [
+            "The summary need not explicitly say the concern recurred, but it must name the source-supported concern theme in problem-side language.",
+            "Do not require the summary to cover every councilmember or every housing-related detail."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme was that the budget needed to respond to vulnerable or under-resourced communities, especially through homelessness and affordable housing investments.",
+          "temporal_status": "recurring concern, with currently existing concerns and future budget-response effects.",
+          "source_context_for_fact_check": {
+            "concern_theme": "Recurring concern that Seattle's budget should respond to homelessness, housing affordability, and the needs of vulnerable or under-resourced residents.",
+            "concern_content": "Shelter and services for unsheltered people, affordable housing production, housing-related legal services, public land for housing, and the $29 million housing bond."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The budget included a variety of investments in housing, public safety, education, and services.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The wording is solution-side and does not name a recurring problem-side concern theme."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Councilmembers shared concerns about vulnerable communities.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A problem-side theme is visible, but the concern content is too generic."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "A recurring concern was that the budget needed to address homelessness and housing affordability for vulnerable and under-resourced residents through faster shelter, housing, and service responses.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The recurring problem-side theme and specific concern content are source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "The recurring shared concern was opposition to parks spending in the parks district meeting that followed the budget vote.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary names a specific concern theme, but it is not the source-supported recurring concern for this segment."
+          }
+        ]
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "pendingness_marker": {
+              "match": [
+                "States that implementation, rollout, project selection, or other budget-funded work remained open, pending, unresolved, not yet settled, or still to be handled after the votes.",
+                "States that the $29 million housing bond did not yet have a settled project or set of projects.",
+                "States that the budget was the beginning of implementation rather than the end."
+              ],
+              "not_match": [
+                "Only states that the Council passed or adopted the budget documents, with no unfinished or pending element.",
+                "Only describes future effects of budget funding without marking any item, implementation step, rollout, or project selection as still open or pending."
+              ]
+            }
+          },
+          "quality_gate": {
+            "pending_item_identifiable": {
+              "match": [
+                "Identifies the pending item as the specific project or projects for the $29 million housing bond.",
+                "Identifies rollout or implementation of budget-funded homelessness, housing, public-safety, study, report, or program items as remaining future work."
+              ],
+              "not_match": [
+                "Says only that more work remained without identifying what item, workstream, or issue was unfinished.",
+                "Treats the already-passed budget bill itself as pending without a separate implementation or project-selection item."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "Names a future handling path involving the Office of Housing, Mayor's Office, City Budget Office, councilmembers, city departments, county or state coordination, supplemental budgets, Council legislation, reports, studies, or next-year implementation opportunities.",
+                "Connects future homelessness-response implementation to shelters, sanctioned encampments, the Navigation Center, lockers, or coordinated programs."
+              ],
+              "not_match": [
+                "Says an item remained unresolved but gives no future process, body, office, department, report, study, legislation, or implementation path.",
+                "Mentions an unrelated future hearing or later meeting for a different item."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Full Council passage/adoption of the budget instruments was completed in-session.",
+            "Implementation and some project-selection details remained open after the votes.",
+            "The specific project or projects for the $29 million housing bond remained unsettled.",
+            "Rollout and implementation of budget-funded homelessness, housing, public-safety, study, report, and program items remained future-facing.",
+            "Herbold identified future work with the Office of Housing, the Mayor's Office, the City Budget Office, and councilmembers.",
+            "Bagshaw identified city departments, the Mayor's Office, county and state coordination, and specific homelessness-response implementation.",
+            "Harrell identified next-year opportunities, supplemental budgets, Council legislation, and implementation follow-through."
+          ],
+          "fact_check_notes": [
+            "The pending item is implementation and project selection, not final passage of Council Bill 118849.",
+            "A summary conflicts with this slot if it says the budget bill itself remained pending for future full Council passage."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Although the budget votes were completed, implementation paths remained open, including project selection for the $29 million housing bond and rollout of budget-funded homelessness, housing, public-safety, report, study, and program items.",
+          "temporal_status": "pending_future_handling, with future effects after completed in-session budget actions.",
+          "source_context_for_fact_check": {
+            "pending_status": "Budget passage/adoption completed; implementation and some project-selection details remained open.",
+            "pending_item": "Specific projects for the $29 million housing bond and rollout/implementation of budget-funded programs.",
+            "handling_path": "Office of Housing, Mayor's Office, City Budget Office, councilmembers, city departments, county/state coordination, supplemental budgets, Council legislation, reports, studies, and next-year implementation opportunities."
+          }
+        },
+        "score_examples": [
+          {
+            "kind": "topic_fail",
+            "summary": "The Council passed the budget bill and adopted the budget resolution.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "Only completed actions are stated; no pending or unresolved tail appears."
+          },
+          {
+            "kind": "topic_pass_quality_fail",
+            "summary": "Several parts of the budget still needed more work.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is present, but the pending item and handling path are not identifiable."
+          },
+          {
+            "kind": "full_correct",
+            "summary": "After the budget votes, the specific project or projects for the $29 million housing bond remained unsettled, with future rollout work expected among the Office of Housing, the Mayor's Office, the City Budget Office, and councilmembers.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The pending status, pending item, and handling path are all source-consistent."
+          },
+          {
+            "kind": "wrong_but_specific_fact_check_failure",
+            "summary": "Council Bill 118849 itself remained pending for a later final full Council passage vote.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a pending item and future path, but it contradicts the completed full Council passage of Council Bill 118849."
+          }
+        ]
+      }
+    }
+  }

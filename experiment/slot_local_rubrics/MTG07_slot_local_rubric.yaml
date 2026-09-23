@@ -1,0 +1,1013 @@
+segment_id: "MTG7"
+segment_dir: "07_LongBeachCC_06102014"
+meeting_id: "LongBeachCC_06102014"
+uid: "LongBeachCC_06102014_14-0426"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "07",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T — Topic/Framing",
+        "slot_name": "Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names Rapid Medic Deployment, RMD, or the Fire Department EMS/ambulance staffing model as the substantive subject.",
+                "Identifies the matter as Long Beach Fire Department emergency medical response, ambulance deployment, or paramedic deployment when the RMD context is clear."
+              ],
+              "not_match": [
+                "Mentions only a council agenda item, status report, motion, budget discussion, or vote without naming the substantive RMD/EMS staffing subject.",
+                "Frames the subject as a different city service or unrelated policy area rather than Fire Department EMS/RMD."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "Shows that the policy move under discussion was to implement, continue toward, delay, or reconsider RMD.",
+                "States a concrete direction-bearing effect, such as changing paramedic placement, ambulance staffing, ALS ambulance deployment, or implementation timing."
+              ],
+              "not_match": [
+                "Names RMD or Fire Department EMS only as a topic without stating any implementation, delay, reconsideration, staffing, deployment, or timing direction.",
+                "Uses only procedural outcome language such as approved, tied, or failed without a substantive policy direction."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies the target as Long Beach Fire Department EMS, ambulance deployment, paramedic staffing, fire engines/trucks/ambulances, or the Fire Department budget/service configuration affected by RMD."
+              ],
+              "not_match": [
+                "States a policy direction without saying what system, department, service, or deployment target it applies to.",
+                "Identifies a different target outside the Fire Department EMS/RMD context."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was the Rapid Medic Deployment / RMD staffing model for Long Beach Fire Department emergency medical response and ambulance deployment.",
+            "Staff framed one direction as continuing toward RMD implementation; Councilmember Austin framed an alternative direction as delaying implementation until broader FY15 budget discussion and Council approval.",
+            "The target was the Long Beach Fire Department EMS/ambulance deployment system, including engines, trucks, ambulances, firefighter-paramedics, EMT staffing, and Fire Department budget/service levels."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to mention every RMD staffing detail for T.",
+            "A claim that no new action occurred belongs to O/U unless it is used to contradict the substantive framing.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment framed a substantive policy and operations question about whether Long Beach should proceed with or delay implementation of the Rapid Medic Deployment staffing model for Fire Department emergency medical response. The policy direction under discussion was to implement, continue toward, or delay a revised EMS staffing/deployment model that would place paramedics differently across fire engines, trucks, and ambulances while affecting Fire Department budget planning.\n",
+          "source_context_for_fact_check": {
+            "subject": "Rapid Medic Deployment / RMD staffing model for Long Beach Fire Department emergency medical response and ambulance deployment.\n",
+            "policy_direction": [
+              "Staff framed the direction as moving forward with RMD implementation.",
+              {
+                "Councilmember Austin's motion framed an alternative direction": "delay implementation until the broader FY15 budget discussion and Council approval."
+              },
+              "The final procedural result did not newly approve the delay; previous authorization remained in effect."
+            ],
+            "target": [
+              "Long Beach Fire Department EMS staffing and ambulance deployment.",
+              "Fire engines, trucks, ambulances, firefighter-paramedics, EMT staffing, and Fire Department budget/service levels."
+            ],
+            "temporal_status": [
+              "currently_existing for prior budget inclusion and existing EMS staffing configuration.",
+              "future_effect for RMD implementation and FY15 budget consequences."
+            ]
+          },
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "currently_existing",
+              "future_effect"
+            ],
+            "notes": [
+              "RMD was already included in the FY14 budget before the segment.",
+              "Actual implementation was discussed as still upcoming, with a projected July 2014 start date.",
+              "FY15 budget treatment and possible delay/elimination were future-facing questions."
+            ]
+          },
+          "answer_locality": "Concentrated in the agenda introduction, staff presentation by management/finance/fire leadership, and Council questioning; reinforced by public comment and final motion discussion.\n",
+          "marker_presence": {
+            "subject_identified": "present — Rapid Medic Deployment Staffing Model / Fire Department EMS staffing.",
+            "policy_direction": "present — implement, continue moving forward, delay, or reconsider in FY15 budget.",
+            "target": "present — Long Beach Fire Department ambulance/EMS deployment and budget/service configuration."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Concentrated in the agenda introduction, staff presentation by management/finance/fire leadership, and Council questioning; reinforced by public comment and final motion discussion.\n",
+        "marker_presence": {
+          "subject_identified": "present — Rapid Medic Deployment Staffing Model / Fire Department EMS staffing.",
+          "policy_direction": "present — implement, continue moving forward, delay, or reconsider in FY15 budget.",
+          "target": "present — Long Beach Fire Department ambulance/EMS deployment and budget/service configuration."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "The Council heard a status report and took public comment.",
+            "rationale": "Topic Gate fails because the summary gives only procedural form and does not identify the RMD/Fire Department EMS subject."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The segment concerned the RMD staffing model.",
+            "rationale": "Topic Gate passes because the subject is named, but Quality Gate fails because the policy direction and target are not stated."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The discussion framed whether Long Beach should implement or delay RMD, a Fire Department EMS staffing model affecting ambulance deployment and paramedic placement on engines, trucks, and ambulances.",
+            "rationale": "Subject, policy direction, and target are all present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The discussion framed whether Long Beach should implement RMD as a Police Department patrol deployment model.",
+            "rationale": "Presence passes because a subject, direction, and target are expressed, but Fact Check fails because the target is wrong."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "O — Outcome/Position",
+        "slot_name": "Outcome/Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that the Council voted on, failed to pass, tied on, received/filed, delayed, or took no new action on a motion or item.",
+                "Ties the disposition to the RMD implementation/status item, the receive-and-file motion, the delay motion, or the item handling."
+              ],
+              "not_match": [
+                "Only says speakers debated, staff presented, or councilmembers asked questions without any Council disposition on an acted-on item.",
+                "Only describes RMD implementation or budget effects without a disposition verb tied to a motion or item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item specifically enough as the RMD implementation/status item, the substitute receive-and-file motion, the motion to delay RMD, or an equivalent substantive description.",
+                "A formal agenda identifier is sufficient but not required when the substantive description distinguishes the acted-on RMD item or motion."
+              ],
+              "not_match": [
+                "Says only that the Council voted on 'the matter,' 'the proposal,' or 'the item' without enough substantive or formal identification to distinguish what was acted on."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Long Beach City Council.",
+            "The procedural stage was in-session handling of Item 12, not final implementation of RMD and not final County EMS policy approval.",
+            "The substitute motion to receive and file tied and did not pass.",
+            "Councilmember Austin's original motion to delay RMD implementation until broader FY15 budget discussion and Council approval tied and did not pass.",
+            "No new action was taken on Item 12; prior Council authorization remained in effect until another Council action changed it."
+          ],
+          "fact_check_notes": [
+            "Do not treat the failure of a motion as affirmative approval of the opposite motion.",
+            "If a summary states a vote result, it must attach the vote to the correct motion and stage.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Council considered two dispositions on Item 12: a substitute motion to receive and file the item, and Councilmember Austin's original motion to delay RMD implementation for broader FY15 budget discussion. Both votes tied, so neither motion passed. The Mayor/City Attorney clarification was that no action was taken and the prior Council authorization remained in effect until another Council action changed it.\n",
+          "source_context_for_fact_check": {
+            "actor": "Long Beach City Council.",
+            "procedural_stage": "In-session Council handling of Item 12, not final implementation of the RMD program itself and not County EMS final policy approval.\n",
+            "disposition_result": [
+              "The substitute motion to receive and file tied and did not pass.",
+              "The original motion to delay implementation tied and did not pass.",
+              "No new action was taken on Item 12 in the segment.",
+              "Prior Council authorization remained in effect after the failed motions."
+            ],
+            "acted_on_item": [
+              "Item 12 concerning RMD implementation status, Fire Department FY14/FY15 budget implications, and possible delay of implementation.",
+              "Austin's original motion to delay RMD implementation until broader FY15 budget discussion and approval.",
+              "Substitute motion to receive and file."
+            ],
+            "vote_result": [
+              {
+                "value": "tie",
+                "attached_to": "substitute motion to receive and file"
+              },
+              {
+                "value": "tie",
+                "attached_to": "original Austin delay motion"
+              }
+            ],
+            "temporal_status": [
+              "completed_in_session for the two tie votes and failure of motions.",
+              "currently_existing for prior authorization continuing to stand.",
+              "pending_future_handling for any later Council action that could change the implementation path."
+            ]
+          },
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The tie votes and failure of both motions occurred during the segment.",
+              "The procedural effect was not a new affirmative authorization; it left the prior authorization standing.",
+              "Future Council action could still alter the implementation path."
+            ]
+          },
+          "answer_locality": "Located at the end of the segment, after public comment and Council discussion, during motion handling and the point-of-order clarification.\n",
+          "marker_presence": {
+            "disposition_verb_tied_to_acted_on_item": "present — motions were made and voted on for Item 12/RMD handling.",
+            "acted_on_item_specific": "present — receive-and-file motion and Austin delay motion on RMD implementation."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Located at the end of the segment, after public comment and Council discussion, during motion handling and the point-of-order clarification.\n",
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": "present — motions were made and voted on for Item 12/RMD handling.",
+          "acted_on_item_specific": "present — receive-and-file motion and Austin delay motion on RMD implementation."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "Councilmembers debated whether RMD would affect emergency medical care.",
+            "rationale": "Topic Gate fails because there is no disposition verb tied to an acted-on item."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The Council took a vote on the matter.",
+            "rationale": "Topic Gate passes because a disposition is stated, but Quality Gate fails because the acted-on item is too generic."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The Council's substitute receive-and-file motion and Austin's motion to delay RMD both tied and failed, leaving no new action on Item 12 and leaving prior authorization in place.",
+            "rationale": "Disposition, acted-on items, vote results, and procedural effect are source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The Council approved Austin's motion to delay RMD implementation until FY15 by majority vote.",
+            "rationale": "Presence passes, but Fact Check fails because the Austin delay motion tied and did not pass."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "B — Agenda-Setting Background / Precipitating Context",
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States prior discussion, prior budget inclusion, delayed implementation, current/proposed budget context, one-time funding, salary savings, a reduction tradeoff, prior deficit context, or County EMS pilot context as background.",
+                "States a prior or current condition that shaped the RMD implementation/delay debate."
+              ],
+              "not_match": [
+                "Only states what RMD would do operationally without any prior or background condition.",
+                "Only states the Council disposition or future unresolved path without explaining a prior/current condition that shaped the item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Connects the background to the current decision point of whether to continue toward RMD implementation, delay it, or reconsider it in the budget process.",
+                "Shows that budget background, delayed start, pilot context, or prior deficit framing shaped the implementation timing, budget discussion, or form of the RMD item."
+              ],
+              "not_match": [
+                "States a background condition but leaves it disconnected from the RMD item, implementation timing, budget discussion, or Council handling.",
+                "Requires an explicit why-now statement even though the background is visibly connected to the current item."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "RMD had been discussed for a couple of years, included in the FY14 budget, and had a delayed start.",
+            "The FY14 Fire Department budget was expected to close on target despite delayed RMD because of one-time funds and attrition-related salary savings.",
+            "The FY15 proposed budget included RMD; eliminating it would require about $1.4 million in other Fire Department reductions.",
+            "County EMS handling had proceeded as a pilot-program discussion, with a two-year term referenced as the latest term.",
+            "Public and firefighter association comments framed RMD as a budget-savings solution that originated during a prior deficit.",
+            "These conditions shaped the decision point of whether to continue RMD implementation in summer 2014 or delay/reconsider it in the FY15 budget process."
+          ],
+          "fact_check_notes": [
+            "B does not require the summary to say 'this is why the item was on the agenda.'",
+            "A correct operational payload alone is not B unless the summary states it as background context shaping the current item.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The discussion was shaped by several prior and current conditions: RMD had been discussed for years and included in the FY14 budget, implementation had been delayed, the Fire Department was projected to finish FY14 on budget because of one-time funds and salary savings, the FY15 proposed budget included RMD, and eliminating RMD would require about $1.4 million in other Fire Department reductions. The item also arose against County EMS pilot authorization and past budget-deficit reasoning for the model.\n",
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "RMD had already been placed in the FY14 budget and its start had been delayed.",
+              "The FY14 Fire Department budget was projected to close on target due to one-time funds and attrition-related salary savings.",
+              "The FY15 proposed budget included RMD because staff said eliminating it would require other fire-service reductions to balance the Fire Department budget.",
+              "County EMS handling had proceeded as a pilot-program discussion, with a two-year term referenced as the latest term.",
+              "Public and firefighter association comments framed RMD as originally responding to a prior budget deficit that speakers argued no longer existed in the same way."
+            ],
+            "agenda_connection": [
+              {
+                "These background facts drove the Council's decision point": "continue toward RMD implementation in summer 2014 or delay/reconsider it in the FY15 budget process."
+              },
+              "The budget-savings context was central to why implementation timing and service reductions were debated."
+            ]
+          },
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "future_effect",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "Prior inclusion of RMD in the FY14 budget and prior discussions had already occurred.",
+              "The FY14 budget status was current during the segment.",
+              "FY15 budget effects and elimination scenarios were future-facing or conditional."
+            ]
+          },
+          "answer_locality": "Diffuse but strongest in the staff/finance presentation, Councilmember Austin's questioning and motion explanation, firefighter association public comment, and later Council budget questions.\n",
+          "marker_presence": {
+            "precipitating_context_visible": "present — prior budget inclusion, delayed start, current budget status, County EMS pilot, and prior deficit context.",
+            "connected_to_current_item_or_form": "present — these conditions explain why Item 12 asked for status, budget information, and possible delay direction."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Diffuse but strongest in the staff/finance presentation, Councilmember Austin's questioning and motion explanation, firefighter association public comment, and later Council budget questions.\n",
+        "marker_presence": {
+          "precipitating_context_visible": "present — prior budget inclusion, delayed start, current budget status, County EMS pilot, and prior deficit context.",
+          "connected_to_current_item_or_form": "present — these conditions explain why Item 12 asked for status, budget information, and possible delay direction."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "RMD would change ambulance staffing and paramedic deployment.",
+            "rationale": "Topic Gate fails because this states an operative policy effect, not a precipitating/background condition."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "There had been earlier budget issues in the Fire Department.",
+            "rationale": "Topic Gate passes because a background condition is visible, but Quality Gate fails because the connection to Item 12/RMD handling is not visible."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The item was shaped by RMD's prior inclusion in the FY14 budget, its delayed start, and the FY15 budget tradeoff that eliminating RMD would require about $1.4 million in other Fire Department reductions.",
+            "rationale": "Background and connection to the current RMD item are both present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The item came forward because RMD had already failed a completed five-year County EMS pilot.",
+            "rationale": "Presence passes because it states a background trigger connected to the item, but Fact Check fails because the event sheet supports a pending pilot framework, not a completed failed five-year pilot."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "N — Outcome-Near Condition / Operative Payload",
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "Attaches a staffing, deployment, monitoring, budget, date/time, duration, count, baseline, or other operative term to the RMD implementation plan, County EMS pilot framework, prior-authorized path, or delay motion.",
+                "Uses same-sentence wording or adjacent anaphora to link the payload to RMD implementation or the acted-on item."
+              ],
+              "not_match": [
+                "States a free-standing background fact or concern without linking it to the RMD implementation plan, pilot framework, motion, or acted-on item.",
+                "Only says the Council discussed RMD or took no action, without any condition, requirement, scope, number/date facet, or other payload."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "Includes an identifiable numeric or scalar facet attached to the payload, such as a count, amount, percentage, duration, response-time value, date-like scalar, monitoring cadence, or baseline comparison."
+              ],
+              "not_match": [
+                "States only a qualitative payload with no numeric, scalar, duration, date-like, cadence, or baseline facet."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "Includes an identifiable named requirement, restriction, condition, or implementation feature attached to the payload, such as a pilot framework, monitoring/reporting requirement, training treatment, ALS conversion, or staffing configuration."
+              ],
+              "not_match": [
+                "Provides only a generic statement that the plan would change operations without naming any requirement, condition, or implementation feature."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "Includes an identifiable scope boundary for the payload, such as the Fire Department EMS system, citywide ambulance deployment, engine/truck/ambulance categories, station/resource categories, or affected service configuration."
+              ],
+              "not_match": [
+                "States a payload without indicating what department, service, unit category, geography, or resource scope it applies to."
+              ]
+            },
+            {
+              "name": "date_cutoff",
+              "match": [
+                "Includes an identifiable time boundary attached to the payload, such as an implementation start, pilot term, budget-process timing, monitoring cadence, deadline, or future effective timing."
+              ],
+              "not_match": [
+                "States a payload with no implementation timing, deadline, term, cadence, or other time boundary."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the RMD implementation plan and County EMS pilot authorization framework; Austin's motion would have delayed timing, but that motion did not pass.",
+            "RMD would put firefighter-paramedics on all engine companies and on one truck company, leaving three truck companies without a firefighter-paramedic on board.",
+            "RMD would staff 11 24-hour ambulances with one firefighter-paramedic and one EMT and convert existing 24-hour ambulances to ALS ambulances.",
+            "RMD applied to Long Beach Fire Department EMS/ambulance deployment citywide, including engines, trucks, ambulances, and Stations 3, 12, and 22.",
+            "Relevant scalars include July 10, 2014 as the suggested implementation start date; a two-year latest pilot term, with one year previously considered; 1.5 minutes faster average paramedic arrival; nearly 84% EMS workload; 17 engines; nine engines then with a paramedic; 13 current peak-load transport-capable units; 11 RMD 24-hour ambulances; and about $1.4 million annually in savings/cost difference."
+          ],
+          "fact_check_notes": [
+            "Do not require every number in the event sheet to be mentioned.",
+            "Wrong values, dates, baselines, or attachments are Fact Check issues, not Presence issues.",
+            "If a summary states October 1 as the RMD start date, that conflicts with the July 10, 2014 implementation start date suggested to EMS; October 1 belongs to the FY15/delay alternative context.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The operative terms discussed for the RMD implementation included a projected July 10, 2014 start, a County EMS pilot framework most recently discussed as a two-year term, conversion of all existing 24-hour ambulances to ALS units, staffing of 11 24-hour ambulances with one firefighter-paramedic and one EMT, placing a paramedic on every engine and one truck company, reducing transport-capable ambulances from 13 to 11 during peak-load comparison, expected average paramedic arrival improvement of about 1.5 minutes, and annual savings/cost avoidance of about $1.4 million relative to the current ambulance service.\n",
+          "source_context_for_fact_check": {
+            "payload_carrier": [
+              "Rapid Medic Deployment / RMD implementation plan and County EMS pilot authorization framework.",
+              "Austin delay motion would have changed timing by delaying implementation into the FY15 budget discussion, but that motion did not pass."
+            ],
+            "payload_content": [
+              "RMD would change EMS staffing/deployment by putting firefighter-paramedics on all engine companies and on one truck company.",
+              "RMD would leave three truck companies without a firefighter-paramedic on board.",
+              "RMD would staff 11 24-hour ambulances with one firefighter-paramedic and one EMT.",
+              "RMD would convert existing 24-hour ambulances to ALS ambulances.",
+              "RMD implementation would require training, but staff said the cost would be absorbed into regular continuing-education/recession training.",
+              "County EMS monitoring would require biweekly data for quality assurance and improvement."
+            ],
+            "payload_scope": [
+              "Applies to Long Beach Fire Department EMS/ambulance deployment citywide.",
+              "Specific station/resource references included Stations 3, 12, and 22.",
+              "Existing baseline included 17 fire engines and nine engines with paramedics."
+            ],
+            "payload_scalar_or_baseline": [
+              {
+                "value": "July 10, 2014",
+                "meaning": "implementation start date suggested to the EMS Agency."
+              },
+              {
+                "value": "two years",
+                "meaning": "latest County EMS pilot term discussed."
+              },
+              {
+                "value": "one year",
+                "meaning": "alternative pilot term previously considered."
+              },
+              {
+                "value": "1.5 minutes faster",
+                "meaning": "average citywide improvement in paramedic arrival time asserted by staff."
+              },
+              {
+                "value": "nearly 84%",
+                "meaning": "EMS share of Long Beach Fire Department overall workload."
+              },
+              {
+                "value": 17,
+                "meaning": "current number of fire engines."
+              },
+              {
+                "value": 9,
+                "meaning": "current number of engines with a paramedic on board."
+              },
+              {
+                "value": 13,
+                "meaning": "current peak-load transport-capable units described later in discussion."
+              },
+              {
+                "value": 11,
+                "meaning": "RMD number of 24-hour ambulances/transport-capable ambulances."
+              },
+              {
+                "value": "$1.4 million annually",
+                "meaning": "approximate annual savings/cost difference versus current ambulance service, and amount of other Fire Department reductions needed if RMD were eliminated in FY15."
+              }
+            ],
+            "temporal_status": [
+              "future_effect for implementation terms and staffing configuration.",
+              "currently_existing for baseline engine/ambulance/budget facts.",
+              "hypothetical_or_risk for elimination, pilot failure, and reversion scenarios."
+            ]
+          },
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "pending_future_handling",
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The operative RMD configuration was planned/proposed for implementation rather than already completed during the segment.",
+              "Current baseline facts about existing engines, ambulances, and budget were current during the segment.",
+              "Elimination, reversion, and failure scenarios were conditional or hypothetical."
+            ]
+          },
+          "answer_locality": "Staff presentation by finance and fire leadership, Councilmember Austin and Neal questions, later Councilmember questions about EMS conditions, and final discussion of ambulance counts.\n",
+          "marker_presence": {
+            "payload_attached_to_action": "present — RMD implementation/pilot terms are tied to the proposed/prior-authorized action and possible delay motion.",
+            "number": "present — dates, dollars, counts, percentages, durations, and response-time values.",
+            "named_requirement": "present — County EMS pilot, training, biweekly data monitoring, staffing configuration.",
+            "scope_boundary": "present — Long Beach Fire Department EMS citywide, engines/trucks/ambulances, Stations 3/12/22.",
+            "date_cutoff": "present — July 10, 2014 implementation date and FY15 budget timing."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Staff presentation by finance and fire leadership, Councilmember Austin and Neal questions, later Councilmember questions about EMS conditions, and final discussion of ambulance counts.\n",
+        "marker_presence": {
+          "payload_attached_to_action": "present — RMD implementation/pilot terms are tied to the proposed/prior-authorized action and possible delay motion.",
+          "number": "present — dates, dollars, counts, percentages, durations, and response-time values.",
+          "named_requirement": "present — County EMS pilot, training, biweekly data monitoring, staffing configuration.",
+          "scope_boundary": "present — Long Beach Fire Department EMS citywide, engines/trucks/ambulances, Stations 3/12/22.",
+          "date_cutoff": "present — July 10, 2014 implementation date and FY15 budget timing."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "The Council discussed worries about RMD service quality.",
+            "rationale": "Topic Gate fails because no condition, requirement, scope, number, date, or other payload is attached to the action or item."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The RMD plan changed ambulance staffing.",
+            "rationale": "Topic Gate passes because a payload is attached to RMD, but Quality Gate fails because no identifiable number, named requirement, scope boundary, or date/time boundary is stated."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The RMD plan contemplated a July 10, 2014 start, 11 24-hour ALS ambulances staffed by one firefighter-paramedic and one EMT, paramedics on all engines and one truck, and biweekly County EMS data monitoring.",
+            "rationale": "Payload attachment and multiple quality labels are present; stated details are source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The RMD plan would add 13 new 24-hour ambulances and start on October 1, 2014.",
+            "rationale": "Presence passes because numeric/date payload is attached to RMD, but Fact Check fails because the event sheet supports 11 RMD ambulances, 13 as the current peak-load transport-capable baseline, and July 10, 2014 as the suggested start date."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "L — Concrete Concern",
+        "slot_name": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States a concern, risk, harm, obstacle, deficiency, shortage, loss, or tradeoff about RMD implementation or delay.",
+                "Uses concern-side language about fewer ambulances, reduced transport capacity, patient-care risk, budget-driven service cuts, lack of comparable information, monitoring/reporting uncertainty, or reversion costs."
+              ],
+              "not_match": [
+                "Only states RMD's intended benefits or staffing terms without presenting them as a concern, risk, harm, obstacle, or tradeoff.",
+                "Only says concerns were raised without any problem-side assertion."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Specifies what the concern is about, such as reduced emergency medical capacity or quality, changed ambulance team staffing, reduced transport-capable resources, budget savings driving patient-care decisions, insufficient comparable-system information, monitoring/reporting uncertainty, or reversion funding."
+              ],
+              "not_match": [
+                "States only that there were concerns or controversy without specifying the harm, risk, obstacle, or tradeoff.",
+                "Requires a named place, named group, or bounded area even though the concern content itself is specific."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Concerns included that fewer ambulances and one firefighter-paramedic/one EMT staffing could reduce transport capacity or emergency-care quality.",
+            "Concerns included that complex emergencies may require multiple paramedics or a team working simultaneously.",
+            "Concerns included that RMD was budget-driven and could sacrifice public safety or fire-service capacity for savings.",
+            "Concerns included that Council lacked adequate comparative information about other cities using similar fire-based models.",
+            "Concerns included changed or waived County EMS conditions, electronic patient-care reporting, reversion funding, and one-time funds/budget accounting.",
+            "The local anchor, when stated, was Long Beach citywide Fire Department EMS service, including resident emergency incidents and station/resource/ambulance-count concerns."
+          ],
+          "fact_check_notes": [
+            "A named place or bounded local area is not required for L Presence.",
+            "If a summary explicitly ties the concern to a wrong place, group, or local anchor, evaluate that under local_anchor.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Concrete concerns raised in the segment included the risk that RMD would reduce emergency medical service capacity or quality by replacing two-firefighter/paramedic ambulance staffing with a one firefighter-paramedic plus one EMT model, reducing transport-capable ambulances from 13 to 11, relying on budget savings rather than patient-care needs, lacking sufficient information about comparable fire-based systems, and creating reversion costs if the pilot failed.\n",
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Concern that fewer ambulances and a one firefighter-paramedic/one EMT staffing model could reduce transport capacity or emergency-care quality.",
+              "Concern that complex patient care may require multiple paramedics or a team working simultaneously.",
+              "Concern that the program was budget-driven and might sacrifice public safety or fire-service capacity for savings.",
+              "Concern that Council lacked adequate comparative information about other cities using similar fire-based models.",
+              "Concern that changed or waived County EMS conditions, electronic patient-care reporting, and reversion funding were insufficiently resolved.",
+              "Concern about the handling of one-time funds and budget accounting connected to delayed RMD deployment."
+            ],
+            "local_anchor": [
+              "Long Beach citywide Fire Department EMS service.",
+              "Individual residents and public commenters described Long Beach emergency responses in their homes.",
+              "Station/resource and ambulance-count concerns were framed at citywide service level."
+            ],
+            "temporal_status": [
+              "hypothetical_or_risk for anticipated harms from RMD implementation.",
+              "recurring_concern for repeated public, firefighter association, and councilmember objections."
+            ]
+          },
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "secondary": [
+              "recurring_concern",
+              "currently_existing"
+            ],
+            "notes": [
+              "The concerns were expressed during the segment as risks or objections to future implementation.",
+              "Some concerns relied on current baseline conditions, such as existing ambulance staffing and current budget context."
+            ]
+          },
+          "answer_locality": "Most visible during public comment and Council questioning after the staff presentation; also appears in Councilmember Austin's motion rationale.\n",
+          "marker_presence": {
+            "concrete_concern_language": "present — risk, cutbacks, fewer ambulances, insufficient information, reversion cost, patient-care harm.",
+            "specific_concern_content": "present — concrete service-capacity, staffing, transport, patient-care, information, and budget-accounting concerns."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Most visible during public comment and Council questioning after the staff presentation; also appears in Councilmember Austin's motion rationale.\n",
+        "marker_presence": {
+          "concrete_concern_language": "present — risk, cutbacks, fewer ambulances, insufficient information, reversion cost, patient-care harm.",
+          "specific_concern_content": "present — concrete service-capacity, staffing, transport, patient-care, information, and budget-accounting concerns."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "RMD was included in the FY15 proposed Fire Department budget.",
+            "rationale": "Topic Gate fails because this is background/budget context, not a concrete concern stated on the problem side."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "Residents and councilmembers raised concerns about RMD.",
+            "rationale": "Topic Gate passes because concern language is present, but Quality Gate fails because the concern content is not specified."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Concerns were that RMD could reduce EMS capacity and care quality by shifting ambulance staffing toward one firefighter-paramedic plus one EMT and reducing transport-capable units from 13 to 11.",
+            "rationale": "Concrete concern language and specific concern content are present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The main concern was that RMD would create too many ambulances and overstaff each ambulance with extra firefighter-paramedics.",
+            "rationale": "Presence passes because a specific concern is stated, but Fact Check fails because the source-supported concern was about fewer ambulances and reduced paramedic/team capacity, not overcapacity."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "S — Shared Concern Synthesis",
+        "slot_name": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names a recurring concern theme in problem-side language, such as public-safety risk, EMS care-quality reduction, reduced capacity, fewer ambulances, budget-driven cuts, loss of paramedic team capacity, or insufficient information.",
+                "Synthesizes the concern-side tension between claimed efficiencies/savings and emergency medical service quality or capacity."
+              ],
+              "not_match": [
+                "Only states that RMD would save money, improve response time, or change staffing without concern-side language.",
+                "Only says that people debated RMD, without naming a problem-side concern theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies the content of the shared concern, such as fewer ambulances, changed ambulance staffing composition, complex patient-care/team needs, budget savings versus public safety, insufficient comparative information, or implementation timing."
+              ],
+              "not_match": [
+                "Names only a generic theme such as 'safety concerns' without identifying what aspect of safety, capacity, staffing, information, budget, or timing was at issue."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that RMD's budget and deployment efficiencies might come at the cost of public-safety capacity and emergency medical care quality.",
+            "Concern content included fewer ambulances: 13 current peak-load transport-capable units versus 11 RMD 24-hour ambulances.",
+            "Concern content included the shift toward one firefighter-paramedic plus one EMT on ambulances and worries that complex emergencies require multiple paramedics or team care.",
+            "Concern content included worries that Council lacked enough comparative information about other fire-based systems and that RMD should be debated in the FY15 budget process before implementation."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to explicitly say 'recurring' if it names the source-supported shared concern theme.",
+            "Do not require every downstream risk or public-comment example for S.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme across the segment was that RMD's budget and deployment efficiencies might come at the cost of public-safety capacity and emergency medical care quality. Speakers repeatedly contrasted claimed savings and faster paramedic arrival with worries about fewer ambulances, fewer sworn/firefighter-paramedic resources on ambulance teams, complex patient-care needs, and insufficient Council information before implementation.\n",
+          "source_context_for_fact_check": {
+            "concern_theme": "Recurring concern that RMD implementation could trade emergency medical service quality/capacity and public-safety readiness for budget savings or deployment efficiency.\n",
+            "concern_content": [
+              {
+                "Fewer ambulances under RMD": "13 current peak-load transport-capable units versus 11 RMD 24-hour ambulances."
+              },
+              "Change from current firefighter/paramedic staffing toward one firefighter-paramedic plus one EMT on each RMD ambulance.",
+              "Concern that some emergencies require multiple paramedics/team care, not only faster initial paramedic arrival.",
+              "Concern that Council did not have enough comparative information about other fire-based systems using the same model.",
+              "Concern that the model should be debated in the FY15 budget process before implementation."
+            ],
+            "temporal_status": [
+              "recurring_concern for repeated concern-side statements.",
+              "hypothetical_or_risk for projected implementation harms."
+            ]
+          },
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "hypothetical_or_risk",
+              "currently_existing"
+            ],
+            "notes": [
+              "The theme recurred across resident testimony, firefighter association testimony, and councilmember questioning.",
+              "The concern focused on potential future effects of implementation and current information/budget constraints."
+            ]
+          },
+          "answer_locality": "Distributed across public testimony, firefighter association testimony, councilmember questioning, and later final discussion of ambulance-count implications.\n",
+          "marker_presence": {
+            "problem_side_concern": "present — repeated concern-side language about cuts, risk, insufficient ambulances, safety, and lack of information.",
+            "specific_content": "present — staffing model, ambulance count, patient-care team capacity, budget tradeoff, and implementation timing."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Distributed across public testimony, firefighter association testimony, councilmember questioning, and later final discussion of ambulance-count implications.\n",
+        "marker_presence": {
+          "problem_side_concern": "present — repeated concern-side language about cuts, risk, insufficient ambulances, safety, and lack of information.",
+          "specific_content": "present — staffing model, ambulance count, patient-care team capacity, budget tradeoff, and implementation timing."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "RMD would place paramedics on engines and convert ambulances to ALS units.",
+            "rationale": "Topic Gate fails because this states operative payload/benefit without a problem-side concern theme."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "A recurring concern was public safety.",
+            "rationale": "Topic Gate passes because a problem-side concern is named, but Quality Gate fails because the content of the concern is too generic."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "A recurring theme was that RMD's budget and deployment efficiencies might trade off against EMS quality and public-safety capacity, especially through fewer ambulances and reduced paramedic team capacity.",
+            "rationale": "Problem-side concern and specific content are present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The shared concern was that RMD would cost more because it added extra ambulances and firefighter-paramedics.",
+            "rationale": "Presence passes because a specific shared concern is stated, but Fact Check fails because the source-supported concern involved savings-driven reductions/fewer ambulances, not added resources and higher cost."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "U — Unresolved Tail / Future Return Path",
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "States that the RMD issue, implementation path, budget treatment, monitoring, reversion, or later Council handling remained pending, unresolved, still open, or subject to later action.",
+                "States that no new action was taken and prior authorization would stand until another Council action, when this is used to show the item remained open to later handling."
+              ],
+              "not_match": [
+                "Only states completed tie votes without saying anything remained pending, unresolved, open, or subject to later handling.",
+                "Only states that RMD would move forward, without an explicit pending/open/future-return marker."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies the pending item as RMD implementation, later Council reconsideration/delay/elimination, later budget treatment, County EMS pilot monitoring, or possible reversion if the pilot failed."
+              ],
+              "not_match": [
+                "Says only that something remained unresolved without identifying the RMD issue, implementation path, budget handling, monitoring, or reversion question."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "Shows a handling path such as prior authorization continuing unless changed, later Council action, later budget process, County EMS monitoring, or reversion/budget decision-making."
+              ],
+              "not_match": [
+                "Identifies a pending issue but gives no process, body, monitoring, budget, authorization, or return path.",
+                "Gives a future path for an unrelated item rather than the RMD issue."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "No new action was taken on Item 12 because both motions tied and failed.",
+            "The previous authorization for RMD remained standing after the segment.",
+            "Future handling remained possible through later Council action, FY15 budget handling, County EMS pilot monitoring, and possible reversion/budget decisions if the pilot failed or if RMD were later eliminated.",
+            "Austin's proposed path would have delayed implementation into FY15 budget discussion, but that path did not pass.",
+            "County EMS would monitor biweekly data for quality assurance and improvement if the pilot moved forward."
+          ],
+          "fact_check_notes": [
+            "U should not turn the completed in-session tie votes into final resolution.",
+            "A completed action alone belongs to O; U requires unfinishedness or a future return path.",
+            "valid_items are representative source-consistent statements, not a mandatory checklist; omissions are not Fact Check errors."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The unresolved tail was that neither the receive-and-file motion nor the delay motion passed, leaving no new Council action on Item 12 and leaving prior authorization for RMD implementation in place. Future handling remained possible through later Council action, the FY15 budget process, County EMS pilot monitoring, and potential reversion/budget decisions if the pilot failed or if RMD were later eliminated.\n",
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "No new action was taken on Item 12 because both motions tied and failed.",
+              "The previous authorization for RMD remained standing after the segment.",
+              "The segment did not finally resolve all future FY15 budget, pilot monitoring, or possible reversion questions."
+            ],
+            "pending_item": [
+              "RMD implementation path and any later Council reconsideration/delay/elimination.",
+              "FY15 budget handling of RMD and potential other Fire Department reductions if RMD were eliminated.",
+              "County EMS pilot monitoring and possible future policy/reversion consequences."
+            ],
+            "handling_path": [
+              "Prior authorization allowed implementation to move forward as previously directed unless later Council action changed it.",
+              "Austin's proposed path would have delayed implementation into the FY15 budget discussion, but that path did not pass.",
+              "County EMS would monitor biweekly data for quality assurance and improvement if the pilot moved forward.",
+              "If the pilot failed, staff described reversion as a future budget/deficit-budgeting question."
+            ],
+            "temporal_status": [
+              "completed_in_session for the failed votes/no-action clarification.",
+              "pending_future_handling for later Council, FY15 budget, and County EMS pilot handling.",
+              "hypothetical_or_risk for pilot failure and reversion scenarios."
+            ]
+          },
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "completed_in_session",
+              "future_effect",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The failure of the motions was completed in-session.",
+              "RMD implementation and monitoring remained future-facing.",
+              "Later Council action, FY15 budget treatment, and reversion after pilot failure were unresolved future paths."
+            ]
+          },
+          "answer_locality": "Appears in staff's closing alternatives before public comment, Councilmember Austin's motion, motion/vote handling at the end, point-of-order clarification, and Council questions about monitoring/reversion.\n",
+          "marker_presence": {
+            "pendingness_marker": "present — no action taken, previous authorization stands until another action, implementation/future budget/reversion left open.",
+            "pending_item_identifiable": "present — RMD implementation and later Council/FY15/County EMS handling.",
+            "handling_path_visible": "present — prior authorization path, possible later Council action, FY15 budget process, County EMS biweekly monitoring, and reversion budget process."
+          },
+          "reference_context_note": "Reference source context for the selected slot only. It does not add gates or additional fact_check_fields."
+        },
+        "answer_locality": "Appears in staff's closing alternatives before public comment, Councilmember Austin's motion, motion/vote handling at the end, point-of-order clarification, and Council questions about monitoring/reversion.\n",
+        "marker_presence": {
+          "pendingness_marker": "present — no action taken, previous authorization stands until another action, implementation/future budget/reversion left open.",
+          "pending_item_identifiable": "present — RMD implementation and later Council/FY15/County EMS handling.",
+          "handling_path_visible": "present — prior authorization path, possible later Council action, FY15 budget process, County EMS biweekly monitoring, and reversion budget process."
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": null,
+            "summary": "Both motions tied during the meeting.",
+            "rationale": "Topic Gate fails for U because this states only the completed in-session vote result and no pendingness marker or future return path."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The issue remained unresolved.",
+            "rationale": "Topic Gate passes because unresolved status is stated, but Quality Gate fails because the pending item and handling path are not identifiable."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Because both motions tied, no new action was taken; prior RMD authorization remained in effect unless later Council action, FY15 budget handling, County EMS monitoring, or reversion budgeting changed the path.",
+            "rationale": "Pending status, pending item, and handling path are present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "After Austin's delay motion passed, RMD remained pending for a final County vote the following week.",
+            "rationale": "Presence passes because a pending item and handling path are stated, but Fact Check fails because the delay motion did not pass and the event sheet does not support a final County vote the following week."
+          }
+        ]
+      }
+    }
+  }

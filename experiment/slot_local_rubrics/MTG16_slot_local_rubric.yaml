@@ -1,0 +1,1274 @@
+segment_id: "MTG16"
+segment_dir: "16_KingCountyCC_06012022"
+meeting_id: "KingCountyCC_06012022"
+uid: "KingCountyCC_06012022_2022-0180"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "16",
+    "language": "en",
+    "slots": {
+      "T": {
+        "label": "T",
+        "name": "Topic/Framing",
+        "slot_purpose": "Captures the substantive framing of the segment: the subject, policy direction, and target of the proposed election-year change, not the procedural disposition.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names a substantive proposal about changing when county offices are elected.",
+                  "Identifies a charter, election-law, or county-office election-timing proposal as the subject.",
+                  "Uses a formal item reference only when the substantive election-timing subject is also visible."
+                ],
+                "not_match": [
+                  "Only says the body discussed an ordinance, agenda item, hearing, or formal item without saying what substantive issue it covered.",
+                  "Only mentions election administration, voter turnout, or ballot access in general without identifying an office-election timing proposal.",
+                  "Only states that an item was deferred, continued, or taken up later."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States a direction-bearing change to the election-year schedule for county offices.",
+                  "States that the proposal would realign or change the timing of county-office elections relative to other election cycles.",
+                  "Describes a concrete rule effect changing when the target offices would be elected."
+                ],
+                "not_match": [
+                  "Only states that an item was approved, passed, recommended, deferred, continued, or discussed.",
+                  "Only says the body considered election access or turnout without a direction-bearing election-timing change.",
+                  "Only says voters would decide something later without identifying the proposed election-timing move."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies county offices, county-office elections, or a sufficiently specific office group as the target of the timing change.",
+                  "Identifies the election-cycle target as a set of county offices rather than voters, ballots, or elections generally.",
+                  "Uses a sufficiently specific description of the office category or affected election scope so the target of the policy direction is clear."
+                ],
+                "not_match": [
+                  "Only says elections, ballots, voters, or county government generally.",
+                  "Only identifies other election cycles as the comparison point rather than the target of the change.",
+                  "Only names procedural handling by the body rather than the offices or election scope whose timing would change."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was a King County Charter amendment proposal concerning election years for specified county offices.",
+            "The policy direction was to move specified county-office elections from odd-numbered years to even-numbered years.",
+            "The target offices included the King County Executive, County Assessor, County Director of Elections, and County Council members.",
+            "The Prosecuting Attorney was treated as distinct because that office was already elected in even-numbered years under state law.",
+            "The change was proposed during the segment and would take effect only after later Council action and voter ratification."
+          ],
+          "fact_check_notes": [
+            "Do not require every affected office to be listed for Fact Check; omissions are allowed. If an explicitly named target office conflicts with the event sheet, check it under target.",
+            "A claim that the election-year change was already completed, enacted, or finally adopted during this segment conflicts with temporal_status.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment framed Proposed Ordinance 2022-0180 as a King County Charter amendment that would move elections for the County Executive, County Assessor, County Director of Elections, and County Council members from odd-numbered years to even-numbered years, subject to later voter ratification.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "subject": "A King County Charter amendment proposal concerning election years for specified county offices.",
+            "policy_direction": "Move specified county-office elections from odd-numbered years to even-numbered years.",
+            "target": [
+              "King County Executive",
+              "King County Assessor",
+              "King County Director of Elections",
+              "King County Council members"
+            ],
+            "distinct_or_excluded": [
+              "The Prosecuting Attorney was already elected in even-numbered years under state law."
+            ],
+            "ballot_context": "If adopted, the ordinance would send the charter amendment to county voters for the November 8, 2022 general election."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee discussed a proposed ordinance and asked staff several questions.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "No substantive subject is identified beyond a procedural item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The segment concerned King County county-office election timing.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the summary does not state the policy direction or target offices with enough specificity."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The proposal would amend the King County Charter to move elections for the Executive, Assessor, Elections Director, and Council members from odd-numbered to even-numbered years.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The subject, direction, and target are all source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The proposal would move the King County Prosecuting Attorney from even-year elections to odd-year elections.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary expresses a specific election-year policy direction and target, but both the target and direction contradict the event-sheet context."
+          }
+        ],
+        "slot": "T",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names a substantive proposal about changing when county offices are elected.",
+                "Identifies a charter, election-law, or county-office election-timing proposal as the subject.",
+                "Uses a formal item reference only when the substantive election-timing subject is also visible."
+              ],
+              "not_match": [
+                "Only says the body discussed an ordinance, agenda item, hearing, or formal item without saying what substantive issue it covered.",
+                "Only mentions election administration, voter turnout, or ballot access in general without identifying an office-election timing proposal.",
+                "Only states that an item was deferred, continued, or taken up later."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "States a direction-bearing change to the election-year schedule for county offices.",
+                "States that the proposal would realign or change the timing of county-office elections relative to other election cycles.",
+                "Describes a concrete rule effect changing when the target offices would be elected."
+              ],
+              "not_match": [
+                "Only states that an item was approved, passed, recommended, deferred, continued, or discussed.",
+                "Only says the body considered election access or turnout without a direction-bearing election-timing change.",
+                "Only says voters would decide something later without identifying the proposed election-timing move."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies county offices, county-office elections, or a sufficiently specific office group as the target of the timing change.",
+                "Identifies the election-cycle target as a set of county offices rather than voters, ballots, or elections generally.",
+                "Uses a sufficiently specific description of the office category or affected election scope so the target of the policy direction is clear."
+              ],
+              "not_match": [
+                "Only says elections, ballots, voters, or county government generally.",
+                "Only identifies other election cycles as the comparison point rather than the target of the change.",
+                "Only names procedural handling by the body rather than the offices or election scope whose timing would change."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Opening chair introduction; Central Staff briefing; staff policy-considerations section on alignment with federal and state elections.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "proposed ordinance",
+            "charter amendment",
+            "move elections",
+            "odd numbered",
+            "even numbered",
+            "align"
+          ]
+        }
+      },
+      "O": {
+        "label": "O",
+        "name": "Outcome/Position",
+        "slot_purpose": "Captures the committee's in-session disposition shell: the completed procedural handling of the acted-on item, not the ordinance payload or unresolved later work.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the body took a recognizable procedural disposition on the election-timing ordinance, measure, or acted-on item.",
+                  "States that action was deferred, continued, advanced, approved, rejected, recommended, or otherwise disposed of in relation to an identifiable item; stage accuracy is handled by Fact Check.",
+                  "States that the item was set for later handling as the body’s disposition in the segment."
+                ],
+                "not_match": [
+                  "Only says the body discussed, heard, questioned, or received a briefing on the item.",
+                  "Only describes the substantive election-timing proposal without saying what the body did procedurally in the segment.",
+                  "Only mentions future analysis or follow-up materials without tying them to a disposition on the acted-on item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as the election-timing ordinance, charter measure, ballot-measure ordinance, or a formal item reference with substantive context.",
+                  "Uses a substantive description that distinguishes the item from other agenda business.",
+                  "Gives enough item detail that the reader can tell which measure the disposition was tied to."
+                ],
+                "not_match": [
+                  "Only says action was taken on 'the matter,' 'the item,' or 'it' without enough surrounding information to identify the measure.",
+                  "Only says discussion or action was deferred generally.",
+                  "Only identifies follow-up information rather than the acted-on ordinance, measure, or item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The Committee of the Whole/chair managed the segment and deferred action on the proposed ordinance.",
+            "The procedural stage was committee-stage discussion and deferral, not final Council passage, enactment, or actual ballot placement.",
+            "No final vote on the ordinance occurred in this segment.",
+            "Action on the ordinance was deferred to the June 15 meeting.",
+            "No vote result was stated for this ordinance in the segment."
+          ],
+          "fact_check_notes": [
+            "A correct later-handling clause does not cure a separate explicit claim that the ordinance passed, was adopted, or was placed on the ballot in this segment.",
+            "A broad label such as Council is not automatically wrong if the same context preserves committee-stage deferral, but a claim of final Council passage conflicts with procedural_stage and disposition_result.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The committee did not take final action or vote on the ordinance during this segment; action was deferred to the June 15 meeting.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "completed_in_session"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "actor": "The Committee of the Whole / chair managing the committee segment.",
+            "procedural_stage": "Committee-stage discussion and deferral; not final Council passage, enactment, or actual ballot placement.",
+            "disposition_result": [
+              "The ordinance was discussed.",
+              "No final vote occurred.",
+              "Action was deferred to June 15."
+            ],
+            "acted_on_item": "Proposed ordinance / charter amendment measure to move specified county-office elections to even-numbered years.",
+            "vote_result": "None stated for this ordinance; no ordinance vote occurred in the sampled segment."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Staff explained how the charter amendment would change county election years.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "The summary gives substantive briefing content, not a committee disposition on an acted-on item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The chair deferred action to June 15.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is not identified specifically."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The Committee of the Whole deferred action on the proposed ordinance moving county-office elections to even-numbered years until June 15, with no vote taken in the segment.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The disposition, item, stage, and vote status are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The Committee of the Whole unanimously passed Proposed Ordinance 2022-0180 and placed the charter amendment on the November 2022 ballot.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The acted-on item and disposition are specific, but the vote result, procedural stage, and disposition result contradict the event sheet."
+          }
+        ],
+        "slot": "O",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that the body took a recognizable procedural disposition on the election-timing ordinance, measure, or acted-on item.",
+                "States that action was deferred, continued, advanced, approved, rejected, recommended, or otherwise disposed of in relation to an identifiable item; stage accuracy is handled by Fact Check.",
+                "States that the item was set for later handling as the body’s disposition in the segment."
+              ],
+              "not_match": [
+                "Only says the body discussed, heard, questioned, or received a briefing on the item.",
+                "Only describes the substantive election-timing proposal without saying what the body did procedurally in the segment.",
+                "Only mentions future analysis or follow-up materials without tying them to a disposition on the acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item as the election-timing ordinance, charter measure, ballot-measure ordinance, or a formal item reference with substantive context.",
+                "Uses a substantive description that distinguishes the item from other agenda business.",
+                "Gives enough item detail that the reader can tell which measure the disposition was tied to."
+              ],
+              "not_match": [
+                "Only says action was taken on 'the matter,' 'the item,' or 'it' without enough surrounding information to identify the measure.",
+                "Only says discussion or action was deferred generally.",
+                "Only identifies follow-up information rather than the acted-on ordinance, measure, or item."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Opening chair comments; transition after turnout-data questions; closing meeting preview.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "defer",
+            "June 15th",
+            "take this up",
+            "next meeting",
+            "take up action"
+          ]
+        }
+      },
+      "B": {
+        "label": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "Captures prior conditions, legal context, advocacy, turnout background, or similar context that shaped the current charter-amendment item or how it was discussed.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States an existing election-schedule condition, legal default, charter exception, advocacy origin, turnout condition, representativeness concern, or similar background connected to the current proposal.",
+                  "States a prior or currently existing condition that shaped the election-timing item or how it was framed.",
+                  "States access-to-elections, participation, or legal-structure background as its own proposition rather than merely as the solution."
+                ],
+                "not_match": [
+                  "Only states the proposed election-timing policy change without giving background context.",
+                  "Only states the body's procedural disposition or later meeting path.",
+                  "Only states transition terms, ballot placement, repeal of sections, or other operative payload."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the background condition to the current election-timing proposal, charter-amendment form, discussion frame, or reason the item came forward.",
+                  "Shows how a legal, charter, access, turnout, advocacy, or representativeness background shaped the proposal or its form.",
+                  "Connects the stated background to the current item, proposal form, or discussion frame."
+                ],
+                "not_match": [
+                  "States election-law, access, or turnout background as disconnected trivia without tying it to the current item, proposal, discussion frame, or amendment form.",
+                  "Mentions election access generally without linking it to the election-timing proposal.",
+                  "Only says data or materials were requested later, without explaining what background condition shaped the item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "King County currently elects the executive, assessor, elections director, and councilmembers in odd-numbered years under its charter.",
+            "State law was described as defaulting county-office elections to even-numbered years unless a home-rule charter provides otherwise.",
+            "Community advocates brought the proposal forward as an elections-access measure.",
+            "Staff reported materially higher average King County general-election turnout in even-numbered years than in odd-numbered years.",
+            "These conditions and access concerns formed context for discussing whether to place a charter amendment before voters."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to state every background condition. Check only explicit claims about the listed fields.",
+            "The existing charter schedule is currently existing; advocate involvement and prior access efforts were already-occurring background; turnout/access concerns recurred as policy background.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The item was shaped by King County's current odd-year charter election schedule, the state-law default for even-year county-office elections unless a home-rule charter provides otherwise, and an access-to-elections rationale from community advocates.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "already_occurred",
+              "recurring_concern"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "trigger_condition": [
+              "King County currently elects the executive, assessor, elections director, and councilmembers in odd-numbered years under its charter.",
+              "State law defaults county-office elections to even-numbered years unless a home-rule charter provides otherwise.",
+              "Community advocates brought the proposal forward as an elections-access measure.",
+              "Staff reported higher average general-election turnout in even-numbered years than in odd-numbered years."
+            ],
+            "agenda_connection": "These conditions and access concerns formed the stated context for discussing whether to place a charter amendment before voters."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The proposed ordinance would place a charter amendment on the November 2022 ballot.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is operative payload, not agenda-setting background or precipitating context."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Odd-year turnout issues existed in King County.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A background condition is visible, but the connection to the current charter-amendment item or discussion form is not visible."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The proposal arose against King County's existing odd-year charter schedule and advocates' election-access concerns, with staff noting that state law generally defaults county offices to even-year elections unless a home-rule charter says otherwise.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The background conditions and their connection to the current item are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The item came forward because state law required King County to hold these county-office elections in odd-numbered years unless voters amended the charter.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a specific legal background and connection, but reverses the state-law default/home-rule relationship."
+          }
+        ],
+        "slot": "B",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States an existing election-schedule condition, legal default, charter exception, advocacy origin, turnout condition, representativeness concern, or similar background connected to the current proposal.",
+                "States a prior or currently existing condition that shaped the election-timing item or how it was framed.",
+                "States access-to-elections, participation, or legal-structure background as its own proposition rather than merely as the solution."
+              ],
+              "not_match": [
+                "Only states the proposed election-timing policy change without giving background context.",
+                "Only states the body's procedural disposition or later meeting path.",
+                "Only states transition terms, ballot placement, repeal of sections, or other operative payload."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Connects the background condition to the current election-timing proposal, charter-amendment form, discussion frame, or reason the item came forward.",
+                "Shows how a legal, charter, access, turnout, advocacy, or representativeness background shaped the proposal or its form.",
+                "Connects the stated background to the current item, proposal form, or discussion frame."
+              ],
+              "not_match": [
+                "States election-law, access, or turnout background as disconnected trivia without tying it to the current item, proposal, discussion frame, or amendment form.",
+                "Mentions election access generally without linking it to the election-timing proposal.",
+                "Only says data or materials were requested later, without explaining what background condition shaped the item."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff briefing background section; Director Wise’s response on state law; Councilmember Balducci’s sponsor remarks.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "a little bit of background",
+            "by default",
+            "currently elected in odd years",
+            "proposal came ... from advocates",
+            "access to elections"
+          ]
+        }
+      },
+      "N": {
+        "label": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "Captures the operative payload carried by the proposed ordinance/charter amendment: ballot placement, transition terms, term lengths, affected offices, dates, and repeals beyond the bare procedural handling.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States an operative requirement, condition, scope, timing, repeal, transition mechanism, ballot-placement step, or other payload as attached to the ordinance, measure, or action.",
+                  "States implementation content as something the proposed action would carry, require, set, or put before voters.",
+                  "Uses single-sentence attachment or adjacent-sentence anaphora to connect the payload to the acted-on item."
+                ],
+                "not_match": [
+                  "Only says the body deferred, discussed, or would later take action on the item.",
+                  "Only gives background about existing election schedules or legal defaults without attaching it as operative payload.",
+                  "Only states concerns about costs, ballot length, turnout, campaign costs, or evidence gaps."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Includes an identifiable numeric or scalar payload facet, such as a term length, date, transition period, count, district grouping, or other measured timing/scope value.",
+                  "Includes a numeric implementation detail attached to the ordinance, measure, or payload."
+                ],
+                "not_match": [
+                  "Only says the ordinance had implementation details without an identifiable number, date, duration, count, or measured value.",
+                  "Only states a generic election-timing policy direction without an attached operative numeric, scalar, date, term, or scope facet."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names an identifiable requirement, mechanism, condition, or operative step carried by the ordinance or measure.",
+                  "Names a voter-submission requirement, transition-term mechanism, repeal mechanism, or similar operative payload without relying on exact source-correct values for Presence."
+                ],
+                "not_match": [
+                  "Only says the proposal would make changes without naming a requirement, condition, restriction, mechanism, or operative step.",
+                  "Only says the item would be discussed again later."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies an applicable office group, category, district grouping, population, geography, or other boundary defining what the payload applies to.",
+                  "Distinguishes one affected group or scope category from another as part of the payload.",
+                  "Identifies specified county offices or office categories as the scope of the operative payload."
+                ],
+                "not_match": [
+                  "Only says county elections generally without an applicable office group, category, or other scope boundary.",
+                  "Only identifies voters or the body as procedural actors rather than the payload scope."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "Includes an identifiable ballot date, effective date, transition period, deadline, sunset, or return-to-normal timing as part of the payload.",
+                  "States a time boundary attached to what the ordinance or measure would do."
+                ],
+                "not_match": [
+                  "Only says the ordinance would take effect later without an identifiable date or time boundary.",
+                  "Only says the item would return to a later meeting without attaching that date or timing to the ordinance payload."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the proposed ordinance / charter amendment concerning King County county-office election timing.",
+            "The ordinance would place a charter amendment before voters at the November 8, 2022 general election if adopted.",
+            "If approved by voters, the amendment would move specified county-office elections from odd-numbered to even-numbered years.",
+            "It would use one-time three-year transition terms and then return later terms to four years.",
+            "The Executive and Council districts 1, 3, 5, 7, and 9 would have a 2025-to-2028 transition term, then four-year terms starting in 2028.",
+            "The Assessor, Director of Elections, and Council districts 2, 4, 6, and 8 would have a 2023-to-2026 transition term, then four-year terms starting in 2026.",
+            "The proposed ordinance also repealed charter sections that would no longer apply."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to reproduce all dates, offices, or term groups. If it states a scalar, date, term length, office group, or baseline, compare both the value and what it is attached to.",
+            "The payload was future-effect and remained contingent on later Council action and voter approval. A claim that these changes already took legal effect in the segment conflicts with temporal_status.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The proposed ordinance would place a charter amendment on the November 8, 2022 ballot; if approved, it would shift specified King County offices to even-year elections using one-time three-year transition terms and later four-year terms, and it would repeal obsolete charter sections.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "pending_future_handling"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "payload_carrier": "Proposed ordinance / charter amendment concerning King County county-office election timing.",
+            "payload_content": [
+              "Place a charter amendment before voters at the November 8, 2022 general election.",
+              "Move specified county-office elections from odd-numbered years to even-numbered years.",
+              "Use one-time three-year transition terms for affected offices.",
+              "Resume four-year terms after the transition.",
+              "Repeal charter sections that would no longer apply."
+            ],
+            "payload_scope": [
+              "County Executive and Council districts 1, 3, 5, 7, and 9: transition term 2025 to 2028; four-year terms starting in 2028.",
+              "County Assessor, County Director of Elections, and Council districts 2, 4, 6, and 8: transition term 2023 to 2026; four-year terms starting in 2026.",
+              "The Prosecuting Attorney was already elected in even-numbered years under state law."
+            ],
+            "payload_scalar_or_baseline": [
+              "November 8, 2022: general election date for voter ratification or rejection if the ordinance is adopted.",
+              "Three years: one-time transition-term length.",
+              "Four years: normal term length after transition.",
+              "2023 to 2026 and 2025 to 2028: transition-term windows for the two office groupings."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee deferred the ordinance until June 15.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is procedural handling, not operative payload."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The proposed ordinance included implementation details for the election-year change.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload attached to the ordinance is visible, but no qualifying number, named requirement, scope boundary, or date cutoff is stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The ordinance would send the charter amendment to voters on November 8, 2022 and, if approved, use one-time three-year transition terms before returning affected offices to four-year terms.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The attached payload includes source-consistent named requirements, dates, and term lengths."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The ordinance would create one-time five-year transition terms for the affected county offices before returning them to four-year terms.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The payload is specific enough for Presence, but the transition-term length contradicts the event sheet."
+          }
+        ],
+        "slot": "N",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "States an operative requirement, condition, scope, timing, repeal, transition mechanism, ballot-placement step, or other payload as attached to the ordinance, measure, or action.",
+                "States implementation content as something the proposed action would carry, require, set, or put before voters.",
+                "Uses single-sentence attachment or adjacent-sentence anaphora to connect the payload to the acted-on item."
+              ],
+              "not_match": [
+                "Only says the body deferred, discussed, or would later take action on the item.",
+                "Only gives background about existing election schedules or legal defaults without attaching it as operative payload.",
+                "Only states concerns about costs, ballot length, turnout, campaign costs, or evidence gaps."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "Includes an identifiable numeric or scalar payload facet, such as a term length, date, transition period, count, district grouping, or other measured timing/scope value.",
+                "Includes a numeric implementation detail attached to the ordinance, measure, or payload."
+              ],
+              "not_match": [
+                "Only says the ordinance had implementation details without an identifiable number, date, duration, count, or measured value.",
+                "Only states a generic election-timing policy direction without an attached operative numeric, scalar, date, term, or scope facet."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "Names an identifiable requirement, mechanism, condition, or operative step carried by the ordinance or measure.",
+                "Names a voter-submission requirement, transition-term mechanism, repeal mechanism, or similar operative payload without relying on exact source-correct values for Presence."
+              ],
+              "not_match": [
+                "Only says the proposal would make changes without naming a requirement, condition, restriction, mechanism, or operative step.",
+                "Only says the item would be discussed again later."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "Identifies an applicable office group, category, district grouping, population, geography, or other boundary defining what the payload applies to.",
+                "Distinguishes one affected group or scope category from another as part of the payload.",
+                "Identifies specified county offices or office categories as the scope of the operative payload."
+              ],
+              "not_match": [
+                "Only says county elections generally without an applicable office group, category, or other scope boundary.",
+                "Only identifies voters or the body as procedural actors rather than the payload scope."
+              ]
+            },
+            {
+              "name": "date_cutoff",
+              "match": [
+                "Includes an identifiable ballot date, effective date, transition period, deadline, sunset, or return-to-normal timing as part of the payload.",
+                "States a time boundary attached to what the ordinance or measure would do."
+              ],
+              "not_match": [
+                "Only says the ordinance would take effect later without an identifiable date or time boundary.",
+                "Only says the item would return to a later meeting without attaching that date or timing to the ordinance payload."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Opening chair introduction; Central Staff briefing on election-schedule mechanics and transition terms.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "send this to the voters",
+            "three year term",
+            "four year terms",
+            "2023 to 2026",
+            "2025 to 2028",
+            "repeals"
+          ]
+        }
+      },
+      "L": {
+        "label": "L",
+        "name": "Concrete Concern",
+        "slot_purpose": "Captures concrete concerns, harms, obstacles, risks, or tradeoffs raised about the proposal; a local anchor is not required for Presence.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concrete concern, risk, obstacle, cost, tradeoff, evidence gap, or campaign/election-design burden raised about the proposal.",
+                  "States problem-side language about ballot administration, cost allocation, ballot position, voter drop-off, campaign burden, public-financing conditions, turnout evidence, or another concrete concern.",
+                  "Frames the content as a harm, risk, difficulty, uncertainty, or tradeoff rather than merely as a solution or policy goal."
+                ],
+                "not_match": [
+                  "Only states a policy goal such as improving access or turnout without problem-side concern language.",
+                  "Only describes the ordinance payload, transition terms, or meeting disposition.",
+                  "Only says questions were asked or data was discussed without saying what concern, obstacle, risk, uncertainty, or tradeoff was involved."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Specifies what the concern was about: an operational burden, cost-shift issue, ballot-order/drop-off issue, campaign-cost barrier, financing condition, comparable-data gap, or similar concrete mechanism.",
+                  "Names a concrete affected mechanism, cost category, analytic gap, or election-design tradeoff.",
+                  "May include a local example as diagnostic detail, but the concern content itself is the Presence target."
+                ],
+                "not_match": [
+                  "Only says concerns were raised, tradeoffs were discussed, or members had questions without identifying the concern content.",
+                  "Only says there were costs or risks in generic terms without specifying what kind of cost, risk, obstacle, or tradeoff.",
+                  "Only states that more information was requested, without identifying the underlying concern."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Potential two-page ballots could increase printing, storage, space, and sorting costs, but staff did not say two-page ballots were certain.",
+            "Election-cost allocation could shift among King County, the state, and local jurisdictions depending on which jurisdictions appear on a ballot.",
+            "The City of Kent example said that if King County had not appeared on the 2015 primary ballot, Kent's cost would have gone from about $43,000 to about $62,000.",
+            "County races would appear after federal and state races, raising a ballot drop-off concern.",
+            "Campaigns might face higher costs to reach more voters, and King County no longer had public financing.",
+            "Elections staff did not identify clear, directly comparable data proving the turnout effect and indicated more analysis might be needed."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence. If the summary explicitly names King County, local jurisdictions, City of Kent, South King County, or another anchor, compare it under local_anchor.",
+            "Most operational, cost, ballot-order, campaign-cost, and turnout-data concerns were hypothetical_or_risk; lack of public financing was currently existing; additional analysis was pending.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Participants raised concerns and tradeoffs about possible two-page ballots, shifted election-cost allocations, down-ballot drop-off, higher campaign costs without county public financing, and uncertainty about comparable turnout data.",
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "obstacle_content": [
+              "Potential two-page ballots could increase printing, storage, space, and sorting costs, but staff did not say they were certain.",
+              "Cost allocation could shift among King County, the state, and local jurisdictions.",
+              "County races would appear after federal and state races, raising ballot drop-off concerns.",
+              "Campaigns might face higher costs to reach more voters, and the county no longer had public financing.",
+              "Comparable data showing turnout effects was difficult to identify and additional analysis was requested."
+            ],
+            "local_anchor": [
+              "King County",
+              "local jurisdictions",
+              "City of Kent example for 2015 primary cost allocation",
+              "South King County jurisdictions as examples of low odd-year turnout"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The ordinance would send a charter amendment to voters and create transition terms for affected offices.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This describes payload, not a concrete concern or tradeoff."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Members raised concerns about the proposal.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Members raised concrete concerns about possible two-page ballots increasing election costs, cost shifts to local jurisdictions, down-ballot drop-off, and higher campaign costs without public financing.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concerns are specific and source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "Staff said the change would definitely create two-page ballots and would eliminate campaign-cost barriers because King County still had public financing.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The concern content is specific enough for Presence, but it contradicts the event sheet on certainty and public-financing status."
+          }
+        ],
+        "slot": "L",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States a concrete concern, risk, obstacle, cost, tradeoff, evidence gap, or campaign/election-design burden raised about the proposal.",
+                "States problem-side language about ballot administration, cost allocation, ballot position, voter drop-off, campaign burden, public-financing conditions, turnout evidence, or another concrete concern.",
+                "Frames the content as a harm, risk, difficulty, uncertainty, or tradeoff rather than merely as a solution or policy goal."
+              ],
+              "not_match": [
+                "Only states a policy goal such as improving access or turnout without problem-side concern language.",
+                "Only describes the ordinance payload, transition terms, or meeting disposition.",
+                "Only says questions were asked or data was discussed without saying what concern, obstacle, risk, uncertainty, or tradeoff was involved."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Specifies what the concern was about: an operational burden, cost-shift issue, ballot-order/drop-off issue, campaign-cost barrier, financing condition, comparable-data gap, or similar concrete mechanism.",
+                "Names a concrete affected mechanism, cost category, analytic gap, or election-design tradeoff.",
+                "May include a local example as diagnostic detail, but the concern content itself is the Presence target."
+              ],
+              "not_match": [
+                "Only says concerns were raised, tradeoffs were discussed, or members had questions without identifying the concern content.",
+                "Only says there were costs or risks in generic terms without specifying what kind of cost, risk, obstacle, or tradeoff.",
+                "Only states that more information was requested, without identifying the underlying concern."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff cost and policy-considerations sections; Councilmember questions to Elections staff; Elections staff responses on cost allocation, ballot order, turnout prediction, and comparable data.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "potential operational change or cost",
+            "two page ballots",
+            "cost shifting",
+            "ballot drop off",
+            "public financing",
+            "barrier",
+            "difficult to predict",
+            "valid comparisons"
+          ]
+        }
+      },
+      "S": {
+        "label": "S",
+        "name": "Shared Concern Synthesis",
+        "slot_purpose": "Captures the recurring problem-side concern theme: low and less representative odd-year participation, plus uncertainty about whether an even-year move would solve it without down-ballot effects.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names a recurring problem-side theme about participation, representativeness, turnout, down-ballot voting, evidence uncertainty, or comparable election-effect concerns.",
+                  "Uses problem-side language such as lower participation, representativeness concern, voter drop-off concern, uncertainty, evidence gap, or lack of valid comparison.",
+                  "Frames the theme as a concern or tension rather than only as a policy improvement or alignment goal."
+                ],
+                "not_match": [
+                  "Only states that the proposal would improve access, align elections, or move races to another election cycle without naming the problem-side concern.",
+                  "Only states that the item was deferred or that materials were requested.",
+                  "Only lists isolated operational or campaign-cost concerns without connecting them to a recurring participation, representativeness, or turnout-effect theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Identifies the concern content as turnout, participation representativeness, electorate composition, down-ballot voting, ballot-position effect, or comparable-data uncertainty.",
+                  "Mentions a contrast between election cycles or electorates as the object of concern without requiring exact values for Presence.",
+                  "Names the uncertainty about whether changing the election cycle would actually affect voting in the targeted races."
+                ],
+                "not_match": [
+                  "Only says turnout was discussed or concerns were raised, without saying what the concern was.",
+                  "Only uses generic phrases such as election access concern or voter issue without identifying turnout, representativeness, drop-off, or comparable-data uncertainty.",
+                  "Only states an evidence detail without a problem-side concern theme."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was low and potentially less representative participation in odd-year county elections.",
+            "The theme also included uncertainty about whether moving county races to even years would solve that problem without down-ballot effects.",
+            "Staff reported average King County general-election turnout since 2010 as about 77% in even-numbered years and 47% in odd-numbered years.",
+            "Sponsor remarks connected odd-year participation to representativeness concerns involving age, race, wealth, renters, and broader electorate composition.",
+            "Members asked whether more voters would actually vote in county races on longer even-year ballots, including ballot drop-off and comparable-data questions."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state recurrence explicitly; recurrence is grounded in the event sheet. It must, however, name the concern theme in problem-side language for Presence.",
+            "Participation/representativeness was recurring and currently existing; projected turnout effects and ballot-dropoff uncertainty were hypothetical_or_risk.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme was that odd-year county elections may produce lower and less representative voter participation, while moving county races to even years raised uncertainty about ballot position, drop-off, and comparable turnout evidence.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ]
+          },
+          "source_facts_for_fact_check": {
+            "concern_theme": "Low and potentially less representative participation in odd-year county elections, and uncertainty about whether moving county races to even years would solve that problem without down-ballot effects.",
+            "concern_content": [
+              "Average King County general-election turnout since 2010 was reported as about 77% in even-numbered years and 47% in odd-numbered years.",
+              "Sponsor remarks connected odd-year participation to representativeness concerns involving age, race, wealth, renters, and broader electorate composition.",
+              "Members asked whether more voters would actually vote in county races if those races appeared on longer even-year ballots.",
+              "Ballot drop-off and lack of clear comparable examples were part of the recurring concern theme."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The ordinance would align county-office elections with federal and state elections.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states a policy direction, not a problem-side concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Members raised turnout concerns.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the content is too generic to identify the theme."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Members repeatedly focused on low and less representative odd-year participation and questioned whether county races would actually gain voters on longer even-year ballots because of down-ballot drop-off.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The recurring concern theme and content are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The recurring concern was that even-year county elections had much lower turnout than odd-year elections, with only about 47% turnout in even years and 77% in odd years.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The concern theme is specific, but the turnout comparison reverses the event-sheet values and meaning."
+          }
+        ],
+        "slot": "S",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names a recurring problem-side theme about participation, representativeness, turnout, down-ballot voting, evidence uncertainty, or comparable election-effect concerns.",
+                "Uses problem-side language such as lower participation, representativeness concern, voter drop-off concern, uncertainty, evidence gap, or lack of valid comparison.",
+                "Frames the theme as a concern or tension rather than only as a policy improvement or alignment goal."
+              ],
+              "not_match": [
+                "Only states that the proposal would improve access, align elections, or move races to another election cycle without naming the problem-side concern.",
+                "Only states that the item was deferred or that materials were requested.",
+                "Only lists isolated operational or campaign-cost concerns without connecting them to a recurring participation, representativeness, or turnout-effect theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies the concern content as turnout, participation representativeness, electorate composition, down-ballot voting, ballot-position effect, or comparable-data uncertainty.",
+                "Mentions a contrast between election cycles or electorates as the object of concern without requiring exact values for Presence.",
+                "Names the uncertainty about whether changing the election cycle would actually affect voting in the targeted races."
+              ],
+              "not_match": [
+                "Only says turnout was discussed or concerns were raised, without saying what the concern was.",
+                "Only uses generic phrases such as election access concern or voter issue without identifying turnout, representativeness, drop-off, or comparable-data uncertainty.",
+                "Only states an evidence detail without a problem-side concern theme."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Staff policy-considerations section on turnout; Councilmember Perry/Zahilay/Dembowski questions; Councilmember Balducci sponsor remarks.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "low voter turnout",
+            "access to elections",
+            "fair and accessible",
+            "representative",
+            "ballot drop off",
+            "higher turnout",
+            "valid comparisons"
+          ]
+        }
+      },
+      "U": {
+        "label": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "Captures unfinished handling after the segment: the ordinance and requested Elections Department materials remained pending for a later Committee of the Whole meeting.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly states that final handling, action, review, materials, analysis, or another workstream remained pending, unresolved, deferred, still open, or set to return.",
+                  "States that the identifiable item would proceed to a later meeting, later action, further discussion, or future consideration.",
+                  "States that requested materials, analysis, or follow-up remained to be provided."
+                ],
+                "not_match": [
+                  "Only states that the item was discussed or explained.",
+                  "Only states a completed disposition without indicating later handling remained pending or open.",
+                  "Only states a future legal effect of the amendment rather than unresolved handling after the segment."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies the pending item as the election-timing ordinance, charter measure, ballot-change item, or requested follow-up materials/analysis.",
+                  "Identifies the pending follow-up by type, such as sample materials, ballot-order analysis, turnout/drop-off analysis, campaign-cost information, or other responsive data.",
+                  "Uses a sufficiently specific description of the item or workstream that remained unfinished."
+                ],
+                "not_match": [
+                  "Only says something remained pending or more information was needed without identifying the item, measure, or workstream.",
+                  "Only says the body had future business generally.",
+                  "Only identifies the broader election topic without indicating what remained unfinished."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "States a concrete path to a later committee, body, meeting, final action, review, material-production step, or follow-up source.",
+                  "States that the item would return through a next-meeting or later-meeting path for further discussion, consideration, or possible action.",
+                  "States that materials or analysis were expected from an identifiable official, department, staff source, or process path."
+                ],
+                "not_match": [
+                  "Only says the item would be addressed later without naming a body, meeting, custody path, review process, or follow-up source.",
+                  "Only says voters might later ratify the amendment, which is a future legal effect rather than the unresolved committee handling path.",
+                  "Only mentions an unrelated future hearing or agenda item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "The ordinance was not finally acted on during the segment; later committee handling remained pending.",
+            "The pending item was the proposed ordinance / charter amendment to move specified King County county-office elections to even-numbered years.",
+            "Requested Elections Department follow-up materials and analyses also remained pending.",
+            "The handling path was return to the Committee of the Whole on June 15, with expected materials from Director Wise / Department of Elections, including a sample ballot, and possible action on the ordinance at that later meeting."
+          ],
+          "fact_check_notes": [
+            "Do not require every requested material to be listed. If a summary explicitly states a future body, date, destination, or follow-up source, compare it under handling_path.",
+            "A claim that the ordinance was finally resolved in this segment conflicts with pending_status.",
+            "Temporal status is reference context for the listed fact_check_fields; do not treat it as an additional hidden fact_check_field."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Final handling of the ordinance remained unresolved. The item was set to return at the June 15 Committee of the Whole meeting for further discussion and possible action, with requested follow-up materials expected from the Elections Department.",
+          "temporal_status": {
+            "primary": "pending_future_handling"
+          },
+          "source_facts_for_fact_check": {
+            "pending_status": "The ordinance was not finally acted on during the segment; later committee handling remained pending.",
+            "pending_item": [
+              "Proposed ordinance / charter amendment to move specified King County county-office elections to even-numbered years.",
+              "Requested Elections Department follow-up materials and analyses."
+            ],
+            "handling_path": [
+              "Return to the Committee of the Whole on June 15.",
+              "Expected materials from Director Wise / Department of Elections, including a sample ballot.",
+              "Possible action on the ordinance at that later meeting."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee discussed the proposed charter amendment and heard staff answer questions.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "No pendingness or unfinished handling is stated."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Something about the ordinance remained pending after the meeting.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Final action on the ordinance remained pending and the item was set to return to the Committee of the Whole on June 15 with Elections Department follow-up materials, including a sample ballot.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The pending item, status, and handling path are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "Final action on the ordinance remained pending for a July 1 full Council vote, with follow-up materials expected from the state elections office.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary has pendingness, item, and path specificity, but the date/body/source path contradicts the event sheet."
+          }
+        ],
+        "slot": "U",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "Explicitly states that final handling, action, review, materials, analysis, or another workstream remained pending, unresolved, deferred, still open, or set to return.",
+                "States that the identifiable item would proceed to a later meeting, later action, further discussion, or future consideration.",
+                "States that requested materials, analysis, or follow-up remained to be provided."
+              ],
+              "not_match": [
+                "Only states that the item was discussed or explained.",
+                "Only states a completed disposition without indicating later handling remained pending or open.",
+                "Only states a future legal effect of the amendment rather than unresolved handling after the segment."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies the pending item as the election-timing ordinance, charter measure, ballot-change item, or requested follow-up materials/analysis.",
+                "Identifies the pending follow-up by type, such as sample materials, ballot-order analysis, turnout/drop-off analysis, campaign-cost information, or other responsive data.",
+                "Uses a sufficiently specific description of the item or workstream that remained unfinished."
+              ],
+              "not_match": [
+                "Only says something remained pending or more information was needed without identifying the item, measure, or workstream.",
+                "Only says the body had future business generally.",
+                "Only identifies the broader election topic without indicating what remained unfinished."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "States a concrete path to a later committee, body, meeting, final action, review, material-production step, or follow-up source.",
+                "States that the item would return through a next-meeting or later-meeting path for further discussion, consideration, or possible action.",
+                "States that materials or analysis were expected from an identifiable official, department, staff source, or process path."
+              ],
+              "not_match": [
+                "Only says the item would be addressed later without naming a body, meeting, custody path, review process, or follow-up source.",
+                "Only says voters might later ratify the amendment, which is a future legal effect rather than the unresolved committee handling path.",
+                "Only mentions an unrelated future hearing or agenda item."
+              ]
+            }
+          ]
+        },
+        "answer_locality": "Post-question transition to Councilmember Balducci; final chair remarks; closing announcement of the next Committee of the Whole agenda.",
+        "marker_presence": {
+          "present": true,
+          "markers": [
+            "defer",
+            "June 15",
+            "sample ballot",
+            "take this up",
+            "next meeting",
+            "take up action"
+          ]
+        }
+      }
+    }
+  }

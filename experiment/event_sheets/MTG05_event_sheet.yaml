@@ -1,0 +1,838 @@
+segment_id: "MTG5"
+segment_dir: "05_LongBeachCC_01192021"
+meeting_id: "LongBeachCC_01192021"
+uid: "LongBeachCC_01192021_21-0056"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet — MTG05
+
+  ## Segment-level note
+
+  The transcript segment covers Long Beach City Council Item 26 on inclusionary housing, a no net loss ordinance, and an inclusionary-housing in-lieu-fee resolution. The transcript ends immediately after the first roll-call vote, when the City Attorney states that two additional votes are still needed. Therefore, this event sheet treats the first vote on the inclusionary zoning / inclusionary housing ordinance as completed in-session, while treating the no net loss ordinance vote, the fee-resolution vote, later readings, and 120-day staff return items as pending or future handling unless separately stated as part of the motion.
+
+  ---
+
+  ## Slot T — Topic / Framing
+
+  ```yaml
+  label: T
+  summary: >
+    The segment substantively concerns Long Beach affordable-housing policy,
+    specifically an inclusionary housing ordinance, a citywide no net loss
+    ordinance, and a resolution establishing inclusionary-housing in-lieu fees.
+    The policy direction was to create, preserve, and strengthen affordable
+    housing requirements, with the inclusionary housing ordinance applying to
+    downtown and Midtown, the no net loss ordinance applying citywide, and the
+    fee resolution governing developer in-lieu payments connected to the
+    inclusionary ordinance.
+  evidence:
+    - >
+      Agenda introduction: "Recommendation to declare ordinance. Amending the
+      Long Beach Municipal Code relating to inclusionary housing and for the
+      purpose of implementing California Senate Bill 330 ... and adopt a
+      resolution establishing an inclusionary housing in lieu fee citywide."
+    - >
+      Staff framing: the City Attorney described three related items: an
+      inclusionary housing ordinance applying to downtown and Midtown, a no net
+      loss ordinance applying citywide, and a resolution establishing in-lieu
+      fees payable by developers instead of providing affordable units on site.
+    - >
+      Council framing: Councilwoman Zendejas moved to accept staff's
+      recommendation on the inclusionary housing ordinance and associated no net
+      loss ordinance, with amendments and report-back requests intended to
+      strengthen affordable housing policy.
+  source_vocabulary:
+    - inclusionary housing ordinance
+    - no net loss ordinance
+    - Long Beach Municipal Code
+    - California Senate Bill 330 / SB 330
+    - in lieu fee
+    - affordable units on site
+    - downtown and Midtown
+    - citywide
+    - affordable housing requirements
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - >
+        The policy package was under Council consideration during the segment.
+        The first vote on the inclusionary zoning / inclusionary housing
+        ordinance carried in-session.
+      - >
+        The no net loss vote, the fee-resolution vote, later reading/final
+        reading, and multiple staff report-backs remained pending at the point
+        where the transcript ends.
+  source_context_for_fact_check:
+    subject: >
+      Long Beach affordable-housing land-use policy, centered on inclusionary
+      housing, no net loss, and developer in-lieu fees.
+    policy_direction:
+      - >
+        Amend the Long Beach Municipal Code relating to inclusionary housing.
+      - >
+        Implement SB 330 through an associated no net loss ordinance.
+      - >
+        Establish inclusionary-housing in-lieu fees, and consider amendments or
+        staff return items to strengthen fee use, affordability duration, and
+        replacement-unit rules.
+    target:
+      - >
+        Inclusionary housing ordinance: portion of Long Beach generally known as
+        downtown and Midtown.
+      - >
+        No net loss ordinance: citywide.
+      - >
+        In-lieu-fee resolution: tied to the inclusionary housing ordinance and
+        developer payments in lieu of on-site affordable units.
+    not_supported:
+      - >
+        The source does not support treating the segment as primarily about an
+        unrelated housing program, homelessness services, or tenant eviction law
+        outside the inclusionary / no net loss / in-lieu-fee policy package.
+  answer_locality:
+    - agenda introduction at the beginning of Item 26
+    - Deputy City Attorney Rich Anthony's staff explanation
+    - Councilwoman Zendejas's motion and Council comments
+  marker_presence:
+    subject_identified: explicit
+    policy_direction: explicit
+    target: explicit
+    markers:
+      - "inclusionary housing"
+      - "no net loss"
+      - "in lieu fee"
+      - "downtown and the Midtown"
+      - "citywide"
+  ```
+
+  ---
+
+  ## Slot O — Outcome / Position
+
+  ```yaml
+  label: O
+  summary: >
+    The Council took an in-session disposition on the first of three required
+    votes. After Councilwoman Zendejas's motion and supporting comments, a
+    roll-call vote was taken and the motion carried. The City Attorney then
+    clarified that the first vote was for the inclusionary zoning / inclusionary
+    housing ordinance, and that two more votes were still needed: one on the no
+    net loss ordinance and one on the in-lieu-fee resolution.
+  evidence:
+    - >
+      Staff warned before deliberation that three separate votes would be needed:
+      the inclusionary housing ordinance, the no net loss ordinance, and the
+      resolution establishing in-lieu fees.
+    - >
+      Councilwoman Zendejas moved to accept staff's recommendation on the
+      inclusionary housing and associated no net loss ordinances, with amendments
+      and report-back requests.
+    - >
+      After roll call, the mayor stated that the motion carried.
+    - >
+      The City Attorney then stated: "The first vote was the inclusionary zoning
+      ordinance. The next vote will be the no net loss ordinance. And then the
+      final vote will be on the resolution."
+  source_vocabulary:
+    - motion carries
+    - roll call vote
+    - first vote
+    - inclusionary zoning ordinance
+    - inclusionary housing ordinance
+    - no net loss ordinance
+    - resolution establishing in lieu fees
+    - three different votes required
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - pending_future_handling
+    notes:
+      - >
+        Completed in-session: the first vote / motion carried on the inclusionary
+        zoning ordinance.
+      - >
+        Pending in the transcript: the no net loss ordinance vote and the
+        in-lieu-fee resolution vote.
+  source_context_for_fact_check:
+    actor: Long Beach City Council
+    procedural_stage:
+      completed:
+        - >
+          In-session Council vote on the first of three required votes, identified
+          by the City Attorney as the inclusionary zoning ordinance.
+      pending_or_not_shown_in_transcript:
+        - no net loss ordinance vote
+        - resolution establishing inclusionary-housing in-lieu fees
+        - later/final reading referenced in the agenda introduction
+    disposition_result:
+      - >
+        The first motion carried.
+      - >
+        The transcript does not show final completion of all three votes.
+    acted_on_item:
+      completed_vote: inclusionary zoning / inclusionary housing ordinance
+      pending_votes:
+        - no net loss ordinance
+        - in-lieu-fee resolution
+    vote_result:
+      value: motion carried
+      numeric_count: not reliably stated in the transcript
+      attached_to: first vote / inclusionary zoning ordinance
+    not_supported:
+      - >
+        The source does not support saying that all three votes were completed in
+        the transcript.
+      - >
+        The source does not support saying that the no net loss ordinance or the
+        in-lieu-fee resolution had already passed by the transcript endpoint.
+  answer_locality:
+    - staff procedural note before public comment
+    - Councilwoman Zendejas's motion
+    - roll-call sequence near the end
+    - City Attorney clarification after the first vote
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: explicit
+    acted_on_item_specific: explicit
+    markers:
+      - "motion carries"
+      - "first vote"
+      - "inclusionary zoning ordinance"
+      - "next vote"
+      - "final vote"
+  ```
+
+  ---
+
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >
+    The current item was shaped by prior Council direction, state-law
+    implementation, delayed timing, and public-facing affordable-housing crisis
+    concerns. Staff said the Council had directed the City Attorney on July 14 to
+    return with three related items. The agenda connected the ordinance to SB 330.
+    Staff also noted the item had been hoped to take effect on January 1 but was
+    a couple of months late. Public commenters added background about COVID-19,
+    racial inequity, RHNA affordable-housing need, expiring or threatened units,
+    and displacement risk as reasons the policy should be stronger and faster.
+  evidence:
+    - >
+      Staff said that back on July 14, the Council directed the City Attorney's
+      office to bring back three related items.
+    - >
+      The agenda described the ordinance as relating to inclusionary housing and
+      implementing California Senate Bill 330.
+    - >
+      Staff apologized for delay, saying they had hoped the item would be
+      effective January 1 but were a couple of months late.
+    - >
+      Public commenters cited the COVID pandemic, racial justice, regional
+      housing needs, eviction risk, and loss of affordable units as context for
+      strengthening the ordinances.
+  source_vocabulary:
+    - July 14 Council direction
+    - bring back three related items
+    - implementing California Senate Bill 330
+    - hoped to have this effective as of January one
+    - COVID pandemic
+    - racial justice
+    - regional housing needs assessment
+    - 11,160 units
+    - 2025 expiration date
+    - eviction moratoriums
+    - 60 day notices
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - >
+        Already occurred: July 14 Council direction, SB 330 context, and the
+        missed January 1 target date.
+      - >
+        Currently existing / risk context: commenters described ongoing pandemic,
+        eviction, displacement, and affordable-housing shortage conditions.
+  source_context_for_fact_check:
+    trigger_condition:
+      - >
+        Prior Council direction on July 14 caused the City Attorney's office to
+        return with an inclusionary housing ordinance, a no net loss ordinance,
+        and an in-lieu-fee resolution.
+      - >
+        The agenda tied the inclusionary housing ordinance to implementing SB 330.
+      - >
+        Staff framed the item as delayed relative to a hoped-for January 1
+        effective date.
+      - >
+        Public comment framed the need for stronger policy through housing
+        shortage, COVID-19 impacts, racial inequity, eviction/displacement risk,
+        and regional affordable-housing need.
+    agenda_connection:
+      - >
+        The background explains why the three-item affordable-housing package was
+        before Council and why councilmembers and commenters discussed amendments,
+        timing, fee structure, covenant duration, replacement-unit location, and
+        report-backs.
+    numeric_values:
+      - value: July 14
+        meaning: date of prior Council direction referenced by staff
+      - value: January 1
+        meaning: hoped-for effective date that staff said had been missed by a couple of months
+      - value: 2021 to 2029
+        meaning: RHNA period referenced by a public commenter
+      - value: 11,160 units
+        meaning: low and very low income housing need cited by a public commenter
+      - value: 2025
+        meaning: no net loss expiration / SB 330 sunset issue discussed by public comment and counsel
+      - value: 11 buildings
+        meaning: buildings with 60-day notices referenced by one public commenter
+    not_supported:
+      - >
+        The source does not support treating public crisis comments alone as the
+        formal legal trigger for the agenda item; the formal staff-side trigger
+        was Council's prior direction and SB 330 implementation.
+  answer_locality:
+    - agenda introduction
+    - Deputy City Attorney's opening explanation
+    - public comment sequence
+    - City Attorney explanation of SB 330 sunset / no net loss expiration
+  marker_presence:
+    precipitating_context_visible: explicit
+    connected_to_current_item_or_form: explicit
+    markers:
+      - "back on July 14th"
+      - "directed our office to bring back"
+      - "implementing California Senate Bill 330"
+      - "hoped to have this effective as of January one"
+      - "COVID pandemic"
+      - "regional housing needs assessment"
+  ```
+
+  ---
+
+  ## Slot N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >
+    The action package and Zendejas motion carried several operative terms and
+    requested follow-up items. The staff package included an inclusionary housing
+    ordinance for downtown and Midtown, a citywide no net loss ordinance, and an
+    in-lieu-fee resolution tied to the inclusionary ordinance. The Zendejas motion
+    requested 120-day staff analyses or recommendations on extending affordability
+    covenants beyond 55 years to perpetuity / life of project, dedicating rental
+    in-lieu fees to very low income unit production, tying fees to annual
+    construction-cost and land-cost indices, and ensuring replacement units are
+    on site. It also sought to amend the fee resolution so fees create new
+    affordable units rather than rehabilitating or subsidizing existing market-rate
+    units, and to eliminate the no net loss January 2025 expiration.
+  evidence:
+    - >
+      Staff described the three related items: an inclusionary housing ordinance
+      for downtown and Midtown, a citywide no net loss ordinance, and a fee
+      resolution for developers paying in lieu of providing affordable units on
+      site.
+    - >
+      Zendejas requested staff to report back in 120 days on extending
+      affordability covenants from 55 years to perpetuity / life of project.
+    - >
+      Zendejas requested a 120-day recommendation on dedicating rental-project
+      in-lieu fees to production of very low income units.
+    - >
+      Zendejas requested amending the resolution so fees create new affordable
+      units and are not used for rehabilitation or rent subsidies for existing
+      market-rate units.
+    - >
+      Zendejas requested a 120-day resolution tying in-lieu fees to an annual
+      index based on construction costs and land costs, using the Engineering
+      News-Record Construction Cost Index and median condominium sale prices.
+    - >
+      The City Attorney explained that eliminating the no net loss January 2025
+      sunset could be done without a new first reading, while requiring all
+      replacement units to be on site would be a substantive change requiring a
+      new first reading; Zendejas then requested a 120-day staff report on onsite
+      replacement units.
+  source_vocabulary:
+    - apply to downtown and Midtown
+    - applies citywide
+    - developers
+    - affordable units on site
+    - 120 days
+    - affordability covenants
+    - 55 years
+    - perpetuity / life of the project
+    - very low income units
+    - net new units
+    - rehabilitation or subsidize rents
+    - annual index
+    - Engineering News-Record Construction Cost Index
+    - median condominium sale prices
+    - January 2025
+    - replacement units on site
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - >
+        Some payload terms were part of the package under Council action in the
+        first vote, but the transcript ends before all three required votes.
+      - >
+        The 120-day analyses, possible later amendments, second reading, and
+        onsite-replacement recommendation were future/pending handling.
+  source_context_for_fact_check:
+    payload_carrier:
+      staff_package:
+        - inclusionary housing ordinance
+        - no net loss ordinance
+        - inclusionary-housing in-lieu-fee resolution
+      motion_or_requested_amendments:
+        - Councilwoman Zendejas's motion and follow-up requests
+    payload_content:
+      - >
+        Inclusionary housing ordinance applies to downtown and Midtown.
+      - >
+        No net loss ordinance applies citywide.
+      - >
+        Fee resolution establishes developer in-lieu fees connected to the
+        inclusionary housing ordinance, where developers may pay instead of
+        providing affordable units on site.
+      - >
+        Staff should evaluate extending affordability covenants for both
+        inclusionary housing and no net loss from 55 years to perpetuity / life
+        of project and return in 120 days.
+      - >
+        Staff should return in 120 days with a recommendation on dedicating
+        rental-project in-lieu fees to production of very low income units.
+      - >
+        Fee resolution should be amended so fees are used to create new
+        affordable units and not to rehabilitate or subsidize rents in existing
+        market-rate units.
+      - >
+        Staff should return in 120 days with a resolution to tie in-lieu fees to
+        an annual index based on construction costs and land costs.
+      - >
+        No net loss January 2025 expiration should be eliminated, according to
+        Zendejas's requested amendment after counsel said that could be done.
+      - >
+        Staff should return in 120 days with a recommendation on ensuring all
+        replacement units are on site, because counsel said directly amending that
+        requirement that night would trigger a new first reading.
+    payload_scope:
+      - downtown and Midtown for the inclusionary housing ordinance
+      - citywide for the no net loss ordinance
+      - rental projects for the in-lieu-fee dedication recommendation
+      - replacement units under the no net loss policy for onsite-location review
+    numeric_values:
+      - value: 3
+        meaning: separate votes required for the inclusionary ordinance, no net loss ordinance, and fee resolution
+      - value: 55 years
+        meaning: existing affordability covenant duration discussed for possible extension
+      - value: 120 days
+        meaning: report-back / recommendation period for several follow-up items
+      - value: 2025 / January 2025
+        meaning: no net loss expiration / SB 330 sunset issue proposed for elimination
+      - value: 2 miles
+        meaning: current replacement-housing location allowance described by counsel before the onsite-only report-back request
+      - value: Engineering News-Record Construction Cost Index
+        meaning: proposed construction-cost component for annual fee adjustment
+      - value: median condominium sale prices
+        meaning: proposed proxy for land-cost changes in annual fee adjustment
+    not_supported:
+      - >
+        The transcript does not support saying that every requested 120-day item
+        had already been completed.
+      - >
+        The transcript does not support saying that onsite replacement units were
+        directly required that night; the source says that direct amendment would
+        require a new first reading, so staff report-back was requested instead.
+  answer_locality:
+    - Deputy City Attorney's staff description of the three items
+    - Councilwoman Zendejas's motion
+    - City Attorney Mayes's answers on no net loss expiration and onsite replacement units
+    - City Attorney clarification after first vote
+  marker_presence:
+    payload_attached_to_action: explicit
+    quality_gate_options_present:
+      number: explicit
+      named_requirement: explicit
+      scope_boundary: explicit
+      date_cutoff: explicit
+    markers:
+      - "120 days"
+      - "55 years"
+      - "life of the project"
+      - "very low income units"
+      - "new, affordable units"
+      - "annual index"
+      - "January 2025"
+      - "within two mile"
+      - "on site"
+  ```
+
+  ---
+
+  ## Slot L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >
+    Public commenters and councilmembers stated concrete concerns about the
+    affordable-housing crisis, displacement, eviction risk during COVID-19,
+    racial inequity in rent burden, loss of existing affordable units, delayed
+    implementation from a three-year phase-in, insufficiently targeted in-lieu
+    fees, expiring affordability covenants, and offsite replacement units. These
+    concerns were stated as problem-side harms, risks, obstacles, or deficiencies
+    rather than merely as solution language.
+  evidence:
+    - >
+      Public comment described evictions during COVID-19 as deadly and said Long
+      Beach renters are mostly Black and other people of color, with Black women
+      most rent-burdened.
+    - >
+      Public comment cited a need for 11,160 low and very low income units and
+      argued that waiting three years for 11% affordability would cause
+      frontloading of development and fewer affordable units on the ground.
+    - >
+      Public comment said the current drafts fell short, fees were not narrow
+      enough, the no net loss 2025 expiration should be eliminated, replacement
+      units should be on site, and covenants should last for the life of the
+      project or in perpetuity.
+    - >
+      One speaker said local tenant advocates were working with 11 buildings
+      issued 60-day notices and warned that units being held during eviction
+      moratoriums could be lost.
+    - >
+      Councilwoman Allen described an acute housing shortage anticipated to get
+      worse if the Council did not act.
+  source_vocabulary:
+    - affordable housing crisis
+    - COVID pandemic
+    - evictions
+    - death sentence
+    - rent burdened
+    - frontloading of development
+    - displacement
+    - 60 day notices
+    - substantial rehabilitation
+    - unlawful detainers
+    - three year phase in
+    - falls short
+    - arbitrary end date
+    - market rate apartments
+    - replacement units on site
+    - life of the project / in perpetuity
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - hypothetical_or_risk
+      - recurring_concern
+    notes:
+      - >
+        Commenters described ongoing conditions and risks during the pandemic and
+        current housing market.
+      - >
+        Some concerns were future-facing risks, such as future displacement,
+        expiring covenants, frontloaded development, and insufficient affordable
+        units if policy implementation is delayed or weakened.
+  source_context_for_fact_check:
+    obstacle_content:
+      - >
+        Severe shortage of affordable housing, especially low and very low income
+        units.
+      - >
+        Risk that a three-year phase-in delays affordable-unit production and
+        encourages frontloading of development.
+      - >
+        Risk that in-lieu fees, if too broad or not indexed, will fail to produce
+        enough very low income / net new affordable units.
+      - >
+        Concern that alternative compliance methods and offsite land dedication
+        could weaken on-site affordable-unit production.
+      - >
+        Concern that no net loss policy expiration in 2025 would arbitrarily end
+        preservation protections.
+      - >
+        Concern that limited-duration affordability covenants, such as 55 or 50
+        years, allow affordable units to expire while buildings still exist.
+      - >
+        Concern that replacement units located away from the development causing
+        displacement are inadequate.
+      - >
+        Pandemic-era eviction and displacement risks, including 60-day notices,
+        substantial-rehabilitation claims, and unlawful detainers.
+    local_anchor:
+      - Long Beach generally
+      - downtown / District 1 neighborhood references from public comment
+      - 700 block of Pine or similar downtown block as transcribed imprecisely as "time"
+      - renters, low-income communities of color, Black renters, Black women
+    numeric_values:
+      - value: 10,000 additional deaths
+        meaning: nationwide eviction-related deaths during first six months of pandemic as cited by public comment
+      - value: 11,160 units
+        meaning: low and very low income housing need cited by public comment
+      - value: 11 percent
+        meaning: affordable set-aside for new rental units discussed by a public commenter
+      - value: 3 years
+        meaning: phase-in period criticized by public comment
+      - value: 2025
+        meaning: no net loss expiration criticized by public comment
+      - value: 11 buildings
+        meaning: tenant-advocate example of buildings with 60-day notices
+      - value: 55 or 50 years
+        meaning: limited covenant durations criticized by public comment
+    not_supported:
+      - >
+        The source supports these as concerns and speaker claims in the segment;
+        it does not independently adjudicate the external empirical truth of each
+        public-comment claim.
+  answer_locality:
+    - public comment by Elissa Tung
+    - public comment by Jordan Wynn
+    - public comment by Victor Sanchez
+    - public comment by Suzanne Brown
+    - public comment by Norberto Lopez
+    - public comment by Liane Noble
+    - public comment by Angela / Andrew O'Connor as transcribed
+    - Councilwoman Allen's support comments
+  marker_presence:
+    concrete_concern_language: explicit
+    specific_concern_content: explicit
+    markers:
+      - "evictions"
+      - "affordable housing crisis"
+      - "cannot afford"
+      - "falls short"
+      - "frontloading"
+      - "displacement"
+      - "60 day notices"
+      - "not wait three more years"
+  ```
+
+  ---
+
+  ## Slot S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme across the public comment and council discussion was
+    that Long Beach faced an urgent affordable-housing and displacement crisis,
+    and that the draft inclusionary housing / no net loss package needed stronger,
+    faster, and more durable protections. The recurring problem-side content
+    centered on delayed implementation, insufficient very low income production,
+    weak or misdirected in-lieu fees, expiring affordability protections, offsite
+    replacement units, and tenant displacement risk.
+  evidence:
+    - >
+      Multiple public commenters urged eliminating the three-year phase-in,
+      dedicating fees to very low income or net new units, indexing fees,
+      eliminating the 2025 no net loss expiration, requiring onsite replacement,
+      and making affordability covenants last for the life of the project or in
+      perpetuity.
+    - >
+      Councilwoman Zendejas's motion adopted several of those concern areas as
+      amendments or 120-day report-back requests.
+    - >
+      Councilwoman Allen said the city was in the middle of a housing crisis and
+      needed action now, while Vice Mayor Richardson described the recommendations
+      as making the policy stronger while keeping development feasible.
+  source_vocabulary:
+    - stronger inclusionary housing policy
+    - make this policy stronger
+    - affordable housing crisis
+    - displacement
+    - very low income units
+    - no net loss
+    - in lieu fees
+    - life of the project
+    - in perpetuity
+    - three year phase in
+    - 2025 expiration date
+    - on site replacement
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+      - pending_future_handling
+    notes:
+      - >
+        The concern recurred across several public comments and was then reflected
+        in Council motion items and support comments.
+      - >
+        Some problem content described current crisis conditions; other content
+        described risks if the policy remained too weak or was delayed.
+  source_context_for_fact_check:
+    concern_theme: >
+      Recurring concern that Long Beach's affordable-housing and displacement
+      crisis required stronger, faster, more durable inclusionary housing and no
+      net loss protections.
+    concern_content:
+      - >
+        The three-year phase-in was criticized as too slow and likely to reduce
+        near-term affordable-unit production.
+      - >
+        In-lieu fees were criticized unless limited to very low income / net new
+        unit production and tied to objective cost indices.
+      - >
+        The 2025 no net loss expiration was criticized as arbitrary.
+      - >
+        Affordability covenants were criticized as insufficient if they lasted
+        only 55 or 50 years rather than for life of project / perpetuity.
+      - >
+        Replacement units were criticized unless built on site, or in one public
+        comment, within one-half mile only if onsite replacement was impossible.
+      - >
+        Alternative compliance methods and offsite land dedication were criticized
+        as potential loopholes.
+    relationship_to_motion:
+      - >
+        Zendejas's motion addressed several recurring concerns by requesting
+        report-backs or amendments on covenants, in-lieu fee use, fee indexing,
+        the no net loss sunset, and onsite replacement units.
+    not_supported:
+      - >
+        The source does not support a claim that every public commenter raised
+        every concern; the theme is synthesized across multiple speakers.
+  answer_locality:
+    - public comment sequence as a whole
+    - Zendejas motion
+    - Allen, Richardson, and Price support comments
+  marker_presence:
+    problem_side_concern: explicit
+    specific_content: explicit
+    markers:
+      - "critical affordable housing policies"
+      - "cannot afford to wait"
+      - "falls short"
+      - "acute housing shortage"
+      - "make the policy stronger"
+      - "doesn't delay the implementation tonight"
+  ```
+
+  ---
+
+  ## Slot U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >
+    Several issues remained unfinished after the first in-session vote. The
+    agenda itself contemplated later final reading. Staff initially said three
+    votes were required, and after the first motion carried the City Attorney
+    stated that the no net loss ordinance vote and the fee-resolution vote still
+    remained. Zendejas's motion also created future return paths: 120-day staff
+    reports or recommendations on covenant duration, rental in-lieu fee dedication,
+    annual fee indexing, and onsite replacement units; no net loss would return
+    for second reading with the January 2025 sunset removed if adopted as
+    discussed.
+  evidence:
+    - >
+      The agenda recommended reading the ordinance the first time and leading it
+      over to the next regular Council meeting for final reading.
+    - >
+      Staff said three votes were required despite the single agenda item.
+    - >
+      After the first roll-call vote, the City Attorney clarified that two more
+      votes were still needed: the no net loss ordinance vote and the final vote
+      on the resolution.
+    - >
+      Zendejas repeatedly requested staff return in 120 days with analysis,
+      recommendations, or a resolution on covenant duration, in-lieu fee use,
+      fee indexing, and onsite replacement units.
+    - >
+      Counsel stated that requiring onsite replacement units directly that night
+      would be a substantive change requiring a new first reading, so Zendejas
+      requested a 120-day recommendation instead.
+  source_vocabulary:
+    - lead over to the next regular meeting
+    - Final Reading
+    - three different votes required
+    - next vote
+    - final vote
+    - report back in 120 days
+    - recommendation
+    - second reading
+    - new first reading
+    - pending
+    - further analysis
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - >
+        Completed in-session: first vote / motion carried for the inclusionary
+        zoning ordinance.
+      - >
+        Pending after that point: no net loss vote, fee-resolution vote, final
+        reading, second reading if applicable, and staff 120-day return items.
+  source_context_for_fact_check:
+    pending_status:
+      - >
+        The no net loss ordinance vote remained pending at the transcript
+        endpoint.
+      - >
+        The in-lieu-fee resolution vote remained pending at the transcript
+        endpoint.
+      - >
+        Final reading / later regular meeting handling was contemplated in the
+        agenda introduction.
+      - >
+        Multiple staff report-backs were due in 120 days.
+    pending_item:
+      - no net loss ordinance vote
+      - in-lieu-fee resolution vote
+      - later/final reading of the ordinance
+      - 120-day analysis on affordability covenant duration
+      - 120-day recommendation on rental in-lieu fees for very low income unit production
+      - 120-day resolution tying in-lieu fees to construction-cost and land-cost indices
+      - 120-day recommendation on onsite replacement units
+    handling_path:
+      - >
+        Ordinance read first time and led over to the next regular Council meeting
+        for final reading, as introduced in the agenda item.
+      - >
+        No net loss ordinance would return for a second reading with the January
+        2025 sunset eliminated, according to counsel's explanation.
+      - >
+        Onsite replacement-unit requirement would require a new first reading if
+        directly amended; the Council instead requested a 120-day staff report.
+      - >
+        Staff was asked to return in 120 days with specified analyses,
+        recommendations, or resolutions.
+    not_supported:
+      - >
+        The source does not support saying that the pending report-backs had
+        already occurred.
+      - >
+        The source does not support saying that the no net loss ordinance and fee
+        resolution were completed before the transcript ended.
+  answer_locality:
+    - agenda introduction
+    - Deputy City Attorney's explanation of three votes
+    - Zendejas motion and questions
+    - City Attorney Mayes's explanations
+    - City Attorney clarification after first vote
+  marker_presence:
+    pendingness_marker: explicit
+    pending_item_identifiable: explicit
+    handling_path_visible: explicit
+    markers:
+      - "lead over to the next regular meeting"
+      - "Final Reading"
+      - "three different votes required"
+      - "next vote"
+      - "final vote"
+      - "return in 120 days"
+      - "new first reading"
+  ```

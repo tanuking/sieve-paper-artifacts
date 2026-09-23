@@ -1,0 +1,616 @@
+segment_id: "MTG27"
+segment_dir: "27_BostonCC_04132022"
+meeting_id: "BostonCC_04132022"
+uid: "BostonCC_04132022_2022-0265"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "27",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "slot_name": "Topic/Framing",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "subject_identified": {
+                "match": [
+                  "The summary names the substantive subject as ARPA / Coronavirus State and Local Fiscal Recovery Fund support for the proposed Dorchester Field House.",
+                  "The summary identifies the Dorchester Field House proposal, the Boys and Girls Club of Dorchester / Martin Richard Foundation project, or ARPA-funded community infrastructure as the subject."
+                ],
+                "not_match": [
+                  "The summary only says that Docket 0265 was discussed, heard, voted on, or remained in committee without identifying the field house / ARPA funding subject.",
+                  "The summary describes only a general COVID recovery discussion or a generic grant item without the Dorchester Field House or equivalent substantive subject."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "policy_direction": {
+                "match": [
+                  "The summary states that the policy move was to use, commit, allocate, or consider ARPA / fiscal recovery funds to support the proposed field house.",
+                  "The summary describes the proposal as directing one-time ARPA funds toward a durable youth- and family-serving facility."
+                ],
+                "not_match": [
+                  "The summary only says the Council discussed or kept the item in committee, without saying what substantive funding move was being pursued.",
+                  "The summary frames the item as opposing, canceling, selling, or removing the field house unless it also clearly identifies the actual funding-support direction."
+                ]
+              },
+              "target": {
+                "match": [
+                  "The summary identifies the target as the proposed Dorchester Field House and its intended users, such as nearby students, youth, families, Dorchester / Columbia Point residents, or community members.",
+                  "The summary ties the funding direction to the field house project and student/community access."
+                ],
+                "not_match": [
+                  "The summary names ARPA spending but does not say what project, facility, population, or community the spending would support.",
+                  "The summary says the funds targeted an unrelated citywide program, school construction project, or neighborhood facility."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was potential use of ARPA / Coronavirus State and Local Fiscal Recovery Fund money for the proposed Dorchester Field House.",
+            "The policy direction discussed was supporting or funding the proposed field house with ARPA money, not final approval in this segment.",
+            "Targets included the proposed field house and intended users such as nearby students, youth, families, and Dorchester / Columbia Point communities.",
+            "The docket and proposal were live; funding approval and construction effects remained pending or future-facing."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to name every associated entity. Boys and Girls Club of Dorchester, the Martin Richard Foundation, Councilor Bach, and Councilor Baker are valid context when mentioned.",
+            "A final-approval claim is not required for T and, if stated as completed in this segment, conflicts with the event sheet's temporal status."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors discussed Docket 0265 and left it in committee.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "Topic Gate fails because the substantive ARPA-field-house subject is not identified."
+          },
+          {
+            "summary": "The segment concerned the proposed Dorchester Field House.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is identified, but the summary does not state the funding-support direction or target users."
+          },
+          {
+            "summary": "Councilors discussed using ARPA recovery funds to support the proposed Dorchester Field House as a youth and community facility for nearby students and Dorchester families.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary identifies the subject, policy direction, and target without contradicting the event sheet."
+          },
+          {
+            "summary": "Councilors discussed using ARPA funds to demolish the Dorchester Field House and move resources away from Dorchester youth.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The subject is specific enough for Presence, but the policy direction and target conflict with the event sheet."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "slot_name": "Outcome/Position",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "disposition_verb_tied_to_acted_on_item": {
+                "match": [
+                  "The summary states that Docket 0265 remained in committee.",
+                  "The summary states that the ARPA / Dorchester Field House item was retained, held, continued, or kept in committee."
+                ],
+                "not_match": [
+                  "The summary only describes discussion, testimony, support, questions, or concern without stating a disposition on an acted-on item.",
+                  "The summary says there may be future discussion but does not identify any in-session disposition."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "acted_on_item_specific": {
+                "match": [
+                  "The summary specifically names Docket 0265.",
+                  "The summary identifies the acted-on item as the ARPA / fiscal recovery fund order related to the Dorchester Field House request."
+                ],
+                "not_match": [
+                  "The summary says only that 'the item,' 'the matter,' or 'the proposal' remained somewhere without enough information to distinguish the acted-on item.",
+                  "The summary gives only a general committee status with no docket number or substantive item description."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The in-session procedural disposition was that Docket 0265 remained in committee.",
+            "The procedural stage was committee retention / continued consideration, not final Council passage, final grant allocation, or completed project approval.",
+            "The acted-on item was Docket 0265, the order concerning ARPA / Coronavirus State and Local Fiscal Recovery Fund grant money.",
+            "No vote count was stated for approving the field house request, and no final Council approval of the $10 million request occurred in the segment.",
+            "Any later vote, final approval, or funding action remained pending."
+          ],
+          "fact_check_notes": [
+            "A summary may mention Councilor Bach asking that the docket remain in committee and the presiding officer confirming that status.",
+            "If a summary says the Council approved the $10 million field house request in this segment, that is a Fact Check failure for procedural stage / disposition result."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors discussed the field house proposal.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "Topic Gate fails because no disposition verb is tied to an acted-on item."
+          },
+          {
+            "summary": "The proposal remained in committee.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is not specific enough."
+          },
+          {
+            "summary": "Docket 0265, the ARPA order connected to the Dorchester Field House discussion, remained in committee.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The in-session disposition and acted-on item are correctly stated."
+          },
+          {
+            "summary": "Docket 0265 passed the Council and approved the $10 million Dorchester Field House request.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The acted-on item is specific, but the summary contradicts the source-supported committee-retention stage and result."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "precipitating_context_visible": {
+                "match": [
+                  "The summary states a prior hearing on potential ARPA support for the Dorchester Field House.",
+                  "The summary states Councilor Baker's concern that one-time ARPA money could be spent without leaving a lasting public asset.",
+                  "The summary states background conditions on Columbia Point, such as former dump status, historical underinvestment, lack of amenities, public housing, COVID recovery needs, or future development pressure."
+                ],
+                "not_match": [
+                  "The summary only states the current field house funding proposal without any prior event, condition, problem, or background context.",
+                  "The summary only states the final committee status of Docket 0265."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "connected_to_current_item_or_form": {
+                "match": [
+                  "The summary connects the prior hearing, ARPA-spending concern, Columbia Point history, COVID recovery needs, or development context to why the field house funding request was being discussed.",
+                  "The summary shows that the background context shaped the argument for using ARPA funds on a durable community facility."
+                ],
+                "not_match": [
+                  "The summary mentions Columbia Point history, COVID, a prior hearing, or development as a free-standing fact without connecting it to Docket 0265, ARPA funding, or the field house proposal.",
+                  "The summary describes unrelated Boston background that does not shape the current item or discussion."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "A prior hearing had been held on potential ARPA support for the Dorchester Field House.",
+            "Councilor Baker used the docket to put his ARPA funding preference on record and raised concern about spending one-time funds without tangible results.",
+            "Speakers described Columbia Point's historical underinvestment and lack of amenities as background for the project.",
+            "COVID recovery needs and expected development on the peninsula were current agenda-shaping conditions.",
+            "The prior hearing, ARPA spending concern, and Columbia Point context were connected to the field house funding request and committee handling."
+          ],
+          "fact_check_notes": [
+            "B does not require the summary to state an explicit 'why now' sentence.",
+            "Historical facts such as Columbia Point's past conditions should not be treated as if they occurred during the meeting."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council discussed whether to fund the Dorchester Field House with ARPA money.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "The summary states the current topic but no agenda-setting background or precipitating context."
+          },
+          {
+            "summary": "Councilor Baker said Columbia Point had long lacked amenities.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Background context is visible, but the connection to the current item or discussion form is not stated."
+          },
+          {
+            "summary": "The discussion followed a prior hearing and was shaped by concern that one-time ARPA funds should leave a lasting asset for Columbia Point, which speakers described as historically underinvested.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary states source-supported background and connects it to the current ARPA-field-house discussion."
+          },
+          {
+            "summary": "The item came forward because the field house had already been built and needed reimbursement for completed construction.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The summary gives a specific background connection, but it contradicts the event sheet's pending proposal and funding context."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "payload_attached_to_action": {
+                "match": [
+                  "The summary ties the field house proposal or ARPA docket to a requested $10 million City / ARPA contribution.",
+                  "The summary ties the proposal to student access arrangements, school-day use, facility features, accessibility features, outdoor courts, preserved open space, or similar project terms.",
+                  "The summary states that the proposal involved a memorandum or agreement for student access or use as an extension of school facilities."
+                ],
+                "not_match": [
+                  "The summary only says the Council discussed or kept Docket 0265 in committee without stating any funding amount, access term, facility component, scope, or other payload.",
+                  "The summary lists field house amenities as a free-standing description with no visible link to the proposed ARPA-funded item."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": {
+              "number": {
+                "match": [
+                  "The summary includes an attached numeric quantity, such as the $10 million requested contribution, $350 million available amount, 2.8% share, $49 million BC High comparison, or nearly 2,000 nearby children."
+                ],
+                "not_match": [
+                  "The summary states only that funding was requested without any amount, percentage, count, or other quantity."
+                ]
+              },
+              "named_requirement": {
+                "match": [
+                  "The summary includes a named access or use condition, such as a memorandum of agreement, student membership / access, school-day use as an extension of school facilities, Challenge League access, or disability-accessible sensory spaces."
+                ],
+                "not_match": [
+                  "The summary only says the project would be helpful or beneficial without identifying any specific condition, access arrangement, or facility term."
+                ]
+              },
+              "scope_boundary": {
+                "match": [
+                  "The summary identifies a scope boundary, such as nearby McCormick / McCormack students, Columbia Point / Dorchester youth and families, public housing residents, children with disabilities, or broader citywide users who can access the facility."
+                ],
+                "not_match": [
+                  "The summary describes the project without saying who, where, or what category the payload applies to."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Councilor Baker's field house funding request tied to Docket 0265 / ARPA discussion and the proposed Dorchester Field House project.",
+            "The requested City / ARPA contribution was $10 million from available ARPA money.",
+            "Councilor Baker described $350 million as available and $10 million as 2.8% of that amount.",
+            "Proposed access terms included student access through an agreement and school-day use as an extension of school facilities.",
+            "Proposed facility components included indoor fields, basketball courts, performance space, disability-accessible sensory spaces, Challenge League access, a test kitchen, outdoor basketball courts, and preserved outdoor/open space through redesign.",
+            "The proposal was pending future handling, and the funding contribution and facility features were not approved or completed in this segment."
+          ],
+          "fact_check_notes": [
+            "Valid summaries need not list every facility component or every number.",
+            "Wrong amount, wrong baseline, or treating the $10 million request as finally approved is a Fact Check issue, not a Presence issue."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Docket 0265 remained in committee.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "The summary states only the disposition and no operative payload."
+          },
+          {
+            "summary": "The field house proposal included access and facility improvements.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the proposal, but no qualifying number, named requirement, or scope boundary is identifiable."
+          },
+          {
+            "summary": "The proposal sought $10 million in ARPA support and included student access through an agreement, school-day use, indoor fields, basketball courts, performance space, accessibility features, and outdoor space components.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary states source-supported payload content with numeric and named-requirement specificity."
+          },
+          {
+            "summary": "The Council approved a $100 million ARPA grant for a completed Dorchester Field House.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The summary has a specific payload, but the amount, stage, and temporal status conflict with the event sheet."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "slot_name": "Concrete Concern",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "concrete_concern_language": {
+                "match": [
+                  "The summary states a concern, risk, obstacle, tension, or tradeoff related to ARPA funds disappearing without a durable asset, loss of green or outdoor space, overlooked community voice, affordability, or unequal access to ARPA resources.",
+                  "The summary uses problem-side language such as concern, risk, tension, conflict, overlooked voice, affordability pressure, access disparity, or similar language."
+                ],
+                "not_match": [
+                  "The summary only praises the field house, lists benefits, or states the proposal's funding request without any problem-side concern.",
+                  "The summary says concerns were raised but gives no indication of what the concern was about."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_concern_content": {
+                "match": [
+                  "The summary specifies the concern content: waste of one-time ARPA funds, green-space or outdoor-space loss, overlooked McCormick / community voices, affordability and displacement risk, or unequal technical access to funding processes.",
+                  "The summary is specific enough that the reader can tell the concern, harm, obstacle, difficulty, loss, risk, or tradeoff being raised."
+                ],
+                "not_match": [
+                  "The summary only says there were concerns, controversy, or debate without identifying any concrete issue.",
+                  "The summary uses vague language such as 'some problems existed' with no object of concern."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Speakers raised risk that ARPA funds could be spent without leaving a durable public asset.",
+            "Speakers raised tension over preserving green or outdoor space on the land associated with the proposed field house.",
+            "Speakers raised concern that community voice, including McCormick students, faculty, and Columbia Point residents, could be overlooked.",
+            "Speakers raised concern that future affordability pressures could prevent current residents from benefiting from the facility.",
+            "Speakers raised concern that technical access and presentation capacity could affect which communities receive ARPA resources.",
+            "Local anchors included Columbia Point, the McCormick / McCormack school area, Dorchester, nearby public housing developments, communities of color, and residents with less access to technical funding processes."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if a summary names a place, group, or bounded area, it must not contradict the event sheet.",
+            "Concrete concern content may be already existing, recurring, or hypothetical/risk depending on the claim."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors praised the field house as a youth-serving facility.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "The summary contains no concrete concern language."
+          },
+          {
+            "summary": "Councilors raised concerns about the proposal.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is not specific."
+          },
+          {
+            "summary": "Speakers raised concerns that the field house could reduce valued green space, overlook community voice, and fail to benefit current residents if affordability pressures pushed them out.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary states specific source-supported concern content."
+          },
+          {
+            "summary": "Speakers worried that the project would close an existing hospital and remove ARPA funds from public health clinics.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The summary has concrete concern content, but it states a different concern and local object than the event sheet supports."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "slot_name": "Shared Concern Synthesis",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "problem_side_concern": {
+                "match": [
+                  "The summary names a recurring concern theme about whether ARPA-funded investment would create durable and equitable benefit for existing Dorchester / Columbia Point youth and families.",
+                  "The summary frames the shared concern in problem-side terms: risk of waste, inequitable access, overlooked community voice, loss of outdoor access, affordability pressure, or uneven ability to secure public resources."
+                ],
+                "not_match": [
+                  "The summary only states that the project had many benefits or that councilors supported it, without naming a problem-side concern theme.",
+                  "The summary uses generic language such as 'there was debate' or 'members had different views' without concern content."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_content": {
+                "match": [
+                  "The summary identifies the theme as balancing durable ARPA-funded public benefit against community voice, outdoor-space preservation, affordability, and unequal funding-process access.",
+                  "The summary specifies the concern object or tension, such as equitable benefit for existing youth and families, preservation of outdoor access, or avoiding a pattern where only technically connected groups secure resources."
+                ],
+                "not_match": [
+                  "The summary says only that there were shared concerns or equity concerns without stating what they concerned.",
+                  "The summary names a solution theme, such as building the field house, without stating the problem-side tension or concern."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring theme was whether ARPA-funded investment would create durable, equitable benefits for existing Dorchester / Columbia Point youth and families.",
+            "The theme included respecting community voice and preserving meaningful outdoor access.",
+            "The theme included avoiding a pattern where only groups with access, presentation capacity, or technical knowledge can secure public resources.",
+            "The discussion connected the concern theme to ARPA spending, the field house, nearby youth and families, public housing residents, communities of color, and other communities seeking similar investment.",
+            "The concern theme was recurring and included currently existing concerns and hypothetical future exclusion risks."
+          ],
+          "fact_check_notes": [
+            "S is a synthesis of repeated concern content; the summary does not need to explicitly say 'recurring' if it names the concern theme.",
+            "Do not require every downstream risk to be listed."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors discussed the Dorchester Field House and ARPA funds.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "The summary states the topic but no problem-side concern theme."
+          },
+          {
+            "summary": "A shared equity concern came up during the discussion.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the concern content is not identifiable."
+          },
+          {
+            "summary": "A recurring concern was whether ARPA spending on the field house would produce durable, equitable benefits for existing Dorchester and Columbia Point youth while preserving community voice and outdoor access.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary names the shared problem-side theme and its specific content."
+          },
+          {
+            "summary": "The shared concern was that ARPA investment would overfund suburban neighborhoods instead of downtown parking garages.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The summary names a concern theme, but it conflicts with the event sheet's source-supported theme and content."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pendingness_marker": {
+                "match": [
+                  "The summary explicitly states that Docket 0265 remained in committee.",
+                  "The summary states that the ARPA-supported field house proposal, the $10 million request, or related project issues remained pending, open, unresolved, or subject to continued consideration."
+                ],
+                "not_match": [
+                  "The summary states only that the Council discussed, supported, or raised concerns about the field house without an unfinished or pending marker.",
+                  "The summary only states a completed disposition or final approval with no pendingness."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pending_item_identifiable": {
+                "match": [
+                  "The summary identifies the pending item as Docket 0265.",
+                  "The summary identifies the pending item as the ARPA funding / $10 million request for the proposed Dorchester Field House or related issues such as school access, outdoor space, community concerns, or broader ARPA allocation choices."
+                ],
+                "not_match": [
+                  "The summary says something remained pending but does not identify what item, workstream, or issue was unfinished.",
+                  "The summary gives only generic future work with no link to the docket or field house funding proposal."
+                ]
+              },
+              "handling_path_visible": {
+                "match": [
+                  "The summary states a concrete handling path such as committee retention, continued consideration of American Rescue Plan funds, future hearings, further discussion, or possible later vote.",
+                  "The summary identifies committee custody or later Council / committee handling as the path for the pending item."
+                ],
+                "not_match": [
+                  "The summary says the matter was future-facing but gives no committee, hearing, discussion, vote, custody, or process path.",
+                  "The summary names a future event unrelated to Docket 0265 or the field house ARPA request."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Docket 0265 remained pending in committee.",
+            "The proposed ARPA support / $10 million request for the Dorchester Field House remained unresolved in this segment.",
+            "Related issues such as school access, outdoor space, community concerns, and broader ARPA allocation choices also remained to be handled.",
+            "The handling path included committee retention, continued consideration of American Rescue Plan funds, potential future hearings co-noticed with related councilor dockets, further discussion, and possible later vote.",
+            "The segment did not complete final Council approval or final funding allocation for the field house."
+          ],
+          "fact_check_notes": [
+            "U should focus on unfinishedness after the segment, not on the completed fact that the docket was kept in committee as an O disposition.",
+            "A summary that says the docket was finally approved or the funding was completed contradicts the pending status."
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Docket 0265 was discussed in relation to ARPA funds.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "No pendingness marker is stated."
+          },
+          {
+            "summary": "The matter remained pending.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is stated, but the pending item and handling path are not identifiable."
+          },
+          {
+            "summary": "Docket 0265 and the proposed ARPA support for the Dorchester Field House remained in committee for continued hearings, discussion, and a possible later vote.",
+            "presence": 1.0,
+            "fact_check": 1,
+            "rationale": "The summary identifies the pending item and the source-supported return path."
+          },
+          {
+            "summary": "The Council completed final approval of the field house funding, leaving only construction to begin.",
+            "presence": 0.0,
+            "fact_check": null,
+            "rationale": "The summary lacks a source-supported pendingness marker for U; the final-approval claim would be a contradiction if evaluated under a passing slot context, but this U example primarily fails Presence."
+          },
+          {
+            "summary": "The $10 million field house request remained pending before the state legislature for a scheduled vote next week.",
+            "presence": 1.0,
+            "fact_check": 0,
+            "rationale": "The item and pendingness are identifiable, but the handling path and body contradict the event sheet's committee-retention / Council discussion path."
+          }
+        ]
+      }
+    }
+  }

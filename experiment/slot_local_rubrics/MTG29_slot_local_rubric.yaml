@@ -1,0 +1,1284 @@
+segment_id: "MTG29"
+segment_dir: "29_BostonCC_05182022"
+meeting_id: "BostonCC_05182022"
+uid: "BostonCC_05182022_2022-0643"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "29",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "meaning": "The summary names the substantive subject as a noun or noun phrase identifying the policy area, issue, or matter being discussed. Procedural form, bare agenda labels, motion numbers, or bill identifiers without the substantive subject do not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "meaning": "The summary shows what policy move was being pursued for the subject. This may be a direction-bearing verb such as update, revise, clarify, expand, restrict, launch, phase out, or consolidate. It may also be a concrete rule effect showing how the target would change, such as defaulting, extending, narrowing, broadening, adding, removing, changing a threshold, or changing a deadline. Procedural disposition, such as approved, adopted, recommended, or passed, is not policy direction."
+              },
+              {
+                "name": "target",
+                "meaning": "The summary identifies the target to which the policy direction applies: the entity, group, area, process, rule set, or scope the direction is aimed at. A bare direction without a target does not satisfy this label."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "subject",
+              "check": "Compare the substantive subject stated by the summary with the source-supported subject.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different policy area, issue, or matter as the subject."
+            },
+            {
+              "name": "policy_direction",
+              "check": "Compare the policy direction stated by the summary with the source-supported direction.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a direction that reverses or replaces the source-supported policy move."
+            },
+            {
+              "name": "target",
+              "check": "Compare the target stated by the summary with the source-supported target.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different entity, group, area, process, jurisdiction, or scope as the target."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names state receivership, state takeover, or receivership threat as the substantive issue.",
+                  "Names Boston Public Schools or BPS as the school system at issue.",
+                  "May refer to the issue as a resolution opposing state receivership for BPS when the substantive issue remains visible."
+                ],
+                "not_match": [
+                  "Mentions only Docket 0643, a resolution, a hearing, or a vote without identifying state receivership/state takeover or BPS.",
+                  "Frames the topic only as school transportation, safety, superintendent hiring, or general school improvement without receivership/takeover.",
+                  "Identifies a different policy area, such as privatization, school closures, or funding, as the subject."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States that the Council or resolution opposed, resisted, fought back against, or rejected state receivership/state takeover.",
+                  "States that local accountability, local control, or community-grounded improvement was favored over state receivership.",
+                  "States that the policy move was to oppose any threat of receivership for BPS."
+                ],
+                "not_match": [
+                  "States only that the Council discussed receivership without indicating opposition or resistance.",
+                  "States only that the resolution passed, was adopted, or received a vote without describing the policy direction.",
+                  "States that the policy direction was to place BPS into receivership, privatize BPS, or transfer control to the state."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies Boston Public Schools, BPS, Boston school communities, or the district as the target of the opposition/receivership issue.",
+                  "Ties the state takeover or receivership threat to BPS rather than to schools in general."
+                ],
+                "not_match": [
+                  "Mentions opposition to receivership in general without identifying BPS or Boston school communities.",
+                  "Identifies another district, such as Lawrence, Holyoke, or Southbridge, as the target of the current policy move rather than as background/comparator examples.",
+                  "Names only state officials, DESE, or the Council without identifying the affected school system or community."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The substantive subject was state receivership or state takeover of Boston Public Schools.",
+            "The policy direction was to oppose state receivership and resist any threat of state takeover.",
+            "The target was Boston Public Schools and Boston school communities affected by receivership.",
+            "The segment supported local or community-grounded accountability rather than outside state control."
+          ],
+          "fact_check_notes": [
+            "Omission of some local-accountability language is not a Fact Check error if the summary correctly states the receivership opposition frame.",
+            "Lawrence, Holyoke, and Southbridge are source-supported comparator/background districts, not the target of the current policy direction.",
+            "Do not treat the adoption/passage result alone as T policy direction unless the substantive opposition to receivership is also expressed."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment framed the substantive issue as whether Boston should oppose state receivership or state takeover of Boston Public Schools. The policy direction pursued was formal Council opposition to any threat of state receivership, with school accountability and improvement remaining locally grounded rather than handed to outside state control.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "notes": [
+              "The policy dispute over possible receivership was described as active during the Council segment.",
+              "The opposition position was formalized later in the segment through adoption of the resolution."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "subject": "state receivership / state takeover of Boston Public Schools",
+            "policy_direction": "oppose state receivership and resist any threat of state takeover",
+            "target": [
+              "Boston Public Schools",
+              "Boston school communities affected by receivership"
+            ],
+            "not_supported_as_T": [
+              "A policy to place BPS into receivership.",
+              "A policy to privatize BPS.",
+              "A policy limited only to transportation, safety, or superintendent hiring."
+            ]
+          },
+          "evidence": [
+            "0643 ... resolution Opposing State Receivership for Boston Public Schools.",
+            "the goal of the hearing was to educate the public and the council around what receivership is and how it impacts our school communities.",
+            "join them in opposing any ... state receivership for Boston Public Schools.",
+            "support this resolution, because it gives us the ability to hold the district more accountable instead of allowing outsiders to tell us what is right for our people."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council discussed Docket 0643 and then moved on to the next item.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "The summary does not identify the substantive receivership/BPS subject."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council discussed state receivership for Boston Public Schools.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the summary does not state the policy direction of opposing receivership or the policy target as the object of that direction."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The segment framed Docket 0643 as Council opposition to state receivership for Boston Public Schools, favoring local accountability over outside state control.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The segment framed Docket 0643 as a proposal to place Boston Public Schools into state receivership.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary names the subject and target and gives a policy direction, but the direction reverses the source-supported opposition to receivership."
+          }
+        ]
+      },
+      "O": {
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "meaning": "The summary states that the body took a disposition on an acted-on item. Discussion, questioning, support, or hearing activity alone does not satisfy this label. This label does not decide whether the disposition is at the source-supported procedural stage. If a recognizable disposition is tied to an acted-on item, Presence may pass even when the stage is wrong. Stage accuracy is evaluated in Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "meaning": "The acted-on item is identified specifically enough that the reader can tell which item was acted on. Formal numbers or labels are sufficient but not required. A substantive description also satisfies this label when it distinguishes the item within the sampled segment. A generic referent alone is not enough."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "actor",
+              "check": "If the summary explicitly states an acting body or actor, compare that actor with the source-supported actor. Actor is separate from procedural stage. A broad institutional label alone is not a stage replacement when surrounding context preserves the source-supported stage. Omitting the actor alone is not a Fact Check error.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly attributes the disposition to a different actor or body than the source supports."
+            },
+            {
+              "name": "procedural_stage",
+              "check": "If the summary states or clearly implies where the acted-on item stands in the institutional processing path, compare that procedural stage with the source-supported stage. Stage is separate from actor and disposition result. Examples of stages include committee recommendation, referral, first reading, final body passage, enactment, ballot placement, voter approval, and later scheduled handling.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states or clearly implies that the acted-on item reached a procedural stage different from the source-supported stage. This includes stating that a body completed a later legal, electoral, or administrative effect when the source supports only recommendation, referral, advancement, or another earlier-stage action."
+            },
+            {
+              "name": "disposition_result",
+              "check": "Compare the result the summary says occurred at the stated or implied stage with the source-supported result. Result is separate from procedural stage: recommended, adopted, referred, rejected, deferred, passed, enacted, and similar verbs can describe different results depending on stage.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a result different from the source-supported result for the same acted-on item and stage."
+            },
+            {
+              "name": "acted_on_item",
+              "check": "Compare the acted-on item stated by the summary with the source-supported acted-on item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different ordinance, motion, amendment, appointment, resolution, agenda item, or other acted-on item than the source supports."
+            },
+            {
+              "name": "vote_result",
+              "check": "If the summary states a vote count, unanimity, passed/failed vote result, or attaches a vote result to a disposition, compare both the value and the disposition/stage it is attached to against the event-sheet source context.",
+              "fail_condition": "Fact Check = 0 if the summary states a different vote result, attaches a source-supported vote result to the wrong disposition or procedural stage, or states the vote result with materially ambiguous attachment to the acted-on action."
+            }
+          ],
+          "rules": [
+            {
+              "id": "broad_body_label_not_enough_for_stage_replacement",
+              "text": "A broad body label such as Council, Board, or Commission is not by itself a procedural-stage replacement. If the same relevant context states recommendation, referral, advancement, later handling, or pending final action, that context may clarify the broad label."
+            },
+            {
+              "id": "later_effect_claim_requires_supported_stage",
+              "text": "If a summary says the acted-on item itself completed a later legal, electoral, or administrative effect, treat that as a procedural_stage or disposition_result claim. If the source supports only recommendation, referral, advancement, or another earlier-stage action, the later-effect claim meets the procedural_stage or disposition_result fail_condition. This includes describing a body as having completed the legal effect of an item that was only recommended or advanced in the sampled segment."
+            },
+            {
+              "id": "correct_clause_does_not_cancel_wrong_stage_claim",
+              "text": "A source-consistent clause about recommendation, referral, advancement, or later handling does not cancel a separate explicit claim that the same acted-on item reached an unsupported later stage or completed an unsupported legal/electoral/administrative effect."
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the Boston City Council suspended the rules, adopted, passed, approved, or otherwise acted on Docket 0643 or the receivership-opposition resolution.",
+                  "States that a roll-call vote occurred and the resolution passed.",
+                  "A broad 'Council passed the resolution' formulation can satisfy this label when tied to Docket 0643 or the receivership-opposition resolution."
+                ],
+                "not_match": [
+                  "States only that councilors debated, supported, opposed, or discussed receivership without saying the body took a disposition.",
+                  "Mentions a vote or adoption without tying it to Docket 0643 or the receivership-opposition resolution.",
+                  "States only the policy content of opposing receivership without an in-session disposition."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as Docket 0643.",
+                  "Identifies the acted-on item as the resolution opposing state receivership for Boston Public Schools.",
+                  "Identifies both the suspension/adoption sequence and the receivership-opposition resolution."
+                ],
+                "not_match": [
+                  "Uses only 'the item,' 'the matter,' or 'a resolution' without enough detail to distinguish which item was acted on.",
+                  "Identifies a different docket, a prior hearing docket, or a broader BPS improvement plan as the acted-on item.",
+                  "Mentions only the general topic of BPS problems without identifying the acted-on resolution or docket."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Boston City Council.",
+            "The procedural stage was full Council in-session action on Docket 0643.",
+            "The Council suspended the rules for the item.",
+            "The Council adopted or passed the resolution opposing state receivership for Boston Public Schools.",
+            "A roll-call vote was taken, Councilor Baker was explicitly recorded as voting no, and the resolution passed.",
+            "The event sheet does not support a reliable compact numeric vote total."
+          ],
+          "fact_check_notes": [
+            "Do not infer or require a numeric vote count from the event sheet.",
+            "A source-consistent broad phrase such as 'the Council passed the resolution' is acceptable if it does not imply a different stage or actor.",
+            "A claim that the item was merely referred, held, or left pending contradicts the completed in-session passage of Docket 0643."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Boston City Council acted on Docket 0643 by moving to suspend the rules and adopt the resolution opposing state receivership for Boston Public Schools. A roll-call vote was taken, Councilor Baker was recorded as voting no, and the resolution passed.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "notes": [
+              "The Council completed action on Docket 0643 during the segment.",
+              "The transcript supports passage of the resolution, not merely discussion or referral."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "actor": "Boston City Council",
+            "procedural_stage": "full Council in-session action on Docket 0643",
+            "disposition_result": [
+              "The Council suspended the rules for the item.",
+              "The Council adopted/passed the resolution."
+            ],
+            "acted_on_item": {
+              "docket": "0643",
+              "description": "Resolution opposing state receivership for Boston Public Schools"
+            },
+            "vote_result": {
+              "result": "resolution passed",
+              "no_vote_explicitly_recorded": [
+                "Councilor Baker"
+              ],
+              "numeric_count": "not reliably stated in the transcript; do not infer a compact vote total from this event sheet"
+            },
+            "temporal_status": [
+              "completed_in_session for Council action on Docket 0643"
+            ]
+          },
+          "evidence": [
+            "I move that we suspend the rules and urge my colleagues to vote in favor of this resolution.",
+            "seek suspension of the rules and adoption of 0643.",
+            "Roll call vote on docket number 0643.",
+            "Council of Baker. Nay.",
+            "The resolution has passed."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "Councilors debated whether state receivership would help or harm Boston schools.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "The summary gives discussion content but no disposition on an acted-on item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council passed a resolution.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is not specific enough."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Boston City Council suspended the rules and passed Docket 0643, the resolution opposing state receivership for Boston Public Schools; Baker was recorded as voting no.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The disposition, item, stage, and stated vote detail are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Boston City Council referred Docket 0643, the resolution opposing state receivership for BPS, back to committee after the vote.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a disposition on the correct item, but the result/stage contradicts the source-supported passage."
+          }
+        ]
+      },
+      "B": {
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "meaning": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item. The context must be stated as its own proposition; it need not include an explicit agenda-necessity statement."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "meaning": "The prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background is visibly connected to the current item, the form of the proposal, a revision, the discussion frame, or how the item was handled. An explicit “why now” or agenda-necessity statement is not required."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "trigger_condition",
+              "check": "Compare the prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background stated by the summary with the source-supported background for the item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, affected process, or triggering background than the source supports."
+            },
+            {
+              "name": "agenda_connection",
+              "check": "If the summary states the relation between the background context and the current item, compare that relation with the source-supported relation.",
+              "fail_condition": "Fact Check = 0 if the summary reverses the relation or explicitly states a different reason or background relation for why the current item took its form or came forward."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States that a prior attempt to pass the resolution led to, was delayed for, or was redirected into an Education Committee hearing.",
+                  "States that the Committee on Education held a hearing on Docket 0199 about state receivership for BPS.",
+                  "States that public, family, student, advocate, administration, or community testimony/commentary informed the current resolution.",
+                  "States that prior Massachusetts receiverships in Lawrence, Holyoke, and Southbridge or the state's track record shaped the discussion.",
+                  "States that current BPS challenges, superintendent selection, or school-governance context shaped the resolution debate."
+                ],
+                "not_match": [
+                  "States only that the Council opposed state receivership, with no prior context or background proposition.",
+                  "States only that the resolution passed, without naming prior hearing, testimony, state track record, BPS conditions, or other background.",
+                  "Mentions Lawrence, Holyoke, or Southbridge only as current targets of Docket 0643 rather than as background examples."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the prior hearing, earlier floor attempt, testimony, state track record, community opposition, or BPS conditions to why Docket 0643 returned for adoption or took its current form.",
+                  "Shows that the background shaped the Council's current receivership-opposition resolution or the terms of the debate.",
+                  "Need not use an explicit 'why now' phrase if the connection between the background and current item is visible."
+                ],
+                "not_match": [
+                  "Lists a background fact, such as Lawrence receivership, without connecting it to the current BPS resolution or debate.",
+                  "States only a general historical fact about DESE or BPS without showing how it shaped Docket 0643 or the segment discussion.",
+                  "Replaces background with the action payload, such as 'the resolution opposed receivership,' without a separate prior condition or context proposition."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "A prior attempt to pass the resolution was delayed or redirected because colleagues wanted a hearing.",
+            "The Committee on Education held a hearing on Docket 0199 about state receivership for BPS.",
+            "Public and community testimony and commentary opposed receivership and informed the current push for adoption.",
+            "Speakers cited Lawrence, Holyoke, and Southbridge as prior Massachusetts receivership examples or state track-record background.",
+            "Current BPS challenges were acknowledged but framed by supporters as reasons for local/community-led accountability rather than full state receivership."
+          ],
+          "fact_check_notes": [
+            "The segment does not say the Council was legally required to vote because of Docket 0199.",
+            "The prior Education Committee hearing did not itself place BPS into receivership.",
+            "The background can include already-occurred hearing/testimony activity and ongoing BPS governance conditions."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The resolution was shaped by prior Council and community activity around receivership: a prior attempt to pass the resolution led to a Committee on Education hearing on state receivership, where the public, families, students, advocates, and administration representatives discussed the issue. Speakers also grounded the current item in the state's track record in Lawrence, Holyoke, and Southbridge, existing BPS problems, community opposition, and the ongoing context of superintendent selection and school governance.",
+          "temporal_status": {
+            "primary": "already_occurred",
+            "additional": [
+              "currently_existing"
+            ],
+            "notes": [
+              "The Education Committee hearing and earlier resolution attempt had already occurred before this segment.",
+              "The debate over state receivership, BPS problems, and superintendent selection was ongoing at the time of the segment."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "A prior attempt to pass the resolution was delayed or redirected because colleagues wanted a hearing.",
+              "The Committee on Education held a hearing on Docket 0199 about state receivership for BPS.",
+              "Public/community testimony and commentary opposed receivership and informed the current push for adoption.",
+              "Speakers cited prior Massachusetts receiverships in Lawrence, Holyoke, and Southbridge as background."
+            ],
+            "agenda_connection": [
+              "These prior hearing, testimony, and track-record references were used to justify bringing forward and adopting Docket 0643.",
+              "Current BPS challenges were acknowledged but framed by supporters as reasons for local/community-led accountability rather than full state receivership."
+            ],
+            "not_supported_as_B": [
+              "The segment does not say the Council was legally required to vote because of Docket 0199.",
+              "The segment does not say the prior hearing itself placed BPS into receivership."
+            ]
+          },
+          "evidence": [
+            "last month, the Committee on Education held a hearing on Docket 0199 ... on state receivership for Boston Public Schools.",
+            "I tried to pass this resolution on the floor, and I was encouraged by my colleagues that we needed a hearing and we did just that.",
+            "we heard time and time again from the administration, advocates, family members, students and members of the community.",
+            "[the state] has voted to place three districts in receivership. Lawrence ... Holyoke ... Southbridge.",
+            "there have been several articles, op-eds, personal testimonies on social media from people across the district urging the city to fight back."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council passed a resolution opposing state receivership for Boston Public Schools.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "The summary states the action/payload but no prior event, condition, process, or background context."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Speakers mentioned Lawrence, Holyoke, and Southbridge during the discussion.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A possible background reference is visible, but the summary does not connect it to Docket 0643 or the form of the current receivership debate."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The current resolution followed an earlier attempt that was redirected into an Education Committee hearing on state receivership, and speakers used testimony and the state's record in Lawrence, Holyoke, and Southbridge to justify bringing Docket 0643 forward.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The prior context and its connection to the current item are both source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "Docket 0643 came forward because the prior Education Committee hearing had already placed Boston Public Schools into state receivership.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a connected background proposition, but the stated trigger/background relation contradicts the event sheet."
+          }
+        ]
+      },
+      "N": {
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "meaning": "The summary expresses a condition, requirement, scope, restriction, number, date, or other payload as attached to the action or acted-on item. Single-sentence attachment and anaphora-linked adjacent sentences count. A free-standing background description that requires the reader to reconstruct the action-payload link does not satisfy this label. A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "any_of",
+            "label_set": "options",
+            "labels": [
+              {
+                "name": "number",
+                "meaning": "The attached payload includes an identifiable numeric quantity, such as a count, amount, percentage, duration, height, vote threshold, or other measured value."
+              },
+              {
+                "name": "named_requirement",
+                "meaning": "The attached payload includes an identifiable named requirement, restriction, condition, or carve-out."
+              },
+              {
+                "name": "scope_boundary",
+                "meaning": "The attached payload includes an identifiable scope boundary, such as a geographic boundary, categorical boundary, population-specific boundary, or other boundary defining what the payload applies to."
+              },
+              {
+                "name": "date_cutoff",
+                "meaning": "The attached payload includes an identifiable date cutoff or time boundary, such as an effective date, expiration date, sunset clause, or deadline."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "payload_carrier",
+              "check": "Compare which action, ordinance, motion, amendment, resolution, or acted-on item the summary attaches the payload to with the source-supported carrier.",
+              "fail_condition": "Fact Check = 0 if the summary attaches the payload to a different action or item than the source supports."
+            },
+            {
+              "name": "payload_content",
+              "check": "Compare the requirement, condition, restriction, permission, rule, or operative content stated by the summary with the source-supported payload content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states different operative payload content than the source supports."
+            },
+            {
+              "name": "payload_scope",
+              "check": "If the summary states the payload's applicable scope, category, population, geography, process, or target, compare it with the source-supported scope.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different scope or target for the payload than the source supports."
+            },
+            {
+              "name": "payload_scalar_or_baseline",
+              "check": "If the summary states a number, date, duration, threshold, amount, deadline, or baseline comparison attached to the payload, compare both value and role binding.",
+              "fail_condition": "Fact Check = 0 if the summary states a wrong value, attaches a correct value to the wrong payload role, states an unsupported baseline, or makes the scalar role binding materially ambiguous."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that Docket 0643 or the adopted resolution expressed opposition to state receivership for BPS.",
+                  "States that the resolution's action-carried content was opposition to threats of receivership or state takeover.",
+                  "States that the adopted resolution favored local/community accountability rather than handing BPS over to state or outside control."
+                ],
+                "not_match": [
+                  "States only that the Council passed or adopted Docket 0643 without saying what the resolution carried or required/expressed.",
+                  "States general councilor concerns about receivership or BPS failures without attaching that content to the resolution or acted-on item.",
+                  "States a free-standing background fact, such as the prior hearing or state track record, without linking it to the resolution's operative content."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Identifies the attached payload as opposition to state receivership, opposition to threats of receivership, or rejection of state takeover.",
+                  "Identifies local accountability/local control as the action-carried position instead of outside state control."
+                ],
+                "not_match": [
+                  "States only that the resolution concerned BPS without naming the opposition-to-receivership payload.",
+                  "States only that the Council acted, voted, or passed an item without naming the operative content.",
+                  "Names a different operative payload, such as adopting targeted interventions, appointing a superintendent, or creating a specific school-improvement program."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies Boston Public Schools, BPS, or Boston school communities as the scope of the receivership opposition.",
+                  "Identifies state receivership/state takeover affecting BPS as the bounded action payload."
+                ],
+                "not_match": [
+                  "Describes opposition to receivership in general without specifying BPS or Boston school communities.",
+                  "Treats Lawrence, Holyoke, or Southbridge as the scope of the adopted resolution rather than as comparator/background districts.",
+                  "States that the payload applied only to transportation, safety, superintendent hiring, or another narrower BPS issue."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Docket 0643, the adopted resolution opposing state receivership for Boston Public Schools.",
+            "The payload content was opposition to state receivership/state takeover of BPS.",
+            "Speakers framed the payload as resisting threats of receivership and protecting local or community accountability.",
+            "The payload scope was Boston Public Schools and state receivership/state takeover affecting BPS.",
+            "No operative numeric threshold, deadline, dollar amount, or vote count is part of the resolution payload in the transcript."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to reproduce every rationale for local control or the state's track record.",
+            "Do not treat a vote count as part of the N payload. Vote results belong to O if explicitly claimed.",
+            "The event sheet does not support saying the resolution adopted a targeted-intervention plan, appointed a superintendent, or implemented a specific school-improvement program."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The operative payload of the adopted resolution was Council opposition to state receivership for Boston Public Schools, including opposition to threats of receivership and a preference for local accountability and community-grounded improvement rather than handing BPS over to a state board or outside control.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "additional": [
+              "future_effect"
+            ],
+            "notes": [
+              "The resolution's adoption was completed during the segment.",
+              "The practical orientation of the resolution was future-facing opposition to any receivership threat or takeover path."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "payload_carrier": {
+              "docket": "0643",
+              "item": "adopted resolution opposing state receivership for Boston Public Schools"
+            },
+            "payload_content": [
+              "The resolution states/expresses opposition to state receivership for BPS.",
+              "Speakers framed the payload as resisting threats of receivership and protecting local/community accountability.",
+              "The payload does not create a targeted intervention plan, appoint a superintendent, or implement a specific school-improvement program."
+            ],
+            "payload_scope": [
+              "Boston Public Schools",
+              "State receivership / state takeover affecting BPS"
+            ],
+            "payload_scalar_or_baseline": [
+              "No operative numeric threshold, deadline, dollar amount, or vote count is part of the resolution payload in the transcript."
+            ]
+          },
+          "evidence": [
+            "resolution Opposing State Receivership for Boston Public Schools.",
+            "join them in opposing any ... state receivership for Boston Public Schools.",
+            "we can't risk doing further damage to our school district by ... handing [it] over to the board with no clear track record for improvement.",
+            "support this resolution ... instead of allowing outsiders to tell us what is right for our people."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council adopted Docket 0643 after debate.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "The action shell is stated, but no payload is attached to the action."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The adopted resolution said the Council had a position on BPS governance.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is attached to the resolution, but the named requirement/opposition position and scope boundary are too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Docket 0643's adopted payload was Council opposition to state receivership for Boston Public Schools and a preference for local accountability over outside state control.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The payload carrier, content, and BPS scope are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "Docket 0643's adopted payload created a targeted-intervention plan for Boston Public Schools with a new state partnership deadline.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary attaches a specific payload to the acted-on item, but that payload content and scalar/date implication are not supported."
+          }
+        ]
+      },
+      "L": {
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "meaning": "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition. The concern must be asserted on the problem/concern side, not merely appear as the object of a solution-side verb. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "meaning": "The concern content is specific enough that the reader can tell what the concern, harm, obstacle, difficulty, loss, risk, or tradeoff is about. A generic statement that concerns were raised, without saying what the concern was, does not satisfy this label. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "obstacle_content",
+              "check": "Compare the concern, harm, obstacle, difficulty, loss, risk, tradeoff, constraint, or problem stated by the summary with the source-supported concern content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern, harm, obstacle, difficulty, loss, risk, tradeoff, or constraint than the source supports."
+            },
+            {
+              "name": "local_anchor",
+              "check": "If the summary explicitly ties the concern to a named place, named group, bounded area, or other local anchor, compare that anchor with the source-supported local anchor. Local anchor is not required for Presence.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different named place, named group, bounded area, or local anchor for the concern than the source supports."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concrete concern, harm, risk, deficiency, instability, failure, obstacle, or tradeoff related to receivership or BPS conditions.",
+                  "May state anti-receivership concerns, such as poor state track record, further damage to BPS, instability, loss of parent/community voice, or distraction from local improvement.",
+                  "May state BPS-failure concerns, such as central office failures, special education or English learner service failures, safety, transportation, facilities, literacy, data/reporting, food/basic services, or school quality.",
+                  "May state the possible need for targeted intervention or fundamental change as a concern-side response to BPS failures."
+                ],
+                "not_match": [
+                  "States only that the Council opposed or passed the resolution without naming a concern, harm, obstacle, or risk.",
+                  "Uses generic language such as 'concerns were raised' without saying what the concern was.",
+                  "Mentions local control or accountability only as a solution-side preference without a problem-side concern."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Identifies the specific concern content, such as poor receivership track record, further damage, instability, loss of local/community voice, or distraction from superintendent-led improvement.",
+                  "Identifies specific BPS failures or services at issue, such as central office support, special education, English learner services, safety, transportation, facilities, literacy, data/reporting, parent concern tracking, food/basic services, or school quality.",
+                  "A named local anchor is not required, but if given it may identify BPS, Boston school communities, or comparator districts."
+                ],
+                "not_match": [
+                  "Says only that there were problems, concerns, risks, or debate without identifying what they involved.",
+                  "States only that speakers supported or opposed receivership, without the concrete harm or obstacle behind the position.",
+                  "Names only a place or actor, such as BPS or DESE, without specifying the concern content."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "State or DESE receivership was criticized as having a poor record in other districts.",
+            "Receivership was said to risk further damage, instability, loss of local/community voice, or distraction from superintendent selection and local improvement.",
+            "Speakers acknowledged or alleged BPS failures in central office support, special education, English learner services, safety, transportation, facilities, data/reporting, parent concern tracking, literacy, food/basic services, and school quality.",
+            "Some speakers argued for targeted interventions, strategic partnerships, or fundamental change rather than defending the status quo.",
+            "The local anchor for the concerns was Boston Public Schools / Boston school communities; Lawrence, Holyoke, and Southbridge were comparator districts named in the discussion."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence, but if the summary explicitly states one, compare it to the event-sheet context.",
+            "The segment does not present unanimous agreement that full state receivership is the solution.",
+            "The segment does not present unanimous agreement that BPS has no problems."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Speakers raised concrete concerns on both sides of the receivership debate. Supporters of the resolution warned that state receivership had a poor track record, could damage BPS further, create instability, weaken parent/community voice, and distract from local school-improvement work. Skeptical or opposing speakers warned that BPS had serious ongoing failures in central office support, special education, English learner services, safety, transportation, facilities, literacy, and basic services, and argued that some targeted intervention or fundamental change might be needed.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "additional": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "BPS operational and service failures were described as current or recurring.",
+              "Receivership harms were described partly from prior examples and partly as a future risk for Boston."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "obstacle_content": {
+              "anti_receivership_concerns": [
+                "State/DESE receivership was criticized as having a poor record in other districts.",
+                "Receivership was said to risk further damage, instability, and loss of local/community voice.",
+                "Some speakers said receivership would distract from superintendent selection and local improvement."
+              ],
+              "bps_failure_concerns": [
+                "Speakers acknowledged or alleged BPS failures in central office support, special education, English learner services, safety, transportation, facilities, data/reporting, parent concern tracking, literacy, food/basic services, and school quality.",
+                "Some speakers argued for targeted interventions, strategic partnerships, or fundamental change rather than defending the status quo."
+              ]
+            },
+            "local_anchor": [
+              "Boston Public Schools / Boston school communities",
+              "Comparator districts named in discussion include Lawrence, Holyoke, and Southbridge."
+            ],
+            "not_supported_as_L": [
+              "The segment does not present unanimous agreement that full state receivership is the solution.",
+              "The segment does not present unanimous agreement that BPS has no problems."
+            ]
+          },
+          "evidence": [
+            "receivership is wrong ... the wrong move for Boston ... [the state] has a miserable track record of improving schools it has taken into receivership.",
+            "the instability created through that process trickles down to parents, students and teachers.",
+            "having this over our Boston Public Schools heads is actually stopping us from ... moving forward.",
+            "systemic failures of our central office ... consistently failing our most vulnerable students and violating the law ... English language learners and ... special education students.",
+            "significant operational issues ... transportation system, data reporting system, facilities, safety policies ... tracking parental and community concerns.",
+            "The schools are unsafe right now ... Kids aren't able to read."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "Several councilors spoke before the resolution passed.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "No concern, harm, risk, obstacle, or failure is stated."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Councilors raised concerns about the schools and receivership.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concrete content of the concern is not identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Supporters warned that state receivership could damage BPS, weaken community voice, and repeat the state's poor track record, while skeptics pointed to serious BPS failures in safety, transportation, literacy, special education, and English learner services.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary states concrete source-supported concerns from both sides."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "Speakers unanimously said BPS had no serious problems and that receivership was the only way to preserve parent voice.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states specific concern content, but it contradicts the event sheet on both BPS failures and the described receivership concern."
+          }
+        ]
+      },
+      "S": {
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "meaning": "The summary names the concern theme in problem-side language: problem, difficulty, deficiency, gap, fragmentation, dissatisfaction, negative state, or similar language. Problem vocabulary that appears only as the object or modifier of a solution-side verb does not satisfy this label. Generic debate language alone does not satisfy it."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_content",
+                "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and rubric match require."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "concern_theme",
+              "check": "Compare the recurring concern theme stated by the summary with the source-supported concern theme.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different concern theme than the source supports."
+            },
+            {
+              "name": "concern_content",
+              "check": "If the summary states the concern's object, contrast, mechanism, tension, tradeoff, risk, consequence, affected group, or scope, compare it with the source-supported concern content.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states different concern content, such as a different object, contrast, mechanism, risk, affected group, or scope, than the source supports."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names receivership as a failed, risky, harmful, inappropriate, or ineffective model for BPS.",
+                  "Names loss of local/democratic control, parent/community voice, or disruption to local improvement as a recurring problem-side theme.",
+                  "Names BPS's serious chronic problems, failures, or need for accountability and improvement as a recurring problem-side theme.",
+                  "May synthesize both sides: receivership is risky or inappropriate, and BPS still has serious problems requiring accountability."
+                ],
+                "not_match": [
+                  "States only that the Council opposed receivership or passed a resolution without problem-side concern language.",
+                  "States only a solution-side theme, such as local control or accountability, without naming the problem or risk it responds to.",
+                  "States only that there was debate or disagreement, without identifying the recurring concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Specifies that the receivership concern involved poor state track record, loss of local/democratic control, parent/community voice, or disruption to superintendent-led/local improvement.",
+                  "Specifies that the BPS-problems concern involved safety, transportation, facilities, literacy, special education, English learner services, central office accountability, or similar school-service failures.",
+                  "Specifies that the synthesized supporter position was to address BPS problems locally rather than through full state receivership."
+                ],
+                "not_match": [
+                  "Names only 'concerns about BPS' or 'concerns about receivership' without indicating the object, mechanism, or tension.",
+                  "States only that councilors wanted accountability or improvement without saying what problem the accountability/improvement was meant to address.",
+                  "Requires every downstream example from the event sheet; a summary can pass with representative concern content if it is specific and source-consistent."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "State receivership was repeatedly framed as a failed, risky, or inappropriate model for Boston Public Schools.",
+            "BPS was repeatedly described as having real problems that require accountability and improvement.",
+            "Receivership concern content included poor state track record, possible loss of local/democratic control, parent/community voice, and disruption to superintendent-led improvement.",
+            "BPS failure concern content included safety, transportation, facilities, literacy, special education, English learner services, and central office accountability.",
+            "The segment's final Council action favored opposing receivership, but the discussion did not deny BPS problems."
+          ],
+          "fact_check_notes": [
+            "A summary may state only one of the recurring concern themes if it is specific and does not contradict the other.",
+            "Support for local accountability should not be summarized as support for state takeover.",
+            "Do not require the summary to state recurrence explicitly; recurrence is grounded in the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The recurring problem-side themes were that state receivership is an ineffective or risky model for BPS because of the state's track record and its threat to local voice, and that BPS nevertheless has serious chronic problems requiring accountability and sustained improvement. The dominant synthesized position of resolution supporters was that BPS problems should be addressed locally, not through full state receivership.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "additional": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The concern about receivership recurred across several supporting speakers.",
+              "The concern about BPS's own failures also recurred, including among speakers who still opposed full receivership."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "concern_theme": [
+              "State receivership was repeatedly framed as a failed, risky, or inappropriate model for Boston Public Schools.",
+              "BPS was repeatedly described as having real problems that require accountability and improvement."
+            ],
+            "concern_content": [
+              "Receivership concern content included poor state track record, possible loss of local/democratic control, parent/community voice, and disruption to superintendent-led improvement.",
+              "BPS failure concern content included safety, transportation, facilities, literacy, special education, English learner services, and central office accountability."
+            ],
+            "synthesis_boundary": [
+              "The segment's final Council action favored opposing receivership, but the discussion did not deny BPS problems.",
+              "Support for local accountability should not be summarized as support for state takeover."
+            ]
+          },
+          "evidence": [
+            "receivership is wrong ... the wrong move for Boston and no clear track record for improvement.",
+            "They have not done really any commendable work in their turnarounds to date.",
+            "we have better control of [these issues] ... with parents engagement with the school committee and with the superintendent.",
+            "Does Boston Public Schools have issues? Yes, absolutely ... we want to have an opportunity to fix those issues ourselves.",
+            "we need a great superintendent and the mayor and the council need to back them."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council voted after several members made comments.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "No recurring problem-side concern theme is named."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The debate reflected concerns about receivership and BPS.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A concern theme is gestured at, but the content of the concern is too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "A recurring theme was that state receivership was a risky model with a poor track record and a threat to local voice, while BPS still had serious problems requiring accountability and local improvement.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The recurring problem-side themes and their content are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The shared concern was that local accountability had failed completely, so supporters wanted full state takeover of BPS.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary names a specific concern theme, but reverses the source-supported synthesis and final direction."
+          }
+        ]
+      },
+      "U": {
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "meaning": "The summary explicitly includes an unfinished, pending, or still-open state marker, such as remained pending, still to be decided, unresolved, remained in committee, held over, or final action remained pending. If the item is identifiable and the summary says it will proceed to a later full-body meeting, final action, final passage, or final consideration, that can satisfy pendingness. A bare directive without an explicit pendingness marker does not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "meaning": "What specifically remains pending is identifiable. The reader can tell which item, workstream, or issue is unfinished, not merely that something is unfinished."
+              },
+              {
+                "name": "handling_path_visible",
+                "meaning": "A concrete handling path is visible. This can be a future event path, process path, or institutional custody path. A path to a later full-body meeting, final action, final passage, or final consideration can satisfy this label if the item is identifiable. Bare future orientation does not satisfy it unless tied to an identifiable body, item, custody, review, hearing, or process path. An unrelated future item, post-adjournment announcement, or future hearing for a different item does not satisfy U."
+              }
+            ]
+          }
+        },
+        "fact_check_structure": {
+          "roles": [
+            {
+              "name": "pending_status",
+              "check": "Compare the unfinished, pending, or resolved status stated by the summary with the source-supported status.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a resolved or completed status for a source-supported pending item, or a pending status for a source-supported completed item."
+            },
+            {
+              "name": "pending_item",
+              "check": "Compare what the summary says is pending with the source-supported pending item.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a different item, issue, workstream, ordinance, motion, or follow-up object as pending."
+            },
+            {
+              "name": "handling_path",
+              "check": "If the summary states a future meeting, body, committee, process, report-back, review, drafting, or custody path, compare it with the source-supported handling path.",
+              "fail_condition": "Fact Check = 0 if the summary explicitly states a handling path, body, process, date, destination, or custody path different from the source-supported path."
+            }
+          ],
+          "rules": []
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "States that broader BPS improvement work remained ongoing, unfinished, pending, still to be addressed, or would continue after passage.",
+                  "States that superintendent hiring/support, possible targeted interventions or strategic partnerships, or continued accountability remained future-facing workstreams.",
+                  "May explicitly clarify that Docket 0643 itself did not remain pending because the resolution passed, while broader BPS work remained ongoing."
+                ],
+                "not_match": [
+                  "States only that Docket 0643 passed or the resolution was adopted, without any pending or unfinished workstream.",
+                  "States only a future-oriented aspiration, such as wanting better schools, without an explicit still-open or ongoing work marker.",
+                  "States that Docket 0643 remained pending, held, or referred after the segment."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies superintendent hiring/support as unfinished or future-facing work.",
+                  "Identifies possible targeted interventions or strategic partnerships as a future discussion path.",
+                  "Identifies continued accountability for BPS, the Council, the mayor, BPS leadership, or a future superintendent as ongoing work.",
+                  "Identifies that Docket 0643 itself was completed and that the pending item is broader BPS improvement work rather than the docket."
+                ],
+                "not_match": [
+                  "Says only that 'work remains' or 'more must be done' without identifying what remains pending.",
+                  "Identifies Docket 0643 as the pending item after the source says it passed.",
+                  "Identifies a formal targeted-intervention plan adopted in the segment as the pending item."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "Names mayor, Council, BPS leadership, or a future superintendent as actors in the ongoing BPS improvement/accountability path.",
+                  "Names possible state or federal targeted partnership/intervention as a discussion path, while not treating it as adopted.",
+                  "Shows that ongoing work would proceed through BPS improvement, superintendent support, accountability, or targeted-intervention/partnership discussion rather than through a formal post-passage return of Docket 0643."
+                ],
+                "not_match": [
+                  "Mentions only that improvement is needed, with no actor, institution, process, or path.",
+                  "States that Docket 0643 will return for final action, final passage, or committee handling after the source-supported passage.",
+                  "Treats an unrelated next agenda item or post-adjournment announcement as the unresolved tail for Docket 0643."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Docket 0643 was not pending after the segment; it passed/adopted during the segment.",
+            "Broader BPS work remained ongoing or future-facing.",
+            "Future-facing items included superintendent hiring and support, possible targeted interventions or strategic partnerships, and continued accountability for BPS and Council actors.",
+            "Mayor, Council, BPS leadership, and a future superintendent were discussed as actors in ongoing work.",
+            "Possible state or federal targeted partnership/intervention was raised as a discussion path, not adopted as the resolution's payload."
+          ],
+          "fact_check_notes": [
+            "A summary can pass U for broader BPS work if it clearly distinguishes that work from the completed status of Docket 0643.",
+            "The event sheet does not support saying Docket 0643 was held, referred, or left unresolved.",
+            "The event sheet does not support saying the Council adopted a formal targeted-intervention plan in this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Docket 0643 itself did not remain pending after the segment; the resolution passed. However, speakers described broader unfinished work around BPS improvement, superintendent selection, possible targeted interventions or partnerships, and continued Council/BPS accountability. Those future-facing items were policy workstreams discussed in the debate, not a formal pending return path for Docket 0643 after passage.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "additional": [
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The resolution was completed in session.",
+              "Broader school-improvement work remained pending or ongoing, but not as a formal unresolved tail of Docket 0643."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "pending_status": {
+              "docket_0643": "not pending; passed/adopted during the segment",
+              "broader_bps_work": "ongoing / future-facing"
+            },
+            "pending_item": [
+              "superintendent hiring and support",
+              "possible targeted interventions or strategic partnerships",
+              "continued accountability for BPS and Council actors"
+            ],
+            "handling_path": [
+              "Mayor, Council, BPS leadership, and a future superintendent were discussed as actors in ongoing work.",
+              "Possible state or federal targeted partnership/intervention was raised by some speakers as a discussion path, not adopted as the resolution's payload."
+            ],
+            "not_supported_as_U": [
+              "The event sheet does not support saying Docket 0643 was held, referred, or left unresolved.",
+              "The event sheet does not support saying the Council adopted a formal targeted-intervention plan in this segment."
+            ]
+          },
+          "evidence": [
+            "We're hiring a new superintendent.",
+            "I want to work with the new superintendent, allow him or her to get the legs underneath them to move forward.",
+            "it may be time to talk about a strategic partnership or targeted interventions.",
+            "we have a mayor that is committed to hiring a superintendent that's really going to transform our schools.",
+            "look forward to continuing the work and holding all of ourselves accountable.",
+            "The resolution has passed. ... we're going on to ... 0644."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The resolution opposing receivership passed.",
+            "expected_presence": 0,
+            "expected_fact_check": "not_evaluated",
+            "rationale": "The summary states only a completed action, with no pendingness marker."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Some BPS work remained unfinished after the vote.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is stated, but the pending item and handling path are not specific enough."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Although Docket 0643 passed, broader BPS work remained ongoing, including superintendent support, possible targeted-intervention or partnership discussions, and continued accountability involving the mayor, Council, BPS leadership, and a future superintendent.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The summary distinguishes the completed docket from the future-facing BPS workstreams and names a source-supported path."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "Docket 0643 remained pending and was sent back to committee for a later final vote on a targeted-intervention plan.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a specific pending item and path, but contradicts the event sheet: Docket 0643 passed and no formal targeted-intervention plan was adopted or set for later final vote."
+          }
+        ]
+      }
+    }
+  }

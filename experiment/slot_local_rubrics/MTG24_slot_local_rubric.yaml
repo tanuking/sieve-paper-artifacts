@@ -1,0 +1,831 @@
+segment_id: "MTG24"
+segment_dir: "24_BostonCC_06152022"
+meeting_id: "BostonCC_06152022"
+uid: "BostonCC_06152022_2022-0770"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "24",
+    "language": "en",
+    "notes": [
+      "For Docket 0770, the resolution itself was adopted in-session. Future repair, healing, and conversations were described as downstream or aspirational effects, not as a formal pending Council path."
+    ],
+    "slots": {
+      "T": {
+        "label": "T",
+        "name": "Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the segment: the subject under discussion, the policy direction being pursued, and the target to which that direction applies.",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "additional": [
+            "already_occurred",
+            "future_effect"
+          ],
+          "notes": [
+            "Boston's historical role in slavery was discussed as already occurred.",
+            "Ongoing detrimental impacts on Black Bostonians were discussed as currently existing.",
+            "The acknowledgment and apology were framed as a step toward future reconciliation and repair."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names Boston's role in the transatlantic slave trade, slavery, or historical racial harm as the substantive subject.",
+                  "Names the ongoing detrimental impacts experienced by Black people or Black Bostonians as part of the substantive subject.",
+                  "Identifies Docket 0770 only if it also describes the substantive slavery/transatlantic slave trade and ongoing-harm subject."
+                ],
+                "not_match": [
+                  "Only says the Council discussed or adopted Docket 0770 without saying what the docket was about.",
+                  "Only says the Council discussed racial equity in general without naming Boston's role in slavery, the transatlantic slave trade, or the ongoing harms to Black Bostonians.",
+                  "Treats the subject as a generic procedural vote or apology without identifying the historical and ongoing racial-harm subject."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States that the policy move was to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and its ongoing impacts.",
+                  "States that the resolution sought formal municipal acknowledgment, accountability, apology, truth-telling, or condemnation for the historical role and continuing harms.",
+                  "States that the resolution was a step toward truth, reconciliation, healing, or repair, when linked to the acknowledgment/apology policy move."
+                ],
+                "not_match": [
+                  "Only says the Council approved or adopted the item; procedural adoption alone is not policy direction.",
+                  "Only says the Council discussed history or reparations without saying what policy move the resolution pursued.",
+                  "Says the policy direction was to create a reparations program, allocate funds, or mandate implementation when the segment only supports acknowledgment, condemnation, and apology."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the City of Boston or Boston municipal government as the actor taking responsibility or the entity whose role is being acknowledged.",
+                  "Identifies Black people of Boston or Black Bostonians as the group experiencing ongoing detrimental impacts.",
+                  "Identifies the target scope as Boston's role in the transatlantic slave trade and the continuing impacts on Black Bostonians."
+                ],
+                "not_match": [
+                  "States the target as a different city, state, institution, or population.",
+                  "Only refers to the public or residents generally without identifying Boston's responsibility or Black Bostonians as the affected group.",
+                  "Shifts the target to a generic national slavery apology without tying it to Boston's role and Black people of Boston."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The substantive subject was Boston's role in the transatlantic slave trade and the ongoing detrimental impacts experienced by Black people of Boston.",
+            "The policy direction was to formally acknowledge, condemn, and apologize for that role and those ongoing harms.",
+            "The resolution targeted the City of Boston's municipal responsibility and the harms experienced by Black Bostonians."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to list every historical detail discussed in debate.",
+            "Procedural adoption belongs to O unless it is used only as context for the substantive framing.",
+            "A claim that the resolution created a detailed reparations program, funding mechanism, deadline, or implementation schedule contradicts this slot's policy_direction if presented as the policy move."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The discussion framed Docket 0770 as Boston's formal acknowledgment, condemnation, and apology for the City's role in the transatlantic slave trade and the ongoing detrimental impacts experienced by Black people of Boston.",
+          "source_vocabulary": [
+            "acknowledge, condemn and apologize",
+            "role played by the city of Boston",
+            "transatlantic slave trade",
+            "ongoing detrimental impacts",
+            "Black people of Boston",
+            "truth",
+            "reconciliation"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council took up Docket 0770.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary gives only a docket reference and does not identify the substantive subject."
+          },
+          {
+            "summary": "Councilors discussed Boston's history with slavery and racial harm.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "The subject is visible, but the policy direction and target are not specific enough."
+          },
+          {
+            "summary": "The Council considered a resolution to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and the ongoing impacts on Black Bostonians.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "summary": "The Council considered a resolution creating a funded reparations program for Black Bostonians.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary is specific enough for Presence, but it contradicts the source-supported policy direction by adding an unsupported funded reparations program."
+          }
+        ]
+      },
+      "O": {
+        "label": "O",
+        "name": "Outcome/Position",
+        "slot_purpose": "O captures the in-session disposition shell: what the body did to the acted-on item during the segment.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "notes": [
+            "The Council completed its disposition of Docket 0770 during the segment.",
+            "The source supports suspension of the rules, roll-call voting, a unanimous vote announcement, and adoption of the resolution."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that Boston City Council adopted, passed, approved, or voted to adopt Docket 0770 or the resolution.",
+                  "States that the Council suspended the rules and adopted the resolution.",
+                  "States that the Council took a roll-call vote on the item and adopted it."
+                ],
+                "not_match": [
+                  "Only says councilors discussed, debated, supported, praised, or introduced the resolution without saying the body acted on it.",
+                  "Only describes the substance of the apology without a Council disposition.",
+                  "States a later legal or administrative implementation rather than the Council's in-session disposition."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as Docket 0770.",
+                  "Identifies the acted-on item as the resolution acknowledging, condemning, and apologizing for Boston's role in the transatlantic slave trade and ongoing harms to Black Bostonians.",
+                  "Uses a sufficiently specific substantive description that distinguishes this resolution within the segment."
+                ],
+                "not_match": [
+                  "Only says the Council adopted a resolution without identifying which resolution.",
+                  "Only says the Council adopted an item or measure with no docket number or substantive description.",
+                  "Identifies a different docket, ordinance, amendment, or agenda item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "Boston City Council was the acting body.",
+            "The procedural stage was full Council in-session adoption of a resolution.",
+            "Docket 0770 was adopted after suspension of the rules.",
+            "The acted-on item was Docket 0770, the resolution to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and ongoing detrimental impacts experienced by Black people of Boston.",
+            "The roll-call vote on Docket 0770 was announced as unanimous. The transcript does not support relying on a clean numeric vote count."
+          ],
+          "fact_check_notes": [
+            "A summary may omit the roll-call detail and still pass Fact Check if it does not state a contradictory vote result.",
+            "Do not require a numeric vote count. If a summary gives a materially wrong count or attaches the unanimous vote to another item or stage, Fact Check fails.",
+            "Do not treat later repair conversations as changing the completed adoption status of Docket 0770."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "After debate, Boston City Council suspended the rules and adopted Docket 0770 by a roll-call vote announced as unanimous.",
+          "source_vocabulary": [
+            "suspension of the rules",
+            "adoption of docket 0770",
+            "roll call vote",
+            "unanimous vote",
+            "the resolution has been adopted"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors spoke in favor of Docket 0770.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary describes discussion or support, not a disposition by the body."
+          },
+          {
+            "summary": "The Council adopted a resolution.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "A disposition is stated, but the acted-on item is too generic."
+          },
+          {
+            "summary": "Boston City Council adopted Docket 0770, the resolution apologizing for Boston's role in the transatlantic slave trade and ongoing harms to Black Bostonians, after a unanimous roll-call vote.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The disposition and acted-on item are specific and source-consistent."
+          },
+          {
+            "summary": "Boston City Council referred Docket 0770 to committee for further review.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary identifies a disposition and acted-on item, but the stated result and stage contradict the adopted-in-session outcome."
+          }
+        ]
+      },
+      "B": {
+        "label": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior events, conditions, problems, or other background that shaped why the current item came forward or how it was framed.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "additional": [
+            "currently_existing",
+            "recurring_concern"
+          ],
+          "notes": [
+            "The historical slavery and slave-trade background was past context.",
+            "Continuing disparities and institutional harms were discussed as present-day context.",
+            "The lack of prior municipal acknowledgment or apology was presented as background shaping the resolution."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States that Boston had a historical role in slavery or the transatlantic slave trade.",
+                  "States that Boston had not previously taken municipal responsibility, accountability, or apologized for that role.",
+                  "States that continuing racial disparities, generational trauma, city contracting disparities, systemic racism, or demographic underrepresentation formed background for the resolution.",
+                  "States that Boston's abolitionist self-image had obscured or contrasted with its active role in slavery and later racial structures."
+                ],
+                "not_match": [
+                  "Only states the resolution's operative apology without any prior or current background condition.",
+                  "Only says the Council adopted the resolution.",
+                  "Only mentions racism generally without a prior condition, current disparity, or background context connected to the item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects Boston's historical role in slavery or the slave trade to the need for Docket 0770's acknowledgment, condemnation, and apology.",
+                  "Connects the lack of prior municipal accountability or apology to the resolution coming forward.",
+                  "Connects ongoing harms or disparities to why the resolution addressed continuing detrimental impacts on Black Bostonians.",
+                  "Connects the background to the discussion's truth, reconciliation, healing, or repair frame."
+                ],
+                "not_match": [
+                  "Lists historical facts or disparities without connecting them to the current resolution or discussion frame.",
+                  "Treats background details as unrelated historical commentary.",
+                  "Says the background caused a different item, program, or funding decision not supported by the segment."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The resolution was shaped by Boston's historical role in slavery and the transatlantic slave trade.",
+            "The resolution was shaped by the absence of prior municipal acknowledgment, condemnation, apology, or accountability.",
+            "Continuing racial disparities, generational trauma, systemic racism, city contracting disparities, and city department demographic mismatch were described as ongoing background conditions.",
+            "These background facts were used to justify Docket 0770 as a formal municipal acknowledgment, condemnation, and apology."
+          ],
+          "fact_check_notes": [
+            "Specific historical details such as 1638, 1641, John Winthrop, Peter Faneuil, and estate inventories are source-supported background, but a summary does not need to reproduce them.",
+            "The 0.4% city-contracting figure is source-supported as a present-day disparity cited in background, not as an operative payload of the resolution.",
+            "A summary that states a different trigger, such as a lawsuit, court order, state mandate, or newly created reparations program, contradicts this slot if presented as the reason the item came forward."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Speakers justified the resolution by pointing to Boston's historical participation in slavery and the slave trade, the lack of prior municipal apology or accountability, and continuing racial disparities and institutional harms affecting Black Bostonians.",
+          "source_vocabulary": [
+            "heinous historical criminality of slavery",
+            "modern day manifestations",
+            "hasn't been done ... at the municipal level",
+            "Slavery likely began in Boston in 1638",
+            "legalized in Massachusetts in 1641",
+            "generational trauma",
+            "disparities",
+            "systemic racism"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council adopted the apology resolution.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary states the action but not any agenda-setting background."
+          },
+          {
+            "summary": "Speakers discussed Boston's history with slavery.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "A background condition is visible, but the connection to the current item is not stated."
+          },
+          {
+            "summary": "The resolution came against the background of Boston's role in slavery, its lack of prior municipal apology, and ongoing disparities that speakers linked to the need for acknowledgment and apology.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The background is specific and visibly connected to the resolution."
+          },
+          {
+            "summary": "The resolution was brought forward because a court ordered Boston to create a reparations fund.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary states a specific agenda-setting background, but that trigger contradicts the event-sheet context."
+          }
+        ]
+      },
+      "N": {
+        "label": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the action beyond the bare fact that the body acted.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "additional": [
+            "future_effect"
+          ],
+          "notes": [
+            "The resolution carrying this payload was adopted in-session.",
+            "Speakers framed the acknowledgment and apology as a beginning point for later repair and healing.",
+            "The segment does not show a detailed reparations program, funding mechanism, deadline, or implementation schedule."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that the adopted resolution's payload was to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and ongoing harms to Black Bostonians.",
+                  "States that Docket 0770 carried an acknowledgment, condemnation, apology, accountability, or admission of harm.",
+                  "States that the action covered both Boston's historical role and ongoing detrimental impacts on Black people of Boston."
+                ],
+                "not_match": [
+                  "Only says the Council adopted Docket 0770 without describing what the resolution did.",
+                  "Only gives background about slavery or racial disparities without attaching a payload to the resolution.",
+                  "States an aspirational future conversation as the only payload without identifying the adopted resolution's acknowledgment/apology content."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Names the resolution's requirement or operative content as acknowledgment, condemnation, apology, accountability, or admission of harm.",
+                  "Names the resolution's action as acknowledging harm and apologizing for it."
+                ],
+                "not_match": [
+                  "Only says the resolution was symbolic, important, or about history without naming what it required or stated.",
+                  "Only says the Council took action without identifying an operative condition or requirement."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies the payload scope as Boston's role in the transatlantic slave trade.",
+                  "Identifies the affected group or scope as Black people of Boston or Black Bostonians experiencing ongoing detrimental impacts.",
+                  "Identifies the actor scope as the City of Boston or Boston municipal government."
+                ],
+                "not_match": [
+                  "States no scope for the payload.",
+                  "Shifts the scope to a different city, statewide policy, national apology, or different affected group.",
+                  "Only says the payload addressed injustice generally without a discernible scope boundary."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Docket 0770, the adopted resolution.",
+            "The payload content was to acknowledge, condemn, and apologize for the role played by the City of Boston in the transatlantic slave trade and ongoing detrimental impacts experienced by Black people of Boston.",
+            "The payload scope was the City of Boston's role in the transatlantic slave trade and ongoing racial harms connected to that history, with Black people of Boston as the affected group.",
+            "No operative numeric threshold, funding amount, deadline, date cutoff, implementation schedule, or reparations program was stated for the adopted resolution in this segment."
+          ],
+          "fact_check_notes": [
+            "Historical and disparity numbers discussed by speakers are background evidence, not operative payload terms.",
+            "A summary may describe the payload as apology/accountability without listing acknowledge, condemn, and apologize separately, if it remains source-consistent.",
+            "If a summary explicitly attaches a funding amount, required study, reparations program, deadline, or implementation schedule to Docket 0770, that contradicts the source context unless framed only as unsupported future discussion rather than adopted payload."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The adopted resolution's operative content was to acknowledge, condemn, and apologize for the City of Boston's role in the transatlantic slave trade and the ongoing detrimental impacts on Black people of Boston; no detailed funding, deadline, or implementation mechanism was stated in this segment.",
+          "source_vocabulary": [
+            "acknowledge",
+            "condemn",
+            "apologize",
+            "role played by the city of Boston",
+            "ongoing detrimental impacts",
+            "admitting that the harm was done",
+            "taking accountability"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council adopted Docket 0770.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary gives the action shell but no operative payload."
+          },
+          {
+            "summary": "The resolution addressed Boston's role in the slave trade.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "The payload is loosely attached, but it lacks a named requirement or scope boundary specific enough for full Presence."
+          },
+          {
+            "summary": "Docket 0770's payload was to acknowledge, condemn, and apologize for Boston's role in the transatlantic slave trade and ongoing harms to Black Bostonians.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The payload is attached to the resolution and includes both named operative content and scope."
+          },
+          {
+            "summary": "Docket 0770 required Boston to establish a funded reparations program with a set implementation schedule.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary states a specific payload, but the funding program and implementation schedule are not supported by the segment."
+          }
+        ]
+      },
+      "L": {
+        "label": "L",
+        "name": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff stated on the problem side.",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "additional": [
+            "recurring_concern",
+            "hypothetical_or_risk"
+          ],
+          "notes": [
+            "Most concerns were discussed as ongoing conditions.",
+            "Some future-facing concern was that healing and reconciliation cannot proceed without truth, acknowledgment, and accountability."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a problem-side concern such as generational trauma, racial disparities, racial wealth disparity, contracting disparity, systemic racism, demographic underrepresentation, backlash, vitriol, or blocked healing/reconciliation.",
+                  "States that continuing harms from slavery or racism remain an obstacle or injury for Black Bostonians.",
+                  "States that lack of truth or acknowledgment prevents or impedes healing, restoration, reconciliation, or repair."
+                ],
+                "not_match": [
+                  "Only says the resolution was about healing or reconciliation as a solution-side goal without naming a concern, harm, or obstacle.",
+                  "Only states that the Council apologized without any problem-side concern.",
+                  "Only says councilors had concerns, without saying what the concern was."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Identifies the concern content as generational trauma or ongoing disparities in political, economic, or social indicators.",
+                  "Identifies the concern content as racial wealth or city contracting disparities, including low Black-owned business participation in city contracts.",
+                  "Identifies the concern content as systemic racism or lack of demographic representation in city departments.",
+                  "Identifies the concern content as backlash against racial justice or reparations efforts.",
+                  "Identifies the concern content as the difficulty of reconciliation or healing without truth, acknowledgment, or accountability."
+                ],
+                "not_match": [
+                  "Uses only generic language such as concerns, problems, injustice, or harm without identifying what the harm or obstacle is about.",
+                  "Names only the policy subject without articulating a concrete concern.",
+                  "Gives a different concern, such as budget pressure, public safety staffing, or housing costs, not supported for this segment."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Source-supported concerns include generational trauma and disparities in political, economic, and social indicators.",
+            "Source-supported concerns include racial wealth disparity and the statement that Black-owned businesses received 0.4% of city contracts between 2014 and 2019.",
+            "Source-supported concerns include systemic racism and city departments not reflecting Boston's demographics.",
+            "Source-supported concerns include backlash or vitriol directed at racial justice and reparations efforts.",
+            "Source-supported concerns include healing and reconciliation being blocked or incomplete without truth, acknowledgment, and accountability.",
+            "When a local anchor is stated, supported anchors include the City of Boston, Black people of Boston or Black Bostonians, Boston city departments, and city contracting."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if the summary explicitly gives a place, group, institution, or process, it must not contradict the event sheet.",
+            "A summary does not need to include every concern raised in debate.",
+            "The 0.4% contracting figure is source-supported as a concern/background detail, not as a resolution payload."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Speakers raised concrete concerns about continuing harms from slavery and racism in Boston, including generational trauma, racial disparities, contracting inequity, systemic racism in city departments, underrepresentation, backlash against racial justice, and the inability to pursue reconciliation without truth and accountability.",
+          "source_vocabulary": [
+            "generational trauma",
+            "disparities",
+            "0.4% ... Black owned",
+            "systemically racist",
+            "do not hire according to the demographics",
+            "vitriol",
+            "harm",
+            "healing",
+            "reconciliation"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "Councilors supported healing and reconciliation.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary names solution-side goals without a concrete problem-side concern."
+          },
+          {
+            "summary": "Councilors raised concerns about harm.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "Concern language is present, but the specific concern content is not identifiable."
+          },
+          {
+            "summary": "Councilors described ongoing generational trauma, racial disparities, contracting inequities, and systemic racism as concrete harms tied to Boston's history.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The summary states specific, source-supported concern content."
+          },
+          {
+            "summary": "Councilors' main concern was that the apology would worsen Boston's current budget deficit.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary states a specific concern, but that concern is not source-supported for this segment."
+          }
+        ]
+      },
+      "S": {
+        "label": "S",
+        "name": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "additional": [
+            "currently_existing",
+            "future_effect"
+          ],
+          "notes": [
+            "The concern appeared across multiple speakers.",
+            "The theme was framed as both a present barrier and a precondition for future healing or repair."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "States the recurring concern theme that Boston cannot move toward racial healing, reconciliation, restoration, or repair without truth, acknowledgment, apology, or accountability.",
+                  "States that avoiding, omitting, or failing to acknowledge Boston's role in slavery and ongoing harm blocks or undermines repair.",
+                  "States that truth-telling or admission of harm is necessary because unacknowledged harm prevents healing."
+                ],
+                "not_match": [
+                  "Only says speakers supported the apology resolution without naming a problem-side concern.",
+                  "Only states the solution-side idea of apology, healing, or reconciliation without saying what problem or barrier it addresses.",
+                  "Only lists one isolated factual detail without synthesizing a broader concern theme."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Identifies the concern object as Boston's role in slavery, racial harm, or ongoing impacts being unacknowledged.",
+                  "Identifies the mechanism as truth, acknowledgment, apology, accountability, or admission of harm being necessary before healing, reconciliation, repair, or restoration.",
+                  "Identifies the problem as reconciliation or repair being impossible, blocked, incomplete, or less meaningful without that truth and accountability."
+                ],
+                "not_match": [
+                  "Uses only generic concern language, such as 'there were concerns about racism,' without naming the concern theme's content.",
+                  "Only says there was debate about reparations without the truth/accountability-before-repair theme.",
+                  "Names a different recurring theme, such as budget risk, administrative burden, or public safety impact."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that Boston cannot move toward racial healing, reconciliation, or repair unless it first tells the truth, acknowledges its role in slavery and racial harm, and accepts accountability for continuing impacts.",
+            "Source-supported concern content includes truth before reconciliation, acknowledgment of past policy harms, admission that the wound or harm exists, accountability before healing and restoration, and apology as a step that may help the community heal.",
+            "The theme includes both historical truth-telling and present-day accountability."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to name every councilor or every metaphor.",
+            "This slot checks the shared concern theme, not the bare procedural adoption of the resolution.",
+            "A summary may use equivalent language such as admission, accountability, truth-telling, or acknowledgment if it preserves the theme."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Across speakers, the recurring concern was that Boston cannot pursue racial healing, reconciliation, restoration, or repair unless it first tells the truth, acknowledges its role in slavery and racial harm, and accepts accountability for continuing impacts.",
+          "source_vocabulary": [
+            "without truth, there is no reconciliation",
+            "corrective action",
+            "acknowledgment of our history",
+            "admitting that the knife is there",
+            "admitting that the harm was done",
+            "taking accountability",
+            "healing",
+            "restoration",
+            "repair"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The Council adopted the resolution unanimously.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary gives an outcome, not a recurring concern theme."
+          },
+          {
+            "summary": "Councilors were concerned about reconciliation.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "A concern theme is gestured at, but the specific content is not identifiable."
+          },
+          {
+            "summary": "A recurring theme was that Boston could not achieve reconciliation or repair without first telling the truth, acknowledging harm, and taking accountability for its role in slavery and ongoing impacts.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The recurring concern theme and specific content are source-consistent."
+          },
+          {
+            "summary": "The shared concern was that acknowledging slavery would legally obligate Boston to pay damages immediately.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary states a specific concern theme, but that theme contradicts the source-supported truth/accountability-before-repair theme."
+          }
+        ]
+      },
+      "U": {
+        "label": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the action: pending handling, later review, future process, unresolved implementation, or an explicit return path. In this segment, the resolution itself was adopted; only informal downstream conversations and repair work were described as future-facing.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "additional": [
+            "completed_in_session",
+            "pending_future_handling"
+          ],
+          "notes": [
+            "Docket 0770 itself was not left pending; it was adopted.",
+            "Future conversations, healing, restoration, repair, and improved race relations were described as expected or hoped-for downstream work.",
+            "No formal follow-up docket, committee assignment, date, report-back, or implementation mandate was stated for Docket 0770 in this segment."
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "States that, after adoption, further conversations, repair, healing, restoration, or work to undo harm still remained ahead.",
+                  "States that passage was only a beginning point or put Boston on a path toward future repair or improved race relations.",
+                  "States the future tail while making clear that Docket 0770 itself had already been adopted."
+                ],
+                "not_match": [
+                  "States that Docket 0770 itself remained pending, was held, referred, or awaited a later Council vote.",
+                  "Only says the resolution was adopted, with no future-facing unfinished work or next step.",
+                  "Only gives a vague future aspiration such as 'things will improve' without linking it to conversations, healing, repair, or undoing harm."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies the future-facing item as conversations about undoing harm to African-American or Black people in Boston.",
+                  "Identifies the future-facing item as healing, restoration, repair, reconciliation, or improving race relations after the apology.",
+                  "Identifies the unresolved tail as downstream work rather than the adopted resolution itself."
+                ],
+                "not_match": [
+                  "Says only that something remains to be done without identifying the future work or issue.",
+                  "Identifies Docket 0770 itself as the pending item.",
+                  "Identifies a different pending item, such as a future budget vote, committee report, or implementation ordinance not stated in the segment."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "States the source-supported informal path: passage would begin discussions or real conversations about undoing harm, healing, restoration, or improving race relations.",
+                  "States that Boston was put on a path toward addressing past mistakes and improving race relations, without inventing a formal committee, date, or mandate.",
+                  "Explicitly notes that no formal Council return path, committee assignment, scheduled date, report-back, or implementation process was specified."
+                ],
+                "not_match": [
+                  "Invents a formal handling path such as referral to a committee, a scheduled future hearing, a report-back deadline, a working group mandate, or implementation process.",
+                  "States only a bare future effect without any path language such as beginning discussions, real conversations, or being on a path.",
+                  "Says the resolution would return for final passage or another vote."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Docket 0770 itself was not pending after the segment; it was adopted.",
+            "The future-facing tail was informal and aspirational: future conversations about undoing harm, healing, restoration, and improving race relations.",
+            "No specific follow-up docket, committee assignment, date, report-back, implementation mandate, or formal return path was stated for Docket 0770.",
+            "Supported path language includes beginning discussions, beginning real conversations, and putting Boston on a path to address past mistakes and improve race relations."
+          ],
+          "fact_check_notes": [
+            "This U slot is limited: the source supports future-facing downstream work, not a formal unresolved Council action.",
+            "A summary that says Docket 0770 remained pending contradicts the source because the resolution was adopted.",
+            "A summary that invents a formal process, date, committee, report-back, or implementation schedule contradicts the source-supported handling_path."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "After adoption, speakers framed the resolution as the beginning of future conversations about undoing harm, healing, restoration, and improving race relations, but the segment did not specify any formal pending Council action, follow-up date, committee path, report-back, or implementation process for Docket 0770.",
+          "source_vocabulary": [
+            "begin discussions",
+            "begins us on a track",
+            "real conversations",
+            "on a path",
+            "healing",
+            "restoration",
+            "improve race relations",
+            "the resolution has been adopted"
+          ]
+        },
+        "score_examples": [
+          {
+            "summary": "The resolution was adopted.",
+            "expected_presence": 0.0,
+            "expected_fact_check": "not_applicable",
+            "reason": "The summary states only the completed action and no unresolved tail or future return path."
+          },
+          {
+            "summary": "Speakers said more work would remain after the apology.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "reason": "A future-facing unfinished state is visible, but the pending item and handling path are not specific."
+          },
+          {
+            "summary": "After Docket 0770 was adopted, speakers described future conversations about undoing harm and healing as the next informal step, with no formal follow-up date or committee path specified.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 1,
+            "reason": "The future-facing tail is specific, and the lack of a formal path is source-consistent."
+          },
+          {
+            "summary": "Docket 0770 remained pending in committee for a later vote on an implementation plan.",
+            "expected_presence": 1.0,
+            "expected_fact_check": 0,
+            "reason": "The summary states a specific unresolved path, but it contradicts the source because Docket 0770 was adopted and no committee path or implementation vote was specified."
+          }
+        ]
+      }
+    }
+  }

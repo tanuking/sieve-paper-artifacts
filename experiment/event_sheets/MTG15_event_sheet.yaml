@@ -1,0 +1,658 @@
+segment_id: "MTG15"
+segment_dir: "15_AlamedaCC_02022016"
+meeting_id: "AlamedaCC_02022016"
+uid: "AlamedaCC_02022016_2016-2508"
+decision_type: "Resolution"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet — MTG15
+
+  ## Segment-level orientation
+
+  The segment concerns a City Council call for review of a Planning Board decision denying a use permit that would allow beer and wine sales for off-premises consumption at a Circle K / 76 gas-station convenience store at 1716 Webster Street. Staff explained the use-permit framework, prior history, and neighborhood-health-and-safety findings. Public speakers and council members debated business fairness, changed conditions, competition, neighborhood impacts, overconcentration, loitering, drunkenness, drinking and driving, and possible permit conditions. Both a motion to uphold the Planning Board decision and a motion to approve the permit failed; because the Council took no action changing the Planning Board decision, the Planning Board denial stood.
+
+  ---
+
+  ## Slot T — Topic/Framing
+
+  ```yaml
+  label: T
+  name: Topic/Framing
+  summary: >
+    The substantive policy matter was whether to allow off-sale beer and wine /
+    alcohol sales at a gas-station convenience store at 1716 Webster Street through
+    a discretionary use-permit process. The policy direction under debate was
+    approval versus denial of a use permit that would expand the convenience
+    store's allowed retail activity to include beer and wine for off-premises
+    consumption. The target was the Circle K / 76 convenience store use at
+    1716 Webster Street, with implications discussed for similar gas-station
+    convenience stores nearby.
+  evidence:
+    - "call for review and adoption of resolution upholding the Planning Board resolution to deny a use permit to allow the sale of beer and wine at a convenience store located at 1716 Webster Street"
+    - "the item before you this evening is a call for a review of the Planning Board's denial of use permit requests to have off sale alcohol"
+    - "this is a liquor license to sell alcohol for off premises consumption at a convenience store at 1716 Webster Street"
+    - "the request that we have today from the applicant is essentially the same application from 2012"
+  source_vocabulary:
+    subject_terms:
+      - "use permit"
+      - "off sale alcohol"
+      - "beer and wine"
+      - "liquor license"
+      - "convenience store"
+      - "gas station"
+      - "1716 Webster Street"
+    policy_direction_terms:
+      - "approve"
+      - "deny"
+      - "allow"
+      - "uphold"
+      - "recommend denial"
+      - "grant this application"
+    target_terms:
+      - "Circle K"
+      - "76 station"
+      - "1716 Webster Street"
+      - "gas-station convenience store"
+      - "off premises consumption"
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - completed_in_session
+      - hypothetical_or_risk
+    notes:
+      - The store and preexisting use-permit framework were already in place.
+      - The Council completed the review segment during the session.
+      - Broader implications for similar nearby gas stations were discussed as possible future consequences, not completed actions.
+  source_context_for_fact_check:
+    subject: >
+      Use-permit review for off-sale beer and wine / alcohol sales at the
+      Circle K / 76 convenience store at 1716 Webster Street.
+    policy_direction: >
+      The segment debated whether the City Council should approve the use permit
+      or uphold the Planning Board denial. The final result did not expand the
+      allowed use.
+    target: >
+      The target was the 1716 Webster Street gas-station convenience store.
+      Speakers also discussed possible implications for other nearby gas stations,
+      but those were not the acted-on target of the item.
+    exclusions:
+      - The segment was not about on-sale alcohol service at restaurants.
+      - The segment was not a citywide alcohol-policy ordinance.
+      - The segment was not final issuance of an ABC license by the state.
+  answer_locality:
+    - opening agenda statement
+    - staff presentation explaining the use-permit request
+    - council deliberation on approval versus denial
+  marker_presence:
+    subject_identified:
+      present_markers:
+        - "use permit"
+        - "sale of beer and wine"
+        - "off sale alcohol"
+        - "convenience store at 1716 Webster Street"
+    policy_direction:
+      present_markers:
+        - "deny a use permit"
+        - "approve this use permit application"
+        - "grant this application"
+        - "uphold the decision"
+    target:
+      present_markers:
+        - "1716 Webster Street"
+        - "Circle K"
+        - "76 station"
+        - "gas station convenience store"
+  ```
+
+  ---
+
+  ## Slot O — Outcome/Position
+
+  ```yaml
+  label: O
+  name: Outcome/Position
+  summary: >
+    During the City Council review, the Council did not overturn the Planning
+    Board's denial. A motion to uphold the Planning Board decision failed, and a
+    later motion to approve the permit also failed. Staff/legal guidance stated
+    that if the Council took no action changing the Planning Board decision, the
+    Planning Board decision would stand. The final in-session disposition was
+    therefore that the Planning Board denial of the 1716 Webster Street beer-and-
+    wine use permit remained in effect.
+  evidence:
+    - "If there is no change to the planning board decision by the City Council, then the planning board decision stands."
+    - "I'd like to make a motion that we uphold the decision of the planning board with regard to the use permit at 1716 Webster Street."
+    - "The motion fails"
+    - "I'd like to make a motion that we approve this permit. For the applicant was 1716 Webster."
+    - "All right, then that motion fails."
+    - "Then you move on to the next agenda item and the planning board decision stands."
+  source_vocabulary:
+    disposition_terms:
+      - "motion"
+      - "uphold"
+      - "approve"
+      - "motion fails"
+      - "planning board decision stands"
+      - "no action"
+    acted_on_item_terms:
+      - "use permit at 1716 Webster Street"
+      - "Planning Board decision"
+      - "Planning Board resolution to deny"
+      - "permit"
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - already_occurred
+    notes:
+      - The Council review and motions occurred during the sampled segment.
+      - The resulting status was not pending by the end of the segment.
+  source_context_for_fact_check:
+    actor: >
+      City Council conducting a call for review of the Planning Board decision.
+    procedural_stage: >
+      Council review of a Planning Board denial. This was not state ABC issuance
+      of a liquor license and not an initial Planning Board hearing.
+    disposition_result:
+      - A motion to uphold the Planning Board decision failed.
+      - A motion to approve the permit also failed.
+      - Because no Council action changed the Planning Board decision, the Planning Board denial stood.
+    acted_on_item:
+      - Planning Board decision / resolution denying the use permit.
+      - Use permit application for beer and wine sales at the Circle K / 76 convenience store at 1716 Webster Street.
+    vote_result:
+      value: >
+        The transcript supports that both motions failed and that no majority
+        changed the Planning Board decision. It does not provide a clean numeric
+        final vote count in the text.
+      attached_to:
+        - motion to uphold the Planning Board decision
+        - motion to approve the permit
+    temporal_status:
+      - completed_in_session for the Council review and failed motions
+      - already_occurred for the earlier Planning Board denial and 2012 Council upholding
+  answer_locality:
+    - final council deliberation and motion sequence
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item:
+      present_markers:
+        - "motion that we uphold the decision of the planning board"
+        - "motion that we approve this permit"
+        - "motion fails"
+        - "planning board decision stands"
+    acted_on_item_specific:
+      present_markers:
+        - "use permit at 1716 Webster Street"
+        - "Planning Board decision"
+        - "permit"
+  ```
+
+  ---
+
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  name: Agenda-Setting Background / Precipitating Context
+  summary: >
+    The current review was shaped by the property's permit history and prior
+    denials. In 1995 the Planning Board approved a convenience store and 24-hour
+    operation but prohibited alcohol sales. In 2012 the applicant sought to amend
+    that permit to allow off-sale alcohol; after a public hearing, the Planning
+    Board denied the request due to neighbor concerns about alcohol-related
+    nuisances, and the City Council unanimously upheld that denial. The current
+    application was described by staff as essentially the same as the 2012 request.
+    Staff also noted changed business competition from Alameda Landing / Safeway
+    gas but said those business changes did not alter the public-health, safety,
+    welfare, and neighborhood findings underlying the earlier denial.
+  evidence:
+    - "the history goes back to 1995"
+    - "The Planning Board in 1995 approved the convenience store and 24 hour operation, but the use permit prohibits the sale of alcohol."
+    - "In 2012, the applicant ... had requested use permit to amend that 1995 permit to allow off sale alcohol"
+    - "after a public hearing, the planning board denied that request due to neighbor concerns of alcohol related nuisances"
+    - "That decision was subsequently appealed to the City Council, who had unanimously upheld the Planning Board's denial in 2012."
+    - "the request that we have today from the applicant is essentially the same application from 2012"
+    - "since 2012 there is Alameda landing. There is new competition from safer gas, but changes in the business environment and added business competition doesn't affect the public health, safety and welfare considerations"
+  source_vocabulary:
+    background_terms:
+      - "1995"
+      - "2012"
+      - "amend that 1995 permit"
+      - "neighbor concerns"
+      - "alcohol related nuisances"
+      - "unanimously upheld"
+      - "same application"
+      - "Alameda Landing"
+      - "new competition"
+      - "public health, safety and welfare"
+  temporal_status:
+    primary: already_occurred
+    additional:
+      - currently_existing
+    notes:
+      - The 1995 and 2012 permit history had already occurred before the sampled segment.
+      - Staff treated the neighborhood conditions and prior findings as continuing context for the current item.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Prior permit history at the property included a 1995 approval of convenience-store / 24-hour operation while prohibiting alcohol sales.
+      - A 2012 attempt to allow off-sale alcohol was denied by the Planning Board and upheld by the City Council.
+      - The current application was presented by staff as essentially the same as the 2012 application.
+      - Business competition and retail-license changes were argued by some council members and supporters as changed circumstances.
+      - Staff said business competition did not change the public-health, safety, welfare, and neighborhood basis for denial.
+    agenda_connection: >
+      These prior denials, neighborhood findings, and asserted changed conditions
+      shaped why the Council was reviewing whether to uphold or overturn the
+      Planning Board denial in the sampled segment.
+  answer_locality:
+    - staff historical presentation
+    - council questions about Safeway, Target, Park Street gas stations, and other off-sale licenses
+    - public and council debate over fairness and changed conditions
+  marker_presence:
+    precipitating_context_visible:
+      present_markers:
+        - "history goes back to 1995"
+        - "In 2012"
+        - "Planning Board denied"
+        - "City Council ... upheld"
+        - "Alameda Landing"
+        - "new competition"
+    connected_to_current_item_or_form:
+      present_markers:
+        - "the request that we have today ... is essentially the same application from 2012"
+        - "conditions ... hasn't changed"
+        - "changed conditions"
+  ```
+
+  ---
+
+  ## Slot N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  name: Outcome-Near Condition / Operative Payload
+  summary: >
+    The operative payload of the requested permit was permission for off-sale
+    beer and wine / alcohol sales for off-premises consumption at the convenience
+    store. Participants also discussed possible approval conditions, including
+    limiting alcohol-sale hours, cleanup/litter pickup, locking coolers, security
+    or additional evening staffing, training, and city or ABC restrictions.
+    These possible conditions were discussed as terms that could accompany an
+    approval, but no such conditions were adopted because the permit was not
+    approved.
+  evidence:
+    - "liquor license to sell alcohol for off premises consumption at a convenience store at 1716 Webster Street"
+    - "requested use permit to amend that 1995 permit to allow off sale alcohol"
+    - "some of the things that we'd like to see are ... restricting the hours where the sale of alcohol can take place on the premises"
+    - "perhaps there's no reason to sell alcohol before 2:00 in the afternoon"
+    - "stop selling at 11 p.m. or perhaps midnight"
+    - "commit to cleaning up the area"
+    - "hire a security guard or another person ... in the evening to make sure that people aren't loitering around the circle K"
+    - "we can lock the cooler doors"
+  source_vocabulary:
+    payload_terms:
+      - "off sale alcohol"
+      - "beer and wine license"
+      - "off premises consumption"
+      - "restricting the hours"
+      - "conditions"
+      - "lock the cooler doors"
+      - "cleaning up the area"
+      - "security guard"
+      - "training program"
+      - "ABC"
+  temporal_status:
+    primary: hypothetical_or_risk
+    additional:
+      - future_effect
+      - completed_in_session
+    notes:
+      - The requested permit and possible conditions would have had future effect if approved.
+      - The discussion of conditions was completed in session.
+      - The conditions remained hypothetical because approval failed and the Planning Board denial stood.
+  source_context_for_fact_check:
+    payload_carrier: >
+      The requested use permit / beer-and-wine license for the Circle K / 76
+      convenience store at 1716 Webster Street.
+    payload_content:
+      - Allow beer and wine / off-sale alcohol for off-premises consumption at the convenience store.
+      - Potential conditions discussed included sale-hour limits, cleanup/litter measures, cooler locks, security or additional staffing, responsible-retailer training, and city/ABC restrictions.
+      - No final condition package was adopted during the segment.
+    payload_scope:
+      - Location: 1716 Webster Street convenience store / Circle K / 76 station.
+      - Product scope as discussed by applicant and council: beer and wine, not distilled spirits for this applicant.
+      - Transaction type: off-sale / off-premises consumption.
+    payload_scalar_or_baseline:
+      - value: 1995
+        meaning: original permit history approving convenience store / 24-hour operation while prohibiting alcohol sales.
+      - value: 2012
+        meaning: prior denial of off-sale alcohol request and Council upholding.
+      - value: 2:00 p.m.
+        meaning: possible start time suggested by a council member, not adopted.
+      - value: 11 p.m. or midnight
+        meaning: possible cutoff times suggested by a council member, not adopted.
+      - value: $1,000,000
+        meaning: applicant/supporter statements about investment in the store, not a permit condition.
+    temporal_status:
+      - future_effect if the requested permit or conditions had been approved
+      - hypothetical_or_risk for suggested restrictions and conditions
+      - completed_in_session for discussion of possible conditions
+  answer_locality:
+    - staff explanation of the request and ABC/city conditions
+    - applicant questioning about possible restrictions
+    - council member Brodie's proposed conditional-support discussion
+  marker_presence:
+    payload_attached_to_action:
+      present_markers:
+        - "use permit ... to allow off sale alcohol"
+        - "liquor license to sell alcohol for off premises consumption"
+        - "conditions"
+        - "restricting the hours"
+    quality_gate_options:
+      number:
+        present_markers:
+          - "2:00 in the afternoon"
+          - "11 p.m."
+          - "midnight"
+          - "$1,000,000"
+      named_requirement:
+        present_markers:
+          - "training program"
+          - "security guard"
+          - "cleaning up the area"
+          - "lock the cooler doors"
+      scope_boundary:
+        present_markers:
+          - "at a convenience store at 1716 Webster Street"
+          - "beer and wine"
+          - "off premises consumption"
+      date_cutoff:
+        present_markers:
+          - "1995"
+          - "2012"
+          - "May 12th, 2015"
+        notes: >
+          These dates appear as background or license-history references; they are
+          not adopted operative cutoff dates in the final disposition.
+  ```
+
+  ---
+
+  ## Slot L — Concrete Concern
+
+  ```yaml
+  label: L
+  name: Concrete Concern
+  summary: >
+    The segment contained concrete concerns on both sides of the dispute.
+    Opponents and some council members raised neighborhood-safety and nuisance
+    concerns: public drunkenness, loitering, littering, crime, drinking and
+    driving, alcohol availability near residential properties and housing
+    developments, overconcentration, and difficulty enforcing future conditions.
+    Supporters raised business-fairness and viability concerns: the applicant had
+    invested heavily in a new store, faced competition from Safeway / Alameda
+    Landing, and might be treated differently from larger retailers or other
+    businesses with alcohol licenses.
+  evidence:
+    - "neighbor concerns of alcohol related nuisances"
+    - "public drunkenness, loitering, littering, crimes being committed"
+    - "I don't believe that liquor and driving cars goes together very well"
+    - "I just don't want to see more liquor license issued"
+    - "concerned with what that corner will look like, that particular intersection that abuts residential areas"
+    - "the enforcement of conditions. We have a hard time enforcing code violations"
+    - "extremely difficult for local gas stations such as the Circle K to increase their sales through gas sales"
+    - "it just seems to me a little inconsistent that we have one set of rules for big box and another set of rules for small businesses"
+    - "why are we singling out 76 station on Webster?"
+  source_vocabulary:
+    concern_terms:
+      - "neighbor concerns"
+      - "alcohol related nuisances"
+      - "public drunkenness"
+      - "loitering"
+      - "littering"
+      - "crimes"
+      - "drunk driver"
+      - "residential areas"
+      - "overconcentration"
+      - "arbitrary and capricious"
+      - "discrimination"
+      - "fairness and equity"
+      - "competitive environment"
+      - "small business"
+  local_anchors:
+    - "1716 Webster Street"
+    - "Webster and Buena Vista"
+    - "West End"
+    - "adjacent building"
+    - "housing developments"
+    - "Alameda Landing"
+    - "Park Street"
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - Some nuisance and fairness concerns were described as existing or recurring.
+      - Some concerns, such as future loitering, future applications by nearby gas stations, or future enforcement difficulty, were hypothetical or risk-based.
+  source_context_for_fact_check:
+    obstacle_content:
+      neighborhood_safety:
+        - alcohol-related nuisances
+        - public drunkenness
+        - loitering
+        - littering
+        - crimes
+        - drunk driving / mixing alcohol purchase with driving
+        - alcohol concentration near residents and housing
+        - condition-enforcement burden
+      business_fairness_viability:
+        - competition from Safeway gas / Alameda Landing
+        - applicant investment in the store
+        - claimed inconsistent treatment versus Safeway, Target, Park Street gas stations, grocery stores, or other license holders
+        - desire to prevent blight and support the West End business district
+    local_anchor:
+      - The main neighborhood-safety anchor was the 1716 Webster Street area, especially Webster/Buena Vista and nearby residential / housing properties.
+      - The business-competition anchor included Alameda Landing / Safeway gas and broader comparisons to Park Street, Target, Safeway, and other off-sale or on-sale license holders.
+  answer_locality:
+    - staff history and findings
+    - council questions on nuisance, overconcentration, and changed conditions
+    - public comments for and against the permit
+    - council deliberation
+  marker_presence:
+    concrete_concern_language:
+      present_markers:
+        - "concerns"
+        - "nuisances"
+        - "loitering"
+        - "littering"
+        - "crime"
+        - "drunk driver"
+        - "competitive"
+        - "discrimination"
+        - "fairness"
+        - "hard time enforcing"
+    specific_concern_content:
+      present_markers:
+        - "public drunkenness, loitering, littering, crimes being committed"
+        - "liquor and driving cars"
+        - "specific location"
+        - "adjacent residents and businesses"
+        - "Safeway gas ... much lower price"
+        - "big box ... small businesses"
+  ```
+
+  ---
+
+  ## Slot S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  name: Shared Concern Synthesis
+  summary: >
+    Recurring problem-side themes structured the debate. One recurring theme was
+    neighborhood impact from additional alcohol sales near Webster Street:
+    overconcentration, nuisance activity, loitering, litter, public drunkenness,
+    crime, drunk driving, residential adjacency, and difficulty enforcing
+    conditions. A second recurring theme was fairness and economic pressure on a
+    small local business relative to larger retailers, grocery stores, Park Street
+    gas stations, and newer Alameda Landing / Safeway competition. A third
+    recurring theme was precedent and consistency: staff and some council members
+    warned that approving one gas-station convenience-store alcohol use could make
+    it difficult to distinguish future requests from nearby gas stations.
+  evidence:
+    - "the neighbor conditions ... for which the Planning Board and counsel denied the request in 2012 really hasn't changed"
+    - "whatever decision the council makes tonight will likely have implications to those other businesses"
+    - "there are too many retail outlets that sell alcohol"
+    - "it just seems to me a little inconsistent that we have one set of rules for big box and another set of rules for small businesses"
+    - "It's about fairness and equity for all businesses"
+    - "I am concerned with what that corner will look like, that particular intersection that abuts residential areas"
+    - "If we grant this license for one, the others will want it too"
+  source_vocabulary:
+    recurring_theme_terms:
+      - "neighbor conditions"
+      - "overconcentration"
+      - "health, safety, welfare"
+      - "fairness and equity"
+      - "small business"
+      - "big box"
+      - "changed conditions"
+      - "implications"
+      - "others will want it too"
+      - "difficult ... to differentiate"
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - The themes recur across staff presentation, public testimony, and council deliberation.
+      - Future applications by other gas stations were discussed as a risk/precedent concern, not as completed applications in this segment.
+  source_context_for_fact_check:
+    concern_theme:
+      - neighborhood safety / overconcentration / nuisance effects from additional alcohol sales near the 1716 Webster Street area
+      - fairness / consistency / economic viability for the applicant and small businesses
+      - precedent risk for future similar requests by nearby gas-station convenience stores
+    concern_content:
+      neighborhood_theme:
+        object: off-sale alcohol at gas-station convenience stores near residential areas
+        mechanisms:
+          - loitering
+          - litter
+          - drunkenness
+          - crime
+          - drunk driving
+          - more alcohol outlets in the same vicinity
+          - enforcement limits if conditions are imposed
+      fairness_theme:
+        object: differential treatment between Circle K / 76 and larger retailers or other alcohol-selling businesses
+        mechanisms:
+          - Safeway / Target / grocery or Park Street comparisons
+          - business competition from Alameda Landing / Safeway gas
+          - investment and small-business viability
+      precedent_theme:
+        object: future requests from Shell, Chevron, Safeway gas, or other nearby gas stations
+        mechanism: >
+          Similar neighborhood findings could make it hard for the City to say yes
+          to one location and no to other nearby locations.
+  answer_locality:
+    - repeated through staff presentation, council questions, public testimony, and council deliberation
+  marker_presence:
+    problem_side_concern:
+      present_markers:
+        - "neighbor concerns"
+        - "overconcentration"
+        - "fairness and equity"
+        - "discrimination"
+        - "implications"
+        - "others will want it too"
+    specific_content:
+      present_markers:
+        - "public drunkenness, loitering, littering, crimes"
+        - "big box and ... small businesses"
+        - "new competition from Safeway gas"
+        - "difficult ... to differentiate the findings"
+  ```
+
+  ---
+
+  ## Slot U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  name: Unresolved Tail / Future Return Path
+  summary: >
+    The main acted-on item did not remain pending at the end of the segment:
+    after both motions failed, the Planning Board denial stood and the Council
+    moved to the next item. The segment did include future-oriented or open-ended
+    discussion, but these were not pending final action on the 1716 Webster permit:
+    possible future applications by nearby gas stations, possible ABC complaint
+    investigations and restrictions if problems occurred, and the possibility that
+    the applicant or similar businesses could return later.
+  evidence:
+    - "If there is no change to the planning board decision by the City Council, then the planning board decision stands."
+    - "Then you move on to the next agenda item and the planning board decision stands."
+    - "Shell ... as well as safely gas, have asked about having a convenience store and selling alcohol from the premises"
+    - "if those businesses do come in requesting a liquor license, it would be very difficult for the city to differentiate the findings"
+    - "if ABC gets complaints from neighbors ... they can conduct investigations and even impose even further restrictions"
+    - "If I'm going to have to come back here every couple of years, I guess I have to do that."
+  source_vocabulary:
+    pending_or_future_terms:
+      - "planning board decision stands"
+      - "move on to the next agenda item"
+      - "if those businesses do come in"
+      - "future"
+      - "complaints"
+      - "investigations"
+      - "further restrictions"
+      - "come back here every couple of years"
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - hypothetical_or_risk
+      - pending_future_handling
+    notes:
+      - The 1716 Webster permit review was completed in-session; it should not be described as still pending after this segment.
+      - Future applications and ABC investigations were hypothetical or conditional.
+      - Any future handling for other stations or later complaints was not scheduled as a concrete next step in the segment.
+  source_context_for_fact_check:
+    pending_status:
+      main_item: >
+        Not pending by the end of the segment. The Planning Board decision denying
+        the use permit stood after Council motions failed.
+      other_future_items: >
+        Potential future applications, ABC complaints, or later return attempts
+        were discussed conditionally and should not be treated as completed or
+        scheduled Council actions.
+    pending_item:
+      - No pending final Council action remained for the 1716 Webster permit in this transcript.
+      - Hypothetical future objects included Shell, Chevron, Safeway gas, ABC enforcement, and possible later applicant return.
+    handling_path:
+      - For the main item: no further path stated; Council moved on.
+      - For complaints: neighbors could complain to ABC, and ABC could investigate or impose restrictions.
+      - For other stations: staff warned future applications might be difficult to distinguish, but no hearing date or formal path was set.
+  answer_locality:
+    - final motion sequence
+    - staff warnings about future similar requests
+    - discussion of ABC complaint process
+    - opponent comment about repeated returns
+  marker_presence:
+    pendingness_marker:
+      absent_for_main_item:
+        - The final marker is resolution/no-change: "planning board decision stands."
+      present_only_for_hypothetical_or_conditional_items:
+        - "if those businesses do come in requesting a liquor license"
+        - "if ABC gets complaints"
+        - "come back here every couple of years"
+    pending_item_identifiable:
+      main_item:
+        - "use permit at 1716 Webster Street" was identifiable but not pending at segment end.
+      hypothetical_items:
+        - "Shell"
+        - "Chevron"
+        - "Safeway gas"
+        - "ABC complaints"
+    handling_path_visible:
+      main_item:
+        - "move on to the next agenda item"; no future handling path for this permit.
+      conditional_path:
+        - "ABC ... conduct investigations and even impose even further restrictions"
+  ```

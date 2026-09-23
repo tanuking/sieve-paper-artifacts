@@ -1,0 +1,774 @@
+segment_id: "MTG17"
+segment_dir: "17_DenverCityCouncil_04092018"
+meeting_id: "DenverCityCouncil_04092018"
+uid: "DenverCityCouncil_04092018_18-0173"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "17",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "Topic/Framing",
+        "slot_purpose": "Capture the substantive framing of the sampled segment: the subject being discussed, the policy direction pursued, and the target to which that direction applies.",
+        "event_sheet_slot_context": {
+          "summary": "Council Bill 173 was framed as a map amendment / rezoning for specific Grove Street and West 17th Avenue properties in West Colfax, changing them from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "currently_existing",
+              "completed_in_session"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "The summary identifies the substantive subject as a map amendment or rezoning matter, not merely a procedural hearing or numbered agenda item.",
+                "The summary names the zoning-map or rezoning issue being discussed as the matter under consideration."
+              ],
+              "not_match": [
+                "The summary only says that a hearing, testimony, discussion, or vote occurred, without identifying any substantive policy matter.",
+                "The summary names only a bill number, agenda label, or procedural step without a substantive map-amendment / rezoning subject."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "The summary states a substantive zoning-change direction, such as moving the site from one zoning form to another or changing permitted density/use form.",
+                "The summary describes a concrete rule effect of the rezoning, such as allowing a different scale or mixed-use / multi-unit redevelopment form."
+              ],
+              "not_match": [
+                "The summary only states that the item was heard, approved, recommended, supported, or voted on, without saying how the policy treatment would change.",
+                "The summary describes goals or discussion themes but not any zoning-change direction or rule effect."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "The summary identifies the target as a defined site, parcel group, or set of properties to which the zoning-change direction applies.",
+                "The summary bounds the policy direction to a specific property/site scope rather than leaving the target unstated."
+              ],
+              "not_match": [
+                "The summary states a zoning-change direction but leaves the affected site, parcel group, area, or scope unidentified.",
+                "The summary gives only a broad policy subject with no target to which the direction applies."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was Council Bill 173 / CB18-173, a map amendment / rezoning for the listed West Colfax parcels.",
+            "The policy direction was to rezone the subject properties from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning.",
+            "The target was the specific Grove Street and West 17th Avenue properties, not the entire five-acre Town View site and not a citywide zoning rewrite."
+          ],
+          "fact_check_notes": [
+            "Do not treat procedural disposition language as the T policy direction unless the substantive zoning change is also visible.",
+            "Affordability was discussed, but the T policy direction is the rezoning / map amendment rather than a direct affordability mandate."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "Council members held a public hearing and heard testimony on the bill.",
+            "rationale": "This does not identify the substantive rezoning subject."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The segment concerned a West Colfax rezoning proposal.",
+            "rationale": "The substantive subject is visible, but the policy direction and target are not specific enough for full Presence."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Council Bill 173 was a map amendment to rezone the Grove Street and West 17th Avenue parcels in West Colfax from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning.",
+            "rationale": "The subject, policy direction, and target are all present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "Council Bill 173 was a citywide downzoning that moved West Colfax properties from five-story mixed-use zoning to three-story residential zoning.",
+            "rationale": "The summary has a subject, direction, and target, but it reverses the direction and broadens the scope beyond the source."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Staff report near the start of the Council Bill 173 public hearing.",
+          "secondary": "Staff plan-consistency discussion and later council comments on density and affordability."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "subject_identified": "present — the transcript identifies a map amendment / rezoning request."
+          },
+          "quality_gate": {
+            "policy_direction": "present — the transcript states the requested zoning change from GMU-3-like three-story zoning to C-MX-5-like five-story mixed-use zoning.",
+            "target": "present — the transcript lists the specific addresses, neighborhood, council district, and site size."
+          }
+        }
+      },
+      "O": {
+        "slot": "O",
+        "label": "Outcome/Position",
+        "slot_purpose": "Capture the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment.",
+        "event_sheet_slot_context": {
+          "summary": "Council Bill 173 was placed on the floor for final consideration and do-pass treatment; the public hearing occurred; council proceeded to roll-call voting; the transcript stops before the final announced result.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "pending_future_handling"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "The summary states that the council body took a recognizable disposition or procedural action on an acted-on bill/item.",
+                "The summary ties a motion, final-consideration action, do-pass treatment, public-hearing disposition, or roll-call voting step to an acted-on item."
+              ],
+              "not_match": [
+                "The summary only says staff recommended approval, the applicant testified, or members discussed the proposal, without a body disposition tied to an acted-on item.",
+                "The summary only describes public comments, support, opposition, or policy context without saying what the council body did to an item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "The acted-on item is identified specifically by a formal item label, bill number, or substantive description that distinguishes it within the segment.",
+                "The summary makes clear which map-amendment / rezoning item the body action was tied to."
+              ],
+              "not_match": [
+                "The summary only says “the bill,” “the item,” or “the rezoning” when no surrounding context distinguishes which item was acted on.",
+                "The summary states a body action but leaves the acted-on item too generic to identify."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was Denver City Council / the council body conducting the public hearing.",
+            "Council Bill 173 / CB18-173 was the acted-on item.",
+            "The bill was placed on final consideration and do-pass consideration, and the motion was moved and seconded.",
+            "The public hearing was opened and later closed, and council proceeded to roll-call voting.",
+            "Several affirmative roll-call responses are transcribed, but the final announced vote tally and explicit final passage announcement are not included in the provided transcript."
+          ],
+          "fact_check_notes": [
+            "Do not infer a precise final vote count, unanimity, or explicit final passage from this transcript segment.",
+            "Staff recommendation is not the council disposition, although it may appear in surrounding context."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "Staff recommended approval after presenting the rezoning request.",
+            "rationale": "Staff recommendation alone is not a body disposition on an acted-on item."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The council moved a bill to final consideration and began voting.",
+            "rationale": "A disposition is visible, but the acted-on item is not specific enough."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Council Bill 173 was placed on final consideration and do-pass consideration, the hearing was held, and council proceeded to roll-call voting, though the transcript does not include the final announced result.",
+            "rationale": "The disposition shell and item are specific and consistent with the transcript limitation."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "Denver City Council unanimously passed Council Bill 173 by a final announced 13-0 vote.",
+            "rationale": "The item and disposition are specific, but the transcript does not support a final announced tally or unanimity."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Opening procedural motion for Council Bill 173 and final roll-call sequence near the end.",
+          "secondary": "Staff recommendation and council comments before voting."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": "present — the transcript ties final consideration/do-pass treatment to Council Bill 173."
+          },
+          "quality_gate": {
+            "acted_on_item_specific": "present — the acted-on item is specifically identified as Council Bill 173 / CB18-173."
+          }
+        }
+      },
+      "B": {
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "Capture prior events, conditions, processes, problems, or other background that shaped the current item or the form in which it was discussed.",
+        "event_sheet_slot_context": {
+          "summary": "The current rezoning was shaped by the older, inefficiently configured Town View affordable-housing site, the Grove Street parcel's end-of-life condition, limited plan support for the broader site, prior outreach, and Planning Board approval.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "already_occurred",
+              "recurring_concern"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "The summary states a prior or existing background condition, process, planning constraint, outreach step, recommendation, or site condition that shaped the item.",
+                "The summary gives background such as an aging / low-density housing site, limited plan support, prior outreach, or prior recommendation process before the council hearing."
+              ],
+              "not_match": [
+                "The summary only states the zoning change, hearing, vote, or council action without any prior condition or process shaping the item.",
+                "The summary only states general policy goals without identifying a background condition, prior process, or context connected to the item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "The summary connects the background condition or prior process to the current rezoning item, the narrower form of the proposal, or the way the item was discussed.",
+                "The summary shows how prior site conditions, plan support limits, outreach, or recommendation history shaped the current item or its scope."
+              ],
+              "not_match": [
+                "The summary states a background fact but does not connect it to the current item, proposal form, discussion frame, or handling.",
+                "The summary describes future redevelopment ambitions without showing how prior conditions, plan support, or process shaped the current item."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The Town View community was described as over 50 years old and low-density relative to its five-acre size.",
+            "The Grove Street parcel had three buildings with 12 units and was described as being at the end of its usable life.",
+            "Because the balance of the site lacked plan support, the current rezoning covered only the small portion with plan support.",
+            "Community outreach and a unanimous Planning Board recommendation occurred before the council hearing."
+          ],
+          "fact_check_notes": [
+            "Do not state that Council Bill 173 rezoned the entire five-acre Town View site.",
+            "Do not state that neighborhood opposition drove the narrowed proposal; the event sheet says there was little evident neighborhood opposition."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "Council Bill 173 would rezone the Grove Street parcels to a five-story mixed-use district.",
+            "rationale": "This states the policy move, not the precipitating background."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "The Town View housing community was more than 50 years old.",
+            "rationale": "A background condition is visible, but it is not connected to the current item or its form."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The rezoning came forward as a narrower proposal because the older Town View site had an end-of-life Grove Street parcel with plan support for five stories, while the balance of the five-acre site lacked full plan support.",
+            "rationale": "The background condition and its connection to the current proposal are both present and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The proposal was narrowed because organized neighborhood opposition blocked rezoning of the full five-acre site.",
+            "rationale": "The summary gives a connected background explanation, but it contradicts the source-supported reason and opposition context."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Staff report and applicant testimony by Richard Taft and Bruce O'Donnell.",
+          "secondary": "Council comments on West Colfax change and affordable-housing preservation."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "precipitating_context_visible": "present — the transcript states prior site conditions, plan support limits, outreach, and Planning Board recommendation."
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": "present — the background is explicitly connected to why this rezoning covered only the small Grove Street parcel."
+          }
+        }
+      },
+      "N": {
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "Capture the operative payload carried by the action: requirements, restrictions, permissions, scope, numbers, dates, thresholds, or similar content attached to the acted-on item.",
+        "event_sheet_slot_context": {
+          "summary": "The payload of Council Bill 173 was a map amendment rezoning the listed properties from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning; applicant development plans were discussed as intended outcomes, not binding rezoning terms.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "The summary attaches an operative zoning-change payload, rule effect, permission, restriction, or scope to the acted-on item or map amendment.",
+                "The summary states what the acted-on item would do to the affected properties or zoning treatment, rather than only saying the item was supported or voted on."
+              ],
+              "not_match": [
+                "The summary only says the bill passed, was heard, was supported, or was discussed, without saying what operative change, condition, permission, or scope the item carried.",
+                "The summary only states applicant hopes for future housing without linking any operative payload to the rezoning or acted-on item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "The attached payload includes an identifiable numeric or scalar facet, such as height, site size, acreage, unit count, quantity, or baseline comparison.",
+                "The summary includes a number or scalar value and attaches it to the payload, scope, baseline, existing condition, or clearly non-binding development intent."
+              ],
+              "not_match": [
+                "The summary states an operative payload but includes no identifiable numeric quantity, height, size, unit count, amount, or scalar baseline.",
+                "The summary includes a number but does not attach it to any payload, scope, baseline, condition, or stated development-intent role."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "The attached payload names an identifiable zoning district change, rule effect, permission, restriction, or condition.",
+                "The summary identifies a named operative effect of the map amendment, such as a zoning-category change or a permission associated with the new district form."
+              ],
+              "not_match": [
+                "The summary describes a generic rezoning without naming any district change, rule effect, requirement, condition, restriction, or permission.",
+                "The summary names only aspirational development goals without tying them to an operative payload of the acted-on item."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "The attached payload identifies an applicable site, parcel, geographic, categorical, or property-scope boundary.",
+                "The summary clearly bounds what properties, site, area, or category the payload applies to."
+              ],
+              "not_match": [
+                "The summary gives a payload but leaves its applicable site, category, property scope, or boundary unspecified.",
+                "The summary states an operative rule effect but gives no boundary for what the payload applies to."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Council Bill 173 / CB18-173, the map amendment.",
+            "The source-supported binding payload was to rezone the listed parcels from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning.",
+            "The payload scope was the properties at 1660, 1682, and 1684 Grove Street and 3088 and 3092 West 17th Avenue, a nearly one-acre / 36,900-square-foot site.",
+            "The source-supported scalar baseline includes a change from three-story zoning to five-story zoning, 36,900 square feet, 21 existing multi-unit apartments, and about 130 senior-housing units only as the applicant's intended future building program."
+          ],
+          "fact_check_notes": [
+            "Applicant statements about a senior building, unit counts, bedroom mix, AMI mix, and broader redevelopment were discussed as intended or hoped-for outcomes, not binding payload terms of the rezoning itself.",
+            "Do not treat the rezoning as directly imposing affordability, voucher, senior-housing, local-hire, or full-site redevelopment requirements unless the summary clearly frames those as non-binding discussion or intent."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "Council members supported the project after hearing from the applicant and the public.",
+            "rationale": "This does not attach any operative payload to the acted-on item."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "Council Bill 173 changed the zoning rules for the site.",
+            "rationale": "A payload is attached to the bill, but no number, named requirement, or scope boundary is specific enough for full Presence."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Council Bill 173 carried a map-amendment payload rezoning the listed Grove Street and West 17th Avenue parcels from general urban multi-unit three-story zoning to urban center mixed-use five-story zoning.",
+            "rationale": "The payload carrier, named zoning change, scalar baseline, and scope are source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "Council Bill 173 required all five acres of Town View to be redeveloped immediately into 130 deeply affordable senior units.",
+            "rationale": "The summary states a specific payload, but it treats non-binding intent as a binding requirement and expands the scope to the full five-acre site."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Staff report on zoning request, site size, existing units, and C-MX-5 effects.",
+          "secondary": "Applicant and council question exchange about intended senior building and unit mix."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "payload_attached_to_action": "present — the zoning-change payload is tied to Council Bill 173 / the map amendment."
+          },
+          "quality_gate": {
+            "number": "present — 3 stories, 5 stories, 36,900 square feet, 21 existing apartments, and intended unit counts appear.",
+            "named_requirement": "present — the named zoning-district change is specified.",
+            "scope_boundary": "present — the payload is bounded to the listed parcels.",
+            "date_cutoff": "absent — no binding operative date cutoff is stated for Council Bill 173 in the transcript."
+          }
+        }
+      },
+      "L": {
+        "slot": "L",
+        "label": "Concrete Concern",
+        "slot_purpose": "Capture a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff stated in the segment.",
+        "event_sheet_slot_context": {
+          "summary": "Speakers and council questioning raised concrete concerns about affordability reaching very low-income residents, replacement of local people by higher-income newcomers, and exclusion of Black and local skilled workers from neighborhood jobs.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "The summary states a concrete concern, risk, obstacle, harm, or tradeoff about affordability reach, displacement / replacement, economic inclusion, job access, or vulnerable residents' housing access.",
+                "The summary uses problem-side language about people being priced out, replaced, excluded, overlooked, unable to afford housing, or unable to access needed housing supports."
+              ],
+              "not_match": [
+                "The summary only says speakers supported the rezoning or that affordable housing was discussed, without stating any concern, risk, harm, obstacle, or tradeoff.",
+                "The summary presents affordability only as a goal or benefit, not as a concrete concern about reach, displacement, exclusion, affordability in practice, or vulnerability."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "The concern is specific enough to identify what the problem is about, such as affordability not reaching the lowest-income residents, replacement by higher-income newcomers, or exclusion from redevelopment jobs.",
+                "The summary identifies a concrete mechanism or affected access issue, such as income-level affordability gaps, voucher or supportive-housing access, displacement/replacement risk, or workers being overlooked."
+              ],
+              "not_match": [
+                "The summary merely says “concerns were raised” or “there were community concerns” without saying what the concerns were about.",
+                "The summary names a broad theme such as affordability or development but does not identify the specific problem-side concern."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Source-supported concern content includes whether affordability levels would serve very low-income residents in practice.",
+            "Source-supported concern content includes possible replacement of local people by newcomers who can pay more.",
+            "Source-supported concern content includes whether Black and local skilled workers were being excluded from jobs in their own neighborhoods.",
+            "Source-supported local anchors include West Colfax / Council District 3, Denver neighborhoods discussed by speakers, and Black/local skilled workers as raised in testimony."
+          ],
+          "fact_check_notes": [
+            "A local anchor is not required for Presence, but if the summary names one, it must be source-consistent.",
+            "The transcript does not support a quantified local-hire requirement or a binding workforce condition attached to the bill."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "The applicant explained the proposed AMI mix and senior-housing concept.",
+            "rationale": "This gives development information, not problem-side concern language."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "Community members raised concerns about the redevelopment.",
+            "rationale": "Concern language is present, but the concern content is too generic."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "Speakers worried that redevelopment could replace local residents with higher-income newcomers and that affordability levels might not reach deeply low-income people who need voucher-supported housing.",
+            "rationale": "The concrete concern content is specific and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "Residents' main concern was that the rezoning would increase traffic and remove parking from the neighborhood.",
+            "rationale": "The summary states a concrete concern, but that concern content is not supported by the event sheet for this slot."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Sekou testimony and Councilwoman Kniech's affordability/voucher question.",
+          "secondary": "Applicant responses about Section 8, permanent supportive housing, and AMI ranges."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "concrete_concern_language": "present — the transcript directly states affordability, displacement/replacement, and job-exclusion concerns."
+          },
+          "quality_gate": {
+            "specific_concern_content": "present — the concerns specify affordability reach, replacement of local residents, and exclusion of local/Black skilled workers from jobs."
+          }
+        }
+      },
+      "S": {
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "slot_purpose": "Capture a recurring problem-side concern theme in the discussion.",
+        "event_sheet_slot_context": {
+          "summary": "The recurring concern theme was preserving and deepening affordable, mixed-income housing in a rapidly changing West Colfax area while avoiding displacement and exclusion.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "The summary names a problem-side theme around rising housing costs, scarcity or preservation of affordable housing, affordability reach, displacement / replacement risk, or exclusion from redevelopment benefits.",
+                "The summary frames affordability, mixed-income housing, deeply low-income access, or integrated neighborhoods as an ongoing concern or pressure, not merely as a benefit."
+              ],
+              "not_match": [
+                "The summary only says the proposal supported affordable housing or mixed-use development, without problem-side concern language.",
+                "The summary only describes technical zoning alignment, procedural support, or staff recommendation without a recurring concern theme."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "The theme specifically concerns preserving or deepening affordable / mixed-income housing amid rising costs and redevelopment pressure.",
+                "The theme includes identifiable concern content such as deeply low-income or voucher-supported access, displacement / replacement risk, scarcity of affordable units, or integrated neighborhoods with affordability built in."
+              ],
+              "not_match": [
+                "The summary says only that housing was a concern, without identifying what the housing concern was about.",
+                "The summary names generic community concern or debate without a specific problem-side object, mechanism, or tension."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The source-supported recurring concern theme was preserving and deepening affordable / mixed-income housing in a rapidly changing West Colfax area.",
+            "Concern content included rising housing costs, the need to preserve affordable housing, affordability for deeply low-income residents, voucher / permanent-supportive-housing access, displacement or replacement risk, and integrated neighborhoods with affordability built in.",
+            "The source does not support reducing the recurring theme to generic neighborhood opposition; the event sheet says there was no evident organized neighborhood opposition."
+          ],
+          "fact_check_notes": [
+            "The summary need not state that the concern recurred; it must name the source-supported concern theme in problem-side language.",
+            "Do not treat every future unit as guaranteed to be deeply affordable."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "The proposal aligned with neighborhood plans and staff recommended approval.",
+            "rationale": "This is procedural/planning support, not a recurring problem-side concern theme."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "Participants were concerned about housing.",
+            "rationale": "Problem-side concern language is present, but the content is too generic for full Presence."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "A recurring concern was how to preserve and deepen affordable, mixed-income housing in West Colfax as housing costs rose and redevelopment risked replacing local residents.",
+            "rationale": "The concern theme and specific content are source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The recurring concern was organized neighborhood opposition to any new density in West Colfax.",
+            "rationale": "The summary names a concern theme, but it contradicts the event-sheet context that the recurring theme centered on affordability and there was no evident neighborhood opposition."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Applicant testimony, Sekou testimony, council questions, and final council comments.",
+          "secondary": "Staff report references to plan goals for affordable and mixed-income residential communities."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "problem_side_concern": "present — the transcript repeatedly frames housing costs, affordability reach, displacement/replacement, and vulnerability as problem-side concerns."
+          },
+          "quality_gate": {
+            "specific_content": "present — the theme is specifically about affordable/mixed-income housing preservation, deeply low-income access, displacement risk, and integrated neighborhoods."
+          }
+        }
+      },
+      "U": {
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "Capture what remained unfinished after the action or discussion: pending handling, later review, future process, unresolved implementation steps, or an explicit return path.",
+        "event_sheet_slot_context": {
+          "summary": "Future or unfinished items included potential rezoning of the balance of the five-acre Town View site, unsettled redevelopment details and phasing, and the transcript's omission of the final announced Council Bill 173 vote result.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "hypothetical_or_risk"
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "The summary explicitly says that a broader rezoning effort, redevelopment details, phasing, unit mix, space allocation, income mix, or final vote-result visibility remained future, pending, unresolved, still being worked out, or not captured.",
+                "The summary includes an unfinished-state marker for something left open after the hearing or discussion, rather than only describing completed in-session procedure."
+              ],
+              "not_match": [
+                "The summary only describes the completed public hearing, testimony, discussion, or roll-call sequence without an unfinished or pending state marker.",
+                "The summary states future development intent but does not say anything remains pending, unresolved, still being worked out, or not captured."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "The summary identifies what remains pending, such as a broader site rezoning, redevelopment program details, phasing, unit mix, space-allocation choices, income-range details, or the transcript-visible final vote result.",
+                "The summary names a specific unfinished workstream or source-visibility limitation rather than only saying that something remains open."
+              ],
+              "not_match": [
+                "The summary says only that “more work remains” or “future issues remain” without identifying what is pending.",
+                "The summary includes pendingness language but no identifiable pending item, issue, workstream, or source-visibility limitation."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "The summary states a concrete future path such as future rezoning, continued master planning, continued development planning, or source-limited vote-result handling.",
+                "The summary ties the unresolved item to a process path, planning path, future action path, or transcript-completeness limitation."
+              ],
+              "not_match": [
+                "The summary gives only bare future orientation, such as “later” or “eventually,” without a process, planning, action, custody, or source-visibility path.",
+                "The summary identifies something unfinished but gives no visible path for future handling or source-limited treatment."
+              ]
+            }
+          ]
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Rezoning the balance of the five-acre Town View site remained future / pending, not completed by Council Bill 173.",
+            "The detailed redevelopment program and phasing were still being worked out, including the balance among units, community space, open space, bedroom mix, and AMI ranges.",
+            "The final announced vote result for Council Bill 173 is not captured in the provided transcript; this is a transcript-completeness limitation, not proof that council failed to act.",
+            "Supported handling paths include future rezoning for the rest of the site and continued master-planning / development planning."
+          ],
+          "fact_check_notes": [
+            "No exact date for future rezoning or redevelopment phasing is stated.",
+            "Do not state that the full five-acre site was already rezoned or that the future master plan was finalized."
+          ]
+        },
+        "score_examples": [
+          {
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "summary": "Council closed the public hearing and proceeded to voting on Council Bill 173.",
+            "rationale": "This states in-session procedure but no pending or unresolved tail."
+          },
+          {
+            "presence": 0.5,
+            "fact_check": 1,
+            "summary": "Some issues remained unresolved after the hearing.",
+            "rationale": "Pendingness is visible, but neither the pending item nor the handling path is identifiable."
+          },
+          {
+            "presence": 1,
+            "fact_check": 1,
+            "summary": "The broader Town View redevelopment remained unfinished: the applicant hoped to seek future rezoning for the balance of the five-acre site, and details such as phasing, unit mix, open space, and community space were still being worked out.",
+            "rationale": "The pending item and future handling path are visible and source-consistent."
+          },
+          {
+            "presence": 1,
+            "fact_check": 0,
+            "summary": "The remaining five-acre Town View rezoning was already finalized, with only construction permits left for the next scheduled hearing on April 16.",
+            "rationale": "The summary includes pending/future handling language, but it contradicts the source-supported pending status and invents an unsupported path/date."
+          }
+        ],
+        "answer_locality": {
+          "primary": "Applicant testimony and council question exchange about phasing, unit counts, and future redevelopment.",
+          "secondary": "Final roll-call close where the transcript stops before the announced result."
+        },
+        "marker_presence": {
+          "topic_gate": {
+            "pendingness_marker": "present — the transcript includes “in the future,” “only for this small portion,” “what is the phasing,” and “trying to figure out.”"
+          },
+          "quality_gate": {
+            "pending_item_identifiable": "present — the pending items are the balance of the five-acre Town View site and the future redevelopment program details.",
+            "handling_path_visible": "present — the path is future rezoning and continued master-planning/development planning, though no exact date is given."
+          }
+        }
+      }
+    }
+  }

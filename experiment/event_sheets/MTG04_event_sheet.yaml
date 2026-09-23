@@ -1,0 +1,473 @@
+segment_id: "MTG4"
+segment_dir: "04_LongBeachCC_11182014"
+meeting_id: "LongBeachCC_11182014"
+uid: "LongBeachCC_11182014_14-0970"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet — MTG04
+
+  ## Source segment
+
+  ## Segment-level note
+
+  The sampled segment concerns a Long Beach City Council item on animal overpopulation policy. The Council did not enact the final mandatory spay/neuter or pet-shop-sale ordinances during this segment. The completed in-session action was approval of a motion directing staff and the City Attorney to return with draft ordinance language and implementation recommendations. The ordinance text and later Council vote remained future handling.
+
+  ---
+
+  ## Slot T — Topic / Framing
+
+  ```yaml
+  label: T
+  summary: >-
+    The discussion framed Long Beach's pet overpopulation problem as requiring a policy move from a reactive shelter/adoption response toward proactive animal-control rules: mandatory spay/neuter requirements for dog owners and restrictions on pet-shop sales of dogs, cats, and rabbits.
+  evidence:
+    - "request the city manager and city attorney to return within 90 days with a draft ordinance regarding mandatory spay neuter for dog owners"
+    - "draft an ordinance making it unlawful for the owners to sell dogs, cats or rabbits in any pet shop unless specifically exempted"
+    - "Long Beach has a real problem with pet overpopulation"
+    - "we're not going to adopt our way out of this problem"
+    - "another measured step in our attempts to go from a reactive system to a proactive system"
+  source_vocabulary:
+    subject_terms:
+      - pet overpopulation
+      - mandatory spay neuter
+      - dog owners
+      - pet shops
+      - dogs, cats or rabbits
+      - puppy mill businesses
+      - backyard breeders
+    policy_direction_terms:
+      - request ... return within 90 days
+      - draft ordinance
+      - implementation
+      - making it unlawful
+      - unless specifically exempted
+      - go from a reactive system to a proactive system
+    target_terms:
+      - dog owners
+      - pet shop owners / pet shops
+      - dogs, cats, and rabbits
+      - irresponsible pet owners
+      - backyard breeders
+      - AKC certified show dogs / responsible breeders as exemption-related groups
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - The pet overpopulation condition is presented as currently existing.
+      - The mandatory dog spay/neuter rule and retail pet-sale restriction are proposed future policy effects, not completed law in this segment.
+      - The item directs preparation of draft ordinance language and implementation recommendations for later Council handling.
+  source_context_for_fact_check:
+    subject: Long Beach pet overpopulation and animal-control policy.
+    policy_direction:
+      - Prepare a draft mandatory spay/neuter ordinance for dog owners.
+      - Prepare implementation recommendations for that ordinance.
+      - Prepare an ordinance restricting pet-shop sales of dogs, cats, and rabbits unless exempted.
+      - Shift animal-control policy toward proactive prevention rather than relying only on shelter intake, adoption, outreach, and euthanasia reduction.
+    target:
+      - Long Beach dog owners for the mandatory spay/neuter proposal.
+      - Pet shops / owners selling dogs, cats, or rabbits for the retail-sale proposal.
+      - Exemption-related groups discussed include AKC certified show dogs, breeders with Long Beach breeding permits, and possibly other competitive or registry-based dogs to be considered by staff.
+    not_supported:
+      - The segment does not support saying the final mandatory dog spay/neuter ordinance was enacted during this meeting.
+      - The segment does not support saying all breeding was banned.
+      - The segment does not support saying pet-shop adoption partnerships or rescue placements were banned; those were discussed as allowed or desired alternatives.
+  answer_locality:
+    primary: Opening item description and Vice Mayor Lowenthal's introductory framing.
+    supporting: Public comment and Council deliberation on animal overpopulation, exemptions, enforcement, and implementation.
+  marker_presence:
+    subject_identified: explicit
+    policy_direction: explicit
+    target: explicit
+  ```
+
+  ---
+
+  ## Slot O — Outcome / Position
+
+  ```yaml
+  label: O
+  summary: >-
+    The City Council approved the amended motion on the three-part animal policy item by an eight-yes vote. The approved action directed staff and the City Attorney to prepare draft ordinance language and implementation recommendations; it did not itself enact the final ordinances.
+  evidence:
+    - "there's been a motion in a second by Councilman Mongo"
+    - "the actions as is with the third action item, including an exemption for AKC certified show dogs"
+    - "change that to bred in Long Beach. Possessing a breeding permit"
+    - "there's been a motion already on the floor and a second"
+    - "Motion carries eight votes. Yes."
+    - "the item will be back to the city council within about 90 days and that will actually be the law that will be before the council"
+  source_vocabulary:
+    disposition_terms:
+      - motion
+      - second
+      - support
+      - vote
+      - Motion carries
+    acted_on_item_terms:
+      - three part recommendation
+      - mandatory spay neuter for dog owners
+      - implementation of a mandatory spay and neuter ordinance
+      - ordinance making it unlawful ... to sell dogs, cats or rabbits in any pet shop
+      - AKC certified show dogs
+      - bred in Long Beach possessing a breeding permit
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - pending_future_handling
+    notes:
+      - The motion on the agenda item was completed in-session and carried eight yes votes.
+      - Final ordinance language, legal enactment, and later Council vote remained pending after the segment.
+  source_context_for_fact_check:
+    actor: Long Beach City Council.
+    procedural_stage: Council approval of a direction/request to draft ordinances and implementation recommendations, not final ordinance enactment.
+    disposition_result:
+      - The amended motion carried.
+      - The action asked the City Manager, City Attorney, and staff to return with draft ordinance language and recommendations.
+    acted_on_item:
+      - A three-part recommendation from the offices of Vice Mayor Susie Lowenthal, Councilwoman Susie Price, and Third District Councilwoman Stacy Mongeau.
+      - Mandatory spay/neuter draft ordinance for dog owners.
+      - Implementation planning and recommendations for that ordinance.
+      - Draft ordinance restricting pet-shop sales of dogs, cats, or rabbits unless exempted.
+      - Amendments concerning AKC certified show dogs and changing "bred on the premises" to "bred in Long Beach" with a breeding permit.
+    vote_result:
+      value: 8 yes votes
+      attached_to: City Council motion on the amended three-part recommendation.
+    temporal_status:
+      - completed_in_session for the motion's passage.
+      - pending_future_handling for final ordinance drafting, return to Council, and any later enactment.
+    not_supported:
+      - The segment does not support saying a final law was passed or enacted at this meeting.
+      - The segment does not support attaching the eight-yes vote to final adoption of the future ordinance text.
+  answer_locality:
+    primary: Opening motion/second and closing vote.
+    supporting: Mayor's closing clarification that the law would return to Council within about 90 days.
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: explicit
+    acted_on_item_specific: explicit
+  ```
+
+  ---
+
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >-
+    The item was shaped by several background conditions: seven years of prior animal-care work had improved adoption and euthanasia outcomes but had not solved pet overpopulation; many impounded dogs were unaltered; backyard breeders and puppy-mill-related pet sales were described as continuing contributors; and existing cat spay/neuter rules were cited as a comparison point.
+  evidence:
+    - "a work in progress with our animal care services staff and community partners going on seven years now"
+    - "We've increased low cost spay neuter options ... created a full time veterinarian position and encouraged mobile clinics"
+    - "increased the number of animals adopted and reduce the number of animals euthanized"
+    - "However, seven years later, we're finding out it's still not enough"
+    - "the vast majority of dogs picked up by animal care services are unaltered"
+    - "backyard breeders have created puppy mill businesses"
+    - "cats in Long Beach must be spayed and neutered by law. Over 80% of owned cats are fixed"
+  source_vocabulary:
+    background_terms:
+      - seven years
+      - low cost spay neuter options
+      - full time veterinarian position
+      - mobile clinics
+      - increased ... adopted
+      - reduce ... euthanized
+      - still not enough
+      - vast majority ... unaltered
+      - backyard breeders
+      - puppy mill businesses
+      - cats ... spayed and neutered by law
+      - over 80% of owned cats are fixed
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - Prior animal-care initiatives had already occurred before this agenda item.
+      - Pet overpopulation and unaltered animals were presented as still-existing conditions.
+      - The animal overpopulation concern recurred throughout the discussion and public testimony.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Prior animal-care efforts in Long Beach had improved adoption and euthanasia outcomes but were described as insufficient.
+      - Long Beach was described as still having a real pet overpopulation problem.
+      - Unaltered dogs, backyard breeders, and puppy-mill-linked sales were presented as contributors or targets of the proposed policy.
+      - Existing cat spay/neuter requirements and a high fixed-owned-cat rate were used as comparison/background.
+    agenda_connection:
+      - These background conditions were used to justify asking for stronger dog spay/neuter policy and retail pet-sale restrictions.
+      - The proposal was framed as the next installment in a longer animal-care policy trajectory, not as an isolated new issue.
+    numeric_values:
+      - value: seven years
+        meaning: approximate duration of prior work with Animal Care Services staff and community partners.
+      - value: over 80%
+        meaning: share of owned cats described as fixed in Long Beach.
+    not_supported:
+      - The segment does not support saying prior efforts failed completely; they were credited with improvements but called insufficient.
+      - The segment does not support saying cats lacked mandatory spay/neuter rules; the opposite was stated.
+  answer_locality:
+    primary: Vice Mayor Lowenthal's opening explanation.
+    supporting: Public testimony on existing ordinances, shelters, pet stores, and rescue work; Council questions on registration/enforcement data.
+  marker_presence:
+    precipitating_context_visible: explicit
+    connected_to_current_item_or_form: explicit
+  ```
+
+  ---
+
+  ## Slot N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >-
+    The action's operative payload was to have staff return within 90 days with a draft mandatory dog spay/neuter ordinance, prepare an implementation plan and recommendations, and draft a pet-shop ordinance barring sales of dogs, cats, and rabbits unless exempted. The motion also carried exemption/scoping language for AKC certified show dogs and for animals bred in Long Beach with a breeding permit, with later discussion asking staff to consider other competitive or registry-based exemptions.
+  evidence:
+    - "return within 90 days with a draft ordinance regarding mandatory spay neuter for dog owners"
+    - "plan and make recommendations ... for implementation of a mandatory spay and neuter ordinance"
+    - "draft an ordinance making it unlawful ... to sell dogs, cats or rabbits in any pet shop unless specifically exempted"
+    - "including an exemption for AKC certified show dogs"
+    - "change ... bred on the premises possessing a breeding permit ... to bred in Long Beach. Possessing a breeding permit"
+    - "staff has been instructed to look at ... herding dogs and ... other types of dogs that people would like to breed"
+  source_vocabulary:
+    payload_terms:
+      - return within 90 days
+      - draft ordinance
+      - mandatory spay neuter for dog owners
+      - plan and make recommendations
+      - implementation
+      - making it unlawful
+      - sell dogs, cats or rabbits
+      - pet shop
+      - unless specifically exempted
+      - exemption for AKC certified show dogs
+      - bred in Long Beach
+      - possessing a breeding permit
+      - other types of dogs that people would like to breed
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - The Council completed the action directing preparation of ordinances and recommendations.
+      - The 90-day return, final ordinance text, and implementation details were future/pending.
+      - Exemptions and scoping details were part of the drafting payload or were to be considered in staff's return.
+  source_context_for_fact_check:
+    payload_carrier: The amended Council motion on the three-part animal-policy recommendation.
+    payload_content:
+      - City Manager and City Attorney to return within 90 days with a draft ordinance on mandatory spay/neuter for dog owners.
+      - City Manager to plan and make recommendations for implementation of a mandatory spay/neuter ordinance.
+      - City Attorney to draft an ordinance making it unlawful for owners to sell dogs, cats, or rabbits in any pet shop unless specifically exempted.
+      - The third action item was amended to include an exemption for AKC certified show dogs.
+      - The recommended action was amended from "bred on the premises possessing a breeding permit" to "bred in Long Beach possessing a breeding permit."
+      - Staff were asked to consider additional exemption or classification issues for herding dogs, competitive dogs, working dogs, other registries, and responsible breeders.
+    payload_scope:
+      - Mandatory spay/neuter proposal: dog owners / dogs in Long Beach as later drafted.
+      - Pet-shop sales proposal: dogs, cats, and rabbits sold in pet shops unless exempted.
+      - Exemption-related scope: AKC certified show dogs and Long Beach breeding-permit language; other categories were raised for consideration rather than finalized in text.
+    numeric_values:
+      - value: 90 days
+        meaning: time for the City Manager / City Attorney to return with draft ordinance language.
+    not_supported:
+      - The segment does not support saying the ordinance required immediate spay/neuter of every dog with no exemptions.
+      - The segment does not support saying the pet-shop restriction covered all animals or all adoptions; rescue/adoption models were discussed as allowed or encouraged.
+      - The segment does not support treating every discussed exemption category as already adopted in final ordinance language.
+  answer_locality:
+    primary: Clerk's opening description of the three-part recommendation and Vice Mayor Lowenthal's amendments.
+    supporting: Later Council deliberation on enforcement, fiscal impact, exemptions, breeding permits, pet stores, and the 90-day return.
+  marker_presence:
+    payload_attached_to_action: explicit
+    quality_gate_options:
+      number: explicit
+      named_requirement: explicit
+      scope_boundary: explicit
+      date_cutoff: not_primary
+  ```
+
+  ---
+
+  ## Slot L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >-
+    Participants raised concrete concerns about pet overpopulation, euthanasia and shelter crowding, unaltered dogs, backyard breeding and puppy mills, public-safety issues from dog bites, enforcement capacity, affordability for low-income or unhoused pet owners, and the risk of sweeping responsible breeders or competitive-dog owners into the rule without appropriate exemptions.
+  evidence:
+    - "Long Beach has a real problem with pet overpopulation"
+    - "we're not going to adopt our way out of this problem"
+    - "backyard breeders have created puppy mill businesses that are cruel and inhumane"
+    - "I think we have an enforcement problem"
+    - "one third of our the dogs in the city of Long Beach are registered"
+    - "Between the months of July, August. September and October, we had a total of 196 bites by dogs ... 131 of them were unaltered"
+    - "I do not want to support more enforcement as people in my community cannot afford ... more penalties"
+  source_vocabulary:
+    concern_terms:
+      - real problem
+      - pet overpopulation
+      - not enough
+      - cannot adopt our way out
+      - cruel and inhumane
+      - euthanasia
+      - shelter
+      - enforcement problem
+      - fiscal impact
+      - affordability
+      - responsible pet owners
+      - show dogs
+      - herding dogs
+      - dog bites
+      - unaltered
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - hypothetical_or_risk
+      - recurring_concern
+    notes:
+      - Pet overpopulation, shelter burden, unaltered animals, registration/enforcement issues, and affordability were described as existing concerns.
+      - Some concerns were hypothetical or risk-oriented, such as pet owners going underground, dumping animals, enforcement burden, harassment of show-dog owners, or unintended effects on responsible breeders.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Long Beach was described as still facing pet overpopulation despite prior progress.
+      - Shelter and rescue participants described euthanasia, abandonment, unwanted litters, and limited rescue capacity.
+      - Council and staff discussed enforcement constraints, including an estimated dog population around 100,000, current licenses a little over 30,000 plus expired licenses, and canvassing as the main enforcement method.
+      - Public-safety concern was raised using dog-bite statistics: 196 bites over July through October, with 131 involving unaltered dogs.
+      - Equity/affordability concerns were raised for residents who may not be able to afford penalties or procedures.
+      - Responsible-breeder and competitive-dog concerns were raised for AKC show dogs, other registries, herding dogs, working dogs, and similar categories.
+    local_anchor:
+      - Long Beach citywide.
+      - Specific policy-adjacent groups include Long Beach dog owners, pet shops, Animal Care Services, rescue organizations, AKC/show-dog participants, herding/working-dog owners, low-income residents, and unhoused pet owners.
+    numeric_values:
+      - value: 196 dog bites
+        meaning: total dog bites cited for July through October.
+      - value: 131 unaltered animals
+        meaning: dog-bite cases involving unaltered dogs, as cited by an animal control officer.
+      - value: about 100,000 dogs
+        meaning: staff estimate of the Long Beach dog population.
+      - value: a little over 30,000 current licenses, plus about 10,000 expired licenses
+        meaning: license/enforcement context discussed by staff.
+    not_supported:
+      - The segment does not support treating every concern as resolved by the motion.
+      - The segment does not support saying opposition centered on denying pet overpopulation; some opposition or caution focused on enforceability, cost, veterinary concerns, and exemption design.
+  answer_locality:
+    primary: Vice Mayor Lowenthal's opening concern framing and public testimony.
+    supporting: Councilmember Austin's enforcement and fiscal questions; Councilmember Andrews's affordability concern; animal-control and staff responses.
+  marker_presence:
+    concrete_concern_language: explicit
+    specific_concern_content: explicit
+  ```
+
+  ---
+
+  ## Slot S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >-
+    A recurring concern theme across the segment was that Long Beach's animal overpopulation problem was producing shelter strain, euthanasia, abandonment, and public-safety costs, while the policy response also needed to avoid unfair or unenforceable burdens on responsible owners, breeders, and lower-income pet owners.
+  evidence:
+    - "pet overpopulation" recurs throughout sponsor framing, public testimony, and Council debate.
+    - "we simply cannot adopt our way out of this tragedy"
+    - "reduce euthanasia rates of healthy, adoptable animals and alleviate the animal suffering that is the direct result of pet overpopulation"
+    - "I think we have an enforcement problem"
+    - "I do not want to support more enforcement as people in my community cannot afford ... more penalties"
+    - "we just got to be careful who we're calling irresponsible"
+  source_vocabulary:
+    recurring_theme_terms:
+      - pet overpopulation
+      - euthanasia
+      - abandonment
+      - animal suffering
+      - shelter
+      - enforcement
+      - education
+      - responsible pet owners
+      - responsible breeders
+      - affordability
+      - penalties
+      - exemptions
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - The animal-overpopulation concern recurred across sponsor statements, public testimony, staff responses, and Council comments.
+      - The implementation-risk concern also recurred, especially around enforcement, cost, exemptions, affordability, and owner behavior.
+  source_context_for_fact_check:
+    concern_theme:
+      - Primary recurring theme: pet overpopulation as a continuing problem linked to unaltered animals, shelter burden, euthanasia, abandonment, and puppy-mill/backyard-breeding practices.
+      - Secondary recurring theme: implementation design risk, including enforcement capacity, affordability, responsible-owner treatment, exemptions, and unintended consequences.
+    concern_content:
+      - Supporters argued mandatory spay/neuter and pet-shop restrictions would provide stronger tools to reduce unwanted animals and shelter euthanasia.
+      - Skeptical or cautionary speakers and councilmembers did not necessarily reject animal welfare goals; they questioned enforceability, cost, age/medical implications, and exemption design.
+      - Staff and Council discussed education, vouchers, canvassing, fix-it-style citation handling, and future staff analysis as ways to manage implementation concerns.
+    not_supported:
+      - The segment does not support reducing the shared concern to a single pro-enforcement view; the recurring theme includes both animal-overpopulation harms and implementation/equity risks.
+      - The segment does not support saying all participants agreed on mandatory spay/neuter as the best mechanism.
+  answer_locality:
+    primary: Distributed across the entire discussion, especially repeated public testimony and Council deliberation.
+    supporting: Opening sponsor framing and closing Council comments before the vote.
+  marker_presence:
+    problem_side_concern: explicit
+    specific_content: explicit
+  ```
+
+  ---
+
+  ## Slot U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >-
+    After the motion carried, the final law remained unfinished: staff and the City Attorney were expected to return to the City Council within about 90 days with written ordinance language, implementation recommendations, fiscal/enforcement analysis, and refined exemption details for a later Council vote.
+  evidence:
+    - "return within 90 days with a draft ordinance"
+    - "plan and make recommendations ... for implementation"
+    - "in that report that comes back in the recommendation that comes back, we will look to staff to highlight those differences. What are the costs and then what are the savings?"
+    - "staff has been instructed to look at ... herding dogs and ... other types of dogs"
+    - "the item will be back to the city council within about 90 days"
+    - "the law will be written, the law will come before the council and the council will then vote on that law or before a law similar to that"
+  source_vocabulary:
+    pendingness_terms:
+      - return within 90 days
+      - draft ordinance
+      - plan and make recommendations
+      - report that comes back
+      - staff has been instructed to look at
+      - item will be back
+      - law will be written
+      - come before the council
+      - then vote
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - The direction to return was approved in-session.
+      - Drafting, implementation planning, cost/savings analysis, exemption refinement, and final Council voting remained pending.
+      - The legal effect of any ordinance was future, not completed in this segment.
+  source_context_for_fact_check:
+    pending_status: Final ordinance enactment remained pending after the motion carried.
+    pending_item:
+      - Mandatory spay/neuter ordinance for dog owners.
+      - Implementation plan and recommendations.
+      - Pet-shop sales ordinance covering dogs, cats, and rabbits unless exempted.
+      - Cost, savings, outreach, enforcement, voucher, and exemption details.
+    handling_path:
+      - City Manager, City Attorney, and staff were to draft and analyze the proposals.
+      - The item was expected to return to City Council within about 90 days.
+      - Council would later vote on the written law or a similar law.
+    numeric_values:
+      - value: about 90 days
+        meaning: expected return path for the draft ordinance / law to come back to Council.
+    not_supported:
+      - The segment does not support saying the unresolved tail was merely administrative cleanup after an enacted ordinance.
+      - The segment does not support saying no future Council action was required.
+  answer_locality:
+    primary: Opening three-part recommendation and Mayor's closing explanation after the vote.
+    supporting: Council deliberation asking staff to return with cost/savings analysis and refined exemption recommendations.
+  marker_presence:
+    pendingness_marker: explicit
+    pending_item_identifiable: explicit
+    handling_path_visible: explicit
+  ```

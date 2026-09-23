@@ -1,0 +1,509 @@
+segment_id: "MTG6"
+segment_dir: "06_DenverCityCouncil_09252017"
+meeting_id: "DenverCityCouncil_09252017"
+uid: "DenverCityCouncil_09252017_17-1060"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # Event Sheet — MTG06
+
+  ## Segment identity
+
+  - segment_title: Denver City Council Proclamation 17-1060 / 1060 honoring David Broadwell
+  - segment_scope: From the chair's introduction of Proclamation 1060 through the adoption vote, David Broadwell's remarks, and the transition to Proclamation 1061.
+
+  ## Slot T — Topic / Framing
+
+  ```yaml
+  label: T
+  summary: >
+    The segment frames Proclamation 17-1060 / 1060 as a Council recognition
+    honoring and thanking David Broadwell for long municipal legal service,
+    especially his 18 years with the City and County of Denver and 14 years
+    as City Council liaison, upon his retirement.
+  evidence:
+    - "Proclamation 17-1060 celebrating and thanking David Broadwell for 18 years of outstanding legal service to the city and county of Denver upon his retirement."
+    - "The Council hereby recognizes and thanks David Broadwell for his 18 years of service to the city and his 14 years of service specifically to the City Council and wishes him a wonderful retirement."
+    - "David is beloved for his 14 years of service as our City Council liaison."
+  source_vocabulary:
+    - Proclamation 17-1060
+    - Proclamation 1060
+    - celebrating and thanking
+    - recognizes and thanks
+    - David Broadwell
+    - outstanding legal service
+    - City and County of Denver
+    - City Council liaison
+    - retirement
+  temporal_status:
+    primary:
+      - currently_existing
+      - already_occurred
+    notes:
+      - The recognition is being presented in the current Council segment.
+      - Broadwell's service record is retrospective: 35-plus years of public service, 18 years with Denver, and 14 years specifically with City Council.
+      - Retirement is the occasion for the proclamation and is future-facing from the perspective of the tribute language.
+  source_context_for_fact_check:
+    subject: >
+      Recognition of David Broadwell's municipal legal service and retirement.
+    policy_direction_or_proclamation_direction: >
+      The Council is celebrating, thanking, recognizing, and wishing Broadwell
+      a wonderful retirement. This is a ceremonial recognition, not a regulatory
+      policy change.
+    target: >
+      David Broadwell, assistant city attorney / City Council liaison.
+    key_values:
+      - value: "18 years"
+        meaning: service to the City and County of Denver
+      - value: "14 years"
+        meaning: service specifically as City Council liaison
+      - value: "35-plus years"
+        meaning: broader public service in Colorado / municipal law context
+    name_note: >
+      The honored person is David Broadwell. Any isolated transcript rendering
+      such as "David Bravo" should not override the repeated proclamation text
+      and comments identifying David Broadwell.
+  answer_locality:
+    transcript_span: >
+      Opening introduction and proclamation reading, especially the formal
+      proclamation text and Section One.
+    locality_type: single-segment, proclamation-framing content
+  marker_presence:
+    subject_identified:
+      present: true
+      markers:
+        - "David Broadwell"
+        - "outstanding legal service"
+        - "City Council liaison"
+    policy_direction:
+      present: true
+      markers:
+        - "celebrating and thanking"
+        - "recognizes and thanks"
+        - "wishes him a wonderful retirement"
+    target:
+      present: true
+      markers:
+        - "David Broadwell"
+        - "City and County of Denver"
+        - "City Council"
+  ```
+
+  ## Slot O — Outcome / Position
+
+  ```yaml
+  label: O
+  summary: >
+    The Council moved, seconded, took comments on, voted on, and adopted
+    Proclamation 1060 honoring David Broadwell.
+  evidence:
+    - "I move that proclamation 1060 be adopted."
+    - "It has been moved and seconded."
+    - "Madam Secretary Brokaw..."
+    - "Proclamation 1060 has been adopted."
+  source_vocabulary:
+    - moved
+    - seconded
+    - comments by members of the Council
+    - Madam Secretary
+    - aye / I
+    - adopted
+    - Proclamation 1060
+  temporal_status:
+    primary:
+      - completed_in_session
+    notes:
+      - The Council's action on Proclamation 1060 was completed during this segment.
+      - The segment does not leave Proclamation 1060 awaiting later Council action.
+  source_context_for_fact_check:
+    actor: >
+      Denver City Council / Council members participating in the segment.
+    procedural_stage: >
+      Council proclamation adoption during the meeting segment.
+    disposition_result:
+      - Proclamation 1060 was adopted.
+    acted_on_item:
+      - Proclamation 17-1060 / Proclamation 1060 honoring David Broadwell.
+    vote_result:
+      value: >
+        The transcript records a roll call of affirmative votes and then announces
+        that Proclamation 1060 was adopted. It does not record any no votes in the
+        segment.
+      attached_to: Council adoption of Proclamation 1060
+    temporal_status:
+      - completed_in_session
+  answer_locality:
+    transcript_span: >
+      After the proclamation reading and member comments, beginning with the motion
+      to adopt and ending with the announcement that Proclamation 1060 was adopted.
+    locality_type: procedural disposition
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item:
+      present: true
+      markers:
+        - "proclamation 1060 be adopted"
+        - "Proclamation 1060 has been adopted"
+    acted_on_item_specific:
+      present: true
+      markers:
+        - "Proclamation 1060"
+        - "Proclamation 17-1060"
+        - "David Broadwell"
+  ```
+
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >
+    The proclamation was prompted by Broadwell's retirement after a long record
+    of public and municipal legal service, including his 18 years with Denver,
+    14 years as City Council liaison, and earlier municipal-law work.
+  evidence:
+    - "celebrating and thanking David Broadwell for 18 years of outstanding legal service to the city and county of Denver upon his retirement."
+    - "David Broadwell has been a loyal public servant in the state of Colorado for more than 35 years."
+    - "David is beloved for his 14 years of service as our City Council liaison."
+    - "we are forever indebted to David for his personal and professional talents and contributions."
+  source_vocabulary:
+    - upon his retirement
+    - loyal public servant
+    - more than 35 years
+    - 18 year career
+    - 14 years of service
+    - City Council liaison
+    - personal and professional talents and contributions
+  temporal_status:
+    primary:
+      - already_occurred
+      - currently_existing
+    notes:
+      - The background service record occurred before the proclamation.
+      - The retirement is the immediate occasion for the current ceremonial item.
+  source_context_for_fact_check:
+    trigger_condition: >
+      Broadwell's retirement and his accumulated service record, especially his
+      Denver legal service and Council liaison role.
+    agenda_connection: >
+      Those service contributions and the retirement occasion shaped why the
+      Council took up Proclamation 1060.
+    supported_background_items:
+      - More than 35 years of public service.
+      - 18 years of legal service to the City and County of Denver.
+      - 14 years of service specifically to City Council as liaison.
+      - Work in Colorado municipal law, home-rule powers, public finance, legislative drafting, and major Denver ordinances.
+    not_supported_as_background:
+      - A controversy, legal claim, or policy dispute as the reason for the proclamation.
+      - A pending disciplinary, appointment, or legislative controversy involving Broadwell.
+  answer_locality:
+    transcript_span: >
+      Formal proclamation recitals and Council members' tribute comments before
+      the adoption vote.
+    locality_type: retrospective background for current ceremonial item
+  marker_presence:
+    precipitating_context_visible:
+      present: true
+      markers:
+        - "upon his retirement"
+        - "18 years of outstanding legal service"
+        - "more than 35 years"
+        - "14 years of service as our City Council liaison"
+    connected_to_current_item_or_form:
+      present: true
+      markers:
+        - "now, therefore be proclaimed"
+        - "recognizes and thanks"
+        - "wishes him a wonderful retirement"
+  ```
+
+  ## Slot N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >
+    The proclamation's operative payload was to recognize and thank David
+    Broadwell for his service, wish him a wonderful retirement, and direct the
+    clerk to attest, seal, and deliver a copy of the proclamation to him.
+  evidence:
+    - "Section one the Council hereby recognizes and thanks David Broadwell for his 18 years of service to the city and his 14 years of service specifically to the City Council and wishes him a wonderful retirement."
+    - "Section two that the clerk of the city and county of Denver shall attest in a the seal of the city and county of Denver to this proclamation and that a copy be delivered to David Broadwell."
+  source_vocabulary:
+    - Section one
+    - recognizes and thanks
+    - 18 years of service
+    - 14 years of service
+    - wishes him a wonderful retirement
+    - Section two
+    - clerk
+    - attest
+    - seal
+    - copy be delivered
+  temporal_status:
+    primary:
+      - completed_in_session
+      - future_effect
+    notes:
+      - The Council adopted the proclamation in-session.
+      - The recognition takes effect through the adopted proclamation.
+      - The clerk's attestation, seal, and delivery are administrative follow-through attached to the proclamation.
+  source_context_for_fact_check:
+    payload_carrier: >
+      Proclamation 17-1060 / Proclamation 1060.
+    payload_content:
+      - Recognize and thank David Broadwell.
+      - Recognize 18 years of service to the City and County of Denver.
+      - Recognize 14 years of service specifically to City Council.
+      - Wish him a wonderful retirement.
+      - Clerk shall attest and affix the city/county seal to the proclamation.
+      - A copy shall be delivered to David Broadwell.
+    numeric_values:
+      - value: "18 years"
+        meaning: service to the City and County of Denver
+      - value: "14 years"
+        meaning: service specifically to City Council
+    payload_scope: >
+      Ceremonial recognition and administrative delivery of the proclamation;
+      no regulatory rule, funding condition, ordinance amendment, or external
+      legal obligation is created in this segment.
+    temporal_status:
+      - completed_in_session for adoption
+      - future_effect for clerk delivery / document handling
+  answer_locality:
+    transcript_span: >
+      Formal proclamation sections immediately before the motion to adopt.
+    locality_type: operative proclamation text
+  marker_presence:
+    payload_attached_to_action:
+      present: true
+      markers:
+        - "Section one"
+        - "Section two"
+        - "the Council hereby recognizes and thanks"
+        - "the clerk ... shall attest"
+        - "a copy be delivered"
+    quality_gate_options:
+      number:
+        present: true
+        markers:
+          - "18 years"
+          - "14 years"
+      named_requirement:
+        present: true
+        markers:
+          - "clerk ... shall attest"
+          - "seal"
+          - "copy be delivered"
+      scope_boundary:
+        present: true
+        markers:
+          - "to the city"
+          - "specifically to the City Council"
+      date_cutoff:
+        present: false
+        markers: []
+  ```
+
+  ## Slot L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >
+    Speakers described concrete concerns and risks that Broadwell's guidance
+    helped Council manage: legal jeopardy, misunderstanding legal limits,
+    difficulty translating policy intent into lawful ordinances, and challenges
+    to Denver's home-rule position.
+  evidence:
+    - "always with an eye to the protection of the city and the city council as an institution."
+    - "often serve to save us from ourselves by alerting attentive council members when we've gone off the deep end or when it's time to stop talking and let him chime in."
+    - "defender of the city and county of Denver and its home rule status in this state."
+    - "No, you need to stop that right now, because we'd be wandering into areas of legal jeopardy."
+    - "thank you for keeping me out of jail."
+  source_vocabulary:
+    - protection of the city
+    - protection of the city council as an institution
+    - save us from ourselves
+    - gone off the deep end
+    - legal jeopardy
+    - keeping me out of jail
+    - home rule status
+    - assaults and challenges
+    - due process
+    - rights
+  temporal_status:
+    primary:
+      - recurring_concern
+      - hypothetical_or_risk
+    notes:
+      - The risk of legal missteps is described as recurring across Council work, not as a single unresolved incident.
+      - Some language is humorous or ceremonial, but it still points to the concrete risk of legal overreach or legal jeopardy.
+  source_context_for_fact_check:
+    obstacle_content: >
+      Council members described a recurring practical risk that they could
+      misunderstand legal constraints, move into legally risky territory, or
+      need help converting policy intent into lawful ordinance language.
+    local_anchor: >
+      Denver City Council and the City and County of Denver.
+    supported_concern_examples:
+      - Need to protect the city and Council as institutions.
+      - Need to avoid legal jeopardy or legally unsupported action.
+      - Need to defend Denver's home-rule status against outside challenges.
+      - Need to handle rights, due process, and complex policy questions lawfully.
+    not_supported_as_concern:
+      - A claim that Broadwell caused legal violations.
+      - A claim that a specific court case or lawsuit was being adjudicated in this segment.
+      - A claim that Proclamation 1060 itself resolved a legal dispute.
+  answer_locality:
+    transcript_span: >
+      Formal proclamation recitals about protecting the institution and member
+      comments from Lopez, Flynn, Gilmore, Kashmann, New, Ortega, and others.
+    locality_type: problem-side concern content in tribute comments
+  marker_presence:
+    concrete_concern_language:
+      present: true
+      markers:
+        - "protection"
+        - "save us from ourselves"
+        - "gone off the deep end"
+        - "legal jeopardy"
+        - "assaults and challenges"
+        - "get us out of trouble"
+    specific_concern_content:
+      present: true
+      markers:
+        - "protection of the city and the city council as an institution"
+        - "defense of our home rule status"
+        - "wandering into areas of legal jeopardy"
+  ```
+
+  ## Slot S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme across the discussion was that Council work
+    carried legal and institutional risks, and Broadwell's expertise, judgment,
+    humility, and availability helped Council avoid errors, protect the city,
+    and make difficult policy decisions responsibly.
+  evidence:
+    - "each and every one of the big policy milestones I've had in this Council were made possible only through my partnership with you."
+    - "I couldn't have asked for anybody better as a guide."
+    - "defender of the city and county of Denver and its home rule status."
+    - "your quiet presence really helped to mold and shape and guide us as an entire city council body."
+    - "It's like sitting with the best professor I've ever known."
+    - "you are a rare combination of brilliance and humility because you are all about lifting up the law, the council."
+  source_vocabulary:
+    - guide
+    - advice and counsel
+    - partnership
+    - defender
+    - home rule status
+    - mold and shape and guide
+    - professor
+    - legal issues
+    - brilliance and humility
+    - lifting up the law
+    - institutional judgment
+  temporal_status:
+    primary:
+      - recurring_concern
+    notes:
+      - The theme appears repeatedly across multiple Council members' comments.
+      - The summary does not depend on one isolated remark; it synthesizes recurring tribute content.
+  source_context_for_fact_check:
+    concern_theme: >
+      Council members repeatedly emphasized their dependence on Broadwell's legal
+      and institutional guidance to handle difficult Council work responsibly.
+    concern_content:
+      - Translating policy intent into lawful ordinance language.
+      - Avoiding legal trouble or unsupported action.
+      - Defending Denver's home-rule authority.
+      - Supporting Council members, aides, staff, city attorneys, CPD staff, and journalists through complex city processes.
+      - Providing humble, non-self-promoting institutional judgment.
+    scope: >
+      The recurring theme is about Council and city institutional/legal work,
+      not about a separate policy item on the meeting agenda.
+    temporal_status:
+      - recurring_concern
+  answer_locality:
+    transcript_span: >
+      Member comments after the motion is seconded and David Broadwell's own
+      remarks after adoption.
+    locality_type: recurring concern and tribute synthesis across speakers
+  marker_presence:
+    problem_side_concern:
+      present: true
+      markers:
+        - "get us out of trouble"
+        - "legal issues"
+        - "home rule status"
+        - "areas of legal jeopardy"
+        - "hard job"
+    specific_content:
+      present: true
+      markers:
+        - "turn into any kind of legal arguments"
+        - "defense of our home rule status"
+        - "mold and shape and guide us"
+        - "lifting up the law, the council"
+  ```
+
+  ## Slot U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >
+    No unresolved Council handling remained for Proclamation 1060 after the
+    adoption announcement. The transcript contains future-facing retirement and
+    informal availability comments, but not a pending institutional return path
+    for the adopted proclamation.
+  evidence:
+    - "Proclamation 1060 has been adopted."
+    - "I hope to see you around here again. I know you'll be back."
+    - "I will not be a stranger."
+    - "We do have another proclamation. Yes. Councilwoman Ortega, will you please read Proclamation 1061?"
+  source_vocabulary:
+    - has been adopted
+    - retirement
+    - see you around here again
+    - you'll be back
+    - I will not be a stranger
+    - another proclamation
+    - Proclamation 1061
+  temporal_status:
+    primary:
+      - completed_in_session
+    notes:
+      - Proclamation 1060 was completed in-session.
+      - Future remarks concern Broadwell's retirement or possible informal return, not pending handling of Proclamation 1060.
+      - The segment moves on to Proclamation 1061 after the Broadwell tribute.
+  source_context_for_fact_check:
+    pending_status: >
+      No source-supported pending Council action remains for Proclamation 1060
+      after adoption.
+    pending_item: null
+    handling_path: null
+    future_mentions:
+      - Broadwell may return informally or remain connected after retirement.
+      - Council proceeds to a different item, Proclamation 1061.
+    temporal_status:
+      - completed_in_session for Proclamation 1060
+      - future_effect only for retirement / informal future availability, not for unresolved Council handling
+  answer_locality:
+    transcript_span: >
+      Adoption announcement, Broadwell's remarks, applause, and transition to
+      Proclamation 1061.
+    locality_type: absence of qualifying pendingness for the selected proclamation
+  marker_presence:
+    pendingness_marker:
+      present: false
+      markers: []
+    pending_item_identifiable:
+      present: false
+      markers: []
+    handling_path_visible:
+      present: false
+      markers: []
+    boundary_note: >
+      "I will not be a stranger" and "you'll be back" are future-facing, but they
+      do not identify an unfinished item, Council custody path, later vote, or
+      pending final action for Proclamation 1060.
+  ```

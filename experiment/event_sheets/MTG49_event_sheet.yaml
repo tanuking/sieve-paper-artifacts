@@ -1,0 +1,410 @@
+segment_id: "MTG49"
+segment_dir: "49_LongBeachCC_09112018"
+meeting_id: "LongBeachCC_09112018"
+uid: "LongBeachCC_09112018_18-0800"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # Event Sheet — MTG49
+
+  ## Segment-level source note
+
+  The segment covers Long Beach City Council Item 14, a Fire Department recommendation
+  to refer consideration of renaming the Long Beach Fire Department Regional Training
+  Center after Captain David Rosa to the Housing and Neighborhoods Committee. Speakers
+  frame the item as a memorial recognition of Rosa's service and training legacy, and
+  the in-session action is a carried motion on the referral rather than a completed
+  final renaming.
+
+  ## T — Topic / Framing
+
+  ```yaml
+  label: T
+  summary: >
+    The segment frames Item 14 as a proposal to advance consideration of renaming the
+    Long Beach Fire Department Regional Training Center as the Captain David Rosa
+    Regional Training Center, in recognition of Captain David Rosa's service,
+    legacy, and contributions to fire training in Long Beach.
+  evidence:
+    - "Recommendation to refer to the Housing and Neighborhoods Committee to consider the renaming of the Long Beach Fire Department Regional Training Center. The Captain. David Rosa Regional Training Center."
+    - "I think this is a really great way to honor Captain Rosa's amazing contributions."
+    - "the best and most fitting tribute we could pay to this man is to rename our training center in his name, Captain David Rosa Regional Training Center"
+  source_vocabulary:
+    - Item 14
+    - Report from Fire
+    - Recommendation to refer
+    - Housing and Neighborhoods Committee
+    - Long Beach Fire Department Regional Training Center
+    - Captain David Rosa Regional Training Center
+    - training center
+    - fitting tribute
+    - legacy
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - currently_existing
+      - future_effect
+    notes:
+      - The Regional Training Center already exists as the target of the proposed renaming.
+      - The segment advances consideration of the renaming; it does not establish that the final renaming was completed in this segment.
+      - The proposed name change would have future memorial effects if completed.
+  source_context_for_fact_check:
+    subject: proposed renaming of the Long Beach Fire Department Regional Training Center
+    policy_direction: refer or advance the renaming proposal for committee consideration
+    target: Long Beach Fire Department Regional Training Center / Regional Training Center in District Four
+    proposed_name: Captain David Rosa Regional Training Center
+    temporal_status:
+      - currently_existing target facility
+      - pending_future_handling for committee consideration and any final renaming
+      - future_effect for the proposed memorial naming effect
+  answer_locality: opening agenda read and Fire Chief's early presentation
+  marker_presence:
+    explicit_markers:
+      - "Recommendation to refer"
+      - "consider the renaming"
+      - "rename our training center"
+    absent_or_limited_markers:
+      - No final ordinance, final enactment, or completed legal renaming is stated in the segment.
+  ```
+
+  ## O — Outcome / Position
+
+  ```yaml
+  label: O
+  summary: >
+    The City Council took in-session action on Item 14, and the motion carried.
+    The acted-on item was the Fire Department/staff recommendation to refer the
+    proposed renaming of the Long Beach Fire Department Regional Training Center
+    to the Housing and Neighborhoods Committee for consideration. The source
+    supports a carried referral/recommendation action, not final completion of the
+    facility renaming.
+  evidence:
+    - "Recommendation to refer to the Housing and Neighborhoods Committee to consider the renaming..."
+    - "With that, we do have a motion on the floor as presented by by staff in the fire department. So, members, please go ahead and cast your votes. Motion carries."
+  source_vocabulary:
+    - recommendation to refer
+    - Housing and Neighborhoods Committee
+    - consider the renaming
+    - motion on the floor
+    - as presented by staff in the fire department
+    - cast your votes
+    - Motion carries
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - pending_future_handling
+    notes:
+      - The council vote on the motion was completed in the segment.
+      - The committee consideration and any final renaming action remained pending after the segment.
+  source_context_for_fact_check:
+    actor: Long Beach City Council, acting on a Fire Department/staff-presented item
+    procedural_stage: referral or advancement to committee consideration; not final legal renaming of the facility
+    disposition_result:
+      - The motion on Item 14 carried.
+      - The carried motion was tied to the recommendation to refer the renaming proposal to the Housing and Neighborhoods Committee.
+    acted_on_item:
+      - Item 14
+      - Report from Fire recommendation to refer the proposed renaming of the Long Beach Fire Department Regional Training Center
+    vote_result:
+      value: motion carried
+      attached_to: council motion on the referral/recommendation item
+      vote_count: not stated in the transcript
+    temporal_status:
+      - completed_in_session for the council motion
+      - pending_future_handling for committee consideration and final naming outcome
+  answer_locality: opening agenda read and final vote sequence
+  marker_presence:
+    explicit_markers:
+      - "motion on the floor"
+      - "cast your votes"
+      - "Motion carries"
+    absent_or_limited_markers:
+      - No numerical vote count is stated.
+      - No final passage or final renaming stage is stated.
+  ```
+
+  ## B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >
+    The renaming proposal was shaped by Captain David Rosa's tragic death on
+    June 25, his remembered service and training contributions, the Fire
+    Department's internal discussion about how to recognize him permanently, and
+    the presence and advocacy of his family. Speakers also noted that bringing
+    the naming forward so soon after his death was outside the usual city policy
+    or timeline.
+  evidence:
+    - "I know it's a little bit out of policy for the city to do something like this so relatively quickly after the tragic death..."
+    - "June 25th was a day that will live in infamy with Long Beach fire forever... It shook us to our core."
+    - "one of the things that came out during that discussion was his contributions to the Long Beach Fire Department... most importantly, his contributions to our training center and as a member of the cadre of our training staff"
+    - "how can we go about recognizing this man's contributions to our city in perpetuity"
+  source_vocabulary:
+    - out of policy
+    - relatively quickly
+    - tragic death
+    - June 25th
+    - shook us to our core
+    - contributions
+    - training center
+    - training staff
+    - in perpetuity
+    - family
+    - advocacy
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+    notes:
+      - Captain Rosa's death and service record are past/background facts in the segment.
+      - The grief, family advocacy, and desire to preserve his legacy are ongoing context during the meeting.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Captain David Rosa died tragically on June 25.
+      - Speakers described the event as deeply affecting the Long Beach Fire Department and city community.
+      - Speakers described Captain Rosa's contributions to the Long Beach Fire Department, the training center, and the training staff.
+      - The proposal came forward relatively quickly after his death, outside or faster than ordinary city naming policy.
+    agenda_connection:
+      - The background led the Fire Department/staff and council speakers to support referring a naming proposal.
+      - The proposed recognition was framed as a permanent tribute to Captain Rosa's service and legacy.
+    temporal_status:
+      - already_occurred for the June 25 death and past service contributions
+      - currently_existing for grief, family advocacy, and the council's recognition context
+  answer_locality: Fire Chief's presentation, union public comment, and councilmember remarks
+  marker_presence:
+    explicit_markers:
+      - "tragic death"
+      - "June 25th"
+      - "out of policy"
+      - "contributions"
+      - "recognizing ... in perpetuity"
+    absent_or_limited_markers:
+      - The transcript does not state that the background itself legally renamed the facility.
+  ```
+
+  ## N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >
+    The action's operative payload was to refer the proposed facility renaming to
+    the Housing and Neighborhoods Committee for consideration. The proposed
+    naming payload identifies the existing Long Beach Fire Department Regional
+    Training Center as the affected facility and "Captain David Rosa Regional
+    Training Center" as the proposed name. A councilmember supported a shortened
+    timeline for the item to return, but the transcript does not show that a
+    specific shortened timeline was adopted as part of the motion.
+  evidence:
+    - "Recommendation to refer to the Housing and Neighborhoods Committee to consider the renaming of the Long Beach Fire Department Regional Training Center. The Captain. David Rosa Regional Training Center. District four."
+    - "rename our training center in his name, Captain David Rosa Regional Training Center"
+    - "I would also be supportive of a truncated timeline for it to come back to council. I know that's at the discretion of the committee."
+  source_vocabulary:
+    - refer
+    - Housing and Neighborhoods Committee
+    - consider the renaming
+    - Long Beach Fire Department Regional Training Center
+    - Captain David Rosa Regional Training Center
+    - District four
+    - truncated timeline
+    - come back to council
+    - discretion of the committee
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - pending_future_handling
+      - future_effect
+    notes:
+      - The referral motion carried in-session.
+      - Committee consideration, any return to council, and final renaming remained future handling.
+      - The proposed naming would affect the facility name in the future if completed.
+  source_context_for_fact_check:
+    payload_carrier: Item 14 council motion / Fire Department-staff recommendation
+    payload_content:
+      - refer the renaming proposal to the Housing and Neighborhoods Committee for consideration
+      - proposed facility name: Captain David Rosa Regional Training Center
+      - affected facility: Long Beach Fire Department Regional Training Center
+    payload_scope:
+      - the Regional Training Center in District Four
+      - Station 17 is described by a councilmember as being on the same campus as the training center, but the acted-on facility is the training center
+    payload_scalar_or_baseline:
+      - no adopted vote count, deadline, or fixed timeline is stated in the transcript
+      - "full year" / "truncated timeline" appears as a councilmember's preference about timing and committee discretion, not as a confirmed adopted numeric term
+    temporal_status:
+      - completed_in_session for the carried motion
+      - pending_future_handling for committee and return path
+      - future_effect for the proposed renaming
+  answer_locality: opening agenda read, Fire Chief's presentation, Councilmember Mungo's timing comment, and final vote
+  marker_presence:
+    explicit_markers:
+      - "refer to the Housing and Neighborhoods Committee"
+      - "consider the renaming"
+      - "Captain David Rosa Regional Training Center"
+      - "truncated timeline"
+    absent_or_limited_markers:
+      - No final adopted deadline or timeline is stated.
+      - No final facility-name change is stated as completed.
+  ```
+
+  ## L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >
+    The segment contains concrete concern content around Captain Rosa's fatal
+    loss, the emotional impact on the Fire Department and city community, the
+    risks and sacrifices faced by first responders, and the importance of training
+    as a reminder of those risks.
+  evidence:
+    - "June 25th was a day that will live in infamy with Long Beach fire forever... It shook us to our core."
+    - "sometimes in service to our community, you have to pay the ultimate sacrifice"
+    - "this incident on the 25th was right across my district line... It's a stark reminder of how much we need to be on our toes and how much we have each other's backs."
+    - "Our first responders take risks every single day."
+  source_vocabulary:
+    - tragic death
+    - shook us to our core
+    - ultimate sacrifice
+    - loss
+    - incident on the 25th
+    - stark reminder
+    - on our toes
+    - have each other's backs
+    - risks every single day
+    - thankless job
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - Captain Rosa's death is a past event.
+      - The grief, danger of first-responder work, and training-related concern are treated as continuing and recurring concerns.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Captain Rosa's death was described as tragic and deeply affecting the department.
+      - Speakers connected the death to broader first-responder risk, sacrifice, and the importance of training.
+      - Speakers described emotional impact on family, firefighters, city employees, and the community.
+    local_anchor:
+      - Long Beach Fire Department
+      - Long Beach community
+      - Station 10 is described as Captain Rosa's workplace and the busiest station in the city.
+      - The incident on the 25th is described by one councilmember as having occurred right across that councilmember's district line.
+    temporal_status:
+      - already_occurred for the fatal incident
+      - currently_existing and recurring_concern for grief, risk, and training-safety concern
+  answer_locality: Fire Chief's remarks, union public comment, and multiple councilmember remarks
+  marker_presence:
+    explicit_markers:
+      - "tragic death"
+      - "shook us to our core"
+      - "ultimate sacrifice"
+      - "stark reminder"
+      - "take risks every single day"
+    absent_or_limited_markers:
+      - The concern is not about opposition to the renaming; speakers in the segment support the item.
+  ```
+
+  ## S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme across the segment is collective grief over Captain
+    Rosa's death and the need to preserve public recognition of firefighter
+    sacrifice, training, and service. The theme is voiced by the Mayor, Fire
+    Chief, union representative, and multiple councilmembers through repeated
+    references to loss, service, risk, family, and legacy.
+  evidence:
+    - "we just honor that and thank you for ... your advocacy"
+    - "It shook us to our core."
+    - "every single future Long Beach firefighter [will] know Dave Rosa"
+    - "when we're going to the David Rosa Training Center, it's going to be a stark reminder. This stuff's important."
+    - "Our first responders take risks every single day."
+  source_vocabulary:
+    - honor
+    - advocacy
+    - shook us to our core
+    - every single future Long Beach firefighter
+    - stark reminder
+    - this stuff's important
+    - first responders
+    - risks every single day
+    - legacy
+    - complete support
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - already_occurred
+      - currently_existing
+      - future_effect
+    notes:
+      - The death is already occurred.
+      - The shared concern about honoring sacrifice and maintaining training awareness is current and recurring.
+      - The proposed renaming is framed as a future-facing way to keep that concern visible.
+  source_context_for_fact_check:
+    concern_theme: collective loss and ongoing recognition of firefighter sacrifice, training, and service
+    concern_content:
+      - Captain Rosa's death deeply affected the Fire Department, family, city employees, and community.
+      - The proposed naming is repeatedly framed as a way to keep his legacy and the importance of firefighter training visible.
+      - Speakers emphasize support for the family and firefighters rather than opposition to the proposal.
+    temporal_status:
+      - recurring_concern for the repeated theme across speakers
+      - future_effect for the proposed memorial and training-awareness function of the name
+  answer_locality: full discussion, especially Fire Chief remarks, public comment, and councilmember statements before the vote
+  marker_presence:
+    explicit_markers:
+      - repeated support from multiple speakers
+      - repeated references to grief, family, service, training, sacrifice, and legacy
+    absent_or_limited_markers:
+      - The summary theme should not be converted into a claim that final renaming was completed.
+  ```
+
+  ## U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >
+    After the in-session motion carried, the final renaming still remained open:
+    the proposal was to be handled by the Housing and Neighborhoods Committee for
+    consideration, and a councilmember expressed support for a shortened timeline
+    for the item to come back to council. The committee and any final council
+    action were future handling, not completed within this segment.
+  evidence:
+    - "Recommendation to refer to the Housing and Neighborhoods Committee to consider the renaming..."
+    - "I would also be supportive of a truncated timeline for it to come back to council. I know that's at the discretion of the committee."
+    - "Motion carries."
+  source_vocabulary:
+    - refer
+    - Housing and Neighborhoods Committee
+    - consider the renaming
+    - truncated timeline
+    - come back to council
+    - discretion of the committee
+    - Motion carries
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - completed_in_session
+    notes:
+      - The council completed the referral/recommendation vote in-session.
+      - Committee consideration and any return to council/final naming action remained pending.
+  source_context_for_fact_check:
+    pending_status:
+      - final renaming was not completed in the segment
+      - committee consideration and any return path remained future handling
+    pending_item:
+      - renaming of the Long Beach Fire Department Regional Training Center as the Captain David Rosa Regional Training Center
+    handling_path:
+      - referral to the Housing and Neighborhoods Committee
+      - possible later return to council, with one councilmember supporting a truncated timeline subject to committee discretion
+    temporal_status:
+      - completed_in_session for the carried motion
+      - pending_future_handling for committee consideration and final action
+  answer_locality: opening agenda read, Councilmember Mungo's timing comment, and final vote sequence
+  marker_presence:
+    explicit_markers:
+      - "refer to the Housing and Neighborhoods Committee"
+      - "come back to council"
+      - "discretion of the committee"
+    absent_or_limited_markers:
+      - No final committee action, final council action, or completed name change is stated in the segment.
+  ```

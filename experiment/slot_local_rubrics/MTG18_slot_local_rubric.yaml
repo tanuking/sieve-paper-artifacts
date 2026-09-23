@@ -1,0 +1,739 @@
+segment_id: "MTG18"
+segment_dir: "18_SeattleCityCouncil_08152016"
+meeting_id: "SeattleCityCouncil_08152016"
+uid: "SeattleCityCouncil_08152016_Res 31698"
+decision_type: "Resolution"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "18",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "Topic/Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "subject_identified": {
+              "match": [
+                "Names the North Precinct capital/facility project as the substantive subject.",
+                "Names the proposed North Seattle police precinct or facility project as the subject.",
+                "Names the North Precinct budget, design, facility, or project-review matter as the subject."
+              ],
+              "not_match": [
+                "Names only an agenda item, resolution number, council vote, or procedural event without the substantive North Precinct facility/project subject.",
+                "Describes only a generic budget discussion or generic police discussion without identifying the North Precinct project.",
+                "Focuses only on a hold/defer motion or adoption result without naming the substantive facility project."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "policy_direction": {
+              "match": [
+                "States that the item pursued process direction for cost review, cost control, racial-equity analysis, community engagement, reporting, or later budget handling.",
+                "States that the item directed analysis or review work for the facility's design, operations, cost, or community-facing implications.",
+                "States that the item set a process to inform later Council budget decisions rather than merely describing a vote."
+              ],
+              "not_match": [
+                "Says only that the Council debated, voted on, adopted, rejected, or held the item, without a substantive policy move.",
+                "States a result or concern but no policy direction for any North Precinct cost, design, equity, engagement, reporting, or budget process.",
+                "States a policy direction unrelated to the North Precinct project-review or budget-handling process."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies the North Precinct project budget, design, operations, facility, training component, community engagement, or later project-cost decision as the target.",
+                "Identifies a directed department or partner departments as the target of the analysis/review work, without needing exact department names for Presence.",
+                "Identifies the later Council project-cost or budget-decision process as the process being informed."
+              ],
+              "not_match": [
+                "Gives a policy direction without saying what project, department, community process, or budget decision it applies to.",
+                "Targets a different city project, a citywide police budget, or general police reform without tying it to the North Precinct project.",
+                "Treats the target only as a completed construction authorization without identifying the cost/design/equity/review process at issue."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject is Resolution 31698 as Council direction for the North Precinct Capital Project / proposed North Seattle police precinct facility.",
+            "The policy direction includes independent cost review, cost savings, racial equity toolkit analysis, community engagement, reporting, and using those results to inform later budget decisions.",
+            "The target includes the North Precinct project budget, design, operations, community engagement, training-facility aspects, and FAS as the primary directed department.",
+            "The resolution was process-setting and did not finalize or endorse the $149 million or $160 million project cost."
+          ],
+          "fact_check_notes": [
+            "Omission of some policy-direction details is allowed. A contradiction occurs only if the summary explicitly states a different subject, direction, or target.",
+            "If a summary says the resolution approved the final project budget or final construction cost, treat that as a contradiction of policy_direction and target."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "T_topic_fail",
+            "summary": "The Council discussed agenda item 14 and then voted.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary does not name the substantive North Precinct subject."
+          },
+          {
+            "id": "T_topic_pass_quality_fail",
+            "summary": "The Council discussed the North Precinct Capital Project.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is identified, but no policy direction and target are stated."
+          },
+          {
+            "id": "T_full_correct",
+            "summary": "Resolution 31698 framed the North Precinct Capital Project as a proposed North Seattle police facility whose cost, design, racial equity review, community engagement, and later budget treatment would be directed through FAS-led analysis rather than a final project-cost endorsement.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "id": "T_wrong_but_specific_fact_check_failure",
+            "summary": "Resolution 31698 approved the final $160 million budget for constructing the North Precinct facility.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary has a specific subject, policy move, and target, but contradicts the event sheet by saying the resolution finalized or endorsed the cost."
+          }
+        ],
+        "answer_locality": [
+          "Opening explanation by Councilmember González of agenda item 14 and the North Precinct resolution.",
+          "Later clarifications by Council President Harrell, Councilmember González, Councilmember Herbold, and Councilmember Johnson that the resolution did not endorse a specific budget number and would inform later budget decisions."
+        ],
+        "marker_presence": {
+          "subject_identified": "present",
+          "policy_direction": "present",
+          "target": "present"
+        }
+      },
+      "O": {
+        "slot": "O",
+        "label": "Outcome/Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that a hold/defer motion for the North Precinct resolution failed.",
+                "States that the Council adopted the North Precinct resolution.",
+                "States both a failed hold/defer disposition and a final adoption disposition for the North Precinct resolution."
+              ],
+              "not_match": [
+                "States only that Councilmembers discussed, debated, supported, opposed, or raised concerns about the item.",
+                "States only that a vote occurred without tying a disposition to a motion, resolution, or acted-on item.",
+                "States only the payload of the resolution without saying what the Council did to the resolution or hold/defer motion."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies the acted-on item as the North Precinct resolution, either by formal identifier or substantive description.",
+                "Identifies the separate hold/defer motion for the North Precinct resolution as the acted-on item.",
+                "Distinguishes the failed hold/defer motion from the adopted North Precinct resolution."
+              ],
+              "not_match": [
+                "Uses only a generic phrase such as 'the item,' 'the proposal,' or 'a motion' without enough context to tell which item was acted on.",
+                "Refers only to the North Precinct issue without saying whether the acted-on item was the hold/defer motion or the resolution itself.",
+                "Identifies an unrelated ordinance, budget, or project as the acted-on item."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The Seattle City Council / Council body acted during the sampled segment.",
+            "The procedural stage was full Council action on Resolution 31698 during the meeting segment.",
+            "The motion to hold Resolution 31698 until September 12 failed.",
+            "After the hold motion failed, Resolution 31698 was adopted.",
+            "The transcript does not provide a reliable numeric vote count for either the hold motion or the final adoption vote."
+          ],
+          "fact_check_notes": [
+            "Do not infer or require a numeric vote count. If a summary states a specific count or unanimity, compare that claim to the event sheet and fail Fact Check if unsupported or attached to the wrong action.",
+            "Later implementation, reporting, RET work, and budget decisions are not part of O's disposition result, though they may appear in U or N."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "O_topic_fail",
+            "summary": "Councilmembers discussed cost, design, and community engagement for the North Precinct project.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No Council disposition is tied to an acted-on item."
+          },
+          {
+            "id": "O_topic_pass_quality_fail",
+            "summary": "The Council adopted the item after another motion failed.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is stated, but the acted-on item is not specific enough."
+          },
+          {
+            "id": "O_full_correct",
+            "summary": "The Council rejected the motion to hold Resolution 31698 until September 12 and then adopted Resolution 31698.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition results and acted-on items are specific and source-consistent."
+          },
+          {
+            "id": "O_wrong_but_specific_fact_check_failure",
+            "summary": "The Council voted unanimously to hold Resolution 31698 until September 12.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The acted-on item is specific, but the disposition and vote-result claim contradict the event sheet."
+          }
+        ],
+        "answer_locality": [
+          "Adoption motion occurs after Councilmember González's overview of the resolution.",
+          "Hold motion discussion occurs during Councilmember O'Brien's comments and subsequent Council discussion.",
+          "Final adoption occurs near the end of the segment after additional Councilmember comments."
+        ],
+        "marker_presence": {
+          "disposition_verb_tied_to_acted_on_item": "present",
+          "acted_on_item_specific": "present"
+        }
+      },
+      "B": {
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "precipitating_context_visible": {
+              "match": [
+                "States that an existing North Precinct construction or replacement proposal was already under discussion.",
+                "States that controversy or concern over the project's design, budget, cost, public review, racial justice, policing implications, or community trust formed background to the item.",
+                "States that prior budget/capital planning around a large precinct-cost figure formed background to the current discussion.",
+                "States that facility-capacity, north Seattle growth, overcrowding, or police-training needs formed background for the item."
+              ],
+              "not_match": [
+                "States only what the resolution directed as a remedy, with no prior condition, problem, process, or background context.",
+                "States only that the Council adopted or debated the item, without any background that shaped the discussion.",
+                "Gives a generic background about policing or city budgeting with no visible connection to the North Precinct item."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Connects the background condition or concern to why the resolution emphasized cost review, racial-equity analysis, community engagement, reporting, or later budget scrutiny.",
+                "Connects facility, training, or service-capacity background to the North Precinct project discussion.",
+                "Shows that prior project planning, current controversy, or facility needs shaped the current item or how Councilmembers discussed it."
+              ],
+              "not_match": [
+                "States a prior condition or general concern but does not connect it to the current North Precinct item, proposal form, or discussion frame.",
+                "Requires an explicit 'why now' or agenda-necessity statement even though the background is visibly connected to the item.",
+                "Connects the background to an unrelated item or different project."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Background conditions included an existing proposal to construct or replace the North Precinct in north Seattle.",
+            "Background conditions included concerns about current design, current budget, cost, and whether the community had enough time to review the resolution and amendments.",
+            "Background conditions included a prior 2015 Council action or budget/capital-line discussion described as involving a $160 million police precinct figure.",
+            "Background conditions included public concern about policing and racial justice, as well as facility-capacity and training arguments tied by some speakers to police reform and the federal consent decree.",
+            "These conditions shaped the resolution's cost-review, racial-equity, community-engagement, reporting, and later budget-decision framework, but did not mean the segment finalized a new project budget amount."
+          ],
+          "fact_check_notes": [
+            "Scalar values are checked only when they are explicitly stated as part of the background relation: $160 million was described as a prior 2015 budget/capital-line figure, $149 million was discussed as not endorsed by the resolution after changes, 65% was Burgess's overcrowding description, 40% was Juarez's north-of-ship-canal population statement, and 2021 referred to Juarez's light-rail timing statement.",
+            "A summary may mention only one or two background conditions and still pass Fact Check if it does not contradict the source-supported trigger_condition or agenda_connection."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "B_topic_fail",
+            "summary": "Resolution 31698 directed FAS to obtain cost estimates and conduct a racial equity review.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states operative payload, not prior background or precipitating context."
+          },
+          {
+            "id": "B_topic_pass_quality_fail",
+            "summary": "The North Precinct proposal had already raised concerns.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A background concern is visible, but it is not connected to the current item or its form."
+          },
+          {
+            "id": "B_full_correct",
+            "summary": "The resolution was shaped by an existing North Precinct construction proposal, controversy over its current cost and design, prior 2015 capital planning around a $160 million precinct figure, community concerns about policing and racial justice, and facility/training needs such as overcrowding and consent-decree-related reform obligations.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The background conditions are source-consistent and visibly connected to why the item took a cost-review and equity-review form."
+          },
+          {
+            "id": "B_wrong_but_specific_fact_check_failure",
+            "summary": "The resolution came forward because the Council had already approved a final $149 million North Precinct project budget in 2015.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary provides specific background and a connection, but attaches the wrong value and final-approval meaning to the background."
+          }
+        ],
+        "answer_locality": [
+          "Background appears throughout Councilmember O'Brien's comments, Council President Harrell's discussion of public concern, Councilmember Juarez's comments on prior authorization and north Seattle service needs, Councilmember Burgess's comments on training and overcrowding, and Councilmember Herbold's comments on cost and police accountability."
+        ],
+        "marker_presence": {
+          "precipitating_context_visible": "present",
+          "connected_to_current_item_or_form": "present"
+        }
+      },
+      "N": {
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "payload_attached_to_action": {
+              "match": [
+                "States that the adopted North Precinct resolution carried requirements, deadlines, reporting duties, cost-review steps, equity/community-engagement steps, scope limits, or allocation terms.",
+                "Links an operative requirement or condition to the resolution or acted-on North Precinct item.",
+                "Uses adjacent-sentence or anaphora linkage to show that the requirement, deadline, scope, or number is part of the resolution's payload."
+              ],
+              "not_match": [
+                "Describes only background concerns or debate without attaching any operative payload to the resolution or acted-on item.",
+                "States only that the Council adopted the resolution without saying what the action required, scoped, limited, or set.",
+                "Gives a free-standing future task without making clear that it was carried by the resolution or acted-on item."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": {
+            "number": {
+              "match": [
+                "The attached payload includes an identifiable numeric facet, such as a construction-document percentage stage, time interval, deadline timing, amount, or other measured value.",
+                "The summary attaches a numeric quantity to a cost review, equity analysis, reporting duty, budget-timing step, or property-proceeds term."
+              ],
+              "not_match": [
+                "The summary states a payload but includes no numeric or measured facet of any kind.",
+                "The summary mentions a number only as unrelated background or debate, not as part of the resolution's operative payload."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "The attached payload names an identifiable requirement, such as cost estimating, cost-savings review, racial-equity analysis, community engagement, progress reporting, budget-risk reporting, or sale-proceeds allocation.",
+                "The summary states a named condition, review, report, analysis, engagement, or allocation duty carried by the resolution."
+              ],
+              "not_match": [
+                "The summary says only that the resolution had requirements without naming any requirement type.",
+                "The summary names only a concern or background condition, not an operative requirement carried by the resolution."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "The attached payload identifies a scope boundary, such as the facility's design/operations/cost, project budget, community groups to be engaged, reporting audience, or proceeds from an existing property/building.",
+                "The summary identifies what the payload applies to or who/what is included in the review, engagement, reporting, or allocation duty."
+              ],
+              "not_match": [
+                "The summary states a payload but gives no identifiable scope, target, category, population, property, or process boundary.",
+                "The summary gives a scope only for general debate or background, not for the resolution's operative payload."
+              ]
+            },
+            "date_cutoff": {
+              "match": [
+                "The attached payload includes an identifiable deadline, completion timing, reporting timing, budget-process timing, or other time boundary.",
+                "The summary ties a timing boundary to the equity analysis, reporting, cost review, budget process, or other operative payload."
+              ],
+              "not_match": [
+                "The summary states a payload but includes no deadline, completion timing, reporting timing, or time boundary.",
+                "The summary mentions time only as unrelated background rather than as part of the resolution's payload."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier is Resolution 31698.",
+            "FAS was directed to hire an independent third-party cost estimator to evaluate whether estimated project costs were accurate and reasonable and to look for cost savings.",
+            "Independent cost-estimate analysis was required at the 60% and 90% construction-document submittal phases.",
+            "FAS, with assistance from OCR, the Department of Neighborhoods, and SPD, was directed to conduct a full racial equity toolkit analysis of the facility's design, operations, programmatic assets, and cost.",
+            "FAS was required to solicit community perspectives from historically underrepresented populations, vulnerable populations, people likely to interact with police, people historically and disproportionately impacted by police action, and people likely to be victims of crime.",
+            "FAS was to report its intended community engagement plan and provide RET results to the Gender Equity, Safe Communities and New Americans Committee.",
+            "RET results were intended to inform the later Council decision on the appropriate total project cost during the ordinary budget process.",
+            "FAS was directed to provide regular written progress reports including project status, design/community engagement efforts, life-to-date expenditures, current cost estimate and changes, and budget risk issues.",
+            "Proceeds from any sale of the existing North Precinct property or building would be allocated to affordable housing needs."
+          ],
+          "fact_check_notes": [
+            "The resolution was adopted in-session, but most payload requirements were future-facing directives or pending implementation.",
+            "If a summary states a scalar value, check both the value and its role binding: 60% and 90% are cost-estimate stages; October 3, 2016 is the RET completion date discussed with possible flexibility; 4 to 6 weeks is the expected interval before budget decisions; end of November is the expected Council budget vote timing.",
+            "The payload did not endorse $149 million or $160 million as the final project cost. A summary that treats those as approved payload amounts contradicts the event sheet."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "N_topic_fail",
+            "summary": "Councilmembers worried that the North Precinct project was too expensive and lacked community trust.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states concerns, not an action-attached payload."
+          },
+          {
+            "id": "N_topic_pass_quality_fail",
+            "summary": "Resolution 31698 required further review of the North Precinct project.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the resolution, but it lacks a qualifying number, named requirement, scope boundary, or date cutoff."
+          },
+          {
+            "id": "N_full_correct",
+            "summary": "Resolution 31698 directed FAS to obtain independent third-party cost estimates at the 60% and 90% construction-document stages, conduct a full RET analysis with community engagement, report to committee, provide regular progress and cost-risk reports, and use the results to inform the later budget decision on total North Precinct project cost.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to Resolution 31698 and includes named requirements, numbers, scope, and later budget use consistent with the event sheet."
+          },
+          {
+            "id": "N_wrong_but_specific_fact_check_failure",
+            "summary": "Resolution 31698 required FAS to approve a $149 million final project budget after a 30% cost review.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific payload, but the payload content, scalar value, and role binding contradict the event sheet."
+          }
+        ],
+        "answer_locality": [
+          "Primarily in Councilmember González's opening explanation of the resolution.",
+          "Reinforced by later comments from Harrell, Herbold, O'Brien, and Johnson about cost savings, racial-equity work, and later budget decisions."
+        ],
+        "marker_presence": {
+          "payload_attached_to_action": "present",
+          "number": "present",
+          "named_requirement": "present",
+          "scope_boundary": "present",
+          "date_cutoff": "present"
+        }
+      },
+      "L": {
+        "slot": "L",
+        "label": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "concrete_concern_language": {
+              "match": [
+                "States a concrete concern, objection, risk, obstacle, tradeoff, difficulty, deficiency, or constraint about the North Precinct project.",
+                "States concern-side language about cost, design, budget, public review, racial equity, police accountability, symbolic impact, competing resources, overcrowding, or training constraints.",
+                "Frames a project condition as a problem, harm, risk, shortage, or tradeoff rather than only as a solution to be implemented."
+              ],
+              "not_match": [
+                "States only that the resolution created reviews, reports, or engagement processes, without any concern-side condition.",
+                "States only that speakers debated or disagreed, without identifying any concern, risk, obstacle, tradeoff, or deficiency.",
+                "Requires a named place, named group, or bounded area for Presence even though the concern content itself is concrete."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_concern_content": {
+              "match": [
+                "Identifies what the concern was about, such as excessive or unsupported cost, current design/budget, insufficient community review, racial equity, police accountability, symbolic association with police brutality, competing uses of resources, overcrowding, or training needs.",
+                "States enough concrete content that the reader can tell what harm, obstacle, risk, tradeoff, or constraint was being raised.",
+                "Identifies a problem-side object or mechanism for the concern, without requiring a local anchor for Presence."
+              ],
+              "not_match": [
+                "Says only that concerns were raised, without saying what the concern was about.",
+                "Uses only generic concern terms such as 'issues' or 'controversy' without identifiable content.",
+                "Treats the absence of a named place, named group, or bounded area as a Presence failure when the concern content is otherwise specific."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "O'Brien opposed the North Precinct in its current design and current budget and said the community had not had enough time to review amendments and provide input.",
+            "Herbold had serious concerns about the proposed price and would not have supported the resolution if it endorsed the $149 million cost.",
+            "Herbold said community members described the building as a symbol of police brutality and hoped it could become a symbol of police accountability.",
+            "Johnson said constituents across the political spectrum thought the $149 million figure was too high and wanted savings for other North End needs.",
+            "Burgess described the existing building as 65% overcrowded and linked the new training center to police reform and consent-decree needs.",
+            "The local anchor for many concerns is the North Precinct / North Seattle / North End; racial equity and policing concerns were tied to communities of color and communities disproportionately impacted by policing when those groups are explicitly stated."
+          ],
+          "fact_check_notes": [
+            "A named place or group is not required for Presence. Check local_anchor only if the summary explicitly states a place, group, bounded area, or population.",
+            "The concerns may be current, recurring, or framed as risks/tradeoffs. Do not require the summary to list every concern."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "L_topic_fail",
+            "summary": "Resolution 31698 required FAS to conduct a racial equity toolkit analysis and report back.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is solution-side payload, not a concrete concern."
+          },
+          {
+            "id": "L_topic_pass_quality_fail",
+            "summary": "Several Councilmembers raised serious concerns about the North Precinct project.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the specific concern content is not identifiable."
+          },
+          {
+            "id": "L_full_correct",
+            "summary": "Speakers raised concrete concerns that the North Precinct project's proposed cost was too high, the current design and budget lacked sufficient community review, racial equity and police accountability issues were unresolved, and the existing facility and training needs created capacity constraints.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary states specific concern content consistent with the event sheet."
+          },
+          {
+            "id": "L_wrong_but_specific_fact_check_failure",
+            "summary": "Speakers were concerned that South Seattle residents would lose their local precinct because the North Precinct project eliminated all police training facilities.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states concrete concerns, but the concern content and local anchor contradict the event sheet."
+          }
+        ],
+        "answer_locality": [
+          "O'Brien's comments on current design, current budget, community review, and lack of urgency.",
+          "Herbold's comments on price, racial equity, police accountability, and community description of the building.",
+          "Johnson's comments on high cost and competing North End projects.",
+          "Burgess's comments on overcrowding and training obligations."
+        ],
+        "marker_presence": {
+          "concrete_concern_language": "present",
+          "specific_concern_content": "present"
+        }
+      },
+      "S": {
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "problem_side_concern": {
+              "match": [
+                "Names a recurring or shared problem-side concern theme about the North Precinct project.",
+                "Uses concern-side language for cost, design, legitimacy, community engagement, racial equity, budget scrutiny, facility capacity, police training, or reform-related needs.",
+                "Frames the theme as a problem, gap, tension, risk, deficiency, constraint, or tradeoff rather than merely a procedural solution."
+              ],
+              "not_match": [
+                "States only what the resolution required or directed, without naming the problem-side concern theme.",
+                "States only that there was debate, disagreement, or controversy, with no identifiable concern theme.",
+                "States only a one-off detail without presenting a concern theme across the discussion."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_content": {
+              "match": [
+                "Identifies the concern theme as cost/design/community-legitimacy concerns requiring stronger controls, equity analysis, engagement, and later budget scrutiny.",
+                "Identifies the parallel theme that the project also had to address facility capacity, police training, police reform, or consent-decree-related needs.",
+                "Identifies the concern's object or mechanism: the North Precinct project's cost/design/legitimacy and the need for cost/equity/community processes before later budget decisions."
+              ],
+              "not_match": [
+                "Uses only generic concern terms such as 'issues,' 'questions,' or 'controversy' without identifying what the theme was about.",
+                "Mentions cost review or equity analysis only as procedures, without naming the concern they address.",
+                "Names a concern theme unrelated to North Precinct cost, design, racial equity, community engagement, budget scrutiny, facility capacity, or training needs."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that the North Precinct project could not responsibly move forward on cost, design, and legitimacy without stronger cost controls, racial equity analysis, community engagement, and later budget scrutiny.",
+            "A parallel recurring theme was that the project also had to respond to facility-capacity and police-training needs.",
+            "Cost figures such as $149 million and $160 million were discussed as problematic or not endorsed, not as final approved costs in this segment.",
+            "The racial equity toolkit was framed as a meaningful community process intended to influence outcomes, not merely box-checking.",
+            "Community engagement and trust were treated as necessary, especially for communities of color and people disproportionately impacted by policing.",
+            "The training center was described as a component of police reform and consent-decree compliance, with training for all SPD officers rather than only North Precinct officers.",
+            "The final budget decision was repeatedly described as future work during the budget process, not completed by this resolution."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state recurrence explicitly, but it must name a problem-side concern theme with identifiable content.",
+            "Do not require downstream details beyond the stated concern theme. Contradictions about the theme, content, affected group, scope, or final-cost status fail Fact Check."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "S_topic_fail",
+            "summary": "Resolution 31698 directed FAS to provide reports and conduct a racial equity toolkit analysis.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary states payload but not a recurring problem-side concern theme."
+          },
+          {
+            "id": "S_topic_pass_quality_fail",
+            "summary": "The discussion reflected broad concerns about the project.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the concern theme lacks identifiable content."
+          },
+          {
+            "id": "S_full_correct",
+            "summary": "Across the discussion, the recurring concern was that the North Precinct project needed stronger cost controls, racial equity analysis, community engagement, and later budget scrutiny before it could move forward responsibly, while also addressing facility-capacity and police-training needs.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The recurring concern theme and its specific content are source-consistent."
+          },
+          {
+            "id": "S_wrong_but_specific_fact_check_failure",
+            "summary": "The recurring concern was that Council had already finalized a $160 million project and no further racial equity or cost review was available.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary names a specific concern theme, but its content contradicts the event sheet."
+          }
+        ],
+        "answer_locality": [
+          "Repeated across O'Brien, Harrell, González, Juarez, Burgess, Herbold, and Johnson comments.",
+          "The theme is visible both before and after the failed hold motion."
+        ],
+        "marker_presence": {
+          "problem_side_concern": "present",
+          "specific_content": "present"
+        }
+      },
+      "U": {
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pendingness_marker": {
+              "match": [
+                "Explicitly states that after adoption, a project-cost decision, implementation work, analysis, review, reporting, community engagement, or budget handling remained pending or still had to occur.",
+                "Explicitly states that equity analysis, independent cost reviews, community engagement, reports, or budget deliberation remained future work or had to return through Council or committee processes.",
+                "Uses an unfinishedness marker such as remained pending, still to be decided, future budget process, later Council decision, report back, or real work remained."
+              ],
+              "not_match": [
+                "States only that the resolution directed future reviews or reports, without an explicit pending or unfinished state.",
+                "States only that the Council adopted the North Precinct resolution.",
+                "States only a generic future effect without identifying that some work, decision, review, or process remained pending."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pending_item_identifiable": {
+              "match": [
+                "Identifies the appropriate total project cost as still to be decided.",
+                "Identifies equity analysis, community engagement, independent cost estimates, progress reports, budget-risk reporting, or property/proceeds handling as pending work.",
+                "Identifies implementation of the resolution's directives as future work after adoption."
+              ],
+              "not_match": [
+                "Says only that something remained pending without identifying the item, workstream, issue, or decision.",
+                "Identifies an unrelated future item or unrelated Council process as pending.",
+                "Treats the North Precinct resolution itself as unadopted or still pending, without distinguishing later implementation or budget decisions."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "States that results or reports would return to a relevant Council committee, the full Council, or the Council budget process.",
+                "States that equity-analysis results, cost reviews, reports, or community-engagement outcomes would inform later Council budget or project-cost decisions.",
+                "States a concrete report-back, review, committee, full-Council, or budget-process path for the pending work."
+              ],
+              "not_match": [
+                "Mentions future work but gives no committee, Council, report-back, review, or budget-process path.",
+                "Names a different body, committee, date, or process as the handling path.",
+                "Uses a bare future-oriented phrase such as 'later' or 'eventually' without an institutional or process path."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Resolution 31698 was adopted, but final project-cost decision-making was not complete.",
+            "RET work, independent cost estimates, community engagement, progress reports, cost-risk reporting, and budget deliberation remained future or ongoing tasks.",
+            "The appropriate total project cost for the North Precinct project remained pending for later budget handling.",
+            "RET analysis was expected around October 3, 2016, with possible flexibility, and results were to be provided to the Gender Equity, Safe Communities and New Americans Committee.",
+            "RET results were expected approximately 4 to 6 weeks before late-November budget decisions.",
+            "Progress reports were to go to the full Council and committee, and the ordinary budget process was the path for determining or endorsing the later project-cost amount."
+          ],
+          "fact_check_notes": [
+            "Do not treat adoption of Resolution 31698 as unresolved; the unresolved tail is implementation, reporting, analysis, community engagement, and later budget/project-cost decision-making.",
+            "A summary that says the final project cost was resolved in this segment contradicts pending_status. A summary that says Resolution 31698 itself remained pending contradicts the completed adoption result."
+          ]
+        },
+        "score_examples": [
+          {
+            "id": "U_topic_fail",
+            "summary": "Resolution 31698 directed FAS to conduct cost review and a racial equity toolkit analysis.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The statement is future-facing payload, but it lacks an explicit pendingness marker."
+          },
+          {
+            "id": "U_topic_pass_quality_fail",
+            "summary": "After the vote, more work remained pending.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not identifiable."
+          },
+          {
+            "id": "U_full_correct",
+            "summary": "Although Resolution 31698 was adopted, the final North Precinct project cost remained pending: FAS still had to complete cost reviews, RET analysis, community engagement, and progress reports, then return results to the relevant committee and the Council budget process for later decision-making.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The pending status, pending items, and handling path are all source-consistent."
+          },
+          {
+            "id": "U_wrong_but_specific_fact_check_failure",
+            "summary": "Resolution 31698 itself remained pending until a September 12 final vote, when the Council would decide whether to adopt it.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary has a pending item and path, but contradicts the event sheet because Resolution 31698 was adopted in the sampled segment and the September 12 hold motion failed."
+          }
+        ],
+        "answer_locality": [
+          "González's opening description of RET timing, progress reporting, and budget use.",
+          "O'Brien, Herbold, and Johnson's later comments that the real work or real discussion remained in the future budget process."
+        ],
+        "marker_presence": {
+          "pendingness_marker": "present",
+          "pending_item_identifiable": "present",
+          "handling_path_visible": "present"
+        }
+      }
+    }
+  }

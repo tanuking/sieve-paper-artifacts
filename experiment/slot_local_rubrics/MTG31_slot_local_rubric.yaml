@@ -1,0 +1,1156 @@
+segment_id: "MTG31"
+segment_dir: "31_LongBeachCC_03222016"
+meeting_id: "LongBeachCC_03222016"
+uid: "LongBeachCC_03222016_16-0122"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "31",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T — Topic/Framing",
+        "name": "Topic/Framing",
+        "slot_purpose": "T captures the substantive framing of the sampled segment's discussion: the subject of the discussion, the policy direction being pursued, and the target to which that policy direction applies. T is about substantive framing, not procedural disposition.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "meaning": "The summary names the substantive subject as a noun or noun phrase identifying the policy area, issue, or matter being discussed. Procedural form, bare agenda labels, motion numbers, or bill identifiers without the substantive subject do not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "meaning": "The summary shows what policy move was being pursued for the subject. This may be a direction-bearing verb such as update, revise, clarify, expand, restrict, launch, phase out, or consolidate. It may also be a concrete rule effect showing how the target would change, such as defaulting, extending, narrowing, broadening, adding, removing, changing a threshold, or changing a deadline. Procedural disposition, such as approved, adopted, recommended, or passed, is not policy direction."
+              },
+              {
+                "name": "target",
+                "meaning": "The summary identifies the target to which the policy direction applies: the entity, group, area, process, rule set, or scope the direction is aimed at. A bare direction without a target does not satisfy this label."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "subject_identified": {
+              "match": [
+                "Names a substantive procurement, service-contract, policy, program, or public-service subject rather than only a procedural agenda label.",
+                "The subject is expressed as a noun or noun phrase specific enough to show what policy matter is being discussed, even if the named jurisdiction, vendor, or service is factually wrong."
+              ],
+              "not_match": [
+                "Only says there was an agenda item, meeting, motion, vote, or public comment without identifying a substantive subject.",
+                "Only uses a bare item or contract reference without indicating the policy area or matter being discussed."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "policy_direction": {
+              "match": [
+                "States a direction-bearing move or decision path for the subject, such as award, review-first handling, restart, rebid, defer, approve, reject, or otherwise change how a process will proceed.",
+                "A specific but factually wrong direction can satisfy Presence; source accuracy is evaluated only in Fact Check."
+              ],
+              "not_match": [
+                "Only names the subject without saying what move, decision path, rule effect, or policy direction was being pursued.",
+                "Only says there was discussion, public comment, or concern without a direction-bearing move for the subject."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies the entity, process, contract, program, rule set, service, or scope to which the stated direction applies.",
+                "The target is distinguishable from the general meeting or debate even if the stated target is factually wrong."
+              ],
+              "not_match": [
+                "States a direction-bearing move with no identifiable target.",
+                "Uses only generic wording such as an item, issue, or contract without indicating what the direction applies to."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The substantive subject was Long Beach's citywide recyclable collection services procurement / recycling RFP.",
+            "The agenda item originally proposed awarding the recyclable collection services contract to Waste Management.",
+            "The adopted course shifted to conducting an independent review first, then deciding whether to award the contract as recommended or begin the process again.",
+            "The target was the recyclable collection services contract / recycling RFP process, not all municipal refuse, all commercial hauling, or the entire solid-waste system."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to mention every vendor, date, or procedural option to pass Fact Check.",
+            "Fact Check should fail if the summary says the Council immediately awarded the contract, immediately rejected all proposals, or targeted a different service system as the primary subject."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment was substantively about Long Beach's citywide recyclable collection services procurement. The policy move under discussion shifted from the agenda's proposed award of the recycling contract to Waste Management to a narrower course: conduct an independent review of the recycling RFP process first, then let the Council decide whether to award the contract as recommended or restart the process.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "pending_future_handling",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The RFP process, proposed award, and existing recycling collection contract were current source-side conditions.",
+              "The independent review and later Council decision were pending future handling.",
+              "Restarting the procurement process remained conditional on what the review found."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "subject": "City of Long Beach citywide recyclable collection services procurement / recycling RFP.",
+            "policy_direction": [
+              "The agenda item originally proposed awarding the recycling collection services contract to Waste Management.",
+              "The adopted course did not immediately award the contract and did not immediately reject all proposals or start a rebid.",
+              "The adopted course was to conduct an independent review first, then decide whether to award as recommended or begin the process again."
+            ],
+            "target": [
+              "The target was the recyclable collection services contract / recycling RFP process.",
+              "The discussion did not concern all municipal refuse, all commercial hauling, or the entire solid-waste system as the primary target."
+            ]
+          }
+        },
+        "answer_locality": [
+          "Opening agenda and staff report.",
+          "Richardson/Price motion clarification.",
+          "Final vote sequence."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "subject_identified": "present — recyclable collection services, recycling RFP, and Waste Management contract recommendation are explicit."
+          },
+          "quality_gate": {
+            "policy_direction": "present — conduct the review, then decide award as recommended or begin the process again.",
+            "target": "present — the recycling RFP / recyclable collection services procurement."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council discussed an agenda item and heard public comment before voting.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "No substantive recycling-procurement subject is identified."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The segment concerned Long Beach's recyclable collection services procurement.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is present, but the policy direction and target of the move are not stated."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The segment framed Long Beach's recycling RFP as moving to an independent review before the Council later decided whether to award Waste Management the contract or restart the process.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "Subject, policy direction, and target are all specific and source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The segment framed Long Beach's recycling RFP as an immediate Council decision to reject Waste Management and begin a rebid that night.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a specific recycling-procurement subject, direction, and target, but contradicts the source-supported review-first path."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "O — Outcome/Position",
+        "name": "Outcome/Position",
+        "slot_purpose": "O captures the body's in-session disposition shell: what the body did to an acted-on item during the sampled segment. O asks what the body did and which acted-on item the disposition was tied to. The action's operative payload belongs to N. Unresolved handling after the action belongs to U.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "meaning": "The summary states that the body took a disposition on an acted-on item. Discussion, questioning, support, or hearing activity alone does not satisfy this label. This label does not decide whether the disposition is at the source-supported procedural stage. If a recognizable disposition is tied to an acted-on item, Presence may pass even when the stage is wrong. Stage accuracy is evaluated in Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "meaning": "The acted-on item is identified specifically enough that the reader can tell which item was acted on. Formal numbers or labels are sufficient but not required. A substantive description also satisfies this label when it distinguishes the item within the sampled segment. A generic referent alone is not enough."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that a body took a recognizable disposition on an acted-on item or motion, such as carried, adopted, approved, rejected, referred, deferred, withdrew, or passed.",
+                "A recognizable disposition is present even if the stated actor, result, or procedural stage is factually wrong; correctness is handled in Fact Check."
+              ],
+              "not_match": [
+                "Only says participants debated, asked questions, heard public comment, expressed support, or raised concerns.",
+                "Only describes a requirement, background condition, or future path without saying that an item or motion was disposed of."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies the acted-on item specifically enough to distinguish it from a generic motion or agenda item, using a formal label, motion type, or substantive description.",
+                "A specific but factually wrong acted-on item can satisfy Quality; item accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Says only that 'a motion,' 'the item,' or 'something' passed without enough context to tell which item was acted on.",
+                "States a disposition but gives no identifiable item, motion, recommendation, or action object."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The acting body was the Long Beach City Council.",
+            "The in-session disposition was Council action on Item 14 concerning the recyclable collection services contract / recycling RFP.",
+            "The motion that carried was the review-first motion associated with Councilmember Richardson and Councilmember Price's clarifications.",
+            "A substitute motion to accept the original staff recommendation and award the contract to Waste Management was introduced and seconded, but the second was withdrawn and the substitute motion was withdrawn.",
+            "The carried motion did not finally award the recycling contract; the contract-award decision remained for later handling.",
+            "The transcript excerpt does not state a numeric vote result for the final carried motion."
+          ],
+          "fact_check_notes": [
+            "Do not require a summary to mention the withdrawn substitute motion or lack of vote count unless it makes an explicit claim about those fields.",
+            "Fact Check should fail if the summary states that the original staff recommendation passed, the contract was awarded to Waste Management in this segment, a rebid was finally ordered, or a specific vote count was stated for the final motion."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The City Council ultimately carried the motion to conduct an independent review of the recycling RFP process before making the contract-award decision. A substitute motion to accept the original staff recommendation and award the contract to Waste Management was introduced and seconded, but the second was withdrawn and the substitute motion was withdrawn. The carried motion left the contract award for later handling.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The Council completed an in-session disposition on the motion for a review.",
+              "The recycling contract award itself remained unresolved after the vote."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "actor": "Long Beach City Council",
+            "procedural_stage": "Council action on Item 14 during the meeting; not final award of the recycling contract and not final completion of a rebid.",
+            "disposition_result": [
+              "The substitute motion to receive/file the report and accept the original proposal to award Waste Management did not proceed after the second and motion were withdrawn.",
+              "The motion that carried was the review-first motion associated with Councilmember Richardson and Councilmember Price's friendly amendments/clarifications."
+            ],
+            "acted_on_item": [
+              "Item 14 concerning the recyclable collection services contract / recycling RFP.",
+              "The review-first motion, not a final contract-award motion."
+            ],
+            "vote_result": {
+              "value": "not stated in the transcript excerpt",
+              "attached_to": "final motion after the substitute motion was withdrawn"
+            }
+          }
+        },
+        "answer_locality": [
+          "Mid-to-late council deliberation.",
+          "Withdrawal of substitute motion.",
+          "Final 'Motion carries' statement."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": "present — substitute motion, withdrawal, motion on the floor, cast your votes, motion carries."
+          },
+          "quality_gate": {
+            "acted_on_item_specific": "present — Item 14 recycling contract / recycling RFP review-first motion."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "Councilmembers debated the recycling RFP and heard vendor concerns.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "Discussion activity alone is not a disposition tied to an acted-on item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council carried a motion.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition is present, but the acted-on item is not identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Council carried the review-first motion on Item 14 after the substitute motion to accept the original Waste Management award recommendation was withdrawn.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The disposition, item, and procedural result are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council approved the original staff recommendation on Item 14 and awarded Waste Management the recycling contract during the meeting.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a specific disposition on the right item, but the result and procedural stage contradict the event sheet."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "B — Agenda-Setting Background / Precipitating Context",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "slot_purpose": "B captures prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or other background that shaped the current item or the form in which it was discussed. B does not require an explicit agenda-necessity statement, and it is not the action itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "meaning": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item. The context must be stated as its own proposition; it need not include an explicit agenda-necessity statement."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "meaning": "The prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background is visibly connected to the current item, the form of the proposal, a revision, the discussion frame, or how the item was handled. An explicit “why now” or agenda-necessity statement is not required."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "precipitating_context_visible": {
+              "match": [
+                "States a prior or already-existing event, condition, process, problem, opposition, deadline, protest/comment history, or other background as its own proposition.",
+                "A specific but factually wrong background proposition can satisfy Presence; source consistency is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Only states the current action, recommendation, or operative payload without a separate background condition.",
+                "Only describes future handling or a later decision path without identifying any precipitating or agenda-setting context."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Makes visible how the stated background connects to the current item, proposal form, debate frame, timing pressure, or how the matter was handled.",
+                "The connection may be causal, framing, constraining, or pressure-setting; it does not need to explicitly say 'why now'."
+              ],
+              "not_match": [
+                "States a background fact as an isolated historical note without a visible connection to the current item, its form, or how it was handled.",
+                "Names a prior process or existing condition without showing how it shaped the discussion, proposal, timing, or action form."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The agenda originally contained a recommendation to award Waste Management the citywide recyclable collection services contract.",
+            "Staff described the recycling RFP as high profile and sensitive and said HF&H had been hired as an independent refuse/recycling procurement consultant.",
+            "Questions, written protests/comments, verbal vendor allegations, and a City Auditor memorandum created concern about the RFP process.",
+            "A longer 4-to-6-month auditor review and a rebid/new-procurement path were discussed as alternatives.",
+            "Waste Management's existing contract was stated to expire on June 30, 2016.",
+            "These background conditions prompted Council consideration of a shorter independent review before deciding whether to award or restart."
+          ],
+          "fact_check_notes": [
+            "A B summary may cover only one or a subset of the background threads if it does not contradict the event sheet.",
+            "Fact Check should fail if the summary says the auditor had no concerns, the contract had already expired long before the meeting, there were no vendor protests/comments, or the background concerned an unrelated procurement."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The current action was shaped by a prior recycling RFP process, vendor protests and comments, questions raised at earlier council discussion, and a City Auditor memorandum expressing concern. The timeline pressure came from the existing Waste Management contract expiring on June 30, 2016, making a long audit, rebid, or extension operationally consequential.",
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The RFP, proposal evaluation, vendor comments/protests, and auditor memorandum predated or framed the current discussion.",
+              "The existing contract expiration was a current constraint.",
+              "Rebid, extension, and service-disruption consequences were conditional risks."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "The agenda originally contained a recommendation to award Waste Management the citywide recyclable collection services contract.",
+              "Staff described the recycling RFP as high profile and sensitive and said HF&H had been hired as an independent refuse/recycling procurement consultant.",
+              "Questions, written protests/comments, verbal vendor allegations, and a City Auditor memorandum created concern about the RFP process.",
+              "A longer 4-to-6-month auditor review and a rebid/new-procurement path were discussed as alternatives.",
+              "Waste Management's existing contract was stated to expire on June 30, 2016."
+            ],
+            "agenda_connection": [
+              "These background conditions prompted the Council to consider a shorter independent review before deciding on award or restart.",
+              "The timing pressure made avoiding an immediate rebid or contract extension part of the motion framing."
+            ]
+          }
+        },
+        "answer_locality": [
+          "Opening staff report.",
+          "Richardson/Price discussion of options.",
+          "Consultant explanation of prior RFP process.",
+          "Later council comments on timing and confidence."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "precipitating_context_visible": "present — prior RFP, consultant, auditor memo, vendor comments/protests, and contract-expiration timing."
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": "present — these background conditions shaped the review-first motion and timing debate."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council voted to conduct an independent review before deciding on the contract award.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states the action/payload rather than the agenda-setting background."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The recycling procurement had drawn vendor protests and auditor concerns.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Background context is visible, but the connection to the current item or review-first form is not stated."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Vendor protests, questions about the recycling RFP, the City Auditor's concern memo, and the June 30 expiration of Waste Management's existing contract shaped the Council's choice of a short independent review before deciding whether to award or restart.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The precipitating context and its connection to the current handling are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The item came forward because Waste Management's contract had already expired years earlier and the City Auditor had cleared the recycling RFP without any concerns.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a background relation, but the contract timing and auditor-concern content contradict the event sheet."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "N — Outcome-Near Condition / Operative Payload",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "slot_purpose": "N captures the operative payload carried by the body's action: conditions, requirements, restrictions, scope, numbers, dates, thresholds, or similar content attached to the action beyond the bare fact that the body acted.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "meaning": "The summary expresses a condition, requirement, scope, restriction, number, date, or other payload as attached to the action or acted-on item. Single-sentence attachment and anaphora-linked adjacent sentences count. A free-standing background description that requires the reader to reconstruct the action-payload link does not satisfy this label. A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "any_of",
+            "label_set": "options",
+            "labels": [
+              {
+                "name": "number",
+                "meaning": "The attached payload includes an identifiable numeric quantity, such as a count, amount, percentage, duration, height, vote threshold, or other measured value."
+              },
+              {
+                "name": "named_requirement",
+                "meaning": "The attached payload includes an identifiable named requirement, restriction, condition, or carve-out."
+              },
+              {
+                "name": "scope_boundary",
+                "meaning": "The attached payload includes an identifiable scope boundary, such as a geographic boundary, categorical boundary, population-specific boundary, or other boundary defining what the payload applies to."
+              },
+              {
+                "name": "date_cutoff",
+                "meaning": "The attached payload includes an identifiable date cutoff or time boundary, such as an effective date, expiration date, sunset clause, or deadline."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "payload_attached_to_action": {
+              "match": [
+                "States a requirement, condition, restriction, permission, review/report step, scope, number, deadline, threshold, or other operative payload attached to an action or acted-on item.",
+                "A specific but factually wrong payload or carrier can satisfy Presence; correctness is handled in Fact Check."
+              ],
+              "not_match": [
+                "Only states that a body acted, voted, or carried a motion, without any condition, requirement, scope, number, date, or other payload.",
+                "Only states background concerns or public comments without attaching an operative requirement or condition to an action."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": {
+            "number": {
+              "match": [
+                "The attached payload includes an identifiable numeric quantity, amount, count, threshold, duration, or quantified value; exact-value correctness and role binding are evaluated only in Fact Check."
+              ],
+              "not_match": [
+                "The attached payload is described only generically and contains no numerical or quantified facet."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "The attached payload includes an identifiable named requirement, condition, obligation, restriction, selection channel, review/report step, or carve-out; exact source-correct naming is not required for Presence."
+              ],
+              "not_match": [
+                "The summary says only that the action had conditions or follow-up without naming any requirement, condition, or obligation."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "The attached payload identifies the category, process, material, information type, role, population, geography, workstream, or other boundary to which the payload applies."
+              ],
+              "not_match": [
+                "The summary mentions a requirement or follow-up but does not identify what the payload applies to."
+              ]
+            },
+            "date_cutoff": {
+              "match": [
+                "The attached payload includes a deadline, effective date, expiration date, return date, review window, sunset, or other time boundary; exact date correctness is evaluated only in Fact Check."
+              ],
+              "not_match": [
+                "The summary mentions future handling but gives no deadline, date, expiration, review window, or other time boundary."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the review-first motion that carried after the substitute award motion was withdrawn.",
+            "The carried motion required an independent third-party review before Council decided whether to award the contract or restart the process.",
+            "The City Attorney's office was to select the third-party reviewer / serve as the clean city-side point for the review process.",
+            "The review was to cover written protests and comments, verbal allegations made at Council by vendors, RFP forms, proposer information and how it was used, basic RFP steps including requests for additional information, and the consultant's role.",
+            "The scope also included numerical calculation issues raised by vendors, including container replacement, recyclable value, and criteria factored into the equation.",
+            "Findings or recommendations were to return to Council before the later award-or-restart decision, with June 14 discussed as the no-later-than return date if possible.",
+            "The original agenda recommendation was for an annual amount not to exceed $3.5 million.",
+            "The short review was discussed as roughly 30 to 60 days and as not triggering a contract extension.",
+            "Waste Management's existing city contract was stated to expire June 30, 2016.",
+            "A 4-to-6-month City Auditor audit option was discussed but was not the carried motion."
+          ],
+          "fact_check_notes": [
+            "A summary may mention only one or a subset of the operative payload details; omission of other payload items is not a Fact Check error.",
+            "Fact Check should fail if the summary attaches the payload to the substitute award motion, says the City Auditor was ordered to conduct a 4-to-6-month audit as the adopted action, says the contract was automatically rebid, or assigns numbers/dates to the wrong role."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The carried review-first motion required a short independent third-party review of the recycling RFP process. The City Attorney was to select the third-party reviewer / be the clean point of city-side involvement, and the review was to return findings or recommendations to Council by no later than June 14 if possible. The review scope included written protests and comments, verbal allegations, RFP forms, proposer information and how it was used, the basic RFP process, requests for additional information, the consultant's role, and numeric inputs such as container replacement and recyclable-value calculations. After the review, Council would decide whether to award the contract as recommended or begin the process again.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect"
+            ],
+            "notes": [
+              "The review terms were adopted in-session as future work.",
+              "The review's findings would shape a later Council decision but had not yet occurred in the transcript."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "payload_carrier": "The review-first motion that carried after the substitute award motion was withdrawn.",
+            "payload_content": [
+              "Conduct an independent third-party review before the Council decides whether to award or restart.",
+              "City Attorney's office selects the third-party reviewer / serves as the clean city-side point for the review process as accepted in the friendly amendment.",
+              "Review written protests and comments.",
+              "Review verbal allegations made at Council by vendors.",
+              "Review RFP forms for confusion or other problems.",
+              "Review information submitted by proposers and whether that information was properly utilized and considered.",
+              "Review basic steps in the RFP process, including requests for additional information and the role of the consultant.",
+              "Include review of numeric calculation issues raised by vendors, including container replacement, recyclable value, and criteria factored into the equation.",
+              "Return findings / recommendations to Council before the later award-or-restart decision."
+            ],
+            "payload_scope": [
+              "The review concerned the recycling RFP / recyclable collection services procurement, not unrelated city contracts."
+            ],
+            "numeric_values": [
+              {
+                "value": "$3.5 million",
+                "meaning": "annual amount not to exceed in the original agenda recommendation to award Waste Management the citywide recyclable collection services contract"
+              },
+              {
+                "value": "30 days",
+                "meaning": "staff's proposed timing for an independent financial review/report"
+              },
+              {
+                "value": "30 to 60 days",
+                "meaning": "Richardson/Price description of a short review window that should not trigger a contract extension"
+              },
+              {
+                "value": "June 14",
+                "meaning": "requested no-later-than return date for the review findings/recommendations"
+              },
+              {
+                "value": "June 30, 2016",
+                "meaning": "stated expiration date of Waste Management's existing city contract"
+              },
+              {
+                "value": "4 to 6 months",
+                "meaning": "longer City Auditor audit option discussed but not adopted as the carried motion"
+              }
+            ]
+          }
+        },
+        "answer_locality": [
+          "Richardson motion.",
+          "Price friendly amendments.",
+          "City attorney/city manager clarification of scope.",
+          "Final motion sequence."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "payload_attached_to_action": "present — review requirement, selection channel, return date, and review scope attached to the carried motion."
+          },
+          "quality_gate": {
+            "number": "present — $3.5 million, 30 days, 30 to 60 days, June 14, June 30, 2016, 4 to 6 months.",
+            "named_requirement": "present — independent third-party review and City Attorney selection channel.",
+            "scope_boundary": "present — written protests/comments, verbal allegations, RFP forms, proposer information, consultant role, calculations.",
+            "date_cutoff": "present — June 14 and June 30, 2016."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council carried the motion on the recycling item.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This is a bare action shell with no operative payload."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The carried motion included follow-up conditions for the recycling item.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A payload is attached to the action, but no concrete number, named requirement, scope boundary, or date cutoff is visible."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The carried motion required an independent third-party review selected through the City Attorney, with findings targeted by June 14 and a scope covering protests, verbal allegations, RFP forms, proposer information, consultant role, container replacement, and recyclable-value calculations.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The payload carrier, requirements, scope, and deadline are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The carried motion required the City Auditor to run a 4-to-6-month audit and automatically rebid the recycling contract before any Council reconsideration.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a specific payload with duration and requirements, but it contradicts the event sheet by attaching the longer audit/rebid path as if it were the adopted payload."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "L — Concrete Concern",
+        "name": "Concrete Concern",
+        "slot_purpose": "L captures a concrete concern, harm, obstacle, difficulty, loss, risk, or tradeoff. A local anchor is not required for Presence. Local anchoring may be recorded as diagnostic context or checked in Fact Check when explicitly stated, but it must not be used to lower Presence by itself.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "meaning": "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition. The concern must be asserted on the problem/concern side, not merely appear as the object of a solution-side verb. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "meaning": "The concern content is specific enough that the reader can tell what the concern, harm, obstacle, difficulty, loss, risk, or tradeoff is about. A generic statement that concerns were raised, without saying what the concern was, does not satisfy this label. A named place, named group, or bounded area is not required for Presence."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "concrete_concern_language": {
+              "match": [
+                "States a problem-side concern, risk, harm, obstacle, difficulty, doubt, tradeoff, deficiency, shortage, gap, barrier, or failure.",
+                "A specific but factually wrong concern or local anchor can satisfy Presence; correctness is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Only states a solution-side requirement, motion, action, or future handling path without asserting a problem-side concern.",
+                "Only describes subject matter or procedural details without concern, risk, obstacle, harm, or tradeoff language."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_concern_content": {
+              "match": [
+                "Identifies the object, mechanism, risk, harm, tradeoff, or problem content of the concern with enough specificity to tell what the concern is about.",
+                "A named place, named group, bounded area, or local anchor is not required for Presence."
+              ],
+              "not_match": [
+                "Only says that concerns, questions, or issues were raised without saying what they concerned.",
+                "Uses generic language such as 'there were problems' without identifying the object or mechanism of the concern."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Concerns were about the recycling RFP/procurement process, not unrelated council business.",
+            "The transcript supports concern over possible process flaws, vendor protests/comments, auditor concerns, and numeric calculation/value issues.",
+            "The transcript does not establish that malfeasance or a process foul had occurred; the adopted review was meant to verify or dispel doubt.",
+            "The transcript supports concern over timing, contract expiration, renegotiation, service continuity, and avoiding an unnecessary restart.",
+            "The local anchor was the City of Long Beach recyclable collection services procurement / recycling RFP, including the existing Waste Management recycling service relationship and current contract expiration."
+          ],
+          "fact_check_notes": [
+            "A summary may state one concrete concern without mentioning the others.",
+            "Fact Check should fail if the summary says wrongdoing was proven, says no RFP fairness or calculation concerns were raised, or attaches the concern to an unrelated city program."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Speakers raised concrete concerns about the reliability and fairness of the recycling RFP process, including possible misinformation, auditor-raised issues, vendor protests, numeric calculation disputes, and whether proposal data were being interpreted consistently. Other concrete concerns involved timing, possible service disruption, and the need to avoid unnecessary renegotiation or rebidding.",
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "secondary": [
+              "recurring_concern",
+              "currently_existing"
+            ],
+            "notes": [
+              "The alleged RFP flaws and calculation issues were treated as concerns to be checked, not as established findings in the segment.",
+              "Service interruption, extension, and rebid costs were future risks discussed as reasons to limit the review path."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Concerns were about the recycling RFP/procurement process, not about unrelated council business.",
+              "The transcript supports concern over possible process flaws, vendor protests/comments, auditor concerns, and numeric calculation/value issues.",
+              "The transcript does not establish that malfeasance or a process foul had occurred; the adopted review was meant to verify or dispel doubt.",
+              "The transcript supports concern over timing, contract expiration, renegotiation, service continuity, and avoiding an unnecessary restart."
+            ],
+            "local_anchor": [
+              "City of Long Beach recyclable collection services procurement / recycling RFP.",
+              "Existing Waste Management recycling service relationship and current contract expiration."
+            ]
+          }
+        },
+        "answer_locality": [
+          "Opening staff report.",
+          "Richardson/Price comments.",
+          "Austin/Uranga comments.",
+          "Public comments.",
+          "Final council deliberation."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "concrete_concern_language": "present — misinformation, questions, concerns, foul, calculation issues, service disruption, interruption."
+          },
+          "quality_gate": {
+            "specific_concern_content": "present — concerns are tied to the recycling RFP process, numerical calculations, contract timing, and service continuity."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council ordered an independent review of the recycling RFP.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states a solution-side action, not a problem-side concern."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Speakers raised concerns.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Speakers worried that the recycling RFP process might be unreliable or unfair because of vendor protests, auditor concerns, numerical calculation disputes, and risks of delay, contract extension, or service interruption.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concern content is specific and source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "Speakers' concrete concern was that the RFP process had already been proven corrupt and that no timing or service-continuity risk existed.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a specific concern area, but contradicts the event sheet by treating alleged flaws as proven and denying the timing/service concerns."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "S — Shared Concern Synthesis",
+        "name": "Shared Concern Synthesis",
+        "slot_purpose": "S captures a recurring problem-side concern theme in the discussion. The recurrence is grounded in the event sheet from the transcript. The summary does not need to state recurrence explicitly, but it must name the concern theme in problem-side language.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "meaning": "The summary names the concern theme in problem-side language: problem, difficulty, deficiency, gap, fragmentation, dissatisfaction, negative state, or similar language. Problem vocabulary that appears only as the object or modifier of a solution-side verb does not satisfy this label. Generic debate language alone does not satisfy it."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "specific_content",
+                "meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and rubric match require."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "problem_side_concern": {
+              "match": [
+                "Names a problem-side concern theme, tension, doubt, risk, deficiency, negative state, or recurring/shared concern in the discussion.",
+                "The summary need not explicitly state recurrence or sharedness if it names the problem-side theme; source accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Only states a final action, operative requirement, or future handling path without problem-side concern language.",
+                "Only gives subject matter or contract details without naming a concern theme, risk, tension, or problem."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_content": {
+              "match": [
+                "The concern theme has identifiable content, such as an object of concern, contrast, criticized mechanism, tension, tradeoff, risk, or problem content.",
+                "The summary does not need downstream risk, consequence, speaker, or evidence detail beyond enough content to identify the theme."
+              ],
+              "not_match": [
+                "Only says participants were concerned or had doubts without identifying what the concern was about.",
+                "Only says there was disagreement, controversy, or debate without a problem-side theme."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was procurement confidence and process integrity for the city recycling contract, balanced against delay/service-continuity risk.",
+            "Councilmembers repeatedly said they needed confidence before voting on the long-term recycling contract.",
+            "The concern was not that wrongdoing had already been proven; it was that questions and the auditor memo warranted a limited independent review.",
+            "The countervailing recurring concern was that delay, rebid, or long audit could create unnecessary cost, renegotiation, or service disruption.",
+            "Public comment from the Chamber supported an independent review to ensure a fair process; other comments supported moving forward to avoid more delay."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to reproduce every speaker or evidence detail.",
+            "Fact Check should fail if the summary says the shared concern was only a proven finding of fraud, only a desire to award immediately, or only a desire to restart without any balancing of confidence and delay/service concerns."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme across the discussion was the need to preserve confidence in the city's recycling procurement process while avoiding unnecessary delay, rebid, extension, or service disruption. Several speakers framed the issue as converting doubt into confidence through a limited independent review rather than immediately awarding the contract or restarting the procurement.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "hypothetical_or_risk",
+              "pending_future_handling"
+            ],
+            "notes": [
+              "Confidence in the RFP process recurred as a problem-side theme among multiple council comments and public comments.",
+              "The review was a pending future mechanism intended to address that concern."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "concern_theme": "Procurement confidence and process integrity for the city recycling contract, balanced against delay/service-continuity risk.",
+            "concern_content": [
+              "Councilmembers repeatedly said they needed confidence before voting on the long-term recycling contract.",
+              "The concern was not that wrongdoing had already been proven; it was that questions and the auditor memo warranted a limited independent review.",
+              "The countervailing recurring concern was that delay, rebid, or long audit could create unnecessary cost, renegotiation, or service disruption.",
+              "Public comment from the Chamber supported an independent review to ensure a fair process; other comments supported moving forward to avoid more delay."
+            ]
+          }
+        },
+        "answer_locality": [
+          "Richardson/Price/Lowenthal/Austin/Gonzalez deliberation.",
+          "Public comments."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "problem_side_concern": "present — confidence, second set of eyes, verify or dispel doubt, fair process, service interruption."
+          },
+          "quality_gate": {
+            "specific_content": "present — confidence/process integrity in the recycling procurement balanced against delay/rebid/service continuity risks."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The final motion required an independent review before the Council returned to the contract decision.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states a solution/payload and future path, not a problem-side concern theme."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Participants shared concerns about the procurement.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A concern theme is present, but the content is too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "A recurring theme was balancing confidence in the recycling RFP's fairness and integrity with the need to avoid unnecessary delay, rebid, contract extension, or service disruption.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The shared concern theme and specific tension are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The recurring theme was that the recycling RFP had already been proven fraudulent and that immediate rebidding was the only acceptable path.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary names a specific problem-side procurement theme, but contradicts the event sheet by treating wrongdoing as proven and erasing the balanced review-first theme."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "U — Unresolved Tail / Future Return Path",
+        "name": "Unresolved Tail / Future Return Path",
+        "slot_purpose": "U captures what remained unfinished after the body's action: pending handling, later review, future process, unresolved implementation steps, or an explicit return path. U's core is unfinishedness.",
+        "presence_structure": {
+          "topic_gate": {
+            "presence_effect": "Topic Gate pass gives Presence >= 0.5.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "meaning": "The summary explicitly includes an unfinished, pending, or still-open state marker, such as remained pending, still to be decided, unresolved, remained in committee, held over, or final action remained pending. If the item is identifiable and the summary says it will proceed to a later full-body meeting, final action, final passage, or final consideration, that can satisfy pendingness. A bare directive without an explicit pendingness marker does not satisfy this label."
+              }
+            ]
+          },
+          "quality_gate": {
+            "presence_effect": "Topic Gate pass plus Quality Gate pass gives Presence = 1.0.",
+            "operator": "all_of",
+            "label_set": "fixed",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "meaning": "What specifically remains pending is identifiable. The reader can tell which item, workstream, or issue is unfinished, not merely that something is unfinished."
+              },
+              {
+                "name": "handling_path_visible",
+                "meaning": "A concrete handling path is visible. This can be a future event path, process path, or institutional custody path. A path to a later full-body meeting, final action, final passage, or final consideration can satisfy this label if the item is identifiable. Bare future orientation does not satisfy it unless tied to an identifiable body, item, custody, review, hearing, or process path. An unrelated future item, post-adjournment announcement, or future hearing for a different item does not satisfy U."
+              }
+            ]
+          }
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pendingness_marker": {
+              "match": [
+                "Explicitly states an unfinished, pending, unresolved, still-open, still-to-be-decided, return-later, later-review, later-report, or later-final-action state after the action or discussion.",
+                "A specific but factually wrong pending item or path can satisfy Presence; source accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Only states a completed disposition, directive, or action without an unfinished or still-open state marker.",
+                "Only mentions a future date or future-oriented detail without indicating that anything remains pending, unresolved, or open."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pending_item_identifiable": {
+              "match": [
+                "Identifies the specific item, workstream, issue, decision, review, implementation step, or follow-up object that remains pending.",
+                "A specific but factually wrong pending item can satisfy Quality; item accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Says only that something remained pending or future work remained without identifying the workstream, issue, decision, or item.",
+                "Gives future orientation without identifying what remains unfinished."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "States a concrete future handling path, such as later review, report-back, meeting, body/custody path, decision path, implementation process, negotiation path, or other process route.",
+                "A specific but factually wrong body, date, destination, or path can satisfy Quality; path accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Only says the issue remained pending with no review, return, meeting, custody, decision path, implementation process, or other handling route.",
+                "Only says 'later' or 'in the future' without a visible process path."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "The recycling contract award was not completed by the carried motion.",
+            "The review process was pending after the meeting action.",
+            "A later Council decision was required to award the contract as recommended or restart/begin the process again.",
+            "The handling path was an independent third-party review selected through the City Attorney channel.",
+            "Findings/recommendations were to return to Council by June 14 if possible / no later than June 14 as discussed.",
+            "If the city did not award Waste Management or needed a new procurement, interim service negotiation with Waste Management could be needed because the current contract was stated to expire June 30, 2016."
+          ],
+          "fact_check_notes": [
+            "A U summary may focus on only the pending award decision, only the review return path, or only the conditional interim-service risk if it does not contradict the event sheet.",
+            "Fact Check should fail if the summary says the contract award was completed, the review had already returned findings, the later path was a different body/process/date, or the city had already started a rebid as the final disposition."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The contract-award question remained unfinished after the carried motion. The Council required a third-party review to come back with findings or recommendations, after which the Council would decide whether to award the contract as recommended or begin the procurement process again. If the city ultimately did not award the contract to Waste Management or needed a rebid/new procurement, interim service negotiations with Waste Management could become necessary because the existing contract expired June 30, 2016.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The review and later Council decision were future handling steps created by the motion.",
+              "Interim negotiation with Waste Management was a conditional risk/path if award did not proceed or if rebid/new procurement became necessary."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "The recycling contract award was not completed by the carried motion.",
+              "The review process was pending after the meeting action.",
+              "A later Council decision was required to award the contract as recommended or restart/begin the process again."
+            ],
+            "pending_item": [
+              "Citywide recyclable collection services contract / recycling RFP."
+            ],
+            "handling_path": [
+              "Independent third-party review selected through the City Attorney channel.",
+              "Findings/recommendations to return to Council by June 14 if possible / no later than June 14 as discussed.",
+              "Council then decides award versus restart/rebid path.",
+              "If the city does not award Waste Management or needs a new procurement, interim service negotiation with Waste Management may be needed because the current contract expires June 30, 2016."
+            ]
+          }
+        },
+        "answer_locality": [
+          "Richardson/Price motion clarification.",
+          "City manager contract-expiration warning.",
+          "Final council motion."
+        ],
+        "marker_presence": {
+          "topic_gate": {
+            "pendingness_marker": "present — come back, recommendations, based on that review, council will decide, award or begin again, interim services."
+          },
+          "quality_gate": {
+            "pending_item_identifiable": "present — citywide recyclable collection services contract / recycling RFP.",
+            "handling_path_visible": "present — independent review through City Attorney, findings/recommendations by June 14, Council award/restart decision, possible interim negotiation."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The motion carried on the recycling item.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "A completed disposition alone does not state an unresolved tail."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The recycling contract decision remained pending.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness and the item are visible, but no concrete handling path is stated."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The recycling contract award remained pending while a City Attorney-selected third-party review came back by June 14, after which the Council would choose between awarding as recommended or restarting the process.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The pending status, pending item, and handling path are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The recycling contract award remained pending for a July Planning Commission hearing after the Council had already rejected Waste Management and ordered a rebid.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states pendingness, item, and path, but replaces the supported Council review-return path and misstates the in-session disposition."
+          }
+        ]
+      }
+    }
+  }

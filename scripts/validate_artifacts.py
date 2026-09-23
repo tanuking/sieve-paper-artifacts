@@ -74,9 +74,9 @@ def validate_core() -> None:
         "bad second_presence value",
     )
 
-    event_sheets = sorted((ROOT / "materials" / "event_sheets").glob("MTG*_event_sheet.yaml"))
+    event_sheets = sorted((ROOT / "experiment" / "event_sheets").glob("MTG*_event_sheet.yaml"))
     rubrics = sorted(
-        (ROOT / "materials" / "slot_local_rubrics").glob("MTG*_slot_local_rubric.yaml"),
+        (ROOT / "experiment" / "slot_local_rubrics").glob("MTG*_slot_local_rubric.yaml"),
     )
     require(len(event_sheets) == 50, f"expected 50 event sheets, got {len(event_sheets)}")
     require(len(rubrics) == 50, f"expected 50 slot-local rubrics, got {len(rubrics)}")

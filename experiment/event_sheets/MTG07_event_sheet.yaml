@@ -1,0 +1,461 @@
+segment_id: "MTG7"
+segment_dir: "07_LongBeachCC_06102014"
+meeting_id: "LongBeachCC_06102014"
+uid: "LongBeachCC_06102014_14-0426"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # Event Sheet — MTG07
+
+  sampled_segment: Long Beach City Council Item 12, Rapid Medic Deployment / RMD staffing model implementation and Fire Department budget discussion.
+
+  ## Normalization notes
+
+  - The transcript uses ASR variants such as `R&D`, `RMD`, and `IMT`. This event sheet normalizes those references to **RMD** when they refer to the Rapid Medic Deployment staffing model.
+  - The transcript appears to contain ASR errors around names and fiscal-year wording. The event sheet keeps only source-supported facts and avoids relying on uncertain name spellings except where the institutional role is clear.
+  - The event sheet records source context only. It does not define scoring rules or judge instructions.
+
+  ---
+
+  ## T — Topic/Framing
+
+  ```yaml
+  label: T — Topic/Framing
+  summary: >
+    The segment framed a substantive policy and operations question about whether Long Beach should proceed with or delay implementation of the Rapid Medic Deployment staffing model for Fire Department emergency medical response. The policy direction under discussion was to implement, continue toward, or delay a revised EMS staffing/deployment model that would place paramedics differently across fire engines, trucks, and ambulances while affecting Fire Department budget planning.
+  evidence:
+    - The item was introduced as a request for a status report on implementation of the Rapid Medic Deployment Staffing Model and the Fire Department FY14 budget, including whether to delay implementation until the FY15 budget process.
+    - Staff said the RMD model had been discussed for a couple of years, was included in the FY14 budget, and had a delayed start.
+    - The Fire Chief described RMD as a staffing model intended to put a paramedic on scene faster and convert existing 24-hour ambulances to ALS ambulances.
+    - Council questions and public comments focused on whether the model should move forward, be delayed, or be reconsidered in the FY15 budget process.
+  source_vocabulary:
+    - Rapid Medic Deployment Staffing Model
+    - RMD / R&D model
+    - Fire Department budget
+    - FY14 budget
+    - FY15 budget
+    - implementation
+    - delay implementation
+    - staffing model
+    - ambulance service
+    - ALS / advanced life support
+    - paramedic on scene
+    - paramedic on every engine
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - currently_existing
+      - future_effect
+    notes:
+      - RMD was already included in the FY14 budget before the segment.
+      - Actual implementation was discussed as still upcoming, with a projected July 2014 start date.
+      - FY15 budget treatment and possible delay/elimination were future-facing questions.
+  source_context_for_fact_check:
+    subject: >
+      Rapid Medic Deployment / RMD staffing model for Long Beach Fire Department emergency medical response and ambulance deployment.
+    policy_direction:
+      - Staff framed the direction as moving forward with RMD implementation.
+      - Councilmember Austin's motion framed an alternative direction: delay implementation until the broader FY15 budget discussion and Council approval.
+      - The final procedural result did not newly approve the delay; previous authorization remained in effect.
+    target:
+      - Long Beach Fire Department EMS staffing and ambulance deployment.
+      - Fire engines, trucks, ambulances, firefighter-paramedics, EMT staffing, and Fire Department budget/service levels.
+    temporal_status:
+      - currently_existing for prior budget inclusion and existing EMS staffing configuration.
+      - future_effect for RMD implementation and FY15 budget consequences.
+  answer_locality: >
+    Concentrated in the agenda introduction, staff presentation by management/finance/fire leadership, and Council questioning; reinforced by public comment and final motion discussion.
+  marker_presence:
+    subject_identified: present — Rapid Medic Deployment Staffing Model / Fire Department EMS staffing.
+    policy_direction: present — implement, continue moving forward, delay, or reconsider in FY15 budget.
+    target: present — Long Beach Fire Department ambulance/EMS deployment and budget/service configuration.
+  ```
+
+  ---
+
+  ## O — Outcome/Position
+
+  ```yaml
+  label: O — Outcome/Position
+  summary: >
+    The Council considered two dispositions on Item 12: a substitute motion to receive and file the item, and Councilmember Austin's original motion to delay RMD implementation for broader FY15 budget discussion. Both votes tied, so neither motion passed. The Mayor/City Attorney clarification was that no action was taken and the prior Council authorization remained in effect until another Council action changed it.
+  evidence:
+    - Councilmember Austin made a motion to direct the City Manager to delay RMD implementation until it could be presented as part of the overall budget discussion and approval by the Council.
+    - A later substitute motion was made to receive and file the item.
+    - The substitute motion resulted in a tie.
+    - The original Austin motion also resulted in a tie.
+    - In response to a point of order, the explanation was that there were insufficient votes, no action was taken, and the previous authorization would stand until another Council action.
+  source_vocabulary:
+    - motion
+    - substitute motion
+    - receive and file
+    - original motion
+    - cast your votes
+    - motion is a tie
+    - no action taken
+    - previous authorization
+    - move forward as planned
+    - as previously Council directed
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - currently_existing
+      - pending_future_handling
+    notes:
+      - The tie votes and failure of both motions occurred during the segment.
+      - The procedural effect was not a new affirmative authorization; it left the prior authorization standing.
+      - Future Council action could still alter the implementation path.
+  source_context_for_fact_check:
+    actor: Long Beach City Council.
+    procedural_stage: >
+      In-session Council handling of Item 12, not final implementation of the RMD program itself and not County EMS final policy approval.
+    disposition_result:
+      - The substitute motion to receive and file tied and did not pass.
+      - The original motion to delay implementation tied and did not pass.
+      - No new action was taken on Item 12 in the segment.
+      - Prior Council authorization remained in effect after the failed motions.
+    acted_on_item:
+      - Item 12 concerning RMD implementation status, Fire Department FY14/FY15 budget implications, and possible delay of implementation.
+      - Austin's original motion to delay RMD implementation until broader FY15 budget discussion and approval.
+      - Substitute motion to receive and file.
+    vote_result:
+      - value: tie
+        attached_to: substitute motion to receive and file
+      - value: tie
+        attached_to: original Austin delay motion
+    temporal_status:
+      - completed_in_session for the two tie votes and failure of motions.
+      - currently_existing for prior authorization continuing to stand.
+      - pending_future_handling for any later Council action that could change the implementation path.
+  answer_locality: >
+    Located at the end of the segment, after public comment and Council discussion, during motion handling and the point-of-order clarification.
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present — motions were made and voted on for Item 12/RMD handling.
+    acted_on_item_specific: present — receive-and-file motion and Austin delay motion on RMD implementation.
+  ```
+
+  ---
+
+  ## B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B — Agenda-Setting Background / Precipitating Context
+  summary: >
+    The discussion was shaped by several prior and current conditions: RMD had been discussed for years and included in the FY14 budget, implementation had been delayed, the Fire Department was projected to finish FY14 on budget because of one-time funds and salary savings, the FY15 proposed budget included RMD, and eliminating RMD would require about $1.4 million in other Fire Department reductions. The item also arose against County EMS pilot authorization and past budget-deficit reasoning for the model.
+  evidence:
+    - Staff said RMD had been discussed for a couple of years, was included in FY14, and had received multiple implementation updates.
+    - Finance reported that the FY14 Fire Department budget was expected to be on target despite delayed RMD start because of one-time funds and salary savings from attrition.
+    - Finance said the FY15 proposed budget would include RMD and that eliminating it would require other Fire Department reductions of about $1.4 million.
+    - Speakers and councilmembers characterized RMD as a budget-savings solution that originated during a prior budget deficit.
+    - Council questioning established that the County EMS discussion had been about a pilot program, most recently a two-year term.
+  source_vocabulary:
+    - discussed for a couple of years
+    - included in the FY14 budget
+    - start was delayed
+    - within budget in FY14
+    - one-time funds
+    - salary savings due to attrition
+    - FY15 proposed budget
+    - budget balanced
+    - $1.4 million
+    - pilot program
+    - County EMS Agency
+    - prior budget deficit
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - future_effect
+      - hypothetical_or_risk
+    notes:
+      - Prior inclusion of RMD in the FY14 budget and prior discussions had already occurred.
+      - The FY14 budget status was current during the segment.
+      - FY15 budget effects and elimination scenarios were future-facing or conditional.
+  source_context_for_fact_check:
+    trigger_condition:
+      - RMD had already been placed in the FY14 budget and its start had been delayed.
+      - The FY14 Fire Department budget was projected to close on target due to one-time funds and attrition-related salary savings.
+      - The FY15 proposed budget included RMD because staff said eliminating it would require other fire-service reductions to balance the Fire Department budget.
+      - County EMS handling had proceeded as a pilot-program discussion, with a two-year term referenced as the latest term.
+      - Public and firefighter association comments framed RMD as originally responding to a prior budget deficit that speakers argued no longer existed in the same way.
+    agenda_connection:
+      - These background facts drove the Council's decision point: continue toward RMD implementation in summer 2014 or delay/reconsider it in the FY15 budget process.
+      - The budget-savings context was central to why implementation timing and service reductions were debated.
+  answer_locality: >
+    Diffuse but strongest in the staff/finance presentation, Councilmember Austin's questioning and motion explanation, firefighter association public comment, and later Council budget questions.
+  marker_presence:
+    precipitating_context_visible: present — prior budget inclusion, delayed start, current budget status, County EMS pilot, and prior deficit context.
+    connected_to_current_item_or_form: present — these conditions explain why Item 12 asked for status, budget information, and possible delay direction.
+  ```
+
+  ---
+
+  ## N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N — Outcome-Near Condition / Operative Payload
+  summary: >
+    The operative terms discussed for the RMD implementation included a projected July 10, 2014 start, a County EMS pilot framework most recently discussed as a two-year term, conversion of all existing 24-hour ambulances to ALS units, staffing of 11 24-hour ambulances with one firefighter-paramedic and one EMT, placing a paramedic on every engine and one truck company, reducing transport-capable ambulances from 13 to 11 during peak-load comparison, expected average paramedic arrival improvement of about 1.5 minutes, and annual savings/cost avoidance of about $1.4 million relative to the current ambulance service.
+  evidence:
+    - Staff said the implementation start date suggested to the EMS Agency was July 10, 2014.
+    - The Fire Chief said the pilot discussion had considered one-year and two-year terms, and the latest discussion used a two-year term.
+    - The Chief said RMD would place a paramedic on scene 1.5 minutes faster on average citywide.
+    - Staff said EMS accounted for nearly 84% of the Fire Department workload.
+    - The Chief said the city had 17 fire engines, only nine of which currently had a paramedic on board.
+    - The Chief said the program would convert all existing 24-hour ambulances to ALS ambulances and add resources to Stations 3, 12, and 22.
+    - Finance said RMD would save about $1.4 million annually compared with current ambulance service.
+    - Later questioning clarified that under RMD the number of transport-capable units would go from 13 to 11, and all 11 would be 24-hour ambulances staffed with one firefighter-paramedic and one EMT.
+    - Later questioning clarified that every engine company would have a firefighter-paramedic, one truck company would have a firefighter-paramedic, and three truck companies would not.
+    - The Fire Chief said the County EMS Agency required biweekly data for monitoring, quality assurance, and quality improvement.
+  source_vocabulary:
+    - July 10th, 2014
+    - one-year term
+    - two-year term
+    - pilot program
+    - one firefighter-paramedic and one emergency medical technician
+    - 11 ambulances
+    - 13 transport-capable units
+    - 24-hour ambulances
+    - ALS / advanced life support
+    - paramedic on every engine
+    - one truck company
+    - Stations 3, 12, and 22
+    - 1.5 minutes faster
+    - 84% of workload
+    - $1.4 million annually
+    - biweekly data
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - pending_future_handling
+      - currently_existing
+      - hypothetical_or_risk
+    notes:
+      - The operative RMD configuration was planned/proposed for implementation rather than already completed during the segment.
+      - Current baseline facts about existing engines, ambulances, and budget were current during the segment.
+      - Elimination, reversion, and failure scenarios were conditional or hypothetical.
+  source_context_for_fact_check:
+    payload_carrier:
+      - Rapid Medic Deployment / RMD implementation plan and County EMS pilot authorization framework.
+      - Austin delay motion would have changed timing by delaying implementation into the FY15 budget discussion, but that motion did not pass.
+    payload_content:
+      - RMD would change EMS staffing/deployment by putting firefighter-paramedics on all engine companies and on one truck company.
+      - RMD would leave three truck companies without a firefighter-paramedic on board.
+      - RMD would staff 11 24-hour ambulances with one firefighter-paramedic and one EMT.
+      - RMD would convert existing 24-hour ambulances to ALS ambulances.
+      - RMD implementation would require training, but staff said the cost would be absorbed into regular continuing-education/recession training.
+      - County EMS monitoring would require biweekly data for quality assurance and improvement.
+    payload_scope:
+      - Applies to Long Beach Fire Department EMS/ambulance deployment citywide.
+      - Specific station/resource references included Stations 3, 12, and 22.
+      - Existing baseline included 17 fire engines and nine engines with paramedics.
+    payload_scalar_or_baseline:
+      - value: July 10, 2014
+        meaning: implementation start date suggested to the EMS Agency.
+      - value: two years
+        meaning: latest County EMS pilot term discussed.
+      - value: one year
+        meaning: alternative pilot term previously considered.
+      - value: 1.5 minutes faster
+        meaning: average citywide improvement in paramedic arrival time asserted by staff.
+      - value: nearly 84%
+        meaning: EMS share of Long Beach Fire Department overall workload.
+      - value: 17
+        meaning: current number of fire engines.
+      - value: 9
+        meaning: current number of engines with a paramedic on board.
+      - value: 13
+        meaning: current peak-load transport-capable units described later in discussion.
+      - value: 11
+        meaning: RMD number of 24-hour ambulances/transport-capable ambulances.
+      - value: $1.4 million annually
+        meaning: approximate annual savings/cost difference versus current ambulance service, and amount of other Fire Department reductions needed if RMD were eliminated in FY15.
+    temporal_status:
+      - future_effect for implementation terms and staffing configuration.
+      - currently_existing for baseline engine/ambulance/budget facts.
+      - hypothetical_or_risk for elimination, pilot failure, and reversion scenarios.
+  answer_locality: >
+    Staff presentation by finance and fire leadership, Councilmember Austin and Neal questions, later Councilmember questions about EMS conditions, and final discussion of ambulance counts.
+  marker_presence:
+    payload_attached_to_action: present — RMD implementation/pilot terms are tied to the proposed/prior-authorized action and possible delay motion.
+    number: present — dates, dollars, counts, percentages, durations, and response-time values.
+    named_requirement: present — County EMS pilot, training, biweekly data monitoring, staffing configuration.
+    scope_boundary: present — Long Beach Fire Department EMS citywide, engines/trucks/ambulances, Stations 3/12/22.
+    date_cutoff: present — July 10, 2014 implementation date and FY15 budget timing.
+  ```
+
+  ---
+
+  ## L — Concrete Concern
+
+  ```yaml
+  label: L — Concrete Concern
+  summary: >
+    Concrete concerns raised in the segment included the risk that RMD would reduce emergency medical service capacity or quality by replacing two-firefighter/paramedic ambulance staffing with a one firefighter-paramedic plus one EMT model, reducing transport-capable ambulances from 13 to 11, relying on budget savings rather than patient-care needs, lacking sufficient information about comparable fire-based systems, and creating reversion costs if the pilot failed.
+  evidence:
+    - Public speakers described personal emergency medical incidents and argued that two-paramedic/team care mattered for heart attack, seizure, respiratory failure, and transport situations.
+    - Firefighter association speakers argued that RMD would replace sworn firefighters with non-sworn EMTs, reduce ambulances from 13 to 11, and leave insufficient ambulances for patient transport.
+    - Councilmembers questioned whether fire-based public systems actually used the same model and whether the map conflated private and public-sector ambulance systems.
+    - Councilmembers questioned electronic patient-care reporting, waived or changed County conditions, and whether the city had money to revert to the older model if the pilot failed.
+    - Councilmembers also raised concerns about using or reprogramming one-time funds and about needing fuller FY15 budget discussion.
+  source_vocabulary:
+    - human element
+    - two paramedics
+    - one paramedic and one EMT
+    - sworn firefighters
+    - non-sworn EMT
+    - fewer ambulances
+    - 13 ambulances to 11
+    - patient transport
+    - safety and health of the community
+    - lack of discussion
+    - pilot project fail
+    - revert back
+    - electronic patient care reporting
+    - budget constraints
+  temporal_status:
+    primary: hypothetical_or_risk
+    secondary:
+      - recurring_concern
+      - currently_existing
+    notes:
+      - The concerns were expressed during the segment as risks or objections to future implementation.
+      - Some concerns relied on current baseline conditions, such as existing ambulance staffing and current budget context.
+  source_context_for_fact_check:
+    obstacle_content:
+      - Concern that fewer ambulances and a one firefighter-paramedic/one EMT staffing model could reduce transport capacity or emergency-care quality.
+      - Concern that complex patient care may require multiple paramedics or a team working simultaneously.
+      - Concern that the program was budget-driven and might sacrifice public safety or fire-service capacity for savings.
+      - Concern that Council lacked adequate comparative information about other cities using similar fire-based models.
+      - Concern that changed or waived County EMS conditions, electronic patient-care reporting, and reversion funding were insufficiently resolved.
+      - Concern about the handling of one-time funds and budget accounting connected to delayed RMD deployment.
+    local_anchor:
+      - Long Beach citywide Fire Department EMS service.
+      - Individual residents and public commenters described Long Beach emergency responses in their homes.
+      - Station/resource and ambulance-count concerns were framed at citywide service level.
+    temporal_status:
+      - hypothetical_or_risk for anticipated harms from RMD implementation.
+      - recurring_concern for repeated public, firefighter association, and councilmember objections.
+  answer_locality: >
+    Most visible during public comment and Council questioning after the staff presentation; also appears in Councilmember Austin's motion rationale.
+  marker_presence:
+    concrete_concern_language: present — risk, cutbacks, fewer ambulances, insufficient information, reversion cost, patient-care harm.
+    specific_concern_content: present — concrete service-capacity, staffing, transport, patient-care, information, and budget-accounting concerns.
+  ```
+
+  ---
+
+  ## S — Shared Concern Synthesis
+
+  ```yaml
+  label: S — Shared Concern Synthesis
+  summary: >
+    A recurring concern theme across the segment was that RMD's budget and deployment efficiencies might come at the cost of public-safety capacity and emergency medical care quality. Speakers repeatedly contrasted claimed savings and faster paramedic arrival with worries about fewer ambulances, fewer sworn/firefighter-paramedic resources on ambulance teams, complex patient-care needs, and insufficient Council information before implementation.
+  evidence:
+    - Multiple public speakers emphasized personal medical emergencies and opposed cuts or changes to current paramedic/fire services.
+    - Firefighter association speakers repeatedly characterized RMD as a budget-deficit solution and warned about replacing sworn firefighters with non-sworn EMTs and reducing ambulances.
+    - Councilmembers asked whether comparable jurisdictions actually used the same fire-based model and whether the Council had enough information to decide transparently.
+    - Later discussion again returned to the 13-to-11 ambulance reduction and whether the remaining units could meet community needs.
+  source_vocabulary:
+    - budget issue
+    - human element
+    - saving lives
+    - fewer ambulances
+    - not sufficient
+    - sworn and non-sworn
+    - public safety
+    - open and transparent decision
+    - further discussion
+    - FY15 budget discussion
+    - maintain the tools
+    - emergency services
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - hypothetical_or_risk
+      - currently_existing
+    notes:
+      - The theme recurred across resident testimony, firefighter association testimony, and councilmember questioning.
+      - The concern focused on potential future effects of implementation and current information/budget constraints.
+  source_context_for_fact_check:
+    concern_theme: >
+      Recurring concern that RMD implementation could trade emergency medical service quality/capacity and public-safety readiness for budget savings or deployment efficiency.
+    concern_content:
+      - Fewer ambulances under RMD: 13 current peak-load transport-capable units versus 11 RMD 24-hour ambulances.
+      - Change from current firefighter/paramedic staffing toward one firefighter-paramedic plus one EMT on each RMD ambulance.
+      - Concern that some emergencies require multiple paramedics/team care, not only faster initial paramedic arrival.
+      - Concern that Council did not have enough comparative information about other fire-based systems using the same model.
+      - Concern that the model should be debated in the FY15 budget process before implementation.
+    temporal_status:
+      - recurring_concern for repeated concern-side statements.
+      - hypothetical_or_risk for projected implementation harms.
+  answer_locality: >
+    Distributed across public testimony, firefighter association testimony, councilmember questioning, and later final discussion of ambulance-count implications.
+  marker_presence:
+    problem_side_concern: present — repeated concern-side language about cuts, risk, insufficient ambulances, safety, and lack of information.
+    specific_content: present — staffing model, ambulance count, patient-care team capacity, budget tradeoff, and implementation timing.
+  ```
+
+  ---
+
+  ## U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U — Unresolved Tail / Future Return Path
+  summary: >
+    The unresolved tail was that neither the receive-and-file motion nor the delay motion passed, leaving no new Council action on Item 12 and leaving prior authorization for RMD implementation in place. Future handling remained possible through later Council action, the FY15 budget process, County EMS pilot monitoring, and potential reversion/budget decisions if the pilot failed or if RMD were later eliminated.
+  evidence:
+    - Staff said Council could continue moving forward with RMD implementation in summer 2014 or hold off until October 1 and handle the issue through the FY15 budget decision.
+    - Councilmember Austin moved to delay implementation and present it as part of the overall budget discussion and Council approval.
+    - Both the substitute receive-and-file motion and the original delay motion tied and failed.
+    - The post-vote clarification stated that no action was taken and that the previous authorization would stand until some other Council action was brought forward.
+    - The Fire Chief said County EMS would receive biweekly data and monitor the program if implemented.
+    - The Fire Chief also said that if the pilot failed, reversion would become a budget question similar to an annual budget discussion.
+  source_vocabulary:
+    - delay implementation
+    - full discussion
+    - fiscal year 15 budget process
+    - October 1
+    - no action taken
+    - previous authorization would stand
+    - until some other action would be brought forward
+    - biweekly data
+    - monitor for quality assurance and quality improvement
+    - pilot program were to fail
+    - revert back
+    - deficit budgeting
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - completed_in_session
+      - future_effect
+      - hypothetical_or_risk
+    notes:
+      - The failure of the motions was completed in-session.
+      - RMD implementation and monitoring remained future-facing.
+      - Later Council action, FY15 budget treatment, and reversion after pilot failure were unresolved future paths.
+  source_context_for_fact_check:
+    pending_status:
+      - No new action was taken on Item 12 because both motions tied and failed.
+      - The previous authorization for RMD remained standing after the segment.
+      - The segment did not finally resolve all future FY15 budget, pilot monitoring, or possible reversion questions.
+    pending_item:
+      - RMD implementation path and any later Council reconsideration/delay/elimination.
+      - FY15 budget handling of RMD and potential other Fire Department reductions if RMD were eliminated.
+      - County EMS pilot monitoring and possible future policy/reversion consequences.
+    handling_path:
+      - Prior authorization allowed implementation to move forward as previously directed unless later Council action changed it.
+      - Austin's proposed path would have delayed implementation into the FY15 budget discussion, but that path did not pass.
+      - County EMS would monitor biweekly data for quality assurance and improvement if the pilot moved forward.
+      - If the pilot failed, staff described reversion as a future budget/deficit-budgeting question.
+    temporal_status:
+      - completed_in_session for the failed votes/no-action clarification.
+      - pending_future_handling for later Council, FY15 budget, and County EMS pilot handling.
+      - hypothetical_or_risk for pilot failure and reversion scenarios.
+  answer_locality: >
+    Appears in staff's closing alternatives before public comment, Councilmember Austin's motion, motion/vote handling at the end, point-of-order clarification, and Council questions about monitoring/reversion.
+  marker_presence:
+    pendingness_marker: present — no action taken, previous authorization stands until another action, implementation/future budget/reversion left open.
+    pending_item_identifiable: present — RMD implementation and later Council/FY15/County EMS handling.
+    handling_path_visible: present — prior authorization path, possible later Council action, FY15 budget process, County EMS biweekly monitoring, and reversion budget process.
+  ```

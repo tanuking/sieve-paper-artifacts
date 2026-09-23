@@ -1,0 +1,1402 @@
+segment_id: "MTG9"
+segment_dir: "09_AlamedaCC_04292015"
+meeting_id: "AlamedaCC_04292015"
+uid: "AlamedaCC_04292015_2015-1631"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "09",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_name": "Topic/Framing",
+        "event_sheet_slot_context": "The segment frames Alameda's process for finding a new city manager by interviewing executive recruitment firms and examining how they would structure outreach, candidate identification, vetting, community input, and Council involvement in the search.",
+        "temporal_status": "The recruiter interviews were currently occurring in the sampled segment; the actual city-manager search and recruiter engagement were future-facing.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "subject_identified": {
+                "presence_note": "Presence checks whether a substantive search/recruitment subject is named, not whether the role, jurisdiction, or firms are source-correct. Wrong-but-specific subjects are handled by Fact Check.",
+                "match": [
+                  "Names a substantive executive search, city-management search, recruitment-firm evaluation, or comparable role-search matter as the subject.",
+                  "Identifies the matter as evaluating or interviewing recruiters, search firms, or consultants for a substantive hiring/recruitment process.",
+                  "Gives a noun phrase for the substantive recruitment/search matter rather than only a meeting procedure."
+                ],
+                "not_match": [
+                  "Mentions only a generic interview, presentation, agenda item, or meeting without any substantive search/recruitment subject.",
+                  "Names only speakers, firms, or credentials without identifying the substantive search/recruitment matter.",
+                  "Gives only procedural disposition language such as approved, heard, or selected without identifying the substantive subject."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "policy_direction": {
+                "presence_note": "Presence checks for a direction/process move. Source correctness of the specific direction is checked only through Fact Check fields.",
+                "match": [
+                  "Shows a process move such as interviewing, comparing, selecting support for, structuring, or evaluating how a recruitment/search process would be carried out.",
+                  "Shows how the discussed process would shape outreach, candidate identification, screening, community input, governing-body involvement, or finalist presentation.",
+                  "Describes a recruitment/search process direction rather than only stating that a meeting occurred."
+                ],
+                "not_match": [
+                  "Names a search/recruitment subject but does not say what process move or direction was being pursued.",
+                  "States only that officials met, listened, or asked questions without describing a recruitment/search direction.",
+                  "Gives only a final outcome claim without stating the substantive or process direction."
+                ]
+              },
+              "target": {
+                "presence_note": "Presence checks that a target process, group, pool, role, or scope is identified. Wrong target identity is Fact Check, not Presence.",
+                "match": [
+                  "Identifies the role-search process, recruitment process, candidate pool, candidate-screening process, or selection process as the target.",
+                  "Identifies community/governing-body input, candidate vetting, outreach, or finalist-presentation steps as the target process.",
+                  "States what entity, process, role, group, or pool the recruitment/search direction applies to."
+                ],
+                "not_match": [
+                  "States a direction such as recruit, interview, or compare without saying what process, role, group, candidate pool, or selection process it applies to.",
+                  "Mentions recruiters or speakers but does not identify any target process, candidate group, or search scope.",
+                  "Uses a pronoun such as it or this without enough context to identify the target."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was Alameda's search for a new city manager and the evaluation of executive recruitment firms to assist with that search.",
+            "The process direction was to interview and compare recruitment firms and examine how they would structure outreach, candidate identification, vetting, community input, Council involvement, and finalist presentation.",
+            "The target was Alameda's city manager recruitment process, including the candidate pool and eventual selection process for a new city manager.",
+            "The firms/presenters discussed were Avery Associates / Paul Chmura and Bob Murray & Associates / Bob Murray."
+          ],
+          "fact_check_notes": [
+            "Do not require every process component to be mentioned. Partial but source-consistent descriptions are allowed.",
+            "A claim that the Council had already selected a recruiter belongs mainly to O/U stage checking; for T it matters only if it replaces the subject, direction, or target."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council heard presentations from outside consultants.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This does not identify the city manager search or executive recruitment-firm subject."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The segment concerned Alameda's search for a new city manager.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "The subject is visible, but the recruitment-process direction and target process are not specific enough."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The segment focused on Alameda's city manager search, with the Council interviewing executive recruitment firms about how they would conduct outreach, screen candidates, gather community input, and present finalists.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The subject, process direction, and target are all source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The segment focused on Alameda's police chief search and how recruitment firms would screen law-enforcement candidates.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary supplies a subject, direction, and target, but the role/search target contradicts the event sheet."
+          }
+        ],
+        "slot": "T",
+        "label": "Topic/Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "subject_identified": {
+              "presence_note": "Presence checks whether a substantive search/recruitment subject is named, not whether the role, jurisdiction, or firms are source-correct. Wrong-but-specific subjects are handled by Fact Check.",
+              "match": [
+                "Names a substantive executive search, city-management search, recruitment-firm evaluation, or comparable role-search matter as the subject.",
+                "Identifies the matter as evaluating or interviewing recruiters, search firms, or consultants for a substantive hiring/recruitment process.",
+                "Gives a noun phrase for the substantive recruitment/search matter rather than only a meeting procedure."
+              ],
+              "not_match": [
+                "Mentions only a generic interview, presentation, agenda item, or meeting without any substantive search/recruitment subject.",
+                "Names only speakers, firms, or credentials without identifying the substantive search/recruitment matter.",
+                "Gives only procedural disposition language such as approved, heard, or selected without identifying the substantive subject."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "policy_direction": {
+              "presence_note": "Presence checks for a direction/process move. Source correctness of the specific direction is checked only through Fact Check fields.",
+              "match": [
+                "Shows a process move such as interviewing, comparing, selecting support for, structuring, or evaluating how a recruitment/search process would be carried out.",
+                "Shows how the discussed process would shape outreach, candidate identification, screening, community input, governing-body involvement, or finalist presentation.",
+                "Describes a recruitment/search process direction rather than only stating that a meeting occurred."
+              ],
+              "not_match": [
+                "Names a search/recruitment subject but does not say what process move or direction was being pursued.",
+                "States only that officials met, listened, or asked questions without describing a recruitment/search direction.",
+                "Gives only a final outcome claim without stating the substantive or process direction."
+              ]
+            },
+            "target": {
+              "presence_note": "Presence checks that a target process, group, pool, role, or scope is identified. Wrong target identity is Fact Check, not Presence.",
+              "match": [
+                "Identifies the role-search process, recruitment process, candidate pool, candidate-screening process, or selection process as the target.",
+                "Identifies community/governing-body input, candidate vetting, outreach, or finalist-presentation steps as the target process.",
+                "States what entity, process, role, group, or pool the recruitment/search direction applies to."
+              ],
+              "not_match": [
+                "States a direction such as recruit, interview, or compare without saying what process, role, group, candidate pool, or selection process it applies to.",
+                "Mentions recruiters or speakers but does not identify any target process, candidate group, or search scope.",
+                "Uses a pronoun such as it or this without enough context to identify the target."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "distributed",
+          "source_span": "opening staff framing, Avery presentation and Q&A, Bob Murray presentation and Q&A",
+          "notes": [
+            "The central subject is introduced at the beginning and reinforced throughout both firm presentations and Council questions."
+          ]
+        },
+        "marker_presence": {
+          "topic_markers_present": [
+            "executive recruitment firms",
+            "new city manager",
+            "city manager search",
+            "recruitment strategy"
+          ],
+          "policy_direction_markers_present": [
+            "present our credentials",
+            "bring your search to a successful close",
+            "undertake a very aggressive recruitment effort"
+          ],
+          "target_markers_present": [
+            "Alameda's new city manager",
+            "the person that you select"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment frames the substantive matter as Alameda's process for finding a new city manager by interviewing executive recruitment firms and examining how they would structure outreach, candidate identification, vetting, community input, and Council involvement in the search.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "notes": [
+              "The Council was currently interviewing recruitment firms during the sampled segment.",
+              "The search for a new city manager was future-facing and would proceed after the selection/engagement of a recruiter."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "subject": "Alameda's search for a new city manager and the evaluation of executive recruitment firms to assist with that search.",
+            "policy_or_process_direction": [
+              "Interview and compare executive recruitment firms.",
+              "Shape the recruitment/search process around Council expectations, community input, candidate outreach, candidate screening, and final candidate presentation."
+            ],
+            "target": [
+              "Alameda's city manager recruitment process.",
+              "The candidate pool and eventual selection process for a new city manager."
+            ],
+            "firms_or_presenters_discussed": [
+              "Avery Associates / Paul Chmura.",
+              "Bob Murray & Associates / Bob Murray."
+            ],
+            "temporal_status": [
+              "currently_existing for the interview/discussion segment.",
+              "pending_future_handling for the actual city manager search and any recruiter engagement."
+            ]
+          }
+        }
+      },
+      "O": {
+        "slot_name": "Outcome/Position",
+        "event_sheet_slot_context": "No final Council disposition selecting, approving, rejecting, or ranking a recruitment firm is recorded. The source-supported in-session action is that the Council heard/interviewed both recruitment firms and the mayor concluded the interview process before moving to the next agenda item.",
+        "temporal_status": "The two-firm interview process was completed in-session; any firm selection, contract award, recommendation, or vote remained outside the sampled segment.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "disposition_verb_tied_to_acted_on_item": {
+                "presence_note": "Presence checks for a recognizable disposition or completed handling tied to an acted-on item. Wrong stage, actor, or result is Fact Check.",
+                "match": [
+                  "States that a body or presiding officer completed, concluded, closed, approved, selected, rejected, referred, deferred, or otherwise disposed of an acted-on item.",
+                  "States that presentations/interviews for an item were heard or completed and then the item or interview portion was closed.",
+                  "Ties a recognizable disposition or completed handling to a specific item, even if the claimed stage is source-wrong."
+                ],
+                "not_match": [
+                  "Only summarizes what speakers proposed or discussed without saying any body or presiding officer completed or disposed of an item.",
+                  "Only says questions were asked or information was presented, with no disposition, completion, or closing marker tied to an item.",
+                  "Mentions a later agenda transition without tying any action or completed handling to an acted-on item."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "acted_on_item_specific": {
+                "presence_note": "Presence checks whether the acted-on item is specific enough to identify. Whether that item is source-correct is Fact Check.",
+                "match": [
+                  "Identifies the acted-on item specifically enough to distinguish it from other meeting business.",
+                  "Identifies the item as an interview/presentation process, recruiter/search-firm item, contract/selection item, or other discrete acted-on matter.",
+                  "Provides a formal label or substantive description that makes the acted-on item recognizable."
+                ],
+                "not_match": [
+                  "Says only that the body concluded the item, the process, or the discussion without enough context to identify what item was handled.",
+                  "Uses only a generic phrase such as the matter or the issue with no substantive or formal identifier.",
+                  "States a disposition but leaves the acted-on object unstated."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Alameda City Council / mayor presiding over the interview segment.",
+            "The procedural stage was a recruiter interview/presentation stage, not a final contract award, firm selection, ranking, or approval.",
+            "The Council heard the Avery Associates presentation and questions, then heard the Bob Murray & Associates presentation and questions, and the mayor stated that the interview process was concluded.",
+            "The acted-on item was the interview process for executive recruitment firms for the new city manager search; no acted-on firm-selection item was disposed of in the sampled segment.",
+            "No vote was recorded in the sampled segment."
+          ],
+          "fact_check_notes": [
+            "A summary may say no final firm selection occurred and still pass Fact Check.",
+            "A claim that the Council selected, approved, ranked, rejected, awarded a contract to, or voted on a recruitment firm contradicts the event sheet for this slot.",
+            "The absence of final selection is inferred from the segment moving on after the interview process; it is not an explicit no-vote statement in the transcript."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "Avery and Bob Murray each described their recruitment methods.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This reports presentation content but does not state a Council disposition or completed handling of an acted-on item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The Council concluded the process and moved on.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A disposition/completion marker appears, but the acted-on item is too generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Council heard interviews with Avery Associates and Bob Murray & Associates for the city manager recruiter role, then the mayor concluded the interview process and moved to the next agenda item without a recorded firm-selection vote.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The action shell, item, stage, and no-vote/no-selection status are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council voted to award the city manager search contract to Avery Associates after the interviews.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The disposition and acted-on item are specific, but the claimed award/vote/final selection contradicts the event sheet."
+          }
+        ],
+        "slot": "O",
+        "label": "Outcome/Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "presence_note": "Presence checks for a recognizable disposition or completed handling tied to an acted-on item. Wrong stage, actor, or result is Fact Check.",
+              "match": [
+                "States that a body or presiding officer completed, concluded, closed, approved, selected, rejected, referred, deferred, or otherwise disposed of an acted-on item.",
+                "States that presentations/interviews for an item were heard or completed and then the item or interview portion was closed.",
+                "Ties a recognizable disposition or completed handling to a specific item, even if the claimed stage is source-wrong."
+              ],
+              "not_match": [
+                "Only summarizes what speakers proposed or discussed without saying any body or presiding officer completed or disposed of an item.",
+                "Only says questions were asked or information was presented, with no disposition, completion, or closing marker tied to an item.",
+                "Mentions a later agenda transition without tying any action or completed handling to an acted-on item."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "acted_on_item_specific": {
+              "presence_note": "Presence checks whether the acted-on item is specific enough to identify. Whether that item is source-correct is Fact Check.",
+              "match": [
+                "Identifies the acted-on item specifically enough to distinguish it from other meeting business.",
+                "Identifies the item as an interview/presentation process, recruiter/search-firm item, contract/selection item, or other discrete acted-on matter.",
+                "Provides a formal label or substantive description that makes the acted-on item recognizable."
+              ],
+              "not_match": [
+                "Says only that the body concluded the item, the process, or the discussion without enough context to identify what item was handled.",
+                "Uses only a generic phrase such as the matter or the issue with no substantive or formal identifier.",
+                "States a disposition but leaves the acted-on object unstated."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "localized_with_supporting_context",
+          "source_span": "opening transition into the firm presentations; transition between firms; conclusion before agenda item 3A",
+          "notes": [
+            "The absence of a final disposition is inferred from the segment ending after interviews and moving to another agenda item, not from an explicit \"no vote\" statement."
+          ]
+        },
+        "marker_presence": {
+          "disposition_markers_present": [
+            "proceed with the next interview",
+            "concludes our interview process"
+          ],
+          "final_action_markers_absent": [
+            "no \"approved\"",
+            "no \"selected\"",
+            "no \"awarded\"",
+            "no vote count"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "No final Council disposition selecting, approving, rejecting, or ranking a recruitment firm is recorded in the sampled segment. The in-session action that is source-supported is that the Council heard/interviewed both recruitment firms and then the mayor closed the interview portion before moving to the next agenda item.",
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "notes": [
+              "The interview process for the two firms was completed during the sampled segment.",
+              "A formal selection, contract award, vote, or recommendation on a recruitment firm is not present in the sampled transcript.",
+              "Any later decision on which firm to engage remains outside the sampled segment."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "actor": "Alameda City Council / mayor presiding over the interview segment.",
+            "procedural_stage": "recruiter interview/presentation stage, not final contract award or firm selection.",
+            "disposition_result": [
+              "The Council heard the Avery Associates presentation and questions.",
+              "The Council then heard the Bob Murray presentation and questions.",
+              "The mayor stated that the interview process was concluded."
+            ],
+            "acted_on_item": [
+              "Interview process for executive recruitment firms for the new city manager search.",
+              "No acted-on firm-selection item was disposed of in the sampled segment."
+            ],
+            "vote_result": {
+              "value": null,
+              "attached_to": "no vote recorded in this sampled segment"
+            },
+            "temporal_status": [
+              "completed_in_session for the firm interview segment.",
+              "pending_future_handling for any actual recruiter selection or contract action not shown here."
+            ]
+          }
+        }
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "event_sheet_slot_context": "The discussion was shaped by Alameda's need for a new city manager, the relative newness of the City Council, the importance of finding a manager suited to Alameda's community and governance needs, and a difficult city-manager labor market caused by retirements and smaller candidate pools.",
+        "temporal_status": "The new-city-manager need, relatively new Council, and engaged community existed at the time of the segment; the broader city-manager labor-market challenge was described as an ongoing condition.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "precipitating_context_visible": {
+                "presence_note": "Presence checks for agenda-setting background or precipitating context. The context does not need to be source-correct for Presence; contradictions are Fact Check.",
+                "match": [
+                  "States a prior or current condition, need, process problem, market condition, institutional context, community context, deadline, opposition, revision, or similar background connected to the discussion.",
+                  "States a background condition that helps explain why the item or discussion took its current form.",
+                  "States background as its own proposition rather than only as a proposed remedy or process step."
+                ],
+                "not_match": [
+                  "Only states the topic, action, or presentation content without any background condition.",
+                  "Only describes proposed outreach, vetting, or recruitment methods without any prior/current condition shaping the item.",
+                  "States a generic desire to make progress or hire someone without any agenda-setting background."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "connected_to_current_item_or_form": {
+                "presence_note": "Presence requires connection to the current item or discussion form, but not an explicit why-now/agenda-necessity statement.",
+                "match": [
+                  "Connects the background condition to the interview/recruitment/search item, discussion frame, questions, process design, candidate sourcing, or candidate-fit discussion.",
+                  "Shows how the stated background shaped why the item was discussed, how it was discussed, or what issues the discussion emphasized.",
+                  "Makes the background-to-current-item relationship visible without requiring an explicit phrase such as why this came forward today."
+                ],
+                "not_match": [
+                  "States a background condition as a free-standing fact without connecting it to the current item, discussion frame, or form of handling.",
+                  "States only that officials asked questions without connecting those questions to a background condition.",
+                  "Uses background-like language only as part of a proposed solution, with no visible connection to the current item or discussion form."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Alameda needed a new city manager.",
+            "The Council was relatively new, making the city manager search especially consequential.",
+            "Alameda's community was described as engaged and involved, increasing the importance of local fit and community input.",
+            "Recruiters described the city-manager labor market as tight because many public-sector servants or city managers were retiring.",
+            "Bob Murray contrasted earlier candidate pools of about 80-100 candidates with current pools of about 25-45, maybe 50.",
+            "These conditions explain why the Council interviewed recruitment firms and asked detailed questions about process, community involvement, candidate sourcing, and fit."
+          ],
+          "fact_check_notes": [
+            "Do not require every background condition to be mentioned.",
+            "If a summary gives candidate-pool numbers, check both the value and the comparison baseline."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The recruiters explained online surveys, brochures, and candidate vetting.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This describes proposed process details, not agenda-setting background."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "City-manager candidates were becoming harder to find.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A background condition is visible, but it is not connected to the current recruitment-firm interview item or discussion form."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The Council's interviews were shaped by Alameda's need for a new city manager, a relatively new Council making a consequential hire, and a tight city-manager market caused partly by retirements and smaller candidate pools.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The precipitating context and its connection to the current interviews are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The interviews were prompted by a court order requiring Alameda to replace its city manager within 30 days.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary gives a specific triggering background and agenda connection, but that trigger is unsupported and conflicts with the event sheet."
+          }
+        ],
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "precipitating_context_visible": {
+              "presence_note": "Presence checks for agenda-setting background or precipitating context. The context does not need to be source-correct for Presence; contradictions are Fact Check.",
+              "match": [
+                "States a prior or current condition, need, process problem, market condition, institutional context, community context, deadline, opposition, revision, or similar background connected to the discussion.",
+                "States a background condition that helps explain why the item or discussion took its current form.",
+                "States background as its own proposition rather than only as a proposed remedy or process step."
+              ],
+              "not_match": [
+                "Only states the topic, action, or presentation content without any background condition.",
+                "Only describes proposed outreach, vetting, or recruitment methods without any prior/current condition shaping the item.",
+                "States a generic desire to make progress or hire someone without any agenda-setting background."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "connected_to_current_item_or_form": {
+              "presence_note": "Presence requires connection to the current item or discussion form, but not an explicit why-now/agenda-necessity statement.",
+              "match": [
+                "Connects the background condition to the interview/recruitment/search item, discussion frame, questions, process design, candidate sourcing, or candidate-fit discussion.",
+                "Shows how the stated background shaped why the item was discussed, how it was discussed, or what issues the discussion emphasized.",
+                "Makes the background-to-current-item relationship visible without requiring an explicit phrase such as why this came forward today."
+              ],
+              "not_match": [
+                "States a background condition as a free-standing fact without connecting it to the current item, discussion frame, or form of handling.",
+                "States only that officials asked questions without connecting those questions to a background condition.",
+                "Uses background-like language only as part of a proposed solution, with no visible connection to the current item or discussion form."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "distributed",
+          "source_span": "Avery's opening remarks and Bob Murray's opening remarks, with additional Council questions on fit and candidate pool",
+          "notes": [
+            "Background appears as part of the firms' framing of why the search process matters and why recruitment approach matters."
+          ]
+        },
+        "marker_presence": {
+          "background_markers_present": [
+            "need for a new city manager",
+            "relatively new City Council",
+            "community is so engaged",
+            "demographics",
+            "retirement",
+            "tighter markets"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The discussion was shaped by Alameda's need for a new city manager, the relative newness of the City Council, the importance of choosing a manager who fits Alameda's community and governance needs, and a difficult city-manager labor market caused by public-sector retirements and a smaller candidate pool.",
+          "temporal_status": {
+            "primary": "currently_existing",
+            "notes": [
+              "The new-city-manager need exists at the time of the segment.",
+              "The relatively new Council and engaged community are present contextual conditions.",
+              "The public-sector retirement/talent-pool issue is stated as an ongoing market condition."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "Alameda needed a new city manager.",
+              "The Council was relatively new, making the city manager search especially consequential.",
+              "Recruiters described the market for city managers as challenging because many public-sector servants/city managers were retiring.",
+              "Bob Murray contrasted older candidate pools of about 80-100 candidates with current pools of about 25-45, maybe 50."
+            ],
+            "agenda_connection": [
+              "These conditions explain why the Council was interviewing executive recruitment firms and asking detailed questions about process, community involvement, candidate sourcing, and fit."
+            ],
+            "temporal_status": [
+              "currently_existing for Alameda's need and Council context.",
+              "recurring_concern for the broader public-sector talent-market challenge."
+            ]
+          }
+        }
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "event_sheet_slot_context": "No operative payload was adopted by Council. The segment records proposed or conditional recruitment-process terms and service details offered or discussed by the firms, including community input methods, candidate vetting, finalist presentation, recruitment timelines, background check costs, outreach channels, and technology/hard-copy recruiting methods.",
+        "temporal_status": "The recruitment-process components were future-effect, proposed, or conditional; they were not adopted Council action terms in the sampled segment.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "payload_attached_to_action": {
+                "presence_note": "Presence checks that a concrete process term/service detail is attached to the acted-on item, proposal, or discussion. Whether it was adopted or merely proposed is Fact Check.",
+                "match": [
+                  "Attaches a specific recruitment-process term, service detail, condition, requirement, scope, number, timeline, outreach channel, vetting step, input method, presentation detail, or comparable payload to the item/proposal/discussion.",
+                  "States proposed, conditional, or adopted process components as part of how the recruitment/search would be conducted.",
+                  "States a concrete payload assigned to a firm, proposal, contract, action, or recruitment item, even if the carrier or stage is source-wrong."
+                ],
+                "not_match": [
+                  "Only says a body interviewed or heard firms without describing any concrete condition, requirement, number, scope, or process component.",
+                  "Only states the general topic of a search or recruitment process without attaching any concrete term or service detail.",
+                  "Only gives background concerns or general goals without stating an attached process payload."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": {
+              "number": {
+                "presence_note": "Presence checks for the existence of an attached numeric/scalar facet. The exact value and role binding are Fact Check.",
+                "match": [
+                  "Includes an identifiable numeric quantity, range, amount, cost, duration, count, traffic measure, database-size measure, or other scalar detail attached to a recruitment-process payload.",
+                  "Includes a recognizable number or scalar facet tied to a process term, candidate pool, background check, timeline, brochure quantity, database, outreach effort, or similar payload."
+                ],
+                "not_match": [
+                  "Mentions recruitment steps without any identifiable numeric quantity, range, amount, duration, count, or scalar detail.",
+                  "Uses vague scalar wording such as many, several, or some without an identifiable numeric or measured facet."
+                ]
+              },
+              "named_requirement": {
+                "presence_note": "Presence checks that an identifiable named process component exists. Whether the name/source assignment is correct is Fact Check.",
+                "match": [
+                  "Names a proposed or conditional process component, requirement, service, outreach method, vetting step, input method, presentation method, technology method, or communication channel.",
+                  "Names a community-engagement, candidate-vetting, outreach, application, brochure, database, meeting, survey, reference-check, background-check, or finalist-presentation component."
+                ],
+                "not_match": [
+                  "States only that there was a recruitment approach or process without naming any identifiable component.",
+                  "Says only that a firm would help with the search without naming a process condition or service detail."
+                ]
+              },
+              "scope_boundary": {
+                "presence_note": "Presence checks for a visible applicable population, stage, category, or process scope. Correctness of the scope is Fact Check.",
+                "match": [
+                  "Identifies an applicable population, stage, category, channel, participant group, candidate group, public/community group, governing-body group, or process stage for the payload.",
+                  "States whether a step applies to final candidates, applicants, the public/community, community representatives, governing-body members, search firms, or the candidate pool."
+                ],
+                "not_match": [
+                  "Names a general recruitment activity without saying what population, participant group, candidate group, channel, category, or process stage it applies to.",
+                  "Mentions a process component but leaves its applicable scope entirely unstated."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "No recruitment-process payload was adopted by Council in the sampled segment.",
+            "The payload carrier was the Avery Associates proposal/presentation and Q&A and the Bob Murray & Associates proposal/presentation and Q&A, not a Council-adopted contract term.",
+            "Avery said community input methods could include an online survey, a community meeting, and/or interviews with Council-identified community representatives, and said the firm would be open to doing two of those activities.",
+            "Avery described behavioral interviewing, initial reference interviews, optional summary background evaluations for final one or two candidates, detailed presentations on about six or seven candidates, and possible all-online outreach if hard-copy brochures were a major concern.",
+            "Avery's approximate separate background-evaluation cost was around $400 to $800 for final candidates, depending partly on residence history.",
+            "Avery's general city-manager search timeline was about 5-7 months, with some searches extending to 9-10 months and a possible 30-90 day delay for a sitting manager to leave a current role.",
+            "Bob Murray emphasized individual Council meetings before recruiting, community engagement before active recruiting, community leader interviews or a public/town hall meeting, aggressive recruitment beyond ads, network research, direct calls, online application/database systems, social media, hard-copy/PDF brochures, email, and phone calls.",
+            "Bob Murray described a database of over 23,000 people, 20,000-25,000 hits per month, usually printing 100-300 brochures, and making 70-80 calls on a recruitment.",
+            "Bob Murray contrasted earlier city-manager pools of 80-100 candidates with current pools of 25-45, maybe 50."
+          ],
+          "fact_check_notes": [
+            "Do not require every proposed service detail or number to be mentioned.",
+            "If a summary says Council adopted, required, or contracted for these terms in the sampled segment, that contradicts the event sheet's carrier/stage for N.",
+            "If a number is stated, check what it is attached to: cost, timeline, candidate count, database size, traffic, brochures, direct calls, or candidate-pool baseline."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The Council completed interviews with two executive recruitment firms.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This gives the action shell but no attached recruitment-process payload or service detail."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "The firms described how they would run the recruitment process.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "A proposed process payload is loosely attached, but no named requirement, number, or scope boundary is identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "The firms discussed proposed recruitment-process details rather than adopted Council terms, including public surveys or community meetings, candidate vetting, final-candidate background checks, presentation of about six or seven candidates, timelines of roughly 5-7 months, brochures, databases, and direct outreach calls.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The payload carrier is conditional/proposed, and the named process details and numbers are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council adopted a contract term requiring Avery to conduct $4,000 background checks on all 80-100 applicants.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The payload is specific enough for Presence, but it wrongly states adoption by Council, the amount, and the scope/baseline for background checks."
+          }
+        ],
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "payload_attached_to_action": {
+              "presence_note": "Presence checks that a concrete process term/service detail is attached to the acted-on item, proposal, or discussion. Whether it was adopted or merely proposed is Fact Check.",
+              "match": [
+                "Attaches a specific recruitment-process term, service detail, condition, requirement, scope, number, timeline, outreach channel, vetting step, input method, presentation detail, or comparable payload to the item/proposal/discussion.",
+                "States proposed, conditional, or adopted process components as part of how the recruitment/search would be conducted.",
+                "States a concrete payload assigned to a firm, proposal, contract, action, or recruitment item, even if the carrier or stage is source-wrong."
+              ],
+              "not_match": [
+                "Only says a body interviewed or heard firms without describing any concrete condition, requirement, number, scope, or process component.",
+                "Only states the general topic of a search or recruitment process without attaching any concrete term or service detail.",
+                "Only gives background concerns or general goals without stating an attached process payload."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": {
+            "number": {
+              "presence_note": "Presence checks for the existence of an attached numeric/scalar facet. The exact value and role binding are Fact Check.",
+              "match": [
+                "Includes an identifiable numeric quantity, range, amount, cost, duration, count, traffic measure, database-size measure, or other scalar detail attached to a recruitment-process payload.",
+                "Includes a recognizable number or scalar facet tied to a process term, candidate pool, background check, timeline, brochure quantity, database, outreach effort, or similar payload."
+              ],
+              "not_match": [
+                "Mentions recruitment steps without any identifiable numeric quantity, range, amount, duration, count, or scalar detail.",
+                "Uses vague scalar wording such as many, several, or some without an identifiable numeric or measured facet."
+              ]
+            },
+            "named_requirement": {
+              "presence_note": "Presence checks that an identifiable named process component exists. Whether the name/source assignment is correct is Fact Check.",
+              "match": [
+                "Names a proposed or conditional process component, requirement, service, outreach method, vetting step, input method, presentation method, technology method, or communication channel.",
+                "Names a community-engagement, candidate-vetting, outreach, application, brochure, database, meeting, survey, reference-check, background-check, or finalist-presentation component."
+              ],
+              "not_match": [
+                "States only that there was a recruitment approach or process without naming any identifiable component.",
+                "Says only that a firm would help with the search without naming a process condition or service detail."
+              ]
+            },
+            "scope_boundary": {
+              "presence_note": "Presence checks for a visible applicable population, stage, category, or process scope. Correctness of the scope is Fact Check.",
+              "match": [
+                "Identifies an applicable population, stage, category, channel, participant group, candidate group, public/community group, governing-body group, or process stage for the payload.",
+                "States whether a step applies to final candidates, applicants, the public/community, community representatives, governing-body members, search firms, or the candidate pool."
+              ],
+              "not_match": [
+                "Names a general recruitment activity without saying what population, participant group, candidate group, channel, category, or process stage it applies to.",
+                "Mentions a process component but leaves its applicable scope entirely unstated."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "distributed",
+          "source_span": "Avery Q&A on process, timelines, background checks, candidate pool, and brochures; Bob Murray presentation/Q&A on process, community input, technology, brochures, and calls",
+          "notes": [
+            "Because no Council action adopted these terms, the event sheet should not treat the listed payloads as binding outcomes."
+          ]
+        },
+        "marker_presence": {
+          "payload_markers_present": [
+            "online survey",
+            "community meeting",
+            "background evaluations",
+            "final one or two candidates",
+            "5 to 7 months",
+            "six or seven candidates",
+            "database",
+            "hardcopy and PDF",
+            "70 or 80 calls"
+          ],
+          "adopted_payload_markers_absent": [
+            "no adopted contract terms",
+            "no Council motion assigning a payload"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "No operative payload was adopted by Council in the sampled segment. The segment does, however, records proposed recruitment-process terms and service details offered or discussed by the firms, including community input methods, candidate vetting, finalist presentation, recruitment timelines, background check costs, outreach channels, and technology/hard-copy recruiting methods.",
+          "temporal_status": {
+            "primary": "future_effect",
+            "notes": [
+              "These are proposed or conditional recruitment-process components, not adopted Council action terms in the sampled segment.",
+              "The details would matter if a firm were engaged and the recruitment process moved forward."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "payload_carrier": [
+              "Avery Associates proposal/presentation and Council Q&A.",
+              "Bob Murray & Associates proposal/presentation and Council Q&A.",
+              "Not a Council-adopted contract term within the sampled segment."
+            ],
+            "payload_content": {
+              "Avery_Associates": [
+                "May combine community input methods such as an online survey, community meeting, and/or interviews with Council-identified community representatives.",
+                "Uses behavioral interviewing and initial reference interviews as part of candidate vetting.",
+                "Would arrange summary background evaluations for final one or two candidates upon request, invoiced separately.",
+                "Would present detailed materials on about six or seven candidates, with additional backup candidate materials.",
+                "Could do an all-online approach if hard-copy brochures became a major Council concern."
+              ],
+              "Bob_Murray_Associates": [
+                "Emphasizes individual meetings with Council members before recruiting.",
+                "Recommends community engagement before active recruiting, potentially through community leader interviews or a public/town hall meeting.",
+                "Uses aggressive recruitment beyond advertisements, including network research and direct calls.",
+                "Uses an online application/database system, social media postings, hard-copy/PDF brochures, email, and personal phone calls.",
+                "Has used SurveyMonkey-style online community input in other communities."
+              ]
+            },
+            "numeric_values": [
+              {
+                "value": "400-800 dollars",
+                "meaning": "Avery's approximate separate cost range for final-candidate background evaluations, depending partly on candidate residence history."
+              },
+              {
+                "value": "5-7 months",
+                "meaning": "Avery's general city-manager search timeline."
+              },
+              {
+                "value": "9-10 months",
+                "meaning": "Avery's longer possible search timeline in some cases."
+              },
+              {
+                "value": "30-90 days",
+                "meaning": "possible delay for a sitting manager to leave a current role after selection."
+              },
+              {
+                "value": "six or seven candidates",
+                "meaning": "Avery's likely detailed candidate presentation count."
+              },
+              {
+                "value": "80-100 candidates",
+                "meaning": "Bob Murray's description of prior city-manager candidate-pool sizes."
+              },
+              {
+                "value": "25-45, maybe 50 candidates",
+                "meaning": "Bob Murray's description of current city-manager candidate-pool sizes."
+              },
+              {
+                "value": "over 23,000 people",
+                "meaning": "Bob Murray's database size."
+              },
+              {
+                "value": "20,000-25,000 hits per month",
+                "meaning": "Bob Murray's stated system traffic."
+              },
+              {
+                "value": "100-300 brochures",
+                "meaning": "Bob Murray's usual print range, depending on agreed audience."
+              },
+              {
+                "value": "70-80 calls",
+                "meaning": "Bob Murray's typical direct calls on a recruitment."
+              }
+            ],
+            "temporal_status": [
+              "future_effect for prospective recruitment steps.",
+              "hypothetical_or_risk where the details depend on which firm is engaged and how Council structures the search."
+            ]
+          }
+        }
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "event_sheet_slot_context": "Participants raised concrete concerns about the search, including the tight city-manager candidate market, the risk that a first-time city manager might not fit Alameda's complexity, the need for community involvement and transparency, and the tradeoff between hard-copy brochure visibility and environmental/sustainability concerns.",
+        "temporal_status": "The market constraint was an existing or recurring concern; first-time-manager fit and process design were hypothetical or prospective risks; community input and transparency were recurring concerns.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "concrete_concern_language": {
+                "presence_note": "Presence checks for problem-side concern language. A named place/group is not required; wrong anchor or content is Fact Check.",
+                "match": [
+                  "States a concern, harm, obstacle, difficulty, shortage, risk, challenge, tradeoff, deficiency, gap, or comparable problem-side condition.",
+                  "Frames the issue on the problem/concern side rather than only listing a solution or process step.",
+                  "States a concrete risk or tradeoff related to hiring, candidate availability, candidate fit, community involvement, transparency, environmental impact, or process design."
+                ],
+                "not_match": [
+                  "Only describes recruitment steps, firm qualifications, or proposed methods without problem-side concern language.",
+                  "Only says questions were asked without stating what risk, obstacle, challenge, difficulty, or tradeoff was at issue.",
+                  "Only names a solution such as community input, surveys, or brochures without any concern-side framing."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_concern_content": {
+                "presence_note": "Presence requires identifiable concern content, not source-correctness or local anchoring.",
+                "match": [
+                  "Specifies what the concern, risk, obstacle, difficulty, shortage, or tradeoff is about.",
+                  "Identifies the object or mechanism of the concern, such as candidate supply, retirements, first-time-manager fit, community involvement, transparency, local culture, or sustainability tradeoffs.",
+                  "Provides enough content that the reader can distinguish the concern from a generic statement that issues were raised."
+                ],
+                "not_match": [
+                  "Says only that concerns, questions, or issues were raised without saying what the concern was about.",
+                  "Mentions a generic hiring risk, process risk, or public concern without identifying the object or mechanism of the concern.",
+                  "Says only that the process needed to be good, robust, or careful without identifying the concrete concern content."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Recruiters described a tighter city-manager candidate market due to retirements and smaller candidate pools.",
+            "Avery suggested Alameda may be too complex for a first-time city manager unless the person is unusually talented.",
+            "Council members were concerned with how firms would understand Alameda's culture and involve the community.",
+            "Council questioned whether hard-copy brochures were necessary given green or sustainability concerns.",
+            "Alameda is the local anchor for candidate fit, community engagement, and sustainability concerns.",
+            "The broader public-sector/city-management market is the anchor for the talent-pool concern."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence. Check it only when the summary explicitly states a place, group, bounded area, or other anchor.",
+            "Do not require every concern to be mentioned. A summary may pass with one source-consistent concrete concern."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The firms described surveys, town halls, brochures, and candidate databases.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This lists process details without asserting a concern, obstacle, risk, difficulty, or tradeoff."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Council members raised concerns about the search.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "case": "Full correct",
+            "summary": "Participants worried that the city-manager market was tight because of retirements, that Alameda might be too complex for many first-time managers, and that the search needed enough community engagement while balancing hard-copy brochures against sustainability concerns.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concern content and temporal framing are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The main concern was that Alameda had too many qualified city-manager candidates and needed to reduce the applicant pool before interviews.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a specific concern, but it reverses the source-supported tight-market/smaller-pool concern."
+          }
+        ],
+        "slot": "L",
+        "label": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "concrete_concern_language": {
+              "presence_note": "Presence checks for problem-side concern language. A named place/group is not required; wrong anchor or content is Fact Check.",
+              "match": [
+                "States a concern, harm, obstacle, difficulty, shortage, risk, challenge, tradeoff, deficiency, gap, or comparable problem-side condition.",
+                "Frames the issue on the problem/concern side rather than only listing a solution or process step.",
+                "States a concrete risk or tradeoff related to hiring, candidate availability, candidate fit, community involvement, transparency, environmental impact, or process design."
+              ],
+              "not_match": [
+                "Only describes recruitment steps, firm qualifications, or proposed methods without problem-side concern language.",
+                "Only says questions were asked without stating what risk, obstacle, challenge, difficulty, or tradeoff was at issue.",
+                "Only names a solution such as community input, surveys, or brochures without any concern-side framing."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_concern_content": {
+              "presence_note": "Presence requires identifiable concern content, not source-correctness or local anchoring.",
+              "match": [
+                "Specifies what the concern, risk, obstacle, difficulty, shortage, or tradeoff is about.",
+                "Identifies the object or mechanism of the concern, such as candidate supply, retirements, first-time-manager fit, community involvement, transparency, local culture, or sustainability tradeoffs.",
+                "Provides enough content that the reader can distinguish the concern from a generic statement that issues were raised."
+              ],
+              "not_match": [
+                "Says only that concerns, questions, or issues were raised without saying what the concern was about.",
+                "Mentions a generic hiring risk, process risk, or public concern without identifying the object or mechanism of the concern.",
+                "Says only that the process needed to be good, robust, or careful without identifying the concrete concern content."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "distributed",
+          "source_span": "Avery opening/Q&A, Bob Murray opening/Q&A, Council questions on community engagement, candidate mix, and brochure practices",
+          "notes": [
+            "Concerns are not confined to one speaker; they recur through both firms' answers and Council questions."
+          ]
+        },
+        "marker_presence": {
+          "concern_markers_present": [
+            "challenge",
+            "tighter market",
+            "far too complex",
+            "concern areas",
+            "green",
+            "sustainability"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Participants raised concrete concerns about the search, including the tight city-manager candidate market, the risk that a first-time city manager might not fit Alameda's complexity, the need for community involvement and transparency, and the tradeoff between hard-copy brochure visibility and environmental/sustainability concerns.",
+          "temporal_status": {
+            "primary": "hypothetical_or_risk",
+            "notes": [
+              "The candidate-market constraint is described as an existing/recurring concern.",
+              "The first-time-manager fit issue is a prospective risk for the candidate pool.",
+              "The hard-copy brochure issue is a process tradeoff raised during the discussion."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Recruiters described a tighter candidate market due to retirements and a smaller pool for city-manager searches.",
+              "Avery suggested Alameda may be too complex for a first-time city manager unless the individual is unusually talented.",
+              "Council members were concerned with how firms would understand Alameda's culture and involve the community.",
+              "Council questioned whether hard-copy brochures were necessary given green/sustainability concerns."
+            ],
+            "local_anchor": [
+              "Alameda is the local anchor for candidate fit, community engagement, and sustainability concerns.",
+              "The broader public-sector/city-management market is the anchor for the talent-pool concern."
+            ],
+            "temporal_status": [
+              "currently_existing for the market constraint and Council/community context.",
+              "hypothetical_or_risk for candidate-fit and process-design concerns.",
+              "recurring_concern for transparency/community input and candidate-market concerns."
+            ]
+          }
+        }
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "event_sheet_slot_context": "A recurring concern theme is that Alameda's city-manager search should be transparent, community-informed, and tailored to Alameda's specific culture and complexity rather than handled as a generic recruiting exercise.",
+        "temporal_status": "The transparency, community input, and Alameda-specific fit theme recurred across both firm interviews and applied to the future recruitment process.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "problem_side_concern": {
+                "presence_note": "Presence checks that a recurring/shared theme is named in problem-side terms. Exact theme correctness is Fact Check.",
+                "match": [
+                  "Names a recurring or shared concern theme in problem-side language, such as a risk that a process may be too generic, insufficiently transparent, insufficiently community-informed, poorly tailored, or otherwise deficient.",
+                  "Frames community engagement, transparency, culture fit, local fit, candidate-profile design, or process tailoring as a concern-side theme rather than only a proposed solution.",
+                  "States that participants were concerned about a recurring problem or tension affecting how the search/recruitment should be conducted."
+                ],
+                "not_match": [
+                  "Only lists surveys, meetings, outreach, screening, or other process steps without concern-side language.",
+                  "Only says participants discussed or debated recruitment firms without naming a concern theme.",
+                  "Uses generic debate language without a problem-side theme."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_content": {
+                "presence_note": "Presence requires identifiable concern-theme content. Source correctness is Fact Check.",
+                "match": [
+                  "Specifies the object, contrast, mechanism, tension, criticized process feature, or problem content of the shared concern theme.",
+                  "Identifies that the theme concerns transparency, community input, local culture, candidate-profile design, complexity, generic recruitment, or another specific problem-side content area.",
+                  "States how the concern theme relates to the design or conduct of the recruitment/search process."
+                ],
+                "not_match": [
+                  "Says only that there were shared concerns or broad worries without identifying the theme.",
+                  "Mentions isolated words such as transparency, community, or fit without saying what the concern was about.",
+                  "Names only a solution-side process step without problem-side content."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was transparent, community-informed, Alameda-specific city-manager recruitment.",
+            "Avery discussed online surveys, community meetings, and community representatives as possible input methods and said the candidate profile should be shaped by Council and community input.",
+            "Bob Murray said the search environment demanded transparency and community engagement and recommended community input before recruiting.",
+            "Council members repeatedly asked how firms would profile Alameda, understand its culture, involve residents or business owners, and select a diverse candidate mix.",
+            "The theme affected the Alameda City Council, Alameda community/residents/business owners, and the city-manager candidate search process."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to use the word recurring if it names the problem-side theme.",
+            "Do not require every example of community input or profiling to be mentioned."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The recruiters proposed surveys, meetings, and direct phone calls.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This lists solution-side process components but not a recurring concern theme."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "A shared concern came up throughout the interviews.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Problem-side shared-concern language is present, but the concern content is not identifiable."
+          },
+          {
+            "case": "Full correct",
+            "summary": "A recurring concern was that Alameda's city-manager search needed to be transparent, community-informed, and tailored to Alameda's culture and complexity rather than treated as a generic recruitment exercise.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The concern theme and specific content are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The recurring concern was that community input would make the search illegal and should be excluded from the city manager recruitment.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary states a specific concern theme, but it contradicts the source-supported theme favoring transparency and community-informed recruitment."
+          }
+        ],
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "problem_side_concern": {
+              "presence_note": "Presence checks that a recurring/shared theme is named in problem-side terms. Exact theme correctness is Fact Check.",
+              "match": [
+                "Names a recurring or shared concern theme in problem-side language, such as a risk that a process may be too generic, insufficiently transparent, insufficiently community-informed, poorly tailored, or otherwise deficient.",
+                "Frames community engagement, transparency, culture fit, local fit, candidate-profile design, or process tailoring as a concern-side theme rather than only a proposed solution.",
+                "States that participants were concerned about a recurring problem or tension affecting how the search/recruitment should be conducted."
+              ],
+              "not_match": [
+                "Only lists surveys, meetings, outreach, screening, or other process steps without concern-side language.",
+                "Only says participants discussed or debated recruitment firms without naming a concern theme.",
+                "Uses generic debate language without a problem-side theme."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_content": {
+              "presence_note": "Presence requires identifiable concern-theme content. Source correctness is Fact Check.",
+              "match": [
+                "Specifies the object, contrast, mechanism, tension, criticized process feature, or problem content of the shared concern theme.",
+                "Identifies that the theme concerns transparency, community input, local culture, candidate-profile design, complexity, generic recruitment, or another specific problem-side content area.",
+                "States how the concern theme relates to the design or conduct of the recruitment/search process."
+              ],
+              "not_match": [
+                "Says only that there were shared concerns or broad worries without identifying the theme.",
+                "Mentions isolated words such as transparency, community, or fit without saying what the concern was about.",
+                "Names only a solution-side process step without problem-side content."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "distributed",
+          "source_span": "Avery Q&A on community input and city profiling; Bob Murray presentation/Q&A on transparency, town hall/community meetings, and Alameda fit",
+          "notes": [
+            "The theme is synthesized from repeated discussion rather than a single formal statement."
+          ]
+        },
+        "marker_presence": {
+          "recurrence_markers_present": [
+            "community input",
+            "community meeting",
+            "transparency",
+            "engaging the community",
+            "culture of Alameda",
+            "what's important in Alameda"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme is that Alameda's city-manager search should be transparent, community-informed, and tailored to Alameda's specific culture and complexity rather than handled as a generic recruiting exercise.",
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "notes": [
+              "The community engagement / transparency / Alameda-specific fit theme appears across both firm interviews and multiple Council questions.",
+              "The concern applies to the future recruitment process rather than a completed outcome in the segment."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "concern_theme": "transparent, community-informed, Alameda-specific city-manager recruitment.",
+            "concern_content": [
+              "Avery discussed online surveys, community meetings, and community representatives as possible input methods and said the profile should be shaped by Council and community input.",
+              "Bob Murray said the search environment demands transparency and community engagement and recommended community input before recruiting.",
+              "Council members repeatedly asked how firms would profile Alameda, understand its culture, involve residents/business owners, and select a diverse candidate mix."
+            ],
+            "affected_group_or_scope": [
+              "Alameda City Council, Alameda community/residents/business owners, and the city-manager candidate search process."
+            ],
+            "temporal_status": [
+              "recurring_concern for the theme across the segment.",
+              "pending_future_handling for implementation in the eventual search process."
+            ]
+          }
+        }
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "event_sheet_slot_context": "The sampled segment leaves the actual recruiter engagement and the city-manager search unresolved. The Council completed the firm interview process, but the transcript moved to the next agenda item without recording a final selection, contract action, or next-step vote for the recruitment firms.",
+        "temporal_status": "The interviews were completed in-session; recruiter selection/engagement and the city-manager search remained pending future handling or outside the sampled transcript.",
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pendingness_marker": {
+                "presence_note": "Presence checks for explicit unfinishedness or pendingness. Correctness of the pending item/status/path is Fact Check.",
+                "match": [
+                  "States that a decision, selection, engagement, contract action, search process, implementation step, final action, review, or other item remained unresolved, pending, open, outside the segment, or still to be handled later.",
+                  "States that one stage was completed while another identifiable decision, process, or action remained unfinished.",
+                  "Uses explicit pendingness or outside-segment language tied to the item, even if the item or path is source-wrong."
+                ],
+                "not_match": [
+                  "Only says a process was concluded or completed with no indication that any item remained pending or unresolved.",
+                  "Only describes future-oriented methods or possibilities without saying that any decision, process, or action remained unresolved.",
+                  "States only a completed final selection, award, or action with no pendingness marker."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pending_item_identifiable": {
+                "presence_note": "Presence checks whether the pending object is identifiable. Whether it is the source-correct object is Fact Check.",
+                "match": [
+                  "Identifies the pending item, issue, workstream, decision, selection, engagement, contract action, search process, implementation step, or final action.",
+                  "Identifies what specifically remains unresolved rather than saying only that something remained pending."
+                ],
+                "not_match": [
+                  "Says only that something remained pending without identifying the item, issue, workstream, or action.",
+                  "Uses only generic phrases such as next steps or later handling without identifying what remains unfinished."
+                ]
+              },
+              "handling_path_visible": {
+                "presence_note": "Presence checks for a visible path, custody, later-process marker, or explicit absence/outside-segment path. Correctness is Fact Check.",
+                "match": [
+                  "States a future event path, process path, custody path, later handling path, transition context, or explicit absence of a specified path in the sampled material.",
+                  "Shows where or how the pending item would be handled later, or says the handling path was unspecified/outside the sampled segment.",
+                  "Ties pendingness to a later process, meeting, body, contract path, selection path, search path, review path, or outside-segment marker."
+                ],
+                "not_match": [
+                  "States that an item remained pending without any path, custody, later-process marker, transition context, or explicit unspecified/outside-segment marker.",
+                  "Provides only bare future orientation without connecting it to an identifiable body, item, custody, review, hearing, process path, or lack of specified path.",
+                  "Mentions an unrelated future item without connecting it to the pending item."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "The recruitment-firm interview process was completed in-session.",
+            "The actual selection or engagement of a firm was not completed in the sampled transcript.",
+            "The city-manager search itself remained future-facing.",
+            "The pending items were recruitment-firm selection or engagement for Alameda's new city manager search and the subsequent city-manager recruitment process.",
+            "The transcript does not state a specific later vote date, contract path, or selection procedure for the firms.",
+            "After the interviews, the Council moved to agenda item 3A, which was separate from the recruitment-firm interview segment."
+          ],
+          "fact_check_notes": [
+            "Do not invent a future vote date or contract path.",
+            "A summary may say the handling path was unspecified or outside the sampled segment; that is source-consistent.",
+            "A claim that firm selection, engagement, contract action, or the city-manager search was completed in the segment contradicts this slot's pending_status."
+          ]
+        },
+        "score_examples": [
+          {
+            "case": "Topic fail",
+            "summary": "The mayor concluded the interview process and moved to the next agenda item.",
+            "expected_presence": 0,
+            "expected_fact_check": null,
+            "rationale": "This states completed handling but does not mark any pending or unresolved item."
+          },
+          {
+            "case": "Topic pass / Quality fail",
+            "summary": "Something about the search remained unresolved after the interviews.",
+            "expected_presence": 0.5,
+            "expected_fact_check": 1,
+            "rationale": "Pendingness is marked, but the pending item and handling path are not specific enough."
+          },
+          {
+            "case": "Full correct",
+            "summary": "After completing the two recruitment-firm interviews, the Council moved to agenda item 3A without recording a final firm selection, contract action, or vote, leaving recruiter engagement and the city-manager search for later or outside the sampled segment.",
+            "expected_presence": 1,
+            "expected_fact_check": 1,
+            "rationale": "The pending status, pending item, and outside-segment/next-agenda transition are source-consistent."
+          },
+          {
+            "case": "Wrong-but-specific Fact Check failure",
+            "summary": "The Council left only contract paperwork pending after voting to hire Bob Murray & Associates during the segment.",
+            "expected_presence": 1,
+            "expected_fact_check": 0,
+            "rationale": "The summary includes pendingness and an identifiable item/path, but it falsely says the Council voted to hire a firm."
+          }
+        ],
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pendingness_marker": {
+              "presence_note": "Presence checks for explicit unfinishedness or pendingness. Correctness of the pending item/status/path is Fact Check.",
+              "match": [
+                "States that a decision, selection, engagement, contract action, search process, implementation step, final action, review, or other item remained unresolved, pending, open, outside the segment, or still to be handled later.",
+                "States that one stage was completed while another identifiable decision, process, or action remained unfinished.",
+                "Uses explicit pendingness or outside-segment language tied to the item, even if the item or path is source-wrong."
+              ],
+              "not_match": [
+                "Only says a process was concluded or completed with no indication that any item remained pending or unresolved.",
+                "Only describes future-oriented methods or possibilities without saying that any decision, process, or action remained unresolved.",
+                "States only a completed final selection, award, or action with no pendingness marker."
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pending_item_identifiable": {
+              "presence_note": "Presence checks whether the pending object is identifiable. Whether it is the source-correct object is Fact Check.",
+              "match": [
+                "Identifies the pending item, issue, workstream, decision, selection, engagement, contract action, search process, implementation step, or final action.",
+                "Identifies what specifically remains unresolved rather than saying only that something remained pending."
+              ],
+              "not_match": [
+                "Says only that something remained pending without identifying the item, issue, workstream, or action.",
+                "Uses only generic phrases such as next steps or later handling without identifying what remains unfinished."
+              ]
+            },
+            "handling_path_visible": {
+              "presence_note": "Presence checks for a visible path, custody, later-process marker, or explicit absence/outside-segment path. Correctness is Fact Check.",
+              "match": [
+                "States a future event path, process path, custody path, later handling path, transition context, or explicit absence of a specified path in the sampled material.",
+                "Shows where or how the pending item would be handled later, or says the handling path was unspecified/outside the sampled segment.",
+                "Ties pendingness to a later process, meeting, body, contract path, selection path, search path, review path, or outside-segment marker."
+              ],
+              "not_match": [
+                "States that an item remained pending without any path, custody, later-process marker, transition context, or explicit unspecified/outside-segment marker.",
+                "Provides only bare future orientation without connecting it to an identifiable body, item, custody, review, hearing, process path, or lack of specified path.",
+                "Mentions an unrelated future item without connecting it to the pending item."
+              ]
+            }
+          }
+        },
+        "answer_locality": {
+          "locality_type": "localized_with_distributed_support",
+          "source_span": "conditional language throughout Q&A plus conclusion of interview process and transition to next agenda item",
+          "notes": [
+            "Pendingness is supported by conditional engagement language and by the lack of any final selection before the meeting moves on."
+          ]
+        },
+        "marker_presence": {
+          "pendingness_markers_present": [
+            "if Alameda were to decide to engage your firm",
+            "concludes our interview process",
+            "wish you luck with the search"
+          ],
+          "handling_path_markers_absent": [
+            "no stated future vote date",
+            "no named follow-up agenda item for recruiter selection",
+            "no contract award in the sampled segment"
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The sampled segment leaves the actual recruiter engagement and the city-manager search unresolved. The Council completed the firm interview process, but the transcript then moves to the next agenda item without recording a final selection, contract action, or next-step vote for the recruitment firms.",
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "notes": [
+              "The interview stage ended during the segment.",
+              "Recruiter selection/engagement and the search process remained future-facing or outside the sampled transcript."
+            ]
+          },
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "The recruitment-firm interview process was completed in-session.",
+              "The actual selection/engagement of a firm is not completed in the sampled transcript.",
+              "The city-manager search itself remains future-facing."
+            ],
+            "pending_item": [
+              "Recruitment-firm selection or engagement for Alameda's new city manager search.",
+              "Subsequent city-manager recruitment process."
+            ],
+            "handling_path": [
+              "The transcript does not state a specific later vote date, contract path, or selection procedure for the firms.",
+              "After the interviews, the Council moved to agenda item 3A, which is separate from the recruitment-firm interview segment."
+            ],
+            "temporal_status": [
+              "completed_in_session for the interviews.",
+              "pending_future_handling for firm engagement and the city-manager search."
+            ]
+          }
+        }
+      }
+    }
+  }

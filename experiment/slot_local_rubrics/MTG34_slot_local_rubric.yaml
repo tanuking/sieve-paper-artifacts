@@ -1,0 +1,840 @@
+segment_id: "MTG34"
+segment_dir: "34_LongBeachCC_05112021"
+meeting_id: "LongBeachCC_05112021"
+uid: "LongBeachCC_05112021_21-0424"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "34",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_name": "Topic/Framing",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "additional": [
+            "future_effect",
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names Long Beach's strategic vision, strategic planning effort, updated strategic plan, roadmap to 2030, or equivalent citywide strategic visioning subject.",
+                  "A reference to Item 19 can satisfy this label only if the strategic vision / planning subject is also stated."
+                ],
+                "not_match": [
+                  "Mentions only a study session, agenda item, motion, vote, presentation, or receive-and-file action without naming the substantive strategic vision subject.",
+                  "Frames the subject as an unrelated policy area, such as policing, zoning, budget adoption, or vaccine operations, without tying it to the strategic vision effort."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States that the city was developing, updating, consolidating, or using an overarching strategic vision / roadmap for Long Beach through 2030.",
+                  "May describe the policy direction as pulling together existing strategic plans and Council, staff, and community input through equity and resiliency lenses to focus or prioritize city work."
+                ],
+                "not_match": [
+                  "States only that the Council received, filed, approved, heard, or discussed an item, without describing the substantive strategic-vision direction.",
+                  "Says the city finally adopted or enacted the strategic vision as the direction of the item; that is an O/U fact-check issue if stated, and does not by itself express the supported T policy direction."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies the target as Long Beach citywide strategic planning, city service priorities, city government departments/staff, Council districts, the Long Beach community, or the city's future work through 2030.",
+                  "A target can be stated broadly as Long Beach's future citywide priorities if connected to the strategic vision effort."
+                ],
+                "not_match": [
+                  "Names no target beyond a generic plan or meeting.",
+                  "Targets a different jurisdiction, agency, neighborhood-only project, or unrelated program as the object of the policy direction."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was Long Beach's strategic vision / strategic planning process through 2030.",
+            "The policy direction was to develop or update an overarching strategic vision / roadmap, drawing together existing plans and additional Council, staff, and community input.",
+            "Equity and resiliency were design lenses for focusing and prioritizing city work after the pandemic.",
+            "The target was Long Beach citywide strategic planning and service priorities, including city government, departments, staff teams, Council districts, and the Long Beach community."
+          ],
+          "fact_check_notes": [
+            "Do not require every input source or every lens to be mentioned. Omissions are allowed.",
+            "Treat a claim of final adoption of the strategic vision as conflicting with the event-sheet temporal/procedural context when it is part of the T claim."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment was framed around Long Beach's strategic vision / strategic planning effort through 2030: an overarching roadmap that pulls together existing plans and additional Council, staff, and community input using equity and resiliency lenses.",
+          "source_context_for_fact_check": {
+            "subject": "Long Beach's strategic vision / strategic planning process through 2030.",
+            "policy_direction": [
+              "Develop or update an overarching strategic vision / roadmap for Long Beach.",
+              "Pull together themes from existing departmental and focus-area strategic plans rather than starting from scratch.",
+              "Use equity and resiliency as design lenses.",
+              "Focus and prioritize city work as Long Beach emerges from the pandemic."
+            ],
+            "target": [
+              "City of Long Beach strategic planning and service priorities.",
+              "City government, departments, staff teams, Council districts, and the Long Beach community."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council held a study session and heard a staff presentation.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary gives only procedural form and does not identify the strategic vision subject."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The item concerned Long Beach's strategic vision.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is visible, but the summary does not state the policy direction or target."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The session framed Long Beach's strategic vision through 2030 as an overarching roadmap to pull together existing city plans and community, Council, and staff input so the city could prioritize future service work through equity and resiliency lenses.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, policy direction, and target are specific and source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The session framed a final adopted police staffing plan as Long Beach's new public-safety roadmap through 2030.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary is specific enough for T but contradicts the subject and target; the source was citywide strategic visioning, not a final adopted police staffing plan."
+          }
+        ]
+      },
+      "O": {
+        "slot_name": "Outcome/Position",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "additional": [
+            "pending_future_handling"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the City Council conducted, received and filed, carried, passed a motion on, or otherwise disposed of Item 19 / the study-session update on the city's strategic vision efforts.",
+                  "The disposition can be described as the Council handling the study-session recommendation, receiving and filing the update, or a motion carrying after discussion."
+                ],
+                "not_match": [
+                  "States only that Councilmembers commented, asked questions, or heard a presentation without saying the body took a disposition on Item 19 or the receive-and-file update.",
+                  "Describes only future strategic-vision steps without the in-session Council disposition."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item as Item 19, the study-session recommendation, or the receive-and-file update on Long Beach's strategic vision efforts.",
+                  "A substantive description is enough if it distinguishes this item from other agenda matters."
+                ],
+                "not_match": [
+                  "Says only 'the item,' 'the update,' 'the motion,' or 'the proposal' with no strategic-vision or Item 19 specificity.",
+                  "Identifies a different item, such as approval of the final Strategic Vision Action Agenda."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Long Beach City Council.",
+            "The procedural stage was a study-session / receive-and-file update stage, not final adoption or final approval of the strategic vision document or action agenda.",
+            "The Council handled Item 19 as a study session to receive and file an update, and a motion carried after Council discussion and no public comment.",
+            "The acted-on item was Item 19: the study-session recommendation to conduct a study session to receive and file an update on the city's strategic vision efforts.",
+            "The motion carried by roll-call vote; that vote attaches to the Item 19 receive-and-file handling, not to final approval of the strategic vision."
+          ],
+          "fact_check_notes": [
+            "Do not require the mover or seconder unless the summary explicitly states them.",
+            "If the summary states that the Council adopted the final strategic vision or final action agenda, Fact Check fails for procedural_stage / disposition_result."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Council conducted the study-session item to receive and file an update on the city's strategic vision efforts. No public comment was received, and the motion carried after a roll-call vote. This was not final approval of the strategic vision or final adoption of the later action agenda.",
+          "source_context_for_fact_check": {
+            "actor": "Long Beach City Council",
+            "procedural_stage": "Study-session / receive-and-file update stage, not final adoption or final approval of the strategic vision document.",
+            "disposition_result": [
+              "The Council handled Item 19 as a study session to receive and file an update.",
+              "A motion carried after Council discussion and no public comment."
+            ],
+            "acted_on_item": [
+              "Item 19.",
+              "The study-session recommendation to conduct a study session to receive and file an update on the city's strategic vision efforts."
+            ],
+            "vote_result": "Motion carried by roll-call vote, attached to the Item 19 study-session / receive-and-file handling."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Councilmembers discussed equity, resilience, and community outreach for the 2030 vision.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary describes discussion content but no Council disposition on an acted-on item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council carried the motion on the item.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is present, but the acted-on item is not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The Long Beach City Council received and filed the Item 19 study-session update on the city's strategic vision efforts, with the motion carrying after discussion and no public comment.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition and acted-on item are specific and the procedural stage is source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The Council unanimously gave final approval to the Strategic Vision Action Agenda under Item 19.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary ties a disposition to a specific item, but it wrongly states final approval of the action agenda rather than a receive-and-file study-session update."
+          }
+        ]
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "additional": [
+            "currently_existing",
+            "recurring_concern"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States prior background shaping the item, such as 2019 Council direction to develop a strategic vision through 2030, the February 2020 Arup partnership, COVID delay/pause, restart of the process, reliance on existing strategic plans with community feedback, or pandemic-exposed basic needs.",
+                  "The background may be a prior process, delay, already-existing plan ecosystem, or pandemic condition that shaped the current update."
+                ],
+                "not_match": [
+                  "States only the current strategic vision subject or current receive-and-file disposition without prior or precipitating context.",
+                  "States only a future step, such as drafting the action agenda or returning to Council, without explaining prior background shaping the current item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the prior context to why this was a restarted update, why existing plans were used rather than starting from scratch, or why basic needs, resilience, and recovery were emphasized in the current strategic-vision discussion.",
+                  "The connection can be direct or visible from the wording; an explicit 'why now' phrase is not required."
+                ],
+                "not_match": [
+                  "Lists a historical fact with no visible connection to the current Item 19 update, discussion frame, or form of the strategic-vision process.",
+                  "Connects the background to a different current item or policy area not supported by the event sheet."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "In October 2019, Council directed staff to develop a strategic vision reflecting the period through 2030.",
+            "The process began with Arup in February 2020 and was delayed or paused because of COVID.",
+            "The city restarted the work and picked up where it had left off.",
+            "Existing city strategic plans already contained community feedback and themes, so staff did not start from scratch.",
+            "The pandemic context helps explain the emphasis on basic needs, resilience, and recovery in the current discussion."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to include all dates or all background items.",
+            "If the summary states dates or causal links, compare both the value and the role binding against the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The update was shaped by prior Council direction in 2019 to develop a strategic vision through 2030, a February 2020 partnership with Arup, COVID-related delay or pause, restart of the process, existing city plans with community feedback, and pandemic-shifted focus toward basic needs.",
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "Council directed staff in October 2019 to develop a strategic vision through 2030.",
+              "The process began with Arup in February 2020.",
+              "COVID delayed or paused the process.",
+              "The city restarted the work.",
+              "Existing city strategic plans contained community feedback and themes."
+            ],
+            "agenda_connection": [
+              "These prior events and existing data sources explain why the session was an update on a restarted strategic-vision process rather than a new launch from zero.",
+              "The pandemic context explains why basic needs, resilience, and recovery were emphasized."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Staff will draft a Preliminary Strategic Vision Action Agenda and return to Council later.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is future handling, not prior agenda-setting background."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The strategic vision process had been delayed by COVID.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A prior condition is visible, but the connection to the current Item 19 update or form of the discussion is not stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The update came after Council had directed staff in 2019 to develop a 2030 strategic vision, the city began work with Arup in early 2020, COVID paused the process, and staff restarted it using existing city plans that already included community feedback.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary states prior context and visibly connects it to the current restarted update."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The item came forward because voters rejected a completed 2030 plan in 2019, forcing Council to start over with Arup in 2021.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives specific background but contradicts the source on the triggering event, dates, and agenda connection."
+          }
+        ]
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "additional": [
+            "currently_existing",
+            "already_occurred",
+            "future_effect"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "Attaches specific process content or next-step payload to the Item 19 strategic-vision update, such as reviewed plans, resident input, Council/mayor interviews, staff steering committee, listening sessions, vaccine-site outreach, multilingual conversations, employee listening sessions, drafting the Preliminary Strategic Vision Action Agenda, or returning to Council for review.",
+                  "The payload can include already-completed inputs, current process structures, or future steps if they are tied to the study-session update or strategic-vision action agenda process."
+                ],
+                "not_match": [
+                  "States only that the Council received and filed the item or that the motion carried, with no payload detail.",
+                  "States only the broad strategic vision topic without any condition, requirement, scope, number, date, or process content attached to the item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Includes a numeric or scalar payload such as 25 strategic plans, over 15,000 residents, ten interviews, monthly steering committee meetings, two leadership listening sessions, or the 2030 horizon."
+                ],
+                "not_match": [
+                  "Uses only non-specific words such as many plans, broad input, or several meetings, with no identifiable quantity."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Includes an identifiable named process or requirement such as the Preliminary Strategic Vision Action Agenda, vaccine-site outreach, employee listening sessions, staff steering committee, leadership listening sessions, or Council review before finalization."
+                ],
+                "not_match": [
+                  "Mentions generic outreach, feedback, or planning without an identifiable named process, requirement, or next-step content."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Includes a scope boundary such as citywide Long Beach, west/north/central Long Beach outreach locations, hard-to-reach neighborhoods, or conversations in Spanish, Tagalog, and 'Kami' as transcribed."
+                ],
+                "not_match": [
+                  "Gives payload content but no applicable scope, geography, language, group, or target boundary."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "Includes a time boundary such as 'this week' for vaccine-site outreach, summer / the next couple of months for Council draft review, or 2030 as the vision horizon."
+                ],
+                "not_match": [
+                  "Uses only unspecific future wording with no identifiable date, time boundary, horizon, or deadline."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Item 19's study-session update on the city's strategic vision efforts and staff's process / next-step plan.",
+            "Staff reviewed 25 strategic plans and those plan efforts had engaged over 15,000 community residents.",
+            "Ten interviews were conducted with Councilmembers and the mayor.",
+            "A staff steering committee met monthly, city leadership had participated in two listening sessions, and more staff listening was planned.",
+            "Additional resident outreach was planned at vaccine distribution sites in parks in hard-to-reach neighborhoods of west, north, and central Long Beach.",
+            "Conversations were described as available in Spanish, Tagalog, and 'Kami' as transcribed.",
+            "Staff would draft a Preliminary Strategic Vision Action Agenda and return to Council with a presentation and draft/review opportunity before finalization."
+          ],
+          "fact_check_notes": [
+            "Do not require every process step or number to be mentioned.",
+            "If the summary states a number, language, geography, date, or process step, check both the value and what it is attached to.",
+            "Do not treat the planned action-agenda drafting or later Council review as already completed."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The update reported specific inputs and next steps: 25 plans, over 15,000 residents engaged through those plan efforts, ten interviews with Councilmembers and the mayor, monthly staff steering committee work, leadership and employee listening sessions, vaccine-site outreach in west/north/central Long Beach, and drafting a Preliminary Strategic Vision Action Agenda before Council review and finalization.",
+          "source_context_for_fact_check": {
+            "payload_carrier": [
+              "Item 19 study-session update on the city's strategic vision efforts.",
+              "Staff's strategic-vision process update and next-step plan."
+            ],
+            "payload_content": [
+              "Review common themes from existing departmental/focus-area strategic plans.",
+              "Gather Council and mayor input through interviews.",
+              "Use staff steering committee and city leadership/staff listening sessions.",
+              "Conduct additional resident outreach at vaccine distribution sites in hard-to-reach neighborhoods.",
+              "Ask residents about resources relied on during the year, recovery priorities, what a well-prepared Long Beach looks like, and convenient ways to give future feedback.",
+              "Draft a Preliminary Strategic Vision Action Agenda.",
+              "Return to Council with a presentation and a draft/review opportunity before finalization."
+            ],
+            "payload_scope": [
+              "Citywide Long Beach strategic vision through 2030.",
+              "Additional outreach included parks/vaccine sites in west, north, and central Long Beach.",
+              "Community conversations were described as available in Spanish, Tagalog, and 'Kami' as transcribed."
+            ],
+            "numeric_values": {
+              "25": "strategic plans across city departments reviewed / used as input",
+              "over 15000": "community residents engaged through those strategic-plan efforts",
+              "10": "interviews with Councilmembers and the mayor",
+              "monthly": "staff steering committee meeting cadence",
+              "2": "city leadership listening sessions already participated in"
+            },
+            "date_or_time_values": {
+              "this week": "planned start of vaccine-site community outreach",
+              "summer / next couple of months": "expected period for Council to receive a draft, review, and provide feedback",
+              "2030": "future horizon for the strategic vision"
+            }
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council voted to receive and file the strategic vision update.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This gives only the action shell and no attached payload detail."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The update described outreach and planning work for the strategic vision.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the update, but no qualifying number, named requirement, scope boundary, or date/time boundary is identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The update said staff had reviewed 25 city strategic plans, drawn on input from over 15,000 residents, interviewed Councilmembers and the mayor, and would conduct vaccine-site and employee outreach before drafting a Preliminary Strategic Vision Action Agenda for Council review.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the update and includes numbers and named next-step requirements that are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The adopted action agenda required staff to survey 250,000 residents at South Long Beach libraries before final approval that night.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific payload but attaches it to the wrong stage and gives unsupported numbers, scope, and timing."
+          }
+        ]
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "temporal_status": {
+          "primary": "currently_existing",
+          "additional": [
+            "hypothetical_or_risk",
+            "recurring_concern"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concrete concern, obstacle, barrier, risk, gap, or problem the strategic vision process needed to account for, such as pandemic-exposed basic needs, food access, safe spaces, reliable infrastructure, clean air and water, community safety, hard-to-reach residents, digital divide barriers, insufficient North Long Beach outreach coverage, or government service response/customer-service issues.",
+                  "The concern can be current, recurring, or risk/hypothetical, as long as it is stated on the problem side."
+                ],
+                "not_match": [
+                  "Mentions outreach, equity, engagement, or service delivery only as a solution-side goal without stating a problem, obstacle, risk, or deficiency.",
+                  "States only that Councilmembers had questions or comments, without naming what concern or obstacle they raised."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Specifies what the concern is about: basic needs such as food or safe spaces; infrastructure, air/water, or safety; difficulty reaching residents; digital access gaps; one North Long Beach site being insufficient; or uneven government response times/customer service.",
+                  "A named place or group can help but is not required if the concern content itself is specific."
+                ],
+                "not_match": [
+                  "Uses only generic phrases such as concerns, challenges, needs, or problems without saying what the concern was about.",
+                  "States an unsupported local anchor or affected group as the concern's specific content."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "The process needed to account for pandemic-exposed basic needs, including food, safe spaces, infrastructure, clean air and water, and safety in homes and communities.",
+            "Hard-to-reach residents and digital divide barriers were concerns.",
+            "A Councilmember said one North Long Beach vaccine-site outreach location would not capture enough input from that large area/population.",
+            "Government service delivery, response times, and customer service were identified as major resident priorities.",
+            "Supported local anchors include Long Beach citywide; west, north, and central Long Beach for hard-to-reach outreach; North Long Beach for the one-site concern; and districts/equity areas discussed in relation to outreach."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence, but if explicitly stated it must be source-consistent.",
+            "Do not reduce Presence solely because the summary lacks a named place, named group, or bounded area."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment identified concrete concerns: pandemic-exposed basic needs such as food and safe spaces, hard-to-reach residents, the digital divide, insufficient outreach coverage if North Long Beach were represented by only one vaccine site, and government service response/customer-service needs.",
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Pandemic recovery increased focus on food, safe spaces, infrastructure, clean air and water, and safety.",
+              "Hard-to-reach residents needed to be included.",
+              "Digital divide barriers included residents without computers or cell phones.",
+              "One North Long Beach vaccination site was described as insufficient to capture needed input from a large area/population.",
+              "Government service delivery, response times, and customer service were identified as major resident priorities."
+            ],
+            "local_anchor": [
+              "Long Beach citywide.",
+              "West, north, and central Long Beach for hard-to-reach outreach areas.",
+              "North Long Beach for the concern that one vaccine-site outreach location would not capture enough input."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The city wanted more community outreach during the strategic vision process.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is solution-side outreach language without a concrete concern, harm, obstacle, risk, or gap."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Councilmembers raised concerns about the strategic vision process.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the specific concern content is not identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Councilmembers and staff flagged concrete obstacles including pandemic-related basic needs, residents without digital access, hard-to-reach neighborhoods, and the risk that a single North Long Beach vaccine-site outreach location would miss too much input.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary names specific concerns and uses supported local anchors."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The main concern was that East Long Beach residents had too many computers and were overrepresented at library outreach sites.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific concern but contradicts the source-supported obstacle content and local anchor."
+          }
+        ]
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "additional": [
+            "currently_existing",
+            "future_effect"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names a recurring/shared concern theme in problem-side terms: inequitable or unrepresentative planning, risk of leaving neighborhoods behind, insufficient inclusion of hard-to-reach residents, digital divide exclusion, lack of community voice in planning/decision-making, or insufficient prioritization of areas of greatest need.",
+                  "The summary does not need to say the concern recurred explicitly, but the wording must present the theme as a problem, gap, risk, or deficiency."
+                ],
+                "not_match": [
+                  "Mentions equity, outreach, engagement, or community voice only as a positive design principle or solution-side goal with no problem-side concern language.",
+                  "Gives a single concrete obstacle without synthesizing a broader concern theme about representation, equity, or inclusion."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Makes clear that the concern is about equitable, representative strategic visioning: addressing areas of greatest need, ensuring no neighborhood is left behind, including hard-to-reach residents and those affected by the digital divide, and making community voices part of planning and decision-making.",
+                  "The summary may state only one or two of these supported content elements if the broader equitable/representative planning concern is clear."
+                ],
+                "not_match": [
+                  "Uses only a generic concern label such as equity concerns, engagement issues, or community needs without indicating what the concern is about.",
+                  "Frames the recurring concern as opposition to the strategic vision process itself rather than the need for equitable and representative planning."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was that the strategic vision must be equitable and representative.",
+            "The concern included addressing areas of greatest need and prioritizing resources through an equity lens.",
+            "The concern included ensuring no neighborhood is left behind.",
+            "The concern included engaging hard-to-reach residents and people affected by the digital divide.",
+            "The concern included making community voices part of planning and decision-making."
+          ],
+          "fact_check_notes": [
+            "Do not require every supported concern element to be reproduced.",
+            "A summary that treats the recurring concern as opposition to the strategic vision itself conflicts with the source."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring theme was that the strategic vision must be equitable and representative: it should address areas of greatest need, ensure no neighborhood is left behind, include hard-to-reach residents and those affected by the digital divide, and make community voices part of planning and decision-making.",
+          "source_context_for_fact_check": {
+            "concern_theme": "Equitable, representative strategic visioning and service planning for Long Beach.",
+            "concern_content": [
+              "Equity should be integrated into policy, program design, and implementation.",
+              "Community voices should be included in planning and decision-making.",
+              "Resources should be prioritized toward areas of greatest need.",
+              "No neighborhood should be left behind.",
+              "Hard-to-reach residents and people affected by the digital divide should be included."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The city planned to use an equity lens in developing the strategic vision.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is solution-side design language and does not name a problem-side concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Participants shared equity concerns during the strategic vision discussion.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the concern content is too generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "A shared concern was that the strategic vision could miss equity and representation unless it included hard-to-reach residents, people affected by the digital divide, areas of greatest need, and neighborhoods that might otherwise be left behind.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary names the recurring concern theme and gives source-supported content."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The shared concern was that too much public input would prevent the Council from excluding high-need neighborhoods from the strategic vision.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary uses problem-side concern language but reverses the source-supported concern content."
+          }
+        ]
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "additional": [
+            "future_effect"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly states that the strategic vision work, action agenda, draft, Council review, listening sessions, approval, finalization, or final sharing remained pending, unfinished, in progress, still to come, or would return later.",
+                  "Future wording can satisfy this label when tied to the identifiable strategic vision workstream, such as staff will return to Council in summer / the next couple of months with a draft."
+                ],
+                "not_match": [
+                  "States only that the Council received and filed the update or that the motion carried, with no pending or future-return marker.",
+                  "States only a broad future aspiration for Long Beach in 2030 without indicating unfinished handling, review, drafting, or return path."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies what remains pending: the strategic vision process, Preliminary Strategic Vision Action Agenda, draft strategic vision / action-agenda materials, community and employee listening sessions, Council review/approval, finalization, or final version sharing.",
+                  "The pending item can be expressed as the strategic vision workstream if the future handling is clear."
+                ],
+                "not_match": [
+                  "Says only that more work, more discussion, or something would happen later without identifying the strategic vision, action agenda, draft, listening sessions, review, or finalization."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "Shows a concrete future path: continue community/vaccine-site outreach, conduct employee listening sessions, draft the Preliminary Strategic Vision Action Agenda, return to Council in summer / the next couple of months with a draft and presentation, allow Council review and feedback, then finalize and share the final version after approval.",
+                  "A path to later Council review or finalization is enough if tied to the identifiable pending item."
+                ],
+                "not_match": [
+                  "Names a pending item but gives no process path, future body, review, drafting, outreach, approval, or finalization step.",
+                  "Gives a future path for an unrelated item or post-adjournment announcement."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "The strategic vision process remained in progress after the session.",
+            "No specific direction was requested during the session.",
+            "Final Council review/approval and final document sharing were still future steps.",
+            "Pending items included the Preliminary Strategic Vision Action Agenda, draft strategic vision / action-agenda materials, remaining community and employee listening-session input, Council review and feedback, approval, and finalization.",
+            "The handling path included continuing outreach, conducting employee listening sessions, drafting the action agenda, returning to Council in summer / over the next couple of months with a draft and presentation, allowing review and feedback, and finalizing/sharing the final version after approval."
+          ],
+          "fact_check_notes": [
+            "Distinguish the completed in-session receive-and-file handling from the still-pending strategic vision/action-agenda work.",
+            "If the summary states the process was completed or finally approved in the session, Fact Check fails for pending_status."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The strategic vision work remained unfinished after the session. Staff were not asking for specific direction that night; they would continue community and employee listening sessions, draft a Preliminary Strategic Vision Action Agenda, return to Council in summer / the next couple of months with a draft for review and feedback, then finalize and share the final version after approval.",
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "The strategic vision process remained in progress.",
+              "No specific direction was requested during the session.",
+              "Final Council review/approval and final document sharing were still future steps."
+            ],
+            "pending_item": [
+              "Preliminary Strategic Vision Action Agenda.",
+              "Draft strategic vision / action-agenda materials for Council review and feedback.",
+              "Remaining community and employee listening-session input."
+            ],
+            "handling_path": [
+              "Continue community outreach, including vaccine-site outreach.",
+              "Conduct employee listening sessions.",
+              "Draft the Preliminary Strategic Vision Action Agenda.",
+              "Return to Council in summer / over the next couple of months with a draft and presentation.",
+              "Allow Council review and feedback.",
+              "Continue toward finalization and share the final version with the city team after approval."
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The motion carried after the Council received and filed the Item 19 update.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is the completed in-session disposition and has no pendingness marker."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "More work on the strategic vision remained pending.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is clear, but the specific pending item and handling path are not sufficiently visible."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The strategic vision process remained unfinished: staff would continue community and employee listening sessions, draft the Preliminary Strategic Vision Action Agenda, and return to Council in summer or the next couple of months with a draft for review before finalization.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The pending status, pending item, and future handling path are all clear and source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "No future handling remained because the Council finalized and approved the Strategic Vision Action Agenda during the study session.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary makes a specific completion claim that contradicts the source-supported pending status and handling path."
+          }
+        ]
+      }
+    }
+  }

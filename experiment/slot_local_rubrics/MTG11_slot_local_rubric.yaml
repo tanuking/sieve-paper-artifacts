@@ -1,0 +1,913 @@
+segment_id: "MTG11"
+segment_dir: "11_DenverCityCouncil_12192016"
+meeting_id: "DenverCityCouncil_12192016"
+uid: "DenverCityCouncil_12192016_16-1034"
+decision_type: "Ordinance"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "11",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "Topic/Framing",
+        "source_summary": "The segment concerned a rezoning of the vacant property at 1209 Perry Street in the West Colfax neighborhood from existing lower-scale residential zoning to a General Urban Residential Mixed Use five-story district, in order to prepare the site for redevelopment near transit.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "notes": [
+            "The Council decision occurred in-session.",
+            "The redevelopment enabled by the new zoning was future-facing.",
+            "The property was vacant at the time of the hearing."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "subject_identified": {
+              "semantic_meaning": "The summary names the substantive subject as a noun or noun phrase identifying the policy area, issue, or matter being discussed. Procedural form, bare agenda labels, motion numbers, or bill identifiers without the substantive subject do not satisfy this label.",
+              "match": [
+                "identifies the substantive matter as a rezoning, zoning map amendment, or comparable land-use classification change",
+                "frames the discussion around changing the zoning status of a specific property or site"
+              ],
+              "not_match": [
+                "only says a bill, hearing, motion, or agenda item was discussed without naming a substantive land-use or zoning subject",
+                "only describes procedural activity such as public hearing, final consideration, or passage",
+                "frames the subject as an unrelated project type, such as transit construction, park acquisition, or a general housing program, rather than a rezoning/map amendment"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "policy_direction": {
+              "semantic_meaning": "The summary shows what policy move was being pursued for the subject. This may be a direction-bearing verb such as update, revise, clarify, expand, restrict, launch, phase out, or consolidate. It may also be a concrete rule effect showing how the target would change, such as defaulting, extending, narrowing, broadening, adding, removing, changing a threshold, or changing a deadline. Procedural disposition, such as approved, adopted, recommended, or passed, is not policy direction.",
+              "match": [
+                "states that the policy move was to change the zoning classification or allowed land-use form for the property",
+                "states that the zoning change would enable or prepare future redevelopment",
+                "states a direction from a lower-scale residential zoning pattern toward a more intensive residential mixed-use zoning pattern"
+              ],
+              "not_match": [
+                "only states that the item passed, was approved, or was placed on final consideration",
+                "says the Council acted without describing what the zoning move would do",
+                "states a direction unrelated to rezoning or land-use classification change"
+              ]
+            },
+            "target": {
+              "semantic_meaning": "The summary identifies the target to which the policy direction applies: the entity, group, area, process, rule set, or scope the direction is aimed at. A bare direction without a target does not satisfy this label.",
+              "match": [
+                "identifies the property, site, area, or zoning classification to which the zoning move applies",
+                "makes clear that the policy direction applies to a particular property rather than to an unspecified citywide issue",
+                "identifies the target rule set or site affected by the zoning change"
+              ],
+              "not_match": [
+                "does not identify what property, area, or rule set would be changed",
+                "only names a bill or hearing with no target of the policy direction",
+                "gives a policy direction but leaves the target entirely generic or unrecoverable"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was a rezoning / map amendment for 1209 Perry Street.",
+            "The policy direction was to rezone the vacant property to General Urban Residential Mixed Use five stories / GR-X-5.",
+            "The rezoning was intended to prepare the vacant property for redevelopment near transit.",
+            "The target property was 1209 Perry Street in the West Colfax neighborhood, Council District 3, just north of Perry Street Station and near Lakewood Dry Gulch Park.",
+            "The zoning change was from General Urban Multi-Unit three stories and Urban Edge Two Unit to General Urban Residential Mixed Use five stories."
+          ],
+          "fact_check_notes": [
+            "A summary does not need to list every existing and proposed zoning district to pass Fact Check.",
+            "If a summary states a zoning code, address, neighborhood, target property, or policy direction, compare that explicit claim against the event sheet.",
+            "Future redevelopment enabled by the rezoning is future-facing; do not treat it as completed construction."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "subject": "rezoning / map amendment for 1209 Perry Street",
+          "policy_direction": [
+            "rezone the property to allow a General Urban Residential Mixed Use five-story district",
+            "prepare the vacant property for redevelopment"
+          ],
+          "target": {
+            "property": {
+              "address": "1209 Perry Street",
+              "neighborhood": "West Colfax",
+              "council_district": "Council District 3",
+              "current_condition": "vacant"
+            },
+            "zoning_change": {
+              "from": [
+                "General Urban Multi-Unit, three stories",
+                "Urban Edge Two Unit"
+              ],
+              "to": [
+                "General Urban Residential Mixed Use, five stories"
+              ]
+            },
+            "transit_context": [
+              "just north of Perry Street Station",
+              "near Lakewood Dry Gulch Park"
+            ]
+          }
+        },
+        "answer_locality": "Staff report near the opening of the public hearing; later reinforced by council comments about density near the light rail station.",
+        "marker_presence": "Explicit",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council held a public hearing and voted on Council Bill 1034.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "This is procedural only and does not name the substantive rezoning/map-amendment subject."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The segment discussed a rezoning matter in Denver.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject type is visible, but neither the policy direction nor the target property is specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The segment focused on rezoning the vacant property at 1209 Perry Street from lower-scale residential zoning to a five-story General Urban Residential Mixed Use district to support redevelopment near Perry Street Station.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The segment focused on rezoning Lakewood Dry Gulch Park into a five-story mixed-use district for completed redevelopment.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The claim is specific enough for Presence but contradicts the target and temporal status; the property was 1209 Perry Street and redevelopment was future-facing."
+          }
+        ]
+      },
+      "O": {
+        "slot": "O",
+        "label": "Outcome/Position",
+        "source_summary": "City Council placed Council Bill 1034 on final consideration, held the public hearing, and passed the bill.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "notes": [
+            "The public hearing was opened and closed during the segment.",
+            "The final Council vote occurred during the segment.",
+            "Council Bill 1034 passed during the segment."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "semantic_meaning": "The summary states that the body took a disposition on an acted-on item. Discussion, questioning, support, or hearing activity alone does not satisfy this label. This label does not decide whether the disposition is at the source-supported procedural stage. If a recognizable disposition is tied to an acted-on item, Presence may pass even when the stage is wrong. Stage accuracy is evaluated in Fact Check.",
+              "match": [
+                "states that the governing body took a recognizable disposition, such as passing, approving, rejecting, referring, deferring, or recommending an acted-on item",
+                "ties a disposition verb to a bill, motion, amendment, rezoning item, or other acted-on item",
+                "states that the item was moved for action or otherwise disposed of during the segment"
+              ],
+              "not_match": [
+                "only describes staff presentation, public comment, questions, or general discussion without a body disposition",
+                "states support or opposition by a speaker without saying the body acted on an item",
+                "describes the zoning payload without saying that any acted-on item received a disposition"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "acted_on_item_specific": {
+              "semantic_meaning": "The acted-on item is identified specifically enough that the reader can tell which item was acted on. Formal numbers or labels are sufficient but not required. A substantive description also satisfies this label when it distinguishes the item within the sampled segment. A generic referent alone is not enough.",
+              "match": [
+                "identifies the acted-on item by a formal identifier, substantive description, or both",
+                "makes clear which rezoning, bill, motion, or map amendment item received the disposition",
+                "distinguishes the acted-on item from generic Council business in the segment"
+              ],
+              "not_match": [
+                "only says the body passed or approved “the item” with no way to distinguish what item it was",
+                "gives a disposition but no acted-on item",
+                "only names the general meeting or hearing rather than the item acted on"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "Denver City Council was the acting body.",
+            "Council Bill 1034 was at final Council consideration / public hearing stage.",
+            "Council Bill 1034 was moved for final consideration and do-pass, the public hearing was held and closed, and the bill passed.",
+            "The acted-on item was Council Bill 1034, the map amendment rezoning application for 1209 Perry Street.",
+            "The vote result was passage of Council Bill 1034 at final Council action; the numeric vote count is not clearly reliable from the transcript text."
+          ],
+          "fact_check_notes": [
+            "Do not require a numeric vote count. If a summary gives one, compare it only if the stated value and attachment are source-supported.",
+            "Do not treat the completed Council passage as merely a recommendation, referral, or pending later action.",
+            "Do not treat the passage as completed construction or completed redevelopment; the disposition was passage of the rezoning bill."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "actor": "Denver City Council",
+          "procedural_stage": "final Council consideration / public hearing stage",
+          "disposition_result": [
+            "Council Bill 1034 was moved for final consideration and do-pass.",
+            "The public hearing was held and then closed.",
+            "Council Bill 1034 passed."
+          ],
+          "acted_on_item": [
+            "Council Bill 1034",
+            "map amendment rezoning application for 1209 Perry Street"
+          ],
+          "vote_result": {
+            "value": "passed",
+            "attached_to": "final Council action on Council Bill 1034",
+            "numeric_count": "not clearly reliable from transcript text"
+          },
+          "temporal_status": [
+            "completed_in_session"
+          ]
+        },
+        "answer_locality": "Opening procedural motion and final roll-call/vote announcement.",
+        "marker_presence": "Explicit",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Staff described the proposed GR-X-5 zoning and the property's transit context.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "The summary gives background/payload but no Council disposition on an acted-on item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council passed the item.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is present, but the acted-on item is not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Denver City Council held the public hearing on Council Bill 1034 and passed the 1209 Perry Street rezoning bill on final consideration.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition, acted-on item, actor, and stage are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The Planning Board merely recommended Council Bill 1034 for later City Council consideration.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The acted-on item is specific and a disposition is stated, but the actor, procedural stage, and result contradict the event sheet."
+          }
+        ]
+      },
+      "B": {
+        "slot": "B",
+        "label": "Agenda-Setting Background / Precipitating Context",
+        "source_summary": "The rezoning was framed against prior planning and development context: the property is near light rail, within an area identified for transit-oriented and higher-density redevelopment, and the surrounding area was described as changing.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing"
+          ],
+          "notes": [
+            "The adopted plans and light rail investment predated the hearing.",
+            "The property and surrounding area were described as currently undergoing change."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "precipitating_context_visible": {
+              "semantic_meaning": "The summary states a prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background connected to the current item. The context must be stated as its own proposition; it need not include an explicit agenda-necessity statement.",
+              "match": [
+                "states a prior or existing planning, transit, investment, neighborhood-change, or comparable background condition connected to the item",
+                "states background context that shaped how the rezoning was framed or justified",
+                "states an adopted-plan, station-area, growth-area, or changing-conditions context as its own proposition"
+              ],
+              "not_match": [
+                "only states the rezoning request or Council disposition without any prior or existing background context",
+                "only gives the operative zoning payload with no background condition or planning context",
+                "requires or implies a separate “why now” statement when background context is otherwise visible"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "connected_to_current_item_or_form": {
+              "semantic_meaning": "The prior event, condition, process, problem, opposition, mediation, revision, failure, deadline, or similar background is visibly connected to the current item, the form of the proposal, a revision, the discussion frame, or how the item was handled. An explicit “why now” or agenda-necessity statement is not required.",
+              "match": [
+                "shows that the background context was used to frame, support, justify, or explain the rezoning item",
+                "connects the planning, transit, growth, investment, or changing-conditions context to the current item or discussion frame",
+                "makes the relation between the background condition and the rezoning discussion visible without requiring an explicit agenda-necessity statement"
+              ],
+              "not_match": [
+                "states a free-floating background fact with no visible relation to the current item, proposal, or discussion frame",
+                "states a context that could apply anywhere without connecting it to the rezoning or its justification",
+                "treats the Council vote itself as the background condition"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "Adopted plans supported transit-oriented development and higher density near station areas.",
+            "The property was near Perry Street Station / the West Line context.",
+            "The West Colfax Plan identified the area as an urban neighborhood station and growth opportunity area.",
+            "Staff cited changing conditions and nearby major investment as justifying circumstances.",
+            "The planning and development context was used to support the rezoning request and show that the application met rezoning criteria."
+          ],
+          "fact_check_notes": [
+            "The background context may be prior adopted plans, existing transit proximity, existing growth designations, or currently changing conditions.",
+            "A summary does not need to name every plan; partial but source-consistent background is allowed.",
+            "Do not convert the background into the Council's final action; passage belongs to O."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "trigger_condition": [
+            "adopted plans supported transit-oriented development and higher density near station areas",
+            "the property was near Perry Street Station / the West Line context",
+            "the West Colfax Plan identified the area as an urban neighborhood station and growth opportunity area",
+            "staff cited changing conditions and nearby major investment as justifying circumstances"
+          ],
+          "agenda_connection": [
+            "this planning and development context was used to support the rezoning request",
+            "staff treated these conditions as reasons the application met rezoning criteria"
+          ]
+        },
+        "answer_locality": "Staff report section on adopted plans, justifying circumstances, and neighborhood context.",
+        "marker_presence": "Explicit",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council passed Council Bill 1034 after the public hearing.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "This states a disposition but no prior or existing background context."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The area had been changing near light rail.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A background condition is visible, but it is not clearly connected to the current rezoning item or its justification."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Staff framed the 1209 Perry Street rezoning against adopted plans and West Line station-area context, noting that the West Colfax Plan supported one-to-five-story residential growth near light rail and that nearby investment showed changing conditions.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The prior/existing context and its connection to the rezoning are both source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The rezoning came forward because the West Colfax Plan designated the area for low-density preservation away from transit.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The background is specific and connected, but it contradicts the source-supported station-area, growth, and transit-oriented context."
+          }
+        ]
+      },
+      "N": {
+        "slot": "N",
+        "label": "Outcome-Near Condition / Operative Payload",
+        "source_summary": "The operative payload of the approved rezoning was to change the property's zoning to GR-X-5, a five-story residential mixed-use district with specific use and building-form implications, including ground-story retail permission, upper-story lodging or residential use, and shopfront building form.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "notes": [
+            "The zoning change was approved in-session.",
+            "The land-use and building-form implications apply after the rezoning.",
+            "Actual redevelopment was not completed during the segment."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "payload_attached_to_action": {
+              "semantic_meaning": "The summary expresses a condition, requirement, scope, restriction, number, date, or other payload as attached to the action or acted-on item. Single-sentence attachment and anaphora-linked adjacent sentences count. A free-standing background description that requires the reader to reconstruct the action-payload link does not satisfy this label. A recognizable payload assigned to the wrong actor or stage can pass Presence; the replacement error belongs to Fact Check.",
+              "match": [
+                "expresses an operative zoning payload, permission, restriction, scope, number, or building/use rule as attached to the bill, rezoning, or acted-on item",
+                "states what the action would change, allow, limit, classify, or require beyond the bare fact that the body acted",
+                "links a land-use or zoning-district consequence to the approved or proposed item"
+              ],
+              "not_match": [
+                "only says the item passed or was heard without stating what the action carried or changed",
+                "only gives background planning context with no action-linked payload",
+                "states a community concern without describing an operative term carried by the action"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": {
+            "number": {
+              "semantic_meaning": "The attached payload includes an identifiable numeric quantity, such as a count, amount, percentage, duration, height, vote threshold, or other measured value.",
+              "match": [
+                "the attached payload includes an identifiable numeric quantity, height, area, threshold, limit, or other measured value",
+                "the summary states a number as part of what the zoning payload allows, limits, or applies to"
+              ],
+              "not_match": [
+                "states only that the bill changes zoning with no numeric quantity or measured value attached",
+                "uses a number only as a bill identifier rather than as part of the operative payload"
+              ]
+            },
+            "named_requirement": {
+              "semantic_meaning": "The attached payload includes an identifiable named requirement, restriction, condition, or carve-out.",
+              "match": [
+                "the attached payload includes an identifiable named zoning classification, use permission, use limitation, building form, or comparable operative requirement",
+                "the summary names a specific type of rule or condition carried by the zoning payload"
+              ],
+              "not_match": [
+                "only says the bill changes what can be built without naming any classification, permission, limitation, condition, or building form",
+                "only describes a possible future project preference rather than an operative zoning term"
+              ]
+            },
+            "scope_boundary": {
+              "semantic_meaning": "The attached payload includes an identifiable scope boundary, such as a geographic boundary, categorical boundary, population-specific boundary, or other boundary defining what the payload applies to.",
+              "match": [
+                "the attached payload identifies the property, site, district, category, use type, building portion, or other boundary to which the operative term applies",
+                "the summary makes clear the scope of the payload rather than leaving the rule entirely unbounded"
+              ],
+              "not_match": [
+                "states an operative term but gives no applicable site, category, use, building portion, or scope boundary",
+                "names a general neighborhood issue without tying the payload to a bounded target or category"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Council Bill 1034 / the rezoning map amendment application for 1209 Perry Street.",
+            "The payload was to rezone the property to General Urban Residential Mixed Use five stories / GR-X-5.",
+            "The GR-X-5 district allows ground-story retail and limits upper stories to lodging or residential uses.",
+            "Strictly commercial buildings are allowed only within the stated 10,000-square-foot limitation.",
+            "The shopfront building form is the allowed form.",
+            "The payload scope was the 1209 Perry Street vacant property, about one quarter acre / 11,300 square feet.",
+            "Five stories is the height scale of the requested GR-X-5 zoning."
+          ],
+          "fact_check_notes": [
+            "A summary may satisfy N with any supported operative payload detail; it does not need to mention every zoning implication.",
+            "If a summary states a number, compare both the value and what the value is attached to.",
+            "Actual redevelopment was not completed during the segment; the approved zoning has future legal effect."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "payload_carrier": [
+            "Council Bill 1034",
+            "rezoning / map amendment application for 1209 Perry Street"
+          ],
+          "payload_content": [
+            "rezone the property to General Urban Residential Mixed Use five stories / GR-X-5",
+            "allow ground-story retail",
+            "limit upper stories to lodging or residential uses",
+            "allow strictly commercial building only within the stated limitation",
+            "use the shopfront building form"
+          ],
+          "payload_scope": [
+            "1209 Perry Street",
+            "vacant property of about one quarter acre / 11,300 square feet"
+          ],
+          "payload_scalar_or_baseline": [
+            {
+              "value": "five stories",
+              "meaning": "height scale of requested GR-X-5 zoning"
+            },
+            {
+              "value": "about one quarter acre / 11,300 square feet",
+              "meaning": "size of the property"
+            },
+            {
+              "value": "10,000 square feet",
+              "meaning": "limit referenced for strictly commercial building in the zone district"
+            }
+          ]
+        },
+        "answer_locality": "Staff report section explaining the requested zoning and the GR-X-5 district features.",
+        "marker_presence": "Explicit",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Council Bill 1034 passed after public comment.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "This states the action shell but not the operative payload carried by the action."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The bill changed what could be built on the property.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the action, but no numeric quantity, named requirement, scope boundary, or date cutoff is identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Council Bill 1034 rezoned 1209 Perry Street to GR-X-5, a five-story residential mixed-use district allowing ground-floor retail with upper stories limited to lodging or residential uses.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The carrier, payload content, scope, and numeric/named details are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "Council Bill 1034 rezoned 1209 Perry Street to a three-story district that prohibits ground-floor retail.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The payload is specific enough for Presence but contradicts the five-story GR-X-5 payload and ground-story retail permission."
+          }
+        ]
+      },
+      "L": {
+        "slot": "L",
+        "label": "Concrete Concern",
+        "source_summary": "A public speaker supported the rezoning but raised concrete concerns that it could affect Villa Park and the West Side, contribute to gentrification, divide the community, and fail to serve existing community needs, including a long-standing Jewish community and children using the area for school and transit access.",
+        "temporal_status": {
+          "primary": "hypothetical_or_risk",
+          "secondary": [
+            "currently_existing"
+          ],
+          "notes": [
+            "The concern was future-facing: what the rezoning might bring or change.",
+            "The speaker tied the concern to currently existing community identity, transit use, and neighborhood history."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "concrete_concern_language": {
+              "semantic_meaning": "The summary states a concern, harm, obstacle, difficulty, loss, risk, tradeoff, deficiency, shortage, gap, barrier, failure, or similar problem-side condition. The concern must be asserted on the problem/concern side, not merely appear as the object of a solution-side verb. A named place, named group, or bounded area is not required for Presence.",
+              "match": [
+                "states a concrete concern, risk, harm, obstacle, difficulty, tradeoff, or problem-side condition related to the rezoning or redevelopment effects",
+                "uses concern-side language about possible community impact, displacement pressure, unmet needs, division, access, or comparable risks",
+                "asserts the issue as a problem or risk rather than merely naming a solution or policy preference"
+              ],
+              "not_match": [
+                "only states that someone supported or opposed the item without saying what the concern was",
+                "only states that public comment occurred",
+                "only describes the zoning payload or Council disposition with no problem-side concern language"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_concern_content": {
+              "semantic_meaning": "The concern content is specific enough that the reader can tell what the concern, harm, obstacle, difficulty, loss, risk, or tradeoff is about. A generic statement that concerns were raised, without saying what the concern was, does not satisfy this label. A named place, named group, or bounded area is not required for Presence.",
+              "match": [
+                "states what the concern is about, such as community impact, displacement pressure, division, unmet local needs, outreach, or access effects",
+                "gives a specific risk or tradeoff rather than merely saying concerns were raised",
+                "identifies the object or mechanism of the concern even if no named place or group is provided"
+              ],
+              "not_match": [
+                "only says there were concerns, worries, or issues without saying what they concerned",
+                "requires a named place, named group, or bounded area for Presence when the concern content is otherwise specific",
+                "states a generic concern label with no identifiable object, risk, harm, or tradeoff"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "He was concerned that the rezoning could push change into the West Side / Villa Park.",
+            "He raised concern about gentrification and division of the West Side.",
+            "He wanted the development to serve and strengthen the existing community.",
+            "He raised concern about outreach to the Jewish community.",
+            "He referenced children and transit/school access near the light rail and bus.",
+            "Source-supported local anchors include the West Side, Villa Park, Lakewood Gulch, the area near Lake Middle School, Jewish Denver / the Jewish community, and the light-rail area."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence, but if the summary states a local anchor, compare it to the event sheet.",
+            "The concern is hypothetical/risk-oriented, not a claim that gentrification or displacement had already occurred because of this rezoning.",
+            "Speaker stance is context only for this slot; do not use it as an independent Fact Check field unless the summary claim also changes the stated concern content."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "obstacle_content": [
+            "concern that rezoning could push change into the West Side / Villa Park",
+            "concern about gentrification and division of the West Side",
+            "concern that the development should serve and strengthen the existing community",
+            "concern about outreach to the Jewish community",
+            "concern about children and transit/school access near the light rail and bus"
+          ],
+          "local_anchor": [
+            "West Side",
+            "Villa Park",
+            "Lakewood Gulch",
+            "area near Lake Middle School",
+            "Jewish Denver / Jewish community",
+            "light rail area"
+          ]
+        },
+        "answer_locality": "Public comment by David Roybal.",
+        "marker_presence": "Explicit",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "David Roybal spoke in support of the rezoning.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "Support alone does not state a concrete problem-side concern."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "A speaker raised concerns about the project.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the specific concern content is not identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "A supportive speaker cautioned that the rezoning could push change into Villa Park and the West Side, bring gentrification, divide the community, and fail to serve existing residents including the Jewish community and children using nearby transit and school routes.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concrete risk content and local anchors are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "A speaker raised a specific concern that the rezoning had already displaced Villa Park residents and shut down nearby transit access.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The concern content is specific enough for Presence, but it contradicts the event sheet because the source-supported concern was a future-facing risk about gentrification, community division, community needs, and transit/school access—not completed displacement or a transit shutdown."
+          }
+        ]
+      },
+      "S": {
+        "slot": "S",
+        "label": "Shared Concern Synthesis",
+        "source_summary": "The recurring concern theme was how transit-oriented redevelopment and increased density near Perry Street Station should avoid harming or displacing the existing West Side / Villa Park community and should remain responsive to local needs.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "hypothetical_or_risk"
+          ],
+          "notes": [
+            "The concern appeared in public comment and was echoed in council comments.",
+            "The risk concerned future redevelopment effects after rezoning."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "problem_side_concern": {
+              "semantic_meaning": "The summary names the concern theme in problem-side language: problem, difficulty, deficiency, gap, fragmentation, dissatisfaction, negative state, or similar language. Problem vocabulary that appears only as the object or modifier of a solution-side verb does not satisfy this label. Generic debate language alone does not satisfy it.",
+              "match": [
+                "names a problem-side concern theme about redevelopment or rezoning effects rather than only stating a policy preference",
+                "frames the theme as a risk, tension, harm, deficiency, community concern, or potential negative effect",
+                "states a concern-side theme that could recur across public and council comments"
+              ],
+              "not_match": [
+                "only says the Council favored density, transit-oriented development, or passage of the bill",
+                "only describes the zoning payload without problem-side concern language",
+                "only says there was discussion or debate without naming a concern theme"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "specific_content": {
+              "semantic_meaning": "The named concern theme has identifiable concern content. The reader can tell what the concern is about: object of concern, contrast at issue, criticized mechanism, specific tension/tradeoff, or problem content itself. A generic concern label alone does not satisfy this label. The summary does not need to reproduce every downstream risk or evidentiary detail. The judge must not require downstream risk, consequence, or evidence detail beyond what the semantic rule, label meaning, and rubric match require.",
+              "match": [
+                "identifies what the shared concern theme is about, such as community impact, displacement pressure, division, local needs, outreach, or community-serving development",
+                "states the object, mechanism, tension, or tradeoff at issue rather than merely saying there were concerns",
+                "makes the concern theme specific enough to distinguish it from generic public opposition or debate"
+              ],
+              "not_match": [
+                "only says concerns came up without identifying their content",
+                "only says speakers disagreed or debated the item",
+                "states a generic concern label with no identifiable object, mechanism, tension, tradeoff, or risk"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "The recurring concern theme was community impact from rezoning and transit-oriented redevelopment.",
+            "The concern included risk of gentrification or division of the West Side.",
+            "The concern included whether the project would serve existing community needs.",
+            "The concern included whether Villa Park / West Side would be affected by rezoning pressure.",
+            "The concern included whether the Jewish community had been reached.",
+            "The concern included whether the development would support community-serving ground-floor activation.",
+            "The concern included that the zoning could still result in 100% residential development.",
+            "The relevant scope was the West Side, Villa Park, and the area around Perry Street Station / Lakewood Gulch."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to explicitly say 'recurring' if it names the source-supported concern theme in problem-side language.",
+            "Do not require every example from public comment and Council comment to be reproduced.",
+            "The concern was about future redevelopment effects after rezoning, not completed displacement from the bill."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "concern_theme": [
+            "community impact of rezoning and transit-oriented redevelopment",
+            "risk of gentrification or division of the West Side"
+          ],
+          "concern_content": [
+            "whether the project would serve existing community needs",
+            "whether Villa Park / West Side would be affected by rezoning pressure",
+            "whether the Jewish community was reached",
+            "whether the development would support community-serving ground-floor activation",
+            "whether the zoning could still result in 100% residential development"
+          ],
+          "scope": [
+            "West Side",
+            "Villa Park",
+            "area around Perry Street Station / Lakewood Gulch"
+          ]
+        },
+        "answer_locality": "Public comment by David Roybal, with later council comment by Councilman Espinosa.",
+        "marker_presence": "Moderately explicit; recurrence is inferred from the public concern being picked up again in council comments.",
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council favored higher density near the light rail station.",
+            "presence": 0,
+            "fact_check": "not_applicable",
+            "rationale": "This gives a policy preference but no problem-side concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Community concerns came up during the hearing.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is visible, but the concern theme is too generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The shared concern was that transit-oriented redevelopment near Perry Street Station could gentrify or divide the West Side / Villa Park community unless it responded to existing community needs.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concern theme and specific content are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The shared concern was that preserving low-density zoning would block all residential development around Perry Street Station.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary names a specific concern theme, but it is different from the source-supported concern about community impact, gentrification, division, and local needs."
+          }
+        ]
+      },
+      "U": {
+        "slot": "U",
+        "label": "Unresolved Tail / Future Return Path",
+        "source_summary": "No source-supported unresolved tail remained for Council Bill 1034 after the segment; the bill passed during the meeting. The only future-facing element was possible redevelopment or community-serving use after rezoning, not a pending Council handling path.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "future_effect"
+          ],
+          "notes": [
+            "Council handling of Bill 1034 was completed in the segment.",
+            "Future redevelopment effects remained possible, but no explicit pending Council return path was stated."
+          ]
+        },
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pendingness_marker": {
+              "semantic_meaning": "The summary explicitly includes an unfinished, pending, or still-open state marker, such as remained pending, still to be decided, unresolved, remained in committee, held over, or final action remained pending. If the item is identifiable and the summary says it will proceed to a later full-body meeting, final action, final passage, or final consideration, that can satisfy pendingness. A bare directive without an explicit pendingness marker does not satisfy this label.",
+              "match": [
+                "would state an explicit unfinished, pending, unresolved, still-open, held-over, continued, or later-final-action marker for an identifiable item or workstream",
+                "would say that a matter remained to return, be reviewed, be decided, be reported back, or receive later handling after the segment"
+              ],
+              "not_match": [
+                "only states that the body completed action on the item",
+                "only describes future redevelopment effects or implementation possibilities without saying a Council handling path remained pending",
+                "states an absence of pending action rather than a positive unresolved tail"
+              ]
+            }
+          }
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": {
+            "pending_item_identifiable": {
+              "semantic_meaning": "What specifically remains pending is identifiable. The reader can tell which item, workstream, or issue is unfinished, not merely that something is unfinished.",
+              "match": [
+                "identifies which item, issue, workstream, bill, hearing, review, or implementation step remains pending",
+                "makes the unfinished object distinguishable rather than saying only that something remains"
+              ],
+              "not_match": [
+                "uses a generic pendingness phrase with no identifiable item, issue, or workstream",
+                "only references future development possibilities without identifying a pending institutional item"
+              ]
+            },
+            "handling_path_visible": {
+              "semantic_meaning": "A concrete handling path is visible. This can be a future event path, process path, or institutional custody path. A path to a later full-body meeting, final action, final passage, or final consideration can satisfy this label if the item is identifiable. Bare future orientation does not satisfy it unless tied to an identifiable body, item, custody, review, hearing, or process path. An unrelated future item, post-adjournment announcement, or future hearing for a different item does not satisfy U.",
+              "match": [
+                "states a future meeting, review, report-back, referral, final action, continued hearing, implementation process, or other concrete handling path",
+                "makes visible the body, process, custody, review, or path through which the pending item would return or continue"
+              ],
+              "not_match": [
+                "only says an item might have future effects without a body, process, review, hearing, or return path",
+                "only states completed action or absence of pending action",
+                "mentions an unrelated future event that is not a handling path for the selected item"
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "No pending Council action for Council Bill 1034 is supported by the transcript after the vote.",
+            "Council Bill 1034 passed during the segment.",
+            "No later Council meeting, report-back, referral, or continued hearing was stated for Council Bill 1034.",
+            "Possible redevelopment after rezoning, possible 100% residential development, or possible community-serving ground-floor activation are future effects, not a pending Council handling path."
+          ],
+          "fact_check_notes": [
+            "This is an absence-of-U case: the source-supported status is completed Council handling, not unresolved pending handling.",
+            "A summary that asserts a pending return path for Council Bill 1034 contradicts the event sheet.",
+            "Future legal or redevelopment effects after rezoning should not be confused with unfinished Council action."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "pending_status": [
+            "no pending Council action for Council Bill 1034 is supported by this transcript",
+            "the bill passed during the segment"
+          ],
+          "pending_item": [
+            "none for Council Bill 1034 after the vote"
+          ],
+          "handling_path": [
+            "no later Council meeting, report-back, referral, or continued hearing was stated for Council Bill 1034"
+          ],
+          "future_effect_not_pending_tail": [
+            "possible redevelopment after rezoning",
+            "possible 100% residential development under the zoning",
+            "possible community-serving ground-floor activation if chosen"
+          ]
+        },
+        "answer_locality": "Final council discussion and vote announcement.",
+        "marker_presence": "Absence of pending marker; completed-status marker is explicit.",
+        "source_supported_positive_u_presence": false,
+        "absence_handling": "The event sheet supports no positive U instance after the vote. A source-correct absence statement should receive Presence = 0 for U, with Fact Check = 1 because it does not contradict the source-supported completed status.",
+        "score_examples": [
+          {
+            "case": "topic_fail_completed_only",
+            "summary": "Council Bill 1034 passed during the meeting.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "This correctly states completion but does not assert an unresolved tail."
+          },
+          {
+            "case": "source_correct_absence_statement",
+            "summary": "No later Council action remained pending for Council Bill 1034 after the bill passed.",
+            "presence": 0,
+            "fact_check": 1,
+            "rationale": "This is source-correct, but it is an absence-of-U statement rather than positive U Presence under the pendingness gate."
+          },
+          {
+            "case": "topic_pass_quality_fail_and_fact_check_fail",
+            "summary": "Some follow-up remained pending after the hearing.",
+            "presence": 0.5,
+            "fact_check": 0,
+            "rationale": "A pendingness marker is present but no item or path is identifiable, and the source supports no pending Council tail for this bill."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "Council Bill 1034 remained pending for a later Council meeting after the public hearing.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The item and handling path are specific enough for Presence, but they contradict the event sheet because the bill passed and no return path was stated."
+          }
+        ]
+      }
+    }
+  }

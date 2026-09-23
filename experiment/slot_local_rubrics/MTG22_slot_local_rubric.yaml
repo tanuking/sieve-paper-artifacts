@@ -1,0 +1,1270 @@
+segment_id: "MTG22"
+segment_dir: "22_KingCountyCC_07292019"
+meeting_id: "KingCountyCC_07292019"
+uid: "KingCountyCC_07292019_2019-0245"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "22",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T",
+        "name": "Topic/Framing",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "subject_identified",
+              "match": [
+                "Names the substantive subject as an education-funding or educational-needs funding plan.",
+                "Identifies the matter as funds or proceeds being directed toward education-related needs.",
+                "Describes the subject as funding for children or youth education needs rather than only as a procedural motion label."
+              ],
+              "not_match": [
+                "Only says that the committee discussed, amended, or voted on a motion without naming the substantive education-funding subject.",
+                "Treats the subject as an unrelated policy area, such as transportation construction or general tax collection, without an education-funding focus."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "policy_direction",
+              "match": [
+                "States that the discussion concerned allocating or structuring funds or proceeds for education-related uses.",
+                "States that the proposal clarified target populations, low-income definitions, funding buckets, or implementation planning.",
+                "Describes the policy move as organizing education funds across education stages, community supports, facilities, or safeguards."
+              ],
+              "not_match": [
+                "Only states a procedural result such as adoption, advancement, recommendation, or voting.",
+                "States an unrelated policy direction, such as raising transportation taxes or cutting youth education funding."
+              ]
+            },
+            {
+              "name": "target",
+              "match": [
+                "Identifies children and youth in the county as the target.",
+                "Identifies vulnerable or underserved children and youth as the target population.",
+                "Identifies education stages or supports targeted by the funding, such as early learning, school-age education, higher education, community-based support, or facilities."
+              ],
+              "not_match": [
+                "Does not identify who or what the funding plan applies to.",
+                "Identifies the target as taxpayers, road users, or transportation infrastructure rather than children/youth and education supports."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "subject_identified",
+                "match": [
+                  "Names the substantive subject as an education-funding or educational-needs funding plan.",
+                  "Identifies the matter as funds or proceeds being directed toward education-related needs.",
+                  "Describes the subject as funding for children or youth education needs rather than only as a procedural motion label."
+                ],
+                "not_match": [
+                  "Only says that the committee discussed, amended, or voted on a motion without naming the substantive education-funding subject.",
+                  "Treats the subject as an unrelated policy area, such as transportation construction or general tax collection, without an education-funding focus."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "policy_direction",
+                "match": [
+                  "States that the discussion concerned allocating or structuring funds or proceeds for education-related uses.",
+                  "States that the proposal clarified target populations, low-income definitions, funding buckets, or implementation planning.",
+                  "Describes the policy move as organizing education funds across education stages, community supports, facilities, or safeguards."
+                ],
+                "not_match": [
+                  "Only states a procedural result such as adoption, advancement, recommendation, or voting.",
+                  "States an unrelated policy direction, such as raising transportation taxes or cutting youth education funding."
+                ]
+              },
+              {
+                "name": "target",
+                "match": [
+                  "Identifies children and youth in the county as the target.",
+                  "Identifies vulnerable or underserved children and youth as the target population.",
+                  "Identifies education stages or supports targeted by the funding, such as early learning, school-age education, higher education, community-based support, or facilities."
+                ],
+                "not_match": [
+                  "Does not identify who or what the funding plan applies to.",
+                  "Identifies the target as taxpayers, road users, or transportation infrastructure rather than children/youth and education supports."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject is PSTAA funding for educational needs of King County children and youth.",
+            "The policy direction is to allocate and structure PSTAA proceeds for education-related uses.",
+            "The plan clarifies target populations and low-income definitions and creates an implementation-planning process.",
+            "The target includes King County children and youth, especially vulnerable and underserved populations, and education stages/supports from early learning through higher education."
+          ],
+          "fact_check_notes": [
+            "Numeric values such as $318 million, 15 years, and 200% of the federal poverty level are source context for the framing; do not require them to be mentioned.",
+            "If a summary states a number in a way that changes the subject, direction, or target, evaluate the contradiction through the relevant listed field."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The segment framed Motion 2019-0245 as the Puget Sound Taxpayer Accountability Act funding plan: roughly $318 million over 15 years for King County educational needs, directed toward vulnerable and underserved children and youth.",
+          "source_context_for_fact_check": {
+            "subject": "Puget Sound Taxpayer Accountability Act funding for educational needs of King County children and youth.",
+            "policy_direction": [
+              "Allocate and structure PSTAA proceeds for education-related uses.",
+              "Clarify target populations and low-income definitions.",
+              "Create an implementation-planning process for governance, allocation, facilities, alignment, and evaluation."
+            ],
+            "target": [
+              "King County children and youth, especially specified vulnerable and underserved populations.",
+              "Education stages and supports including early learning, K-12, higher education, King County Promise, community-based organizations, and facilities."
+            ],
+            "temporal_status": "future_effect, with committee discussion and amendments occurring in-session and final Full Council action pending after the segment."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee discussed Motion 2019-0245 and several amendments.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "A motion number and procedural discussion do not identify the substantive education-funding subject."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The segment concerned education funding.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "The substantive subject is visible, but the policy direction and target are not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The segment framed Motion 2019-0245 as a PSTAA plan to allocate and structure education funds for King County children and youth, especially vulnerable and underserved groups.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The subject, policy direction, and target all match the event-sheet context."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The segment framed PSTAA as a plan to redirect King County youth education funds into highway construction.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary gives a specific subject, direction, and target, but the policy direction and target contradict the event sheet."
+          }
+        ],
+        "answer_locality": "Mainly opening framing and staff briefing; allocation details are distributed through the first half of the segment and later amendment discussion.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "Motion 2019 245",
+            "Puget Sound Taxpayer Accountability Act",
+            "$318 million",
+            "15 years",
+            "target populations",
+            "early learning K-12 and higher education"
+          ]
+        }
+      },
+      "O": {
+        "slot": "O",
+        "label": "O",
+        "name": "Outcome/Position",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "disposition_verb_tied_to_acted_on_item",
+              "match": [
+                "States that the body adopted, advanced, amended, withdrew, held, or otherwise disposed of an acted-on motion, striker, or amendment during the segment.",
+                "States that the amended education-funding motion was advanced to later full-body action without recommendation.",
+                "States that a striker or amended package was adopted."
+              ],
+              "not_match": [
+                "Only says members discussed, questioned, debated, or expressed views without stating an action on an item.",
+                "Only describes the substance of the funding plan without a disposition."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "acted_on_item_specific",
+              "match": [
+                "Identifies the acted-on item by formal number, label, striker/amendment designation, or a distinct substantive description.",
+                "Uses a substantive description specific enough to distinguish the acted-on education-funding motion or amendment within the segment."
+              ],
+              "not_match": [
+                "Uses only vague references such as 'it,' 'the item,' or 'the proposal' without enough surrounding context to identify the acted-on item.",
+                "Identifies only a broad topic, such as education funding, without saying which motion, striker, or amendment was acted on."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "disposition_verb_tied_to_acted_on_item",
+                "match": [
+                  "States that the body adopted, advanced, amended, withdrew, held, or otherwise disposed of an acted-on motion, striker, or amendment during the segment.",
+                  "States that the amended education-funding motion was advanced to later full-body action without recommendation.",
+                  "States that a striker or amended package was adopted."
+                ],
+                "not_match": [
+                  "Only says members discussed, questioned, debated, or expressed views without stating an action on an item.",
+                  "Only describes the substance of the funding plan without a disposition."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "acted_on_item_specific",
+                "match": [
+                  "Identifies the acted-on item by formal number, label, striker/amendment designation, or a distinct substantive description.",
+                  "Uses a substantive description specific enough to distinguish the acted-on education-funding motion or amendment within the segment."
+                ],
+                "not_match": [
+                  "Uses only vague references such as 'it,' 'the item,' or 'the proposal' without enough surrounding context to identify the acted-on item.",
+                  "Identifies only a broad topic, such as education funding, without saying which motion, striker, or amendment was acted on."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The committee/body conducting the segment adopted S-2 as amended.",
+            "Motion 2019-0245 as amended was advanced to the full Council without recommendation.",
+            "The final recorded roll call on advancing the motion was 9 ayes and 0 nos.",
+            "Full Council final action did not occur during this segment.",
+            "Amendments 1, 2, 9, 9.5, and 10 were adopted; Amendments 3 and 6 were withdrawn; Amendments 4, 5, 7, and 8 were held or not offered for later work."
+          ],
+          "fact_check_notes": [
+            "A broad label such as 'Council' is not by itself a stage error if the surrounding context preserves committee/body advancement and pending Full Council action.",
+            "A claim that the Full Council finally passed or enacted Motion 2019-0245 during this segment contradicts the procedural stage."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The committee/body amended the striking amendment package, adopted S-2 as amended, and advanced Motion 2019-0245 as amended to the full Council without recommendation; the final roll call on advancement was 9 ayes and 0 nos.",
+          "source_context_for_fact_check": {
+            "actor": "committee/body conducting the segment",
+            "procedural_stage": [
+              "committee/body action on amendments and S-2",
+              "advancement of Motion 2019-0245 as amended to full Council without recommendation",
+              "not final Full Council passage during this segment"
+            ],
+            "disposition_result": [
+              "S-2 as amended was adopted.",
+              "Motion 2019-0245 as amended was advanced to full Council without recommendation.",
+              "Amendments 1, 2, 9, 9.5, and 10 were adopted.",
+              "Amendments 3 and 6 were withdrawn.",
+              "Amendments 4, 5, 7, and 8 were held or not offered for later work."
+            ],
+            "acted_on_item": [
+              "Motion 2019-0245",
+              "striking amendment S-2",
+              "Amendments 1 through 10 as discussed"
+            ],
+            "vote_result": "9 ayes, 0 nos on the final roll-call vote advancing Motion 2019-0245 as amended to full Council without recommendation.",
+            "temporal_status": "completed_in_session for committee/body actions; pending_future_handling for Full Council action."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Members asked questions about the proposed education funding plan.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "Discussion and questioning alone do not state a disposition on an acted-on item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The committee advanced it without recommendation.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "A disposition is visible, but the acted-on item is not identified specifically enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The committee adopted S-2 as amended and advanced Motion 2019-0245 as amended to the full Council without recommendation on a 9-0 vote.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The disposition, item, stage, and vote attachment match the event sheet."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The Full Council finally passed Motion 2019-0245 during the segment on a 9-0 vote.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The item and disposition are specific, but the procedural stage contradicts the event sheet; only committee/body advancement occurred."
+          }
+        ],
+        "answer_locality": "Mainly late procedural sequence after amendment briefing and debate; some amendment dispositions are distributed through the latter half of the segment.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "The ayes have it",
+            "The amendment carries",
+            "withdrawn",
+            "S-2 as amended",
+            "without recommendation",
+            "nine ayes no nos",
+            "August 28"
+          ]
+        }
+      },
+      "B": {
+        "slot": "B",
+        "label": "B",
+        "name": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "precipitating_context_visible",
+              "match": [
+                "States that a long preparatory, analytical, or public-engagement process preceded the item.",
+                "Mentions counts, duration, or forms of prior engagement or prior committee/council work as background.",
+                "States that a prior framework left allocation or implementation details unresolved.",
+                "Mentions an earlier draft or version as a starting point and a revised or clarifying package as the form now under discussion."
+              ],
+              "not_match": [
+                "Only states what the motion or amendment would do, without any prior condition, process, revision, or background.",
+                "Only states the committee's in-session disposition.",
+                "Treats future implementation work as the background unless it is linked to the prior framework that shaped the current item."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "connected_to_current_item_or_form",
+              "match": [
+                "Connects the preparatory process to the current item, proposal package, allocation debate, or implementation-planning discussion.",
+                "Shows that unresolved allocation or implementation details in a prior framework shaped why a more specific package was being discussed.",
+                "Shows that earlier drafts or revisions shaped the form of the current debate."
+              ],
+              "not_match": [
+                "Mentions public engagement or prior meetings as isolated facts without tying them to the current item, proposal form, or discussion frame.",
+                "Mentions a general need for education funding without explaining how it shaped the current item."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "precipitating_context_visible",
+                "match": [
+                  "States that a long preparatory, analytical, or public-engagement process preceded the item.",
+                  "Mentions counts, duration, or forms of prior engagement or prior committee/council work as background.",
+                  "States that a prior framework left allocation or implementation details unresolved.",
+                  "Mentions an earlier draft or version as a starting point and a revised or clarifying package as the form now under discussion."
+                ],
+                "not_match": [
+                  "Only states what the motion or amendment would do, without any prior condition, process, revision, or background.",
+                  "Only states the committee's in-session disposition.",
+                  "Treats future implementation work as the background unless it is linked to the prior framework that shaped the current item."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "connected_to_current_item_or_form",
+                "match": [
+                  "Connects the preparatory process to the current item, proposal package, allocation debate, or implementation-planning discussion.",
+                  "Shows that unresolved allocation or implementation details in a prior framework shaped why a more specific package was being discussed.",
+                  "Shows that earlier drafts or revisions shaped the form of the current debate."
+                ],
+                "not_match": [
+                  "Mentions public engagement or prior meetings as isolated facts without tying them to the current item, proposal form, or discussion frame.",
+                  "Mentions a general need for education funding without explaining how it shaped the current item."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "A long public-engagement and analysis process preceded the committee action.",
+            "The process included two years of work, over a dozen committee and council meetings, 21 listening sessions, and more than 650 public participants.",
+            "The prior/interline motion left allocation percentages blank and required an implementation plan.",
+            "S-1 was a starting point; S-2 was substantially similar but included technical, grammatical, clarifying, and structural changes.",
+            "This background shaped the current S-2 discussion and amendment debate."
+          ],
+          "fact_check_notes": [
+            "B does not require an explicit 'why now' statement.",
+            "Do not treat the action-carried allocation requirements themselves as B unless the summary states prior context or formation history."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The item was shaped by two years of analysis and public engagement, including more than a dozen committee/council meetings, 21 listening sessions, and over 650 public participants, as well as the need to turn a broad prior framework with blank allocation percentages into a more specific S-2 package.",
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "Long public-engagement and analysis process preceded the committee action.",
+              "The prior/interline motion had blank allocation percentages and required an implementation plan.",
+              "S-1 was a starting point; S-2 added technical, grammatical, clarifying, and structural changes."
+            ],
+            "agenda_connection": [
+              "Preparatory work and unresolved allocation/implementation details shaped the S-2 discussion and amendments.",
+              "The background explains why the body was now fully engaging the legislation and debating allocation specifics."
+            ],
+            "temporal_status": "already_occurred for public engagement, earlier briefings, and S-1 release; S-2 changes and amendment debate occurred in-session."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The amended motion allocated PSTAA funds across early learning, K-12, and higher education.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "This states operative payload, not prior background or precipitating context."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "There had been public engagement before the meeting.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Prior context is visible, but the connection to the current item or proposal form is not stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The S-2 package emerged after two years of analysis, 21 listening sessions, and an earlier interline motion that left allocation percentages blank.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The prior process and its connection to the current S-2 form are both visible."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The item came forward because voters rejected the PSTAA plan the week before, forcing the committee to rewrite it as S-2.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary gives a specific precipitating context, but it contradicts the event sheet."
+          }
+        ],
+        "answer_locality": "Concentrated in the opening framing and early staff briefing, with later references to prior reports, consultant work, and earlier versions of the striker.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "over the last two years",
+            "21 public listening sessions",
+            "over 650 public participants",
+            "S-1",
+            "S-2",
+            "allocation percentages blank"
+          ]
+        }
+      },
+      "N": {
+        "slot": "N",
+        "label": "N",
+        "name": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "payload_attached_to_action",
+              "match": [
+                "States that the acted-on education-funding motion, striker, or amendment carried allocation, governance, implementation, consultation, facility, or equity terms.",
+                "Links a numeric facet, funding bucket, implementation-planning requirement, consultation or advisory requirement, facility condition, equity lens, or scope boundary to the adopted or amended package.",
+                "Uses adjacent-sentence anaphora where the payload clearly refers back to the amended motion, striker, or adopted amendment."
+              ],
+              "not_match": [
+                "Describes the general funding topic without tying the content to the acted-on motion, striker, or amendments.",
+                "Only states that the committee advanced or adopted the item without saying what operative terms it carried.",
+                "States a free-standing background fact about the funding source that does not function as action-carried payload."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "any_of",
+          "labels": [
+            {
+              "name": "number",
+              "match": [
+                "Includes an identifiable numeric payload, such as a percentage, threshold, allocation split, duration, cap, amount, or due-back period attached to the action."
+              ],
+              "not_match": [
+                "Says only that the allocation changed or that funds were divided without any identifiable number."
+              ]
+            },
+            {
+              "name": "named_requirement",
+              "match": [
+                "Identifies at least one operative requirement or condition by type, such as planning, facility-use, consultation, advisory expertise, equity, access-definition, or matching-condition language."
+              ],
+              "not_match": [
+                "Uses generic language such as 'new rules' or 'requirements' without identifying any requirement or condition."
+              ]
+            },
+            {
+              "name": "scope_boundary",
+              "match": [
+                "Identifies a scope boundary by funding stream, population, education stage, program category, provider category, geographic concept, facility category, or other applicable boundary."
+              ],
+              "not_match": [
+                "States a payload but gives no identifiable population, category, program, geographic, provider, facility, or funding scope."
+              ]
+            },
+            {
+              "name": "date_cutoff",
+              "match": [
+                "Includes an implementation, reporting, or plan-return deadline or due-back time boundary attached to the payload."
+              ],
+              "not_match": [
+                "Mentions only a later full-body handling date without any action-carried implementation, reporting, or plan-return deadline."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "payload_attached_to_action",
+                "match": [
+                  "States that the acted-on education-funding motion, striker, or amendment carried allocation, governance, implementation, consultation, facility, or equity terms.",
+                  "Links a numeric facet, funding bucket, implementation-planning requirement, consultation or advisory requirement, facility condition, equity lens, or scope boundary to the adopted or amended package.",
+                  "Uses adjacent-sentence anaphora where the payload clearly refers back to the amended motion, striker, or adopted amendment."
+                ],
+                "not_match": [
+                  "Describes the general funding topic without tying the content to the acted-on motion, striker, or amendments.",
+                  "Only states that the committee advanced or adopted the item without saying what operative terms it carried.",
+                  "States a free-standing background fact about the funding source that does not function as action-carried payload."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": [
+              {
+                "name": "number",
+                "match": [
+                  "Includes an identifiable numeric payload, such as a percentage, threshold, allocation split, duration, cap, amount, or due-back period attached to the action."
+                ],
+                "not_match": [
+                  "Says only that the allocation changed or that funds were divided without any identifiable number."
+                ]
+              },
+              {
+                "name": "named_requirement",
+                "match": [
+                  "Identifies at least one operative requirement or condition by type, such as planning, facility-use, consultation, advisory expertise, equity, access-definition, or matching-condition language."
+                ],
+                "not_match": [
+                  "Uses generic language such as 'new rules' or 'requirements' without identifying any requirement or condition."
+                ]
+              },
+              {
+                "name": "scope_boundary",
+                "match": [
+                  "Identifies a scope boundary by funding stream, population, education stage, program category, provider category, geographic concept, facility category, or other applicable boundary."
+                ],
+                "not_match": [
+                  "States a payload but gives no identifiable population, category, program, geographic, provider, facility, or funding scope."
+                ]
+              },
+              {
+                "name": "date_cutoff",
+                "match": [
+                  "Includes an implementation, reporting, or plan-return deadline or due-back time boundary attached to the payload."
+                ],
+                "not_match": [
+                  "Mentions only a later full-body handling date without any action-carried implementation, reporting, or plan-return deadline."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was Motion 2019-0245 as amended by striking amendment S-2 and adopted amendments.",
+            "Amendment 1 inserted 7.5% for evaluation, administration, and technical support.",
+            "S-2 was originally briefed as allowing up to 10% before Amendment 1 changed the value to 7.5%.",
+            "The early-learning allocation was described as 55% of remaining funds, with Amendment 2 focusing that bucket on facilities rather than programs.",
+            "Early-learning facilities were discussed as serving at least 70% children from families at or below 200% FPL to the greatest extent possible and being located in access deserts to be defined later.",
+            "The remaining 45% was briefed as 40% K-12 through King County Promise, 40% higher education through King County Promise, and 20% community-based organizations integrated with K-12.",
+            "The community-based-organization 20% of the 45% did not require matching funds and was not subordinate to King County Promise.",
+            "The implementation plan was due back in eight months and covered governance, allocation, culturally appropriate and trauma-informed strategies, financial planning, facilities, access-desert definition, alignment, leverage, and evaluation.",
+            "Amendment 9 added consultation with a representative from each council district office.",
+            "Amendment 9.5 added advisory-group expertise in racism, systemic racism, multicultural curriculum, childhood trauma, and restorative justice/corrective-action practices.",
+            "Amendment 10 added a geographic-equity lens for early-learning facility policies."
+          ],
+          "fact_check_notes": [
+            "The transcript is spoken and does not provide a clean final consolidated legislative text.",
+            "Treat Amendment 2's effect as source-supported by the spoken briefing and sponsor explanation: it focused the early-learning bucket on facilities rather than programs.",
+            "Omissions are allowed. A summary does not need to mention every percentage or amendment to pass Fact Check."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The action-carried payload allocated and governed PSTAA funds: 7.5% for evaluation/administration/technical support, an early-learning facilities focus after Amendment 2, remaining K-12/higher-education/community-based buckets, an eight-month implementation plan, and added consultation, advisory-expertise, and geographic-equity provisions.",
+          "source_context_for_fact_check": {
+            "payload_carrier": [
+              "Motion 2019-0245 as amended by S-2 and adopted amendments.",
+              "Individual amendment payloads attach to the amendment numbers as discussed."
+            ],
+            "payload_content": [
+              "7.5% for evaluation/administration/technical support after Amendment 1.",
+              "Early-learning bucket focused on facilities after Amendment 2.",
+              "Remaining 45% split internally as 40% K-12, 40% higher education, and 20% community-based organizations integrated with K-12.",
+              "Implementation plan due back in eight months.",
+              "Amendments 9, 9.5, and 10 added district consultation, advisory expertise, and geographic equity."
+            ],
+            "payload_scope": [
+              "King County PSTAA education funding.",
+              "Target populations include vulnerable and underserved children and youth.",
+              "Education scope includes early learning, K-12, higher education, King County Promise, and K-12-integrated community-based organizations."
+            ],
+            "payload_scalar_or_baseline": [
+              "7.5% for administration/evaluation/technical support.",
+              "55% early-learning allocation of remaining funds, with eligible-use effect from Amendment 2.",
+              "70% desired low-income-child share and 200% FPL threshold for early-learning facilities.",
+              "45% remaining funds split 40% / 40% / 20%.",
+              "Eight-month implementation-plan due-back."
+            ],
+            "temporal_status": "future_effect for allocation/governance/reporting requirements; amendment adoptions occurred in-session."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee advanced Motion 2019-0245 as amended.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "This is only the action shell; it does not state any operative payload."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The amended motion included new terms for the funding plan.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "A payload is attached to the action, but no number, named requirement, scope boundary, or deadline is identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The amended package set 7.5% for evaluation, administration, and technical support; focused the early-learning bucket on facilities; and required an implementation plan to return in eight months.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The payload is attached to the action and includes source-consistent numeric and named requirements."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The adopted amendment set a 75% overhead cap and required the community-based-organization share to provide matching funds.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary states specific payload values and conditions, but they contradict the event sheet."
+          }
+        ],
+        "answer_locality": "Highly distributed: staff briefing for S-2 payload, middle segment for clarification and concern discussion, and late segment for adopted amendment payloads.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "7.5%",
+            "55%",
+            "70%",
+            "200%",
+            "access deserts",
+            "40%, 40%, and 20%",
+            "eight months",
+            "Amendment 9",
+            "Amendment 9.5",
+            "Amendment 10"
+          ]
+        }
+      },
+      "L": {
+        "slot": "L",
+        "label": "L",
+        "name": "Concrete Concern",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "concrete_concern_language",
+              "match": [
+                "States a concrete concern, obstacle, risk, difficulty, barrier, tradeoff, or problem raised during the discussion.",
+                "Examples include concerns that a facility-income target could be too rigid or impractical, matching requirements could burden smaller organizations, capital-only investment could miss disadvantaged or home-based providers, geographic-equity language could dilute targeting, or caregivers lacked training support."
+              ],
+              "not_match": [
+                "Only says that members had concerns without saying what the concern was.",
+                "Only states the policy solution or allocation structure without problem-side concern language.",
+                "States a generic political disagreement without concrete concern content."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_concern_content",
+              "match": [
+                "Identifies what the concern is about, such as a facility-income threshold, market-rate mix, matching requirements, capital-only access, disadvantaged provider access, geographic equity, caregiver training, or school-service navigation.",
+                "Names a concrete risk or tradeoff even without a named place, named group, or bounded area."
+              ],
+              "not_match": [
+                "Uses only generic language such as 'concerns,' 'issues,' or 'problems' without specifying the problem.",
+                "Provides a named group or place but no identifiable concern, harm, obstacle, risk, or tradeoff."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "concrete_concern_language",
+                "match": [
+                  "States a concrete concern, obstacle, risk, difficulty, barrier, tradeoff, or problem raised during the discussion.",
+                  "Examples include concerns that a facility-income target could be too rigid or impractical, matching requirements could burden smaller organizations, capital-only investment could miss disadvantaged or home-based providers, geographic-equity language could dilute targeting, or caregivers lacked training support."
+                ],
+                "not_match": [
+                  "Only says that members had concerns without saying what the concern was.",
+                  "Only states the policy solution or allocation structure without problem-side concern language.",
+                  "States a generic political disagreement without concrete concern content."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_concern_content",
+                "match": [
+                  "Identifies what the concern is about, such as a facility-income threshold, market-rate mix, matching requirements, capital-only access, disadvantaged provider access, geographic equity, caregiver training, or school-service navigation.",
+                  "Names a concrete risk or tradeoff even without a named place, named group, or bounded area."
+                ],
+                "not_match": [
+                  "Uses only generic language such as 'concerns,' 'issues,' or 'problems' without specifying the problem.",
+                  "Provides a named group or place but no identifiable concern, harm, obstacle, risk, or tradeoff."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Members questioned whether a 70% low-income requirement for early-learning facilities would be too rigid or workable in the marketplace.",
+            "Members discussed the need for some market-rate families to make centers financially viable.",
+            "Members worried that matching requirements could burden smaller organizations.",
+            "Members worried that capital-focused funding could miss poor, minority, immigrant, refugee, or home-based providers that rent facilities or lack expansion money.",
+            "Members worried that geographic equity could dilute targeting toward the most disadvantaged populations.",
+            "Kinship-care discussion raised concern about lack of training support for education advocacy such as IEP navigation."
+          ],
+          "fact_check_notes": [
+            "A local anchor is not required for Presence.",
+            "If a summary explicitly ties a concern to a group or place, check that anchor against the event-sheet context."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "Members raised concrete concerns that the funding design could create operational or equity problems, including rigidity around the 70% low-income facility target, burdens from matching requirements, exclusion of disadvantaged or home-based providers under capital-heavy funding, geographic-equity tradeoffs, and lack of kinship-care training support for IEP navigation.",
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Potential rigidity or impracticality of requiring early-learning facilities to serve at least 70% children from families at or below 200% FPL.",
+              "Concern that centers may need a mix of low-income and market-rate families to survive financially.",
+              "Concern that matching requirements could burden smaller organizations.",
+              "Concern that disadvantaged communities or organizations that rent facilities may have less ability to benefit from capital-focused funds.",
+              "Concern that geographic-equity language might conflict with targeting the most disadvantaged groups.",
+              "Concern that kinship caregivers receive no training support for educational advocacy such as IEP navigation."
+            ],
+            "local_anchor": [
+              "King County and its council districts were the institutional/geographic frame.",
+              "Concerns referenced poor, minority, immigrant, refugee, foster-care, kinship-care, and other target populations, but not always a single named neighborhood."
+            ],
+            "temporal_status": "hypothetical_or_risk."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Members discussed the 55% early-learning allocation and the remaining K-12 and higher-education buckets.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "This describes allocation content without stating a concern, risk, obstacle, or tradeoff."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Members raised concerns about the funding plan.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Concern language is present, but the concrete concern content is not identified."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Members worried that the 70% low-income facility target could be too rigid and that capital-focused funding might not reach disadvantaged or home-based providers.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "Specific source-supported concern content is stated."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "Members worried that the plan would force every family to pay market-rate tuition before receiving early-learning services.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary states a concrete concern, but that concern is not supported by the event sheet and contradicts the source-supported concern content."
+          }
+        ],
+        "answer_locality": "Distributed across member questions and amendment debate, especially the 70% facility discussion, matching-funds discussion, home-based-provider discussion, geographic-equity debate, and kinship-care amendment.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "concerns",
+            "rigidity",
+            "barriers",
+            "works in the marketplace",
+            "matching funds",
+            "geographic equity",
+            "kinship care",
+            "IEP"
+          ]
+        }
+      },
+      "S": {
+        "slot": "S",
+        "label": "S",
+        "name": "Shared Concern Synthesis",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "problem_side_concern",
+              "match": [
+                "Names the recurring concern theme as a problem, risk, tension, tradeoff, or difficulty in targeting finite education funds effectively.",
+                "States the shared concern that funds could be spread too thin, mis-targeted, or fail to reach vulnerable or underserved children/youth or key provider types.",
+                "Uses problem-side language around dilution, exclusion, under-addressing, or weakening focus."
+              ],
+              "not_match": [
+                "Only states the policy goal of helping vulnerable children without any problem-side concern language.",
+                "Only states that members debated funding percentages without naming the concern theme.",
+                "Only describes one isolated procedural action or amendment disposition."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "specific_content",
+              "match": [
+                "Identifies the concern as deep targeting versus spreading funds too thin.",
+                "Identifies the risk of excluding education levels, provider types, home-based providers, community-based supports, or caregiver supports.",
+                "Identifies the tension between geographic distribution, access concepts, facility-capital strategy, and reaching the most disadvantaged populations."
+              ],
+              "not_match": [
+                "Uses only generic labels such as 'equity concerns' or 'funding concerns' without saying what the concern is about.",
+                "States recurrence or debate but does not identify the object, tension, mechanism, or affected scope of the concern."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "problem_side_concern",
+                "match": [
+                  "Names the recurring concern theme as a problem, risk, tension, tradeoff, or difficulty in targeting finite education funds effectively.",
+                  "States the shared concern that funds could be spread too thin, mis-targeted, or fail to reach vulnerable or underserved children/youth or key provider types.",
+                  "Uses problem-side language around dilution, exclusion, under-addressing, or weakening focus."
+                ],
+                "not_match": [
+                  "Only states the policy goal of helping vulnerable children without any problem-side concern language.",
+                  "Only states that members debated funding percentages without naming the concern theme.",
+                  "Only describes one isolated procedural action or amendment disposition."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "specific_content",
+                "match": [
+                  "Identifies the concern as deep targeting versus spreading funds too thin.",
+                  "Identifies the risk of excluding education levels, provider types, home-based providers, community-based supports, or caregiver supports.",
+                  "Identifies the tension between geographic distribution, access concepts, facility-capital strategy, and reaching the most disadvantaged populations."
+                ],
+                "not_match": [
+                  "Uses only generic labels such as 'equity concerns' or 'funding concerns' without saying what the concern is about.",
+                  "States recurrence or debate but does not identify the object, tension, mechanism, or affected scope of the concern."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "A recurring theme was how to target finite PSTAA funds deeply enough to improve educational outcomes for vulnerable and underserved children and youth.",
+            "Members were concerned about avoiding a funding design that spread money too thin across too many uses.",
+            "Members debated whether the structure would exclude key age groups, education stages, provider types, home-based providers, community-based organizations, or kinship caregivers.",
+            "Members debated whether geographic equity, access deserts, 70% low-income facility composition, and capital-only strategies would help or hinder reaching intended vulnerable populations."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to state recurrence explicitly if it names the concern theme in problem-side language.",
+            "Do not require every downstream risk or example to be reproduced."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "The recurring concern theme was how to target a finite, mostly one-time funding stream deeply enough to improve outcomes for vulnerable populations without spreading funds too thin, excluding key age groups or provider types, or weakening focus on the most disadvantaged children and youth.",
+          "source_context_for_fact_check": {
+            "concern_theme": "Finite PSTAA funds should be targeted effectively toward vulnerable/underserved children and youth while avoiding dilution, exclusion of education levels/provider types, or mis-targeting.",
+            "concern_content": [
+              "Deep investment versus spreading money across too many buckets.",
+              "Targeting vulnerable and underserved children and youth.",
+              "Coverage of education stages from early learning through postsecondary.",
+              "Debate over access deserts/geographic equity and whether facility-capital strategy reaches disadvantaged communities.",
+              "Concern that community-based, home-based, and kinship-care supports might be under-addressed."
+            ],
+            "temporal_status": "recurring_concern."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The committee adopted several amendments and advanced the motion.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "This gives procedural outcome, not a recurring problem-side concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Equity concerns came up repeatedly.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Problem-side concern language is present, but the content of the concern is too generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "A recurring concern was that finite PSTAA funds needed to stay focused on vulnerable children and youth rather than being spread too thin or missing key provider types.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The problem-side theme and its specific content match the event sheet."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "The recurring concern was that the funds should be distributed evenly to every council district regardless of need.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary states a specific concern theme, but it conflicts with the event-sheet theme about targeted investment and avoiding dilution or mis-targeting."
+          }
+        ],
+        "answer_locality": "Distributed across the entire segment; strongest in allocation debate, amendment explanations, and member statements about focus, target populations, and provider access.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "target populations",
+            "move the needle",
+            "focus",
+            "not peanut butter",
+            "vulnerable and underserved",
+            "geographic equity"
+          ]
+        }
+      },
+      "U": {
+        "slot": "U",
+        "label": "U",
+        "name": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pendingness_marker",
+              "match": [
+                "Explicitly states that final action, allocation work, provider-support issues, or implementation planning remained pending, unfinished, unresolved, held for later work, or left on the table.",
+                "States that the education-funding motion advanced to later full-body action without final passage during the segment.",
+                "States that an implementation plan, report, or related work would return later."
+              ],
+              "not_match": [
+                "Only states a completed committee/body action such as adoption or advancement, with no pendingness marker.",
+                "States that all issues were resolved or that final full-body passage occurred during the segment.",
+                "Only states future policy effects without saying that an item, issue, or workstream remains pending."
+              ]
+            }
+          ]
+        },
+        "quality_gate": {
+          "operator": "all_of",
+          "labels": [
+            {
+              "name": "pending_item_identifiable",
+              "match": [
+                "Identifies the education-funding motion as the item awaiting later full-body action.",
+                "Identifies unresolved allocation structure, provider-support questions, caregiver training, education-level allocation, or the executive implementation plan as pending.",
+                "Identifies held or withdrawn amendment topics as requiring further work."
+              ],
+              "not_match": [
+                "Says only that 'something' or 'some issues' remained unresolved without identifying the item, workstream, or issue.",
+                "Mentions a future meeting but not the item or issue to be handled."
+              ]
+            },
+            {
+              "name": "handling_path_visible",
+              "match": [
+                "States that the education-funding motion moved to a full body for date-certain action.",
+                "States that the executive implementation plan, report, or related work was due back to the Council or relevant body after a specified period.",
+                "States that members and staff would continue work on unresolved allocation or provider-support issues before full-body action."
+              ],
+              "not_match": [
+                "Uses only vague future language such as 'later' or 'in the future' without a body, date, process, or custody path.",
+                "Gives a future hearing, body, or process unrelated to the education-funding motion, implementation plan, or unresolved amendment topics."
+              ]
+            }
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pendingness_marker",
+                "match": [
+                  "Explicitly states that final action, allocation work, provider-support issues, or implementation planning remained pending, unfinished, unresolved, held for later work, or left on the table.",
+                  "States that the education-funding motion advanced to later full-body action without final passage during the segment.",
+                  "States that an implementation plan, report, or related work would return later."
+                ],
+                "not_match": [
+                  "Only states a completed committee/body action such as adoption or advancement, with no pendingness marker.",
+                  "States that all issues were resolved or that final full-body passage occurred during the segment.",
+                  "Only states future policy effects without saying that an item, issue, or workstream remains pending."
+                ]
+              }
+            ]
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": [
+              {
+                "name": "pending_item_identifiable",
+                "match": [
+                  "Identifies the education-funding motion as the item awaiting later full-body action.",
+                  "Identifies unresolved allocation structure, provider-support questions, caregiver training, education-level allocation, or the executive implementation plan as pending.",
+                  "Identifies held or withdrawn amendment topics as requiring further work."
+                ],
+                "not_match": [
+                  "Says only that 'something' or 'some issues' remained unresolved without identifying the item, workstream, or issue.",
+                  "Mentions a future meeting but not the item or issue to be handled."
+                ]
+              },
+              {
+                "name": "handling_path_visible",
+                "match": [
+                  "States that the education-funding motion moved to a full body for date-certain action.",
+                  "States that the executive implementation plan, report, or related work was due back to the Council or relevant body after a specified period.",
+                  "States that members and staff would continue work on unresolved allocation or provider-support issues before full-body action."
+                ],
+                "not_match": [
+                  "Uses only vague future language such as 'later' or 'in the future' without a body, date, process, or custody path.",
+                  "Gives a future hearing, body, or process unrelated to the education-funding motion, implementation plan, or unresolved amendment topics."
+                ]
+              }
+            ]
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "Motion 2019-0245 was not finally passed by the full Council in this segment.",
+            "The committee/body advanced Motion 2019-0245 as amended to full Council without recommendation.",
+            "Full Council action was expected on a date certain of August 28.",
+            "Significant allocation and provider-support questions remained open, including home-based care, kinship-care training, and K-12/postsecondary allocation structure.",
+            "The executive implementation plan was a future due-back item to return to Council in eight months."
+          ],
+          "fact_check_notes": [
+            "U focuses on unfinishedness after the action or discussion.",
+            "The eight-month implementation-plan due-back can be N when treated as payload and U when treated as a future return path."
+          ]
+        },
+        "event_sheet_slot_context": {
+          "summary": "Several issues remained unfinished after the committee action: Motion 2019-0245 advanced to full Council without recommendation rather than being finally passed, further work remained on allocation and provider-support issues, and an executive implementation plan was due back to Council in eight months.",
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "Motion 2019-0245 was not finally passed by full Council in this segment.",
+              "The committee/body advanced the motion as amended to full Council without recommendation.",
+              "Some amendment topics remained open for future work.",
+              "The implementation plan was a future due-back item."
+            ],
+            "pending_item": [
+              "Motion 2019-0245 as amended.",
+              "Allocation structure for non-early-learning buckets and education-level coverage.",
+              "Home-based provider funding/support questions.",
+              "Kinship-care training/support question.",
+              "Executive implementation plan."
+            ],
+            "handling_path": [
+              "Full Council action on a date certain of August 28.",
+              "Executive to return implementation plan to Council in eight months.",
+              "Members and staff to continue work on unresolved allocation and provider-support issues before full Council action."
+            ],
+            "temporal_status": "pending_future_handling."
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "S-2 as amended was adopted during the segment.",
+            "expected": {
+              "presence": 0,
+              "fact_check": null
+            },
+            "rationale": "This states a completed in-session action without any pendingness marker."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Some issues were left unresolved.",
+            "expected": {
+              "presence": 0.5,
+              "fact_check": 1
+            },
+            "rationale": "Pendingness is explicit, but neither the pending item nor the handling path is identifiable."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Motion 2019-0245 was advanced to full Council without recommendation for August 28 action, while allocation and provider-support questions and the eight-month implementation plan remained future work.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 1
+            },
+            "rationale": "The pending status, pending items, and handling paths match the event sheet."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_fail",
+            "summary": "Although the motion was finally passed by the Full Council, it was still scheduled for a Parks Committee vote on September 12.",
+            "expected": {
+              "presence": 1,
+              "fact_check": 0
+            },
+            "rationale": "The summary provides pendingness, an item, and a path, but both the status and handling path contradict the event sheet."
+          }
+        ],
+        "answer_locality": "Late procedural sequence plus earlier references to implementation-plan due-back and held/withdrawn amendments.",
+        "marker_presence": {
+          "has_explicit_markers": true,
+          "markers": [
+            "without recommendation",
+            "significant work on the table",
+            "full council",
+            "date certain of August 28",
+            "due back to the Council in eight months",
+            "withdrawn"
+          ]
+        }
+      }
+    }
+  }

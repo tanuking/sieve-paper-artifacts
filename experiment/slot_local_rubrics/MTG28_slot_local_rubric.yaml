@@ -1,0 +1,875 @@
+segment_id: "MTG28"
+segment_dir: "28_BostonCC_06292022"
+meeting_id: "BostonCC_06292022"
+uid: "BostonCC_06292022_2022-0763"
+decision_type: "Motion"
+segment_type: "decision-bearing"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "28",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot_name": "Topic/Framing",
+        "event_sheet_summary": "The discussion was framed around the City Council's response to the Mayor's return and modifications to the Council's amended FY23 budget, especially whether to partially override those changes to restore or increase selected budget lines.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "already_occurred",
+            "pending_future_handling",
+            "future_effect"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "subject_identified": {
+                "match": [
+                  "The summary names the FY23 City of Boston budget, annual appropriation and tax order, or the Mayor's returned modifications to the Council's amended FY23 budget as the substantive subject.",
+                  "The summary may identify the subject through the budget dockets if it also states that they concern the FY23 budget or annual appropriation/tax order."
+                ],
+                "not_match": [
+                  "The summary only says the Council discussed Dockets 0762 and 0763 without identifying the budget or appropriation subject.",
+                  "The summary only says there was a vote, hearing, or override process without naming the substantive budget matter.",
+                  "The summary frames the subject as an unrelated policy area, such as zoning, appointments, licensing, or policing generally without the budget context."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "policy_direction": {
+                "match": [
+                  "The summary states that the Council was considering accepting, overriding, or partially overriding the Mayor's returned budget modifications.",
+                  "The summary states that the proposed policy move was to restore, increase, or reallocate selected budget lines for specified offices, programs, or services.",
+                  "The summary describes funding changes such as restoring youth employment, housing, equity, returning-citizen, codification, tree-maintenance, or related program lines, as the direction of the budget response."
+                ],
+                "not_match": [
+                  "The summary only says the Council approved, passed, debated, or voted on an item, without stating the substantive budget direction.",
+                  "The summary describes generic fiscal oversight without saying what budget change or response was being pursued.",
+                  "The summary states the opposite direction, such as accepting all of the Mayor's modifications with no partial override, as the framing."
+                ]
+              },
+              "target": {
+                "match": [
+                  "The target is identified as Dockets 0762 and 0763, the FY23 annual appropriation and tax order, the Council's amended FY23 budget, or the selected budget lines named in the partial overrides.",
+                  "A target may be stated at the level of the FY23 city budget or at the level of affected program and departmental budget lines."
+                ],
+                "not_match": [
+                  "The summary gives a budget direction but does not identify what budget, docket, appropriation, department, program, or line the direction applies to.",
+                  "The summary points to a different target, such as a state budget, a private grant, or a non-Boston jurisdiction."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was the FY23 City of Boston budget / annual appropriation and tax order after the Mayor returned and modified the Council's amended budget.",
+            "The policy direction was to consider accepting, overriding, or partially overriding the Mayor's returned budget modifications.",
+            "The partial overrides would restore or increase selected budget lines and balance those changes with specified decreases.",
+            "The relevant targets included Dockets 0762 and 0763, the FY23 budget appropriations and tax order, and the named program or departmental budget lines."
+          ],
+          "fact_check_notes": [
+            "Do not treat omission of individual budget lines as an error. Check only explicit claims about the subject, policy direction, or target.",
+            "Program funding effects may be described as future-facing, but the Council's in-session partial override action was completed for partial override number one."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "subject": "FY23 City of Boston budget / annual appropriation and tax order, after the Mayor's return and modifications to the Council's amended budget.",
+            "policy_direction": [
+              "Partially override the Mayor's returned budget modifications.",
+              "Restore or increase selected budget lines for specified city offices, programs, and services.",
+              "Reallocate funding from specified departmental lines to balance the proposed overrides."
+            ],
+            "target": [
+              "Dockets 0762 and 0763",
+              "FY23 city budget appropriations and tax order",
+              "Specific program and departmental budget lines named in the partial overrides"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "The Council held a roll-call vote on two dockets.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No substantive FY23 budget subject is identified."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "The discussion concerned the FY23 City of Boston budget.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is present, but the policy direction and target are not specific enough."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "The Council considered whether to partially override the Mayor's returned modifications to the amended FY23 budget in order to restore selected program and departmental budget lines in Dockets 0762 and 0763.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "Subject, policy direction, and target are all source-consistent."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The Council framed the item as accepting all of the Mayor's FY23 budget modifications without any partial override of Dockets 0762 and 0763.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary enters the slot and is specific, but it contradicts the source-supported policy direction."
+          }
+        ]
+      },
+      "O": {
+        "slot_name": "Outcome/Position",
+        "event_sheet_summary": "The Council passed partial override number one, Dockets 0762 and 0763 were overridden in part, and the presiding officer stated that this constituted approval of the FY23 city budget. A revised partial override number three received 8 affirmative and 5 negative votes but failed because two-thirds was required.",
+        "temporal_status": {
+          "primary": "completed_in_session",
+          "secondary": [
+            "already_occurred"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "disposition_verb_tied_to_acted_on_item": {
+                "match": [
+                  "The summary states that the Council passed partial override number one.",
+                  "The summary states that Dockets 0762 and 0763 were overridden in part or that this partial override constituted approval of the FY23 budget.",
+                  "The summary states that revised partial override number three failed or did not pass after receiving 8 affirmative and 5 negative votes."
+                ],
+                "not_match": [
+                  "The summary only says councilors debated, questioned, supported, opposed, or discussed budget items without stating a disposition.",
+                  "The summary says recommendations were presented but does not say whether any item passed, failed, or was overridden in part.",
+                  "The summary gives only budget payload details without the body's action on an acted-on item."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "acted_on_item_specific": {
+                "match": [
+                  "The acted-on item is identified as partial override number one, Dockets 0762 and 0763, or revised partial override number three.",
+                  "A substantive description can also work if it distinguishes the acted-on item, such as the revised youth-employment partial override that failed."
+                ],
+                "not_match": [
+                  "The summary says an override, motion, item, or budget matter passed or failed without enough detail to tell which one.",
+                  "The summary identifies only the broad FY23 budget process and not the item acted on."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Boston City Council during full Council consideration of the returned FY23 budget dockets and partial override recommendations.",
+            "Partial override number one passed.",
+            "Dockets 0762 and 0763 were overridden in part, and the presiding officer stated that this constituted approval of the FY23 city budget.",
+            "Revised partial override number three received 8 affirmative and 5 negative votes but did not pass because the override required a two-thirds vote.",
+            "The 8-5 vote belongs to Councilor Lara's amendment motion and to revised partial override number three, not to partial override number one.",
+            "Partial override number one had a unanimous yes roll call as rendered in the transcript."
+          ],
+          "fact_check_notes": [
+            "Vote-count attachment matters: do not attach the 8 affirmative / 5 negative result to partial override number one.",
+            "A summary may omit one of the dispositions and still pass Fact Check if it does not contradict the listed fields."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "actor": "Boston City Council during the meeting segment.",
+            "procedural_stage": "Full Council consideration of the Mayor's returned FY23 budget dockets and partial override recommendations.",
+            "acted_on_item": [
+              "Dockets 0762 and 0763",
+              "partial override number one",
+              "revised partial override number three as amended"
+            ],
+            "disposition_result": [
+              "partial override number one passed",
+              "revised partial override number three did not pass",
+              "Dockets 0762 and 0763 were overridden in part",
+              "the presiding officer stated that this constituted approval of the FY23 city budget"
+            ],
+            "vote_result": {
+              "partial_override_1": "unanimous yes in the rendered roll call",
+              "revised_partial_override_3": "8 affirmative, 5 negative; failed because two-thirds was required"
+            }
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "Councilors debated whether youth employment and public safety lines should be funded differently.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "No disposition on an acted-on item is stated."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "The Council passed an override.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A disposition is present, but the acted-on item is too generic."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "The Council passed partial override number one, overrode Dockets 0762 and 0763 in part, and later saw revised partial override number three fail on an 8-5 vote because two-thirds was required.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "Disposition, acted-on items, and vote attachment are source-consistent."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Partial override number one failed by an 8-5 vote because it did not reach the two-thirds threshold.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The disposition and vote result are attached to the wrong item."
+          }
+        ]
+      },
+      "B": {
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "event_sheet_summary": "The budget item was shaped by the Mayor's return and modifications to the Council's amended FY23 budget, the Council's new participatory budget role, committee work after June 15, and recurring information gaps in departmental budget reporting.",
+        "temporal_status": {
+          "primary": "already_occurred",
+          "secondary": [
+            "currently_existing",
+            "recurring_concern"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "precipitating_context_visible": {
+                "match": [
+                  "The summary states that the Mayor had returned and modified the Council's amended FY23 budget.",
+                  "The summary states that the Council had passed an amended budget on June 8.",
+                  "The summary states that since June 15 the Ways and Means process included one hearing and two work sessions.",
+                  "The summary states that the Council was operating in a historically new participatory budget role.",
+                  "The summary states that incomplete departmental information or the lack of standardized annual departmental reports formed background for the budget process."
+                ],
+                "not_match": [
+                  "The summary only states the current disposition or partial override, with no prior event, process, condition, or problem.",
+                  "The summary only lists budget payload lines without any background that shaped the item or discussion.",
+                  "The summary provides an unrelated background context, such as a prior court case or state mandate not supported by the event sheet."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "connected_to_current_item_or_form": {
+                "match": [
+                  "The summary visibly connects the Mayor's return, committee work, new Council role, or information gaps to why the Council was considering accept/override options or partial overrides.",
+                  "The summary connects departmental information limits or reporting gaps to the form or difficulty of the FY23 budget deliberations."
+                ],
+                "not_match": [
+                  "The summary mentions a prior event or process as a free-standing fact without showing any connection to the current FY23 budget item, partial overrides, or budget-process discussion.",
+                  "The summary states only that budget transparency is generally important, without tying it to this segment's item or deliberation."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The Mayor returned and modified the Council's amended FY23 budget.",
+            "The Council had passed its amended budget on June 8.",
+            "Since June 15, the Ways and Means process included one hearing and two work sessions about whether to accept, override, or override in part.",
+            "Councilors described a historically new participatory budget role for the Council.",
+            "Councilors described incomplete departmental information and the absence of annual departmental reports as budget-process context.",
+            "These conditions shaped the partial-override discussion, source-line debate, and calls for future budget-process improvements."
+          ],
+          "fact_check_notes": [
+            "Do not require the summary to state all background items. A source-consistent subset is enough.",
+            "Temporal status matters if stated: the Mayor's return and committee process were already occurred; information gaps were described as ongoing or recurring."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "The Mayor returned and modified the Council's amended FY23 budget.",
+              "The Council had passed an amended budget on June 8.",
+              "Since June 15, the Ways and Means process included one hearing and two work sessions about accept/override options.",
+              "Councilors described a new budget role and process-learning context.",
+              "Councilors described incomplete information and lack of annual departmental reports."
+            ],
+            "agenda_connection": "These background conditions explain why the Council was considering partial overrides and debating source lines, offsets, and future budget-process improvements."
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "The Council passed partial override number one and approved the FY23 budget.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This states the action, not agenda-setting background."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "The Mayor had returned the budget before the meeting.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A prior event is visible, but its connection to the current item or form is not stated."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "The partial-override debate followed the Mayor's return and modification of the Council's amended FY23 budget and the Ways and Means process of one hearing and two work sessions after June 15.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The precipitating context and its connection to the override debate are stated."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The partial-override debate was triggered because the state legislature rejected Boston's FY23 budget after June 15.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a specific but source-inconsistent trigger condition."
+          }
+        ]
+      },
+      "N": {
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "event_sheet_summary": "Partial override number one carried specific budget increases for equity, returning citizens, a life-insurance study, codification, youth workers, youth-development salaries, housing supports, and tree maintenance, offset by decreases to BFD, Law, OPM, and DoIT lines. Later youth-employment payloads for 6,000 summer jobs and 1,500 year-round jobs were proposed, but revised partial override number three did not pass.",
+        "temporal_status": {
+          "primary": "future_effect",
+          "secondary": [
+            "completed_in_session",
+            "hypothetical_or_risk"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "payload_attached_to_action": {
+                "match": [
+                  "The summary attaches specific budget increases, decreases, offsets, program funding, staffing, or service funding to partial override number one.",
+                  "The summary attaches youth-employment funding terms to proposed partial override number two, proposed partial override number three, or revised partial override number three, while preserving that the revised final override did not pass if stated as adopted.",
+                  "The summary links budget-line payloads to Dockets 0762 and 0763 as overridden in part."
+                ],
+                "not_match": [
+                  "The summary says the Council passed or failed an override but gives no condition, budget line, number, requirement, scope, or funding payload.",
+                  "The summary lists community needs or concerns without attaching them to an override, docket, motion, or budget action.",
+                  "The summary describes general budget priorities but does not say what the action carried or would have carried."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "any_of",
+            "labels": {
+              "number": {
+                "match": [
+                  "The attached payload includes an amount, count, or threshold such as $600,000, $800,000, $100,000, $200,000, $120,000, $160,000, $400,000, $688,373, 6,000 summer jobs, 1,500 year-round jobs, $4,606,667, $2,410,000, or another source-linked numeric budget term.",
+                  "The stated value can be wrong for Presence purposes; value correctness is checked only under Fact Check if it bears on a fact_check_field."
+                ],
+                "not_match": [
+                  "The summary attaches a payload but gives no identifiable number, amount, count, threshold, duration, or measured value."
+                ]
+              },
+              "named_requirement": {
+                "match": [
+                  "The attached payload names an identifiable requirement or funding purpose, such as expanding Black Male Advancement capacity, increasing Returning Citizens capacity, commissioning a life-insurance study, procuring codification services, funding youth workers, providing BYDN salary increases, supporting housing vouchers or stipends, adding tree-maintenance capacity, or funding youth employment programs."
+                ],
+                "not_match": [
+                  "The summary says there were funding changes but does not identify any named purpose, program, requirement, condition, or restriction."
+                ]
+              },
+              "scope_boundary": {
+                "match": [
+                  "The attached payload identifies an applicable scope, such as City of Boston FY23 budget lines, specific departments or offices, youth residents of Commonwealth Apartments and Faneuil Gardens, young people aged 19 to 24 for housing stipends, low-income college students, high-school students, or specified BFD/BPD/Law/OPM/DoIT offset lines."
+                ],
+                "not_match": [
+                  "The summary gives a funding payload but no identifiable program, population, department, category, or other boundary for what the payload applies to."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "Partial override number one was the passed payload carrier and was tied to Dockets 0762 and 0763 being overridden in part.",
+            "Partial override number one included increases to Black Male Advancement, Returning Citizens, a citywide life-insurance study, City Clerk codification, BCYF youth workers, Boston Youth Development Network salaries, Mayor's Office of Housing supports, and Parks tree-maintenance capacity.",
+            "Partial override number one was balanced by decreases to BFD equipment, BFD equipment, Law contractual, OPM personnel, DoIT personnel, and BFD contractual lines.",
+            "The youth-employment payloads in proposed partial override number two and revised partial override number three included 6,000 summer jobs and 1,500 year-round jobs, but revised partial override number three did not pass.",
+            "Revised partial override number three would have increased Youth Engagement and Employment contractual services to $4,606,667 and offset the additional $2,410,000 through BPD contractual and equipment lines.",
+            "The 8 affirmative / 5 negative vote count is not a payload amount and belongs to the amendment motion and revised partial override number three result, not to partial override number one."
+          ],
+          "fact_check_notes": [
+            "Do not require every dollar amount or program line to be mentioned. Check only explicit payload claims that the summary makes.",
+            "It is a Fact Check issue if the summary presents the revised partial override number three youth-employment payload as adopted, because it failed to meet the two-thirds threshold.",
+            "Numeric correctness includes both the value and what the value is attached to."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "payload_carrier": {
+              "passed_payload": [
+                "partial override number one",
+                "Dockets 0762 and 0763, overridden in part"
+              ],
+              "failed_or_unadopted_payload": [
+                "Chair's proposed partial override number two",
+                "Chair's proposed partial override number three",
+                "revised partial override number three as amended by Councilor Lara"
+              ]
+            },
+            "payload_content": {
+              "partial_override_1_increases": [
+                "Black Male Advancement personnel services to $600,000; adds $400,000 to the tax-order line",
+                "Office of Human Services / Office of Returning Citizens contractual services to $800,000; adds $500,000",
+                "Office of Economic Opportunity contractual services to $100,000 for a citywide life-insurance study",
+                "City Clerk contractual services to $200,000 for codification/review/reconciliation work",
+                "BCYF personnel services to $120,000 for youth workers",
+                "Boston Public Health Commission special appropriation to $160,000 for $20,000 salary increases for each FTE at Boston Youth Development Network",
+                "Mayor's Office of Housing special appropriation to $400,000 for housing voucher / project-basing / deeper-affordability / returning citizens / homeownership or housing-stipend pilot",
+                "Parks and Recreation personnel services by $688,373 for tree-maintenance departmental capacity; adds $144,186 to the tax-order line"
+              ],
+              "partial_override_1_decrease_offsets": [
+                "BFD equipment $400,000",
+                "BFD equipment $750,000",
+                "Law contractual $250,000",
+                "OPM personnel $130,000",
+                "DoIT personnel $160,000",
+                "BFD contractual $400,000"
+              ],
+              "revised_partial_override_3": [
+                "Would have increased Youth Engagement and Employment contractual services to $4,606,667",
+                "Would have funded 6,000 youth summer jobs and a $2,746,667 pay adjustment",
+                "Would have funded 1,500 youth year-round jobs at $1,860,000",
+                "Would have directed $500,000 to experiential learning opportunities and the rest to a high-school / college partnership and academic support/employment opportunities",
+                "Would have added $2,410,000 to the tax-order line and restored the Council's $8,689,453",
+                "Would have offset the additional $2,410,000 with BPD contractual services $688,373, BPD contractual services $100,000, and BPD equipment $1,700,000",
+                "Did not pass as an override because it received 8 affirmative votes and required two-thirds"
+              ]
+            },
+            "payload_scope": [
+              "City of Boston FY23 budget lines and tax order",
+              "equity, returning citizens, youth, housing, public health, codification, parks/tree maintenance, and youth-employment program lines",
+              "BFD, Law, OPM, DoIT, and BPD source lines for proposed decreases"
+            ],
+            "payload_scalar_or_baseline": [
+              "Dollar amounts are attached to specific budget lines and override proposals",
+              "6,000 summer jobs and 1,500 year-round jobs are attached to proposed youth-employment funding; revised partial override number three did not pass"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "The Council overrode the Mayor's budget changes in part.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is only the action shell; it gives no attached payload."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "The partial override changed several city budget lines.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A payload is attached to the action, but no number, named requirement, or scope boundary is identifiable."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "Partial override number one increased funding for Black Male Advancement, Returning Citizens, City Clerk codification, youth workers, BYDN salaries, housing supports, and Parks tree maintenance, with offsets from BFD, Law, OPM, and DoIT lines.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the correct passed carrier and states source-consistent content and scope."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The Council adopted revised partial override number three, adding $4,606,667 for Youth Engagement and Employment contractual services to fund 6,000 summer jobs and 1,500 year-round jobs.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The payload is specific, but it is attached to an adopted result even though revised partial override number three failed."
+          }
+        ]
+      },
+      "L": {
+        "slot_name": "Concrete Concern",
+        "event_sheet_summary": "Councilors raised concrete concerns about whether public-safety departments could spare proposed offset funds, whether the Council had reliable departmental budget information, whether youth-employment funds could be used given current vacancies, and whether delaying investment would continue to leave young people and underserved communities waiting.",
+        "temporal_status": {
+          "primary": "hypothetical_or_risk",
+          "secondary": [
+            "currently_existing",
+            "recurring_concern"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "concrete_concern_language": {
+                "match": [
+                  "The summary states a concern, risk, obstacle, tradeoff, deficiency, shortage, or difficulty related to proposed offsets, public-safety capacity, budget information, youth-job vacancies, or delayed investment.",
+                  "The summary can use problem-side language such as concern, risk, question, lack, incomplete, vacancy, unfilled, waiting, unreasonable cut, or inability to spend funds."
+                ],
+                "not_match": [
+                  "The summary only states a solution or funding proposal without asserting any concern, risk, obstacle, deficiency, or tradeoff.",
+                  "The summary only says councilors debated or disagreed, without saying what the concern was.",
+                  "The summary describes a positive funding priority without problem-side language."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_concern_content": {
+                "match": [
+                  "The summary specifies that BFD equipment or contractual offset funds might still be needed.",
+                  "The summary specifies that Councilors lacked complete or timely departmental budget information or annual reports.",
+                  "The summary specifies that Youth Engagement and Employment had not filled all existing summer jobs, including the stated 2,800 of 6,000 figure if mentioned.",
+                  "The summary specifies concern that expanding youth jobs might be less viable than other job pathways or that cutting BPD lines was unreasonable or contested.",
+                  "The summary specifies the countervailing concern that delaying investment leaves young people or underserved communities waiting."
+                ],
+                "not_match": [
+                  "The summary says only that there were concerns, problems, risks, or tradeoffs without identifying what they were about.",
+                  "The summary names a department or program but gives no problem-side content tied to it."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Councilors questioned whether BFD equipment and contractual funds identified as offsets might still be needed by the Fire Department.",
+            "Councilors described late or incomplete departmental budget information and weaker information caused by the loss of annual departmental reporting.",
+            "One councilor stated that Youth Engagement and Employment had filled 2,800 of 6,000 summer jobs and that work had already started.",
+            "Councilors raised concern that expanding youth jobs through the proposed funding might be less viable than career entry-level positions.",
+            "Supporters also raised the countervailing concern that failing to invest in youth and underserved communities would keep asking people to wait.",
+            "Councilors raised concern that cutting Boston Police overtime, personnel, equipment, or contractual lines was unreasonable or contested.",
+            "Relevant local anchors include BFD, BPD, YEE, young people, underserved residents, and City of Boston communities."
+          ],
+          "fact_check_notes": [
+            "Local anchor is not required for Presence. If the summary explicitly names a department, group, or place, compare it for Fact Check.",
+            "Temporal status may vary by concern: information gaps and reported job-fill status were current; future equipment needs and unused youth-job funds were hypothetical or risk-based."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "Concern that BFD equipment and contractual funds identified as offsets might still be needed by the Fire Department",
+              "Concern that Councilors were receiving late or incomplete information about departmental budgets",
+              "Concern that annual departmental reporting had fallen away and left the Council with weaker information",
+              "Concern that Youth Engagement and Employment had not filled all existing summer jobs: one councilor stated 2,800 of 6,000 jobs had been filled and work had already started",
+              "Concern that expanding youth jobs through proposed funding might be less viable than career entry-level positions",
+              "Countervailing concern that failing to invest in youth and communities would repeat past missed opportunities and leave people waiting",
+              "Concern that cutting Boston Police overtime/personnel/equipment/contractual lines was unreasonable or politically contested"
+            ],
+            "local_anchor": [
+              "Boston Fire Department / BFD",
+              "Boston Police Department / BPD",
+              "Youth Engagement and Employment / YEE",
+              "City of Boston communities",
+              "young people",
+              "underserved residents"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "The partial overrides included increases and decreases across several departments.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary describes payload, not a concern or obstacle."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "Councilors raised concerns during the budget debate.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is generic."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "Councilors questioned whether BFD offset funds were really unneeded and whether incomplete departmental information left the Council with enough basis for the budget reallocations.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "Specific source-consistent concern content is stated."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Councilors were concerned that Youth Engagement and Employment had already filled all 6,000 summer jobs, leaving no room for additional youth applicants.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The concern is specific but contradicts the stated 2,800 of 6,000 filled figure and its meaning."
+          }
+        ]
+      },
+      "S": {
+        "slot_name": "Shared Concern Synthesis",
+        "event_sheet_summary": "A recurring concern theme was the tension between investing in youth, housing, equity, returning citizens, and underserved communities, while protecting public-safety or departmental capacity and improving the reliability and transparency of budget information.",
+        "temporal_status": {
+          "primary": "recurring_concern",
+          "secondary": [
+            "currently_existing",
+            "hypothetical_or_risk"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "problem_side_concern": {
+                "match": [
+                  "The summary names a recurring problem-side concern theme around the tradeoff between community/youth investment and public-safety or departmental capacity.",
+                  "The summary names a recurring problem-side concern theme around incomplete, late, or unreliable budget information and the need for transparency.",
+                  "The summary names concern that youth, low-income residents, returning citizens, housing needs, or underserved communities would keep waiting if investments were delayed."
+                ],
+                "not_match": [
+                  "The summary only lists budget actions or program lines without problem-side concern language.",
+                  "The summary only says there was debate or disagreement without identifying the concern theme.",
+                  "The summary states only an individual isolated concern without indicating or matching a broader theme present across the discussion. The summary does not need to use the word recurring, but the content must align with a recurring theme."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "specific_content": {
+                "match": [
+                  "The concern theme identifies the object or tradeoff: reallocations from BFD/BPD or other departments versus public-safety/departemental capacity; investment in youth, housing, returning citizens, equity, and underserved communities; or incomplete departmental budget information and transparency.",
+                  "The summary names the tension, criticized mechanism, affected groups, or object of concern with enough detail to tell what the shared concern is about."
+                ],
+                "not_match": [
+                  "The summary only says there were shared concerns, recurring concerns, or tensions without saying what they concerned.",
+                  "The summary names transparency, public safety, or youth only as general topics, with no problem-side concern or tradeoff content."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "A recurring concern theme was whether reallocations from BFD/BPD or other departmental lines would harm public-safety or departmental capacity.",
+            "A recurring concern theme was insufficient or late departmental budget information and the need for better transparency.",
+            "A recurring concern theme was whether the City should urgently invest in youth, low-income residents, returning citizens, housing, and underserved communities.",
+            "Some councilors supported the overrides as investments in underfunded communities and programs.",
+            "Some councilors questioned whether Fire and Police offsets were truly unused or safe to redirect.",
+            "Youth-employment supporters framed the issue as a missed opportunity or waiting problem, while opponents questioned job-fill capacity and public-safety cuts."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to prove recurrence with multiple speakers; recurrence is grounded in the event sheet. It must name the source-supported concern theme in problem-side terms.",
+            "Do not penalize omission of one side of the tension if the stated theme is otherwise source-consistent and does not contradict the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "concern_theme": [
+              "Recurring concern about whether reallocations from BFD/BPD or other departmental lines would harm public-safety or departmental capacity",
+              "Recurring concern about insufficient or late departmental budget information and the need for better transparency",
+              "Recurring concern about whether the City should urgently invest in youth, low-income residents, returning citizens, housing, and underserved communities"
+            ],
+            "concern_content": [
+              "Some councilors supported overrides as investments in communities, youth, equity, housing, and underfunded departments",
+              "Some councilors questioned offsets from Fire and Police lines and whether those funds were truly unused or safe to redirect",
+              "Some councilors argued that more standardized departmental reporting and earlier information would improve future budget deliberations",
+              "Youth-employment supporters framed the issue as a missed-opportunity / waiting problem for young people; opponents questioned job-fill capacity and public-safety cuts"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "Partial override number one increased several program lines and decreased several departmental lines.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary gives payload, not a recurring problem-side concern theme."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "The discussion showed recurring concerns.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the theme content is not identifiable."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "A recurring concern was the tradeoff between urgent investment in youth and underserved communities and the risk that taking funds from Fire or Police lines could weaken public-safety capacity.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The concern theme and its specific content match the event sheet."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "The recurring concern was that the Council had too much complete departmental data and therefore no way to justify any public budget debate.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific concern theme that contradicts the source-supported information-gap theme."
+          }
+        ]
+      },
+      "U": {
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "event_sheet_summary": "Several issues remained open or future-facing: BFD equipment needs could be handled later through a supplemental process if necessary, Car 5 was pulled out for later discussion, budget-information improvements were urged for next year's process, and the revised youth-employment partial override failed rather than becoming an adopted funding path.",
+        "temporal_status": {
+          "primary": "pending_future_handling",
+          "secondary": [
+            "future_effect",
+            "hypothetical_or_risk",
+            "completed_in_session"
+          ]
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pendingness_marker": {
+                "match": [
+                  "The summary explicitly states that BFD equipment needs could be handled later or through a supplemental process if necessary.",
+                  "The summary explicitly states that Car 5 was pulled out for later discussion.",
+                  "The summary explicitly states that budget-information or annual-report improvements were left for next year or future budget deliberations.",
+                  "The summary explicitly states that the youth-employment funding in revised partial override number three remained unadopted, unresolved, or without a successful path after the failed vote."
+                ],
+                "not_match": [
+                  "The summary only states a completed action, such as the budget being approved or an override passing, with no open, pending, later, future, unresolved, or failed-with-no-adopted-path marker.",
+                  "The summary only mentions future-facing program effects from adopted funding without identifying unresolved handling or a return path.",
+                  "The summary says there was a later opportunity in generic terms but does not identify what remained open."
+                ]
+              }
+            }
+          },
+          "quality_gate": {
+            "operator": "all_of",
+            "labels": {
+              "pending_item_identifiable": {
+                "match": [
+                  "The pending item is identifiable as potential BFD equipment needs, Car 5, future departmental budget-information / annual-report process improvements, or the unadopted youth-employment funding expansion in revised partial override number three.",
+                  "The summary may name the pending item substantively even if it does not use the exact transcript label."
+                ],
+                "not_match": [
+                  "The summary says something remained pending, later, unresolved, or future-facing but does not identify the item, issue, or workstream."
+                ]
+              },
+              "handling_path_visible": {
+                "match": [
+                  "The handling path is visible as a supplemental appropriation/process for BFD equipment needs if necessary.",
+                  "The handling path is visible as later discussion for Car 5.",
+                  "The handling path is visible as next year's budget process or future budget deliberations for improved departmental information and reporting.",
+                  "For revised partial override number three, the path is that there was no successful handling path within the segment after the failed vote."
+                ],
+                "not_match": [
+                  "The summary says an item remained open but gives no process, later discussion, future budget process, supplemental process, institutional path, or failed-with-no-successful-path status.",
+                  "The summary gives a future process for a different item not supported by the event sheet."
+                ]
+              }
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "BFD equipment needs were not resolved inside the segment beyond a stated possibility of later supplemental handling if needs arose.",
+            "Car 5 was described as pulled out of the discussion for later handling.",
+            "Future budget-process improvements and annual-report modernization were proposed or urged, not completed.",
+            "Revised partial override number three failed as an override; its youth-employment funding payload was not adopted in the segment.",
+            "The handling path for possible BFD equipment needs was a supplemental appropriation/process if necessary.",
+            "The handling path for Car 5 was later discussion.",
+            "The handling path for budget-process reform was next year's budget process or future budget deliberations.",
+            "There was no successful handling path for revised partial override number three within the segment after the failed vote."
+          ],
+          "fact_check_notes": [
+            "Do not treat the completed failed vote itself as pending; the unresolved tail is the lack of adopted youth-employment payload after that failure.",
+            "Do not treat the passed partial override number one or the final stated FY23 budget approval as unresolved."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "source_context_for_fact_check": {
+            "pending_status": [
+              "BFD equipment needs were not resolved inside the segment beyond a stated possibility of later supplemental handling if needs arose",
+              "Car 5 was described as pulled out of the discussion for later handling",
+              "Future budget-process improvements and annual-report modernization were proposed or urged, not completed",
+              "Revised partial override number three failed as an override; its youth-employment funding payload was not adopted in the segment"
+            ],
+            "pending_item": [
+              "Potential BFD equipment needs during FY2022/FY2023",
+              "Car 5 / fire-service item discussed as pulled out",
+              "Departmental annual-report / budget-information process for future budget deliberations",
+              "Youth-employment funding expansion in revised partial override number three after it failed to meet the two-thirds threshold"
+            ],
+            "handling_path": [
+              "Supplemental appropriation/process for future BFD equipment needs, if necessary",
+              "Later discussion for Car 5",
+              "Next year's budget process for improved departmental information and reporting",
+              "No successful handling path for revised partial override number three within this segment after the failed vote"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "id": "topic_fail",
+            "candidate_summary": "The presiding officer stated that Dockets 0762 and 0763 had been overridden in part and that the FY23 budget was approved.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is a completed disposition, not an unresolved tail."
+          },
+          {
+            "id": "topic_pass_quality_fail",
+            "candidate_summary": "Some budget issues were left for later.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is stated, but neither the item nor handling path is specific."
+          },
+          {
+            "id": "full_correct",
+            "candidate_summary": "Potential BFD equipment needs remained subject to a later supplemental process if necessary, and Car 5 was pulled out for later discussion.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "Pending items and handling paths are source-consistent."
+          },
+          {
+            "id": "wrong_but_specific_fact_check_failure",
+            "candidate_summary": "Partial override number one remained pending for a later full Council vote after the meeting.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states pending status for an item that the source says passed in-session."
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,626 @@
+segment_id: "MTG41"
+segment_dir: "41_SeattleCityCouncil_11212016"
+meeting_id: "SeattleCityCouncil_11212016"
+uid: "SeattleCityCouncil_11212016_CF 314362"
+decision_type: "Other"
+segment_type: "non-decision"
+event_sheet_markdown: |
+  # Event Sheet — MTG41
+
+  ## Source segment
+
+  ## Segment-level overview
+
+  The segment covers Seattle City Council agenda items on the 2017–2018 budget package and related budget documents. The Council first placed Clerk File 314362 on file, then considered Council Bill 118849 adopting the budget, capital improvement program, and position modifications, and Resolution 31719 endorsing the 2018 budget and position modifications. Councilmembers used the discussion period to describe budget priorities, concerns, and implementation themes before the Council passed the budget bill 8–1 and adopted the resolution.
+
+  ---
+
+  ## Slot T — Topic/Framing
+
+  ```yaml
+  label: T
+  summary: >-
+    The segment is framed around Seattle's 2017–2018 city budget package,
+    including the capital improvement program and position modifications. The
+    substantive policy direction discussed is the allocation of city resources
+    toward budget priorities such as children and early learning, homelessness and
+    housing, public safety, immigrant and refugee support, survivors of domestic
+    and sexual violence, district infrastructure, parks, transportation safety,
+    labor standards, and equitable development.
+  evidence:
+    - >-
+      Agenda Item 36 is introduced as Council Bill 118849, "Adopting a budget,
+      including capital improvement program and position modifications."
+    - >-
+      Agenda Item 37 is introduced as Resolution 31719, "Endorsing new budget and
+      position modifications for the City of Seattle for 2018."
+    - >-
+      Councilmembers describe the budget as funding or supporting programs in
+      children's services, homelessness, housing, public safety, paid family leave,
+      immigrant and refugee assistance, LGBTQ seniors, district infrastructure,
+      equitable development, and other city priorities.
+  source_vocabulary:
+    - "2017 through 2018 proposed budget"
+    - "2017 through 2022 proposed capital improvement program"
+    - "Adopting a budget"
+    - "position modifications"
+    - "budget as a whole"
+    - "investments"
+    - "equity and opportunity"
+    - "homelessness"
+    - "affordable housing"
+    - "children ages birth through five"
+  temporal_status:
+    primary: completed_in_session
+    secondary:
+      - currently_existing
+      - future_effect
+    notes:
+      - >-
+        The budget bill and budget resolution were considered and acted on during
+        the segment.
+      - >-
+        Many funded programs and budget effects are future-facing implementation
+        effects of the adopted budget.
+  source_context_for_fact_check:
+    subject: >-
+      Seattle's 2017–2018 budget package, related capital improvement program,
+      position modifications, and 2018 budget endorsement.
+    policy_direction: >-
+      Allocate, fund, and authorize city budget resources and position changes
+      across multiple municipal priorities; the segment is not limited to a single
+      service area.
+    target: >-
+      City of Seattle budget operations, capital investments, departments,
+      programs, and communities affected by the adopted budget.
+    not_supported_as_topic:
+      - >-
+        A summary should not recast the segment as only a parks proceeding,
+        because the parks district meeting begins after this full Council segment
+        adjourns.
+      - >-
+        A summary should not frame the segment as only committee-stage budget
+        recommendations; the full Council votes occur in this segment.
+  answer_locality: >-
+    The topic is introduced at the beginning in agenda items 35–37 and then
+    elaborated across councilmember budget comments before the votes.
+  marker_presence:
+    subject_identified: present
+    policy_direction: present
+    target: present
+  ```
+
+  ---
+
+  ## Slot O — Outcome/Position
+
+  ```yaml
+  label: O
+  summary: >-
+    The Council completed several in-session dispositions. It placed Clerk File
+    314362 on file, passed Council Bill 118849 adopting the budget as amended, and
+    adopted Resolution 31719 endorsing the 2018 budget and position modifications.
+    The budget bill passed by an 8–1 roll-call vote, with Councilmember Sawant
+    voting no; the resolution was adopted by voice vote after an audible no vote.
+  evidence:
+    - >-
+      For agenda item 35, the presiding officer calls for a vote to file the clerk
+      file, and then states that the motion carries and the file is placed on
+      file.
+    - >-
+      For Council Bill 118849, the roll call ends with "Eight in favor. One
+      opposed. The bill passed and the chair will sign it."
+    - >-
+      For Resolution 31719, the presiding officer calls for a voice vote and then
+      states that the motion carries and the resolution is adopted.
+  source_vocabulary:
+    - "placed on file"
+    - "the bill passed"
+    - "chair will sign"
+    - "resolution be adopted"
+    - "motion carries"
+    - "eight in favor, one opposed"
+    - "Councilmember Sawant: No"
+  temporal_status:
+    primary: completed_in_session
+    notes:
+      - >-
+        The dispositions occurred during the full Council segment.
+      - >-
+        Earlier committee recommendations are source context, but the final
+        in-segment outcomes are the full Council actions.
+  source_context_for_fact_check:
+    actor: Seattle City Council / full Council segment
+    procedural_stage:
+      Clerk_File_314362: full Council disposition placing the file on file
+      Council_Bill_118849: full Council passage of the budget bill
+      Resolution_31719: full Council adoption of the budget resolution
+    disposition_result:
+      - acted_on_item: Clerk File 314362
+        result: placed on file
+      - acted_on_item: Council Bill 118849
+        result: passed as the budget bill
+      - acted_on_item: Resolution 31719
+        result: adopted
+    acted_on_item:
+      - Clerk File 314362: City Council changes to the 2017–2018 proposed budget and 2017–2022 proposed CIP
+      - Council Bill 118849: adopting a budget, including CIP and position modifications
+      - Resolution 31719: endorsing new budget and position modifications for the City of Seattle for 2018
+    vote_result:
+      Council_Bill_118849:
+        value: 8-1
+        in_favor:
+          - Herbold
+          - Johnson
+          - Juarez
+          - O'Brien
+          - Bagshaw
+          - Burgess
+          - Gonzalez
+          - Harrell
+        opposed:
+          - Sawant
+        attached_to: full Council passage of Council Bill 118849
+      Resolution_31719:
+        value: voice vote; motion carried; no numeric count stated
+        opposed_voice: at least one audible "No" in transcript
+        attached_to: full Council adoption of Resolution 31719
+      Clerk_File_314362:
+        value: voice vote; motion carried; no numeric count stated
+        attached_to: motion to place the clerk file on file
+  answer_locality: >-
+    Disposition markers occur near the opening vote on agenda item 35 and near the
+    end of the budget discussion for Council Bill 118849 and Resolution 31719.
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present
+    acted_on_item_specific: present
+  ```
+
+  ---
+
+  ## Slot B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >-
+    The budget votes were shaped by a months-long budget process, prior committee
+    recommendations, the Mayor's proposed budget, council amendments, public and
+    community advocacy, and ongoing city problems such as homelessness, housing
+    affordability, public safety, education gaps, and district infrastructure
+    needs. Several councilmembers connected their budget priorities to earlier
+    work, recommendations, or community pressure.
+  evidence:
+    - >-
+      Councilmember Burgess thanks colleagues for the budget process over the last
+      couple of months and says the balancing package was completed sooner and
+      with more transparency than in previous years.
+    - >-
+      Councilmember Bagshaw connects homelessness funding to Pathways Home
+      recommendations and Barb Poppe's September recommendation to move urgently
+      and decisively.
+    - >-
+      Councilmember Sawant frames the $29 million housing bond as the result of
+      the People's Budget movement and the Coalition to Build 1000 Homes.
+    - >-
+      Councilmembers describe district and program needs that led to budget
+      additions, including South Park public safety, Northgate affordable housing,
+      University Trailer Park relocation assistance, and survivors' services.
+  source_vocabulary:
+    - "process over the last couple of months"
+    - "balancing package"
+    - "Mayor's proposed budget"
+    - "Pathways Home recommendations"
+    - "Barb Poppy"
+    - "move urgently and decisively"
+    - "People's Budget movement"
+    - "Thousand Homes Coalition"
+    - "public comment"
+    - "community"
+  temporal_status:
+    primary: already_occurred
+    secondary:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - >-
+        Prior deliberation, committee recommendations, advocacy, and mayoral
+        proposals occurred before the final Council votes in this segment.
+      - >-
+        The underlying social and service concerns are described as ongoing.
+  source_context_for_fact_check:
+    trigger_condition:
+      - >-
+        A prior budget process and committee recommendation stage preceded the
+        full Council votes.
+      - >-
+        Councilmembers cite homelessness, housing affordability, education
+        readiness, public safety, district needs, and equity concerns as context
+        for budget choices.
+      - >-
+        Community advocacy and movements are cited as background for the $29
+        million housing bond.
+    agenda_connection:
+      - >-
+        These prior processes and needs shaped the content and framing of the
+        budget package and councilmember comments.
+      - >-
+        The background does not replace the in-session action: the Council still
+        takes full Council votes on the budget bill and resolution.
+  answer_locality: >-
+    Background context is spread across the councilmember comments between the
+    initial filing vote and the roll-call vote on the budget bill.
+  marker_presence:
+    precipitating_context_visible: present
+    connected_to_current_item_or_form: present
+  ```
+
+  ---
+
+  ## Slot N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >-
+    The budget package carried numerous operative funding and program payloads.
+    Examples discussed include expanded early-childhood programs, homelessness and
+    shelter investments, a $29 million housing bond, public safety and legal
+    services investments, immigrant and refugee citizenship assistance, district
+    infrastructure funding, equitable development funding, education programs, and
+    city staffing or position changes.
+  evidence:
+    - >-
+      Burgess describes $500,000 from Mayor Murray's budget to expand the Parent
+      Child Home Program, plus $1 million from King County Best Starts for Kids.
+    - >-
+      Gonzalez describes $400,000 over two years for Home and Hope, $300,000 over
+      two years for citizenship workshops, and $1.134 million over two years for
+      mobile advocates and a legal navigator for survivors of domestic and sexual
+      violence.
+    - >-
+      Herbold and Sawant discuss the $29 million housing bond proposal for
+      affordable housing.
+    - >-
+      Harrell describes $1.5 million for the 13th Year Promise Scholarship
+      program, $6.5 million for equitable development implementation, and funding
+      for community service officers and pre-filing diversion.
+  source_vocabulary:
+    - "$500,000"
+    - "$1 million"
+    - "$400,000 over the next two years"
+    - "1500 units of affordable housing"
+    - "$300,000 over the next two years"
+    - "$1.134 million"
+    - "$29 million"
+    - "$1.5 million"
+    - "$6.5 million"
+    - "paid family leave coordinator"
+    - "public safety coordinator"
+    - "housing bond proposal"
+    - "statement of legislative intent"
+  temporal_status:
+    primary: future_effect
+    secondary:
+      - completed_in_session
+      - currently_existing
+    notes:
+      - >-
+        The Council passed/adopted the budget instruments during the segment.
+      - >-
+        The budget payloads are future-facing authorizations, appropriations,
+        studies, staffing, grants, services, or implementation steps.
+  source_context_for_fact_check:
+    payload_carrier:
+      - Council Bill 118849 / adopted budget package
+      - Resolution 31719 / 2018 budget endorsement
+      - budget amendments and program allocations discussed by councilmembers
+    payload_content:
+      - >-
+        Parent Child Home Program expansion is tied to $500,000 in the Mayor's
+        budget and additional outside funding including $1 million from King
+        County Best Starts for Kids.
+      - >-
+        Home and Hope receives $400,000 over two years to help transform vacant
+        or underutilized tax-exempt public/nonprofit sites into affordable housing
+        and mixed-use public-benefit projects.
+      - >-
+        Citizenship workshops receive $300,000 over two years through increased
+        funding for the Office of Immigrant and Refugee Affairs.
+      - >-
+        Survivors of domestic and sexual violence receive $1.134 million over two
+        years for mobile advocates and a legal navigator for the King County
+        Courthouse.
+      - >-
+        The budget includes a $29 million long-term housing bond proposal for
+        affordable housing; the exact project or projects are not yet settled in
+        the discussion.
+      - >-
+        Harrell describes $1.5 million for the 13th Year Promise Scholarship
+        program and $6.5 million for equitable development implementation.
+    numeric_values:
+      - value: "$500,000"
+        meaning: Mayor's budget amount described for expanding the Parent Child Home Program
+      - value: "$1 million"
+        meaning: King County Best Starts for Kids award described as supporting the Parent Child Home Program
+      - value: "$400,000 over two years"
+        meaning: Home and Hope Program funding
+      - value: "1500 units"
+        meaning: projected affordable-housing production over five years from enough Home and Hope sites
+      - value: "$300,000 over two years"
+        meaning: increased Office of Immigrant and Refugee Affairs funding for citizenship workshops
+      - value: "$1.134 million over two years"
+        meaning: mobile advocates and legal navigator for domestic and sexual violence survivors
+      - value: "$29 million"
+        meaning: housing bond proposal / affordable housing resources
+      - value: "$1.5 million"
+        meaning: 13th Year Promise Scholarship program funding as described by Harrell
+      - value: "$6.5 million"
+        meaning: equitable development implementation funding as described by Harrell
+    payload_scope:
+      - >-
+        Payloads apply across city programs and specific communities, including
+        Seattle children and families, low-income residents, unsheltered people,
+        immigrant and refugee communities, LGBTQ seniors, domestic and sexual
+        violence survivors, South Park, Chinatown International District,
+        Northgate, Lake City, and other districts or neighborhoods named in the
+        discussion.
+  answer_locality: >-
+    Payload details are distributed through the councilmember remarks. Numeric
+    funding payloads appear especially in the Burgess, Bagshaw, Gonzalez, Johnson,
+    Herbold, Juarez, Sawant, and Harrell comments.
+  marker_presence:
+    payload_attached_to_action: present
+    number: present
+    named_requirement: present
+    scope_boundary: present
+    date_cutoff: limited_or_not_primary
+  ```
+
+  ---
+
+  ## Slot L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >-
+    The segment contains many concrete problem-side concerns: homelessness and
+    people living unsheltered, mental illness and drug addiction, housing
+    affordability, low-income children not being ready for kindergarten,
+    survivors of domestic and sexual violence needing help through legal and
+    social-service systems, neighborhood public safety concerns, trailer park
+    residents needing relocation assistance, and concern that the overall budget
+    did not go far enough for working people.
+  evidence:
+    - >-
+      Burgess says 40% of Seattle's low-income kids do not enter kindergarten
+      ready to learn.
+    - >-
+      Bagshaw describes individualized needs of people living unsheltered and says
+      families and individuals outside cannot wait three more years to get inside
+      housing.
+    - >-
+      Gonzalez describes survivors of domestic and sexual violence navigating a
+      confusing and burdensome legal and social-services system.
+    - >-
+      Johnson mentions relocation assistance for residents of the soon-to-close
+      University Trailer Park.
+    - >-
+      Sawant argues the budget fails to seriously prioritize ending homelessness
+      and the housing affordability crisis.
+  source_vocabulary:
+    - "living unsheltered"
+    - "mental illness and drug addiction"
+    - "can't wait another three years"
+    - "homelessness"
+    - "housing affordability crisis"
+    - "not enter kindergarten ready to learn"
+    - "survivors of domestic and sexual violence"
+    - "public safety"
+    - "soon to closed trailer park"
+    - "business as usual budget"
+  temporal_status:
+    primary: currently_existing
+    secondary:
+      - recurring_concern
+      - hypothetical_or_risk
+    notes:
+      - >-
+        Most concerns are described as ongoing city conditions at the time of the
+        budget vote.
+      - >-
+        Some concerns are future risks or implementation risks if budget actions
+        do not move quickly enough.
+  source_context_for_fact_check:
+    obstacle_content:
+      - >-
+        Homelessness and unsheltered living are presented as immediate problems
+        requiring urgent action.
+      - >-
+        Housing affordability is presented by multiple speakers as a major crisis
+        or need.
+      - >-
+        Low-income kindergarten readiness is presented as a child-development and
+        equity concern.
+      - >-
+        Domestic and sexual violence survivors are described as needing legal and
+        social-service support.
+      - >-
+        South Park and Chinatown International District are named in connection
+        with public safety improvements.
+      - >-
+        University Trailer Park residents are named in connection with relocation
+        assistance.
+    local_anchor:
+      - Seattle
+      - South Park
+      - Chinatown International District
+      - University Trailer Park
+      - Northgate
+      - Lake City
+      - Aurora / Aurora Commons
+  answer_locality: >-
+    Concrete concerns appear throughout individual councilmember comments rather
+    than in a single contiguous passage.
+  marker_presence:
+    concrete_concern_language: present
+    specific_concern_content: present
+  ```
+
+  ---
+
+  ## Slot S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >-
+    A recurring concern theme is that the budget must respond to vulnerable or
+    under-resourced communities, especially through homelessness and affordable
+    housing investments. Multiple speakers return to the need for faster housing
+    responses, shelter capacity, affordable housing production, and resources for
+    people who are homeless, low-income, displaced, or otherwise underserved.
+  evidence:
+    - >-
+      Bagshaw centers her comments on homelessness, Pathways Home, shelter,
+      lockers, sanctioned encampments, and getting people inside quickly.
+    - >-
+      Gonzalez highlights affordable housing, homeless youth housing, LGBTQ senior
+      housing needs, and Home and Hope.
+    - >-
+      Johnson highlights affordability, relocation assistance for trailer park
+      residents, and affordable housing on public land.
+    - >-
+      Herbold highlights transitional housing restoration, landlord-tenant
+      resources, eviction-related legal services, and the $29 million housing bond.
+    - >-
+      Sawant criticizes the budget for not doing enough on homelessness and
+      housing affordability while also acknowledging the $29 million housing bond
+      victory.
+    - >-
+      Harrell describes the $29 million housing bond as a crisis-driven step and
+      says implementation will continue.
+  source_vocabulary:
+    - "homelessness"
+    - "affordable housing"
+    - "housing affordability crisis"
+    - "housing levy"
+    - "$29 million housing bond"
+    - "families and individuals outside"
+    - "move urgently and decisively"
+    - "Build 1000 Homes"
+    - "publicly owned land"
+    - "transitional housing"
+  temporal_status:
+    primary: recurring_concern
+    secondary:
+      - currently_existing
+      - future_effect
+    notes:
+      - >-
+        The concern theme recurs across several councilmember remarks.
+      - >-
+        Budget responses are expected to have future implementation effects.
+  source_context_for_fact_check:
+    concern_theme: >-
+      Recurring concern that Seattle's budget should respond to homelessness,
+      housing affordability, and the needs of vulnerable or under-resourced
+      residents.
+    concern_content:
+      - >-
+        Speakers discuss immediate shelter and service needs for unsheltered
+        people, longer-term affordable housing production, housing-related legal
+        services, public land for housing, and a $29 million housing bond.
+      - >-
+        Sawant supports some housing victories but opposes the overall budget as
+        insufficient and too business-as-usual.
+      - >-
+        Other councilmembers describe the adopted budget as a strong or
+        unprecedented investment package.
+  answer_locality: >-
+    The shared concern is synthesized from repeated references across Bagshaw,
+    Gonzalez, Johnson, Herbold, Juarez, Sawant, and Harrell comments.
+  marker_presence:
+    problem_side_concern: present
+    specific_content: present
+  ```
+
+  ---
+
+  ## Slot U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >-
+    Although the Council completed the budget votes, several implementation paths
+    remained open. The $29 million housing bond did not yet have a settled project
+    or set of projects, and councilmembers expected future work with the Office of
+    Housing, the Mayor's Office, the City Budget Office, and Council to determine
+    rollout. Speakers also described future implementation of shelters,
+    sanctioned encampments, the Navigation Center, lockers, public safety task
+    force work, reports, studies, and other budget-funded programs.
+  evidence:
+    - >-
+      Herbold says the Council has not yet settled on a particular project or
+      projects for the $29 million housing bond and looks forward to working with
+      the Office of Housing, the Mayor's Office, the City Budget Office, and
+      councilmembers on rollout.
+    - >-
+      Bagshaw urges the mayor and departments to move forward with 24/7 shelters,
+      sanctioned encampments, the Navigation Center, lockers, and coordinated
+      programs.
+    - >-
+      Harrell says the budget is not the end but the beginning of implementation
+      and that there will be opportunities next year to improve the investments.
+  source_vocabulary:
+    - "not yet settled on a particular project or projects"
+    - "working with the Office of Housing"
+    - "roll this out"
+    - "move forward"
+    - "implementation"
+    - "not the end"
+    - "beginning of implementation"
+    - "opportunities next year"
+    - "task force"
+    - "report"
+  temporal_status:
+    primary: pending_future_handling
+    secondary:
+      - future_effect
+      - completed_in_session
+    notes:
+      - >-
+        The budget bill and resolution are completed in-session, but several
+        program choices and implementation steps remain future-facing.
+      - >-
+        The pending item is implementation and project selection, not final
+        passage of Council Bill 118849.
+  source_context_for_fact_check:
+    pending_status:
+      - >-
+        Full Council passage/adoption of the budget instruments was completed.
+      - >-
+        Implementation and some project-selection details remained open after the
+        votes.
+    pending_item:
+      - >-
+        Specific project or projects for the $29 million housing bond.
+      - >-
+        Rollout and implementation of budget-funded homelessness, housing,
+        public-safety, study, report, and program items.
+    handling_path:
+      - >-
+        Herbold identifies future work with the Office of Housing, the Mayor's
+        Office, the City Budget Office, and councilmembers.
+      - >-
+        Bagshaw identifies city departments, the Mayor's Office, county and state
+        coordination, and specific homelessness-response program implementation.
+      - >-
+        Harrell identifies next-year opportunities, supplemental budgets,
+        legislation from Council, and implementation follow-through.
+  answer_locality: >-
+    Pendingness markers appear mainly in Herbold's housing-bond discussion,
+    Bagshaw's implementation comments, and Harrell's closing remarks before the
+    vote.
+  marker_presence:
+    pendingness_marker: present
+    pending_item_identifiable: present
+    handling_path_visible: present
+  ```

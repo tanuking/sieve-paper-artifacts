@@ -1,0 +1,504 @@
+segment_id: "MTG20"
+segment_dir: "20_SeattleCityCouncil_08092021"
+meeting_id: "SeattleCityCouncil_08092021"
+uid: "SeattleCityCouncil_08092021_Res 32015"
+decision_type: "Resolution"
+segment_type: "decision-bearing"
+event_sheet_markdown: |
+  # Event Sheet — MTG20
+
+  ## Segment anchor
+
+  Agenda Item 18 concerned Resolution 32015, described in the transcript as addressing the impact of Seattle's Urban Renewal Program in displacing Black community members from the Central Area, supporting demands to fund quality affordable social housing to prevent and reverse displacement, and urging the Office of Housing to fund the New Hope affordable housing project. The segment ended with a roll-call vote in which the motion carried and the resolution was adopted.
+
+  ---
+
+  ## T — Topic/Framing
+
+  ```yaml
+  label: T
+  summary: >
+    The discussion framed Resolution 32015 as a response to Seattle's past and ongoing
+    displacement of Black Central District community members through urban renewal,
+    redlining, exclusionary zoning, and rising rents. The policy direction was to acknowledge
+    those racist displacement policies, support reparative affordable social housing, urge
+    funding for the New Hope Family Housing Project, and expand progressive revenue for
+    community-rooted affordable housing.
+  evidence:
+    - "Resolution 32015" was introduced as being "regarding the impact of Seattle's Urban Renewal Program in displacing black community members from the central area."
+    - The item was also introduced as "supporting community demands to fund quality, affordable social housing to prevent and reverse displacement" and "urging the Office of Housing to fund the Affordable Housing Project."
+    - Councilmember Sawant said the resolution would "acknowledge the city's past policies of racist displacement, such as redlining, urban renewal" and urge departments to look for reparative opportunities.
+    - The sponsor described the New Hope Family Housing Project as creating "86 affordable homes in the Central District" for families with historic roots in the neighborhood.
+    - Councilmember Mosqueda connected the effort to funding affordable housing rooted in and driven by communities of color, especially Black communities in the Central District.
+  source_vocabulary:
+    - "Urban Renewal Program"
+    - "displacing black community members"
+    - "central area" / "Central District"
+    - "redlining"
+    - "racist displacement"
+    - "quality, affordable social housing"
+    - "prevent and reverse displacement"
+    - "Office of Housing"
+    - "New Hope Family Housing Project"
+    - "progressive taxes"
+    - "community driven projects"
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - already_occurred
+      - future_effect
+    notes:
+      - Past racist displacement policies and the 1969 forced sale are treated as already occurred.
+      - The affordability and displacement crisis is described as currently existing.
+      - Funding, housing creation, reparations, and expanded revenue are framed as future effects of policy action.
+  source_context_for_fact_check:
+    subject: >
+      Resolution 32015 concerned Seattle's Urban Renewal Program, redlining, racist
+      displacement of Black community members from the Central Area/Central District,
+      and community demands for affordable social housing.
+    policy_direction:
+      - acknowledge past racist displacement policies
+      - urge city departments to look for reparative opportunities
+      - urge the Office of Housing to fund the New Hope Family Housing Project
+      - support expanded city funding and progressive revenue for affordable/social housing
+      - prevent and reverse displacement
+    target:
+      - Black community members with historic roots in the Central Area/Central District
+      - New Hope Family Housing Project
+      - Office of Housing funding decisions
+      - community-rooted affordable/social housing projects
+    temporal_status:
+      - already_occurred for historical redlining, urban renewal, and forced sales
+      - currently_existing for ongoing unaffordability and displacement pressure
+      - future_effect for funding, housing creation, and reparative action
+  answer_locality:
+    segment_region: full segment, with strongest anchors in the item reading, sponsor opening remarks, Councilmember Mosqueda's comments, and sponsor closing remarks
+    locality_notes:
+      - Topic is established at the beginning when Agenda Item 18 / Resolution 32015 is read.
+      - Policy direction and target are elaborated in the sponsor's opening statement and Mosqueda's funding comments.
+  marker_presence:
+    subject_identified: present_explicitly
+    policy_direction: present_explicitly
+    target: present_explicitly
+  ```
+
+  ---
+
+  ## O — Outcome/Position
+
+  ```yaml
+  label: O
+  summary: >
+    The Seattle City Council acted on Resolution 32015 during the segment. A motion to
+    adopt the resolution was made and seconded, the clerk called the roll, eight members
+    voted in favor with no opposition recorded, and the resolution was adopted.
+  evidence:
+    - The chair recognized a motion: "I move adoption of resolution 32015. Is there a second? Second."
+    - Near the end, the clerk was asked to "call the role on the adoption resolution."
+    - The vote was reported as "H in favor and unopposed" in the transcript, followed by "The motion carries the resolutions adopted."
+    - The chair directed the clerk to affix the chair's signature to the legislation.
+  source_vocabulary:
+    - "I move adoption of resolution 32015"
+    - "Second"
+    - "Please call the role on the adoption resolution"
+    - "in favor and unopposed"
+    - "The motion carries"
+    - "the resolutions adopted"
+    - "affix my signature"
+  temporal_status:
+    primary: completed_in_session
+    additional:
+      - already_occurred
+    notes:
+      - The Council's disposition on Resolution 32015 was completed during the segment.
+      - Later funding and implementation work remained separate from the adoption outcome.
+  source_context_for_fact_check:
+    actor: Seattle City Council / Council body conducting the meeting segment
+    procedural_stage: full Council adoption of a resolution during the meeting segment
+    disposition_result:
+      - Resolution 32015 was adopted.
+      - The motion to adopt carried.
+    acted_on_item:
+      - Agenda Item 18
+      - Resolution 32015
+    vote_result:
+      value: 8 in favor and unopposed
+      attached_to: adoption of Resolution 32015
+    temporal_status:
+      - completed_in_session for Council adoption
+      - pending_future_handling for later budget/funding implementation
+  answer_locality:
+    segment_region: opening motion and final roll-call/adoption sequence
+    locality_notes:
+      - The acted-on item is introduced at the beginning.
+      - The completed disposition and vote result appear at the end of the segment.
+  marker_presence:
+    disposition_verb_tied_to_acted_on_item: present_explicitly
+    acted_on_item_specific: present_explicitly
+  ```
+
+  ---
+
+  ## B — Agenda-Setting Background / Precipitating Context
+
+  ```yaml
+  label: B
+  summary: >
+    The current resolution was shaped by a history of racist displacement in Seattle's
+    Central District, including urban renewal, redlining, forced sales under threat of eminent
+    domain, and later rent-driven displacement. The sponsor described the 1969 forced sale
+    of New Hope Church and neighboring Black homeowners' land for Spruce Street Mini Park,
+    the Atlantic Urban Renewal Project / Neighborhood Improvement Project, and organizing
+    by New Hope, Black clergy, housing advocates, and community members as context for
+    the resolution.
+  evidence:
+    - The item itself was introduced as concerning the impact of Seattle's Urban Renewal Program in displacing Black community members from the Central Area.
+    - Reverend Jeffrey's op-ed was described as saying that "in 1969, the city forced the New Hope Church and black homeowners" to sell land "under the threat of eminent domain" for Spruce Street Mini Park.
+    - The sponsor said urban renewal "spelled displacement and destruction for black communities in the Central District."
+    - The sponsor named the "Atlantic Urban Renewal Project" and later "Neighborhood Improvement Project" as the renewal project names.
+    - The property New Hope Church was forced to relinquish was described as being estimated at "$2 million today" and "over eight times" the inflation-adjusted sale amount.
+    - The sponsor also tied the resolution to public comments, a July 31 rally, New Hope organizing, and the People's Budget campaign.
+  source_vocabulary:
+    - "1969"
+    - "forced the new Hope Church and black homeowners"
+    - "threat of eminent domain"
+    - "Spruce Street Mini Park"
+    - "Atlantic Urban Renewal Project"
+    - "Neighborhood Improvement Project"
+    - "Seattle Urban Renewal Enterprise"
+    - "redlining"
+    - "gentrification"
+    - "skyrocketing rent"
+    - "rally we held on Saturday, July 31st"
+    - "public comment"
+    - "People's Budget campaign"
+  temporal_status:
+    primary: already_occurred
+    additional:
+      - currently_existing
+      - recurring_concern
+    notes:
+      - The urban renewal, redlining, forced-sale history, prior reports, and July 31 rally are already occurred background.
+      - The affordability crisis and rent-driven displacement are described as current continuations of the historical displacement pattern.
+  source_context_for_fact_check:
+    trigger_condition:
+      - Seattle's Urban Renewal Program and redlining displaced Black community members from the Central Area/Central District.
+      - In 1969, New Hope Church and neighboring Black homeowners were described as being forced to sell land under threat of eminent domain for Spruce Street Mini Park.
+      - The urban renewal projects were named as the Atlantic Urban Renewal Project and later the Neighborhood Improvement Project.
+      - The property relinquished by New Hope Church was estimated in the segment at $2 million today, over eight times the inflation-adjusted sale amount.
+      - Community organizing, public comments, and a July 31 rally supported the resolution and related funding demands.
+    agenda_connection:
+      - The historical displacement and ongoing affordability crisis motivated the resolution's reparative framing and Office of Housing funding request.
+      - The sponsor treated the resolution as a first step before later budget work to secure actual funding.
+  answer_locality:
+    segment_region: sponsor opening remarks, historical narrative section, and sponsor closing remarks
+    locality_notes:
+      - The strongest historical background evidence begins after the sponsor references Reverend Jeffrey's July 16 op-ed.
+      - The connection to current organizing and future budget work appears before the first speaker yields and again in closing remarks.
+  marker_presence:
+    precipitating_context_visible: present_explicitly
+    connected_to_current_item_or_form: present_explicitly
+  ```
+
+  ---
+
+  ## N — Outcome-Near Condition / Operative Payload
+
+  ```yaml
+  label: N
+  summary: >
+    Resolution 32015's operative payload included acknowledging the city's past racist
+    displacement policies, urging city departments to seek reparative opportunities, urging
+    the Office of Housing to fund the New Hope Family Housing Project, supporting expanded
+    affordable-housing funding and progressive revenue, and recognizing that the New Hope
+    project would create 86 affordable homes in the Central District for families with historic
+    roots there. The segment also clarified that the resolution stated Council intent and was
+    not itself budget legislation.
+  evidence:
+    - The sponsor said approval would "acknowledge the city's past policies of racist displacement" and "urge all city departments to look for opportunities to make reparations."
+    - The item and sponsor both said the resolution urged the Office of Housing to fund the New Hope Family Housing Project.
+    - The sponsor stated the project would "create 86 affordable homes in the Central District" for families with historic roots in the neighborhood.
+    - The resolution was described as committing to expand city funding for affordable housing projects made available in 2021 and supporting increased progressive taxes on big business and the rich.
+    - The sponsor cautioned that the resolution "only has the power to state an intention" and "is not the budget legislation."
+    - Councilmember Mosqueda said the current NOFA amount was around "$35 million" and was not sufficient to fund all shovel-ready projects.
+  source_vocabulary:
+    - "acknowledge"
+    - "urge all city departments"
+    - "look for opportunities to make reparations"
+    - "urge the Office of Housing to fund"
+    - "New Hope Family Housing Project"
+    - "86 affordable homes"
+    - "families with historic roots"
+    - "expand city funding"
+    - "2021"
+    - "progressive taxes on big business and the rich"
+    - "not the budget legislation"
+    - "current no amount sits at around $35 million"
+  temporal_status:
+    primary: future_effect
+    additional:
+      - completed_in_session
+      - pending_future_handling
+    notes:
+      - Adoption of the resolution was completed in session.
+      - The funding, housing creation, reparative opportunities, and budget allocations were future-facing effects or later implementation steps.
+      - The transcript states that the resolution was a statement of intention, not the budget legislation itself.
+  source_context_for_fact_check:
+    payload_carrier: Resolution 32015 / Council adoption of Resolution 32015
+    payload_content:
+      - acknowledge Seattle's past racist displacement policies, including redlining and urban renewal
+      - urge city departments to look for reparative opportunities for past injustices
+      - urge the Office of Housing to fund the New Hope Family Housing Project
+      - support expanded city funding for affordable housing projects made available in 2021
+      - support increased progressive taxes on big business and the rich for quality affordable/social housing
+      - recognize the resolution as an intention-setting resolution rather than budget legislation
+    payload_scope:
+      - Black community members displaced from the Central Area/Central District
+      - families with historic roots in the Central District
+      - New Hope Family Housing Project
+      - community-rooted affordable housing projects, especially for communities impacted by displacement
+    payload_scalar_or_baseline:
+      - value: 86 affordable homes
+        meaning: homes the New Hope Family Housing Project would create in the Central District
+      - value: 2021
+        meaning: year of affordable housing project funding referenced in the resolution discussion
+      - value: around $35 million
+        meaning: current NOFA amount described as insufficient for all shovel-ready projects
+      - value: $50 million
+        meaning: Seattle Rescue Plan amount referenced by Councilmember Mosqueda as already put into the rescue plan, not the adoption vote amount
+    temporal_status:
+      - completed_in_session for the adoption of the resolution carrying this payload
+      - future_effect for funding, housing creation, progressive revenue, and reparative implementation
+      - pending_future_handling for actual budget/funding decisions
+  answer_locality:
+    segment_region: item reading, sponsor opening remarks, Councilmember Mosqueda's funding comments, and sponsor closing remarks
+    locality_notes:
+      - The main payload is stated at the beginning and in the sponsor's opening remarks.
+      - Funding/budget details and NOFA context appear in Councilmember Mosqueda's comments.
+      - The limitation that the resolution is not budget legislation appears in the sponsor's historical/background remarks.
+  marker_presence:
+    payload_attached_to_action: present_explicitly
+    number: present_explicitly
+    named_requirement: present_explicitly
+    scope_boundary: present_explicitly
+    date_cutoff: present_explicitly_for_2021_funding_reference
+  ```
+
+  ---
+
+  ## L — Concrete Concern
+
+  ```yaml
+  label: L
+  summary: >
+    The segment raised concrete concerns about historical and ongoing displacement: Black
+    Central District residents and institutions were displaced by urban renewal, redlining,
+    eminent-domain pressure, exclusionary zoning, and later skyrocketing rents. Speakers
+    also identified concrete barriers to community-led affordable housing, including insufficient
+    funding and partnership or covenant requirements that reduced community ownership and
+    control.
+  evidence:
+    - The item description named displacement of Black community members from the Central Area.
+    - The sponsor said urban renewal "spelled displacement and destruction for black communities in the Central District."
+    - The sponsor described New Hope Church and Black homeowners being forced to sell land under threat of eminent domain.
+    - The sponsor said the city remained unaffordable and that skyrocketing rents were again displacing working people and Black community members.
+    - Councilmember Mosqueda said the current NOFA amount of around $35 million was not sufficient to fund all shovel-ready projects.
+    - Mosqueda described partnership requirements as barriers that removed communities' ability to have ownership, control, and direction over land and housing.
+  source_vocabulary:
+    - "displacement"
+    - "destruction"
+    - "racist displacement"
+    - "egregious theft"
+    - "redlining"
+    - "gentrification"
+    - "skyrocketing rents"
+    - "steep affordability crisis"
+    - "not sufficient"
+    - "partnership requirement barriers"
+    - "ownership and control and direction"
+    - "hardest hit by displacement"
+  temporal_status:
+    primary: currently_existing
+    additional:
+      - already_occurred
+      - hypothetical_or_risk
+    notes:
+      - Historical displacement and forced sales are already occurred harms.
+      - Ongoing unaffordability, rising rents, insufficient funding, and partnership barriers are current concerns in the segment.
+      - Future economic eviction and continued displacement are presented as risks if not addressed.
+  source_context_for_fact_check:
+    obstacle_content:
+      - historical displacement of Black Central District communities through urban renewal, redlining, and eminent-domain pressure
+      - current affordability pressure and rent-driven displacement
+      - insufficient current funding for shovel-ready affordable housing projects
+      - partnership/covenant requirements that limited community ownership and control over housing development
+      - risk of economic eviction tied to rent increases
+    local_anchor:
+      - Central Area / Central District
+      - New Hope Church / New Hope Family Housing Project
+      - Black community members and communities of color in Seattle
+    numeric_values:
+      - value: around $35 million
+        meaning: current NOFA amount described as insufficient
+      - value: 21%
+        meaning: Seattle rent increase since January claimed in the sponsor's closing remarks
+      - value: 42%
+        meaning: annualized rate of the cited Seattle rent increase
+      - value: 10% or more
+        meaning: rent increase threshold tied to economic eviction assistance in the separate renter-protection bill
+      - value: three times the rent
+        meaning: proposed economic eviction assistance amount in a separate renter-protection bill
+  source_context_temporal_status:
+    - already_occurred for urban renewal, redlining history, and forced sale
+    - currently_existing for rent pressure, unaffordability, insufficient funding, and barriers
+    - hypothetical_or_risk for future economic eviction and continuing displacement
+  answer_locality:
+    segment_region: full segment, especially historical remarks, Mosqueda's funding/barrier comments, and sponsor closing remarks on rents and renter protections
+    locality_notes:
+      - Concrete harm is first established in the item reading and sponsor opening.
+      - Barriers and funding insufficiency are strongest in Mosqueda's comments.
+      - Rent-driven displacement and economic eviction risks are strongest in sponsor closing remarks.
+  marker_presence:
+    concrete_concern_language: present_explicitly
+    specific_concern_content: present_explicitly
+  ```
+
+  ---
+
+  ## S — Shared Concern Synthesis
+
+  ```yaml
+  label: S
+  summary: >
+    A recurring concern theme across the segment was that Seattle's Black communities,
+    especially in the Central District, had been and continued to be displaced by racist public
+    policies and market pressures, while community-led affordable housing projects lacked
+    sufficient and accessible funding. Speakers repeatedly linked historical urban renewal and
+    redlining to current rent pressure, exclusionary zoning, funding gaps, and the need for
+    progressive revenue and community control.
+  evidence:
+    - The item framing, sponsor remarks, and Mosqueda's comments all returned to displacement of Black communities in the Central Area/Central District.
+    - The sponsor tied historical urban renewal and redlining to current skyrocketing rents and the need for affordable housing throughout the city.
+    - Mosqueda tied urban renewal, redlining, exclusionary zoning, discriminatory lending, and COVID impacts to the need for community-focused acquisition and development.
+    - Both speakers discussed the need to expand funding and progressive revenue for affordable housing.
+    - The sponsor repeatedly emphasized that the resolution was only a first step and that organizing would need to continue into the budget process.
+  source_vocabulary:
+    - "black removal"
+    - "urban renewal"
+    - "redlining"
+    - "exclusionary zoning"
+    - "displacement"
+    - "affordable city"
+    - "community focused acquisition and development"
+    - "communities most impacted by displacement"
+    - "progressive revenue"
+    - "Amazon tax"
+    - "People's Budget campaign"
+  temporal_status:
+    primary: recurring_concern
+    additional:
+      - already_occurred
+      - currently_existing
+      - future_effect
+    notes:
+      - The concern theme recurs across the item description, sponsor remarks, Mosqueda's remarks, and closing remarks.
+      - The theme bridges already-occurred policy harms, current affordability and access barriers, and future funding needs.
+  source_context_for_fact_check:
+    concern_theme: >
+      Recurring concern that Black Central District communities were displaced by racist
+      policies and remain under displacement pressure because of unaffordability, exclusionary
+      structures, funding gaps, and barriers to community-led housing.
+    concern_content:
+      - historical urban renewal and redlining harmed Black communities in the Central District
+      - current skyrocketing rents and unaffordability continue displacement pressure
+      - funding for community-rooted affordable housing is insufficient
+      - community-led organizations face partnership/covenant barriers that affect ownership and control
+      - progressive revenue and expanded public investment are presented as needed responses
+    affected_groups_and_scope:
+      - Black community members in the Central Area/Central District
+      - families with historic roots in the neighborhood
+      - communities of color affected by discriminatory policies and COVID impacts
+      - working people and renters facing rent pressure
+    temporal_status:
+      - recurring_concern across the segment
+      - already_occurred for historical policies
+      - currently_existing for displacement pressure and funding barriers
+      - future_effect for proposed funding and revenue responses
+  answer_locality:
+    segment_region: repeated across item reading, sponsor opening, Mosqueda comments, and sponsor closing
+    locality_notes:
+      - Recurrence is visible because the same displacement/funding/community-control theme appears in multiple speakers' remarks.
+  marker_presence:
+    problem_side_concern: present_explicitly
+    specific_content: present_explicitly
+  ```
+
+  ---
+
+  ## U — Unresolved Tail / Future Return Path
+
+  ```yaml
+  label: U
+  summary: >
+    Although Resolution 32015 was adopted during the segment, the actual funding and
+    implementation work remained unfinished. The sponsor emphasized that the resolution
+    was not budget legislation and that the People's Budget movement would need to follow
+    up in the autumn. Councilmember Mosqueda also pointed to the upcoming budget process,
+    New Hope's expected funding application, use of Jumpstart and Office of Housing
+    investments, and future work to remove partnership and covenant barriers.
+  evidence:
+    - The sponsor said the resolution "only has the power to state an intention" and is "not the budget legislation."
+    - The sponsor said the People's Budget movement would need to "follow this up in the autumn" to win funding and compensate community members displaced over decades.
+    - Mosqueda said she looked forward "as the budget process starts" to making sure the efforts are funded in the fall process.
+    - Mosqueda said the project was "somewhere between pre-development and shovel ready" and likely to apply for all funds.
+    - Mosqueda said they would work through the year's budget to remove covenant and partnership requirements.
+    - The sponsor's closing remarks called for continued organizing around rent control, renter protections, affordable housing, and increasing the Amazon tax.
+  source_vocabulary:
+    - "first step"
+    - "not the budget legislation"
+    - "follow this up in the autumn"
+    - "People's Budget campaign"
+    - "budget process"
+    - "fall process"
+    - "pre-development and shovel ready"
+    - "likely to apply"
+    - "additional funds available through Jumpstart"
+    - "Office of Housing Investments"
+    - "remove those covenant requirements"
+    - "remove the partnership requirements"
+  temporal_status:
+    primary: pending_future_handling
+    additional:
+      - completed_in_session
+      - future_effect
+    notes:
+      - Council adoption of the resolution was completed in session.
+      - Actual funding, budget decisions, project implementation, barrier removal, and broader rent-control/progressive-revenue efforts remained pending future handling.
+  source_context_for_fact_check:
+    pending_status:
+      - Resolution 32015 was adopted, but actual budget/funding implementation was not completed by the resolution alone.
+      - The resolution was described as an intention-setting first step, not budget legislation.
+    pending_item:
+      - funding for the New Hope Family Housing Project
+      - broader affordable-housing funding through the fall/autumn budget process
+      - possible removal of covenant and partnership requirement barriers
+      - continued progressive-revenue and renter-protection efforts
+    handling_path:
+      - People's Budget campaign in the autumn
+      - fall budget process
+      - expected application for available funds
+      - Jumpstart / Office of Housing investment channels
+      - work through the year's budget to remove partnership/covenant barriers
+    temporal_status:
+      - completed_in_session for adoption
+      - pending_future_handling for funding, budget, and implementation
+      - future_effect for housing creation, reparative funding, barrier removal, and renter protections
+  answer_locality:
+    segment_region: sponsor's mid-segment clarification, Mosqueda's funding comments, and sponsor closing remarks
+    locality_notes:
+      - The clearest pendingness markers are the sponsor's "not the budget legislation" statement and Mosqueda's references to the fall budget process.
+  marker_presence:
+    pendingness_marker: present_explicitly
+    pending_item_identifiable: present_explicitly
+    handling_path_visible: present_explicitly
+  ```

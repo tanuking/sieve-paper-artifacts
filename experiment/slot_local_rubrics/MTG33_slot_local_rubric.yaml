@@ -1,0 +1,1249 @@
+segment_id: "MTG33"
+segment_dir: "33_LongBeachCC_01262016"
+meeting_id: "LongBeachCC_01262016"
+uid: "LongBeachCC_01262016_16-0069"
+decision_type: "Other"
+segment_type: "non-decision"
+slot_local_rubric_json: |
+  {
+    "meeting_order": "33",
+    "language": "en",
+    "slots": {
+      "T": {
+        "slot": "T",
+        "label": "T — Topic/Framing",
+        "slot_name": "Topic/Framing",
+        "topic_gate": {
+          "subject_identified": {
+            "match": [
+              "Identifies the substantive subject as revenue-measure options, citywide revenue tools, financing options, or new revenue in relation to infrastructure, public safety, reserves, or fiscal stability.",
+              "The subject can be phrased as possible voter-facing revenue measures or financing mechanisms for City infrastructure and services."
+            ],
+            "not_match": [
+              "Refers only to an agenda item, staff report, memorandum, presentation, hearing, vote, or motion without naming the substantive revenue/infrastructure/public-safety issue.",
+              "Names only an unrelated policy area without any revenue-measure, financing, infrastructure, public-safety, or fiscal-stability subject."
+            ]
+          }
+        },
+        "quality_gate": {
+          "policy_direction": {
+            "match": [
+              "States a direction-bearing move for the revenue-measure subject, such as considering, evaluating, structuring, preparing, placing before voters, adopting, expanding, increasing, or otherwise changing revenue or financing tools.",
+              "The direction need not be source-correct for Presence; a wrong-but-specific later-stage direction is evaluated in Fact Check, not by lowering Presence."
+            ],
+            "not_match": [
+              "States only that the Council received, filed, approved, heard, or discussed something, without any substantive direction for the revenue-measure or financing subject.",
+              "Names a revenue-related subject but gives no policy move or rule-effect direction for it."
+            ]
+          },
+          "target": {
+            "match": [
+              "Identifies what the revenue or financing direction applies to, such as the City revenue base, funding capacity, infrastructure, public-safety services, reserves, fiscal stability, residents, voters, or another stated jurisdictional or program target.",
+              "The target need not be source-correct for Presence; a wrong-but-specific target is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Gives a revenue-measure direction without saying what capacity, service, infrastructure, jurisdiction, group, or fiscal target it applied to.",
+              "Mentions only a procedural action or agenda item without a substantive target for the policy direction."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "subject_identified": {
+              "match": [
+                "Identifies the substantive subject as revenue-measure options, citywide revenue tools, financing options, or new revenue in relation to infrastructure, public safety, reserves, or fiscal stability.",
+                "The subject can be phrased as possible voter-facing revenue measures or financing mechanisms for City infrastructure and services."
+              ],
+              "not_match": [
+                "Refers only to an agenda item, staff report, memorandum, presentation, hearing, vote, or motion without naming the substantive revenue/infrastructure/public-safety issue.",
+                "Names only an unrelated policy area without any revenue-measure, financing, infrastructure, public-safety, or fiscal-stability subject."
+              ]
+            }
+          },
+          "quality_gate": {
+            "policy_direction": {
+              "match": [
+                "States a direction-bearing move for the revenue-measure subject, such as considering, evaluating, structuring, preparing, placing before voters, adopting, expanding, increasing, or otherwise changing revenue or financing tools.",
+                "The direction need not be source-correct for Presence; a wrong-but-specific later-stage direction is evaluated in Fact Check, not by lowering Presence."
+              ],
+              "not_match": [
+                "States only that the Council received, filed, approved, heard, or discussed something, without any substantive direction for the revenue-measure or financing subject.",
+                "Names a revenue-related subject but gives no policy move or rule-effect direction for it."
+              ]
+            },
+            "target": {
+              "match": [
+                "Identifies what the revenue or financing direction applies to, such as the City revenue base, funding capacity, infrastructure, public-safety services, reserves, fiscal stability, residents, voters, or another stated jurisdictional or program target.",
+                "The target need not be source-correct for Presence; a wrong-but-specific target is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Gives a revenue-measure direction without saying what capacity, service, infrastructure, jurisdiction, group, or fiscal target it applied to.",
+                "Mentions only a procedural action or agenda item without a substantive target for the policy direction."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "subject",
+            "policy_direction",
+            "target"
+          ],
+          "valid_items": [
+            "The subject was possible Long Beach revenue measures and financing mechanisms in response to infrastructure, public-safety, reserve, and fiscal-stability needs.",
+            "The policy direction was to consider or evaluate possible voter-approved revenue measures and related financing options, not to enact a tax in-session.",
+            "The target was Long Beach's citywide revenue base and funding capacity for infrastructure, public safety, and reserves."
+          ],
+          "fact_check_notes": [
+            "A summary may correctly say the Council discussed or considered possible revenue measures.",
+            "A summary contradicts this slot if it says the Council enacted a tax, approved a specific ballot measure, or changed a different jurisdiction's revenue system during this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment substantively framed a citywide revenue-measure discussion around how Long Beach might raise or structure new revenue to address major infrastructure needs, public safety service pressure, and fiscal stability. The policy direction under discussion was to consider possible voter-approved revenue measures and related financing options, rather than to enact a tax during the meeting. The target was the City's revenue base and funding capacity for infrastructure, public safety, and reserves.\n",
+          "source_context_for_fact_check": {
+            "subject": "Possible Long Beach revenue measures and financing mechanisms in response to infrastructure, public safety, and reserve/fiscal-stability needs.\n",
+            "policy_direction": "Consider, evaluate, and potentially prepare voter-facing revenue-measure options; the Council did not itself raise taxes in this segment.\n",
+            "target": [
+              "Long Beach's citywide revenue base",
+              "infrastructure funding capacity",
+              "public safety service funding",
+              "reserves/fiscal stability"
+            ],
+            "temporal_status": [
+              "currently_existing for the described infrastructure and service needs",
+              "pending_future_handling for any ballot-measure decision or legal preparation",
+              "future_effect for any tax or financing mechanism that might later be approved"
+            ],
+            "fact_check_notes": [
+              "A summary may say the Council discussed or considered possible revenue measures. It should not say the Council enacted a tax or approved a specific ballot measure in this segment.\n"
+            ]
+          },
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "pending_future_handling",
+              "future_effect"
+            ],
+            "notes": [
+              "The infrastructure and public-safety pressures were described as currently existing and ongoing.\n",
+              "Any revenue measure, ballot language, tax amount, timing decision, or voter approval remained future and unresolved.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council heard Item 3 and discussed a staff presentation.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary gives only procedural form and does not identify the substantive revenue-measure or infrastructure/public-safety subject."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council discussed Long Beach revenue options.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The subject is visible, but the summary does not state the policy direction or the target funding capacity/services."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The Council considered possible voter-approved revenue measures and financing options to expand Long Beach's citywide funding capacity for infrastructure, public safety, and reserves.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The subject, direction, and target are all source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The Council enacted a new citywide tax to fund Long Beach infrastructure and public safety.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary has a specific subject, direction, and target, but contradicts the event sheet by saying a tax was enacted."
+          }
+        ],
+        "answer_locality": {
+          "type": "distributed",
+          "notes": [
+            "The topic is introduced at the item call and staff opening, then expanded in the staff presentation and council discussion.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "Recommendation to Receive and File Memorandum",
+            "revenue measure options",
+            "bring back revenue options for the City Council to consider",
+            "possible revenue measure",
+            "only the people can do that"
+          ],
+          "implicit_markers": [
+            "Repeated references to infrastructure, public safety, reserves, election timing, and voter approval mark the segment as a revenue-options discussion, not a completed tax action."
+          ]
+        }
+      },
+      "O": {
+        "slot": "O",
+        "label": "O — Outcome/Position",
+        "slot_name": "Outcome/Position",
+        "topic_gate": {
+          "disposition_verb_tied_to_acted_on_item": {
+            "match": [
+              "States that a body took a recognizable disposition on an acted-on item, such as receiving and filing, approving, adopting, placing, directing, rejecting, referring, or another action tied to a report, presentation, measure, resolution, or comparable item.",
+              "The disposition or stage need not be source-correct for Presence; if the summary ties a recognizable action to an item, stage/result accuracy is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Mentions discussion, public comment, staff presentation, or questions without any disposition on an acted-on item.",
+              "Describes only substantive options, future outreach, or possible later work without saying what action was taken on an item."
+            ]
+          }
+        },
+        "quality_gate": {
+          "acted_on_item_specific": {
+            "match": [
+              "Identifies the acted-on item specifically enough to distinguish it within the segment, such as a staff report, memorandum, presentation, revenue-options item, ballot-resolution item, drafting directive, or other named/substantive item.",
+              "The item need not be source-correct for Presence; a wrong-but-specific acted-on item is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Uses only vague wording such as 'the item,' 'the proposal,' or 'the matter' without identifying the report, presentation, measure, directive, or substantive revenue-options subject.",
+              "States a disposition verb but gives no identifiable acted-on item."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "disposition_verb_tied_to_acted_on_item": {
+              "match": [
+                "States that a body took a recognizable disposition on an acted-on item, such as receiving and filing, approving, adopting, placing, directing, rejecting, referring, or another action tied to a report, presentation, measure, resolution, or comparable item.",
+                "The disposition or stage need not be source-correct for Presence; if the summary ties a recognizable action to an item, stage/result accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Mentions discussion, public comment, staff presentation, or questions without any disposition on an acted-on item.",
+                "Describes only substantive options, future outreach, or possible later work without saying what action was taken on an item."
+              ]
+            }
+          },
+          "quality_gate": {
+            "acted_on_item_specific": {
+              "match": [
+                "Identifies the acted-on item specifically enough to distinguish it within the segment, such as a staff report, memorandum, presentation, revenue-options item, ballot-resolution item, drafting directive, or other named/substantive item.",
+                "The item need not be source-correct for Presence; a wrong-but-specific acted-on item is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Uses only vague wording such as 'the item,' 'the proposal,' or 'the matter' without identifying the report, presentation, measure, directive, or substantive revenue-options subject.",
+                "States a disposition verb but gives no identifiable acted-on item."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "actor",
+            "procedural_stage",
+            "disposition_result",
+            "acted_on_item",
+            "vote_result"
+          ],
+          "valid_items": [
+            "The actor was the Long Beach City Council.",
+            "The procedural stage was an in-session receive-and-file disposition of an informational staff report and presentation.",
+            "The disposition result was that the report was received and filed as presented by City staff.",
+            "The acted-on item was the Financial Management memorandum/report and revenue-measure-options presentation tied to infrastructure needs.",
+            "The vote result stated in the segment was that the motion carried; no numeric vote count is supported."
+          ],
+          "fact_check_notes": [
+            "Do not treat this action as final tax enactment, completed ballot placement, approval of ballot language, or direction to prepare a specific measure.",
+            "If a summary states a vote count, unanimity, or a vote on tax adoption, check both the value and what action it is attached to."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The Long Beach City Council completed the in-session disposition by receiving and filing the Financial Management report as presented by City staff. The action did not adopt a tax, select a revenue-measure type, approve ballot language, or direct the City Attorney to prepare documents for a specific ballot measure.\n",
+          "source_context_for_fact_check": {
+            "actor": "Long Beach City Council",
+            "procedural_stage": "In-session receive-and-file disposition of an informational staff report and presentation; not final enactment of a tax and not completed ballot placement.\n",
+            "disposition_result": [
+              "The report was received and filed as presented by City staff.",
+              "No specific revenue measure was adopted in this segment.",
+              "No specific ballot measure was placed on the ballot in this segment."
+            ],
+            "acted_on_item": [
+              "Financial Management memorandum/report titled around responses to questions from the December 22, 2015 study session on the City's infrastructure needs and revenue-measure options.\n",
+              "Staff revenue-measure-options presentation."
+            ],
+            "vote_result": {
+              "value": "motion carried",
+              "attached_to": "motion to receive and file the report as presented",
+              "not_supported": [
+                "No numeric vote count is stated in the transcript segment.",
+                "No separate vote adopting a tax is stated in the transcript segment."
+              ]
+            },
+            "temporal_status": [
+              "completed_in_session for receiving and filing the report",
+              "pending_future_handling for any later measure selection or ballot action"
+            ]
+          },
+          "temporal_status": {
+            "primary": "completed_in_session",
+            "secondary": [
+              "pending_future_handling"
+            ],
+            "notes": [
+              "The receive-and-file action was completed in the session.\n",
+              "Any later action to select a measure, draft ballot language, adopt a resolution, or place a measure before voters remained pending.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Councilmembers debated several possible revenue tools and heard public comment.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary does not state a disposition verb tied to an acted-on item."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The Council received and filed the item.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The disposition is visible, but the acted-on item is too generic."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The Long Beach City Council received and filed the Financial Management report and staff presentation on infrastructure needs and revenue-measure options; the motion carried.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The disposition, acted-on item, actor, stage, and vote result are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The Long Beach City Council voted 9-0 to place a revenue measure on the ballot.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a disposition on a specific acted-on item, but the procedural stage, disposition result, and vote count contradict the event sheet."
+          }
+        ],
+        "answer_locality": {
+          "type": "end_of_segment",
+          "notes": [
+            "The dispositive action appears after public comment at the end of the segment.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "There is a motion to receive and file the report as presented by city staff",
+            "cast your votes",
+            "Motion carries"
+          ],
+          "implicit_markers": [
+            "Earlier references to possible directions or future ballot preparation are alternatives discussed in the item framing, not the action ultimately taken."
+          ]
+        }
+      },
+      "B": {
+        "slot": "B",
+        "label": "B — Agenda-Setting Background / Precipitating Context",
+        "slot_name": "Agenda-Setting Background / Precipitating Context",
+        "topic_gate": {
+          "precipitating_context_visible": {
+            "match": [
+              "States a prior event, earlier process, ongoing condition, prior tax-rate change, deferred maintenance, infrastructure deterioration, limited funding, public-safety strain, or similar background connected to the current item.",
+              "The context may be prior or ongoing, and it need not include an explicit agenda-necessity or why-now formulation."
+            ],
+            "not_match": [
+              "Only describes the current revenue options or the receive-and-file action without any prior event, ongoing condition, process, problem, or background context.",
+              "Uses a generic phrase such as 'there was background' without identifying the prior event, condition, process, or problem."
+            ]
+          }
+        },
+        "quality_gate": {
+          "connected_to_current_item_or_form": {
+            "match": [
+              "Connects the background to the current report, presentation, Council discussion, revenue-options item, or the form in which the issue came before the Council.",
+              "The connection can be that prior study, repeated discussion, fiscal strain, infrastructure backlog, or service pressure led staff or Council to consider revenue options."
+            ],
+            "not_match": [
+              "Names a prior event or condition without showing how it shaped the current report, discussion frame, revenue-options item, or handling form.",
+              "States an unrelated historical fact with no visible connection to this revenue-options discussion."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "precipitating_context_visible": {
+              "match": [
+                "States a prior event, earlier process, ongoing condition, prior tax-rate change, deferred maintenance, infrastructure deterioration, limited funding, public-safety strain, or similar background connected to the current item.",
+                "The context may be prior or ongoing, and it need not include an explicit agenda-necessity or why-now formulation."
+              ],
+              "not_match": [
+                "Only describes the current revenue options or the receive-and-file action without any prior event, ongoing condition, process, problem, or background context.",
+                "Uses a generic phrase such as 'there was background' without identifying the prior event, condition, process, or problem."
+              ]
+            }
+          },
+          "quality_gate": {
+            "connected_to_current_item_or_form": {
+              "match": [
+                "Connects the background to the current report, presentation, Council discussion, revenue-options item, or the form in which the issue came before the Council.",
+                "The connection can be that prior study, repeated discussion, fiscal strain, infrastructure backlog, or service pressure led staff or Council to consider revenue options."
+              ],
+              "not_match": [
+                "Names a prior event or condition without showing how it shaped the current report, discussion frame, revenue-options item, or handling form.",
+                "States an unrelated historical fact with no visible connection to this revenue-options discussion."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "trigger_condition",
+            "agenda_connection"
+          ],
+          "valid_items": [
+            "The December 22, 2015 infrastructure-needs study session prompted follow-up work on revenue options.",
+            "Staff had been asked to bring revenue options back for Council consideration.",
+            "Similar revenue-options work had been raised in 2012 and in later retreat and budget contexts.",
+            "Long Beach's infrastructure backlog, public-safety needs, and prior UUT reduction from 10% to 5% were background for the discussion.",
+            "These prior events and conditions explain why the Financial Management report and revenue-options presentation came before Council."
+          ],
+          "fact_check_notes": [
+            "B does not require an explicit 'why now' statement, but the background must be visible and connected to the current item or discussion form.",
+            "Do not treat the receive-and-file action itself as the precipitating background unless a separate background proposition is stated."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The current item was shaped by prior and ongoing infrastructure and fiscal context: a December 22, 2015 infrastructure-needs study session; repeated prior Council discussions of revenue options, including a similar 2012 presentation; years of infrastructure deterioration and deferred maintenance; prior reductions in the utility users tax; and the City's limited ability to fund infrastructure and public safety from existing resources.\n",
+          "source_context_for_fact_check": {
+            "trigger_condition": [
+              "December 22, 2015 infrastructure-needs study session prompted follow-up work.",
+              "Staff were asked to bring back revenue options for Council consideration.",
+              "Similar revenue-options work had been raised in 2012 and in later retreat and budget contexts.",
+              "Long Beach had a large infrastructure backlog and ongoing public-safety/service needs.",
+              "The prior UUT reduction from 10% to 5% was discussed as a significant fiscal background point."
+            ],
+            "agenda_connection": "These prior events and conditions explain why the Financial Management report and revenue-options presentation came before Council and why the discussion focused on possible voter-approved revenue tools.\n",
+            "temporal_status": [
+              "already_occurred for the prior study session, 2012 presentation, Measure J reduction, staffing reductions, and pension reform",
+              "currently_existing for infrastructure/public-safety needs",
+              "recurring_concern for repeated revenue and service-capacity discussions"
+            ]
+          },
+          "temporal_status": {
+            "primary": "already_occurred",
+            "secondary": [
+              "currently_existing",
+              "recurring_concern"
+            ],
+            "notes": [
+              "The December 22 study session, the 2012 version of the presentation, the Council retreat/budget-process references, and the Measure J reduction were prior events or background.\n",
+              "Infrastructure deterioration, deferred maintenance, and public-safety service strain were described as current and recurring concerns.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council reviewed a menu of revenue options for infrastructure and public safety.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary describes the current topic but gives no precipitating or background context."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Long Beach had infrastructure problems before the meeting.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "A background condition is visible, but the connection to the current report or revenue-options discussion is not stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The revenue-options item followed the December 22, 2015 infrastructure-needs study session and earlier Council discussions, against a backdrop of deferred maintenance, public-safety pressure, and the prior UUT reduction from 10% to 5%.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The background context is specific and connected to why the current revenue-options item came before Council."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The item came forward because voters had already approved a 2016 revenue measure and staff needed to implement it.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary gives a connected trigger, but it contradicts the event sheet because no 2016 revenue measure had already been approved in this segment."
+          }
+        ],
+        "answer_locality": {
+          "type": "distributed",
+          "notes": [
+            "Background appears in the clerk's item introduction, staff opening, mayor's framing remarks, and multiple councilmember comments.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "as a follow up",
+            "was asked to work with",
+            "bring back revenue options",
+            "brought up many times",
+            "in 2012",
+            "Measure J",
+            "deferred maintenance"
+          ],
+          "implicit_markers": [
+            "Councilmember examples of failing streets, sidewalks, alleys, facilities, response times, and police/fire staffing provide concrete background for why the revenue-options item was before Council."
+          ]
+        }
+      },
+      "N": {
+        "slot": "N",
+        "label": "N — Outcome-Near Condition / Operative Payload",
+        "slot_name": "Outcome-Near Condition / Operative Payload",
+        "topic_gate": {
+          "payload_attached_to_action": {
+            "match": [
+              "Attaches a condition, requirement, scope, restriction, number, date, threshold, option menu, implementation consideration, or other payload to the acted-on report, presentation, item, motion, directive, measure, or comparable carrier.",
+              "The carrier or stage need not be source-correct for Presence; a wrong-but-specific payload attachment is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Lists infrastructure needs, concerns, or revenue tools as free-standing background without linking them to a report, presentation, item, action, or acted-on carrier.",
+              "States only that the Council acted on something without saying what payload the acted-on item contained, required, scoped, set, or conditioned."
+            ]
+          }
+        },
+        "quality_gate": {
+          "number": {
+            "match": [
+              "Includes an identifiable numeric payload facet, such as an amount, rate, percentage, revenue estimate, vote threshold, date, deadline, duration, or timing quantity.",
+              "The exact numeric value need not be source-correct for Presence; value and role binding are evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Describes the payload only as a set of options or considerations without any identifiable number, amount, percentage, threshold, date, duration, or timing quantity."
+            ]
+          },
+          "named_requirement": {
+            "match": [
+              "Names an identifiable requirement, condition, implementation step, mechanism, financing category, tax category, vote requirement, ballot-language step, filing requirement, or other named payload component.",
+              "The exact named component need not be source-correct for Presence; source accuracy is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Says only that the payload included options or considerations without naming any identifiable requirement, condition, mechanism, tax category, financing category, or implementation step."
+            ]
+          },
+          "scope_boundary": {
+            "match": [
+              "Identifies an applicable scope boundary for the payload, such as a jurisdictional scope, citywide or narrower scope, service category, infrastructure category, revenue category, tax category, funding purpose, or affected process.",
+              "The exact scope need not be source-correct for Presence; a wrong-but-specific scope is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Does not identify what the payload applied to, what category it covered, what purpose it addressed, or what process or jurisdictional scope it concerned."
+            ]
+          },
+          "date_cutoff": {
+            "match": [
+              "Includes an identifiable date, deadline, filing cutoff, election timing boundary, effective/expiration timing, or other time boundary as part of the payload.",
+              "The exact date or deadline need not be source-correct for Presence; date value and attachment are evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Mentions future handling generally without any identifiable date, deadline, election timing boundary, filing cutoff, or other time boundary."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "payload_attached_to_action": {
+              "match": [
+                "Attaches a condition, requirement, scope, restriction, number, date, threshold, option menu, implementation consideration, or other payload to the acted-on report, presentation, item, motion, directive, measure, or comparable carrier.",
+                "The carrier or stage need not be source-correct for Presence; a wrong-but-specific payload attachment is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Lists infrastructure needs, concerns, or revenue tools as free-standing background without linking them to a report, presentation, item, action, or acted-on carrier.",
+                "States only that the Council acted on something without saying what payload the acted-on item contained, required, scoped, set, or conditioned."
+              ]
+            }
+          },
+          "quality_gate": {
+            "number": {
+              "match": [
+                "Includes an identifiable numeric payload facet, such as an amount, rate, percentage, revenue estimate, vote threshold, date, deadline, duration, or timing quantity.",
+                "The exact numeric value need not be source-correct for Presence; value and role binding are evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Describes the payload only as a set of options or considerations without any identifiable number, amount, percentage, threshold, date, duration, or timing quantity."
+              ]
+            },
+            "named_requirement": {
+              "match": [
+                "Names an identifiable requirement, condition, implementation step, mechanism, financing category, tax category, vote requirement, ballot-language step, filing requirement, or other named payload component.",
+                "The exact named component need not be source-correct for Presence; source accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Says only that the payload included options or considerations without naming any identifiable requirement, condition, mechanism, tax category, financing category, or implementation step."
+              ]
+            },
+            "scope_boundary": {
+              "match": [
+                "Identifies an applicable scope boundary for the payload, such as a jurisdictional scope, citywide or narrower scope, service category, infrastructure category, revenue category, tax category, funding purpose, or affected process.",
+                "The exact scope need not be source-correct for Presence; a wrong-but-specific scope is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Does not identify what the payload applied to, what category it covered, what purpose it addressed, or what process or jurisdictional scope it concerned."
+              ]
+            },
+            "date_cutoff": {
+              "match": [
+                "Includes an identifiable date, deadline, filing cutoff, election timing boundary, effective/expiration timing, or other time boundary as part of the payload.",
+                "The exact date or deadline need not be source-correct for Presence; date value and attachment are evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Mentions future handling generally without any identifiable date, deadline, election timing boundary, filing cutoff, or other time boundary."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "payload_carrier",
+            "payload_content",
+            "payload_scope",
+            "payload_scalar_or_baseline"
+          ],
+          "valid_items": [
+            "The payload carrier was the Financial Management report/presentation that the Council received and filed; the payload was informational and option-setting.",
+            "The report/presentation described possible revenue and financing tools including parcel tax, UUT changes or expansion, transaction and use tax, business license tax, oil taxes, transient occupancy tax, parking tax, real property transfer tax, admissions tax, general obligation bonds, community facilities districts, assessment districts, and lease revenue bonds.",
+            "General taxes may be used for general purposes and go to the General Fund; special taxes are for a specified purpose detailed in the ballot measure.",
+            "Parcel tax requires a two-thirds electorate vote; a local transaction and use tax could add up to 1% and requires a two-thirds Council vote to place on the ballot.",
+            "Council would still need to decide measure type, tax amount, ballot language, and timing before proceeding with any ballot measure.",
+            "Representative scalar values include a $2.8 billion infrastructure/capital-infrastructure need, current 5% UUT, about $7.7 million per 1% UUT increase, up to about $48 million per year for a 1% transaction and use tax, about $1.5 million annually from a $50 business-license-account increase, and about $1.4 million to the General Fund from each 1% TOT increase.",
+            "Representative timing values include June 7, 2016 with a March 11, 2016 filing date, and November 8, 2016 with an August 12, 2016 filing date."
+          ],
+          "fact_check_notes": [
+            "Do not treat the option menu as an adopted tax, adopted bond, approved ballot language, or operative ballot placement.",
+            "If a summary states a number, date, threshold, or revenue amount, check both the value and what role or mechanism it is attached to."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The source-supported payload is the informational content of the Financial Management report and presentation: a menu of possible revenue measures and financing mechanisms, their approximate revenue ranges, applicable vote thresholds, implementation considerations, and election-timing deadlines. This payload was attached to the received-and-filed report; it was not adopted as an operative tax or ballot measure during the segment.\n",
+          "source_context_for_fact_check": {
+            "payload_carrier": "Financial Management report/presentation that Council received and filed. The payload was informational and option-setting, not an adopted measure.\n",
+            "payload_content": [
+              "General taxes may be used for general purposes and go to the General Fund.",
+              "Special taxes are for a specified purpose detailed in the ballot measure.",
+              "Parcel tax is based on a fee per parcel and always requires a two-thirds electorate vote.",
+              "UUT was 5% and covered electric, telephone, gas, and water utility services; expansion to sewer, refuse/recycling, and cable television was discussed.",
+              "Local transaction and use tax could add up to 1% and requires a two-thirds Council vote to place on the ballot.",
+              "General obligation bonds can finance acquisition or improvement of real property, not operations such as police or fire.",
+              "Council would need to decide measure type, tax amount, ballot language, and timing before proceeding with a ballot measure."
+            ],
+            "numeric_values": [
+              {
+                "value": "$2.8 billion",
+                "meaning": "approximate infrastructure/capital-infrastructure need discussed by city leaders"
+              },
+              {
+                "value": "5%",
+                "meaning": "current UUT rate described in the presentation"
+              },
+              {
+                "value": "$38.6 million",
+                "meaning": "FY 2015 UUT revenue and also estimated additional annual revenue if the prior 10% rate had remained"
+              },
+              {
+                "value": "$7.7 million",
+                "meaning": "approximate annual revenue for each 1% UUT increase"
+              },
+              {
+                "value": "9%",
+                "meaning": "current Long Beach sales tax rate described in the presentation"
+              },
+              {
+                "value": "up to 1%",
+                "meaning": "possible transaction and use tax add-on under state law as described by staff"
+              },
+              {
+                "value": "$48 million per year",
+                "meaning": "rough annual revenue estimate for a 1% transaction and use tax"
+              },
+              {
+                "value": "$1.5 million annually",
+                "meaning": "approximate annual revenue from a $50 increase per current business-license account"
+              },
+              {
+                "value": "$1.4 million",
+                "meaning": "approximate General Fund revenue from each 1% transient occupancy tax increase"
+              },
+              {
+                "value": "June 7, 2016",
+                "meaning": "city runoff election date discussed as possible timing"
+              },
+              {
+                "value": "March 11, 2016",
+                "meaning": "filing date associated with the June 2016 option"
+              },
+              {
+                "value": "November 8, 2016",
+                "meaning": "election date discussed as a special election for the City"
+              },
+              {
+                "value": "August 12, 2016",
+                "meaning": "filing date associated with the November 2016 option"
+              }
+            ],
+            "payload_scope": [
+              "citywide Long Beach revenue measures",
+              "infrastructure funding options",
+              "public safety and reserve/fiscal-stability funding discussion"
+            ],
+            "temporal_status": [
+              "currently_existing for baseline rates and existing revenues",
+              "pending_future_handling for selecting, drafting, and timing any measure",
+              "future_effect for any later voter-approved tax or bond"
+            ],
+            "fact_check_notes": [
+              "Do not treat the option menu as an adopted payload. The Council only received and filed the report in this segment.\n"
+            ]
+          },
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "future_effect",
+              "pending_future_handling",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "Existing tax rates and revenue figures were current reference points in the presentation.\n",
+              "New taxes, increases, expansions, bonds, ballot language, and election actions were possible future effects or pending future decisions.\n",
+              "Discussion of impacts on shopping, tourism, oil production, special events, regressivity, and business burden was hypothetical/risk-oriented.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "Long Beach had deteriorating streets, sidewalks, alleys, and public buildings.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "This is concern/background content and is not attached as payload to the received-and-filed report or presentation."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The received-and-filed report included several possible revenue options.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the report, but no qualifying number, named requirement, scope boundary, or date cutoff is stated."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The received-and-filed presentation laid out citywide revenue-measure options such as UUT changes, a transaction and use tax of up to 1%, parcel taxes, and bonds, along with vote-threshold and election-timing considerations for June 7 or November 8, 2016 paths.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The payload is attached to the action and includes named mechanisms, scope, numbers, and dates that are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The received-and-filed report adopted a 2% transaction and use tax expected to raise $48 million per year starting after the November 2016 election.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The payload is specific, but the adoption claim, 2% value, and role binding for the $48 million estimate contradict the event sheet."
+          }
+        ],
+        "answer_locality": {
+          "type": "staff_presentation_with_council_followup",
+          "notes": [
+            "Most payload details are in the Financial Management presentation. Council comments add questions and preferences about sunset provisions, reserves, public outreach, election timing, and specific tax concerns.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "different tax measure options",
+            "for illustrative purposes",
+            "could generate",
+            "could also be general or special tax",
+            "should the City Council wish to proceed",
+            "would need to decide"
+          ],
+          "implicit_markers": [
+            "The repeated conditional wording marks the presentation as an options payload, not an enacted legal payload."
+          ]
+        }
+      },
+      "L": {
+        "slot": "L",
+        "label": "L — Concrete Concern",
+        "slot_name": "Concrete Concern",
+        "topic_gate": {
+          "concrete_concern_language": {
+            "match": [
+              "States a concrete concern, harm, obstacle, difficulty, deficiency, shortage, funding gap, risk, or tradeoff related to infrastructure, public safety, fiscal capacity, facilities, response capacity, taxpayer burden, business impacts, or effects of revenue options.",
+              "The concern must be asserted on the problem side, not merely listed as the object of a proposed funding solution."
+            ],
+            "not_match": [
+              "Mentions infrastructure, public safety, or taxes only as objects of proposed funding or policy action without stating any concern, risk, harm, shortage, difficulty, or tradeoff.",
+              "Says only that concerns were raised without identifying any concrete concern content."
+            ]
+          }
+        },
+        "quality_gate": {
+          "specific_concern_content": {
+            "match": [
+              "Specifies what the concern is about, such as deteriorating physical assets, deferred maintenance, limited funding, emergency response capacity, staffing pressure, public-safety demand, aging facilities, taxpayer burden, business burden, regressivity, shopping behavior, tourism, parking costs, or special-event impacts.",
+              "A named place, named group, or bounded area is not required for Presence; if stated, local-anchor accuracy is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Uses only generic problem language such as 'there were issues' or 'there were concerns' without saying what the issue or concern was about.",
+              "States only a policy solution or revenue mechanism without problem-side concern content."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "concrete_concern_language": {
+              "match": [
+                "States a concrete concern, harm, obstacle, difficulty, deficiency, shortage, funding gap, risk, or tradeoff related to infrastructure, public safety, fiscal capacity, facilities, response capacity, taxpayer burden, business impacts, or effects of revenue options.",
+                "The concern must be asserted on the problem side, not merely listed as the object of a proposed funding solution."
+              ],
+              "not_match": [
+                "Mentions infrastructure, public safety, or taxes only as objects of proposed funding or policy action without stating any concern, risk, harm, shortage, difficulty, or tradeoff.",
+                "Says only that concerns were raised without identifying any concrete concern content."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_concern_content": {
+              "match": [
+                "Specifies what the concern is about, such as deteriorating physical assets, deferred maintenance, limited funding, emergency response capacity, staffing pressure, public-safety demand, aging facilities, taxpayer burden, business burden, regressivity, shopping behavior, tourism, parking costs, or special-event impacts.",
+                "A named place, named group, or bounded area is not required for Presence; if stated, local-anchor accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Uses only generic problem language such as 'there were issues' or 'there were concerns' without saying what the issue or concern was about.",
+                "States only a policy solution or revenue mechanism without problem-side concern content."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "obstacle_content",
+            "local_anchor"
+          ],
+          "valid_items": [
+            "Source-supported concerns include a large infrastructure backlog and deteriorating streets, sidewalks, alleys, public buildings, storm-drain systems, and related systems.",
+            "Existing investment was described as insufficient to stop infrastructure conditions from worsening.",
+            "Public-safety concerns included police staffing, paramedic response capacity, fire resources, and rising crime or service demand.",
+            "Some tax tools carried possible tradeoffs such as regressivity, shopping behavior effects, tourism/convention effects, business burden, oil-production effects, parking-cost concerns, or special-event impacts.",
+            "Source-supported local anchors include Long Beach citywide, North Long Beach examples, Eighth District examples including Little Cerritos and Bixby Knolls, Third District examples including Island Village, and parking-tax questions involving Cal State Long Beach or Long Beach City College."
+          ],
+          "fact_check_notes": [
+            "Local anchoring is not required for Presence. Check a local anchor only if the summary explicitly states one.",
+            "Potential negative effects of tax options were framed as risks or considerations, not completed effects."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "Participants raised concrete concerns about deteriorating infrastructure, deferred maintenance, limited funding, police and fire staffing pressure, slower emergency response capacity, rising crime, aging public facilities, and possible burdens or side effects of particular tax options.\n",
+          "source_context_for_fact_check": {
+            "obstacle_content": [
+              "The City faced a large infrastructure backlog and deteriorating streets, sidewalks, alleys, public buildings, storm-drain systems, and related systems.",
+              "Existing investment was described as insufficient to stop infrastructure conditions from worsening.",
+              "Public safety concerns included police staffing, paramedic response capacity, fire resources, and rising crime/service demand.",
+              "Some tax tools carried possible tradeoffs such as regressivity, shopping behavior effects, tourism/convention effects, business burden, oil-production effects, parking-cost concerns, or special-event impacts."
+            ],
+            "local_anchor": [
+              "Long Beach citywide",
+              "North Long Beach examples including neighborhoods without sidewalks and the Houghton/Highland Park community-center discussion",
+              "Eighth District examples including Little Cerritos, Bixby Knolls alleys, and crumbling streets",
+              "Third District emergency-response examples including Island Village",
+              "Cal State Long Beach / Long Beach City College parking questions for parking-tax discussion"
+            ],
+            "temporal_status": [
+              "currently_existing for infrastructure and public-safety concerns",
+              "recurring_concern for repeated service and deferred-maintenance themes",
+              "hypothetical_or_risk for potential tax-option side effects"
+            ]
+          },
+          "temporal_status": {
+            "primary": "currently_existing",
+            "secondary": [
+              "recurring_concern",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "Infrastructure deterioration, maintenance backlogs, and public-safety capacity concerns were described as present and recurring.\n",
+              "Potential negative effects of particular taxes were framed as risks or considerations, not completed effects.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council considered revenue measures for infrastructure and public safety.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary frames the topic but does not state a concrete concern, harm, risk, shortage, or tradeoff."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "Participants raised concerns about the proposal.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Concern language is present, but the concern content is not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "Participants worried that deteriorating streets, sidewalks, alleys, public facilities, police/fire staffing pressure, response times, and potential taxpayer or business burdens from certain taxes would worsen without careful funding choices.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The summary states concrete, specific concerns that are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "Participants warned that the adopted tax had already caused tourism losses and higher parking costs citywide.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The concern content is specific, but the summary contradicts the event sheet by treating hypothetical tax impacts as completed effects of an adopted tax."
+          }
+        ],
+        "answer_locality": {
+          "type": "distributed",
+          "notes": [
+            "Concern content is distributed across the mayor's remarks, staff considerations, councilmember comments, and public comment.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "largest challenge",
+            "terrible condition",
+            "continue to get worse",
+            "public safety crisis",
+            "slowest response time",
+            "falling apart",
+            "crumbling streets",
+            "regressive",
+            "detrimental"
+          ],
+          "implicit_markers": [
+            "Concrete examples of streets, facilities, fire/paramedic resources, police staffing, and taxpayer impacts mark the concern content beyond generic debate."
+          ]
+        }
+      },
+      "S": {
+        "slot": "S",
+        "label": "S — Shared Concern Synthesis",
+        "slot_name": "Shared Concern Synthesis",
+        "topic_gate": {
+          "problem_side_concern": {
+            "match": [
+              "Names a recurring or shared problem-side concern theme, such as a sustainable-resources gap, infrastructure/public-safety service pressure, unsustainable deferral, doing more with less, taxpayer or business burden, legitimacy, outreach, timing, sunset/reserve design, or economic-development tension.",
+              "The summary does not need to say recurrence explicitly if it states a source-relevant concern theme in problem-side language."
+            ],
+            "not_match": [
+              "States only that the Council discussed revenue options or received a report without problem-side concern language.",
+              "Mentions outreach, reserves, sunset clauses, or economic development only as neutral process steps without identifying a concern, problem, or tension."
+            ]
+          }
+        },
+        "quality_gate": {
+          "specific_content": {
+            "match": [
+              "Specifies the concern theme content, such as the gap between existing revenue and infrastructure/public-safety needs, unsustainability of deferral or lean operations, or the need for voter outreach and careful design because of taxpayer, business, or economic burdens.",
+              "The summary need not reproduce every speaker, evidence detail, downstream risk, or public-comment position."
+            ],
+            "not_match": [
+              "Uses only a generic phrase such as 'shared concerns' or 'public worries' without saying what the concern theme was about.",
+              "Gives a single isolated concrete problem with no broader concern theme or tension visible."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "problem_side_concern": {
+              "match": [
+                "Names a recurring or shared problem-side concern theme, such as a sustainable-resources gap, infrastructure/public-safety service pressure, unsustainable deferral, doing more with less, taxpayer or business burden, legitimacy, outreach, timing, sunset/reserve design, or economic-development tension.",
+                "The summary does not need to say recurrence explicitly if it states a source-relevant concern theme in problem-side language."
+              ],
+              "not_match": [
+                "States only that the Council discussed revenue options or received a report without problem-side concern language.",
+                "Mentions outreach, reserves, sunset clauses, or economic development only as neutral process steps without identifying a concern, problem, or tension."
+              ]
+            }
+          },
+          "quality_gate": {
+            "specific_content": {
+              "match": [
+                "Specifies the concern theme content, such as the gap between existing revenue and infrastructure/public-safety needs, unsustainability of deferral or lean operations, or the need for voter outreach and careful design because of taxpayer, business, or economic burdens.",
+                "The summary need not reproduce every speaker, evidence detail, downstream risk, or public-comment position."
+              ],
+              "not_match": [
+                "Uses only a generic phrase such as 'shared concerns' or 'public worries' without saying what the concern theme was about.",
+                "Gives a single isolated concrete problem with no broader concern theme or tension visible."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "concern_theme",
+            "concern_content"
+          ],
+          "valid_items": [
+            "A recurring concern theme was that Long Beach lacked sufficient sustainable resources to address infrastructure and public-safety needs.",
+            "Participants expressed that continued deferral or doing more with less was not sustainable.",
+            "A second recurring theme was that any revenue response would need voter legitimacy, outreach, and careful design because residents and businesses would bear costs and risks.",
+            "Concern content included large and growing infrastructure and maintenance needs, public-safety service pressure, limits of prior cuts/pension reform/lean operations, and the need to consider tax burden, timing, sunset, reserves, economic impacts, and economic-development alternatives."
+          ],
+          "fact_check_notes": [
+            "The summary does not need to reproduce every evidence detail or every public-comment position.",
+            "If the summary states a shared theme, check that its object, contrast, affected group, mechanism, or scope does not contradict the event sheet."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "A recurring concern theme across the segment was that Long Beach's existing resources were not sufficient to maintain infrastructure and public-safety service levels, and that continued deferral or doing more with less was not sustainable. A second recurring theme was that any revenue response would need public/voter legitimacy, outreach, and careful design because residents and businesses would bear the costs and risks.\n",
+          "source_context_for_fact_check": {
+            "concern_theme": "Recurring concern that Long Beach lacked sufficient sustainable resources to address infrastructure and public-safety needs without some combination of new revenue, fiscal planning, prioritization, voter approval, outreach, or economic development.\n",
+            "concern_content": [
+              "Infrastructure and maintenance needs were large and growing.",
+              "Public-safety service capacity was under pressure.",
+              "Existing cuts, pension reform, and lean operations were described by many officials as insufficient to solve future needs alone.",
+              "Any new revenue measure would require voters and would need careful design, outreach, and attention to burden, timing, sunset, reserves, and economic impacts.",
+              "Public comment included opposition or caution, including a preference for economic development or revenue-base growth before tax increases."
+            ],
+            "temporal_status": [
+              "recurring_concern for repeated infrastructure/public-safety/funding gap theme",
+              "pending_future_handling for possible future ballot-measure design and outreach",
+              "hypothetical_or_risk for taxpayer/economic side-effect concerns"
+            ]
+          },
+          "temporal_status": {
+            "primary": "recurring_concern",
+            "secondary": [
+              "currently_existing",
+              "pending_future_handling",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The funding/service-capacity gap recurred throughout the discussion as a current concern.\n",
+              "The design, legitimacy, and taxpayer-impact concerns were tied to pending future decisions about whether to move a measure forward.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The report included parcel taxes, UUT options, sales taxes, and bond tools.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The summary lists payload mechanisms but does not name a problem-side shared concern theme."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "There was a recurring concern about City finances.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Problem-side concern language is present, but the content is too generic to identify the specific theme."
+          },
+          {
+            "case": "full_correct",
+            "summary": "A shared concern was that existing Long Beach resources were not sustainable for infrastructure and public-safety needs, while any new revenue measure would need voter legitimacy, outreach, and careful design to manage taxpayer and business burdens.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The recurring concern themes and their content are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "The shared concern was that residents uniformly supported an immediate tax increase and opposed any outreach or sunset limits.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary states a specific shared theme, but it contradicts the event sheet's concern about legitimacy, outreach, careful design, and taxpayer burden."
+          }
+        ],
+        "answer_locality": {
+          "type": "distributed_across_speakers",
+          "notes": [
+            "This theme is synthesized from repeated remarks by the mayor, councilmembers, staff, and public commenters rather than a single isolated statement.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "need to have a conversation",
+            "look to see what other alternatives there are",
+            "we're going to need some time",
+            "residents deserve a voice",
+            "tax increase should be the very last resort",
+            "doing more with less is not sustainable"
+          ],
+          "implicit_markers": [
+            "Repeated references to resident outreach, ballot timing, tax design, reserves, sunset provisions, and economic-development alternatives show that the shared concern was both fiscal and democratic/legitimacy-oriented."
+          ]
+        }
+      },
+      "U": {
+        "slot": "U",
+        "label": "U — Unresolved Tail / Future Return Path",
+        "slot_name": "Unresolved Tail / Future Return Path",
+        "topic_gate": {
+          "pendingness_marker": {
+            "match": [
+              "Explicitly states that a revenue-measure question, measure type, tax amount, ballot language, election timing, filing requirement, outreach step, implementation step, final action, or related work remained unresolved, pending, still to be decided, left open, or for future handling.",
+              "The pending item or status need not be source-correct for Presence; a wrong-but-specific pendingness claim is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Mentions possible future steps without an explicit pendingness, unresolved, still-open, or future-handling marker.",
+              "States only a completed action and gives no indication that anything remained pending or unresolved."
+            ]
+          }
+        },
+        "quality_gate": {
+          "pending_item_identifiable": {
+            "match": [
+              "Identifies what remained pending, such as a revenue measure, measure type, tax amount, ballot language, election timing, filing path, outreach, drafting, later Council action, or another identifiable workstream.",
+              "The exact pending item need not be source-correct for Presence; source accuracy is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "Says only that 'more work' or 'future action' remained without identifying the measure, ballot language, timing, filing path, outreach, drafting, or related item."
+            ]
+          },
+          "handling_path_visible": {
+            "match": [
+              "States a concrete future path, such as choosing measure terms, developing ballot language, deciding election timing, satisfying vote or filing requirements, returning to a body, drafting documents, conducting outreach, or pursuing an election/filing process.",
+              "The exact path, date, body, or deadline need not be source-correct for Presence; handling-path accuracy is evaluated in Fact Check."
+            ],
+            "not_match": [
+              "States only that the issue was unresolved with no visible future body, process, meeting, deadline, drafting, election, filing, outreach, or handling path.",
+              "Gives a future path for an unrelated item without linking it to the pending item being evaluated."
+            ]
+          }
+        },
+        "meeting_specific_rubric_gates": {
+          "topic_gate": {
+            "pendingness_marker": {
+              "match": [
+                "Explicitly states that a revenue-measure question, measure type, tax amount, ballot language, election timing, filing requirement, outreach step, implementation step, final action, or related work remained unresolved, pending, still to be decided, left open, or for future handling.",
+                "The pending item or status need not be source-correct for Presence; a wrong-but-specific pendingness claim is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Mentions possible future steps without an explicit pendingness, unresolved, still-open, or future-handling marker.",
+                "States only a completed action and gives no indication that anything remained pending or unresolved."
+              ]
+            }
+          },
+          "quality_gate": {
+            "pending_item_identifiable": {
+              "match": [
+                "Identifies what remained pending, such as a revenue measure, measure type, tax amount, ballot language, election timing, filing path, outreach, drafting, later Council action, or another identifiable workstream.",
+                "The exact pending item need not be source-correct for Presence; source accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "Says only that 'more work' or 'future action' remained without identifying the measure, ballot language, timing, filing path, outreach, drafting, or related item."
+              ]
+            },
+            "handling_path_visible": {
+              "match": [
+                "States a concrete future path, such as choosing measure terms, developing ballot language, deciding election timing, satisfying vote or filing requirements, returning to a body, drafting documents, conducting outreach, or pursuing an election/filing process.",
+                "The exact path, date, body, or deadline need not be source-correct for Presence; handling-path accuracy is evaluated in Fact Check."
+              ],
+              "not_match": [
+                "States only that the issue was unresolved with no visible future body, process, meeting, deadline, drafting, election, filing, outreach, or handling path.",
+                "Gives a future path for an unrelated item without linking it to the pending item being evaluated."
+              ]
+            }
+          }
+        },
+        "fact_check_target": {
+          "fact_check_fields": [
+            "pending_status",
+            "pending_item",
+            "handling_path"
+          ],
+          "valid_items": [
+            "A possible revenue measure remained unresolved after the receive-and-file action.",
+            "No specific measure type, tax amount, ballot language, or ballot placement was selected in the segment.",
+            "Pending items included the possible citywide revenue measure, measure type and tax amount, ballot-measure language, election timing and filing path, and community/resident outreach before further Council action.",
+            "The June 7, 2016 runoff path would require Council resolution action in February to meet the March 11, 2016 filing date, with voting requirements depending on measure type.",
+            "The November 8, 2016 path would require resolution adoption in July to meet the August 12, 2016 filing date, with measure-specific vote requirements.",
+            "Councilmembers planned additional discussions with residents, community leaders, and business leaders before deciding what to support."
+          ],
+          "fact_check_notes": [
+            "The receive-and-file action was completed, but the revenue-measure selection/preparation path remained pending.",
+            "Do not state that a specific measure, amount, ballot language, or ballot placement was finalized in this segment."
+          ]
+        },
+        "slot_local_event_sheet_excerpt": {
+          "summary": "The segment left the revenue-measure question unresolved. If Council wanted to proceed later, it still needed to choose a measure type and tax amount, develop ballot language, decide election timing, satisfy applicable Council-vote and filing requirements, and continue community outreach before any voter decision.\n",
+          "source_context_for_fact_check": {
+            "pending_status": "A possible revenue measure remained unresolved after the receive-and-file action. No specific measure type, tax amount, ballot language, or ballot placement was selected in the segment.\n",
+            "pending_item": [
+              "possible citywide revenue measure",
+              "measure type and tax amount",
+              "ballot-measure language",
+              "election timing and filing path",
+              "community/resident outreach before further Council action"
+            ],
+            "handling_path": [
+              "June 7, 2016 runoff election path: Council resolution in February to meet the March 11, 2016 filing date, with voting requirements depending on measure type.\n",
+              "November 8, 2016 election path: special election for the City, with resolution adoption in July to meet the August 12, 2016 filing date and measure-specific vote requirements.\n",
+              "Councilmember/community path: councilmembers planned additional discussions with residents, community leaders, and business leaders before deciding what to support.\n"
+            ],
+            "temporal_status": [
+              "pending_future_handling for ballot-measure decisions and community outreach",
+              "future_effect for any later voter-approved revenue measure"
+            ]
+          },
+          "temporal_status": {
+            "primary": "pending_future_handling",
+            "secondary": [
+              "future_effect",
+              "hypothetical_or_risk"
+            ],
+            "notes": [
+              "The item was not finally resolved beyond receiving and filing the report.\n",
+              "Future action could include measure selection, ballot language, resolution adoption, election administration, campaigning/outreach outside the City's official role, and voter approval or rejection.\n"
+            ]
+          }
+        },
+        "score_examples": [
+          {
+            "case": "topic_fail",
+            "summary": "The Council received and filed the staff report.",
+            "presence": 0,
+            "fact_check": null,
+            "rationale": "The completed disposition is stated, but no unresolved or pending future handling is stated."
+          },
+          {
+            "case": "topic_pass_quality_fail",
+            "summary": "The revenue question remained unresolved.",
+            "presence": 0.5,
+            "fact_check": 1,
+            "rationale": "Pendingness is explicit, but the pending item and handling path are not specific enough."
+          },
+          {
+            "case": "full_correct",
+            "summary": "The possible citywide revenue measure remained unresolved; before proceeding, Council would still need to choose a measure type and amount, develop ballot language, decide between timing paths such as June 7 or November 8, 2016, meet filing requirements, and continue community outreach.",
+            "presence": 1,
+            "fact_check": 1,
+            "rationale": "The unresolved status, pending item, and handling path are source-consistent."
+          },
+          {
+            "case": "wrong_but_specific_fact_check_failure",
+            "summary": "Only voter approval remained pending because the Council had already selected the tax amount and ballot language for the November 8, 2016 ballot.",
+            "presence": 1,
+            "fact_check": 0,
+            "rationale": "The summary has a pending item and path, but contradicts the event sheet by saying the measure type, amount, ballot language, and ballot placement had already been selected."
+          }
+        ],
+        "answer_locality": {
+          "type": "staff_next_steps_and_council_comments",
+          "notes": [
+            "The pending path is most explicit in staff's next-steps slide and later councilmember comments about community conversations and future decisions.\n"
+          ]
+        },
+        "marker_presence": {
+          "explicit_markers": [
+            "should the City Council wish to proceed",
+            "would need to",
+            "to meet that date",
+            "filing date",
+            "I plan to",
+            "going to have more discussion",
+            "continuing conversation"
+          ],
+          "implicit_markers": [
+            "The final receive-and-file disposition confirms that later ballot-measure selection and preparation were not completed during this segment."
+          ]
+        }
+      }
+    }
+  }
