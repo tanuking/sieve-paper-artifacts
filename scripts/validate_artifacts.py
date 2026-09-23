@@ -31,7 +31,7 @@ def validate_appendix() -> None:
 
 
 def validate_core() -> None:
-    manifest = pd.read_csv(ROOT / "data" / "manifest_50.csv")
+    manifest = pd.read_csv(ROOT / "experiment" / "sampling_manifest.csv")
     summaries = pd.read_csv(ROOT / "data" / "generated_summaries.csv")
     labels = pd.read_csv(ROOT / "data" / "final_slot_labels.csv")
     iaa = pd.read_csv(ROOT / "data" / "iaa_v1_presence_audit.csv")
