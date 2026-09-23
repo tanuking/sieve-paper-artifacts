@@ -24,7 +24,15 @@ the 50 meetings in this paper are under `../experiment/`.
    is built from the sampled segment transcript. The event sheet is
    the source context that slot-local rubrics and judge bundles are
    built from.
-6. `judge_prompt_template.txt` — the common prompt given to an LLM
+6. `slot_local_rubric_authoring_protocol.md` — how a per-meeting
+   slot-local rubric is authored from the completed event sheet and
+   `slot_semantics.json`: the fact_check_target schema, numeric and
+   temporal-status authoring rules, and the required score examples.
+7. `slot_local_rubric_validation_protocol.md` — the checks applied to
+   each authored rubric before judge execution, including the
+   Presence-leakage scan (Presence gates must not require exact
+   source-correct values) and mandatory rendered-prompt inspection.
+8. `judge_prompt_template.txt` — the common prompt given to an LLM
    judge for evaluating one summary on one slot. Slot-specific content
    (gates, fact-check target, event-sheet excerpt) is inserted into
    this template from the per-meeting instruments.

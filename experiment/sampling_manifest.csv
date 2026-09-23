@@ -1,0 +1,51 @@
+main_order,meeting_id,uid,dataset_split,dataset_id,body_code,decision_type,segment_type,segment_word_count,summary_word_count,length_bin,random_key,candidate_rank_within_stratum,selection_order_within_stratum,selection_body_cap
+1,DenverCityCouncil_09122016,DenverCityCouncil_09122016_16-0626,train,444,DenverCityCouncil,Ordinance,decision-bearing,15357,163,10k-20k,0.4120517861598338,5,5,4
+2,KingCountyCC_10012018,KingCountyCC_10012018_2018-0398,train,2188,KingCountyCC,Motion,decision-bearing,2873,20,2.5k-5k,0.4103556657512164,60,24,4
+3,DenverCityCouncil_03142022,DenverCityCouncil_03142022_22-0125,train,4061,DenverCityCouncil,Ordinance,decision-bearing,8247,72,5k-10k,0.0350907601652308,1,1,4
+4,LongBeachCC_11182014,LongBeachCC_11182014_14-0970,train,2326,LongBeachCC,Ordinance,decision-bearing,15100,142,10k-20k,0.0156684979328454,4,4,4
+5,LongBeachCC_01192021,LongBeachCC_01192021_21-0056,test,573,LongBeachCC,Ordinance,decision-bearing,4633,30,2.5k-5k,0.0195854294662642,5,5,4
+6,DenverCityCouncil_09252017,DenverCityCouncil_09252017_17-1060,train,2041,DenverCityCouncil,Other,non-decision,5510,24,5k-10k,0.0023045827896858,1,1,5
+7,LongBeachCC_06102014,LongBeachCC_06102014_14-0426,validation,734,LongBeachCC,Other,non-decision,6763,72,5k-10k,0.0094957144156125,2,2,5
+8,DenverCityCouncil_04132015,DenverCityCouncil_04132015_15-0201,train,1122,DenverCityCouncil,Other,non-decision,3196,20,2.5k-5k,0.0222882538800762,3,3,5
+9,AlamedaCC_04292015,AlamedaCC_04292015_2015-1631,train,4762,AlamedaCC,Other,non-decision,7845,31,5k-10k,0.0255464308811026,4,4,5
+10,AlamedaCC_09212021,AlamedaCC_09212021_2021-1292,train,3464,AlamedaCC,Other,non-decision,13889,67,10k-20k,0.0300408908897466,5,5,5
+11,DenverCityCouncil_12192016,DenverCityCouncil_12192016_16-1034,test,577,DenverCityCouncil,Ordinance,decision-bearing,3028,52,2.5k-5k,0.0215757006889621,6,6,4
+12,KingCountyCC_03212018,KingCountyCC_03212018_2018-0069,train,3934,KingCountyCC,Ordinance,decision-bearing,4887,20,2.5k-5k,0.0223892265287954,7,7,4
+13,LongBeachCC_03102015,LongBeachCC_03102015_15-0115,train,958,LongBeachCC,Ordinance,decision-bearing,17223,30,10k-20k,0.0230598495602577,8,8,4
+14,DenverCityCouncil_01092017,DenverCityCouncil_01092017_16-1071,train,1002,DenverCityCouncil,Ordinance,decision-bearing,5657,82,5k-10k,0.025368822315063,9,9,4
+15,AlamedaCC_02022016,AlamedaCC_02022016_2016-2508,validation,680,AlamedaCC,Resolution,decision-bearing,12063,71,10k-20k,0.0258456794622491,10,10,4
+16,KingCountyCC_06012022,KingCountyCC_06012022_2022-0180,train,494,KingCountyCC,Ordinance,decision-bearing,5554,67,5k-10k,0.0261462716368023,11,11,4
+17,DenverCityCouncil_04092018,DenverCityCouncil_04092018_18-0173,train,428,DenverCityCouncil,Ordinance,decision-bearing,4578,75,2.5k-5k,0.0301478999787011,12,12,4
+18,SeattleCityCouncil_08152016,SeattleCityCouncil_08152016_Res 31698,train,1714,SeattleCityCouncil,Resolution,decision-bearing,5016,19,5k-10k,0.0372749125628761,16,13,4
+19,AlamedaCC_12202016,AlamedaCC_12202016_2016-3688,validation,821,AlamedaCC,Resolution,decision-bearing,15155,68,10k-20k,0.038180721325059,17,14,4
+20,SeattleCityCouncil_08092021,SeattleCityCouncil_08092021_Res 32015,validation,285,SeattleCityCouncil,Resolution,decision-bearing,3812,52,2.5k-5k,0.0406223437744024,19,15,4
+21,SeattleCityCouncil_03192020,SeattleCityCouncil_03192020_CB 119758,train,4640,SeattleCityCouncil,Ordinance,decision-bearing,3121,64,2.5k-5k,0.0410355766128602,20,16,4
+22,KingCountyCC_07292019,KingCountyCC_07292019_2019-0245,train,152,KingCountyCC,Motion,decision-bearing,15848,34,10k-20k,0.0453761330181721,22,17,4
+23,AlamedaCC_11032015,AlamedaCC_11032015_2015-2060,train,2965,AlamedaCC,Ordinance,decision-bearing,6255,53,5k-10k,0.0628800445412941,34,18,4
+24,BostonCC_06152022,BostonCC_06152022_2022-0770,train,2724,BostonCC,Motion,decision-bearing,4442,69,2.5k-5k,0.0636226692363239,35,19,4
+25,AlamedaCC_12172019,AlamedaCC_12172019_2019-7533,train,2584,AlamedaCC,Resolution,decision-bearing,10086,20,10k-20k,0.0683196386829748,40,20,4
+26,SeattleCityCouncil_07252016,SeattleCityCouncil_07252016_Res 31683,train,2023,SeattleCityCouncil,Resolution,decision-bearing,2806,81,2.5k-5k,0.0686684498070588,42,21,4
+27,BostonCC_04132022,BostonCC_04132022_2022-0265,train,659,BostonCC,Motion,decision-bearing,4742,128,2.5k-5k,0.0769396393875781,48,22,4
+28,BostonCC_06292022,BostonCC_06292022_2022-0763,validation,578,BostonCC,Motion,decision-bearing,9688,167,5k-10k,0.2623329850861388,147,23,4
+29,BostonCC_05182022,BostonCC_05182022_2022-0643,train,2785,BostonCC,Motion,decision-bearing,5504,44,5k-10k,0.3477949382704359,197,24,4
+30,DenverCityCouncil_09232019,DenverCityCouncil_09232019_19-0776,train,12,DenverCityCouncil,Ordinance,decision-bearing,4087,69,2.5k-5k,0.0312691838965967,13,25,5
+31,LongBeachCC_03222016,LongBeachCC_03222016_16-0122,train,2746,LongBeachCC,Other,non-decision,10306,84,10k-20k,0.0320361247446989,6,6,5
+32,AlamedaCC_02212017,AlamedaCC_02212017_2017-3935,test,25,AlamedaCC,Other,non-decision,8279,63,5k-10k,0.0347887220694889,7,7,5
+33,LongBeachCC_01262016,LongBeachCC_01262016_16-0069,train,306,LongBeachCC,Other,non-decision,17863,103,10k-20k,0.0350763817893154,8,8,5
+34,LongBeachCC_05112021,LongBeachCC_05112021_21-0424,train,264,LongBeachCC,Other,non-decision,3903,18,2.5k-5k,0.0407638103506038,9,9,5
+35,AlamedaCC_12062016,AlamedaCC_12062016_2016-3632,train,1465,AlamedaCC,Other,non-decision,4196,26,2.5k-5k,0.042014032266535,10,10,5
+36,LongBeachCC_11012016,LongBeachCC_11012016_16-0988,train,1095,LongBeachCC,Other,non-decision,8687,91,5k-10k,0.045397611070636,11,11,5
+37,AlamedaCC_03302021,AlamedaCC_03302021_2021-8247,train,4421,AlamedaCC,Other,non-decision,10977,27,10k-20k,0.0457998569588668,12,12,5
+38,DenverCityCouncil_02142022,DenverCityCouncil_02142022_22-0218,validation,514,DenverCityCouncil,Other,non-decision,3990,21,2.5k-5k,0.0667204274804896,17,13,5
+39,DenverCityCouncil_03102014,DenverCityCouncil_03102014_14-0034,validation,491,DenverCityCouncil,Other,non-decision,2671,80,2.5k-5k,0.0986664414884767,28,14,5
+40,DenverCityCouncil_05312016,DenverCityCouncil_05312016_16-0341,train,331,DenverCityCouncil,Other,non-decision,7468,32,5k-10k,0.1045469898174585,29,15,5
+41,SeattleCityCouncil_11212016,SeattleCityCouncil_11212016_CF 314362,test,108,SeattleCityCouncil,Other,non-decision,8291,15,5k-10k,0.1759247226202563,48,16,5
+42,SeattleCityCouncil_01112016,SeattleCityCouncil_01112016_CF 314278,train,561,SeattleCityCouncil,Other,non-decision,4041,35,2.5k-5k,0.2062034284406392,59,17,5
+43,SeattleCityCouncil_12142015,SeattleCityCouncil_12142015_CF 314278,train,713,SeattleCityCouncil,Other,non-decision,7330,35,5k-10k,0.2808895210300881,79,18,5
+44,SeattleCityCouncil_11232020,SeattleCityCouncil_11232020_CF 314464,validation,485,SeattleCityCouncil,Other,non-decision,10915,17,10k-20k,0.5493431809818449,161,19,5
+45,BostonCC_02022022,BostonCC_02022022_2022-0246,train,2215,BostonCC,Other,non-decision,3109,19,2.5k-5k,0.5624384098271747,165,20,5
+46,BostonCC_03162022,BostonCC_03162022_2022-0381,validation,15,BostonCC,Other,non-decision,3500,24,2.5k-5k,0.7277682289198785,218,21,5
+47,SeattleCityCouncil_05022016,SeattleCityCouncil_05022016_CF 312905,train,2688,SeattleCityCouncil,Other,non-decision,11130,35,10k-20k,0.7561872045123791,227,22,5
+48,BostonCC_06082022,BostonCC_06082022_2022-0486,train,501,BostonCC,Other,non-decision,18640,149,10k-20k,0.918280311828116,276,23,5
+49,LongBeachCC_09112018,LongBeachCC_09112018_18-0800,train,1024,LongBeachCC,Other,non-decision,3040,24,2.5k-5k,0.0546094157988993,13,24,6
+50,AlamedaCC_04072015,AlamedaCC_AlamedaCC_04072015_2020-7929,test,568,AlamedaCC,Other,non-decision,13024,23,10k-20k,0.0552429388748673,14,25,6
