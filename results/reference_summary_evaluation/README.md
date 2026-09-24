@@ -12,7 +12,9 @@ same event sheets and gate definitions as the generated summaries
   reported against V1 only: recomputing Presence from these gates
   against `judge_labels.csv` gives 299/350 (85.4%) vs GPT-5, 304/350
   (86.9%) vs Claude, 294/350 (84.0%) vs both, and 46 flagged cells
-  (13.1%) — the figures in Section 3.8.
+  (13.1%) — the figures in Section 3.8. One cell (meeting 47, slot U)
+  was left blank at entry with a question note and resolved to
+  0 / NA / NA under the entry-time question rule.
 - `judge_labels.csv` — both LLM judges' Presence and Fact Check labels
   for the same 350 cells.
 - `reference_profile_ci.csv` — the per-slot reference profile with
