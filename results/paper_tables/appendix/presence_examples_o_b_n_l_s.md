@@ -18,7 +18,7 @@ chosen among those where both LLM judges and the final label agree.
 
 > Councilors debated the regulation and siting of cannabis establishments, highlighting issues with the Zoning Board of Appeals process. The discussion led to a referral to committee for further review.
 
--> Slot context: the Boston hearing order on cannabis-establishment regulation and siting (Docket 0381) was referred to committee. The referral is stated ("led to a referral to committee"), so the Topic Gate passes; but the acted-on item is only the generic "the discussion" -- neither the docket nor the hearing order is identified -- so Quality Gate **acted_on_item_specific** fails.
+-> Slot context: the Boston hearing order on cannabis-establishment regulation and siting (Docket 0381) was referred to committee. The referral is stated ("led to a referral to committee"), so the Topic Gate passes; but what was referred is never identified -- the summary's only referent is the generic "the discussion", not the docket or the hearing order -- so Quality Gate **acted_on_item_specific** fails.
 
 **O = 1.0** (MTG26, DeepSeek chat, 3 sent., run 3)
 
