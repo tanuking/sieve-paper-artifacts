@@ -1,4 +1,0 @@
-slot,n_severe,upward,downward,binomial_p,dominant_direction
-B,7,7,0,0.015625,upward
-S,3,3,0,0.25,mixed
-U,1,1,0,1.0,mixed

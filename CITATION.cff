@@ -1,9 +1,0 @@
-cff-version: 1.2.0
-title: SIEVE paper artifacts
-message: Please cite the SIEVE paper if you use these artifacts.
-type: dataset
-authors:
-  - family-names: Nagasawa
-    given-names: Yuki
-repository-code: https://github.com/REPLACE_WITH_ORG/sieve-paper-artifacts
-license: CC-BY-4.0
