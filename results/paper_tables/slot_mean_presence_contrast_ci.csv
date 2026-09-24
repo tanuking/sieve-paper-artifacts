@@ -1,0 +1,7 @@
+contrast,estimate,ci_low,ci_high,bootstrap_B,bootstrap_unit,seed,note
+T - U,0.4159999999999999,0.3375555555555556,0.4968944444444444,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
+O - U,0.3806666666666666,0.29088888888888886,0.47022777777777774,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
+N - U,0.37244444444444447,0.28555555555555556,0.45999999999999996,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
+"mean(T,O) - U",0.3983333333333332,0.31700000000000006,0.48133333333333334,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
+"mean(T,O,N) - mean(B,L,S,U)",0.3154259259259259,0.268962037037037,0.36366712962962966,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
+"mean(T,O,N) - U",0.38970370370370355,0.3088111111111112,0.4729666666666667,10000,meeting_id,20260524,Human-final operationalization; do not interpret as annotator-independent for B-sensitive contrasts.
