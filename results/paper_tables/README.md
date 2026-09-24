@@ -46,3 +46,6 @@ worked examples (`b_severe_disagreement_cases_full.csv`,
 plus per-generator slot instability and decision-type heterogeneity
 diagnostics (`slot_instability_by_generator.csv`,
 `decision_type_budget06_ci.csv`, `decision_type_counts.csv`).
+`presence_examples_o_b_n_l_s.md` gives the three-level Presence
+examples for the five slots that the paper's Appendix D defers to this
+repository.
