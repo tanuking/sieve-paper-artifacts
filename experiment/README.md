@@ -15,7 +15,7 @@ the evaluated summaries.
 - `second_author_audit_instructions.md` — instructions given to the
   second author for the blind Presence-only audit.
 
-## Sampling procedure (summary)
+## Sampling procedure
 
 Eligible segments (2,500-20,000 transcript words, reference summary of
 at least 15 words, one representative segment per meeting = the longest
