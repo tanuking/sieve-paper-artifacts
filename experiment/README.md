@@ -12,6 +12,11 @@ the evaluated summaries.
   (gates, fact-check targets, score examples).
 - `generation_prompt.txt` — the prompt used to generate all evaluated
   summaries (identical to the version quoted in the paper's Appendix A).
+- `generated_summaries.csv` — the 2,250 summaries under evaluation
+  (50 meetings x 3 generators x 3 sentence budgets x 5 runs), with the
+  MeetingBank reference summary of each meeting. `valid_budget_flag`
+  marks summaries that met the exact sentence-count instruction
+  (2,228 of 2,250; the compliance figure reported in the paper).
 - `second_author_audit_instructions.md` — instructions given to the
   second author for the blind Presence-only audit.
 
