@@ -23,12 +23,12 @@ same event sheets and gate definitions as the generated summaries
   summary (45 pre-session text only / 5 include an action line;
   Section 5).
 - `sensitivity_cells.csv` — the 25 cells behind the lenient-reading
-  sensitivity numbers (crediting boilerplate wording at Presence 0.5
-  moves O 0.040 -> 0.230 and B 0.100 -> 0.160): 7 prior-stage filing
-  cells, 12 recommendation-wording cells, 6 prior-stage background
-  mentions.
-- `adjudication_precedents.md` — the precedent ledger used to
-  adjudicate boundary cells during the review.
+  sensitivity numbers: cells whose final Presence is 0.0 but whose
+  caption contains boilerplate wording that a lenient reading could
+  credit at 0.5 (7 prior-stage filing-approval phrasings and
+  12 "Recommendation to ..." disposition wordings for O; 6 prior-stage
+  procedural mentions for B). Crediting them moves O 0.040 -> 0.230
+  and B 0.100 -> 0.160.
 - `u_absence_adjudication.md` — which segments leave no earnable slot-U
   credit on the source side, and the recomputation behind the
   Section 5 robustness sentence (0.530 -> 0.562).

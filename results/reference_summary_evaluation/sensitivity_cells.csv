@@ -1,23 +1,23 @@
 meeting_dir_name,slot,pattern,final_presence,sensitivity_presence
-01_DenverCityCouncil_09122016,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-03_DenverCityCouncil_03142022,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-11_DenverCityCouncil_12192016,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-14_DenverCityCouncil_01092017,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-17_DenverCityCouncil_04092018,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-30_DenverCityCouncil_09232019,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-39_DenverCityCouncil_03102014,O,prior_stage_filing_boilerplate (precedent 1),0.0,0.5
-04_LongBeachCC_11182014,O,recommended_disposition_wording (precedent 3),0.0,0.5
-05_LongBeachCC_01192021,O,recommended_disposition_wording (precedent 3),0.0,0.5
-07_LongBeachCC_06102014,O,recommended_disposition_wording (precedent 3),0.0,0.5
-10_AlamedaCC_09212021,O,recommended_disposition_wording (precedent 3),0.0,0.5
-13_LongBeachCC_03102015,O,recommended_disposition_wording (precedent 3),0.0,0.5
-31_LongBeachCC_03222016,O,recommended_disposition_wording (precedent 3),0.0,0.5
-33_LongBeachCC_01262016,O,recommended_disposition_wording (precedent 3),0.0,0.5
-34_LongBeachCC_05112021,O,recommended_disposition_wording (precedent 3),0.0,0.5
-36_LongBeachCC_11012016,O,recommended_disposition_wording (precedent 3),0.0,0.5
-37_AlamedaCC_03302021,O,recommended_disposition_wording (precedent 3),0.0,0.5
-49_LongBeachCC_09112018,O,recommended_disposition_wording (precedent 3),0.0,0.5
-50_AlamedaCC_04072015,O,recommended_disposition_wording (precedent 3),0.0,0.5
+01_DenverCityCouncil_09122016,O,prior_stage_filing_boilerplate,0.0,0.5
+03_DenverCityCouncil_03142022,O,prior_stage_filing_boilerplate,0.0,0.5
+11_DenverCityCouncil_12192016,O,prior_stage_filing_boilerplate,0.0,0.5
+14_DenverCityCouncil_01092017,O,prior_stage_filing_boilerplate,0.0,0.5
+17_DenverCityCouncil_04092018,O,prior_stage_filing_boilerplate,0.0,0.5
+30_DenverCityCouncil_09232019,O,prior_stage_filing_boilerplate,0.0,0.5
+39_DenverCityCouncil_03102014,O,prior_stage_filing_boilerplate,0.0,0.5
+04_LongBeachCC_11182014,O,recommended_disposition_wording,0.0,0.5
+05_LongBeachCC_01192021,O,recommended_disposition_wording,0.0,0.5
+07_LongBeachCC_06102014,O,recommended_disposition_wording,0.0,0.5
+10_AlamedaCC_09212021,O,recommended_disposition_wording,0.0,0.5
+13_LongBeachCC_03102015,O,recommended_disposition_wording,0.0,0.5
+31_LongBeachCC_03222016,O,recommended_disposition_wording,0.0,0.5
+33_LongBeachCC_01262016,O,recommended_disposition_wording,0.0,0.5
+34_LongBeachCC_05112021,O,recommended_disposition_wording,0.0,0.5
+36_LongBeachCC_11012016,O,recommended_disposition_wording,0.0,0.5
+37_AlamedaCC_03302021,O,recommended_disposition_wording,0.0,0.5
+49_LongBeachCC_09112018,O,recommended_disposition_wording,0.0,0.5
+50_AlamedaCC_04072015,O,recommended_disposition_wording,0.0,0.5
 01_DenverCityCouncil_09122016,B,prior_stage_procedural_mention,0.0,0.5
 03_DenverCityCouncil_03142022,B,prior_stage_procedural_mention,0.0,0.5
 11_DenverCityCouncil_12192016,B,prior_stage_procedural_mention,0.0,0.5
