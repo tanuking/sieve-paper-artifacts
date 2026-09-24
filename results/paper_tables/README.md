@@ -26,6 +26,14 @@ Files join to `../main_experiment/slot_labels.csv` and
 - `heterogeneity_results.csv` — Presence and diagnostics cut by public
   body, decision type, length bin, and segment type (robustness
   reporting in Sections 4.2 and 5).
+- `model_budget_effects_ci.csv` — bootstrap CIs for the budget and
+  generator contrasts (Section 4.1).
+- `run_stability_ci.csv` — bootstrap CIs for across-run stability and
+  oracle-gain metrics (Section 4.4).
+- `slot_recovery_ratio_by_slot.csv` — per-slot best-of-5 recovery
+  ratios with bootstrap CIs (Section 4.3).
+- `slot_recovery_ratio_contrast_ci.csv` — recovery-ratio contrasts,
+  e.g. mean(T,O,N) - U (Section 4.3).
 
 ## appendix/
 
@@ -34,4 +42,7 @@ inter-annotator agreement breakdowns from the second-author audit
 (`iaa_*.csv`), the BERTScore mechanism check
 (`bertscore_mechanism_check.csv`), and the full texts behind the
 worked examples (`b_severe_disagreement_cases_full.csv`,
-`d_b_background_examples.csv`, `external_similarity_case_studies.csv`).
+`d_b_background_examples.csv`, `external_similarity_case_studies.csv`),
+plus per-generator slot instability and decision-type heterogeneity
+diagnostics (`slot_instability_by_generator.csv`,
+`decision_type_budget06_ci.csv`, `decision_type_counts.csv`).
