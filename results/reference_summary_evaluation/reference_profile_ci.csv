@@ -1,0 +1,8 @@
+slot,mean_presence,ci_low,ci_high,fact_error_rate,n_fact_checked,n_meetings,bootstrap_B,bootstrap_unit,seed
+T,0.81,0.72,0.89,0.0,47,50,10000,meeting_id,20260521
+O,0.04,0.0,0.1,0.0,2,50,10000,meeting_id,20260521
+B,0.1,0.03,0.18,0.0,6,50,10000,meeting_id,20260521
+N,0.73,0.61,0.85,0.0,36,50,10000,meeting_id,20260521
+L,0.02,0.0,0.06,0.0,1,50,10000,meeting_id,20260521
+S,0.02,0.0,0.06,0.0,1,50,10000,meeting_id,20260521
+U,0.02,0.0,0.06,0.0,1,50,10000,meeting_id,20260521

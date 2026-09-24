@@ -1,0 +1,4 @@
+contrast,estimate,ci_low,ci_high,interpretation,bootstrap_B,bootstrap_unit,seed
+"mean(T,O,N recovery_ratio) - U recovery_ratio",0.398002,0.303533,0.490553,stable_positive,10000,meeting_id,20260521
+T recovery_ratio - U recovery_ratio,0.445845,0.32307,0.554625,stable_positive,10000,meeting_id,20260521
+"mean(T,O,N recovery_ratio) - mean(B,L,S,U recovery_ratio)",0.302873,0.235392,0.372453,stable_positive,10000,meeting_id,20260521

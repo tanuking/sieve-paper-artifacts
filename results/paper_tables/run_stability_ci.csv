@@ -1,0 +1,11 @@
+metric_name,generator,contrast,estimate,ci_low,ci_high,bootstrap_B,bootstrap_unit,seed,note
+mean_jaccard,deepseek_reasoning,,0.879962,0.855075,0.904126,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+mean_jaccard,deepseek_temp1_chat,,0.874943,0.846337,0.902186,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+mean_jaccard,gemini_2_5_flash_lite,,0.739281,0.694605,0.782705,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+mean_jaccard,,Gemini 2.5 Flash Lite - deepseek_reasoning,-0.140681,-0.182291,-0.098209,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability contrast.
+mean_jaccard,,Gemini 2.5 Flash Lite - deepseek_temp1_chat,-0.135662,-0.177553,-0.094294,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability contrast.
+oracle_gain,deepseek_reasoning,,0.692,0.528,0.864,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+oracle_gain,deepseek_temp1_chat,,0.648,0.508,0.792,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+oracle_gain,gemini_2_5_flash_lite,,1.316,1.08,1.56,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability.
+oracle_gain,,Gemini 2.5 Flash Lite - deepseek_reasoning,0.624,0.368,0.892,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability contrast.
+oracle_gain,,Gemini 2.5 Flash Lite - deepseek_temp1_chat,0.668,0.432,0.908,10000,meeting_id,20260521,Budget_06 strict Presence slot-set stability contrast.

@@ -1,0 +1,351 @@
+meeting_dir_name,slot,topic_gate,quality_gate,fact_check,adjudication_status,note
+01_DenverCityCouncil_09122016,T,1,1,1,first_pass,2018年に徴収される2017年度分から市の既存の固定資産税収入枠の一部をアフォーダブル住宅事業の財源に充てること
+01_DenverCityCouncil_09122016,O,0,NA,NA,first_pass,
+01_DenverCityCouncil_09122016,B,0,NA,NA,maintained_after_reread,維持0.0。'approved for filing'はprior-stage-boilerplate(先例1のB適用)でagenda-necessity未接続。'Amended 9-12-16'は当日セッション内の修正=O/N材料であり事前背景ではない(先例2)
+01_DenverCityCouncil_09122016,N,1,1,1,maintained_after_reread,維持FC=1(2026-09-23追加裁定: b1-6のフラグ網がPresence比較のみでFC比較を欠いていたため検出漏れ)。要約の日付(Oct 2017 linkage fee/2018税)はvalidのBill 626固有の時期と一致、諮問委員会修正も一致。明示的矛盾なし
+01_DenverCityCouncil_09122016,L,0,NA,NA,first_pass,
+01_DenverCityCouncil_09122016,S,0,NA,NA,first_pass,
+01_DenverCityCouncil_09122016,U,0,NA,NA,first_pass,
+02_KingCountyCC_10012018,T,1,0,1,first_pass,
+02_KingCountyCC_10012018,O,0,NA,NA,first_pass,
+02_KingCountyCC_10012018,B,0,NA,NA,first_pass,
+02_KingCountyCC_10012018,N,1,1,1,revised_after_reread,修正0.0→1.0。根拠: 'as the director of the King County department of human resources' が承認アクションに付随するappointment category(named_requirement系payload)。一次判定は見落とし
+02_KingCountyCC_10012018,L,0,NA,NA,first_pass,
+02_KingCountyCC_10012018,S,0,NA,NA,first_pass,
+02_KingCountyCC_10012018,U,0,NA,NA,first_pass,
+03_DenverCityCouncil_03142022,T,1,1,1,first_pass,旧第59章ゾーニングから郊外型・住商混合へ
+03_DenverCityCouncil_03142022,O,0,NA,NA,maintained_after_reread,prior-stage-boilerplate: filing approval is a pre-session committee step; does not answer what happened in the sampled session (precedent 1)
+03_DenverCityCouncil_03142022,B,0,NA,NA,maintained_after_reread,維持0.0。01Bと同理由: 'The Committee approved filing'はprior-stage-boilerplate(先例1のB適用)。agenda-setting backgroundを与える記述なし
+03_DenverCityCouncil_03142022,N,1,1,1,first_pass,旧第59章ゾーニングから郊外型・住商混合へ
+03_DenverCityCouncil_03142022,L,0,NA,NA,first_pass,
+03_DenverCityCouncil_03142022,S,0,NA,NA,first_pass,
+03_DenverCityCouncil_03142022,U,0,NA,NA,first_pass,
+04_LongBeachCC_11182014,T,1,1,1,first_pass,
+04_LongBeachCC_11182014,O,0,NA,NA,first_pass,
+04_LongBeachCC_11182014,B,0,NA,NA,first_pass,
+04_LongBeachCC_11182014,N,1,1,1,maintained_after_reread,"維持FC=1(2026-09-23追加裁定: 同上の検出漏れ)。先例9: 要約は修正前の勧告文言""bred on the premises""を記載。会議中の修正(→bred in Long Beach)は区間内イベントだが、勧告枠の提案条件であり採択条件の主張ではない"
+04_LongBeachCC_11182014,L,0,NA,NA,first_pass,
+04_LongBeachCC_11182014,S,0,NA,NA,first_pass,
+04_LongBeachCC_11182014,U,0,NA,NA,first_pass,
+05_LongBeachCC_01192021,T,1,1,1,revised_after_reread,修正0.5→1.0。policy_direction=章の追加・廃止(amending系)、target=Inclusionary Housingの規則群+(Citywide)。一次判定時は(Citywide)タグの制度的意味を未知だった
+05_LongBeachCC_01192021,O,0,NA,NA,maintained_after_reread,維持0.0。'Recommendation to declare ... adopted'は事務局によるセッション前の勧告文=提案された処分であり、会議体が処分を行ったという記述ではない(先例3)
+05_LongBeachCC_01192021,B,0,NA,NA,first_pass,
+05_LongBeachCC_01192021,N,1,1,1,revised_after_reread,修正0.5→1.0。一次判定で末尾の'(Citywide)'を見落とし。scope_boundary成立(先例4: 適用範囲タグは可、法令名内の地名は識別子で不可)
+05_LongBeachCC_01192021,L,0,NA,NA,first_pass,
+05_LongBeachCC_01192021,S,0,NA,NA,first_pass,
+05_LongBeachCC_01192021,U,0,NA,NA,first_pass,
+06_DenverCityCouncil_09252017,T,1,1,1,first_pass,1743
+06_DenverCityCouncil_09252017,O,0,NA,NA,first_pass,
+06_DenverCityCouncil_09252017,B,1,1,1,first_pass,認識にあたる
+06_DenverCityCouncil_09252017,N,0,NA,NA,maintained_after_reread,維持0.0。宣言の称賛内容(18年の功労等)はnot_match『称賛のみ』に該当、操作的payloadに非ず(先例6)
+06_DenverCityCouncil_09252017,L,0,NA,NA,first_pass,
+06_DenverCityCouncil_09252017,S,0,NA,NA,first_pass,
+06_DenverCityCouncil_09252017,U,0,NA,NA,first_pass,
+07_LongBeachCC_06102014,T,1,1,1,first_pass,
+07_LongBeachCC_06102014,O,0,NA,NA,first_pass,
+07_LongBeachCC_06102014,B,0,NA,NA,first_pass,
+07_LongBeachCC_06102014,N,1,1,1,first_pass,FY15予算プロセスの中で十分な議論ができるまで実施を遅らせるか否か がrequirement?
+07_LongBeachCC_06102014,L,0,NA,NA,first_pass,
+07_LongBeachCC_06102014,S,0,NA,NA,first_pass,
+07_LongBeachCC_06102014,U,0,NA,NA,first_pass,
+08_DenverCityCouncil_04132015,T,1,0,1,revised_after_reread,修正1.0→0.5。policy_direction成立('in support of')だがtarget不成立(被害者/コミュニティ/支援リソース等の対象記述なし)。T QGはall_of
+08_DenverCityCouncil_04132015,O,0,NA,NA,first_pass,
+08_DenverCityCouncil_04132015,B,0,NA,NA,first_pass,
+08_DenverCityCouncil_04132015,N,1,1,1,maintained_after_reread,維持1.0(解釈的裁定)。'in support of the campaign'は通常の読みでlaunch支持を含意し、QG named_requirement match①(support for launch)が成立。QGはany_of
+08_DenverCityCouncil_04132015,L,0,NA,NA,first_pass,
+08_DenverCityCouncil_04132015,S,0,NA,NA,first_pass,
+08_DenverCityCouncil_04132015,U,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,T,1,0,1,maintained_after_reread,維持0.5。target成立(採用プロセス)だがpolicy_direction不成立(プロセスをどう進める/変えるかの方向記述なし、プレゼン実施は手続き)。FCは先例5で1
+09_AlamedaCC_04292015,O,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,B,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,N,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,L,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,S,0,NA,NA,first_pass,
+09_AlamedaCC_04292015,U,0,NA,NA,first_pass,
+10_AlamedaCC_09212021,T,1,1,1,revised_after_reread,修正0.5→1.0(解釈的裁定)。target=match①'calls for mental-health crisis support'ほぼ同語、direction=match②パートナー経由のサービス提供。警察代替の文脈知識はmatch③のみの要求でOR構造により不要
+10_AlamedaCC_09212021,O,0,NA,NA,first_pass,
+10_AlamedaCC_09212021,B,0,NA,NA,first_pass,
+10_AlamedaCC_09212021,N,1,1,1,first_pass,
+10_AlamedaCC_09212021,L,0,NA,NA,first_pass,
+10_AlamedaCC_09212021,S,0,NA,NA,first_pass,
+10_AlamedaCC_09212021,U,0,NA,NA,first_pass,
+11_DenverCityCouncil_12192016,T,1,1,1,first_pass,1839
+11_DenverCityCouncil_12192016,O,0,NA,NA,first_pass,
+11_DenverCityCouncil_12192016,B,0,NA,NA,first_pass,
+11_DenverCityCouncil_12192016,N,1,1,,first_pass,
+11_DenverCityCouncil_12192016,L,0,NA,NA,first_pass,
+11_DenverCityCouncil_12192016,S,0,NA,NA,first_pass,
+11_DenverCityCouncil_12192016,U,0,NA,NA,first_pass,
+12_KingCountyCC_03212018,T,1,1,1,first_pass,
+12_KingCountyCC_03212018,O,0,NA,NA,first_pass,
+12_KingCountyCC_03212018,B,0,NA,NA,first_pass,
+12_KingCountyCC_03212018,N,1,1,1,first_pass,operative implementation termとして委員会と理解
+12_KingCountyCC_03212018,L,0,NA,NA,first_pass,
+12_KingCountyCC_03212018,S,0,NA,NA,first_pass,
+12_KingCountyCC_03212018,U,0,NA,NA,first_pass,
+13_LongBeachCC_03102015,T,0,NA,NA,first_pass,条例名しかなくて動物規制としかわからない
+13_LongBeachCC_03102015,O,0,NA,NA,revised_precedent_check,1.0→0.0。先例3(recommended-disposition-not-O)適用。judge突合ではなく本人のnote疑問+先例照合で検出
+13_LongBeachCC_03102015,B,0,NA,NA,first_pass,
+13_LongBeachCC_03102015,N,0,NA,NA,first_pass,全市とあるが、topic時点でだめ
+13_LongBeachCC_03102015,L,0,NA,NA,first_pass,
+13_LongBeachCC_03102015,S,0,NA,NA,first_pass,
+13_LongBeachCC_03102015,U,0,NA,NA,first_pass,
+14_DenverCityCouncil_01092017,T,1,1,1,first_pass,1829
+14_DenverCityCouncil_01092017,O,0,NA,NA,maintained_after_reread,維持0.0。Denver filing定型(先例1適用、機械照合で確認)
+14_DenverCityCouncil_01092017,B,1,1,1,revised_after_reread,修正0.0→1.0(語彙由来: mill=固定資産税率単位を未知でTG候補を見送っていた)。TG match①'prior voter-initiated mill levy'ほぼ字面一致、QG接続明示、FC valid①と整合
+14_DenverCityCouncil_01092017,N,1,1,1,first_pass,運用上の要件に当たると判断、条文で十分スペシフィック
+14_DenverCityCouncil_01092017,L,0,NA,NA,first_pass,
+14_DenverCityCouncil_01092017,S,0,NA,NA,first_pass,
+14_DenverCityCouncil_01092017,U,0,NA,NA,first_pass,
+15_AlamedaCC_02022016,T,1,1,1,first_pass,
+15_AlamedaCC_02022016,O,0,NA,NA,first_pass,
+15_AlamedaCC_02022016,B,1,0,1,maintained_after_reread,維持0.5(解釈的裁定)。先行却下の記述でTG成立だが、再審という議題構造自体はQGの『背景が議題を形作った関係』に数えない。再審請求の主体・根拠等の precipitating context 不在(先例7)
+15_AlamedaCC_02022016,N,1,1,1,first_pass,許可内容は記載。
+15_AlamedaCC_02022016,L,0,NA,NA,first_pass,
+15_AlamedaCC_02022016,S,0,NA,NA,first_pass,
+15_AlamedaCC_02022016,U,0,NA,NA,first_pass,
+16_KingCountyCC_06012022,T,1,1,1,first_pass,
+16_KingCountyCC_06012022,O,0,NA,NA,first_pass,日本語だけ見ると有権者の承認をとることを決めたように見えるが、これはそれも含めた条例の提案と理解。認識が違うか要確認
+16_KingCountyCC_06012022,B,0,NA,NA,first_pass,
+16_KingCountyCC_06012022,N,1,1,1,first_pass,
+16_KingCountyCC_06012022,L,0,NA,NA,first_pass,
+16_KingCountyCC_06012022,S,0,NA,NA,first_pass,
+16_KingCountyCC_06012022,U,0,NA,NA,first_pass,有権者投票と記載されているが、これは後の処理ではなく、提案の一部
+17_DenverCityCouncil_04092018,T,1,1,1,first_pass,2241
+17_DenverCityCouncil_04092018,O,0,NA,NA,first_pass,
+17_DenverCityCouncil_04092018,B,0,NA,NA,first_pass,
+17_DenverCityCouncil_04092018,N,1,1,1,first_pass,
+17_DenverCityCouncil_04092018,L,0,NA,NA,first_pass,
+17_DenverCityCouncil_04092018,S,0,NA,NA,first_pass,
+17_DenverCityCouncil_04092018,U,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,T,1,0,1,first_pass,
+18_SeattleCityCouncil_08152016,O,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,B,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,N,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,L,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,S,0,NA,NA,first_pass,
+18_SeattleCityCouncil_08152016,U,0,NA,NA,first_pass,
+19_AlamedaCC_12202016,T,1,1,1,first_pass,起草して再提出することの指示、なのでやや遠回しだが
+19_AlamedaCC_12202016,O,0,NA,NA,first_pass,
+19_AlamedaCC_12202016,B,0,NA,NA,first_pass,returnのために過去があるという読み方はできるが、本質的な問題のbackgroundは話していない
+19_AlamedaCC_12202016,N,1,1,1,first_pass,分析項目は述べている
+19_AlamedaCC_12202016,L,0,NA,NA,first_pass,
+19_AlamedaCC_12202016,S,0,NA,NA,first_pass,
+19_AlamedaCC_12202016,U,0,NA,NA,first_pass,
+20_SeattleCityCouncil_08092021,T,1,1,1,first_pass,
+20_SeattleCityCouncil_08092021,O,0,NA,NA,first_pass,
+20_SeattleCityCouncil_08092021,B,1,1,1,first_pass,
+20_SeattleCityCouncil_08092021,N,1,1,1,first_pass,
+20_SeattleCityCouncil_08092021,L,1,1,1,revised_after_reread,修正0.0→1.0(解釈的裁定)。'impact in displacing Black community members from the Central Area'+'prevent and reverse displacement'は問題側の言明。impact単体の中立性に引っ張られた一次判定を訂正。ガイド予言の社会問題系決議の例外ケース
+20_SeattleCityCouncil_08092021,S,1,1,1,revised_after_reread,修正0.0→1.0(解釈的裁定)。'impact in displacing Black community members from the Central Area'+'prevent and reverse displacement'は問題側の言明。impact単体の中立性に引っ張られた一次判定を訂正。ガイド予言の社会問題系決議の例外ケース
+20_SeattleCityCouncil_08092021,U,0,NA,NA,first_pass,
+21_SeattleCityCouncil_03192020,T,1,1,1,first_pass,念の為、これは提出されたもので、決定ではないと読む。それが明記されてない
+21_SeattleCityCouncil_03192020,O,0,NA,NA,first_pass,
+21_SeattleCityCouncil_03192020,B,0,NA,NA,first_pass,緊急事態としか書いていない
+21_SeattleCityCouncil_03192020,N,1,1,1,first_pass,
+21_SeattleCityCouncil_03192020,L,0,NA,NA,first_pass,
+21_SeattleCityCouncil_03192020,S,0,NA,NA,first_pass,
+21_SeattleCityCouncil_03192020,U,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,T,1,0,1,maintained_after_reread,維持0.5。direction成立(配分+計画策定)だがtarget不成立: 'priority educational areas'は総称のみで、ゲートが要求する対象人口/教育段階の特定に達しない(not_match①該当)
+22_KingCountyCC_07292019,O,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,B,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,N,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,L,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,S,0,NA,NA,first_pass,
+22_KingCountyCC_07292019,U,0,NA,NA,first_pass,
+23_AlamedaCC_11032015,T,1,1,1,first_pass,
+23_AlamedaCC_11032015,O,0,NA,NA,first_pass,
+23_AlamedaCC_11032015,B,0,NA,NA,first_pass,
+23_AlamedaCC_11032015,N,1,1,1,first_pass,
+23_AlamedaCC_11032015,L,0,NA,NA,first_pass,
+23_AlamedaCC_11032015,S,0,NA,NA,first_pass,
+23_AlamedaCC_11032015,U,0,NA,NA,first_pass,
+24_BostonCC_06152022,T,1,1,1,first_pass,
+24_BostonCC_06152022,O,1,1,1,first_pass,
+24_BostonCC_06152022,B,0,NA,NA,revised_after_reread,"0.5→0.0。解釈的裁定: タイトル中の""the Role Played by the City of Boston in the Trans-Atlantic Slave Trade""は謝罪という行為の目的語としての出現であり、背景事情の記述として述べられていない(先例7拡張: 行為の目的語≠背景)。TG not_match①該当"
+24_BostonCC_06152022,N,1,1,1,first_pass,
+24_BostonCC_06152022,L,0,NA,NA,first_pass,
+24_BostonCC_06152022,S,0,NA,NA,first_pass,
+24_BostonCC_06152022,U,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,T,1,1,1,first_pass,顔認識を技術利用と判断
+25_AlamedaCC_12172019,O,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,B,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,N,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,L,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,S,0,NA,NA,first_pass,
+25_AlamedaCC_12172019,U,0,NA,NA,first_pass,
+26_SeattleCityCouncil_07252016,T,1,1,1,first_pass,
+26_SeattleCityCouncil_07252016,O,0,NA,NA,first_pass,
+26_SeattleCityCouncil_07252016,B,0,NA,NA,first_pass,
+26_SeattleCityCouncil_07252016,N,1,1,1,first_pass,
+26_SeattleCityCouncil_07252016,L,0,NA,NA,first_pass,
+26_SeattleCityCouncil_07252016,S,0,NA,NA,first_pass,
+26_SeattleCityCouncil_07252016,U,1,1,1,revised_after_reread,"0.0→1.0。解釈的裁定: TG match②が正面から規定(発議が11月投票へ進む記述は議会で最終解決が完了しなかったことを示す場合に成立)。""proposed Initiative to appear on the November 8, 2016 ballot""が該当。QG両ラベル成立(item=発議124、path=King County Elections/11月8日投票/パンフレット)。FC=1(valid経路と一致、失格条件に該当なし)"
+27_BostonCC_04132022,T,0,NA,NA,revised_after_reread,0.5→0.0。解釈的裁定: TG match両行はフィールドハウス/ARPAコミュニティ基盤整備を主題として要求。要約は使途を書かない$10M補助金受領orderのみでnot_match②(一般的助成金項目)該当。V1 noteのtarget不成立指摘は正しいがTG段階で不成立
+27_BostonCC_04132022,O,0,NA,NA,maintained_after_reread,"維持0.0。""did not Pass; yeas 5, nays 7""は実在の処分だが判定対象区間の外の出来事(区間内は委員会留保・採決なし)。ゲートmatch行は留保系のみでどれにも該当せず。先例8(out-of-segment-action-line)成立"
+27_BostonCC_04132022,B,0,NA,NA,first_pass,
+27_BostonCC_04132022,N,1,1,1,revised_after_reread,"0.5→1.0。手続き的スリップ: N QGのoperator any_ofをall_ofとして読んだ(08Tと同型)。number match成立($10,000,000.00がDocket #0265に付随)。FC=1維持: $5M修正・否決は区間外イベントの追加報告で$10M要請の否定ではなく、処分/未了性の食い違いはO/Uの領分(FCスロットローカル)"
+27_BostonCC_04132022,L,0,NA,NA,first_pass,
+27_BostonCC_04132022,S,0,NA,NA,first_pass,
+27_BostonCC_04132022,U,0,NA,NA,first_pass,留保じゃなくて否決、言葉の使い方要確認
+28_BostonCC_06292022,T,1,1,1,first_pass,
+28_BostonCC_06292022,O,0,NA,NA,first_pass,
+28_BostonCC_06292022,B,0,NA,NA,first_pass,
+28_BostonCC_06292022,N,1,1,1,first_pass,
+28_BostonCC_06292022,L,0,NA,NA,first_pass,
+28_BostonCC_06292022,S,0,NA,NA,first_pass,
+28_BostonCC_06292022,U,0,NA,NA,first_pass,
+29_BostonCC_05182022,T,1,1,1,first_pass,
+29_BostonCC_05182022,O,1,1,1,first_pass,
+29_BostonCC_05182022,B,0,NA,NA,first_pass,
+29_BostonCC_05182022,N,1,1,1,first_pass,
+29_BostonCC_05182022,L,0,NA,NA,first_pass,
+29_BostonCC_05182022,S,0,NA,NA,first_pass,
+29_BostonCC_05182022,U,0,NA,NA,first_pass,
+30_DenverCityCouncil_09232019,T,1,1,1,first_pass,
+30_DenverCityCouncil_09232019,O,0,NA,NA,maintained_after_reread,"維持0.0。先例1(prior-stage-boilerplate): ""The Committee approved filing this item at its meeting on 8-13-19""のみで他に処分記述なし(""Vacates...""は条例内容の動詞)"
+30_DenverCityCouncil_09232019,B,0,NA,NA,first_pass,
+30_DenverCityCouncil_09232019,N,1,1,1,first_pass,
+30_DenverCityCouncil_09232019,L,0,NA,NA,first_pass,
+30_DenverCityCouncil_09232019,S,0,NA,NA,first_pass,
+30_DenverCityCouncil_09232019,U,0,NA,NA,first_pass,
+31_LongBeachCC_03222016,T,1,1,1,first_pass,
+31_LongBeachCC_03222016,O,0,NA,NA,first_pass,先例3適用確認: Recommendation to adopt/award...は提案された処分の記述。O=0.0維持(V1 noteの質問に回答)
+31_LongBeachCC_03222016,B,0,NA,NA,first_pass,
+31_LongBeachCC_03222016,N,1,1,1,maintained_after_reread,維持1.0/FC=1。先例9(proposal-terms-not-final-terms): 要約は勧告内容($3.5M授与・10年)の記述であり採択内容の主張ではない。valid項目自身が元勧告$3.5Mを有効事実と認める。FC失格条件(代替授与動議への帰属等)に非該当
+31_LongBeachCC_03222016,L,0,NA,NA,first_pass,
+31_LongBeachCC_03222016,S,0,NA,NA,first_pass,
+31_LongBeachCC_03222016,U,0,NA,NA,first_pass,
+32_AlamedaCC_02212017,T,1,1,1,first_pass,
+32_AlamedaCC_02212017,O,0,NA,NA,first_pass,
+32_AlamedaCC_02212017,B,0,NA,NA,first_pass,
+32_AlamedaCC_02212017,N,1,1,1,maintained_after_reread,"維持1.0/FC=1。先例9: ""Consider Directing...""は検討議題の記述で、3年条項は提案時条件。valid項目自身が「当初議論の3年は最終動議で置換」と提案の実在を認める。最終採択の主張なし"
+32_AlamedaCC_02212017,L,0,NA,NA,first_pass,
+32_AlamedaCC_02212017,S,0,NA,NA,first_pass,
+32_AlamedaCC_02212017,U,0,NA,NA,first_pass,
+33_LongBeachCC_01262016,T,1,1,1,first_pass,
+33_LongBeachCC_01262016,O,0,NA,NA,first_pass,先例3適用確認: Recommendation to receive and file/Direct...は提案された処分の記述。O=0.0維持(V1 noteの質問に回答)
+33_LongBeachCC_01262016,B,0,NA,NA,maintained_after_reread,維持0.0。先例10(document-metadata-identifier): 12/22/2015 study sessionへの言及はreceive and file対象文書の表題内のみ=識別子。表題・日付を背景としてcreditすると日付入り文書すべてがB成立になる(歯止め)。背景の記述として述べられていない
+33_LongBeachCC_01262016,N,1,1,1,first_pass,
+33_LongBeachCC_01262016,L,0,NA,NA,first_pass,
+33_LongBeachCC_01262016,S,0,NA,NA,first_pass,
+33_LongBeachCC_01262016,U,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,T,1,0,1,first_pass,
+34_LongBeachCC_05112021,O,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,B,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,N,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,L,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,S,0,NA,NA,first_pass,
+34_LongBeachCC_05112021,U,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,T,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,O,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,B,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,N,1,1,1,revised_after_reread,"0.0→1.0。解釈的裁定: TG match行4の段階寛容条項(誤段階のpayloadもPresence通過)+先例9(提案段階のpayloadもpayload)。QG any_of: number(November 8, 2016)とnamed_requirement(Submit a Complaint to the FPPC)が成立。FC=1(validの申立て内容と一致)"
+35_AlamedaCC_12062016,L,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,S,0,NA,NA,first_pass,
+35_AlamedaCC_12062016,U,0,NA,NA,first_pass,
+36_LongBeachCC_11012016,T,1,1,1,first_pass,
+36_LongBeachCC_11012016,O,0,NA,NA,first_pass,
+36_LongBeachCC_11012016,B,0,NA,NA,first_pass,
+36_LongBeachCC_11012016,N,1,1,1,first_pass,
+36_LongBeachCC_11012016,L,0,NA,NA,first_pass,
+36_LongBeachCC_11012016,S,0,NA,NA,first_pass,
+36_LongBeachCC_11012016,U,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,T,1,0,1,first_pass,
+37_AlamedaCC_03302021,O,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,B,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,N,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,L,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,S,0,NA,NA,first_pass,
+37_AlamedaCC_03302021,U,0,NA,NA,first_pass,
+38_DenverCityCouncil_02142022,T,1,1,1,revised_after_reread,"0.5→1.0。解釈的裁定(表現問題): ""celebrating the life of""はhonor/recognizeと同じ儀礼動詞群(先例5の趣旨)。policy_direction・targetとも成立"
+38_DenverCityCouncil_02142022,O,0,NA,NA,first_pass,
+38_DenverCityCouncil_02142022,B,0,NA,NA,maintained_after_reread,"維持0.0。先例7拡張: ""the ultimate renaissance man, promoter of the arts...""はcelebrate対象の同格修飾で、背景の記述として述べられていない。QG not_match①(経歴事実を宣言を形作ったと示さず列挙)にも該当"
+38_DenverCityCouncil_02142022,N,1,0,1,maintained_after_reread,維持0.5。TG成立(celebrating=称える move、ゲートがhonorをpayloadと定義)、QG any_of不成立(2/14/2022・Ambrose Day宣言・書記官指示・写し提供のいずれも要約になし。同格称賛句は先例6によりpayload外)
+38_DenverCityCouncil_02142022,L,0,NA,NA,first_pass,
+38_DenverCityCouncil_02142022,S,0,NA,NA,first_pass,
+38_DenverCityCouncil_02142022,U,0,NA,NA,first_pass,
+39_DenverCityCouncil_03102014,T,1,1,1,first_pass,
+39_DenverCityCouncil_03102014,O,0,NA,NA,first_pass,
+39_DenverCityCouncil_03102014,B,1,0,1,revised_after_reread,"0.0→0.5。手続き的スリップ(表記揺れ読み損ね: B-4とB4を別物と誤認、先例5の趣旨は人間側にも適用)。TG match①(既存B4緩和付き指定の記述=""from B-4 with waivers"")成立。QG不成立: from-to構文は変更前状態を言うだけで変更理由への接続なし。FC=1"
+39_DenverCityCouncil_03102014,N,1,1,1,revised_after_reread,0.0→1.0。解釈的裁定: 先例9+段階寛容(提出段階でも法案内容のpayloadはpayload)。QG any_of三重成立: named_requirement(C-MX-8/C-MX-12)、number(8/12 stories)、scope(351 S. Jackson)。FC=1(validと一致)
+39_DenverCityCouncil_03102014,L,0,NA,NA,first_pass,
+39_DenverCityCouncil_03102014,S,0,NA,NA,first_pass,
+39_DenverCityCouncil_03102014,U,0,NA,NA,first_pass,
+40_DenverCityCouncil_05312016,T,1,0,1,revised_after_reread,"1.0→0.5。解釈的裁定(先例4拡張): 制度固有名""Five Points Business Improvement District""内のBusinessは識別子であり、target(地区内の商業・事業用不動産)の記述ではない。QG not_match(BID創設の対象を示していない)該当。policy_directionは成立、targetのみ不成立"
+40_DenverCityCouncil_05312016,O,0,NA,NA,first_pass,V1 note質問に回答: 主語なし・現在形はDenver法案タイトルの立法現在(法案内容の記述)という記法慣行。処分の報告文ではなくO=0で正しい
+40_DenverCityCouncil_05312016,B,0,NA,NA,first_pass,
+40_DenverCityCouncil_05312016,N,1,1,1,revised_after_reread,"0.5→1.0。解釈的裁定: QG any_ofのnamed_requirement match例に""board appointment/confirmation""が明記され、""appointing the initial members of the Board of Directors""が直撃。FC=1維持"
+40_DenverCityCouncil_05312016,L,0,NA,NA,first_pass,
+40_DenverCityCouncil_05312016,S,0,NA,NA,first_pass,
+40_DenverCityCouncil_05312016,U,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,T,1,0,1,first_pass,
+41_SeattleCityCouncil_11212016,O,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,B,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,N,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,L,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,S,0,NA,NA,first_pass,
+41_SeattleCityCouncil_11212016,U,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,T,1,0,1,first_pass,
+42_SeattleCityCouncil_01112016,O,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,B,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,N,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,L,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,S,0,NA,NA,first_pass,
+42_SeattleCityCouncil_01112016,U,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,T,1,1,1,revised_after_reread,0.5→1.0(V1修正可: 記入時note質問宣言)。原因: 訳文への引きずられ(QG matchの参考訳が結果要求と読める形だった)。英文gateではgrant/allow=検討中の政策の向き。direction(petition for the vacation)+target(Block 21 bounded by Bell/7th/Blanchard/8th)成立
+43_SeattleCityCouncil_12142015,O,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,B,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,N,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,L,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,S,0,NA,NA,first_pass,
+43_SeattleCityCouncil_12142015,U,0,NA,NA,first_pass,
+44_SeattleCityCouncil_11232020,T,1,0,1,first_pass,
+44_SeattleCityCouncil_11232020,O,0,NA,NA,first_pass,
+44_SeattleCityCouncil_11232020,B,0,NA,NA,first_pass,
+44_SeattleCityCouncil_11232020,N,0,NA,NA,revised_after_reread,1.0→0.0(V1修正可: 記入時noteで悩みを宣言)。解釈的裁定: 年号は変更対象文書名(2021 Proposed Budget/2021-2026 CIP)の内部=識別子(先例4拡張2・10)。変更の中身(金額・プログラム・条件)が皆無でpayload不在。目的語の特定≠payload
+44_SeattleCityCouncil_11232020,L,0,NA,NA,first_pass,
+44_SeattleCityCouncil_11232020,S,0,NA,NA,first_pass,
+44_SeattleCityCouncil_11232020,U,0,NA,NA,first_pass,
+45_BostonCC_02022022,T,1,1,1,first_pass,
+45_BostonCC_02022022,O,0,NA,NA,first_pass,
+45_BostonCC_02022022,B,1,1,1,revised_after_reread,"0.0→1.0。手続き的スリップ(読み飛ばし)。""that the Vaccine Mandate Created""はmandate→MOA変更の因果主張でTG match①直撃。""a hearing to address""の目的節が背景と命令を接続しQG成立。24B(目的語埋め込み)とは異なり由来の主張が地の文にある。FC=1"
+45_BostonCC_02022022,N,1,1,1,revised_after_reread,"0.0→1.0。手続き的スリップ(読み飛ばし)。TG: 公聴会が扱う対象(mandate起因のMOA変更)を記述。QG any_of: scope_boundaryのmatch例""agreement changes""に直撃。FC=1"
+45_BostonCC_02022022,L,0,NA,NA,first_pass,
+45_BostonCC_02022022,S,0,NA,NA,first_pass,
+45_BostonCC_02022022,U,0,NA,NA,first_pass,
+46_BostonCC_03162022,T,1,0,1,revised_after_reread,"1.0→0.5。解釈的裁定: ""to discuss the regulation and siting...and the ZBA""は主題の列挙で、matchが要求する向き(ZBA役割の見直し/改革/分離/縮小/撤廃)を述べていない。not_match①(discussedのみ)該当。regulation=見直しの含意は解釈の持ち込み。target成立"
+46_BostonCC_03162022,O,0,NA,NA,first_pass,
+46_BostonCC_03162022,B,0,NA,NA,first_pass,
+46_BostonCC_03162022,N,1,1,1,first_pass,
+46_BostonCC_03162022,L,0,NA,NA,first_pass,
+46_BostonCC_03162022,S,0,NA,NA,first_pass,
+46_BostonCC_03162022,U,0,NA,NA,first_pass,
+47_SeattleCityCouncil_05022016,T,1,1,1,revised_after_reread,"0.5→1.0。解釈的裁定: 43Tと同型(petition to vacate=検討中の政策の向き)。target はmatch行文言そのまま(Occidental Ave S, Holgate〜Massachusetts間)成立"
+47_SeattleCityCouncil_05022016,O,0,NA,NA,first_pass,
+47_SeattleCityCouncil_05022016,B,0,NA,NA,first_pass,
+47_SeattleCityCouncil_05022016,N,0,NA,NA,revised_after_reread,0.5→0.0。解釈的裁定: matchの「請願・動議」はpayloadの取り付け先であり、要求されるのは付随する条件群(イベント制限・地役権等)。要約に条件ゼロ、30 feetは廃道区間の幾何=目的語記述(44N同型)。訳文の係り受けが誤読を誘発しかけた2例目
+47_SeattleCityCouncil_05022016,L,0,NA,NA,first_pass,
+47_SeattleCityCouncil_05022016,S,0,NA,NA,first_pass,
+47_SeattleCityCouncil_05022016,U,0,NA,NA,revised_after_reread,空欄→0.0(記入時note質問宣言)。Uゲート自体が「本サンプルに係属一致は存在しない」と明記。要約も係属を主張せずTG=0
+48_BostonCC_06082022,T,1,1,1,first_pass,
+48_BostonCC_06082022,O,0,NA,NA,first_pass,
+48_BostonCC_06082022,B,0,NA,NA,revised_after_reread,"1.0→0.0。先例1拡張(prior-stage-boilerplate): ""referred on April 13, 2022...from the Committee on Ways and Means""は前段階手続き記述でB不算入。他に背景記述なし"
+48_BostonCC_06082022,N,1,1,1,first_pass,
+48_BostonCC_06082022,L,0,NA,NA,first_pass,
+48_BostonCC_06082022,S,0,NA,NA,first_pass,
+48_BostonCC_06082022,U,0,NA,NA,first_pass,
+49_LongBeachCC_09112018,T,1,1,1,first_pass,
+49_LongBeachCC_09112018,O,0,NA,NA,first_pass,
+49_LongBeachCC_09112018,B,0,NA,NA,first_pass,
+49_LongBeachCC_09112018,N,1,1,1,maintained_after_reread,"維持1.0。QG named_requirement match行が提案名""Captain David Rosa Regional Training Center""を名指しでクレジット。scope(LBFD RTC)も成立。judge側の過小検出 | FC側の根拠追記(2026-09-23): フラグはFC起因(両judge FC=0)。""Recommendation to approve renaming""は提案された処分で承認の主張ではなく(先例3/9)、施設・提案名はvalidと一致。FC=1維持"
+49_LongBeachCC_09112018,L,0,NA,NA,first_pass,
+49_LongBeachCC_09112018,S,0,NA,NA,first_pass,
+49_LongBeachCC_09112018,U,0,NA,NA,first_pass,
+50_AlamedaCC_04072015,T,1,0,1,first_pass,
+50_AlamedaCC_04072015,O,0,NA,NA,first_pass,
+50_AlamedaCC_04072015,B,0,NA,NA,first_pass,
+50_AlamedaCC_04072015,N,1,1,1,maintained_after_reread,"維持1.0。先例4二部構成の適用: 条項番号は原則識別子だが、QG scope_boundary match行が""Charter Section 7-3""を明示列挙しており match行が勝つ((Citywide)タグと同じ扱い)。44Nとの相違=ゲートの明示列挙の有無"
+50_AlamedaCC_04072015,L,0,NA,NA,first_pass,
+50_AlamedaCC_04072015,S,0,NA,NA,first_pass,
+50_AlamedaCC_04072015,U,0,NA,NA,first_pass,

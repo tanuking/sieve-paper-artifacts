@@ -1,0 +1,7 @@
+metric_name,contrast_type,estimate,ci_low_2.5,ci_high_97.5,bootstrap_B,bootstrap_unit,seed,notes
+deepseek_reasoning: budget_06 - budget_02,budget_length_effect,1.414,1.168,1.668,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
+deepseek_temp1_chat: budget_06 - budget_02,budget_length_effect,1.412,1.2,1.63005,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
+gemini_2_5_flash_lite: budget_06 - budget_02,budget_length_effect,1.146,0.882,1.416,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
+deepseek_reasoning budget_06 - gemini_2_5_flash_lite budget_06,model_effect,0.806,0.548,1.062,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
+deepseek_temp1_chat budget_06 - gemini_2_5_flash_lite budget_06,model_effect,0.86,0.64,1.074,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
+deepseek_temp1_chat budget_06 - deepseek_reasoning budget_06,model_effect,0.054,-0.11,0.24005,10000,meeting_id,20260521,Run means are averaged within meeting before contrast.
