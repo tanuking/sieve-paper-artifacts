@@ -5,8 +5,7 @@ same event sheets and gate definitions as the generated summaries
 (350 cells = 50 meetings x 7 slots; paper Sections 3.8 and 4.6).
 
 - `human_final_labels.csv` — the adjudicated final labels (topic gate,
-  quality gate, fact check) per cell, with adjudication status and
-  working notes.
+  quality gate, fact check) per cell, with the adjudication status.
 - `human_first_pass_labels.csv` — the first author's blind first-pass labels
   (V1, judge outputs undisclosed) with the re-read flag. Agreement is
   reported against V1 only: recomputing Presence from these gates
