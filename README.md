@@ -7,6 +7,9 @@ Evaluation instruments, labels, tables, and analysis code for:
 > Jumpei Nagasawa and Seiya Shibayama.
 > *Findings of AACL-IJCNLP 2026.*
 
+Paper: to appear in the ACL Anthology (link will be added on
+publication).
+
 SIEVE evaluates meeting summaries role by role: for each of seven
 information roles (Topic, Outcome, Operative Payload, Background,
 Concrete Concern, Shared Concern, Unresolved Tail) it measures whether
@@ -30,7 +33,9 @@ contradicts the source (Fact Check).
 - `scripts/` — analysis code that recomputes the paper's numbers from
   the released files alone (see `scripts/README.md`).
 - `DATA_DICTIONARY.md` — column-level definitions for every data file.
-- `KNOWN_ISSUES.md` — known instrument issues and their scope.
+
+Before applying the gates to text drafted before the evaluated
+session, read the caveat at the end of `method/README.md`.
 
 ## What is included, and what is not
 
