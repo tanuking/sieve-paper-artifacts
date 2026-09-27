@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: SIEVE paper artifacts
+message: Please cite the SIEVE paper if you use these artifacts.
+type: dataset
+authors:
+  - family-names: Nagasawa
+    given-names: Jumpei
+    affiliation: Nestrium LLC
+  - family-names: Shibayama
+    given-names: Seiya
+license: CC-BY-NC-SA-4.0
+preferred-citation:
+  type: conference-paper
+  title: "SIEVE: Slot-wise Evaluation of Information-Role Retention in Fixed-Length Meeting Summarization"
+  authors:
+    - family-names: Nagasawa
+      given-names: Jumpei
+      affiliation: Nestrium LLC
+    - family-names: Shibayama
+      given-names: Seiya
+  collection-title: Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026
+  year: 2026
