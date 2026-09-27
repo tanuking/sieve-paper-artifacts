@@ -11,7 +11,7 @@ Paper: to appear in the ACL Anthology (link will be added on
 publication).
 
 SIEVE evaluates meeting summaries role by role: for each of seven
-information roles (Topic, Outcome, Operative Payload, Background,
+information roles (Topic, Outcome, Background, Operative Payload,
 Concrete Concern, Shared Concern, Unresolved Tail) it measures whether
 the role is retained (Presence) and whether the retained content
 contradicts the source (Fact Check).
@@ -28,7 +28,7 @@ contradicts the source (Fact Check).
   instructions.
 - `results/` — SIEVE's outputs: the 15,750 adjudicated slot labels,
   the 200-cell second-author audit, the 350-cell reference-summary
-  evaluation, and the source tables behind every number in the paper
+  evaluation, and the source tables behind the paper's reported statistics
   (`results/paper_tables/`).
 - `scripts/` — analysis code that recomputes the paper's numbers from
   the released files alone (see `scripts/README.md`).
@@ -59,7 +59,7 @@ Requirements: Python 3.11+, `pip install -r requirements.txt`.
 
 ```
 make validate    # structural checks on every released data file
-make tables      # Sections 4.1-4.3 tables and bootstrap CIs
+make tables      # Section 4.1 tables, bootstrap CIs, Section 4.3 correlations
 make reference   # Sections 3.8, 4.4, 5 and Appendix E.4 numbers
 ```
 
