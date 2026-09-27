@@ -1,5 +1,3 @@
-# Single responsibility: recompute reference-similarity correlation tables.
-#
 # Joins the released per-summary similarity metrics with summary-level
 # SIEVE aggregates derived from slot_labels.csv, and reproduces the
 # correlations reported in Section 4.3 and Appendix E.2.

@@ -1,4 +1,3 @@
-# Single responsibility: recompute the paper's reference-summary evaluation
 # numbers from the released files.
 #
 # Covers: (1) first-pass vs LLM-judge Presence agreement and the flag count

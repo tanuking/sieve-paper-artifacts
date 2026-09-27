@@ -1,5 +1,3 @@
-# Single responsibility: compute meeting-level bootstrap CIs for released SIEVE labels.
-#
 # Reproduces results/paper_tables/slot_mean_presence_ci.csv and
 # slot_mean_presence_contrast_ci.csv exactly: one resampling draw per
 # bootstrap iteration is shared across all seven slots (meetings ordered

@@ -1,4 +1,3 @@
-# Single responsibility: reproduce core model-budget and slot tables from released labels.
 
 from __future__ import annotations
 

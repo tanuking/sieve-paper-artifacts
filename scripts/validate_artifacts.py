@@ -1,4 +1,3 @@
-# Single responsibility: validate released SIEVE paper artifact schemas and counts.
 
 from __future__ import annotations
 
@@ -10,6 +9,16 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 SLOTS = {"T", "O", "B", "N", "L", "S", "U"}
 PRESENCE_VALUES = {0.0, 0.5, 1.0}
+
+# Experimental design (Section 3.3 of the paper).
+N_MEETINGS = 50
+N_GENERATORS = 3
+N_BUDGETS = 3
+N_RUNS = 5
+N_SUMMARIES = N_MEETINGS * N_GENERATORS * N_BUDGETS * N_RUNS  # 2,250
+N_CELLS = N_SUMMARIES * len(SLOTS)  # 15,750
+N_AUDIT_CELLS = 200  # second-author audit: random 100 + hard 100
+N_REFERENCE_CELLS = N_MEETINGS * len(SLOTS)  # 350
 
 
 def parse_args() -> argparse.Namespace:
@@ -49,24 +58,24 @@ def validate_core() -> None:
         ROOT / "results" / "second_author_audit" / "second_author_audit_labels.csv",
     )
 
-    require(len(manifest) == 50, f"expected 50 manifest rows, got {len(manifest)}")
-    require(manifest["uid"].nunique() == 50, "manifest uid values must be unique")
+    require(len(manifest) == N_MEETINGS, f"expected {N_MEETINGS} manifest rows, got {len(manifest)}")
+    require(manifest["uid"].nunique() == N_MEETINGS, "manifest uid values must be unique")
 
-    require(len(summaries) == 2250, f"expected 2,250 summaries, got {len(summaries)}")
+    require(len(summaries) == N_SUMMARIES, f"expected {N_SUMMARIES} summaries, got {len(summaries)}")
     summary_keys = ["segment_id", "generator", "budget", "run_id"]
     require(
-        summaries[summary_keys].drop_duplicates().shape[0] == 2250,
+        summaries[summary_keys].drop_duplicates().shape[0] == N_SUMMARIES,
         "summary keys are not unique",
     )
 
-    require(len(labels) == 15750, f"expected 15,750 slot cells, got {len(labels)}")
+    require(len(labels) == N_CELLS, f"expected {N_CELLS} slot cells, got {len(labels)}")
     label_keys = ["segment_id", "generator", "budget", "run_id", "slot"]
-    require(labels[label_keys].drop_duplicates().shape[0] == 15750, "label keys are not unique")
+    require(labels[label_keys].drop_duplicates().shape[0] == N_CELLS, "label keys are not unique")
     require(set(labels["slot"]) == SLOTS, "slot set mismatch")
     presence_values = set(labels["final_presence"].dropna().astype(float))
     require(presence_values.issubset(PRESENCE_VALUES), "bad final_presence value")
     slots_per_summary = labels.groupby(summary_keys)["slot"].nunique()
-    require((slots_per_summary == 7).all(), "not all summaries have 7 slots")
+    require((slots_per_summary == len(SLOTS)).all(), "not all summaries have 7 slots")
 
     fact_check = labels["final_fact_check"]
     require(
@@ -76,7 +85,7 @@ def validate_core() -> None:
     present_fact_check = fact_check[labels["final_presence"].astype(float) > 0.0].dropna()
     require(set(present_fact_check.astype(float)).issubset({0.0, 1.0}), "bad Fact Check value")
 
-    require(len(audit) == 200, f"expected 200 audit rows, got {len(audit)}")
+    require(len(audit) == N_AUDIT_CELLS, f"expected {N_AUDIT_CELLS} audit rows, got {len(audit)}")
     require(set(audit["slot"]).issubset(SLOTS), "audit slot set mismatch")
     require(
         set(audit["first_presence"].astype(float)).issubset(PRESENCE_VALUES),
@@ -91,8 +100,14 @@ def validate_core() -> None:
     rubrics = sorted(
         (ROOT / "experiment" / "slot_local_rubrics").glob("MTG*_slot_local_rubric.yaml"),
     )
-    require(len(event_sheets) == 50, f"expected 50 event sheets, got {len(event_sheets)}")
-    require(len(rubrics) == 50, f"expected 50 slot-local rubrics, got {len(rubrics)}")
+    require(
+        len(event_sheets) == N_MEETINGS,
+        f"expected {N_MEETINGS} event sheets, got {len(event_sheets)}",
+    )
+    require(
+        len(rubrics) == N_MEETINGS,
+        f"expected {N_MEETINGS} slot-local rubrics, got {len(rubrics)}",
+    )
 
 
 def validate_reference_evaluation() -> None:
@@ -102,13 +117,16 @@ def validate_reference_evaluation() -> None:
     judges = pd.read_csv(ref_dir / "llm_judge_labels.csv")
 
     for name, frame in [("final", final), ("first-pass", first), ("judge", judges)]:
-        require(len(frame) == 350, f"expected 350 {name} rows, got {len(frame)}")
+        require(
+            len(frame) == N_REFERENCE_CELLS,
+            f"expected {N_REFERENCE_CELLS} {name} rows, got {len(frame)}",
+        )
         require(set(frame["slot"]) == SLOTS, f"{name} slot set mismatch")
         keys = frame[["meeting_dir_name", "slot"]].drop_duplicates()
-        require(len(keys) == 350, f"{name} keys are not unique")
+        require(len(keys) == N_REFERENCE_CELLS, f"{name} keys are not unique")
 
     types = pd.read_csv(ref_dir / "reference_types.csv")
-    require(len(types) == 50, f"expected 50 reference types, got {len(types)}")
+    require(len(types) == N_MEETINGS, f"expected {N_MEETINGS} reference types, got {len(types)}")
 
     profile = pd.read_csv(ref_dir / "reference_profile_ci.csv")
     require(set(profile["slot"]) == SLOTS, "reference profile slot set mismatch")
