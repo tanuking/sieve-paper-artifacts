@@ -8,6 +8,7 @@ authors:
     affiliation: Nestrium LLC
   - family-names: Shibayama
     given-names: Seiya
+    affiliation: Laboro.AI Inc.
 repository-code: https://github.com/tanuking/sieve-paper-artifacts
 license: CC-BY-NC-SA-4.0
 preferred-citation:
@@ -19,5 +20,6 @@ preferred-citation:
       affiliation: Nestrium LLC
     - family-names: Shibayama
       given-names: Seiya
+      affiliation: Laboro.AI Inc.
   collection-title: Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026
   year: 2026
